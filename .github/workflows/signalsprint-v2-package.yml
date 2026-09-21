@@ -1,0 +1,25 @@
+name: Package SignalSprint V2
+on:
+  push:
+    branches: [signalsprint-preview]
+    paths:
+      - 'sites/signalsprint-second-messenger/**'
+      - '.github/workflows/signalsprint-v2-package.yml'
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare drop package
+        run: |
+          mkdir -p signalsprint-v2-drop
+          cp -R sites/signalsprint-second-messenger/. signalsprint-v2-drop/
+      - name: Upload Vercel Drop artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: signalsprint-v2-drop
+          path: signalsprint-v2-drop
+          if-no-files-found: error
+          retention-days: 1
