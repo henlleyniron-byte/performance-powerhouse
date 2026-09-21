@@ -1,0 +1,6047 @@
+{
+  "release": {
+    "name": "Physics MCQ Intelligence",
+    "version": "1.0-validated-v5",
+    "checkpointZipSha256": "d0698ed68b22cfc5315ef9e052a39a8905b9a64c5f0e2afe24deae3a59c050cd",
+    "frozenMasterSha256": "8a920aded429ece0d6bdfda40580fafcb774a88b44a392b9d5ab1c970a63feab",
+    "predictiveInterpretation": "prohibited"
+  },
+  "overview": {
+    "questions": 1410,
+    "examinationYears": 26,
+    "startYear": 2000,
+    "endYear": 2025,
+    "oldFormat": {
+      "years": "2000-2010",
+      "questionsPerPaper": 60,
+      "papers": 11
+    },
+    "currentFormatBoundary": {
+      "years": "2011-2025",
+      "questionsPerPaper": 50,
+      "papers": 15
+    },
+    "currentEra": {
+      "years": "2019-2025",
+      "questions": 350,
+      "families": 173
+    }
+  },
+  "units": [
+    {
+      "id": "measurement",
+      "name": "Measurement",
+      "combinedCount": 59,
+      "combinedPercentage": 0.04184397163120567
+    },
+    {
+      "id": "mechanics",
+      "name": "Mechanics",
+      "combinedCount": 222,
+      "combinedPercentage": 0.1574468085106383
+    },
+    {
+      "id": "oscillations-and-waves",
+      "name": "Oscillations and Waves",
+      "combinedCount": 268,
+      "combinedPercentage": 0.1900709219858156
+    },
+    {
+      "id": "thermal-physics",
+      "name": "Thermal Physics",
+      "combinedCount": 165,
+      "combinedPercentage": 0.11702127659574468
+    },
+    {
+      "id": "gravitational-field",
+      "name": "Gravitational Field",
+      "combinedCount": 29,
+      "combinedPercentage": 0.02056737588652482
+    },
+    {
+      "id": "electrostatic-field",
+      "name": "Electrostatic Field",
+      "combinedCount": 108,
+      "combinedPercentage": 0.07659574468085106
+    },
+    {
+      "id": "magnetic-field",
+      "name": "Magnetic Field",
+      "combinedCount": 109,
+      "combinedPercentage": 0.07730496453900709
+    },
+    {
+      "id": "current-electricity",
+      "name": "Current Electricity",
+      "combinedCount": 153,
+      "combinedPercentage": 0.10851063829787234
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "combinedCount": 76,
+      "combinedPercentage": 0.05390070921985816
+    },
+    {
+      "id": "mechanical-properties-of-matter",
+      "name": "Mechanical Properties of Matter",
+      "combinedCount": 148,
+      "combinedPercentage": 0.1049645390070922
+    },
+    {
+      "id": "matter-and-radiation",
+      "name": "Matter and Radiation",
+      "combinedCount": 73,
+      "combinedPercentage": 0.05177304964539007
+    }
+  ],
+  "byYear": [
+    {
+      "year": 2000,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanics": {
+          "count": 10,
+          "percentage": 0.16666666666666666
+        },
+        "Oscillations and Waves": {
+          "count": 13,
+          "percentage": 0.21666666666666667
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Current Electricity": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.05
+        }
+      }
+    },
+    {
+      "year": 2001,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        },
+        "Mechanics": {
+          "count": 10,
+          "percentage": 0.16666666666666666
+        },
+        "Oscillations and Waves": {
+          "count": 13,
+          "percentage": 0.21666666666666667
+        },
+        "Thermal Physics": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Current Electricity": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.05
+        }
+      }
+    },
+    {
+      "year": 2002,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Mechanics": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Oscillations and Waves": {
+          "count": 13,
+          "percentage": 0.21666666666666667
+        },
+        "Thermal Physics": {
+          "count": 12,
+          "percentage": 0.2
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Current Electricity": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Electronics": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        }
+      }
+    },
+    {
+      "year": 2003,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Mechanics": {
+          "count": 10,
+          "percentage": 0.16666666666666666
+        },
+        "Oscillations and Waves": {
+          "count": 13,
+          "percentage": 0.21666666666666667
+        },
+        "Thermal Physics": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Magnetic Field": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Current Electricity": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Electronics": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.05
+        }
+      }
+    },
+    {
+      "year": 2004,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        },
+        "Mechanics": {
+          "count": 9,
+          "percentage": 0.15
+        },
+        "Oscillations and Waves": {
+          "count": 12,
+          "percentage": 0.2
+        },
+        "Thermal Physics": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Current Electricity": {
+          "count": 11,
+          "percentage": 0.18333333333333332
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        }
+      }
+    },
+    {
+      "year": 2005,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        },
+        "Mechanics": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Oscillations and Waves": {
+          "count": 10,
+          "percentage": 0.16666666666666666
+        },
+        "Thermal Physics": {
+          "count": 9,
+          "percentage": 0.15
+        },
+        "Gravitational Field": {
+          "count": 0,
+          "percentage": 0.0
+        },
+        "Electrostatic Field": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Current Electricity": {
+          "count": 9,
+          "percentage": 0.15
+        },
+        "Electronics": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Mechanical Properties of Matter": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        }
+      }
+    },
+    {
+      "year": 2006,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Mechanics": {
+          "count": 9,
+          "percentage": 0.15
+        },
+        "Oscillations and Waves": {
+          "count": 12,
+          "percentage": 0.2
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Gravitational Field": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        },
+        "Electrostatic Field": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Magnetic Field": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Current Electricity": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.05
+        }
+      }
+    },
+    {
+      "year": 2007,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanics": {
+          "count": 11,
+          "percentage": 0.18333333333333332
+        },
+        "Oscillations and Waves": {
+          "count": 11,
+          "percentage": 0.18333333333333332
+        },
+        "Thermal Physics": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Current Electricity": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Matter and Radiation": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        }
+      }
+    },
+    {
+      "year": 2008,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Mechanics": {
+          "count": 11,
+          "percentage": 0.18333333333333332
+        },
+        "Oscillations and Waves": {
+          "count": 12,
+          "percentage": 0.2
+        },
+        "Thermal Physics": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Current Electricity": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.05
+        }
+      }
+    },
+    {
+      "year": 2009,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        },
+        "Mechanics": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Oscillations and Waves": {
+          "count": 11,
+          "percentage": 0.18333333333333332
+        },
+        "Thermal Physics": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        },
+        "Magnetic Field": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Current Electricity": {
+          "count": 9,
+          "percentage": 0.15
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 7,
+          "percentage": 0.11666666666666667
+        },
+        "Matter and Radiation": {
+          "count": 4,
+          "percentage": 0.06666666666666667
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "era": "old_60_question",
+      "questionCount": 60,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        },
+        "Mechanics": {
+          "count": 8,
+          "percentage": 0.13333333333333333
+        },
+        "Oscillations and Waves": {
+          "count": 13,
+          "percentage": 0.21666666666666667
+        },
+        "Thermal Physics": {
+          "count": 11,
+          "percentage": 0.18333333333333332
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Magnetic Field": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Current Electricity": {
+          "count": 6,
+          "percentage": 0.1
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.05
+        },
+        "Mechanical Properties of Matter": {
+          "count": 5,
+          "percentage": 0.08333333333333333
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.03333333333333333
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Mechanics": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Oscillations and Waves": {
+          "count": 12,
+          "percentage": 0.24
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.04
+        }
+      }
+    },
+    {
+      "year": 2012,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Mechanics": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Oscillations and Waves": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Thermal Physics": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Gravitational Field": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Electrostatic Field": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Matter and Radiation": {
+          "count": 4,
+          "percentage": 0.08
+        }
+      }
+    },
+    {
+      "year": 2013,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Mechanics": {
+          "count": 8,
+          "percentage": 0.16
+        },
+        "Oscillations and Waves": {
+          "count": 11,
+          "percentage": 0.22
+        },
+        "Thermal Physics": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.04
+        }
+      }
+    },
+    {
+      "year": 2014,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanics": {
+          "count": 8,
+          "percentage": 0.16
+        },
+        "Oscillations and Waves": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Magnetic Field": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Current Electricity": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.06
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanics": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Oscillations and Waves": {
+          "count": 10,
+          "percentage": 0.2
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.04
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Mechanics": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Oscillations and Waves": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Thermal Physics": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.06
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanics": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Oscillations and Waves": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Thermal Physics": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Gravitational Field": {
+          "count": 0,
+          "percentage": 0.0
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Magnetic Field": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Current Electricity": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.04
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "era": "historical_50_question",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanics": {
+          "count": 8,
+          "percentage": 0.16
+        },
+        "Oscillations and Waves": {
+          "count": 8,
+          "percentage": 0.16
+        },
+        "Thermal Physics": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Magnetic Field": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Current Electricity": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Matter and Radiation": {
+          "count": 1,
+          "percentage": 0.02
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "era": "current_2019_2025",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanics": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Oscillations and Waves": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Electrostatic Field": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Matter and Radiation": {
+          "count": 4,
+          "percentage": 0.08
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "era": "current_2019_2025",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanics": {
+          "count": 8,
+          "percentage": 0.16
+        },
+        "Oscillations and Waves": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Thermal Physics": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Gravitational Field": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Electrostatic Field": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Electronics": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanical Properties of Matter": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 2,
+          "percentage": 0.04
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "era": "current_2019_2025",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanics": {
+          "count": 8,
+          "percentage": 0.16
+        },
+        "Oscillations and Waves": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Electronics": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanical Properties of Matter": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.06
+        }
+      }
+    },
+    {
+      "year": 2022,
+      "era": "current_2019_2025",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanics": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Oscillations and Waves": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Magnetic Field": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Current Electricity": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.06
+        }
+      }
+    },
+    {
+      "year": 2023,
+      "era": "current_2019_2025",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanics": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Oscillations and Waves": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Thermal Physics": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Gravitational Field": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Electrostatic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.06
+        }
+      }
+    },
+    {
+      "year": 2024,
+      "era": "current_2019_2025",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanics": {
+          "count": 11,
+          "percentage": 0.22
+        },
+        "Oscillations and Waves": {
+          "count": 7,
+          "percentage": 0.14
+        },
+        "Thermal Physics": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Electronics": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.06
+        }
+      }
+    },
+    {
+      "year": 2025,
+      "era": "current_2019_2025",
+      "questionCount": 50,
+      "units": {
+        "Measurement": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanics": {
+          "count": 9,
+          "percentage": 0.18
+        },
+        "Oscillations and Waves": {
+          "count": 10,
+          "percentage": 0.2
+        },
+        "Thermal Physics": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Gravitational Field": {
+          "count": 1,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 6,
+          "percentage": 0.12
+        },
+        "Magnetic Field": {
+          "count": 4,
+          "percentage": 0.08
+        },
+        "Current Electricity": {
+          "count": 3,
+          "percentage": 0.06
+        },
+        "Electronics": {
+          "count": 2,
+          "percentage": 0.04
+        },
+        "Mechanical Properties of Matter": {
+          "count": 5,
+          "percentage": 0.1
+        },
+        "Matter and Radiation": {
+          "count": 3,
+          "percentage": 0.06
+        }
+      }
+    }
+  ],
+  "eraSummaries": {
+    "old_60_question": {
+      "startYear": 2000,
+      "endYear": 2010,
+      "papers": 11,
+      "questions": 660,
+      "units": {
+        "Measurement": {
+          "count": 23,
+          "percentage": 0.03484848484848485
+        },
+        "Mechanics": {
+          "count": 98,
+          "percentage": 0.1484848484848485
+        },
+        "Oscillations and Waves": {
+          "count": 133,
+          "percentage": 0.2015151515151515
+        },
+        "Thermal Physics": {
+          "count": 84,
+          "percentage": 0.12727272727272726
+        },
+        "Gravitational Field": {
+          "count": 11,
+          "percentage": 0.016666666666666666
+        },
+        "Electrostatic Field": {
+          "count": 48,
+          "percentage": 0.07272727272727272
+        },
+        "Magnetic Field": {
+          "count": 47,
+          "percentage": 0.07121212121212121
+        },
+        "Current Electricity": {
+          "count": 85,
+          "percentage": 0.12878787878787878
+        },
+        "Electronics": {
+          "count": 34,
+          "percentage": 0.051515151515151514
+        },
+        "Mechanical Properties of Matter": {
+          "count": 64,
+          "percentage": 0.09696969696969697
+        },
+        "Matter and Radiation": {
+          "count": 33,
+          "percentage": 0.05
+        }
+      }
+    },
+    "historical_50_question": {
+      "startYear": 2011,
+      "endYear": 2018,
+      "papers": 8,
+      "questions": 400,
+      "units": {
+        "Measurement": {
+          "count": 21,
+          "percentage": 0.0525
+        },
+        "Mechanics": {
+          "count": 63,
+          "percentage": 0.1575
+        },
+        "Oscillations and Waves": {
+          "count": 75,
+          "percentage": 0.1875
+        },
+        "Thermal Physics": {
+          "count": 45,
+          "percentage": 0.1125
+        },
+        "Gravitational Field": {
+          "count": 8,
+          "percentage": 0.02
+        },
+        "Electrostatic Field": {
+          "count": 28,
+          "percentage": 0.07
+        },
+        "Magnetic Field": {
+          "count": 33,
+          "percentage": 0.0825
+        },
+        "Current Electricity": {
+          "count": 39,
+          "percentage": 0.0975
+        },
+        "Electronics": {
+          "count": 24,
+          "percentage": 0.06
+        },
+        "Mechanical Properties of Matter": {
+          "count": 45,
+          "percentage": 0.1125
+        },
+        "Matter and Radiation": {
+          "count": 19,
+          "percentage": 0.0475
+        }
+      }
+    },
+    "current_2019_2025": {
+      "startYear": 2019,
+      "endYear": 2025,
+      "papers": 7,
+      "questions": 350,
+      "units": {
+        "Measurement": {
+          "count": 15,
+          "percentage": 0.04285714285714286
+        },
+        "Mechanics": {
+          "count": 61,
+          "percentage": 0.1742857142857143
+        },
+        "Oscillations and Waves": {
+          "count": 60,
+          "percentage": 0.17142857142857143
+        },
+        "Thermal Physics": {
+          "count": 36,
+          "percentage": 0.10285714285714286
+        },
+        "Gravitational Field": {
+          "count": 10,
+          "percentage": 0.02857142857142857
+        },
+        "Electrostatic Field": {
+          "count": 32,
+          "percentage": 0.09142857142857143
+        },
+        "Magnetic Field": {
+          "count": 29,
+          "percentage": 0.08285714285714285
+        },
+        "Current Electricity": {
+          "count": 29,
+          "percentage": 0.08285714285714285
+        },
+        "Electronics": {
+          "count": 18,
+          "percentage": 0.05142857142857143
+        },
+        "Mechanical Properties of Matter": {
+          "count": 39,
+          "percentage": 0.11142857142857143
+        },
+        "Matter and Radiation": {
+          "count": 21,
+          "percentage": 0.06
+        }
+      }
+    },
+    "historical_2000_2018": {
+      "startYear": 2000,
+      "endYear": 2018,
+      "papers": 19,
+      "questions": 1060,
+      "units": {
+        "Measurement": {
+          "count": 44,
+          "percentage": 0.04150943396226415
+        },
+        "Mechanics": {
+          "count": 161,
+          "percentage": 0.15188679245283018
+        },
+        "Oscillations and Waves": {
+          "count": 208,
+          "percentage": 0.19622641509433963
+        },
+        "Thermal Physics": {
+          "count": 129,
+          "percentage": 0.12169811320754717
+        },
+        "Gravitational Field": {
+          "count": 19,
+          "percentage": 0.017924528301886792
+        },
+        "Electrostatic Field": {
+          "count": 76,
+          "percentage": 0.07169811320754717
+        },
+        "Magnetic Field": {
+          "count": 80,
+          "percentage": 0.07547169811320754
+        },
+        "Current Electricity": {
+          "count": 124,
+          "percentage": 0.1169811320754717
+        },
+        "Electronics": {
+          "count": 58,
+          "percentage": 0.05471698113207547
+        },
+        "Mechanical Properties of Matter": {
+          "count": 109,
+          "percentage": 0.10283018867924529
+        },
+        "Matter and Radiation": {
+          "count": 52,
+          "percentage": 0.04905660377358491
+        }
+      }
+    },
+    "combined_2000_2025": {
+      "startYear": 2000,
+      "endYear": 2025,
+      "papers": 26,
+      "questions": 1410,
+      "units": {
+        "Measurement": {
+          "count": 59,
+          "percentage": 0.04184397163120567
+        },
+        "Mechanics": {
+          "count": 222,
+          "percentage": 0.1574468085106383
+        },
+        "Oscillations and Waves": {
+          "count": 268,
+          "percentage": 0.1900709219858156
+        },
+        "Thermal Physics": {
+          "count": 165,
+          "percentage": 0.11702127659574468
+        },
+        "Gravitational Field": {
+          "count": 29,
+          "percentage": 0.02056737588652482
+        },
+        "Electrostatic Field": {
+          "count": 108,
+          "percentage": 0.07659574468085106
+        },
+        "Magnetic Field": {
+          "count": 109,
+          "percentage": 0.07730496453900709
+        },
+        "Current Electricity": {
+          "count": 153,
+          "percentage": 0.10851063829787234
+        },
+        "Electronics": {
+          "count": 76,
+          "percentage": 0.05390070921985816
+        },
+        "Mechanical Properties of Matter": {
+          "count": 148,
+          "percentage": 0.1049645390070922
+        },
+        "Matter and Radiation": {
+          "count": 73,
+          "percentage": 0.05177304964539007
+        }
+      }
+    }
+  },
+  "currentFamilies": [
+    {
+      "familyId": "FAM126",
+      "name": "Resistor-network reduction and node voltages",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.1",
+      "subtopic": "Current, resistance and circuit laws",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 11,
+      "distinctPapers": 7,
+      "questionReferences": [
+        "2019 Q49",
+        "2020 Q47",
+        "2021 Q40",
+        "2022 Q23",
+        "2022 Q30",
+        "2022 Q41",
+        "2023 Q29",
+        "2023 Q40",
+        "2024 Q18",
+        "2025 Q6",
+        "2025 Q29"
+      ],
+      "annualHitRate": 1.0,
+      "meanPerYear": 1.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "1-3",
+      "longestAbsence": 0,
+      "volatility": 0.728,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM139",
+      "name": "Faraday-Lenz induction in loops and coils",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.4",
+      "subtopic": "Electromagnetic induction, generators and transformers",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 9,
+      "distinctPapers": 7,
+      "questionReferences": [
+        "2019 Q20",
+        "2020 Q29",
+        "2021 Q50",
+        "2022 Q39",
+        "2023 Q23",
+        "2023 Q47",
+        "2024 Q11",
+        "2025 Q9",
+        "2025 Q33"
+      ],
+      "annualHitRate": 1.0,
+      "meanPerYear": 1.286,
+      "medianPerYear": 1.0,
+      "rangePerYear": "1-2",
+      "longestAbsence": 0,
+      "volatility": 0.452,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM018",
+      "name": "Bernoulli-continuity pipe and efflux problems",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2019,
+        2020,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 6,
+      "distinctPapers": 6,
+      "questionReferences": [
+        "2019 Q39",
+        "2020 Q41",
+        "2022 Q34",
+        "2023 Q28",
+        "2024 Q38",
+        "2025 Q30"
+      ],
+      "annualHitRate": 0.857,
+      "meanPerYear": 0.857,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM039",
+      "name": "Centre-of-gravity location from geometry",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.3",
+      "subtopic": "Moments, centre of gravity and stability",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 6,
+      "distinctPapers": 6,
+      "questionReferences": [
+        "2020 Q19",
+        "2021 Q24",
+        "2022 Q22",
+        "2023 Q22",
+        "2024 Q12",
+        "2025 Q21"
+      ],
+      "annualHitRate": 0.857,
+      "meanPerYear": 0.857,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.35,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM134",
+      "name": "Charged-particle motion in magnetic fields",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.1",
+      "subtopic": "Magnetic force and field",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 6,
+      "distinctPapers": 5,
+      "questionReferences": [
+        "2020 Q37",
+        "2020 Q44",
+        "2021 Q34",
+        "2022 Q45",
+        "2024 Q39",
+        "2025 Q18"
+      ],
+      "annualHitRate": 0.714,
+      "meanPerYear": 0.857,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-2",
+      "longestAbsence": 1,
+      "volatility": 0.639,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM076",
+      "name": "Doppler shift from source or observer motion",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.7",
+      "subtopic": "Doppler effect and beats",
+      "years": [
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 6,
+      "distinctPapers": 6,
+      "questionReferences": [
+        "2019 Q41",
+        "2021 Q39",
+        "2022 Q12",
+        "2023 Q24",
+        "2024 Q10",
+        "2025 Q49"
+      ],
+      "annualHitRate": 0.857,
+      "meanPerYear": 0.857,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.35,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM034",
+      "name": "Quark composition charge and confinement",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.6",
+      "subtopic": "Elementary particles and cosmology",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "recurrenceCount": 6,
+      "distinctPapers": 6,
+      "questionReferences": [
+        "2019 Q4",
+        "2020 Q6",
+        "2021 Q8",
+        "2022 Q7",
+        "2023 Q8",
+        "2025 Q7"
+      ],
+      "annualHitRate": 0.857,
+      "meanPerYear": 0.857,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM099",
+      "name": "Steady conduction through rods and networks",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.7",
+      "subtopic": "Heat transfer",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 6,
+      "distinctPapers": 6,
+      "questionReferences": [
+        "2020 Q27",
+        "2021 Q36",
+        "2022 Q40",
+        "2023 Q36",
+        "2024 Q47",
+        "2025 Q34"
+      ],
+      "annualHitRate": 0.857,
+      "meanPerYear": 0.857,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.35,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM011",
+      "name": "Axial extension from effective tensile force",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.1",
+      "subtopic": "Elasticity and deformation",
+      "years": [
+        2020,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 5,
+      "distinctPapers": 5,
+      "questionReferences": [
+        "2020 Q39",
+        "2021 Q7",
+        "2023 Q37",
+        "2024 Q20",
+        "2025 Q11"
+      ],
+      "annualHitRate": 0.714,
+      "meanPerYear": 0.714,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.452,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM148",
+      "name": "Combinational logic evaluation",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.4",
+      "subtopic": "Digital electronics and logic gates",
+      "years": [
+        2020,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 5,
+      "distinctPapers": 5,
+      "questionReferences": [
+        "2020 Q18",
+        "2021 Q10",
+        "2023 Q46",
+        "2024 Q40",
+        "2025 Q48"
+      ],
+      "annualHitRate": 0.714,
+      "meanPerYear": 0.714,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.452,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM073",
+      "name": "Decibel intensity conversion",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.6",
+      "subtopic": "Sound and acoustics",
+      "years": [
+        2020,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 5,
+      "distinctPapers": 5,
+      "questionReferences": [
+        "2020 Q3",
+        "2022 Q26",
+        "2023 Q13",
+        "2024 Q13",
+        "2025 Q22"
+      ],
+      "annualHitRate": 0.714,
+      "meanPerYear": 0.714,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM102",
+      "name": "Humidity dew point and vapour accounting",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.9",
+      "subtopic": "Thermal applications",
+      "years": [
+        2019,
+        2020,
+        2022,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 5,
+      "distinctPapers": 5,
+      "questionReferences": [
+        "2019 Q13",
+        "2020 Q13",
+        "2022 Q47",
+        "2024 Q28",
+        "2025 Q23"
+      ],
+      "annualHitRate": 0.714,
+      "meanPerYear": 0.714,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.452,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM036",
+      "name": "Motion-graph slope and area interpretation",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.1",
+      "subtopic": "Linear motion kinematics",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2024
+      ],
+      "recurrenceCount": 5,
+      "distinctPapers": 5,
+      "questionReferences": [
+        "2019 Q40",
+        "2020 Q4",
+        "2021 Q12",
+        "2022 Q19",
+        "2024 Q7"
+      ],
+      "annualHitRate": 0.714,
+      "meanPerYear": 0.714,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM123",
+      "name": "Capacitor equivalent networks and plate topology",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.4",
+      "subtopic": "Capacitance and capacitors",
+      "years": [
+        2019,
+        2020,
+        2022,
+        2023
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q18",
+        "2020 Q50",
+        "2022 Q32",
+        "2023 Q39"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM056",
+      "name": "Centripetal-force constraint",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.8",
+      "subtopic": "Rotational and circular motion",
+      "years": [
+        2019,
+        2022,
+        2024
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2019 Q50",
+        "2022 Q25",
+        "2024 Q15",
+        "2024 Q41"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.571,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-2",
+      "longestAbsence": 2,
+      "volatility": 0.728,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM129",
+      "name": "Electrical power from voltage current and resistance",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.2",
+      "subtopic": "Electrical energy and power",
+      "years": [
+        2019,
+        2021,
+        2023,
+        2024
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q47",
+        "2021 Q46",
+        "2023 Q18",
+        "2024 Q24"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM100",
+      "name": "First-law path and cycle accounting",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.8",
+      "subtopic": "Thermodynamics",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q30",
+        "2020 Q24",
+        "2021 Q30",
+        "2025 Q44"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM046",
+      "name": "Friction in coupled-body systems",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.5",
+      "subtopic": "Friction",
+      "years": [
+        2020,
+        2023,
+        2024
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2020 Q22",
+        "2023 Q44",
+        "2024 Q16",
+        "2024 Q50"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.571,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-2",
+      "longestAbsence": 2,
+      "volatility": 0.728,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM137",
+      "name": "Magnetic-field superposition from straight currents",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.2",
+      "subtopic": "Magnetic fields of currents",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q48",
+        "2020 Q12",
+        "2021 Q33",
+        "2022 Q50"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM068",
+      "name": "Mechanical-wave propagation across media",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.2",
+      "subtopic": "Wave properties and propagation",
+      "years": [
+        2019,
+        2020,
+        2022,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q16",
+        "2020 Q7",
+        "2022 Q21",
+        "2025 Q25"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM050",
+      "name": "Perfectly inelastic collision common velocity",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.7",
+      "subtopic": "Momentum, impulse and collisions",
+      "years": [
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2021 Q6",
+        "2023 Q16",
+        "2024 Q5",
+        "2025 Q45"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM028",
+      "name": "Photoelectric threshold and maximum energy",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.1",
+      "subtopic": "Quantum nature of radiation and photoelectric effect",
+      "years": [
+        2019,
+        2021,
+        2023,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q32",
+        "2021 Q29",
+        "2023 Q14",
+        "2025 Q47"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 1,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM108",
+      "name": "Point-charge field superposition and equilibrium",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q17",
+        "2020 Q28",
+        "2021 Q17",
+        "2022 Q29"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM133",
+      "name": "Potentiometer balance-length method",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.6",
+      "subtopic": "Potentiometer",
+      "years": [
+        2020,
+        2021,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2020 Q17",
+        "2021 Q31",
+        "2024 Q26",
+        "2025 Q24"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM037",
+      "name": "Projectile component and equal-height reasoning",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.1",
+      "subtopic": "Linear motion kinematics",
+      "years": [
+        2021,
+        2022,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2021 Q48",
+        "2022 Q9",
+        "2024 Q3",
+        "2025 Q14"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM019",
+      "name": "Stokes terminal-speed scaling",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2021 Q26",
+        "2023 Q49",
+        "2024 Q36",
+        "2025 Q38"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM084",
+      "name": "Thin-lens imaging and magnification",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2019,
+        2022,
+        2023,
+        2025
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2019 Q33",
+        "2022 Q28",
+        "2023 Q20",
+        "2025 Q28"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM058",
+      "name": "Torque and angular acceleration",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.8",
+      "subtopic": "Rotational and circular motion",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 4,
+      "questionReferences": [
+        "2021 Q38",
+        "2022 Q35",
+        "2023 Q50",
+        "2024 Q8"
+      ],
+      "annualHitRate": 0.571,
+      "meanPerYear": 0.571,
+      "medianPerYear": 1.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM143",
+      "name": "Transistor switching regions",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.2",
+      "subtopic": "Transistors",
+      "years": [
+        2019,
+        2022,
+        2023
+      ],
+      "recurrenceCount": 4,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2019 Q3",
+        "2019 Q37",
+        "2022 Q44",
+        "2023 Q7"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.571,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-2",
+      "longestAbsence": 2,
+      "volatility": 0.728,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM071",
+      "name": "Air-column resonance under changed wave speed",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.5",
+      "subtopic": "Vibrations in strings and air columns",
+      "years": [
+        2022,
+        2023,
+        2025
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2022 Q48",
+        "2023 Q35",
+        "2025 Q19"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM027",
+      "name": "Blackbody Wien-Stefan scaling",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.1",
+      "subtopic": "Quantum nature of radiation and photoelectric effect",
+      "years": [
+        2022,
+        2023,
+        2025
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2022 Q8",
+        "2023 Q6",
+        "2025 Q16"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM097",
+      "name": "Calorimetry with phase change",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.6",
+      "subtopic": "Phase change and latent heat",
+      "years": [
+        2020,
+        2021,
+        2024
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2020 Q35",
+        "2021 Q42",
+        "2024 Q33"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM122",
+      "name": "Capacitor charge sharing and energy change",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.4",
+      "subtopic": "Capacitance and capacitors",
+      "years": [
+        2021,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2021 Q32",
+        "2024 Q42",
+        "2025 Q43"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM014",
+      "name": "Capillary-rise geometry and retention",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.2",
+      "subtopic": "Surface tension",
+      "years": [
+        2020,
+        2021,
+        2025
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2020 Q45",
+        "2021 Q14",
+        "2025 Q35"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM130",
+      "name": "Cell internal resistance and terminal behavior",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.4",
+      "subtopic": "Cells, internal resistance and networks",
+      "years": [
+        2019,
+        2020
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2019 Q45",
+        "2019 Q46",
+        "2020 Q33"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-2",
+      "longestAbsence": 5,
+      "volatility": 0.728,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM131",
+      "name": "Centre-zero meter in divider and bridge circuits",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.5",
+      "subtopic": "Electrical measuring instruments",
+      "years": [
+        2020,
+        2021,
+        2023
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2020 Q38",
+        "2021 Q23",
+        "2023 Q43"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM081",
+      "name": "Critical-angle and grazing-ray refraction",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2022 Q33",
+        "2023 Q38",
+        "2024 Q37"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAM045",
+      "name": "Friction coefficient from limiting or stopping condition",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.5",
+      "subtopic": "Friction",
+      "years": [
+        2022,
+        2024,
+        2025
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2022 Q20",
+        "2024 Q43",
+        "2025 Q12"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM092",
+      "name": "Ideal-gas state relation and graphs",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.3",
+      "subtopic": "Gas laws",
+      "years": [
+        2021,
+        2023,
+        2024
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2021 Q19",
+        "2023 Q9",
+        "2024 Q46"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM135",
+      "name": "Magnetic force on current-carrying conductors",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.1",
+      "subtopic": "Magnetic force and field",
+      "years": [
+        2021,
+        2023,
+        2025
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2021 Q44",
+        "2023 Q25",
+        "2025 Q32"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM094",
+      "name": "Molecular kinetic energy and absolute temperature",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.4",
+      "subtopic": "Kinetic theory of gases",
+      "years": [
+        2021,
+        2022
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2021 Q5",
+        "2022 Q15",
+        "2022 Q42"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-2",
+      "longestAbsence": 3,
+      "volatility": 0.728,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM082",
+      "name": "Principal-ray tracing through thin lenses",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2020 Q8",
+        "2021 Q11",
+        "2022 Q6"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM083",
+      "name": "Prism deviation at symmetry or in combinations",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2020,
+        2021,
+        2023
+      ],
+      "recurrenceCount": 3,
+      "distinctPapers": 3,
+      "questionReferences": [
+        "2020 Q32",
+        "2021 Q41",
+        "2023 Q30"
+      ],
+      "annualHitRate": 0.429,
+      "meanPerYear": 0.429,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.495,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM080",
+      "name": "Apparent depth through liquid",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2023,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2023 Q42",
+        "2024 Q48"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM106",
+      "name": "Circular-satellite energy versus radius",
+      "unit": "Gravitational Field",
+      "unitId": "gravitational-field",
+      "subtopicId": "NIE-5.2",
+      "subtopic": "Gravitational potential, energy and satellites",
+      "years": [
+        2024,
+        2025
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2024 Q44",
+        "2025 Q26"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM115",
+      "name": "Conducting-sphere potential after charge combination",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.2",
+      "subtopic": "Electric potential and energy",
+      "years": [
+        2020,
+        2021
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q31",
+        "2021 Q47"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM125",
+      "name": "Current density and drift speed in varying area",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.1",
+      "subtopic": "Current, resistance and circuit laws",
+      "years": [
+        2022,
+        2023
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2022 Q31",
+        "2023 Q48"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM004",
+      "name": "Dimensions of physical constants",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.3",
+      "subtopic": "Dimensions and dimensional analysis",
+      "years": [
+        2019,
+        2020
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2019 Q2",
+        "2020 Q1"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM116",
+      "name": "Electrostatic potential-energy accounting",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.2",
+      "subtopic": "Electric potential and energy",
+      "years": [
+        2020,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q25",
+        "2024 Q29"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM001",
+      "name": "Energy-unit recognition",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.2",
+      "subtopic": "Physical quantities and SI units",
+      "years": [
+        2023,
+        2025
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2023 Q1",
+        "2025 Q1"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-R01",
+      "name": "Floating composite body submerged fraction",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2019,
+        2021
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2019 Q38",
+        "2021 Q21"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM140",
+      "name": "Ideal-transformer ratios",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.4",
+      "subtopic": "Electromagnetic induction, generators and transformers",
+      "years": [
+        2019,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2019 Q19",
+        "2024 Q14"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM049",
+      "name": "Impulse from force-time area",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.7",
+      "subtopic": "Momentum, impulse and collisions",
+      "years": [
+        2020,
+        2022
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q30",
+        "2022 Q18"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM107",
+      "name": "Inverse-distance gravitational potential and energy",
+      "unit": "Gravitational Field",
+      "unitId": "gravitational-field",
+      "subtopicId": "NIE-5.2",
+      "subtopic": "Gravitational potential, energy and satellites",
+      "years": [
+        2019,
+        2023
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2019 Q5",
+        "2023 Q2"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM057",
+      "name": "Moment of inertia and mass distribution",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.8",
+      "subtopic": "Rotational and circular motion",
+      "years": [
+        2020,
+        2021
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q5",
+        "2021 Q15"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM098",
+      "name": "Newton cooling-rate scaling",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.7",
+      "subtopic": "Heat transfer",
+      "years": [
+        2020,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q34",
+        "2024 Q31"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM040",
+      "name": "Newton third-law force pairs",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.4",
+      "subtopic": "Newton laws and force systems",
+      "years": [
+        2023,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2023 Q3",
+        "2024 Q4"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM032",
+      "name": "Nuclear mass-and-charge accounting",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.5",
+      "subtopic": "Radioactivity, nuclear physics and radiation safety",
+      "years": [
+        2021,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2021 Q28",
+        "2024 Q27"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM146",
+      "name": "Op-amp comparator response",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.3",
+      "subtopic": "Operational amplifiers and electronic circuits",
+      "years": [
+        2020,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q15",
+        "2024 Q49"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM147",
+      "name": "Op-amp voltage gain",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.3",
+      "subtopic": "Operational amplifiers and electronic circuits",
+      "years": [
+        2022,
+        2025
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2022 Q46",
+        "2025 Q39"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM103",
+      "name": "Opposing Earth-Moon gravitational fields",
+      "unit": "Gravitational Field",
+      "unitId": "gravitational-field",
+      "subtopicId": "NIE-5.1",
+      "subtopic": "Gravitational force and field",
+      "years": [
+        2019,
+        2022
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2019 Q22",
+        "2022 Q49"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM051",
+      "name": "Projectile fragmentation momentum",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.7",
+      "subtopic": "Momentum, impulse and collisions",
+      "years": [
+        2020,
+        2022
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q23",
+        "2022 Q24"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-R02",
+      "name": "Radial electric-field graph for concentric charged conductors",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.3",
+      "subtopic": "Electric flux and Gauss law",
+      "years": [
+        2021,
+        2025
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2021 Q45",
+        "2025 Q37"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM061",
+      "name": "SHM period and frequency scaling",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.1",
+      "subtopic": "Simple harmonic motion",
+      "years": [
+        2022,
+        2025
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2022 Q17",
+        "2025 Q3"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM062",
+      "name": "SHM phase and extrema relations",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.1",
+      "subtopic": "Simple harmonic motion",
+      "years": [
+        2020,
+        2021
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q16",
+        "2021 Q13"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM047",
+      "name": "Signs and values of work by forces",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.6",
+      "subtopic": "Work, energy and power",
+      "years": [
+        2019,
+        2022
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2019 Q9",
+        "2022 Q27"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM015",
+      "name": "Soap-bubble pressure and energy",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.2",
+      "subtopic": "Surface tension",
+      "years": [
+        2023,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2023 Q34",
+        "2024 Q23"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM070",
+      "name": "Standing-wave node spacing",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.4",
+      "subtopic": "Standing waves",
+      "years": [
+        2020,
+        2025
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q11",
+        "2025 Q4"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM072",
+      "name": "String-pulse wavelength under varying tension or density",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.5",
+      "subtopic": "Vibrations in strings and air columns",
+      "years": [
+        2021,
+        2025
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2021 Q9",
+        "2025 Q15"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM104",
+      "name": "Surface gravity planetary scaling",
+      "unit": "Gravitational Field",
+      "unitId": "gravitational-field",
+      "subtopicId": "NIE-5.1",
+      "subtopic": "Gravitational force and field",
+      "years": [
+        2020,
+        2021
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2020 Q10",
+        "2021 Q20"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM064",
+      "name": "Telescope normal-adjustment relations",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.10",
+      "subtopic": "Optical instruments",
+      "years": [
+        2021,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2021 Q37",
+        "2024 Q9"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM089",
+      "name": "Thermal-expansion correction of length standards",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.2",
+      "subtopic": "Thermal expansion",
+      "years": [
+        2023,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2023 Q27",
+        "2024 Q17"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM085",
+      "name": "Two-lens effective optical power",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2023,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2023 Q15",
+        "2024 Q25"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM117",
+      "name": "Uniform-field potential gradient",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.2",
+      "subtopic": "Electric potential and energy",
+      "years": [
+        2022,
+        2023
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2022 Q11",
+        "2023 Q11"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM008",
+      "name": "Vernier least-count relation",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.4",
+      "subtopic": "Measurement instruments and uncertainty",
+      "years": [
+        2021,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2021 Q2",
+        "2024 Q2"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 2,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM030",
+      "name": "de Broglie wavelength under momentum change",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.3",
+      "subtopic": "Wave nature of matter",
+      "years": [
+        2022,
+        2024
+      ],
+      "recurrenceCount": 2,
+      "distinctPapers": 2,
+      "questionReferences": [
+        "2022 Q13",
+        "2024 Q35"
+      ],
+      "annualHitRate": 0.286,
+      "meanPerYear": 0.286,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.452,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S03",
+      "name": "Apparent weight through stages of immersion and bottom contact",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q26"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S06",
+      "name": "Back emf versus electric-motor speed",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.4",
+      "subtopic": "Electromagnetic induction, generators and transformers",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q5"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S13",
+      "name": "Buoyant launch height from an underwater release",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q30"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM096",
+      "name": "Calorimetry energy balance",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.5",
+      "subtopic": "Heat capacity and calorimetry",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q42"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "medium"
+    },
+    {
+      "familyId": "FAMV3-S10",
+      "name": "Circular-orbit speed ratio",
+      "unit": "Gravitational Field",
+      "unitId": "gravitational-field",
+      "subtopicId": "NIE-5.2",
+      "subtopic": "Gravitational potential, energy and satellites",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q19"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S11",
+      "name": "Dimensional exponent in a viscous-flow relation",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q26"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM096-S1",
+      "name": "Distinct family - Separate batch calorimetry from steady-flow heater power",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.5",
+      "subtopic": "Heat capacity and calorimetry",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q20"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM081-S1",
+      "name": "Distinct family - distinct parallel-interface refractive-index ordering family",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q31"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM037-S1",
+      "name": "Distinct family - distinct projectile-energy/statements family",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.1",
+      "subtopic": "Linear motion kinematics",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q5"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM134-S1",
+      "name": "Distinct family - distinct zero-magnetic-force/parallel-motion family",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.1",
+      "subtopic": "Magnetic force and field",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q21"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM072-S1",
+      "name": "Distinct family - string-pulse family",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.5",
+      "subtopic": "Vibrations in strings and air columns",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q19"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S01",
+      "name": "Electric field between concentric conducting shells held at fixed potentials",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q29"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S16",
+      "name": "Field lines for an off-centre charge in a conductor cavity",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q50"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S05",
+      "name": "Force of a steady liquid jet on a wall",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q16"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S14",
+      "name": "Magnetic force on a moving induced-current loop beside a straight wire",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.1",
+      "subtopic": "Magnetic force and field",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q45"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S04",
+      "name": "Parachutist velocity-time profile",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.1",
+      "subtopic": "Linear motion kinematics",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q42"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S08",
+      "name": "Polarization identifies transverse waves",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.11",
+      "subtopic": "Interference, diffraction and polarization",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q5"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S09",
+      "name": "Projectile energy and statement reasoning",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.6",
+      "subtopic": "Work, energy and power",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q17"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S02",
+      "name": "Repeated rebound with a fixed fractional speed loss",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.6",
+      "subtopic": "Work, energy and power",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q31"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S07",
+      "name": "Submerged volume from spring-balance tension",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q36"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S15",
+      "name": "Support reactions as a person walks on a non-uniform beam",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.3",
+      "subtopic": "Moments, centre of gravity and stability",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q41"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAM132",
+      "name": "Unique - Analogue multimeter range and scale reading",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-7.5",
+      "subtopic": "Electrical measuring instruments",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q26"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM059",
+      "name": "Unique - Angular momentum conservation in cyclone rotation",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.8",
+      "subtopic": "Rotational and circular motion",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q25"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM078",
+      "name": "Unique - Basic propagation properties of electromagnetic waves",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.8",
+      "subtopic": "Electromagnetic waves",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q27"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM077",
+      "name": "Unique - Beats between open pipes at different temperatures",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.7",
+      "subtopic": "Doppler effect and beats",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q21"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM020",
+      "name": "Unique - Bernoulli lift on a roof in wind",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q25"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM042",
+      "name": "Unique - Buoyancy direction in an accelerating liquid tank",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-2.4",
+      "subtopic": "Newton laws and force systems",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q35"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM110",
+      "name": "Unique - Charge sharing by successive contact of conducting spheres",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q38"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM111",
+      "name": "Unique - Circular motion driven by a line-charge electric field",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q40"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM079",
+      "name": "Unique - Comparison of ultraviolet and ultrasonic waves",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.8",
+      "subtopic": "Electromagnetic waves",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q7"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM065",
+      "name": "Unique - Compound microscope magnification",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.10",
+      "subtopic": "Optical instruments",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q36"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM021",
+      "name": "Unique - Continuity equation for blood flow through capillaries",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q28"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM067",
+      "name": "Unique - Diffraction of light at an edge",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.11",
+      "subtopic": "Interference, diffraction and polarization",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q3"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM012",
+      "name": "Unique - Elastic strain energy in a stretched wire",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.1",
+      "subtopic": "Elasticity and deformation",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q14"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM120",
+      "name": "Unique - Electric potential on the axis of a charged ring",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.2",
+      "subtopic": "Electric potential and energy",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q27"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM149",
+      "name": "Unique - Flip-flop as a one-bit memory element",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.4",
+      "subtopic": "Digital electronics and logic gates",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q16"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM141",
+      "name": "Unique - Forward resistance of a diode-resistor two-terminal network",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.1",
+      "subtopic": "Semiconductor fundamentals and diodes",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q24"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM033",
+      "name": "Unique - Half-life independence from sample state",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.5",
+      "subtopic": "Radioactivity, nuclear physics and radiation safety",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q43"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM022",
+      "name": "Unique - Hydrostatic pressure balance in a two-liquid U-tube",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q20"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM009",
+      "name": "Unique - Identifying a vector-scalar pair",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.5",
+      "subtopic": "Scalars, vectors and resolution",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q1"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM069",
+      "name": "Unique - Instantaneous particle velocity in a travelling transverse wave",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.2",
+      "subtopic": "Wave properties and propagation",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q9"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM136",
+      "name": "Unique - Interactions of stationary magnetic fields",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.1",
+      "subtopic": "Magnetic force and field",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q4"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM095",
+      "name": "Unique - Kinetic theory relation between pressure density and rms speed",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.4",
+      "subtopic": "Kinetic theory of gases",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q15"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM053",
+      "name": "Unique - Linear momentum conservation in collisions",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.7",
+      "subtopic": "Momentum, impulse and collisions",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q4"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM013",
+      "name": "Unique - Material dependence of Young modulus",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.1",
+      "subtopic": "Elasticity and deformation",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q10"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM054",
+      "name": "Unique - Maximum spring energy during an interaction between blocks",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.7",
+      "subtopic": "Momentum, impulse and collisions",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q49"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM006",
+      "name": "Unique - Micrometer reading with zero correction",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.4",
+      "subtopic": "Measurement instruments and uncertainty",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q2"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM105",
+      "name": "Unique - Mutual gravity providing circular motion of three stars",
+      "unit": "Gravitational Field",
+      "unitId": "gravitational-field",
+      "subtopicId": "NIE-5.1",
+      "subtopic": "Gravitational force and field",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q48"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM005",
+      "name": "Unique - Pairs of quantities with equal dimensions",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.3",
+      "subtopic": "Dimensions and dimensional analysis",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q1"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM023",
+      "name": "Unique - Poiseuille flow through a grease nipple",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q14"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM038",
+      "name": "Unique - Possible magnitude of the resultant of two forces",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-2.2",
+      "subtopic": "Resultant force and equilibrium",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q2"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM091",
+      "name": "Unique - Real volume expansivity from liquid-column displacement",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.2",
+      "subtopic": "Thermal expansion",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q46"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM086",
+      "name": "Unique - Refraction and deviation through a glass sphere",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q35"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM087",
+      "name": "Unique - Refraction through adjacent right-angled prisms",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.9",
+      "subtopic": "Geometrical optics",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q43"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM145",
+      "name": "Unique - Relative doping of BJT emitter base and collector",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.2",
+      "subtopic": "Transistors",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q22"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM127",
+      "name": "Unique - Resistance of variable-length arcs of a conducting ring",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.1",
+      "subtopic": "Current, resistance and circuit laws",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q43"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM063",
+      "name": "Unique - SHM of a vertically displaced floating tube",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.1",
+      "subtopic": "Simple harmonic motion",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q34"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM003",
+      "name": "Unique - SI base and derived units",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.2",
+      "subtopic": "Physical quantities and SI units",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q1"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM055",
+      "name": "Unique - Series of one-dimensional elastic collisions",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.7",
+      "subtopic": "Momentum, impulse and collisions",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q36"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM074",
+      "name": "Unique - Sound quality and overtones",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.6",
+      "subtopic": "Sound and acoustics",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q3"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM075",
+      "name": "Unique - Speed of sound in the atmosphere",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.6",
+      "subtopic": "Sound and acoustics",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q11"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM124",
+      "name": "Unique - Steady capacitor voltage in a multi-source resistor circuit",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.4",
+      "subtopic": "Capacitance and capacitors",
+      "years": [
+        2020
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2020 Q14"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM017",
+      "name": "Unique - Surface-tension threshold for seepage through a hole",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.2",
+      "subtopic": "Surface tension",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q43"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM044",
+      "name": "Unique - Tensions with a massive accelerating pulley",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.4",
+      "subtopic": "Newton laws and force systems",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q18"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM088",
+      "name": "Unique - Thermometric properties and liquid thermometers",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.1",
+      "subtopic": "Temperature measurement and thermometry",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q6"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM029",
+      "name": "Unique - Three-level laser energy transitions",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.2",
+      "subtopic": "Atomic structure and spectra",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q10"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM138",
+      "name": "Unique - Torque on current loops of different areas",
+      "unit": "Magnetic Field",
+      "unitId": "magnetic-field",
+      "subtopicId": "NIE-8.3",
+      "subtopic": "Torque on coils and motors",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q44"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM024",
+      "name": "Unique - Total hydrostatic force on a flask wall",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2021
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2021 Q49"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM093",
+      "name": "Unique - Two trapped gas columns heated to different temperatures",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.3",
+      "subtopic": "Gas laws",
+      "years": [
+        2022
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2022 Q37"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 3,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM025",
+      "name": "Unique - Viscous shear between parallel plates",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q23"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM121",
+      "name": "Unique - Work and potential differences between equipotentials",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.2",
+      "subtopic": "Electric potential and energy",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q21"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM031",
+      "name": "Unique - X-ray tube production principles",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.4",
+      "subtopic": "X-rays",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q12"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM109",
+      "name": "Unique - accelerations of charged masses in a uniform electric field",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q33"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM144",
+      "name": "Unique - active-region transistor bias voltage",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.2",
+      "subtopic": "Transistors",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q32"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM052",
+      "name": "Unique - angular momentum in a collision with a pivoted rod",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.7",
+      "subtopic": "Momentum, impulse and collisions",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q40"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM041",
+      "name": "Unique - apparent weight in an accelerating elevator",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.4",
+      "subtopic": "Newton laws and force systems",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q17"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM035",
+      "name": "Unique - classification of the muon as a lepton",
+      "unit": "Matter and Radiation",
+      "unitId": "matter-and-radiation",
+      "subtopicId": "NIE-11.6",
+      "subtopic": "Elementary particles and cosmology",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q6"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM066",
+      "name": "Unique - corrective lens for myopia",
+      "unit": "Oscillations and Waves",
+      "unitId": "oscillations-and-waves",
+      "subtopicId": "NIE-3.10",
+      "subtopic": "Optical instruments",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q10"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM090",
+      "name": "Unique - differential thermal expansion of a ball and circular hole",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.2",
+      "subtopic": "Thermal expansion",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q42"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM002",
+      "name": "Unique - dimensionless physical quantity having a named unit",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.2",
+      "subtopic": "Physical quantities and SI units",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q1"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM118",
+      "name": "Unique - electric field obtained from a potential-distance graph",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.2",
+      "subtopic": "Electric potential and energy",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q46"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM112",
+      "name": "Unique - electric field within a dielectric medium",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q8"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM119",
+      "name": "Unique - electric potential of a charged hollow spherical shell",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.2",
+      "subtopic": "Electric potential and energy",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q22"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM048",
+      "name": "Unique - engine power required to climb an incline",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.6",
+      "subtopic": "Work, energy and power",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q45"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM016",
+      "name": "Unique - force required to pull a loop from a liquid surface",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.2",
+      "subtopic": "Surface tension",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q21"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM113",
+      "name": "Unique - force torque and stability of an electric dipole",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q36"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM142",
+      "name": "Unique - full-wave rectifier output including diode forward drop",
+      "unit": "Electronics",
+      "unitId": "electronics",
+      "subtopicId": "NIE-9.1",
+      "subtopic": "Semiconductor fundamentals and diodes",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q31"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM101",
+      "name": "Unique - heat and work in an isothermal ideal-gas process",
+      "unit": "Thermal Physics",
+      "unitId": "thermal-physics",
+      "subtopicId": "NIE-4.8",
+      "subtopic": "Thermodynamics",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q10"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM114",
+      "name": "Unique - interpretation of electric field-line patterns",
+      "unit": "Electrostatic Field",
+      "unitId": "electrostatic-field",
+      "subtopicId": "NIE-6.1",
+      "subtopic": "Electrostatic force and field",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q12"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM007",
+      "name": "Unique - percentage uncertainty in a pendulum period",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.4",
+      "subtopic": "Measurement instruments and uncertainty",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q2"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM010",
+      "name": "Unique - possible magnitude range of a vector resultant",
+      "unit": "Measurement",
+      "unitId": "measurement",
+      "subtopicId": "NIE-1.5",
+      "subtopic": "Scalars, vectors and resolution",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q4"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM128",
+      "name": "Unique - series-parallel resistor statements",
+      "unit": "Current Electricity",
+      "unitId": "current-electricity",
+      "subtopicId": "NIE-7.1",
+      "subtopic": "Current, resistance and circuit laws",
+      "years": [
+        2024
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2024 Q34"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 5,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM043",
+      "name": "Unique - spring force immediately after a support breaks",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.4",
+      "subtopic": "Newton laws and force systems",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q41"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM060",
+      "name": "Unique - translational and rotational energy of a rolling cylinder",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.8",
+      "subtopic": "Rotational and circular motion",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q13"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAM026",
+      "name": "Unique - water-level changes for floating blocks and disks",
+      "unit": "Mechanical Properties of Matter",
+      "unitId": "mechanical-properties-of-matter",
+      "subtopicId": "NIE-10.3",
+      "subtopic": "Viscosity and fluid flow",
+      "years": [
+        2025
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2025 Q27"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "low"
+    },
+    {
+      "familyId": "FAMV3-S12",
+      "name": "Velocity-time graph for bounces with fixed kinetic-energy loss",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.1",
+      "subtopic": "Linear motion kinematics",
+      "years": [
+        2023
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2023 Q32"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 4,
+      "volatility": 0.35,
+      "confidence": "high"
+    },
+    {
+      "familyId": "FAMV3-S17",
+      "name": "Velocity-vector change in uniform circular motion",
+      "unit": "Mechanics",
+      "unitId": "mechanics",
+      "subtopicId": "NIE-2.8",
+      "subtopic": "Rotational and circular motion",
+      "years": [
+        2019
+      ],
+      "recurrenceCount": 1,
+      "distinctPapers": 1,
+      "questionReferences": [
+        "2019 Q8"
+      ],
+      "annualHitRate": 0.143,
+      "meanPerYear": 0.143,
+      "medianPerYear": 0.0,
+      "rangePerYear": "0-1",
+      "longestAbsence": 6,
+      "volatility": 0.35,
+      "confidence": "high"
+    }
+  ],
+  "scope": {
+    "validated": [
+      "2000-2025 primary-unit distribution",
+      "2019-2025 primary subtopics",
+      "2019-2025 question families"
+    ],
+    "provisional": [
+      "historical subtopics",
+      "historical question families",
+      "secondary-unit mapping",
+      "difficulty pilot",
+      "answers and explanations"
+    ],
+    "unavailable": [
+      "production difficulty ranking",
+      "exam probability",
+      "guaranteed future weighting"
+    ]
+  },
+  "externalComparison": {
+    "name": "Hirun De Silva Physics Dashboard",
+    "url": "https://physics-dashboard-rouge.vercel.app/",
+    "status": "external aggregate comparison only; not merged into validated question-level data"
+  },
+  "revisionOpportunityFormula": {
+    "name": "Revision Opportunity Score",
+    "notAnExamProbability": true,
+    "weights": {
+      "validatedCurrentEraFrequency": 0.3,
+      "personalWeakness": 0.3,
+      "repeatedErrors": 0.15,
+      "timeLoss": 0.15,
+      "confidenceMismatch": 0.1
+    },
+    "notes": "All components are normalized to 0-1. The score prioritizes repair opportunity; it does not forecast examination content."
+  }
+}
