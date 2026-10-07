@@ -2126,7 +2126,7 @@ function renderRetests() {
     if (!topic) return '';
     const overdue = r.due < todayISO();
     const dueText = overdue ? `${Math.floor((new Date(todayISO()) - new Date(r.due)) / 86400000)}d overdue` : r.due === todayISO() ? 'due today' : `due ${r.due}`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${r.stage === 1 ? 'fresh-transfer check' : 'delayed stability check'}</div></div><button class="log-mini queue-due" data-retest-topic="${r.topicKey}" data-retest-type="${r.stage === 1 ? 'fresh-transfer' : 'delayed-retest'}">${dueText}</button></div>`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${r.stage === 1 ? 'fresh-transfer check' : 'delayed stability check'}</div></div><button class="log-mini queue-due" data-retest-topic="${r.topicKey}" data-retest-id="${r.id}" data-retest-type="${r.stage === 1 ? 'fresh-transfer' : 'delayed-retest'}">${dueText}</button></div>`;
   }).join('') : '<div class="empty-state">No retests queued yet. Log a marked attempt with lost marks; the dashboard will schedule the 3-day and 7-day checks.</div>';
 }
 
@@ -2298,7 +2298,7 @@ function renderRepairs() {
     const stageName = r.stage === 1 ? 'Fresh transfer' : 'Delayed stability';
     const type = r.stage === 1 ? 'fresh-transfer' : 'delayed-retest';
     const due = r.due < todayISO() ? `${Math.floor((new Date(todayISO()) - new Date(r.due))/86400000)}d overdue` : r.due === todayISO() ? 'due today' : `due ${r.due}`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${stageName}</div></div><button class="log-mini queue-due" data-repair-topic="${r.topicKey}" data-repair-type="${type}">${due}</button></div>`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${stageName}</div></div><button class="log-mini queue-due" data-repair-topic="${r.topicKey}" data-repair-retest-id="${r.id}" data-repair-type="${type}">${due}</button></div>`;
   }).join('') : '<div class="empty-state">No transfer/retest checks are waiting. Lost marks or unsupported guesses will create a closure queue automatically.</div>';
 
   $('subject-playbooks').innerHTML = `
@@ -2318,11 +2318,12 @@ function fillTopicSelect(subject, selectedKey = '') {
   select.innerHTML = SYL[subject].units.map((unit, ui) => `<optgroup label="${escapeHTML(unit.n)}">${unit.t.map((name, ti) => `<option value="${topicKey(subject, ui, ti)}"${topicKey(subject, ui, ti) === selectedKey ? ' selected' : ''}>${escapeHTML(name)}</option>`).join('')}</optgroup>`).join('');
 }
 
-function openAttemptDialog(key = '', type = 'topic-question') {
+function openAttemptDialog(key = '', type = 'topic-question', retestId = '') {
   const topic = getTopic(key);
   const subject = topic?.subject || (SUBJECTS.includes(activePanel) ? activePanel : 'physics');
   $('attempt-form').reset();
   $('attempt-form').dataset.editId = '';
+  $('attempt-form').dataset.retestId = retestId || '';
   $('attempt-date').value = todayISO();
   $('attempt-subject').value = subject;
   $('attempt-type').value = type;
@@ -2333,11 +2334,27 @@ function openAttemptDialog(key = '', type = 'topic-question') {
 }
 
 function completeEligibleRetests(attempt) {
+  if (!['fresh-transfer','delayed-retest'].includes(attempt.type)) return;
+  const expectedStage = attempt.type === 'fresh-transfer' ? 1 : 2;
   const eligible = state.retests
-    .filter(retest => !retest.completedAt && retest.topicKey === attempt.topicKey && retest.due <= attempt.date && retest.sourceAttemptId !== attempt.id)
-    .sort((a,b) => a.stage - b.stage || a.due.localeCompare(b.due));
-  if (!eligible[0]) return;
-  const retest = eligible[0];
+    .filter(retest =>
+      !retest.completedAt &&
+      retest.topicKey === attempt.topicKey &&
+      retest.stage === expectedStage &&
+      retest.due <= attempt.date &&
+      retest.sourceAttemptId !== attempt.id
+    )
+    .sort((a,b) => a.due.localeCompare(b.due));
+
+  let retest = null;
+  if (attempt.retestId) {
+    retest = eligible.find(candidate => candidate.id === attempt.retestId) || null;
+  } else if (eligible.length === 1) {
+    // Legacy/manual fallback: only auto-link when the target is unambiguous.
+    retest = eligible[0];
+  }
+  if (!retest) return;
+
   const trusted = attempt.trustedEarned === null || attempt.trustedEarned === undefined || attempt.trustedEarned === '' ? Number(attempt.earned) : Number(attempt.trustedEarned);
   const passed = Number(attempt.earned) === Number(attempt.total) && trusted === Number(attempt.total) && Number(attempt.guesses || 0) === 0 && !attempt.error;
   retest.attempts = Array.isArray(retest.attempts) ? retest.attempts : [];
@@ -2377,6 +2394,7 @@ function submitAttempt(event) {
     question: $('attempt-question').value.trim(), earned, trustedEarned, total, minutes: Number($('attempt-minutes').value),
     items: Math.max(1, Number($('attempt-items').value || 1)), guesses,
     confidence: $('attempt-confidence').value, error, note: $('attempt-note').value.trim(), createdAt: existingAttempt?.createdAt || new Date().toISOString(), updatedAt: editingId ? new Date().toISOString() : null,
+    retestId: $('attempt-form').dataset.retestId || existingAttempt?.retestId || null,
     sessionId: $('attempt-form').dataset.sessionId || null
   };
   if (editingId) {
@@ -2392,6 +2410,7 @@ function submitAttempt(event) {
   saveState();
   $('attempt-dialog').close();
   $('attempt-form').dataset.sessionId = '';
+  $('attempt-form').dataset.retestId = '';
   refreshAll();
   toast(editingId ? 'Attempt corrected. Original ID and created-at timestamp preserved.' : (earned === total ? 'Full-credit evidence saved.' : 'Evidence saved. Retest policy applied.'));
 }
@@ -2580,11 +2599,11 @@ function initEvents() {
   $('save-daily-targets').addEventListener('click', saveDailyTargets);
   $('daily-history-body').addEventListener('click', e => { const b = e.target.closest('[data-delete-daily]'); if (b) deleteDailyEntry(b.dataset.deleteDaily); });
   document.querySelectorAll('[data-close-dialog]').forEach(b => b.addEventListener('click', () => $('attempt-dialog').close()));
-  $('retest-queue').addEventListener('click', e => { const b = e.target.closest('[data-retest-topic]'); if (b) openAttemptDialog(b.dataset.retestTopic, b.dataset.retestType || 'fresh-transfer'); });
+  $('retest-queue').addEventListener('click', e => { const b = e.target.closest('[data-retest-topic]'); if (b) openAttemptDialog(b.dataset.retestTopic, b.dataset.retestType || 'fresh-transfer', b.dataset.retestId || ''); });
   $('priority-topics').addEventListener('click', e => { const b = e.target.closest('[data-priority-topic]'); if (b) openAttemptDialog(b.dataset.priorityTopic); });
   $('calibration-risk').addEventListener('click', e => { const b = e.target.closest('[data-calibration-topic]'); if (b) openAttemptDialog(b.dataset.calibrationTopic); });
   $('repair-log-btn').addEventListener('click', () => openAttemptDialog('', 'reattempt'));
-  $('panel-repairs').addEventListener('click', e => { const b=e.target.closest('[data-repair-topic]'); if (b) openAttemptDialog(b.dataset.repairTopic, b.dataset.repairType || 'reattempt'); });
+  $('panel-repairs').addEventListener('click', e => { const b=e.target.closest('[data-repair-topic]'); if (b) openAttemptDialog(b.dataset.repairTopic, b.dataset.repairType || 'reattempt', b.dataset.repairRetestId || ''); });
   $('share-safe-btn').addEventListener('click', toggleShareSafe);
   $('mobile-quick-log').addEventListener('click', () => openAttemptDialog());
   $('backup-health').addEventListener('click', () => $('data-btn').click());
