@@ -84,3 +84,7 @@ Do not put personal study records, API keys, passwords, private documents or oth
 ## License
 
 Released under the [MIT License](LICENSE).
+
+## New: Evidence Closure Auditor (upgrade branch)
+
+Open [`evidence-closure-audit.html`](evidence-closure-audit.html) to audit a single mistake using six ordered proof gates, including an unseen transfer question and a delayed retest. It provides an explicit incomplete/inconsistent/closed outcome and a manually downloadable JSON record. The page is standalone, local-only, and **does not access or overwrite existing Performance Powerhouse storage**. It is not included in production until the upgrade is tested and merged.
