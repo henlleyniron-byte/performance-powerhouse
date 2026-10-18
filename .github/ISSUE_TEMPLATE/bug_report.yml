@@ -1,0 +1,58 @@
+name: Bug report
+description: Report reproducible problems without sharing private study records
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Performance Powerhouse. **Never include real student records, API keys, passwords, private messages, screenshots containing personal details, or copyrighted examination questions.** Please reproduce issues with invented sample data.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Main study evidence loop
+        - Repair and retest tracking
+        - Backup or restore
+        - Privacy or share-safe mode
+        - Physics Intelligence
+        - Study Tracker
+        - PWA / offline behavior
+        - Accessibility or mobile layout
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use fictional data only. List precise steps.
+      placeholder: |
+        1. Open...
+        2. Add a fictional attempt...
+        3. Select...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser / operating system
+      placeholder: e.g. Firefox on Android
+  - type: textarea
+    id: extras
+    attributes:
+      label: Additional safe diagnostic context
+      description: No sensitive data; redact screenshots before attaching.
