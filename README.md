@@ -73,6 +73,18 @@ See [`docs/PROJECT_HISTORY.md`](docs/PROJECT_HISTORY.md).
 
 The project is maintained by **Henlley Niron Pushparajah** using an AI-assisted development workflow. AI tools are used for implementation, debugging, testing and documentation; project direction, acceptance/rejection of changes, release decisions, maintenance and responsibility for the published result remain with the maintainer.
 
+## Testing and maintenance
+
+The repository includes Node.js service-worker contract checks. With Node.js 22 or newer:
+
+```bash
+npm test
+```
+
+These checks examine the service-worker contract; they are **not** full browser end-to-end tests. For changes to attempt logging, retest closure, privacy-safe sharing, import/export or offline use, follow the additional manual checks described in [the maintainer workflow](docs/MAINTAINER_WORKFLOW.md).
+
+New issues and pull requests are welcome. Please use fictional test records and avoid including personal student information. The [contributor and coding-agent guardrails](AGENTS.md) document the project's non-negotiable privacy and deployment boundaries.
+
 ## Contributing
 
 Bug reports, accessibility improvements, documentation fixes and narrowly scoped study-workflow improvements are welcome. Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull request.
