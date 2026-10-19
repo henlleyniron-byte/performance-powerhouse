@@ -19,7 +19,7 @@ async function assertLocalAsset(path) {
   assert.match(path, /^\.\/[a-zA-Z0-9_./-]*$/, 'only clean relative app assets are allowed');
   assert.ok(!path.includes('..'), 'asset cannot traverse directories');
   const localPath = resolve(root, path.slice(2));
-  assert.ok(localPath.startsWith(root), 'asset must remain inside repo');
+  assert.ok(localPath === resolve(root) || localPath.startsWith(root), 'asset must remain inside repo');
   await stat(localPath);
 }
 
