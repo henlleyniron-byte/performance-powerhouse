@@ -27,6 +27,10 @@ Students often accumulate resources, trackers, notes, and revision plans without
 - Integrated Physics Intelligence module with aggregate 2000–2025 paper-pattern metadata
 - Lightweight study-session tracker
 
+## Source and production status
+
+This repository is the V5-era public snapshot. The owner’s current hosted application was verified as V15 (saved Site version 41) on 20 October 2026. The sources differ substantially; repository checks do not establish parity with that hosted release. Read the [source reconciliation report](docs/SOURCE_RECONCILIATION_2026-10-20.md) before planning a merge or deployment. A read-only comparison tool and fixed public-asset hash inventory make that difference reproducible.
+
 ## Quick start
 
 No build process is required.
@@ -72,6 +76,18 @@ See [`docs/PROJECT_HISTORY.md`](docs/PROJECT_HISTORY.md).
 ## AI-assisted development disclosure
 
 The project is maintained by **Henlley Niron Pushparajah** using an AI-assisted development workflow. AI tools are used for implementation, debugging, testing and documentation; project direction, acceptance/rejection of changes, release decisions, maintenance and responsibility for the published result remain with the maintainer.
+
+## Testing and maintenance
+
+The repository includes Node.js service-worker contract checks. With Node.js 22 or newer:
+
+```bash
+npm test
+```
+
+These checks examine the service-worker contract; they are **not** full browser end-to-end tests. For changes to attempt logging, retest closure, privacy-safe sharing, import/export or offline use, follow the additional manual checks described in [the maintainer workflow](docs/MAINTAINER_WORKFLOW.md).
+
+New issues and pull requests are welcome. Please use fictional test records and avoid including personal student information. The [contributor and coding-agent guardrails](AGENTS.md) document the project's non-negotiable privacy and deployment boundaries.
 
 ## Contributing
 
