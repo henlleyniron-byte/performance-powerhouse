@@ -27,6 +27,10 @@ Students often accumulate resources, trackers, notes, and revision plans without
 - Integrated Physics Intelligence module with aggregate 2000–2025 paper-pattern metadata
 - Lightweight study-session tracker
 
+## Source and production status
+
+This repository is the V5-era public snapshot. The owner’s current hosted application was verified as V15 (saved Site version 41) on 20 October 2026. The sources differ substantially; repository checks do not establish parity with that hosted release. Read the [source reconciliation report](docs/SOURCE_RECONCILIATION_2026-10-20.md) before planning a merge or deployment. A read-only comparison tool and fixed public-asset hash inventory make that difference reproducible.
+
 ## Quick start
 
 No build process is required.

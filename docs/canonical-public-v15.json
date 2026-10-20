@@ -1,0 +1,522 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "git-blob-sha1",
+  "sourceCommit": "55c6bb30bf66f474d315c61f217f3f8ce7b81138",
+  "siteVersion": 41,
+  "productRelease": "V15",
+  "scope": "Tracked public/ assets only, mapped to their URL-root paths. Excludes server source, private learner data and untracked files. Hash equality does not prove runtime or scientific correctness.",
+  "files": [
+    {
+      "path": "al-performance-command-centre.html",
+      "sha": "fd4e1308b3f1a09178f207e2f0106415b76b8ddf"
+    },
+    {
+      "path": "biology-intelligence/index.html",
+      "sha": "6a6f10c64b78683d155056f913a79ea7a8512736"
+    },
+    {
+      "path": "biology-intelligence/source-audit.json",
+      "sha": "6d3005c3c77fc9a49fd20413b562378ce88095cf"
+    },
+    {
+      "path": "chemistry-intelligence/index.html",
+      "sha": "e3b1c40ba1b4cb4440fdf4470a5fb849916ccad2"
+    },
+    {
+      "path": "chemistry-intelligence/source-audit.json",
+      "sha": "1b2b594dc1db736aeb015e91b7e36bdc56a1a8de"
+    },
+    {
+      "path": "community-share.html",
+      "sha": "eafa94b6d3e67ea75569abb40e21650a18c9d883"
+    },
+    {
+      "path": "evidence-rules.js",
+      "sha": "4060e1303757cfbf91d06a9cd93bc703254d8293"
+    },
+    {
+      "path": "favicon.svg",
+      "sha": "ca747cb66b233fedec5ff0c84f97bb4631c05dbf"
+    },
+    {
+      "path": "file.svg",
+      "sha": "004145cddf3f9db91b57b9cb596683c8eb420862"
+    },
+    {
+      "path": "globe.svg",
+      "sha": "567f17b0d7c7fb662c16d4357dd74830caf2dccb"
+    },
+    {
+      "path": "icon-192.png",
+      "sha": "1411b98d61a00436843310bbd907263730f4c9dc"
+    },
+    {
+      "path": "icon-512.png",
+      "sha": "a64e4648ea8a872a260f81b1a62e87ac325823c7"
+    },
+    {
+      "path": "index.html",
+      "sha": "518840c9d349275b7f730d6772058f924640fb2b"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "sha": "a57271f17e2a90b5f9baefb30ab53197386b67a5"
+    },
+    {
+      "path": "og.png",
+      "sha": "64423440c69a1b52bd0908c74d2ae8ee8f486089"
+    },
+    {
+      "path": "physics-intelligence/app.js",
+      "sha": "816155b54f9c6c8a914abdbe8bc7ca84c028ace4"
+    },
+    {
+      "path": "physics-intelligence/assets/physics-intelligence-data.json",
+      "sha": "1a6b67b20b819188fad58f28daaa6eacdbc4a87a"
+    },
+    {
+      "path": "physics-intelligence/favicon.svg",
+      "sha": "ca46ffb970ca63ad9dcfa5494cc268fd8f5fc217"
+    },
+    {
+      "path": "physics-intelligence/index.html",
+      "sha": "5a1911b6f03d77a1378c64c551698e9e3a569960"
+    },
+    {
+      "path": "physics-intelligence/styles.css",
+      "sha": "e5087bfc45ddae102259a6bfc70e648a19ec28cf"
+    },
+    {
+      "path": "powerhouse/app.js",
+      "sha": "c8837d64a5d320e11c9f08ec1d3aa427fcc164ab"
+    },
+    {
+      "path": "powerhouse/command-plan-model.js",
+      "sha": "e473681f08b12cc38390b9c123ceb99e6f5b7337"
+    },
+    {
+      "path": "powerhouse/command-plan-shared.css",
+      "sha": "276cbb502b0f3c1fa1b8988e97ac9017e890fbc3"
+    },
+    {
+      "path": "powerhouse/command-plan-ui.js",
+      "sha": "d687bcc1fb6e48fe08173f13db8959f7514652f4"
+    },
+    {
+      "path": "powerhouse/command-workspace-v13.css",
+      "sha": "ec88bb121ed2aa874fde0c48a52fb8fa81d5b741"
+    },
+    {
+      "path": "powerhouse/command-workspace-v13.js",
+      "sha": "37b138191a3ba1a71cee8bef19b8004a05225de2"
+    },
+    {
+      "path": "powerhouse/execution-v10.js",
+      "sha": "5a9eefbc475ac3d41dd14f7f9d379d52e99ec147"
+    },
+    {
+      "path": "powerhouse/flagship.css",
+      "sha": "90c1e96712b4ea1ad79e45d32ef92572feaaf1c0"
+    },
+    {
+      "path": "powerhouse/launchpad-model.js",
+      "sha": "3e15ae69f9ebfdfa611ca16ea63d028f531e1f11"
+    },
+    {
+      "path": "powerhouse/launchpad-ui.js",
+      "sha": "81f6666016adf7ba97999fce695058ee41c11583"
+    },
+    {
+      "path": "powerhouse/model.js",
+      "sha": "32ebd85e9f269091f6a5731170d39cc94f109ebb"
+    },
+    {
+      "path": "powerhouse/planning-ui.js",
+      "sha": "f120ba33be2694c17e27aab12125a3cd704b5927"
+    },
+    {
+      "path": "powerhouse/planning.css",
+      "sha": "1c04ec276b5469cf4e41db468f9a2d7bee0130c0"
+    },
+    {
+      "path": "powerhouse/planning.js",
+      "sha": "fddfb2e65206f18bc99c2abb09022ea74a4f2531"
+    },
+    {
+      "path": "powerhouse/repair-board-model.js",
+      "sha": "b181b3e4efcc8cb59571f59f58327f458aa9048b"
+    },
+    {
+      "path": "powerhouse/repair-board-ui.js",
+      "sha": "a4dd0a785da2106186a92ca213a577456d3b043d"
+    },
+    {
+      "path": "powerhouse/repair-board.css",
+      "sha": "95d9830d80d16e00430bf084f56362883d494e47"
+    },
+    {
+      "path": "powerhouse/repair-inspector-model.js",
+      "sha": "0c9e7ff2a2dca1f4266a5097af2a6e28ae078083"
+    },
+    {
+      "path": "powerhouse/review-model.js",
+      "sha": "dd6afc0b7828caf06db6b0aaccde7b8e389b21cc"
+    },
+    {
+      "path": "powerhouse/styles.css",
+      "sha": "aad1cb0617b3ec64c9f14e4d3df35c71c034facb"
+    },
+    {
+      "path": "powerhouse/verification-ui.js",
+      "sha": "fde098e3b5e61a2619a8a672c151a56fe1769a89"
+    },
+    {
+      "path": "powerhouse/verification.js",
+      "sha": "613a7ff6bd90e00c8ac4d779e4b14bcce47d151d"
+    },
+    {
+      "path": "powerhouse/workspace-v12.css",
+      "sha": "e87e43e0243f3dd44ffade6d679d1e90a0869b83"
+    },
+    {
+      "path": "powerhouse/workspace-v12.js",
+      "sha": "3617d7db39e24115fa392aeb8a4ba0bae33a4e65"
+    },
+    {
+      "path": "practical-lab/app.js",
+      "sha": "384ac86997c10734e9ef4c067a0f623051de1a27"
+    },
+    {
+      "path": "practical-lab/clinic/V3_2_RELEASE_MANIFEST.json",
+      "sha": "31c7159710c62bfb84441a542b751ea63af72b06"
+    },
+    {
+      "path": "practical-lab/clinic/app.js",
+      "sha": "86da7f95da906eb36b56cf79776857b263506e83"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/Practical_Mastery_V5_Complete.pdf",
+      "sha": "8a1a2b9aa8c33df947304b3cd12af3493b99501b"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/Practical_Mastery_V5_Model_Answers.pdf",
+      "sha": "f389d41b09f7f5b742193d8f15b08a3552085369"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/Practical_Mastery_V5_Offline_Pack.zip",
+      "sha": "f82c930b680e3cea15fcb4cd01b8eec73325a62b"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/Practical_Mastery_V5_Student_Workbook.pdf",
+      "sha": "275df3f07b3052f1c218bb55a6a7f45627a5e9ea"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/V5_Release_Summary.json",
+      "sha": "80d43bcbb726ee30a3192cf840b9c55c568b095e"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/V5_SHA256SUMS.txt",
+      "sha": "541f9140733c373de9e83f1272521ccd18b9fc32"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/V5_Source_and_QA_Report.md",
+      "sha": "a93c5c9ee388562ad3231221f25c5c8971de1df3"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/V5_V4_reconciliation_audits.json",
+      "sha": "f85b23170bb4f46ae526a53ab49639d23492de8a"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/V5_activity_coverage.csv",
+      "sha": "ab1fa229d46cd404fcbaeef3448ac32b5a8642b0"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/V5_legacy_case_audits.json",
+      "sha": "c581eae6de22685ae225b2e911f690b298d7f7bb"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/V5_numeric_checks.csv",
+      "sha": "53be86b0ad83b7e462a956bb3954d021495dce4d"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/practical-lab-combined-v5.json",
+      "sha": "90bf2bbe8c9e89e75a32c2347a1e38525e3d08d7"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/v4-source/00A_V4.0_Coverage_Completion_70_Cases.pdf",
+      "sha": "0c4caabcf2c048f9298153e15ffc1cb80ff118b3"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/v4-source/V4_0_QA_ledger-1.csv",
+      "sha": "0c7101a4caac5f6d2bdda9abb270ee52a5620c78"
+    },
+    {
+      "path": "practical-lab/clinic/downloads/v4-source/WORK_AGENT_INCREMENTAL_UPDATE_V4_0.md",
+      "sha": "b14d379dbac8cc01f20a3b2d2e244346ea8b3a4d"
+    },
+    {
+      "path": "practical-lab/clinic/index.html",
+      "sha": "929a17617e1273a31ccd62cb0e670f54d998ffdf"
+    },
+    {
+      "path": "practical-lab/clinic/model.js",
+      "sha": "359d499f1a996e8fcde542b588ba60e1c2ea7a06"
+    },
+    {
+      "path": "practical-lab/clinic/practical-lab-coverage-completion-v4_0.json",
+      "sha": "ce81850419a09622fcb0e4689879b51f553731d9"
+    },
+    {
+      "path": "practical-lab/clinic/practical-lab-evidence-integrity-v3_3.json",
+      "sha": "31bf53dd01fb68a14956e7afaf5fa20e038f343d"
+    },
+    {
+      "path": "practical-lab/clinic/practical-lab-graph-clinic-v3_2-index.csv",
+      "sha": "d81c6978cbd23e1ecbf48d0409d329ec844be8ed"
+    },
+    {
+      "path": "practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "sha": "09e8d468496f2cc9e93e7cffb9c1a38cb4f765ce"
+    },
+    {
+      "path": "practical-lab/clinic/practical-lab-graph-clinic-v3_2.schema.json",
+      "sha": "40427b40a00c1c9de02ad459d0610832bd3def24"
+    },
+    {
+      "path": "practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "sha": "6a9600ad4d0e16b936e1f11356ecff8ed7036bfa"
+    },
+    {
+      "path": "practical-lab/clinic/practical-lab-v5.json",
+      "sha": "b83be9ddd94b7dfc897355697147bdd698398c0e"
+    },
+    {
+      "path": "practical-lab/clinic/styles.css",
+      "sha": "2055bab90ef4d53a731d843cf3d11e59680ef98d"
+    },
+    {
+      "path": "practical-lab/clinic/v5-content.js",
+      "sha": "27e72f3f6cb85e73dcddf8c2d0c18bd24d2866b9"
+    },
+    {
+      "path": "practical-lab/host.js",
+      "sha": "1e4ee9c30fa09b354d2797c6bb8c948b2922cd59"
+    },
+    {
+      "path": "practical-lab/index.html",
+      "sha": "b6d96e2b84dffbc5da8cf452aa6247bec3e0c59a"
+    },
+    {
+      "path": "practical-lab/model.js",
+      "sha": "0b86632acd8c25549354f1d439b1e864e0018e59"
+    },
+    {
+      "path": "practical-lab/practical-lab-catalog-v3.json",
+      "sha": "26bf8c24faa60dbcd19ed416113ee557f8f4a8ab"
+    },
+    {
+      "path": "practical-lab/practical-lab-catalog-v3.schema.json",
+      "sha": "737b811f11b174c7e3c2627284f763be2f1b215f"
+    },
+    {
+      "path": "practical-lab/practical-lab-index-v3.csv",
+      "sha": "15aaac8ba8c3c005c4559a775655e5dc4149349b"
+    },
+    {
+      "path": "practical-lab/styles.css",
+      "sha": "81708882f3318822e80758e951c56f08710f33f2"
+    },
+    {
+      "path": "resource-desk/app.js",
+      "sha": "2a6a0850df9c07a23009f007a04f1e3a83ed546f"
+    },
+    {
+      "path": "resource-desk/biology-review-queue.csv",
+      "sha": "18862dd668e2923262773b473a7220a02e222a37"
+    },
+    {
+      "path": "resource-desk/biology-review-queue.json",
+      "sha": "8d7d968127836e64c67d1fb4869bf55350616207"
+    },
+    {
+      "path": "resource-desk/catalogue.json",
+      "sha": "2c06fc7fac97f6df0f9dd9a52bc8aca727dfb266"
+    },
+    {
+      "path": "resource-desk/index.html",
+      "sha": "cbb7bd8f5184a8f8ae495aaf241b7dbc53b8c6de"
+    },
+    {
+      "path": "resource-desk/styles.css",
+      "sha": "26b158654ccc127236c945401b2d5570aeceff91"
+    },
+    {
+      "path": "science-intelligence/app.js",
+      "sha": "ad6b0378040105c15e28dc9fe8c88b6a81697301"
+    },
+    {
+      "path": "science-intelligence/index.html",
+      "sha": "9f04119a4a7ff7758ae0815bbbc61b151528d201"
+    },
+    {
+      "path": "science-intelligence/model.js",
+      "sha": "3ae484bfc1ce641e214d1347a982cc8ed76867b8"
+    },
+    {
+      "path": "science-intelligence/styles.css",
+      "sha": "8fefe7b24947e622d92d6e80ee0eb7c56bbaeae1"
+    },
+    {
+      "path": "study-library/app.js",
+      "sha": "ddf42611f46289d37c1fe32b9bfb07c958372997"
+    },
+    {
+      "path": "study-library/index.html",
+      "sha": "2b15a159b5da2d64ce434f6acc9c618a25e3ad1e"
+    },
+    {
+      "path": "study-library/model.js",
+      "sha": "84b61eb1b8acb293c70e70b6fa2981bc1c7bff6a"
+    },
+    {
+      "path": "study-library/practice-model.js",
+      "sha": "a4fa4b1abac1ea6ce5435eb31c72ed1b69a1f3e5"
+    },
+    {
+      "path": "study-library/science-model.js",
+      "sha": "3ae484bfc1ce641e214d1347a982cc8ed76867b8"
+    },
+    {
+      "path": "study-library/styles.css",
+      "sha": "2e4038b7bbac9c0a6791d6151c13f5015ca6cc55"
+    },
+    {
+      "path": "study-tracker/app.js",
+      "sha": "18acaa96a913fb10ef8e77edd0b4bd2fd3d8d192"
+    },
+    {
+      "path": "study-tracker/index.html",
+      "sha": "5e27b3639dd28ed258b1ab73c8c16d5a410b061f"
+    },
+    {
+      "path": "study-tracker/styles.css",
+      "sha": "f603ca2ec45d133a21756a444232a4063070cce0"
+    },
+    {
+      "path": "subject-intelligence/advanced-model.js",
+      "sha": "b76a46180dcc224a2512f7f5ae711a06f118689f"
+    },
+    {
+      "path": "subject-intelligence/advanced-ui.js",
+      "sha": "349fc9606a50ad63d566fe432146b89453b277bb"
+    },
+    {
+      "path": "subject-intelligence/advanced.css",
+      "sha": "80080c171b6101656540b31db2e07f09dffa2a1f"
+    },
+    {
+      "path": "subject-intelligence/app.js",
+      "sha": "c8bff903b504820cfde34bb3b14eceb0e710269f"
+    },
+    {
+      "path": "subject-intelligence/model.js",
+      "sha": "ab823200f4e0ded57bf9dd78c91274fe21a58629"
+    },
+    {
+      "path": "subject-intelligence/styles.css",
+      "sha": "5b008d2bd8998173542a6cb3cb19650dba1e3c47"
+    },
+    {
+      "path": "subscription-lab/app.js",
+      "sha": "11132b8e8fdff12ffb98b30a7dbb5b49d30ae58e"
+    },
+    {
+      "path": "subscription-lab/index.html",
+      "sha": "486b13895ac21e94c7de36d53c6a0655144cb4ed"
+    },
+    {
+      "path": "subscription-lab/model.js",
+      "sha": "053fff207682a3bcb7bc2cac6a89a7e6d0f7b782"
+    },
+    {
+      "path": "subscription-lab/styles.css",
+      "sha": "3c6283c72658f016275c4b9d432c3d2ec06f2285"
+    },
+    {
+      "path": "subscription-playbook/AI_Subscriptions_Practical_Guide_2026-10-14.md",
+      "sha": "375dc51f5ae5e4e7c2a0dc1501b4effb563a5ac7"
+    },
+    {
+      "path": "subscription-playbook/app.js",
+      "sha": "02f123ce94abbeff6fdcfa6fce1bebff4e1f5562"
+    },
+    {
+      "path": "subscription-playbook/index.html",
+      "sha": "2efd098c690b2c490b70d47f0a65fcb9e6dbab1a"
+    },
+    {
+      "path": "subscription-playbook/model.js",
+      "sha": "5444504ff08b5203a2959b755181e6a8aef8eca9"
+    },
+    {
+      "path": "subscription-playbook/styles.css",
+      "sha": "b71401e8c545ccca4ecc1d8200fb5d80dc8b84dc"
+    },
+    {
+      "path": "sw.js",
+      "sha": "104451c546dbc388d286aaeacfcfb29fd577a3ff"
+    },
+    {
+      "path": "ui-theme/theme.css",
+      "sha": "1284e5d2da4ada63dbaa0a963ef54ab40c025a2e"
+    },
+    {
+      "path": "ui-theme/theme.js",
+      "sha": "650ae07295c5c9ae5fd5a9d9285837fef8060177"
+    },
+    {
+      "path": "window.svg",
+      "sha": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651"
+    },
+    {
+      "path": "workflow-studio/app.js",
+      "sha": "0f5b1ce4aa94e2e1ee5d6cbf9d9023df8b02fc98"
+    },
+    {
+      "path": "workflow-studio/home.js",
+      "sha": "c21426106ea6088450839f8e1c0ea232cedf8157"
+    },
+    {
+      "path": "workflow-studio/index.html",
+      "sha": "cc5f0372f3a28d88eb8cd04cc2fa964da0914920"
+    },
+    {
+      "path": "workflow-studio/missions.json",
+      "sha": "d7203d4d373a19df1c4fcd6a19e7daf9622eb9f2"
+    },
+    {
+      "path": "workflow-studio/model.js",
+      "sha": "ebe2ebe8fa76b86897ac0d0fd59105c98df9067c"
+    },
+    {
+      "path": "workflow-studio/run-model.js",
+      "sha": "3e723406f52c367135c87791001d9f3cfe3e7cc4"
+    },
+    {
+      "path": "workflow-studio/run-ui.js",
+      "sha": "ab3a84585b7d2cbe43ed841d95398a95a62abf96"
+    },
+    {
+      "path": "workflow-studio/styles.css",
+      "sha": "9cfd8f2ea4c1e762b7e0e9c7ea3d5656d122274c"
+    },
+    {
+      "path": "workspace-shell/shell.css",
+      "sha": "5c434ae0612f5a4f7ac773f2cc43d22d356829fd"
+    },
+    {
+      "path": "workspace-shell/shell.js",
+      "sha": "f0768d7ed0b52de1f9acbacef62086007625df00"
+    }
+  ]
+}
