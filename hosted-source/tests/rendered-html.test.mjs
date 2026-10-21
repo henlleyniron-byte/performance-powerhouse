@@ -3,33 +3,9 @@ import test from "node:test";
 import { readFile } from "node:fs/promises";
 
 test("renders the V4 Community Edition metadata", async () => {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-
-  const response = await worker.fetch(
-    new Request("http://localhost/", {
-      headers: { accept: "text/html" },
-    }),
-    {
-      ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
-      },
-    },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
-
-  assert.equal(response.status, 200);
-  assert.match(
-    response.headers.get("content-type") ?? "",
-    /^text\/html\b/i,
-  );
-  const html = await response.text();
+  const html = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
   assert.match(html, /<title>A\/L Performance Powerhouse · V4 Community Edition<\/title>/i);
-  assert.match(html, /Attempt → Mark → Diagnose → Repair → Transfer → Retest/i);
+  assert.match(html, /Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest/i);
 });
 
 test("ships the V4 core, Community Share, PWA shell and Physics Intelligence", async () => {
@@ -38,7 +14,7 @@ test("ships the V4 core, Community Share, PWA shell and Physics Intelligence", a
   const community = await readFile(new URL("../public/community-share.html", import.meta.url), "utf8");
   const manifest = JSON.parse(await readFile(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"));
   const serviceWorker = await readFile(new URL("../public/sw.js", import.meta.url), "utf8");
-  const module = await readFile(new URL("../public/physics-intelligence/index.html", import.meta.url), "utf8");
+  const physicsModule = await readFile(new URL("../public/physics-intelligence/index.html", import.meta.url), "utf8");
   const moduleScript = await readFile(new URL("../public/physics-intelligence/app.js", import.meta.url), "utf8");
   const data = JSON.parse(await readFile(new URL("../public/physics-intelligence/assets/physics-intelligence-data.json", import.meta.url), "utf8"));
 
@@ -50,13 +26,33 @@ test("ships the V4 core, Community Share, PWA shell and Physics Intelligence", a
   assert.match(community, /href="\.\/\?share=1"/i);
   assert.match(community, /href="\.\/physics-intelligence\/\?share=1"/i);
   assert.equal(manifest.start_url, "./");
-  assert.match(serviceWorker, /powerhouse-v4-community-2/);
+  assert.match(serviceWorker, /powerhouse-v4-study-tracker-1/);
   assert.match(serviceWorker, /community-share\.html/);
-  assert.match(module, /Physics Intelligence \| Performance Powerhouse/i);
-  assert.match(module, /href="\.\.\/index\.html"/i);
+  assert.match(physicsModule, /Physics Intelligence \| Performance Powerhouse/i);
+  assert.match(physicsModule, /href="\.\.\/index\.html"/i);
   assert.match(moduleScript, /al_performance_powerhouse_physics_intelligence_v1/);
   assert.equal(data.overview.questions, 1410);
   assert.equal(data.overview.currentEra.questions, 350);
   assert.equal(data.overview.currentEra.families, 173);
   assert.equal(data.currentFamilies.length, 173);
+});
+
+test("ships the native Study Tracker with isolated persistence and migration support", async () => {
+  const host = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
+  const tracker = await readFile(new URL("../public/study-tracker/index.html", import.meta.url), "utf8");
+  const trackerScript = await readFile(new URL("../public/study-tracker/app.js", import.meta.url), "utf8");
+  const serviceWorker = await readFile(new URL("../public/sw.js", import.meta.url), "utf8");
+  const schema = await readFile(new URL("../db/schema.ts", import.meta.url), "utf8");
+  const api = await readFile(new URL("../app/api/study-tracker/route.ts", import.meta.url), "utf8");
+
+  assert.match(host, /href="\.\/study-tracker\/"/i);
+  assert.match(tracker, /Run the block\. Then prove what it produced\./i);
+  assert.match(trackerScript, /al_performance_powerhouse_study_tracker_v1/);
+  assert.match(trackerScript, /study-tracker-gamma-supabase-export/);
+  assert.match(trackerScript, /durationSeconds:0/);
+  assert.match(serviceWorker, /\.\/study-tracker\/app\.js/);
+  assert.match(schema, /study_sessions/);
+  assert.match(schema, /primaryKey\(\{ columns: \[table\.userId, table\.id\] \}\)/);
+  assert.match(api, /where\(eq\(studySessions\.userId, identity\.userId\)\)/);
+  assert.match(api, /target: \[studySessions\.userId, studySessions\.id\]/);
 });

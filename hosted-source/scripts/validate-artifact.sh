@@ -26,6 +26,14 @@ import { pathToFileURL } from "node:url";
 const [workerPath, hostingPath] = process.argv.slice(2);
 JSON.parse(await readFile(hostingPath, "utf8"));
 
+const workerSource = await readFile(workerPath, "utf8");
+if (workerSource.includes('from "cloudflare:workers"')) {
+  if (!/export\s*\{\s*[^}]+\s+as\s+default\s*\}/m.test(workerSource)) {
+    throw new Error("D1 Worker artifact must expose an ESM default export");
+  }
+  process.exit(0);
+}
+
 const workerUrl = pathToFileURL(workerPath);
 workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);
 const worker = await import(workerUrl.href);

@@ -181,7 +181,7 @@
     flex: 0 0 auto; padding: 9px 14px; border: 1px solid transparent; border-radius: 999px;
     color: var(--muted); background: transparent; cursor: pointer; font-size: 12px; font-weight: 750;
   }
-  .tab-link { text-decoration:none; display:inline-flex; align-items:center; }
+  .tab-link, .focus-actions a { text-decoration:none; display:inline-flex; align-items:center; justify-content:center; }
   .tab.active { color: var(--text) !important; background: var(--card) !important; border-color: var(--border) !important; }
   .tab-badge { margin-left: 5px; padding: 1px 6px; background: rgba(255,255,255,.08); border-radius: 999px; font-size: 9px; }
 
@@ -577,6 +577,7 @@
   <button class="tab active" type="button" data-panel="command">Command</button>
   <button class="tab" type="button" data-panel="physics">Physics</button>
   <a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
+  <a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
   <button class="tab" type="button" data-panel="chemistry">Chemistry</button>
   <button class="tab" type="button" data-panel="biology">Biology</button>
   <button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
@@ -595,7 +596,7 @@
         <h2 id="next-action-title">Log one honest timed attempt.</h2>
         <p id="next-action-copy">The dashboard needs performance evidence before it can diagnose your highest-return repair.</p>
         <div class="focus-meta" id="next-action-meta"><span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
-        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
+        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" href="./study-tracker/">Track this block</a><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
       </article>
       <aside class="mission-card">
         <div class="eyebrow">The governing loop</div><h3>Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest</h3>
@@ -2170,6 +2171,14 @@ function renderNextAction() {
     $('next-action-meta').innerHTML = '<span class="pill">90-minute deep block</span><span class="pill">closed book</span><span class="pill">strict marking</span>';
   }
   $('start-focus-btn').textContent = `Start ${focusRecommendedMinutes}-min block`;
+  const trackerType = overdue ? 'delayed-retest' : topic ? 'repair' : 'timed-paper';
+  const trackerParams = new URLSearchParams({
+    subject: topic?.subject || 'physics',
+    type: trackerType,
+    minutes: String(focusRecommendedMinutes),
+    topic: topic?.name || $('next-action-title').textContent
+  });
+  $('track-command-btn').href = `./study-tracker/?${trackerParams.toString()}`;
 }
 
 
@@ -2588,7 +2597,22 @@ refreshAll();
 try {
   const hashPanel = location.hash.replace('#','');
   if (['command','physics','chemistry','biology','repairs','course','daily','planner','attempts','guide'].includes(hashPanel)) navigate(hashPanel);
-  if (new URLSearchParams(location.search).get('share') === '1' && !shareSafeMode) toggleShareSafe();
+  const queryParams = new URLSearchParams(location.search);
+  if (queryParams.get('share') === '1' && !shareSafeMode) toggleShareSafe();
+  if (queryParams.get('log') === '1') {
+    const requestedSubject = queryParams.get('subject');
+    const requestedType = queryParams.get('attemptType') || 'topic-question';
+    setTimeout(() => {
+      openAttemptDialog('', ATTEMPT_TYPE_NAMES[requestedType] ? requestedType : 'topic-question');
+      if (SUBJECTS.includes(requestedSubject)) {
+        $('attempt-subject').value = requestedSubject;
+        fillTopicSelect(requestedSubject);
+        refreshDiagnosisHint();
+      }
+      const trackerSession = queryParams.get('trackerSession');
+      if (trackerSession) $('attempt-note').value = `Linked Study Tracker session: ${trackerSession}`;
+    }, 0);
+  }
 } catch (_) {}
 setTimeout(showWelcome, 0);
 </script>
