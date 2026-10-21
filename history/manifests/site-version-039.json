@@ -1,0 +1,1753 @@
+{
+  "schema_version": 1,
+  "site_version": 39,
+  "source_commit": "fc9edc70e3c90056cae4070cd30987b5727dba27",
+  "source_tree": "3f220781e0017fbf92246b39b22b04d548be275c",
+  "original_archive_sha256": "sha256:3767d6ff288514d3213a58e1a3d4debb7c415a6e033629d66855d4b0e97c57f4",
+  "scope": "Sanitized public source snapshot; not an exact release archive or production deployment. Imported on 21 October 2026. Original historical timestamps are not recreated.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "source_blob": "f2c4fa4f16e200e413800fe7cd7e1f578d4d3b56",
+      "public_sha256": "a0c1d70fd09327f2628f7c435d41cbab7f8e37c977b5940b5427c39dbfe43b5d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".npmrc",
+      "mode": "100644",
+      "source_blob": "0edab15acd641cb940bbc25a32a6a60eae98ced7",
+      "public_sha256": "494e64a8818b6158e89321250500ad5ad018e33ad5cfea06a1cacd2cf4da75fa",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".openai/hosting.json",
+      "mode": "100644",
+      "source_blob": "d45411cf6a32474dd15b768506a44eedd4ffbd8c",
+      "public_sha256": "f9dfdafaa30da7687c0ed33af4f4aa81da01442fe3a20bc21141c63d07bd8dbb",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "source_blob": "4344dccd81a1f659c6a352715b7b8929051b9d18",
+      "public_sha256": "6b3c6691fc79d29f1d42cb7b66a5f87c89fa354f5806f07701bbaed9d985a7d6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "source_blob": "a14b0e6e3789b9d46d491f636cf17f583f5be073",
+      "public_sha256": "70ef40d45f8c381c87651db8828a2b085bfe3522eebccef2e074fc93a68716d9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/api/powerhouse/route.ts",
+      "mode": "100644",
+      "source_blob": "993f3b78efb3a7549415eed33614b8db2a072516",
+      "public_sha256": "08ac368842726dfa3eb483939f2d723412010a37564b845800c4f48cbf736231",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/api/study-tracker/route.ts",
+      "mode": "100644",
+      "source_blob": "209a086580d0af9a68c10b5f4bb85b7658b72f07",
+      "public_sha256": "dddaac29cbe0abb66f7d6832953791db9beabe7018db3a20b3137e286b7f9a94",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/appearance-control.tsx",
+      "mode": "100644",
+      "source_blob": "4e2e049a40ca4f5fa5cf8adf95628a5f5e217ad0",
+      "public_sha256": "e2c83b5adb324aa229fe0d12f96802341161f4c2e1bb695b665d9c9e7e87562b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "mode": "100644",
+      "source_blob": "bbfa7d3e16e1af8474b1dbbd4da5895848b8aa7a",
+      "public_sha256": "dff69066036ed39ace69daeb8c4baae26e89cc617345e6eeafde2e6f3cdb828f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/globals.css",
+      "mode": "100644",
+      "source_blob": "61de8879eb5f321dc171ccf6e7da726debfc69ce",
+      "public_sha256": "79563274315ecfccf2041c27e050bc7afab1960091b58bf2a18d7949d27fb123",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/layout.tsx",
+      "mode": "100644",
+      "source_blob": "3ccf4a7d4068948c9cadd431393e0889795718a0",
+      "public_sha256": "677b03c12e34f9cf6baaf19a8ffc4f6968c29e31a4381ba6961f5b186b52c1a5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/page.tsx",
+      "mode": "100644",
+      "source_blob": "07a39882ae13979b3fba44e61b8440584bb9c802",
+      "public_sha256": "69ed878bbb6eea984697c41ab6c43aea8d6ea46b7a42ec52ba1f375ba3103058",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "build/sites-vite-plugin.ts",
+      "mode": "100644",
+      "source_blob": "26563fdd77ff1027eeb08917d15d733da79a560a",
+      "public_sha256": "81b7cbfaeb970611572256aba0e313425beb3809f6426f63750696c15d9c756b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/README.md",
+      "mode": "100644",
+      "source_blob": "2088dda3089fb652c68351edd6130f23923fae83",
+      "public_sha256": "52b805203659327633c8981b580cc54aca6101c4bfb248fc465a498dc77bdd1c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/biology/biology_cases.json",
+      "mode": "100644",
+      "source_blob": "48d2bac0ad640d92ee11e82cd781842ebb4031a8",
+      "public_sha256": "edc7451fb9fbbda29f65f231452d0b5079804afce8ef6ee766a9dd7021fc8e43",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/biology/legacy_biology_audit.json",
+      "mode": "100644",
+      "source_blob": "d8ea8a33394bdab98f145b028d26cd9f6441fedb",
+      "public_sha256": "58bb69002394fe7d70f474c7fdb2bb402692023c3bfd497bf54de434ea64079d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/biology/source_audit.md",
+      "mode": "100644",
+      "source_blob": "ecea3892196f0a5b1e08b64659a62982bd79f30e",
+      "public_sha256": "99f29eb86604887d43ccdfd9bc8dec1e6325f2c7d5aaa373066d0894667041bb",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/biology/v4_biology_audit.json",
+      "mode": "100644",
+      "source_blob": "a7977ea3aa046c1fa12abfd86040e9ae67e327d2",
+      "public_sha256": "2482cc0893c94f9f35da588ef76db5502a26ed0577c21d99268cfd2beaab1443",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/chemistry/chemistry_cases.json",
+      "mode": "100644",
+      "source_blob": "e9f607104c767ab42b1e15dca15e033de932668c",
+      "public_sha256": "0f1800e0a5991232617366a1ca646721be30a3ee0c85a21ee14429b7bf0c959e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/chemistry/legacy_chemistry_audit.json",
+      "mode": "100644",
+      "source_blob": "f7abdf79d001a896b045bfd3ab163c2670b55ce5",
+      "public_sha256": "3abe341e32d55d702a75c2a2fed5c6dfe836e64e725167bedbcb9afbf15f56f2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/chemistry/numeric_check_results.json",
+      "mode": "100644",
+      "source_blob": "5b6c88aba2bfc54d5bd7860b11aa9dd25e8d099e",
+      "public_sha256": "5c9afeeb7c2a63d6378a7313b32d05aecb06e89902308ef71a06a3abf288bc68",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/chemistry/source_audit.md",
+      "mode": "100644",
+      "source_blob": "87086765b27c8bd5f4ddb4bcb4c0cbceef9f3089",
+      "public_sha256": "40f8cea3df9d31dd2569201782c61a25a4c4045d7a0877021f4937944a4e8482",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/chemistry/v4_chemistry_audit.json",
+      "mode": "100644",
+      "source_blob": "9646bb5eab714ccb7d2b45aa3567009880d00560",
+      "public_sha256": "d0118b3ba70e44536e44b49c8a46bea011856604b0fc64d742e56e64450a9010",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/physics/legacy_physics_audit.json",
+      "mode": "100644",
+      "source_blob": "0b777ed662d3a0383b0f94294088fcfb89f13c0f",
+      "public_sha256": "c778a9278d2e148b10b52d61e483f8ca2c9369aa8e34bdb3e039fec391316c55",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/physics/physics_cases.json",
+      "mode": "100644",
+      "source_blob": "6416b654efbe311b520a1cfeca1ac9f5bb82b2d6",
+      "public_sha256": "e5855b0c3400d49f7f7d471136b94fc8a84c1a8583a94d68f5818fa42dc42cce",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/physics/physics_review_checks.csv",
+      "mode": "100644",
+      "source_blob": "c79a322a8075466e9d09a61584c035ed8eb8c9b9",
+      "public_sha256": "fa598d8f4b1619114cdc127fee1c2ee9c33f67cbecd842d45bf5dbbbb8d8e277",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/physics/source_audit.md",
+      "mode": "100644",
+      "source_blob": "92a85b07f4b2ae6cde8006eabdafdcb7e47c0b99",
+      "public_sha256": "83225db8c887d990c60ff905ff75a359a05b3f5f7ee25e7bee59bb88a4cca34e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "data/practical-v5/physics/v4_physics_audit.json",
+      "mode": "100644",
+      "source_blob": "349f954d9496a6e35555be2339d34a00e455e418",
+      "public_sha256": "01777fd3e78e6e40ed432c57c9f591bdefb08a7830e4d5c0e3ae2eb823d24188",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "db/index.ts",
+      "mode": "100644",
+      "source_blob": "19b379900d94124b674f07ffe2dbba8f70bd8d6d",
+      "public_sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "db/schema.ts",
+      "mode": "100644",
+      "source_blob": "4823fe858d836baf12a9906b7198898575f8d0c7",
+      "public_sha256": "a6ac4c17a3f668a55bb74bfc605b38e7a082c915d34c48977d071e8e0410ab7a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/ASCENSION-CANDIDATE-2026-10-16.md",
+      "mode": "100644",
+      "source_blob": "e18ce6b64f653b50d2603585403258cf9ace82ae",
+      "public_sha256": "d443dd89eeb26aae435e4e3ec34f3e06f5cb3d84b0862ca00bc47fe86d6b500e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/DARK-PRACTICE-RELEASE-2026-10-14.md",
+      "mode": "100644",
+      "source_blob": "916b758bd3817932a904b6ae948f0982a5b20f92",
+      "public_sha256": "c060c8df0efe6e5a5fa149366e163e6c325e74361c08310e767e677ae193ca70",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/DRIVE-STUDY-LIBRARY-2026-10-14.md",
+      "mode": "100644",
+      "source_blob": "23ef1b3a84833b81c5788da89da441f88d1986c0",
+      "public_sha256": "dfb06d50995f7479e794bb2dc52f232d5409d5e7a27a7a4bcfb31becf0c16346",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/FLAGSHIP-2026-10-17.md",
+      "mode": "100644",
+      "source_blob": "312a8e8ed75ef0443fcba3b6d6c43880336304c7",
+      "public_sha256": "acb6271b49cf1d46d8575b92d91e7f57cb7eb6aee84a8fc52f3acea32b33b398",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/FLAGSHIP-PRACTICE-2026-10-17.md",
+      "mode": "100644",
+      "source_blob": "e90367459f237394fb85dfecd4aa0031aeef1ac3",
+      "public_sha256": "c5222aa081d1049f92222cfdb2f288924642e3bec93c41312ed471954e927295",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/FLAGSHIP_V9_RELEASE.md",
+      "mode": "100644",
+      "source_blob": "eca7941b36cf6eccd5581e713e1b5478d9821fd4",
+      "public_sha256": "80f3bc80abb779c2a2885f8c264a943ac51ad4e3d12fc69bbd77f94b44ab664d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/OWNER-INSTRUCTIONS.md",
+      "mode": "100644",
+      "source_blob": "61608ed0c95a54afda0778e7999e565636b61249",
+      "public_sha256": "680c56610cf60cae495bdd2b5cb2d42fdb5542479254d216a71900b3c75d8ecd",
+      "redacted_link_count": 1
+    },
+    {
+      "path": "docs/PHYSICS-PARITY-AND-PRACTICE-2026-10-14.md",
+      "mode": "100644",
+      "source_blob": "6db8c690fc417e5aaa43ccef54b0e739ce57bca7",
+      "public_sha256": "32d42ecb8442ca1f25a51733976500e8435c30440b261e61717631ba89e5da45",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/RELEASE-2026-10-12.md",
+      "mode": "100644",
+      "source_blob": "f4922899d488f9dd2d2ccc6564be027fc4d2542e",
+      "public_sha256": "bc6a346bb952c273c0ce6a4ce1dcfb1f3f93867b9cc6601941a7d01e81acd57d",
+      "redacted_link_count": 1
+    },
+    {
+      "path": "docs/RELEASE-2026-10-18.md",
+      "mode": "100644",
+      "source_blob": "5d38a96f38e859475def2c210f855699fc4b94bf",
+      "public_sha256": "cf1d7e7ebd4ef07f1b9407e7d56c1300a711564385452fe3556088629bdfbaf1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/RELEASE-FLAGSHIP-2026-10-18.md",
+      "mode": "100644",
+      "source_blob": "ac347096c9ccc54b4e42ed235f7dd0ec70a5cf74",
+      "public_sha256": "55993f61f01c96cb0d1abdb129575db5a1d44e28cb643a5a7788fd03a71213fc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/RELEASE-UNIFIED-2026-10-18.md",
+      "mode": "100644",
+      "source_blob": "8ed7446d85ead807ba8bac3188a445409c192622",
+      "public_sha256": "c4d1dbcb707236f099dcd3d0b3746235a5ce3dc8249daaa59a153f2080a7ae69",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/RELEASE-V8-2026-10-12.md",
+      "mode": "100644",
+      "source_blob": "7d627b348edfcfe0e8c0a26efed3c3f95383a47b",
+      "public_sha256": "c89ef4f2df18f5bd130dc23011ea42084c7fa3d93a63c55fce37ea85a6b2ad06",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/SCIENCE-INTEGRATION-2026-10-14.md",
+      "mode": "100644",
+      "source_blob": "483124e23b9f9cb1360013da91e9e7f6c9dada30",
+      "public_sha256": "de1c45d4196fb554af069fb6d301ccca199518f04bae846ba9efba0b4f0d22f9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/STUDY-FLOW-CANDIDATE-2026-10-14.md",
+      "mode": "100644",
+      "source_blob": "6b8bc23ac9ee7f5e91f168bb5b4ae10677e03895",
+      "public_sha256": "837e3da0ff134b371f66e83ec78ecf46c0c1e8c6430a348256f01d6ad31e0d80",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/SUBJECT-INTELLIGENCE-INTEGRATION.md",
+      "mode": "100644",
+      "source_blob": "2d9fadddfadc5fd47b7323316da03a392be1981a",
+      "public_sha256": "11c47f4f50f1212e92fa6b6b347f7240ff0a7a0f91011d1ef075093990056a62",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/SUBSCRIPTION-PLAYBOOK-2026-10-14.md",
+      "mode": "100644",
+      "source_blob": "dd9c3d010ce0ec9979dbf5e7609aa0db06cd8bdb",
+      "public_sha256": "5357771bdb924eb7e68dc2994128b1a4d2258504fcb9336213fd549c1d1b751a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/UPGRADE-2026-10-08.md",
+      "mode": "100644",
+      "source_blob": "5e4f65bf4f5d5eef7255bdd76f01148f286893af",
+      "public_sha256": "4c2ddb4835756cfa2ab82ab000563c44acd3c88d39527c983a4126c4c20b667d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/WORK_AGENT_INCREMENTAL_UPDATE_V3_2.md",
+      "mode": "100644",
+      "source_blob": "bab12e47363a0a3c46a8bc581acde064f0b82e84",
+      "public_sha256": "a27e89aea363fb9713af35a8e3e69ec0912722e00e649b038c4eefdba398bd82",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/practical-lab/CHANGELOG.md",
+      "mode": "100644",
+      "source_blob": "6a7acd2e744dbb22fcece68de2cc4cc2c9f6c035",
+      "public_sha256": "6b5cbe126a2b5fc61370fb1bead0bdc6a9f407f836d556ce4deab7da1a43f019",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/practical-lab/MAINTENANCE.md",
+      "mode": "100644",
+      "source_blob": "9164a701b0f6311160856ef4693b610bf053cd8b",
+      "public_sha256": "7acf60422670ff6ff7ab31edc99f9c01c878a325d2c92ba6311161d19b41f537",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/practical-lab/TEST-REPORT.md",
+      "mode": "100644",
+      "source_blob": "4fc33c44b44f2a93708c0efc38f37c4871cd4967",
+      "public_sha256": "e590f89e65a9f630213d628ea19f6653bfc92089bd026b5bcc1fd5f2219379a6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/practical-lab/V5_MAINTENANCE.md",
+      "mode": "100644",
+      "source_blob": "ecb16469a35f45e57ffbd268c5f248e202b93f2f",
+      "public_sha256": "1cdbb8b020106c047702589c65465c1d2a9053694e185d7c76827f7e82b1577c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/practical-lab/baseline.json",
+      "mode": "100644",
+      "source_blob": "3b337096de26d8206b2ec5d784468603dead6e0d",
+      "public_sha256": "e422947ed1346b022a25047516e64dd61a15354883ea64d51d0a633d61c63744",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/practical-lab/source-audit.json",
+      "mode": "100644",
+      "source_blob": "970dff3ddf8adbbbaf6b489ddf5e52ed55d6868d",
+      "public_sha256": "b2937c6a840e5f7b5cd99ba739f2c5b7acc95ef72901a813a2976512cf13dfb9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/releases/V6.md",
+      "mode": "100644",
+      "source_blob": "f35217454ad817994b46a3a442bd6d42eb0f4d93",
+      "public_sha256": "3520760fe3c9ca9e8a82ee2d7d7591440ba55bfed7631acfe40299cad0d6551c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/CHANGELOG_STUDY_TRACKER.md",
+      "mode": "100644",
+      "source_blob": "160cf3170aaa04901aeff3f9adfedbaa746e5ee5",
+      "public_sha256": "c253a1a35b25f1b52adb2f7d12a3bbd7ec1cc11a50894de343d053d590073a4a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/DATABASE_SCHEMA.md",
+      "mode": "100644",
+      "source_blob": "5b4aa0fbef77dbfef221571e41acf93e35d2800b",
+      "public_sha256": "5809bb339cd7df66c2a82dba71c4e42d592e4248eaa523f2b0d0af8e985a2e24",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/DATA_PORTABILITY.md",
+      "mode": "100644",
+      "source_blob": "0d7da4d2c3ea90c355bf086d472cf6eda3166e50",
+      "public_sha256": "ff04ddccec836e4be859d3c0c097564f7811c47417fce9d3e88ba58eb908dc57",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/DEPLOYMENT_INSTRUCTIONS.md",
+      "mode": "100644",
+      "source_blob": "43e1fa2c16ccea0ddfb1fd960ca915b0209c8e08",
+      "public_sha256": "5efb0ce61260b627ba82c53fc432462bb148c194c3460e73c6f8811fc9fcfbfc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/POST_INTEGRATION_QA_REPORT.md",
+      "mode": "100644",
+      "source_blob": "536a990a18ada5c50a2a087616e25d892bd149ea",
+      "public_sha256": "218ea5caaba61213ad8ca17d5423e4b1c57742753646ea65557a4b97df78a4ea",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/ROLLBACK_README.md",
+      "mode": "100644",
+      "source_blob": "309cfaa15adf5b33d9b8d0bae1f94749dc376606",
+      "public_sha256": "de1a2c322871a0e88ec37cbba363c7c92a2dc3d510fe35596d1b6b44f08292c2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/STUDY_TRACKER_MIGRATION_REPORT.md",
+      "mode": "100644",
+      "source_blob": "4c15c112bf9af38361fcd6b23450acd1a2170861",
+      "public_sha256": "20f22d306a76909a5ce9abc86f2d5ebcf2a033034e7ee62e7de4dd5d54e2a573",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle.config.ts",
+      "mode": "100644",
+      "source_blob": "c2b2f34376984744343453838ce66658ad9d9b6a",
+      "public_sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/0000_wet_moon_knight.sql",
+      "mode": "100644",
+      "source_blob": "643d455b854dd4d01119e8e2016ebeb61fca0443",
+      "public_sha256": "dc9f0199e9393febd172d0ba4a44e19d46f1239c6106f36ef3c58a828f8821fa",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/0001_lush_major_mapleleaf.sql",
+      "mode": "100644",
+      "source_blob": "da596a5ec5b2c71c9267f80f2460cdc5a9dd8ae4",
+      "public_sha256": "278b852178de1023de69e45431b6a35e7155e9d59f956ab346da8724e5b05fb6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "mode": "100644",
+      "source_blob": "ec2d89e5b976d406daee9a5c163dea81f8abc8dd",
+      "public_sha256": "0a6ddf72a529da1f220b12ed319064851fbf178b9ac1e29162064a84bc272f20",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "mode": "100644",
+      "source_blob": "cc73204fe4c3f7e22e3e97e2b19d69d5493d3e9e",
+      "public_sha256": "0d789bea4ce9922c47cb994777a819a400025cac0dbb8bb236ccb11d725a5855",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "mode": "100644",
+      "source_blob": "f4b70a2ec53d0f8fd0bd89ce1ba49e41af817fb0",
+      "public_sha256": "11d423081087715afa01595b911213151c383a6c72e33b3bd565c66c4a6e21c9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "eslint.config.mjs",
+      "mode": "100644",
+      "source_blob": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+      "public_sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "examples/d1/app/api/notes/route.ts",
+      "mode": "100644",
+      "source_blob": "07f8318c3c290d68163e95aa3e170ad92a235f27",
+      "public_sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "examples/d1/db/schema.ts",
+      "mode": "100644",
+      "source_blob": "7bb0c157110799b9b53c767517e0d192b7201f2e",
+      "public_sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "next.config.ts",
+      "mode": "100644",
+      "source_blob": "e9ffa3083ad279ecf95fd8eae59cb253e9a539c4",
+      "public_sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "source_blob": "7ce7ea0f219bc1ed90f1ed1c91bdb0adbe201b5c",
+      "public_sha256": "283dbdf55081ff6e460baff80764f39f722f13a0720e1a5fa13153ea877051a5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "source_blob": "5ae6b190eef6f37cff831b228cf95006a22b47b9",
+      "public_sha256": "fdf27b960d634a258cb9c1cc05d03eb4291bb891e16cf7541602f5115d256030",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "postcss.config.mjs",
+      "mode": "100644",
+      "source_blob": "61e36849cf7cfa9f1f71b4a3964a4953e3e243d3",
+      "public_sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/al-performance-command-centre.html",
+      "mode": "100644",
+      "source_blob": "fd4e1308b3f1a09178f207e2f0106415b76b8ddf",
+      "public_sha256": "4811303dd5b85b87dbc2525bd747ee1aa91b8d88c180ec0e03cc9ca135309047",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/biology-intelligence/index.html",
+      "mode": "100644",
+      "source_blob": "6a6f10c64b78683d155056f913a79ea7a8512736",
+      "public_sha256": "c361e29be923c10975647d2ff4088366b77be9838e499440de853b56a2935c19",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/biology-intelligence/source-audit.json",
+      "mode": "100644",
+      "source_blob": "6d3005c3c77fc9a49fd20413b562378ce88095cf",
+      "public_sha256": "86c7fda9a6269f5e570d1fc9347502459bc5a5dcf9e72e1e879159cab7494273",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/chemistry-intelligence/index.html",
+      "mode": "100644",
+      "source_blob": "e3b1c40ba1b4cb4440fdf4470a5fb849916ccad2",
+      "public_sha256": "30f12905a3e21ddfae85156070c3b28bed9a605c20313a7d04b4e911b9d9772e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/chemistry-intelligence/source-audit.json",
+      "mode": "100644",
+      "source_blob": "1b2b594dc1db736aeb015e91b7e36bdc56a1a8de",
+      "public_sha256": "1c875738385c1c47e9cb703564383112615e6b4f6239c5b3da9fa815b33388a9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/community-share.html",
+      "mode": "100644",
+      "source_blob": "eafa94b6d3e67ea75569abb40e21650a18c9d883",
+      "public_sha256": "b467938eb0ef0bf48a9fd3c5294275ad37349ca82b70dec55b85ac80b54dc141",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/evidence-rules.js",
+      "mode": "100644",
+      "source_blob": "4060e1303757cfbf91d06a9cd93bc703254d8293",
+      "public_sha256": "614af8f4b3d9cbecf917b1b4410007d4a179dcadc6e024b1ad777e18d57939d3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/favicon.svg",
+      "mode": "100644",
+      "source_blob": "ca747cb66b233fedec5ff0c84f97bb4631c05dbf",
+      "public_sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/file.svg",
+      "mode": "100644",
+      "source_blob": "004145cddf3f9db91b57b9cb596683c8eb420862",
+      "public_sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/globe.svg",
+      "mode": "100644",
+      "source_blob": "567f17b0d7c7fb662c16d4357dd74830caf2dccb",
+      "public_sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/icon-192.png",
+      "mode": "100644",
+      "source_blob": "1411b98d61a00436843310bbd907263730f4c9dc",
+      "public_sha256": "6974946948e2ab04dba50eddfc845efc1edf8777de64b2d06611a8548d49e892",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/icon-512.png",
+      "mode": "100644",
+      "source_blob": "a64e4648ea8a872a260f81b1a62e87ac325823c7",
+      "public_sha256": "90af5ad30444870e33362fd086a086da4fb2aff81c8f1b9cfda3f5ee4e68ead2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/index.html",
+      "mode": "100644",
+      "source_blob": "943b4f1062f978bcffb5192e805dd823c9543187",
+      "public_sha256": "56a1b6f255251c944c1c198d97482411eeee0a821bfe123ac53414fb0e4c121e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/manifest.webmanifest",
+      "mode": "100644",
+      "source_blob": "8d8fe5e7a08b118bb40c1be66842b4d0dd6e0edb",
+      "public_sha256": "70b2572b5e02c6f3e840f4d6a4ac2ced48998bce4686bd4b7751b96deaffdbb6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/og.png",
+      "mode": "100644",
+      "source_blob": "64423440c69a1b52bd0908c74d2ae8ee8f486089",
+      "public_sha256": "e511d0a60252714bb8203ac9e6680743147b067376aea1521d71c8cfa2d8130c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/app.js",
+      "mode": "100644",
+      "source_blob": "816155b54f9c6c8a914abdbe8bc7ca84c028ace4",
+      "public_sha256": "4e1cdc64051eddb9d62425bdaddd3bec162421c877e82efe30a3332a1afc9652",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/assets/physics-intelligence-data.json",
+      "mode": "100644",
+      "source_blob": "1a6b67b20b819188fad58f28daaa6eacdbc4a87a",
+      "public_sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/favicon.svg",
+      "mode": "100644",
+      "source_blob": "ca46ffb970ca63ad9dcfa5494cc268fd8f5fc217",
+      "public_sha256": "600516f3eabdab4da63be2fecf354fa7074344cb495d931a85b0f0cc9e69f9ca",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/index.html",
+      "mode": "100644",
+      "source_blob": "5a1911b6f03d77a1378c64c551698e9e3a569960",
+      "public_sha256": "0cf6e6367202bf18e07eee7df734d8931fa1a088b7d9e1b21b6f53f60ce3bbdd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/styles.css",
+      "mode": "100644",
+      "source_blob": "e5087bfc45ddae102259a6bfc70e648a19ec28cf",
+      "public_sha256": "9d5cba21597b2630c21986edec7bd3c229cccb3e370b158b93a20a1943af584d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/app.js",
+      "mode": "100644",
+      "source_blob": "c8837d64a5d320e11c9f08ec1d3aa427fcc164ab",
+      "public_sha256": "ef110cf125d968c18383291a12e2742585eda2b200c72beda92d62483731f226",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/command-plan-model.js",
+      "mode": "100644",
+      "source_blob": "e473681f08b12cc38390b9c123ceb99e6f5b7337",
+      "public_sha256": "337e99fbdc791fe277a9afc6877424f9141d24afff4f3f78225dc27da7811960",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/command-plan-shared.css",
+      "mode": "100644",
+      "source_blob": "276cbb502b0f3c1fa1b8988e97ac9017e890fbc3",
+      "public_sha256": "4bc4fbe2b9d970d6bc09c377c95dbbbe3683ce5c5e6a40973bcc1c34ee40cc3a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/command-plan-ui.js",
+      "mode": "100644",
+      "source_blob": "d687bcc1fb6e48fe08173f13db8959f7514652f4",
+      "public_sha256": "f5b19f67d1c42bd06d909a71ba67c2cb50da0dc0b86fb3ae45608fe6927e845d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/command-workspace-v13.css",
+      "mode": "100644",
+      "source_blob": "ec88bb121ed2aa874fde0c48a52fb8fa81d5b741",
+      "public_sha256": "1bfb7545bf8c1daf61248ed51d4c16b3b796c2330a2d721f912d581a05505c82",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/command-workspace-v13.js",
+      "mode": "100644",
+      "source_blob": "37b138191a3ba1a71cee8bef19b8004a05225de2",
+      "public_sha256": "5d77ec00d1496cd0ef158bf2cde4e7a8ade863b16cf75bd4e6fc02813ee62b0e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/execution-v10.js",
+      "mode": "100644",
+      "source_blob": "5a9eefbc475ac3d41dd14f7f9d379d52e99ec147",
+      "public_sha256": "764a61a644cf43e56fe31f7414d1232e836734fcb8be73ed0c6d5c1979d06ff4",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/flagship.css",
+      "mode": "100644",
+      "source_blob": "90c1e96712b4ea1ad79e45d32ef92572feaaf1c0",
+      "public_sha256": "3b60680df2595f77b32a25a7b85dfd0f5bc9cb8cd632fe6fe23ebcb975d42b5e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/launchpad-model.js",
+      "mode": "100644",
+      "source_blob": "3e15ae69f9ebfdfa611ca16ea63d028f531e1f11",
+      "public_sha256": "e3cfea983ea72a5aafc058aa365bc7219b7d16a6b4035c243ab5a7510436f439",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/launchpad-ui.js",
+      "mode": "100644",
+      "source_blob": "81f6666016adf7ba97999fce695058ee41c11583",
+      "public_sha256": "2891b35dcf2383427346a2ff188cfd0450712178fe174a443474ccc672465b52",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/model.js",
+      "mode": "100644",
+      "source_blob": "32ebd85e9f269091f6a5731170d39cc94f109ebb",
+      "public_sha256": "1c157494987dcc376d07883c9bf1761b4e378026c06e4a0b1539737cf513b367",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/planning-ui.js",
+      "mode": "100644",
+      "source_blob": "f120ba33be2694c17e27aab12125a3cd704b5927",
+      "public_sha256": "bb184d664bda872be413a373bc1e4fa22f6fa0892f9867289a5e3a041319d4f0",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/planning.css",
+      "mode": "100644",
+      "source_blob": "1c04ec276b5469cf4e41db468f9a2d7bee0130c0",
+      "public_sha256": "ee194af2ee5925cd108a8eee941e0514d3423f881114a07de8619af0e5ec5d96",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/planning.js",
+      "mode": "100644",
+      "source_blob": "fddfb2e65206f18bc99c2abb09022ea74a4f2531",
+      "public_sha256": "f7f353543942ea76d132712c1aed28c59a53b26c21e7a8b29e3441d0d9a862f7",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/review-model.js",
+      "mode": "100644",
+      "source_blob": "dd6afc0b7828caf06db6b0aaccde7b8e389b21cc",
+      "public_sha256": "2782be67b278f2c7dcd118798862ad16a5efd599afb17a3cdb8b32aba20357e5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/styles.css",
+      "mode": "100644",
+      "source_blob": "aad1cb0617b3ec64c9f14e4d3df35c71c034facb",
+      "public_sha256": "9ba05ba09433b9a4765261d4a4c55750ab0ab59e8deba67d320e484cc6431e42",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/verification-ui.js",
+      "mode": "100644",
+      "source_blob": "9e1398ed64e695cbc7d4e022ad2a553796824468",
+      "public_sha256": "94f3d1432d2edf03f57281412132b6a3cb3d213b1435a7b22419f431b3196539",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/verification.js",
+      "mode": "100644",
+      "source_blob": "d382cd74f82bda8506eb9fb4ba0b9cafa3433150",
+      "public_sha256": "e9d9c06cfdaf2861009f73291d2735428808c5fc31dba117dc91554475c676b5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/workspace-v12.css",
+      "mode": "100644",
+      "source_blob": "e87e43e0243f3dd44ffade6d679d1e90a0869b83",
+      "public_sha256": "3c0292bdf6d90e92986387f2dd8a95a8e741059574b73bce5448f286ed1a9577",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/powerhouse/workspace-v12.js",
+      "mode": "100644",
+      "source_blob": "03a10884a6f7b25adcd11c216783c6d1f351c90a",
+      "public_sha256": "baa0783793e00f132e95bdbdb4433fe2e8c325c49bf5378921839bb4ecfad133",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/app.js",
+      "mode": "100644",
+      "source_blob": "384ac86997c10734e9ef4c067a0f623051de1a27",
+      "public_sha256": "a436756673521a8e16b8a0905032c898127baabfa566fa10c4c89af0e67229a3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/V3_2_RELEASE_MANIFEST.json",
+      "mode": "100644",
+      "source_blob": "31c7159710c62bfb84441a542b751ea63af72b06",
+      "public_sha256": "f9bc54c2dafce2fa1824762f1fa1892098d535ead5e23419020ecb2e7c7005e6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/app.js",
+      "mode": "100644",
+      "source_blob": "86da7f95da906eb36b56cf79776857b263506e83",
+      "public_sha256": "da9eb3f27ab240c4f78d158d3ee764c3684e633e534e71d3a7c7e00f9b8d58a8",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/V5_Release_Summary.json",
+      "mode": "100644",
+      "source_blob": "80d43bcbb726ee30a3192cf840b9c55c568b095e",
+      "public_sha256": "9ef167bd758f0a5151b99b4caddc86e57a5647c461d92cb6d9f8d597faf919d1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/V5_SHA256SUMS.txt",
+      "mode": "100644",
+      "source_blob": "541f9140733c373de9e83f1272521ccd18b9fc32",
+      "public_sha256": "0e77ec0e702081075e686a04eb0eb531f9e974b8f38ced77d94aea87fc1fb9fd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/V5_Source_and_QA_Report.md",
+      "mode": "100644",
+      "source_blob": "a93c5c9ee388562ad3231221f25c5c8971de1df3",
+      "public_sha256": "1485fa32273bc46c733058ca3b8c902b4fcb06f1c9b470f639f3d1a838f5b627",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/V5_V4_reconciliation_audits.json",
+      "mode": "100644",
+      "source_blob": "f85b23170bb4f46ae526a53ab49639d23492de8a",
+      "public_sha256": "3e6a3553641b2139fa24ac0ba6d4987517e3df7b835abc3d5a2a98716543256e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/V5_activity_coverage.csv",
+      "mode": "100644",
+      "source_blob": "ab1fa229d46cd404fcbaeef3448ac32b5a8642b0",
+      "public_sha256": "3ab2434ab717075c5f6fd060ef5ffb1b592342ae56eec68e663852325329c9fc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/V5_legacy_case_audits.json",
+      "mode": "100644",
+      "source_blob": "c581eae6de22685ae225b2e911f690b298d7f7bb",
+      "public_sha256": "1663d0a14332a033280d15283ae28278b46d2907d3a30c22db100bad3f7dc8a1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/V5_numeric_checks.csv",
+      "mode": "100644",
+      "source_blob": "53be86b0ad83b7e462a956bb3954d021495dce4d",
+      "public_sha256": "d8bbd806e2657f9351a64a12f05a80eed864dd9c45f57d9c4354c5dd58e2e5fd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/practical-lab-combined-v5.json",
+      "mode": "100644",
+      "source_blob": "90bf2bbe8c9e89e75a32c2347a1e38525e3d08d7",
+      "public_sha256": "83e584ee4f1c5348fef1af341e085c23c22eea5fb0717033850dc61e89c0bff1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/v4-source/V4_0_QA_ledger-1.csv",
+      "mode": "100644",
+      "source_blob": "0c7101a4caac5f6d2bdda9abb270ee52a5620c78",
+      "public_sha256": "d356666cceb8be81e9deacea3425808566d1b61fcebf707b5e7bf77f23c43572",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/v4-source/WORK_AGENT_INCREMENTAL_UPDATE_V4_0.md",
+      "mode": "100644",
+      "source_blob": "b14d379dbac8cc01f20a3b2d2e244346ea8b3a4d",
+      "public_sha256": "f4b200db394822d6379255765ec040fe9e99bd82c67166bcf5ebe07fed3bb670",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/index.html",
+      "mode": "100644",
+      "source_blob": "929a17617e1273a31ccd62cb0e670f54d998ffdf",
+      "public_sha256": "84418aedb46e8b21d532b0ced294b969034416c1d24c6b878991d6ed89cf7231",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/model.js",
+      "mode": "100644",
+      "source_blob": "359d499f1a996e8fcde542b588ba60e1c2ea7a06",
+      "public_sha256": "eeb065256476b5da74829ada5befda8f23b990138db6ca036ab42a2a47c8b947",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/practical-lab-coverage-completion-v4_0.json",
+      "mode": "100644",
+      "source_blob": "ce81850419a09622fcb0e4689879b51f553731d9",
+      "public_sha256": "e254d2470863cbcc1bdbd1b19b0b717a9a7e355b17e0b677afcc6c52d97ba5bd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/practical-lab-evidence-integrity-v3_3.json",
+      "mode": "100644",
+      "source_blob": "31bf53dd01fb68a14956e7afaf5fa20e038f343d",
+      "public_sha256": "6249b9291bdf1726fb9032d43ec64818e17114f82c6fbe755a25233ce9fd1dac",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/practical-lab-graph-clinic-v3_2-index.csv",
+      "mode": "100644",
+      "source_blob": "d81c6978cbd23e1ecbf48d0409d329ec844be8ed",
+      "public_sha256": "ff15c173eec772caa08520b813c99d07df2a63a364e6eb28c8dc76efc26adcbd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "mode": "100644",
+      "source_blob": "09e8d468496f2cc9e93e7cffb9c1a38cb4f765ce",
+      "public_sha256": "b1da29b9e2652f1a36eaeb877ed8602791660f7cade8dbb1f355cd0233fd9028",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.schema.json",
+      "mode": "100644",
+      "source_blob": "40427b40a00c1c9de02ad459d0610832bd3def24",
+      "public_sha256": "f6562cfaa07539dff69348289bbbb33a233e23ea742384d2417af228609640fa",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "mode": "100644",
+      "source_blob": "6a9600ad4d0e16b936e1f11356ecff8ed7036bfa",
+      "public_sha256": "8a99968be0c411256866c132387b93dae23a6a1f5d028683177464d9e491b721",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/practical-lab-v5.json",
+      "mode": "100644",
+      "source_blob": "b83be9ddd94b7dfc897355697147bdd698398c0e",
+      "public_sha256": "5603abc736264b1c5ee3c2abf6682609bad355e2274e3b2c425bf5e05c03ea25",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/styles.css",
+      "mode": "100644",
+      "source_blob": "2055bab90ef4d53a731d843cf3d11e59680ef98d",
+      "public_sha256": "e8bbe78db7cd8f908791c0a899c179e169215a60d2d4bcc4bfb602fc4706b0c2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/clinic/v5-content.js",
+      "mode": "100644",
+      "source_blob": "27e72f3f6cb85e73dcddf8c2d0c18bd24d2866b9",
+      "public_sha256": "e1ad3053d6c90de28a653a8c8a93ed1d013edc8b245907c711eb9fd103d880bd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/host.js",
+      "mode": "100644",
+      "source_blob": "1e4ee9c30fa09b354d2797c6bb8c948b2922cd59",
+      "public_sha256": "84f0711e1ad0c8f845500a9c249cc1b64ab7e6399e301af94ea4657b769b18ee",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/index.html",
+      "mode": "100644",
+      "source_blob": "b6d96e2b84dffbc5da8cf452aa6247bec3e0c59a",
+      "public_sha256": "7662fcc55fc012a35209c6f00a7c73b61e37a594218a81b87053703fe2e9600c",
+      "redacted_link_count": 3
+    },
+    {
+      "path": "public/practical-lab/model.js",
+      "mode": "100644",
+      "source_blob": "0b86632acd8c25549354f1d439b1e864e0018e59",
+      "public_sha256": "3a65a3310a4bda1bb60284ee54b3ac5a8fe375865d212f78816eeb09dd3b2053",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/practical-lab-catalog-v3.json",
+      "mode": "100644",
+      "source_blob": "26bf8c24faa60dbcd19ed416113ee557f8f4a8ab",
+      "public_sha256": "3aa5fd03cc9f9ad505e73e9f6420f5a56a8e5d96f2d1a7748cebc0a42dc71677",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/practical-lab-catalog-v3.schema.json",
+      "mode": "100644",
+      "source_blob": "737b811f11b174c7e3c2627284f763be2f1b215f",
+      "public_sha256": "0a2aa20c2c9af7e18452d31b7639c0409b892ef6da0bda2bf0d187b2a164a6b5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/practical-lab-index-v3.csv",
+      "mode": "100644",
+      "source_blob": "15aaac8ba8c3c005c4559a775655e5dc4149349b",
+      "public_sha256": "21ec161c4155ef455692d54379d33207d839268389aea2d4a1d32c67efd7b14b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/practical-lab/styles.css",
+      "mode": "100644",
+      "source_blob": "81708882f3318822e80758e951c56f08710f33f2",
+      "public_sha256": "d8badbef298b6ab5e07e81f92578217d2f01022198393fe065de725a2507c658",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/resource-desk/app.js",
+      "mode": "100644",
+      "source_blob": "2a6a0850df9c07a23009f007a04f1e3a83ed546f",
+      "public_sha256": "2b9f7eac4104d4e64bdb3ba038ff135fcb570c51333f45422065020dee1fa803",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/resource-desk/biology-review-queue.csv",
+      "mode": "100644",
+      "source_blob": "18862dd668e2923262773b473a7220a02e222a37",
+      "public_sha256": "99e43a5e0956a2b5c9d8614c53a12e874c6ea9245e183d22c9da419e6b9f671c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/resource-desk/biology-review-queue.json",
+      "mode": "100644",
+      "source_blob": "8d7d968127836e64c67d1fb4869bf55350616207",
+      "public_sha256": "9e8ed533553190f05fcc970f3f4575ce8e396f6c0b3b5316c4b72ac626a82884",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/resource-desk/catalogue.json",
+      "mode": "100644",
+      "source_blob": "2c06fc7fac97f6df0f9dd9a52bc8aca727dfb266",
+      "public_sha256": "40801afbad9acab00acf26dfe2f97c09d00e865bf04a9323ef70dfb9d2486305",
+      "redacted_link_count": 54
+    },
+    {
+      "path": "public/resource-desk/index.html",
+      "mode": "100644",
+      "source_blob": "cbb7bd8f5184a8f8ae495aaf241b7dbc53b8c6de",
+      "public_sha256": "11507ce2005905acab00e783af80d41ff2e1b53c56d2bb78084048e81e48d7b2",
+      "redacted_link_count": 54
+    },
+    {
+      "path": "public/resource-desk/styles.css",
+      "mode": "100644",
+      "source_blob": "26b158654ccc127236c945401b2d5570aeceff91",
+      "public_sha256": "1fce86a071601c7eaa4f37511efa5c1ccc3a4b422654afd072f0303a9006e65b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/science-intelligence/app.js",
+      "mode": "100644",
+      "source_blob": "ad6b0378040105c15e28dc9fe8c88b6a81697301",
+      "public_sha256": "f18f5310a7f1c65d6523de521b60214c004e310c2b3a588c5acc83eb34c4f327",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/science-intelligence/index.html",
+      "mode": "100644",
+      "source_blob": "9f04119a4a7ff7758ae0815bbbc61b151528d201",
+      "public_sha256": "ab5532545e7c0d6e822ff0b0bebe0899092b1f5232805e33fa3134eec4a0e007",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/science-intelligence/model.js",
+      "mode": "100644",
+      "source_blob": "3ae484bfc1ce641e214d1347a982cc8ed76867b8",
+      "public_sha256": "f928d95c5bf3a5387fe5c75a298ea07c7dc86103da1a2949dd971129b62b661e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/science-intelligence/styles.css",
+      "mode": "100644",
+      "source_blob": "8fefe7b24947e622d92d6e80ee0eb7c56bbaeae1",
+      "public_sha256": "0f4e8dc7bc0f356b8616c01886e945867552475b37498122ef3f21a28884e530",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-library/app.js",
+      "mode": "100644",
+      "source_blob": "ddf42611f46289d37c1fe32b9bfb07c958372997",
+      "public_sha256": "c8830a49750f62680a111da19e11e76d8bad1b06438f54aa9edb4340166b275f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-library/index.html",
+      "mode": "100644",
+      "source_blob": "2b15a159b5da2d64ce434f6acc9c618a25e3ad1e",
+      "public_sha256": "2c080cd1ec8f1b6f7efde02bfc179ccfad2f1a0e2a57326fd8220db7c0c566c3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-library/model.js",
+      "mode": "100644",
+      "source_blob": "84b61eb1b8acb293c70e70b6fa2981bc1c7bff6a",
+      "public_sha256": "67f8f6eb52f59e47a7b7a70de42abb51f08fb3cf01bf657686ff50f77c423c57",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-library/practice-model.js",
+      "mode": "100644",
+      "source_blob": "a4fa4b1abac1ea6ce5435eb31c72ed1b69a1f3e5",
+      "public_sha256": "14f62f0c60bcc8f8ec59744507b737c97466a0b412f6d5ce3a1e649d609bc30c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-library/science-model.js",
+      "mode": "100644",
+      "source_blob": "3ae484bfc1ce641e214d1347a982cc8ed76867b8",
+      "public_sha256": "f928d95c5bf3a5387fe5c75a298ea07c7dc86103da1a2949dd971129b62b661e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-library/styles.css",
+      "mode": "100644",
+      "source_blob": "2e4038b7bbac9c0a6791d6151c13f5015ca6cc55",
+      "public_sha256": "598c678bf3394ab8dd34c3f6ccf39c172cc473d04c03cd8960ccefdb8fea2f23",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-tracker/app.js",
+      "mode": "100644",
+      "source_blob": "18acaa96a913fb10ef8e77edd0b4bd2fd3d8d192",
+      "public_sha256": "c91afdf8e7f0130f2cfa086e949bfcd25ab132882f8b2cd8aca0402a4fbc1b50",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-tracker/index.html",
+      "mode": "100644",
+      "source_blob": "5e27b3639dd28ed258b1ab73c8c16d5a410b061f",
+      "public_sha256": "85760cfb7c398ef25fefd39c20216f13740285a11e51f9e0f1777acf0577bbb3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-tracker/styles.css",
+      "mode": "100644",
+      "source_blob": "f603ca2ec45d133a21756a444232a4063070cce0",
+      "public_sha256": "9b93e991d966137f6424d07351192ecb5cf10cd1df59cfaaf0ef096bfb875ef3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subject-intelligence/advanced-model.js",
+      "mode": "100644",
+      "source_blob": "b76a46180dcc224a2512f7f5ae711a06f118689f",
+      "public_sha256": "13d8159a706804a2f0fafecfbb80f24546acfe5ef2e36bc1984f42c2e6ef13fe",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subject-intelligence/advanced-ui.js",
+      "mode": "100644",
+      "source_blob": "349fc9606a50ad63d566fe432146b89453b277bb",
+      "public_sha256": "79fece3be06650570b9fa1ee67611af6d74435cbd50885798f4fd0df2f5bf980",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subject-intelligence/advanced.css",
+      "mode": "100644",
+      "source_blob": "80080c171b6101656540b31db2e07f09dffa2a1f",
+      "public_sha256": "7b1b07c09ba1ef024da909f87d5e1c4e31a1640a32e9b8d599971bd80d7f2e81",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subject-intelligence/app.js",
+      "mode": "100644",
+      "source_blob": "c8bff903b504820cfde34bb3b14eceb0e710269f",
+      "public_sha256": "9c21059f19cab7216f7297fd6aa3c34c24ce502b441b0b11724767281f358cf6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subject-intelligence/model.js",
+      "mode": "100644",
+      "source_blob": "ab823200f4e0ded57bf9dd78c91274fe21a58629",
+      "public_sha256": "0de91a6fcfdc6ffbd15ea52891cd82b2407cdfd84dec92c4115b68593ddd941f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subject-intelligence/styles.css",
+      "mode": "100644",
+      "source_blob": "5b008d2bd8998173542a6cb3cb19650dba1e3c47",
+      "public_sha256": "8f8a40926f73f84b3a349724042c7ec2a5cafed1ddcd0d4a83ccd2e52890286a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-lab/app.js",
+      "mode": "100644",
+      "source_blob": "11132b8e8fdff12ffb98b30a7dbb5b49d30ae58e",
+      "public_sha256": "315a0b8313c47813440d5e6c0541bf034af70815b3c540c5c264789ce851f12d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-lab/index.html",
+      "mode": "100644",
+      "source_blob": "486b13895ac21e94c7de36d53c6a0655144cb4ed",
+      "public_sha256": "dfcf0d66c32681713bec55e4a6e0484b8036a0bc36c40fced06c0c073a240549",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-lab/model.js",
+      "mode": "100644",
+      "source_blob": "053fff207682a3bcb7bc2cac6a89a7e6d0f7b782",
+      "public_sha256": "9245787f9a77323a1813e3d4b828a134e3c704a9f06de8eb044fc3bc4ff882c7",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-lab/styles.css",
+      "mode": "100644",
+      "source_blob": "3c6283c72658f016275c4b9d432c3d2ec06f2285",
+      "public_sha256": "5f5ac641e39f7c2242429c192495ee482ac999848c95bfa67dfc47cb9735fde5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-playbook/AI_Subscriptions_Practical_Guide_2026-10-14.md",
+      "mode": "100644",
+      "source_blob": "375dc51f5ae5e4e7c2a0dc1501b4effb563a5ac7",
+      "public_sha256": "4f42efbac5e6f2f901e9ea41119b8dddc3ecdde5ae8c7d51dae41d8cf7b95d73",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-playbook/app.js",
+      "mode": "100644",
+      "source_blob": "02f123ce94abbeff6fdcfa6fce1bebff4e1f5562",
+      "public_sha256": "78bbe95173131e7ee1a138b876ee16bbfdbce64d6e1b662b9ce21f999d655a24",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-playbook/index.html",
+      "mode": "100644",
+      "source_blob": "2efd098c690b2c490b70d47f0a65fcb9e6dbab1a",
+      "public_sha256": "c13d3982f9305f21559a781732d17352ab7044f6be52d4cea80ff3ac17c95f14",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-playbook/model.js",
+      "mode": "100644",
+      "source_blob": "5444504ff08b5203a2959b755181e6a8aef8eca9",
+      "public_sha256": "6c582cbdbf2fad6b517cc67acdb9065268a8138d32bab4e1e42a50986182aa12",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/subscription-playbook/styles.css",
+      "mode": "100644",
+      "source_blob": "b71401e8c545ccca4ecc1d8200fb5d80dc8b84dc",
+      "public_sha256": "523112be52340d659d23d3be61c47d971a57a87ac9217f06f3e4009d34deddad",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/sw.js",
+      "mode": "100644",
+      "source_blob": "dbe87c5b3fb87095eb49e7eaea83855d98e160d5",
+      "public_sha256": "00091d5e054cfd47947d01e064bbc86891822150987243673af005bfe9e161f1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/ui-theme/theme.css",
+      "mode": "100644",
+      "source_blob": "1284e5d2da4ada63dbaa0a963ef54ab40c025a2e",
+      "public_sha256": "0fc9f6471b020c4e081223e4bcf9610a4083a4cba216917fabd1c41901926327",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/ui-theme/theme.js",
+      "mode": "100644",
+      "source_blob": "650ae07295c5c9ae5fd5a9d9285837fef8060177",
+      "public_sha256": "e42cd9eaa8e8167574feeda0c4a0ae1d4d250fa4ec4c55ba9aa8eefdc6a53b9c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/window.svg",
+      "mode": "100644",
+      "source_blob": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651",
+      "public_sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/app.js",
+      "mode": "100644",
+      "source_blob": "0f5b1ce4aa94e2e1ee5d6cbf9d9023df8b02fc98",
+      "public_sha256": "ea5d5dc8206b52853080e0a8ef51db6039bf66ba69ff019b833b5752a9328b30",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/home.js",
+      "mode": "100644",
+      "source_blob": "c21426106ea6088450839f8e1c0ea232cedf8157",
+      "public_sha256": "f96d4f59fdbb7119504c2185126ad15efeab7f6f84767006aaa34730842f179a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/index.html",
+      "mode": "100644",
+      "source_blob": "cc5f0372f3a28d88eb8cd04cc2fa964da0914920",
+      "public_sha256": "a52d1c6821d7ec80f50bf4ad29e4ba8701314e6a8558241fc17b627a11ba9375",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/missions.json",
+      "mode": "100644",
+      "source_blob": "d7203d4d373a19df1c4fcd6a19e7daf9622eb9f2",
+      "public_sha256": "f2f80796ca0f661587c2b2ca08c9fc5eb7dfaae0ed81ee2b086092a93d045f45",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/model.js",
+      "mode": "100644",
+      "source_blob": "ebe2ebe8fa76b86897ac0d0fd59105c98df9067c",
+      "public_sha256": "e8c07c2c802d4c9532c61dac6870bdaefe3c9dad97ed9a376ac01238e8705c60",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/run-model.js",
+      "mode": "100644",
+      "source_blob": "3e723406f52c367135c87791001d9f3cfe3e7cc4",
+      "public_sha256": "3ebdd6642dac11b934e2f57b85f2ed054a7b045c6331c72aa8feb587b34d7eb8",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/run-ui.js",
+      "mode": "100644",
+      "source_blob": "ab3a84585b7d2cbe43ed841d95398a95a62abf96",
+      "public_sha256": "9805740e3a4fbb705f6ff64f43c274dab44661c4c20d17e6ee130430d0df88ac",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workflow-studio/styles.css",
+      "mode": "100644",
+      "source_blob": "9cfd8f2ea4c1e762b7e0e9c7ea3d5656d122274c",
+      "public_sha256": "ed57077e1657c28cbfdd7dba7f888bc88ce663ec07303a97d28e7afafb19c079",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workspace-shell/shell.css",
+      "mode": "100644",
+      "source_blob": "5c434ae0612f5a4f7ac773f2cc43d22d356829fd",
+      "public_sha256": "ec15798f689c72f5ce223565242e6d526ac0df76eb0a1c8b109b47d6d3ba1cae",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/workspace-shell/shell.js",
+      "mode": "100644",
+      "source_blob": "f0768d7ed0b52de1f9acbacef62086007625df00",
+      "public_sha256": "7d51c7a75ec89047870872ebf38739c17578c05ab61df35c73d97b75f7faadd0",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/assemble-practical-v5.py",
+      "mode": "100644",
+      "source_blob": "ac40dbb1010d530766c6d8f37590f2826673c44d",
+      "public_sha256": "cf01d090505086c725949f06d601882e2fe3f2039c2d3990aaa1ee92e10fa023",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/build-practical-v5-pdfs.py",
+      "mode": "100644",
+      "source_blob": "f01950dc249020473e4177d2b16e709a21871054",
+      "public_sha256": "a653faa08a79757ee22af9f0c1a9bf23ae5d96088d6ff95c24d175ac8be51cfe",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/build-science-package.py",
+      "mode": "100644",
+      "source_blob": "8dc4eab6eca61dfa368fd4e597cecad9429788ff",
+      "public_sha256": "72fb2ea65b44524f5cd517c2e24250300e0c825c640f93bdc601de866a162a69",
+      "redacted_link_count": 1
+    },
+    {
+      "path": "scripts/build-verified.sh",
+      "mode": "100755",
+      "source_blob": "2368b5a94d96bea8274f83136993008aafa84a2e",
+      "public_sha256": "41714b636524ed4aa1eb5a77a4c95a6471fd53d2957e852ccf187f9335eee17f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/export-practical-v5.mjs",
+      "mode": "100644",
+      "source_blob": "d7a16c0bea4cb09de77e82064abe925d60b57d94",
+      "public_sha256": "1e6ce2c7ca93bee4b85ede0e96252c705485baf6a7e9a8189982956d6575efba",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/install-ci.sh",
+      "mode": "100755",
+      "source_blob": "7a22fd4631338ffc59f5fd83dcd5a910411e988a",
+      "public_sha256": "c86541a04dec39f982eb6b103b60e3b376c518e84816b7876635877fb4c8569f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/package-practical-v5.py",
+      "mode": "100644",
+      "source_blob": "907180824fa3d97419e2ef786e4cdc2ab91165b8",
+      "public_sha256": "6f292cea82ed52183e00d468719a611a40f7f1a05e4b4c51b59c9ebc4fdaf0a4",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/portable-workflow.mjs",
+      "mode": "100644",
+      "source_blob": "3edcead58f93531a551cdcc80820797e51a500d5",
+      "public_sha256": "a3cc8f054b212d439c4aee9cb47bffcdb2f16a8e9eaf70e73133b2e575f23d49",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/sites-env.sh",
+      "mode": "100755",
+      "source_blob": "728416424d5d2f4c9a746d53621668225645356c",
+      "public_sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/validate-artifact.sh",
+      "mode": "100755",
+      "source_blob": "bf4a17809fc584eeced122f5ae3115eba9b1597b",
+      "public_sha256": "186867b00720df359e8fc5b18385a51dfbaa0b7ca6cd1e02303140f4efd98088",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/validate-clinic.mjs",
+      "mode": "100644",
+      "source_blob": "8ee9b29aa6a1401864f468b33d8a07c0491bc343",
+      "public_sha256": "153109285071dca5ba1fc06b05d2c984faa15a15bd2199a1a95398565ccb133b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/clinic-v32.test.mjs",
+      "mode": "100644",
+      "source_blob": "16895fe4bd833d2d0c2946994c641a8834f4d360",
+      "public_sha256": "5cd385fb45efcdc418cc658746c6e08149681e6788c174800994fa4d3e009d85",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/command-plan.test.cjs",
+      "mode": "100644",
+      "source_blob": "59267eebac11b4727ea49503ceb100fb05afe4df",
+      "public_sha256": "01c07cbb3c6501aba691c71dfc1af0825b7c7841568a0822c0ca9cb6c4356fda",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/evidence-rules.test.mjs",
+      "mode": "100644",
+      "source_blob": "a55e5f4851a32b7d70cb243ca8c6ee53cbd1aad3",
+      "public_sha256": "95312d573935023988090c6226522b210c968aa6c1191cd578d998356c8819ea",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/planning-v8.test.mjs",
+      "mode": "100644",
+      "source_blob": "2850b81b5c6da601b058d74b0e2c912ec364518e",
+      "public_sha256": "66dd69f53ee794e4afa319e5e6204274fdc7d593c2d5b37a604435cf8e1e4c97",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/powerhouse-model.test.mjs",
+      "mode": "100644",
+      "source_blob": "51ce6598724f418719b3870bf553fba7ecff8d82",
+      "public_sha256": "1d50cabb655b50f827885d3422fed620d5c806da507c3afcf6e773c5a4cf7994",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/practical-lab.test.mjs",
+      "mode": "100644",
+      "source_blob": "99737049844c06f369e60992bc425c7bd8864edb",
+      "public_sha256": "fc8e9275d6a4709a3099493e0355143f22cdfc654c0f99364353dccb80fad5fe",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/practical-v5-ui.test.mjs",
+      "mode": "100644",
+      "source_blob": "cec8608af00203d49cd4c8814237a5ae2e1b2b39",
+      "public_sha256": "182489582469d3e3d92837bd0185aa63badbb91815dc84d27515bc5a4f84ade3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/practical-v5.test.mjs",
+      "mode": "100644",
+      "source_blob": "f5548e647213e6563415891273b94413893e9734",
+      "public_sha256": "b9cc381b588cb1c0ac1952b73ae598ab6398b866ca8df9c5fb800ee7577f0b35",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/practice-baseline.test.mjs",
+      "mode": "100644",
+      "source_blob": "3ac43ef5a1a8f1b2ed12c56f1ee5e0b47335f0aa",
+      "public_sha256": "bb5e602c1d46975b81bcbc09005e4e017cdb895c6d7cb72d30dba883893ba503",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/prudent-dark-upgrade.test.mjs",
+      "mode": "100644",
+      "source_blob": "e2a4f0d8a0a4d64bf4f50068f08ca5ed816562dd",
+      "public_sha256": "5077b331aef9100a534b7652f817088b3f7b1322ba44139b11ae688c451b2441",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/reliability.test.mjs",
+      "mode": "100644",
+      "source_blob": "6a3a2595e62c2b44e27024fadecc8ee545a8ff95",
+      "public_sha256": "a1532ef8a48e50d799ca96b1b5203810fcdbdc56250abe016a4b2f1eec0b58b4",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/rendered-html.test.mjs",
+      "mode": "100644",
+      "source_blob": "6974169b833a624fcd5b3cce9310e61974316845",
+      "public_sha256": "ecf365b418dd6ce3b292a80e3c8210f7f49e56c62662f4be2b2142b3c6ab933e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/review-summary.test.cjs",
+      "mode": "100644",
+      "source_blob": "cd31729a8f8bcc245cd5fd2c15f1d4239edf5e3b",
+      "public_sha256": "70a4e47cde0875d0d3e92b8eec1cbfe031705ae2ae49892596af1b670299e0e5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/science-intelligence.test.mjs",
+      "mode": "100644",
+      "source_blob": "842ac9015800ea949fd906bc6a4c4dec29a60478",
+      "public_sha256": "d31bca7d5a9501d86494ad876ad3f3b5f38847dfb05655ce3940f1a642653823",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/study-flow.test.mjs",
+      "mode": "100644",
+      "source_blob": "d92d79aa803d8390c51c177714d532892869a873",
+      "public_sha256": "6c7d61a2570bb5ee4c0710bae237edb8b5ffd32d3abfbd5eedd63bddf7741d28",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/study-library-practice.test.mjs",
+      "mode": "100644",
+      "source_blob": "6b07cb674ec94c6f9407b8519bc9d6b2cf53564a",
+      "public_sha256": "e745684484f5f75e5cf1b34aed83c9b58f46ab729d73e2bf99efa78d0240bdcb",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/study-library-storage.test.mjs",
+      "mode": "100644",
+      "source_blob": "ec4b2541dd290af38d64b043f141db34f704c6a9",
+      "public_sha256": "f6400f25d8d7c348680ba887097a473038fe95fcf1957c01ae8efbac53b3f52a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/study-library-ui.test.mjs",
+      "mode": "100644",
+      "source_blob": "7b50f7cd8ea94d989c3bc17b9b1587069e312eaf",
+      "public_sha256": "f6ceb53d1b122555ae9d39f7615249162e5815c0b3fe3776231e242ed0e70c7a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/study-library.test.mjs",
+      "mode": "100644",
+      "source_blob": "4276d2f0263ca6db2df0b0174cf2e3ec441c3e9e",
+      "public_sha256": "930f7b78bbc37197b09fac275892dd0f3ce64eb798d820c82711a25aad7b5b66",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/subject-advanced-ui.test.mjs",
+      "mode": "100644",
+      "source_blob": "3a80a4913970d439a5de8f824f3d38ceba1cbcde",
+      "public_sha256": "8a5acd9fbe8d154d7f79198f37413c13b4d4a01c4c6c56dae9ade78133d84ebb",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/subject-advanced.test.mjs",
+      "mode": "100644",
+      "source_blob": "670797fef9bf8d112106b9d17634a2d85917c16f",
+      "public_sha256": "8f95c80d83443f434f2c578c6c9a986769af210eab6260bccb2451d9273f9562",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/subject-intelligence-ui.test.mjs",
+      "mode": "100644",
+      "source_blob": "31938d81db091c1615e75459194fff0facf29913",
+      "public_sha256": "3368348f8c7057c43b8a03f82bdf73d4f61c43aa453d9481aed00aac90d9bb64",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/subject-intelligence.test.mjs",
+      "mode": "100644",
+      "source_blob": "c997eeb48812eb4cee43a8c96ec5df912f8d385f",
+      "public_sha256": "786c4763258eed011fa9af540173a92bc8d6592dd50a2f609c8c1659f18730e9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/subscription-playbook.test.mjs",
+      "mode": "100644",
+      "source_blob": "c22944f7ebda19723127eeefaccb236e0a0a8d9d",
+      "public_sha256": "ee07521692bad766b72c72a16370958f2840dc2511c06c543eb5680500fc44da",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/unreadable-recovery.test.mjs",
+      "mode": "100644",
+      "source_blob": "3e68a8553f4b42d832baf3b15c35a03e03620e60",
+      "public_sha256": "af2d4e87111c70398eccd9d2efc3ae926ee7af9ac8f67623513c14ce6228588d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/verification-integrity.test.mjs",
+      "mode": "100644",
+      "source_blob": "764c5f10777de0978e918a87f38c01a17b490412",
+      "public_sha256": "5896c755f313acbd26ce3e5939127b40cc73b979369eee23afc5f2f9aa7a55b7",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/verification-v7.test.mjs",
+      "mode": "100644",
+      "source_blob": "f6ace78e52952360f689068a817aa1560c8fafbb",
+      "public_sha256": "fb0b8e1fee5d9db168b1ae2d96f3a523e30b74ff7e41905d91dbc70137724351",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/workflow-runs.test.mjs",
+      "mode": "100644",
+      "source_blob": "a72f9d6a54e5b36b4b763d974cd8e242b564551c",
+      "public_sha256": "7455ea8602116d2c86b85957d93c3e816ed9ac24e68a6cc3672c7beb44f211c9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/workflow-studio.test.mjs",
+      "mode": "100644",
+      "source_blob": "3c4bfff380f4cc94fd16f9d41ab3a548311d2c4a",
+      "public_sha256": "0a1aa493305e5aeec78f466727226f085d1dcf87ba3475e0366221147a7d94f0",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tools/convert-study-tracker-export.mjs",
+      "mode": "100644",
+      "source_blob": "b22ea364c238635651198d2c98db12c4640c2aca",
+      "public_sha256": "b4f9bfd889c3f312cdb3269bcff6cc56977aedddd19cff044088b5aea287bce0",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "source_blob": "3a13f90a773b0facb675bf5b1a8239c8f33d36f5",
+      "public_sha256": "be18523b23b78b6e1a876ddd107d330f0168bddf09d751b57e0b5edce69c66f3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "vite.config.ts",
+      "mode": "100644",
+      "source_blob": "d8c8054909af78d5d882f49271e1e322c2bfc4dd",
+      "public_sha256": "43e5f02f727ca043f08ebf34789f330580a7a0cb90f426c92f4a454d066988fc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "worker-runtime.d.ts",
+      "mode": "100644",
+      "source_blob": "e48359e3eb70c446b690c23b9e60b696b50b28e7",
+      "public_sha256": "c1a3bb11595f77ac8fc353b16c7d45b775a659045ca64238d963b9b20410bd8e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "worker/index.ts",
+      "mode": "100644",
+      "source_blob": "b3cd137862c517c1053481cf6efdf6dd4d423cdc",
+      "public_sha256": "2ed36d7fa996e946d9d7695c5925e7760246f6bf8fa35c06f1bc515c087dc450",
+      "redacted_link_count": 0
+    }
+  ],
+  "omitted": [
+    {
+      "path": "public/practical-lab/clinic/downloads/Practical_Mastery_V5_Complete.pdf",
+      "source_blob": "8a1a2b9aa8c33df947304b3cd12af3493b99501b",
+      "reason": "downloadable document/archive requires separate redistribution review"
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/Practical_Mastery_V5_Model_Answers.pdf",
+      "source_blob": "f389d41b09f7f5b742193d8f15b08a3552085369",
+      "reason": "downloadable document/archive requires separate redistribution review"
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/Practical_Mastery_V5_Offline_Pack.zip",
+      "source_blob": "f82c930b680e3cea15fcb4cd01b8eec73325a62b",
+      "reason": "downloadable document/archive requires separate redistribution review"
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/Practical_Mastery_V5_Student_Workbook.pdf",
+      "source_blob": "275df3f07b3052f1c218bb55a6a7f45627a5e9ea",
+      "reason": "downloadable document/archive requires separate redistribution review"
+    },
+    {
+      "path": "public/practical-lab/clinic/downloads/v4-source/00A_V4.0_Coverage_Completion_70_Cases.pdf",
+      "source_blob": "0c4caabcf2c048f9298153e15ffc1cb80ff118b3",
+      "reason": "downloadable document/archive requires separate redistribution review"
+    },
+    {
+      "path": "scripts/__pycache__/assemble-practical-v5.cpython-312.pyc",
+      "source_blob": "aa04ba74a6a70dd65b58727c4532edd63f2f8f32",
+      "reason": "generated Python bytecode"
+    },
+    {
+      "path": "scripts/__pycache__/build-practical-v5-pdfs.cpython-312.pyc",
+      "source_blob": "ee464064bb2a6283e266a49aba33b92c61886a1e",
+      "reason": "generated Python bytecode"
+    }
+  ],
+  "redacted_links": [
+    {
+      "path": "docs/OWNER-INSTRUCTIONS.md",
+      "link_count": 1
+    },
+    {
+      "path": "docs/RELEASE-2026-10-12.md",
+      "link_count": 1
+    },
+    {
+      "path": "public/practical-lab/index.html",
+      "link_count": 3
+    },
+    {
+      "path": "public/resource-desk/catalogue.json",
+      "link_count": 54
+    },
+    {
+      "path": "public/resource-desk/index.html",
+      "link_count": 54
+    },
+    {
+      "path": "scripts/build-science-package.py",
+      "link_count": 1
+    }
+  ]
+}
