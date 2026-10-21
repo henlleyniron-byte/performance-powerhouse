@@ -1,0 +1,30 @@
+{
+  "saved_versions_verified": 41,
+  "file_hash_checks": 4656,
+  "unique_blob_hashes": 499,
+  "review_head": "36c129477af8999950e81f76d1dc6585ca3534f2",
+  "latest_source_commit": "55c6bb30bf66f474d315c61f217f3f8ce7b81138",
+  "latest_files": 251,
+  "verification": "All included files in all 41 remote snapshots match prepared SHA-256 manifests and original source blob associations; all listed omissions are absent.",
+  "node_checks": {
+    "runtime": "v24.19.0",
+    "latest_sanitized_source": {
+      "command": "node --test tests/*.test.mjs tests/*.test.cjs",
+      "tests": 216,
+      "passed": 162,
+      "skipped": 54,
+      "failed": 0
+    },
+    "legacy_root": {
+      "command": "npm test",
+      "tests": 7,
+      "passed": 7,
+      "skipped": 0,
+      "failed": 0
+    }
+  },
+  "limits": [
+    "No Worker build, browser, authenticated API, database migration or deployment verification performed in this import.",
+    "Hash verification uses committed public snapshots and original source blob associations; sanitized snapshots differ from original releases."
+  ]
+}
