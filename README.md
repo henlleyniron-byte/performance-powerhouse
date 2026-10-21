@@ -1,5 +1,13 @@
 # Performance Powerhouse
 
+## Latest hosted source and complete saved-version history
+
+The live product is **V15 — Evidence Trail**, saved Site version **41**. Its reviewed public source copy is in **[hosted-source/](hosted-source/)**. Browse **[all 41 saved Site versions](history/SITE_VERSIONS.md)** with original source SHAs, per-file hashes and disclosure of public-archive exclusions.
+
+**This is a review archive, not a production migration.** The root application below remains the legacy V5 snapshot. Private resource links are redacted; five downloadable PDF/ZIP files and two bytecode files are excluded from the latest snapshot. No merge or deployment is implied. See the **[source import report](docs/SOURCE_IMPORT_2026-10-21.md)** for setup, test results, omissions and remaining release gates.
+
+## Legacy V5 public application
+
 **Performance Powerhouse** is a local-first, privacy-conscious study evidence system for Sri Lankan G.C.E. A/L Biological Science students.
 
 Its central question is simple:

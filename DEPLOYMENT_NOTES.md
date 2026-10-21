@@ -1,3 +1,5 @@
+> **Legacy V5 instructions only.** Do not deploy this folder over the current V15 Site. The current source is archived under `hosted-source/`; source, data, browser validation and an approved release plan must be reconciled through issue #7 first. See `docs/SOURCE_IMPORT_2026-10-21.md`.
+
 # Deployment notes — final community distribution
 
 Deploy the **contents** of this folder at the existing Performance Powerhouse site root.
