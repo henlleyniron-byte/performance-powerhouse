@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/L Performance Powerhouse · V14 Repair Command</title>
+<title>A/L Performance Powerhouse · V15 Evidence Trail</title>
 <meta name="description" content="A local-first G.C.E. A/L Biological Science performance and error-correction system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.">
 <style>
   :root {
@@ -447,7 +447,7 @@
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
 
-  /* Powerhouse V14 · integrated daily-output layer */
+  /* Powerhouse V15 · integrated daily-output layer */
   .daily-hero { display:grid; grid-template-columns:1.18fr .82fr; gap:14px; margin-bottom:14px; }
   .daily-summary-panel h2 { margin:6px 0 8px; font:clamp(24px,4vw,36px) "DM Serif Display", Georgia, serif; }
   .daily-summary-panel > p { margin:0 0 16px; line-height:1.65; font-size:10px; }
@@ -482,7 +482,7 @@
   .v3-badge { display:inline-flex; align-items:center; gap:6px; padding:5px 9px; border-radius:999px; border:1px solid rgba(255,209,102,.28); background:rgba(255,209,102,.08); color:var(--gold); font-size:9px; font-weight:850; letter-spacing:.04em; }
   .course-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:14px; margin-bottom:14px; }
   .course-hero { position:relative; overflow:hidden; padding:24px; }
-  .course-hero::after { content:"V14"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
+  .course-hero::after { content:"V15"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
   .course-hero h2 { margin:7px 0 8px; max-width:780px; font:clamp(25px,4vw,38px) "DM Serif Display", Georgia, serif; line-height:1.08; }
   .course-hero p { color:var(--muted); line-height:1.65; margin:0 0 15px; max-width:760px; }
   .course-status { display:flex; gap:7px; flex-wrap:wrap; }
@@ -613,7 +613,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
 <div class="app-header">
   <div class="shell header-row">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V14</h1><span class="edition-badge">FLAGSHIP / REPAIR COMMAND</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V15</h1><span class="edition-badge">FLAGSHIP / EVIDENCE TRAIL</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
     <div class="header-actions">
       <button class="backup-chip" id="backup-health" type="button" title="Backup health">Backup —</button>
       <button class="icon-btn" id="share-safe-btn" type="button" title="Share-safe mode" aria-label="Toggle share-safe mode">◫</button>
@@ -644,7 +644,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 <button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
 <button class="tab" type="button" data-panel="planner">Syllabus Map</button></div></details></nav>
 
-<main><section class="content" id="panel-review"><div class="v12-section-heading"><p class="eyebrow">EVIDENCE REVIEW / V14</p><h2>What changed in your marked work?</h2><p>Review the core ledger, find the next check and return to one useful action.</p></div><section class="panel" id="v12-review-summary"><div class="v12-review-controls"><label for="v12-review-range">Evidence window<select id="v12-review-range"><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label><label for="v12-review-subject">Subject<select id="v12-review-subject"><option value="all">All subjects</option><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select></label><button class="secondary-btn" id="v12-summary-export" type="button">Export portable evidence summary</button></div><div id="v12-review-data" aria-live="polite"></div><p class="v6-note">Core-ledger coverage only. Separate subject labs and external Notion records are not merged. Marks describe the selected questions; they are not a predicted grade.</p></section><div id="v12-review-existing"></div></section>
+<main><section class="content" id="panel-review"><div class="v12-section-heading"><p class="eyebrow">EVIDENCE REVIEW / V15</p><h2>What changed in your marked work?</h2><p>Review the core ledger, find the next check and return to one useful action.</p></div><section class="panel" id="v12-review-summary"><div class="v12-review-controls"><label for="v12-review-range">Evidence window<select id="v12-review-range"><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label><label for="v12-review-subject">Subject<select id="v12-review-subject"><option value="all">All subjects</option><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select></label><button class="secondary-btn" id="v12-summary-export" type="button">Export portable evidence summary</button></div><div id="v12-review-data" aria-live="polite"></div><p class="v6-note">Core-ledger coverage only. Separate subject labs and external Notion records are not merged. Marks describe the selected questions; they are not a predicted grade.</p></section><div id="v12-review-existing"></div></section>
   <section class="content active" id="panel-command">
     <div class="hero-grid">
       <article class="focus-card">
@@ -690,7 +690,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
         <div>
           <div class="eyebrow">2027 campaign · no fake countdowns</div>
           <h3 id="exam-timeline-title">Build the attempt that you want to sit.</h3>
-          <p id="exam-timeline-summary">V14 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
+          <p id="exam-timeline-summary">V15 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
         </div>
         <button class="secondary-btn" id="set-target-btn" type="button">Set planning target</button>
       </div>
@@ -722,7 +722,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel planner-score">
         <div class="eyebrow">Syllabus map · context, not proof</div>
         <h2 id="planner-headline">0% period-weighted coverage</h2>
-        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V14 deliberately separates syllabus progress from evidence.</p>
+        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V15 deliberately separates syllabus progress from evidence.</p>
       </section>
       <section class="panel planner-kpis" aria-label="Syllabus plan indicators">
         <div class="planner-kpi"><span>Completed equivalent</span><b id="planner-done-periods">0</b></div>
@@ -750,7 +750,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel course-hero">
         <div class="eyebrow">Course correction · brother mode</div>
         <h2 id="cc-verdict">First move: produce evidence before optimizing the system.</h2>
-        <p id="cc-reason">V14 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
+        <p id="cc-reason">V15 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
         <div class="course-status" id="cc-status-pills"></div>
       </section>
       <section class="panel">
@@ -767,7 +767,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
     <div class="dashboard-grid">
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V14 gives the replacement action.</p></div></div>
+        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V15 gives the replacement action.</p></div></div>
         <div class="correction-rule-grid" id="correction-rule-grid"></div>
         <div class="replacement-box"><strong id="cc-action-title">Default replacement</strong><p id="cc-action-copy">Open the current paper. Do one measurable question set. Mark it. Then decide what you actually need.</p></div>
       </section>
@@ -807,7 +807,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       </section>
 
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">V14 doctrine</div><h3>What this site is allowed to do</h3></div></div>
+        <div class="panel-head"><div><div class="eyebrow">V15 doctrine</div><h3>What this site is allowed to do</h3></div></div>
         <div class="week-review">
           <div class="week-row"><span class="label">TEST</span><span class="value">Closed-book, timed, AI-free. The site measures; it does not rescue you mid-question.</span></div>
           <div class="week-row"><span class="label">DIAGNOSE</span><span class="value">Score + confidence + guesses + one primary error cause. Do not write essays about every mistake.</span></div>
@@ -824,7 +824,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel daily-summary-panel">
         <div class="eyebrow">Daily execution layer</div>
         <h2 id="daily-headline">Turn activity into measurable output.</h2>
-        <p class="muted">The useful daily-output layer is integrated into Powerhouse V14. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
+        <p class="muted">The useful daily-output layer is integrated into Powerhouse V15. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
         <div class="daily-kpi-grid">
           <div class="planner-kpi"><span>Today · target score</span><b id="daily-target-score">0%</b></div>
           <div class="planner-kpi"><span>Today · outputs</span><b id="daily-output-count">0</b></div>
@@ -855,7 +855,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
     <section class="panel" style="margin-bottom:14px">
       <details class="daily-targets-details">
         <summary><strong>Daily targets</strong> · editable, local-only</summary>
-        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V14 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
+        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V15 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
         <div class="daily-subject-grid" id="daily-target-grid"></div>
         <div style="display:flex;justify-content:flex-end;margin-top:12px"><button class="secondary-btn" id="save-daily-targets" type="button">Save targets</button></div>
       </details>
@@ -873,7 +873,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <div>
         <div class="eyebrow">Error Intelligence · marks first</div>
         <h2>Repair what is repeatedly costing marks.</h2>
-        <p>V14 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
+        <p>V15 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
       </div>
       <button class="primary-btn" id="repair-log-btn" type="button">Log repair evidence</button>
     </section>
@@ -955,7 +955,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 </dialog>
 
 <dialog id="timer-dialog">
-  <div class="dialog-head"><div><div class="eyebrow">Deep work · V14</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
+  <div class="dialog-head"><div><div class="eyebrow">Deep work · V15</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
   <div class="dialog-body">
     <div class="timer-phase" id="timer-phase">TEST · AI-free · closed book</div>
     <div class="timer-presets"><button class="secondary-btn" type="button" data-timer-preset="15">15 · recall</button><button class="secondary-btn" type="button" data-timer-preset="30">30 · rescue</button><button class="secondary-btn" type="button" data-timer-preset="60">60 · standard</button><button class="secondary-btn on" type="button" data-timer-preset="90">90 · deep</button><button class="secondary-btn" type="button" data-timer-preset="120">120 · full</button></div>
@@ -967,12 +967,12 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
 <dialog id="data-dialog">
   <div class="dialog-head"><div><div class="eyebrow">Local data</div><h2>Backup & identity</h2></div><button class="icon-btn" type="button" data-close-data aria-label="Close">×</button></div>
-  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your browser copy works without sign-in. Connect cloud saving on Command to keep your evidence in your account across devices. Export a JSON backup for an independent copy.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V14 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
+  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your browser copy works without sign-in. Connect cloud saving on Command to keep your evidence in your account across devices. Export a JSON backup for an independent copy.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V15 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
 </dialog>
 
 <dialog id="welcome-dialog">
   <form id="welcome-form">
-    <div class="dialog-head"><div><div class="eyebrow">V14 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
+    <div class="dialog-head"><div><div class="eyebrow">V15 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
     <div class="dialog-body">
       <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance records are browser-first. Exports and optional cloud saving are explicit owner actions.</p>
       <div class="form-grid">
@@ -999,8 +999,8 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   <div class="owner">Legacy dashboard migration shell</div>
 </header>
 
-<aside class="proof-contract" aria-label="V14 evidence rule">
-  <strong>V14 EVIDENCE RULE</strong>
+<aside class="proof-contract" aria-label="V15 evidence rule">
+  <strong>V15 EVIDENCE RULE</strong>
   <span>Attempt → Mark → Diagnose → Repair → Transfer → Retest. A score without a repaired error is only a signal.</span>
 </aside>
 
@@ -2858,5 +2858,5 @@ setTimeout(showWelcome, 0);
 <script src="./powerhouse/launchpad-ui.js"></script>
 <script src="/workspace-shell/shell.js"></script>
 <script src="/powerhouse/execution-v10.js"></script>
-<script type="module" src="/workflow-studio/home.js"></script><script src="/powerhouse/review-model.js"></script><script src="/powerhouse/workspace-v12.js"></script><link rel="stylesheet" href="/powerhouse/workspace-v12.css"><link rel="stylesheet" href="/powerhouse/command-plan-shared.css"><link rel="stylesheet" href="/powerhouse/command-workspace-v13.css"><script src="/powerhouse/command-plan-model.js"></script><script src="/powerhouse/command-plan-ui.js"></script><script src="/powerhouse/command-workspace-v13.js"></script><link rel="stylesheet" href="/powerhouse/repair-board.css"><script src="/powerhouse/repair-board-model.js"></script><script src="/powerhouse/repair-board-ui.js"></script></body>
+<script type="module" src="/workflow-studio/home.js"></script><script src="/powerhouse/review-model.js"></script><script src="/powerhouse/workspace-v12.js"></script><link rel="stylesheet" href="/powerhouse/workspace-v12.css"><link rel="stylesheet" href="/powerhouse/command-plan-shared.css"><link rel="stylesheet" href="/powerhouse/command-workspace-v13.css"><script src="/powerhouse/command-plan-model.js"></script><script src="/powerhouse/command-plan-ui.js"></script><script src="/powerhouse/command-workspace-v13.js"></script><link rel="stylesheet" href="/powerhouse/repair-board.css"><script src="/powerhouse/repair-inspector-model.js"></script><script src="/powerhouse/repair-board-model.js"></script><script src="/powerhouse/repair-board-ui.js"></script></body>
 </html>

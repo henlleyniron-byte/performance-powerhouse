@@ -2,11 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFile } from "node:fs/promises";
 
-test("renders the V14 Repair Command metadata and seven-stage cycle", async () => {
+test("renders the V15 Evidence Trail metadata and seven-stage cycle", async () => {
   const html = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
-  assert.match(html, /<title>A\/L Performance Powerhouse · V14 Repair Command<\/title>/i);
+  assert.match(html, /<title>A\/L Performance Powerhouse · V15 Evidence Trail<\/title>/i);
   assert.match(html, /Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest/i);
-  assert.match(html, /<h1>Performance Powerhouse V14<\/h1>/);
+  assert.match(html, /<h1>Performance Powerhouse V15<\/h1>/);
   assert.match(html, /id="cycle-steps"/);
   assert.match(html, /id="cycle-subject"/);
   assert.match(html, /const CYCLE_STEPS = \[/);

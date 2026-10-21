@@ -50,7 +50,7 @@
       && typeof attempt.earned === 'number' && Number.isFinite(attempt.earned)
       && (attempt.earned < attempt.total || attempt.error || Array.isArray(attempt.tags) && attempt.tags.length
         || attempt.trustedEarned != null && attempt.trustedEarned < attempt.total));
-    if (laterFailure) return {stage:'reattempt', label:'Chosen weakness reopened by a later failed check', next:'Repair the new failure and select a new independent reattempt, transfer and delayed check. Earlier evidence is preserved.'};
+    if (laterFailure) return {stage:'reattempt', reopenedBy:laterFailure.id, label:'Chosen weakness reopened by a later failed check', next:'Repair the new failure and select a new independent reattempt, transfer and delayed check. Earlier evidence is preserved.'};
     if (!chain.confirmSkill) return {stage:'scope', label:'Check the evidence scope', next:'Confirm that each selected check actually assessed this chosen weakness.'};
     return {stage:'retained', label:'Chosen weakness retained — self-reported', next:'This is evidence for the chosen weakness, not proof of whole-topic mastery. Reopen if a later check fails.'};
   }
