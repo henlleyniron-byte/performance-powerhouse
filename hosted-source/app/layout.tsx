@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "A/L Performance Powerhouse · V4 Community Edition",
+    title: "A/L Performance Powerhouse · V5 Evidence Edition",
     description: "Attempt → Mark → Diagnose → Repair → Transfer → Retest",
     images: ["/og.png"],
   },

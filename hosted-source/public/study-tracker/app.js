@@ -18,6 +18,8 @@ const channel = 'BroadcastChannel' in window ? new BroadcastChannel(CHANNEL_NAME
 let pendingCompletion = null;
 let toastHandle = null;
 let syncRunning = false;
+let volatileState = null;
+let storageFailed = false;
 
 function defaultState(){
   return {version:1,sessions:[],goals:[],preferences:{timezone:TIMEZONE,defaultMinutes:90,shareSafe:false},active:null,sync:{queue:[],lastSyncedAt:null,status:'local'},migrations:[]};
@@ -49,7 +51,7 @@ function validIso(value){if(!value)return null;const d=new Date(value);return Nu
 function boundedInt(value,min,max){const n=Number(value);return Number.isFinite(n)?Math.min(max,Math.max(min,Math.round(n))):min}
 
 function loadState(){
-  const raw=safeJson(localStorage.getItem(STORAGE_KEY),null);const base=defaultState();
+  let raw;try{raw=safeJson(localStorage.getItem(STORAGE_KEY),null)}catch{storageFailed=true;raw=volatileState}const base=defaultState();
   if(!raw||typeof raw!=='object')return base;
   base.sessions=Array.isArray(raw.sessions)?raw.sessions.map(normalizeSession):[];
   base.goals=Array.isArray(raw.goals)?raw.goals:[];base.migrations=Array.isArray(raw.migrations)?raw.migrations:[];
@@ -60,11 +62,14 @@ function loadState(){
 let state=loadState();
 
 function saveState(notify=true){
-  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+  volatileState=state;
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));storageFailed=false}catch{storageFailed=true}
+  const warning=$('storageWarning');if(warning){warning.hidden=!storageFailed;warning.textContent=storageFailed?'Browser storage is unavailable. This session remains open, but export a backup before closing. Cloud sync has a separate status below.':''}
   if(notify)channel?.postMessage({type:'state-updated',at:Date.now()});
 }
 
 function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastHandle);toastHandle=setTimeout(()=>el.classList.remove('show'),2600)}
+function escapeAttribute(value){return escapeHTML(value).replaceAll('\"','&quot;')}
 function escapeHTML(value){const d=document.createElement('div');d.textContent=String(value??'');return d.innerHTML}
 
 function colomboDay(value=new Date()){
@@ -188,10 +193,10 @@ function filteredSessions(){
 }
 
 function renderHistory(){
-  const rows=filteredSessions();$('historyBody').innerHTML=rows.length?rows.map(s=>`<tr><td class="private-value">${localDateLabel(s.startedAt)}<small>${new Intl.DateTimeFormat('en-GB',{timeZone:TIMEZONE,hour:'2-digit',minute:'2-digit'}).format(new Date(s.startedAt))}</small></td><td>${SUBJECT_LABELS[s.subject]}</td><td><strong>${TYPE_LABELS[s.sessionType]}</strong><small>${escapeHTML(s.topic||'No topic recorded')}</small></td><td>${durationLabel(s.durationSeconds)}</td><td><span class="tag ${isEvidence(s)?'good':'warn'}">${escapeHTML(s.evidenceKind==='none'?'No evidence':s.evidenceKind)}</span><small>${s.outputCount?`${s.outputCount} ${escapeHTML(s.outputUnit)}`:''}</small></td><td><span class="tag ${s.syncState==='synced'?'good':'warn'}">${s.syncState==='synced'?'Synced':'Pending'}</span></td><td><div class="row-actions"><button class="mini-button" data-edit="${s.id}">Edit</button><button class="mini-button delete" data-delete="${s.id}">Delete</button></div></td></tr>`).join(''):'<tr><td colspan="7"><div class="empty">No sessions match these filters. Complete one focused block before optimizing the tracker.</div></td></tr>';
+  const rows=filteredSessions();$('historyBody').innerHTML=rows.length?rows.map(s=>`<tr><td class="private-value">${localDateLabel(s.startedAt)}<small>${new Intl.DateTimeFormat('en-GB',{timeZone:TIMEZONE,hour:'2-digit',minute:'2-digit'}).format(new Date(s.startedAt))}</small></td><td>${SUBJECT_LABELS[s.subject]}</td><td><strong>${TYPE_LABELS[s.sessionType]}</strong><small>${escapeHTML(s.topic||'No topic recorded')}</small></td><td>${durationLabel(s.durationSeconds)}</td><td><span class="tag ${isEvidence(s)?'good':'warn'}">${escapeHTML(s.evidenceKind==='none'?'No evidence':s.evidenceKind)}</span><small>${s.outputCount?`${s.outputCount} ${escapeHTML(s.outputUnit)}`:''}</small></td><td><span class="tag ${s.syncState==='synced'?'good':'warn'}">${s.syncState==='synced'?'Synced':'Pending'}</span></td><td><div class="row-actions"><button class="mini-button" data-edit="${escapeAttribute(s.id)}">Edit</button><button class="mini-button delete" data-delete="${escapeAttribute(s.id)}">Delete</button></div></td></tr>`).join(''):'<tr><td colspan="7"><div class="empty">No sessions match these filters. Complete one focused block before optimizing the tracker.</div></td></tr>';
 }
 
-function weekBounds(){const now=new Date(),day=(now.getUTCDay()+6)%7,start=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()-day)),end=new Date(start.getTime()+6*86400000);return{start:colomboDay(start),end:colomboDay(end)}}
+function weekBounds(){const today=new Date(colomboDay()+'T12:00:00Z'),day=(today.getUTCDay()+6)%7,start=new Date(today.getTime()-day*86400000),end=new Date(start.getTime()+6*86400000);return{start:start.toISOString().slice(0,10),end:end.toISOString().slice(0,10)}}
 function renderGoal(){
   const bounds=weekBounds(),goal=state.goals.find(g=>g.period==='weekly'&&g.metric==='evidence-sessions'&&g.startDate===bounds.start);const target=Number(goal?.target||5);$('goalTarget').value=String(target);
   const count=state.sessions.filter(s=>isEvidence(s)&&colomboDay(s.startedAt)>=bounds.start&&colomboDay(s.startedAt)<=bounds.end).length;$('goalBar').style.width=`${Math.min(100,count/target*100)}%`;$('goalSummary').textContent=`${count}/${target} evidence-producing sessions this week. The goal rewards useful output, not desk time.`;
@@ -272,5 +277,5 @@ function initEvents(){
   $('syncButton').addEventListener('click',syncNow);$('shareToggle').addEventListener('click',()=>toggleShareSafe());window.addEventListener('online',syncNow);window.addEventListener('storage',e=>{if(e.key===STORAGE_KEY){state=loadState();renderAll()}});channel?.addEventListener('message',()=>{state=loadState();renderAll()});
 }
 
-populateSelects();applyCommandBridge();initEvents();renderAll();setInterval(renderTimer,250);syncNow();
+populateSelects();applyCommandBridge();initEvents();renderAll();if(storageFailed){$('storageWarning').hidden=false;$('storageWarning').textContent='Browser storage is unavailable. Export a backup before closing; work remains usable for this visit.';}setInterval(renderTimer,250);syncNow();
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('../sw.js').catch(()=>{}));

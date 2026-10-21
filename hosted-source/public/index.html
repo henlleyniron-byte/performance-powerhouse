@@ -606,7 +606,12 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 @media(max-width:600px) { .topic-row { flex-wrap:wrap; } .t-name { min-width:180px; } .proof-contract { flex-wrap:wrap; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *, *::before, *::after { animation:none!important; transition:none!important; } }
 </style>
-</head>
+<style id="october-usability">
+body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queue-meta,.kpi-note,.save-note,.legend,.ov-card .lbl,.ov-card .sm {font-size:.875rem!important;line-height:1.5}
+.r-btn {min-width:36px;min-height:36px;font-size:.875rem} .tab,.icon-btn {min-height:44px} .topic-row {flex-wrap:wrap} .t-name {min-width:160px} dialog {max-height:90dvh;overflow:auto} .focus-actions {flex-wrap:wrap}
+@media(max-width:600px){.app-header{position:relative}.tabs{top:0}.brand p{white-space:normal}.header-row{flex-wrap:wrap}.r-grp{margin-left:auto}}
+@media print{.app-header,.tabs,.mobile-bar,dialog,.focus-actions{display:none!important}.content.active{display:block;width:100%;color:#111}.panel,.kpi{break-inside:avoid;background:white;color:#111;box-shadow:none}}
+</style></head>
 <body>
 
 <div class="app-header">
@@ -645,7 +650,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
         <h2 id="next-action-title">Log one honest timed attempt.</h2>
         <p id="next-action-copy">The dashboard needs performance evidence before it can diagnose your highest-return repair.</p>
         <div class="focus-meta" id="next-action-meta"><span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
-        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" href="./study-tracker/">Track this block</a><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
+        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" href="./study-tracker/">Track this block</a><button class="secondary-btn" id="short-block-btn" type="button">Start 15-min recall block</button><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
       </article>
       <aside class="mission-card">
         <div class="eyebrow">The governing loop</div><h3>Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest</h3>
@@ -951,7 +956,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   <div class="dialog-head"><div><div class="eyebrow">Deep work · V4</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
   <div class="dialog-body">
     <div class="timer-phase" id="timer-phase">TEST · AI-free · closed book</div>
-    <div class="timer-presets"><button class="secondary-btn" type="button" data-timer-preset="30">30 · rescue</button><button class="secondary-btn" type="button" data-timer-preset="60">60 · standard</button><button class="secondary-btn on" type="button" data-timer-preset="90">90 · deep</button><button class="secondary-btn" type="button" data-timer-preset="120">120 · full</button></div>
+    <div class="timer-presets"><button class="secondary-btn" type="button" data-timer-preset="15">15 · recall</button><button class="secondary-btn" type="button" data-timer-preset="30">30 · rescue</button><button class="secondary-btn" type="button" data-timer-preset="60">60 · standard</button><button class="secondary-btn on" type="button" data-timer-preset="90">90 · deep</button><button class="secondary-btn" type="button" data-timer-preset="120">120 · full</button></div>
     <div class="timer-display" id="timer-display">90:00</div>
     <div class="timer-controls"><button class="secondary-btn" id="timer-reset" type="button">Reset</button><button class="primary-btn" id="timer-toggle" type="button">Start</button><button class="secondary-btn" id="timer-skip" type="button">Finish + log</button></div>
     <div class="timer-note" id="timer-note">Your preferred mode is long-form focus. Phone away; no notes or AI during TEST. When the block ends, mark and diagnose before opening more resources.</div>
@@ -960,7 +965,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
 <dialog id="data-dialog">
   <div class="dialog-head"><div><div class="eyebrow">Local data</div><h2>Backup & identity</h2></div><button class="icon-btn" type="button" data-close-data aria-label="Close">×</button></div>
-  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your marks, ratings and corrections stay in this browser. V4 does not require a central account. Export a backup regularly because clearing browser/site data can erase local progress.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V4 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
+  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your marks, ratings and corrections stay in this browser. V4 does not require a central account. Export a backup regularly because clearing browser/site data can erase local progress.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V4 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
 </dialog>
 
 <dialog id="welcome-dialog">
@@ -1425,15 +1430,11 @@ const $ = (id) => document.getElementById(id);
 const topicKey = (subject, unitIndex, topicIndex) => `${subject}|${unitIndex}|${topicIndex}`;
 const titleCase = (value) => value ? value[0].toUpperCase() + value.slice(1) : '';
 const todayISO = () => {
-  const d = new Date();
-  const local = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
-  return local.toISOString().slice(0, 10);
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone:'Asia/Colombo', year:'numeric', month:'2-digit', day:'2-digit' }).formatToParts(new Date());
+  const value = name => parts.find(p => p.type === name).value;
+  return `${value('year')}-${value('month')}-${value('day')}`;
 };
-const addDays = (date, days) => {
-  const d = new Date(`${date}T12:00:00`);
-  d.setDate(d.getDate() + days);
-  return d.toISOString().slice(0, 10);
-};
+const addDays = (date, days) => PowerhouseEvidence.addDays(date, days);
 const dateDiffDays = (from, to) => Math.ceil((new Date(`${to}T12:00:00`) - new Date(`${from}T12:00:00`)) / 86400000);
 const escapeHTML = (value = '') => String(value).replace(/[&<>'"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' }[c]));
 const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
@@ -2398,7 +2399,7 @@ function submitAttempt(event) {
   const earned = Number($('marks-earned').value);
   const total = Number($('marks-total').value);
   if (!Number.isFinite(earned) || !Number.isFinite(total) || total <= 0 || earned < 0) { toast('Enter valid earned and available marks.'); return; }
-  if (!$('attempt-date').value || $('attempt-date').value > todayISO()) { toast('Use the date of a completed attempt, not a future date.'); return; }
+  if (!PowerhouseEvidence.validDate($('attempt-date').value) || $('attempt-date').value > todayISO()) { toast('Use the date of a completed attempt, not a future date.'); return; }
   let error = $('attempt-error').value;
   const guesses = Math.max(0, Number($('attempt-guesses').value || 0));
   if (!error && guesses > 0) error = 'G';
@@ -2407,6 +2408,9 @@ function submitAttempt(event) {
   if (trustedEarned !== null && (trustedEarned < 0 || trustedEarned > earned)) { toast('Trusted marks must be between 0 and the raw marks earned.'); return; }
   if (earned > total) { toast('Marks earned cannot exceed marks available.'); return; }
   if (earned < total && !error) { toast('Choose the dominant error family for the lost marks.'); return; }
+  const items = Number($('attempt-items').value || 1);
+  const minutes = Number($('attempt-minutes').value);
+  if (!Number.isInteger(items) || items < 1 || !Number.isInteger(guesses) || guesses > items || !Number.isFinite(minutes) || minutes < 0 || (trustedEarned !== null && !Number.isFinite(trustedEarned))) { toast('Check item count, guesses, time and trusted marks.'); return; }
   const attempt = {
     id: uid(), date: $('attempt-date').value, subject: $('attempt-subject').value, topicKey: $('attempt-topic').value,
     type: $('attempt-type').value,
@@ -2577,19 +2581,43 @@ function exportData() {
   toast('Backup exported.');
 }
 
+function exportWeeklyReport() {
+  const end = todayISO(), start = addDays(end, -6), rows = attemptsInLastDays(7);
+  const lines = [`A/L Performance Powerhouse — 7-day review`, `${start} to ${end} · Asia/Colombo`, `Self-reported, strictly marked evidence. Logged time is not proof of mastery.`, ''];
+  for (const subject of SUBJECTS) {
+    const list = rows.filter(a => a.subject === subject);
+    const earned = list.reduce((s,a) => s + Number(a.earned),0), total = list.reduce((s,a) => s + Number(a.total),0);
+    const audited = list.filter(a => a.trustedEarned != null);
+    const trusted = audited.reduce((s,a) => s + Number(a.trustedEarned),0), auditedTotal = audited.reduce((s,a) => s + Number(a.total),0);
+    lines.push(`${titleCase(subject)}: ${list.length} attempts · ${earned}/${total} marks${total ? ` (${Math.round(earned/total*100)}%)` : ' · no evidence'}`, `Trusted marks: ${auditedTotal ? `${trusted}/${auditedTotal}` : 'not audited'}`, '');
+  }
+  lines.push(`Evidence days: ${new Set(rows.map(a => a.date)).size}/7`, `Due unfinished checks: ${pendingRetests().filter(r => r.due <= end).length}`, '', 'Priority repairs:');
+  priorityTopics(5).forEach(t => lines.push(`- ${titleCase(t.subject)}: ${t.name}`));
+  lines.push('', 'Weekly self-analysis', '1. Which error repeated, and why?', '2. What narrow repair did I make?', '3. Which fresh question proved the repair?', '4. Which delayed retest remains due?', '5. What one adjustment will protect next week’s paper practice?', '', 'Attempt ledger');
+  rows.forEach(a => lines.push(`${a.date} · ${titleCase(a.subject)} · ${a.question} · ${a.earned}/${a.total} · ${a.type} · ${a.error || 'no error recorded'}`));
+  const url = URL.createObjectURL(new Blob([lines.join('\n')], {type:'text/plain;charset=utf-8'}));
+  const link = document.createElement('a'); link.href = url; link.download = `powerhouse-weekly-review-${end}.txt`; link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000); toast('7-day evidence review exported.');
+}
+
 function importData(file) {
+  if (!file || file.size > 5_000_000) { toast('Choose a JSON backup under 5 MB. Existing data was kept.'); return; }
   const reader = new FileReader();
   reader.onload = () => {
     try {
       const incoming = JSON.parse(reader.result);
       if (!incoming || typeof incoming !== 'object') throw new Error('Invalid backup');
-      snapshotState('pre-import');
+
 
       const isBackup = !Array.isArray(incoming) && Array.isArray(incoming.attempts) && incoming.ratings && typeof incoming.ratings === 'object';
       const ratingEntries = !Array.isArray(incoming) ? Object.entries(incoming) : [];
       const isLegacyRatings = ratingEntries.length > 0 && ratingEntries.every(([key, value]) => /^(physics|chemistry|biology)\|\d+\|\d+$/.test(key) && [1, 2, 3].includes(Number(value)));
 
       if (isBackup) {
+        PowerhouseEvidence.validateBackup(incoming, allTopics().map(t => t.key), SUBJECTS, Object.keys(ATTEMPT_TYPE_NAMES), Object.keys(ERROR_NAMES), todayISO(), SYLLABUS_PLAN.map(row => row.id));
+        if (!confirm(`Replace this browser’s ${state.attempts.length} attempts with ${incoming.attempts.length} imported attempts? Export your current backup first if needed.`)) return;
+        snapshotState('pre-import');
+        const previous = state;
         const base = defaultState();
         state = {
           ...base, ...incoming, version: 8, productVersion:'V4',
@@ -2610,7 +2638,8 @@ function importData(file) {
             rescueRuns: Array.isArray(incoming.courseCorrection?.rescueRuns) ? incoming.courseCorrection.rescueRuns : []
           }
         };
-        saveState(); refreshAll();
+        if (!saveState()) { state = previous; toast('Import could not be saved. Existing data was kept.'); return; }
+        refreshAll();
         if ($('data-dialog').open) $('data-dialog').close();
         if ($('welcome-dialog').open) $('welcome-dialog').close();
         if (incoming.evidenceCycle) { evidenceCycle = PowerhouseEvidence.normalizeCycle(incoming.evidenceCycle, SUBJECTS, CYCLE_STEPS.length); saveCycle(); renderCycle(); }
@@ -2634,8 +2663,9 @@ function importData(file) {
           throw new Error('Invalid backup');
         }
       }
-    } catch (_) { toast('That JSON could not be safely mapped into Powerhouse.'); }
+    } catch (error) { toast(`Import rejected: ${error.message || 'invalid backup'}. Existing evidence was kept.`); }
   };
+  reader.onerror = () => toast('Backup could not be read. Existing data was kept.');
   reader.readAsText(file);
 }
 
@@ -2662,6 +2692,7 @@ function initEvents() {
   $('log-from-ledger').addEventListener('click', () => openAttemptDialog());
   $('view-all-btn').addEventListener('click', () => navigate('attempts'));
   $('start-focus-btn').addEventListener('click', () => startFocus(focusRecommendedMinutes));
+  $('short-block-btn').addEventListener('click', () => startFocus(15, '15-minute closed-book recall / question block'));
   $('paper-first-btn').addEventListener('click', () => { focusTopicKey=''; startFocus(120, 'Full paper / substantial paper section'); });
   $('course-correct-btn').addEventListener('click', () => navigate('course'));
   $('set-target-btn').addEventListener('click', () => navigate('course'));
@@ -2726,6 +2757,7 @@ function initEvents() {
     toast('Your private Powerhouse is ready.');
   });
   $('welcome-import').addEventListener('click', () => $('import-file').click());
+  $('weekly-report').addEventListener('click', exportWeeklyReport);
   $('export-data').addEventListener('click', exportData);
   $('import-data').addEventListener('click', () => $('import-file').click());
   $('import-file').addEventListener('change', e => { if (e.target.files[0]) importData(e.target.files[0]); e.target.value = ''; });
