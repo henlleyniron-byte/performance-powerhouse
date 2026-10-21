@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/L Performance Powerhouse · 2026 Bio Science</title>
-<meta name="description" content="A private, evidence-led G.C.E. A/L 2026 Bio Science study dashboard with the official examination timeline.">
+<title>A/L Performance Powerhouse · 2027 Reset</title>
+<meta name="description" content="A private, evidence-led G.C.E. A/L 2027 Bio Science command centre for deep work, marked-paper output, error repair and delayed retesting.">
 <style>
   :root {
     --bg: #0d0f14; --surface: #13161e; --card: #191d28; --border: #252a38;
@@ -373,6 +373,15 @@
   .timer-phase { text-align: center; color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: .12em; font-size: 10px; }
   .timer-controls { display: flex; justify-content: center; gap: 8px; }
   .timer-note { margin-top: 20px; padding: 13px; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 12px; font-size: 10px; line-height: 1.55; }
+  .analyst-panel { grid-column: 1 / -1; }
+  .analyst-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 8px; }
+  .analyst-stat { padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: rgba(7,17,31,.34); }
+  .analyst-stat span { display: block; color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .07em; }
+  .analyst-stat strong { display: block; margin-top: 7px; font: 750 21px "DM Mono", monospace; }
+  .capacity-rule { margin: 10px 0 0; padding: 11px 13px; border-left: 3px solid var(--gold); border-radius: 8px; background: rgba(255,209,102,.07); color: var(--muted); font-size: 10px; line-height: 1.55; }
+  .reset-card strong { color: var(--text); }
+  .reset-card.current { border-color: var(--gold); background: rgba(255,209,102,.07); }
+  .anchor-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
 
   .toast {
     position: fixed; left: 50%; bottom: 24px; z-index: 300; transform: translate(-50%, 20px); opacity: 0;
@@ -385,6 +394,7 @@
     .kpi-grid { grid-template-columns: 1fr 1fr; }
     .planner-subjects { grid-template-columns: 1fr; }
     .exam-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .analyst-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
     .tabs { top: 67px; }
     .subject-toolbar { top: 119px; grid-template-columns: 1fr 1fr; }
     .subject-toolbar .search-box { grid-column: 1 / -1; }
@@ -442,8 +452,8 @@
         <div class="eyebrow">Your next mark-producing move</div>
         <h2 id="next-action-title">Log one honest timed attempt.</h2>
         <p id="next-action-copy">The dashboard needs performance evidence before it can diagnose your highest-return repair.</p>
-        <div class="focus-meta" id="next-action-meta"><span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
-        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Begin 20-minute attack</button><button class="secondary-btn" id="paper-first-btn" type="button">Log 90/120-min paper output</button></div>
+        <div class="focus-meta" id="next-action-meta"><span class="pill">12–5–3 attack</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
+        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Begin 12–5–3 attack</button><button class="secondary-btn" data-focus-minutes="90" type="button">90-min deep work</button><button class="secondary-btn" data-focus-minutes="120" type="button">120-min deep work</button><button class="secondary-btn" id="custom-focus-btn" type="button">Custom</button></div>
       </article>
       <aside class="mission-card">
         <div class="eyebrow">The governing loop</div><h3>Proof → diagnosis → repair → retest</h3>
@@ -460,7 +470,7 @@
       <article class="kpi"><span class="kpi-label">Evidence-tested</span><strong class="kpi-value" id="kpi-tested">0</strong><div class="kpi-note">unique syllabus topics attempted</div></article>
       <article class="kpi"><span class="kpi-label">Marks exposed</span><strong class="kpi-value" id="kpi-lost">0</strong><div class="kpi-note">lost marks available for repair</div></article>
       <article class="kpi"><span class="kpi-label">Retests due</span><strong class="kpi-value" id="kpi-due">0</strong><div class="kpi-note">48–72 h and 7-day checks</div></article>
-      <article class="kpi"><span class="kpi-label">First paper</span><strong class="kpi-value" id="kpi-days">—</strong><div class="kpi-note" id="kpi-exam-note">Biology I · 10 Aug · 13:00</div></article>
+      <article class="kpi"><span class="kpi-label">Deep work · 7d</span><strong class="kpi-value" id="kpi-focus-hours">0h</strong><div class="kpi-note">logged, completed output only</div></article>
       <article class="kpi"><span class="kpi-label">Paper output · 7d</span><strong class="kpi-value" id="kpi-paper-output">0</strong><div class="kpi-note">paper sections and full papers</div></article>
     </div>
 
@@ -469,17 +479,19 @@
     <section class="panel exam-panel" aria-labelledby="exam-timeline-title">
       <div class="exam-panel-head">
         <div>
-          <div class="eyebrow">Official amended timetable · Sri Lanka time</div>
-          <h3 id="exam-timeline-title">Your 2026 Bio Science exam run</h3>
-          <p id="exam-timeline-summary">Biology opens the sequence on 10 August. The next active paper will be highlighted automatically.</p>
+          <div class="eyebrow">2027 reset architecture</div>
+          <h3 id="exam-timeline-title">Build the engine before chasing volume</h3>
+          <p id="exam-timeline-summary">Your 2026 full absence preserved the reset. This command centre now measures the work that produces 2027 marks—not imaginary paper quotas.</p>
         </div>
-        <a class="official-link" href="https://www.doenets.lk/images/resources/NEWS/AL%20Time%20Table%20-%202026_1784173566860.pdf" target="_blank" rel="noopener noreferrer">Open official PDF ↗</a>
+        <span class="pill">3 A target · Colombo Medicine</span>
       </div>
       <div class="exam-grid" id="exam-timeline"></div>
-      <p class="exam-footnote">Core Bio Science papers finish on 21 August. The Common General Test follows on 22 August; General English is shown separately as optional. The amended timetable was issued by the Department of Examinations on 25 June 2026. Calculators are not permitted for Biology, Physics or Chemistry.</p>
+      <div class="anchor-row"><span class="pill">Sleep anchor · 01:00–08:30</span><span class="pill">Breakfast · 08:30–09:15</span><span class="pill">Deep work · 90 / 120 / custom</span><span class="pill">Daily recall · 15-min blocks</span></div>
+      <p class="exam-footnote">No 2027 examination dates are invented here. Add the official timetable only after the Department of Examinations publishes it.</p>
     </section>
 
     <div class="dashboard-grid">
+      <section class="panel analyst-panel"><div class="panel-head"><div><div class="eyebrow">Weekly analyst snapshot</div><h3>What the last seven days actually produced</h3><p>Completed evidence only. Plans, collected resources and watched hours do not inflate this report.</p></div></div><div class="analyst-grid"><div class="analyst-stat"><span>Marked attempts</span><strong id="weekly-attempts">0</strong></div><div class="analyst-stat"><span>Focused minutes</span><strong id="weekly-minutes">0</strong></div><div class="analyst-stat"><span>Verified accuracy</span><strong id="weekly-accuracy">—</strong></div><div class="analyst-stat"><span>Paper outputs</span><strong id="weekly-papers">0</strong></div><div class="analyst-stat"><span>Retests closed</span><strong id="weekly-retests">0</strong></div></div><p class="capacity-rule" id="capacity-rule"><strong>Reality gate:</strong> commit only work that fits into real 90/120-minute blocks, preserve catch-up capacity, and expand volume only after the current loop is completed and marked.</p></section>
       <section class="panel"><div class="panel-head"><div><div class="eyebrow">Priority queue</div><h3>Delayed retests</h3><p id="retest-status">Mastery requires fresh retrieval after time has passed.</p></div></div><div class="queue" id="retest-queue"></div></section>
       <section class="panel"><div class="panel-head"><div><div class="eyebrow">Diagnosis</div><h3>Marks lost by error family</h3><p>Attack the recurring cause—not the loudest chapter.</p></div></div><div class="error-bars" id="error-bars"></div></section>
       <section class="panel"><div class="panel-head"><div><div class="eyebrow">Weak-signal scan</div><h3>Highest-return topics</h3><p>Low rating plus actual lost marks rises to the top.</p></div></div><div class="queue" id="priority-topics"></div></section>
@@ -522,7 +534,7 @@
   <section class="content" id="panel-attempts">
     <section class="panel">
       <div class="panel-head"><div><div class="eyebrow">Evidence ledger</div><h3>Completed question attempts</h3><p>Scores, time, confidence and causes of lost marks.</p></div><button class="primary-btn" id="log-from-ledger" type="button">Log attempt</button></div>
-      <div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Subject</th><th>Type</th><th>Question / topic</th><th>Score</th><th>Confidence</th><th>Error</th><th></th></tr></thead><tbody id="attempt-table-body"></tbody></table></div>
+      <div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Subject</th><th>Type</th><th>Question / topic</th><th>Score</th><th>Time</th><th>Confidence</th><th>Error</th><th></th></tr></thead><tbody id="attempt-table-body"></tbody></table></div>
     </section>
   </section>
 </main>
@@ -550,7 +562,7 @@
 </dialog>
 
 <dialog id="timer-dialog">
-  <div class="dialog-head"><div><div class="eyebrow">20-minute attack</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
+  <div class="dialog-head"><div><div class="eyebrow" id="timer-eyebrow">12–5–3 attack</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
   <div class="dialog-body"><div class="timer-phase" id="timer-phase">Attempt · closed book</div><div class="timer-display" id="timer-display">20:00</div><div class="timer-controls"><button class="secondary-btn" id="timer-reset" type="button">Reset 20:00</button><button class="primary-btn" id="timer-toggle" type="button">Start</button><button class="secondary-btn" id="timer-skip" type="button">Next phase</button></div><div class="timer-note" id="timer-note">Phone away. No notes, no video, no audio. Produce a written answer that can be marked.</div></div>
 </dialog>
 
@@ -566,7 +578,7 @@
       <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">Each student receives an independent dashboard stored only in their own browser. Your scores, ratings and corrections are never visible to other students.</p>
       <div class="form-grid">
         <div class="field full"><label for="welcome-name">Your name</label><input id="welcome-name" maxlength="80" placeholder="e.g. Niron" autocomplete="name" required></div>
-        <div class="field full"><label for="welcome-goal">Your goal line</label><input id="welcome-goal" maxlength="120" value="2026 A/L Bio Science · Evidence over guesswork" required></div>
+        <div class="field full"><label for="welcome-goal">Your goal line</label><input id="welcome-goal" maxlength="120" value="2027 A/L Bio Science · 3 A target · Evidence over guesswork" required></div>
       </div>
       <div class="dialog-actions"><button class="secondary-btn" id="welcome-import" type="button">Restore a backup</button><button class="primary-btn" type="submit">Enter my Powerhouse</button></div>
     </div>
@@ -789,21 +801,17 @@ buildSubject('biology');
 refreshOverview();
 */
 
-const APP_KEY = 'al_performance_command_centre_v5';
-const PREVIOUS_APP_KEY = 'al_performance_command_centre_v4';
-const OLDER_APP_KEY = 'al_performance_command_centre_v3';
+const APP_KEY = 'al_performance_command_centre_v6';
+const PREVIOUS_APP_KEY = 'al_performance_command_centre_v5';
+const OLDER_APP_KEY = 'al_performance_command_centre_v4';
+const EARLIEST_APP_KEY = 'al_performance_command_centre_v3';
 const LEGACY_KEY = 'al_v2_samra';
 const SUBJECTS = ['physics', 'chemistry', 'biology'];
-const EXAM_TIMELINE = [
-  { id:'biology-1', subject:'biology', paper:'Biology I', start:'2026-08-10T13:00:00+05:30', end:'2026-08-10T15:00:00+05:30', date:'Mon · 10 Aug', time:'13:00–15:00' },
-  { id:'biology-2', subject:'biology', paper:'Biology II', start:'2026-08-11T13:00:00+05:30', end:'2026-08-11T16:10:00+05:30', date:'Tue · 11 Aug', time:'13:00–16:10' },
-  { id:'physics-1', subject:'physics', paper:'Physics I', start:'2026-08-14T08:30:00+05:30', end:'2026-08-14T10:30:00+05:30', date:'Fri · 14 Aug', time:'08:30–10:30' },
-  { id:'physics-2', subject:'physics', paper:'Physics II', start:'2026-08-17T08:30:00+05:30', end:'2026-08-17T11:40:00+05:30', date:'Mon · 17 Aug', time:'08:30–11:40' },
-  { id:'chemistry-1', subject:'chemistry', paper:'Chemistry I', start:'2026-08-19T08:30:00+05:30', end:'2026-08-19T10:30:00+05:30', date:'Wed · 19 Aug', time:'08:30–10:30' },
-  { id:'chemistry-2', subject:'chemistry', paper:'Chemistry II', start:'2026-08-21T08:30:00+05:30', end:'2026-08-21T11:40:00+05:30', date:'Fri · 21 Aug', time:'08:30–11:40' },
-  { id:'cgt', subject:'general', paper:'Common General Test', start:'2026-08-22T08:30:00+05:30', end:'2026-08-22T10:30:00+05:30', date:'Sat · 22 Aug', time:'08:30–10:30' },
-  { id:'english-2', subject:'english', paper:'General English II', start:'2026-08-24T08:30:00+05:30', end:'2026-08-24T11:40:00+05:30', date:'Mon · 24 Aug', time:'08:30–11:40', optional:true },
-  { id:'english-1', subject:'english', paper:'General English I', start:'2026-08-24T13:00:00+05:30', end:'2026-08-24T14:00:00+05:30', date:'Mon · 24 Aug', time:'13:00–14:00', optional:true }
+const RESET_ROADMAP = [
+  { label:'Now', title:'Reset + baseline', copy:'Stabilise sleep, audit coverage and collect one honest marked baseline from each subject.', current:true },
+  { label:'Loop 02', title:'Coverage + retrieval', copy:'Theory becomes recall, questions and marking evidence—not another archive of unfinished resources.' },
+  { label:'Loop 03', title:'Paper Engine', copy:'Scale from topic sets to sections and full papers only when correction and retesting keep pace.' },
+  { label:'Loop 04', title:'Exam simulation', copy:'Rehearse the official sequence once the 2027 timetable is published and verified.' }
 ];
 const SYLLABUS_PLAN = [
   { id:'physics-12-measurements', subject:'physics', grade:'12', name:'Measurements', periods:30 },
@@ -853,8 +861,8 @@ const ERROR_NAMES = {
   K: 'Knowledge gap', C: 'Conceptual model', R: 'Retrieval failure',
   M: 'Method / calculation', P: 'Presentation', T: 'Timing / selection', A: 'Attention / misreading'
 };
-const TIMER_TOTAL_SECONDS = 20 * 60;
-const PHASES = [
+const ATTACK_SECONDS = 20 * 60;
+const ATTACK_PHASES = [
   { floor: 8 * 60, label: 'Attempt · closed book', note: '12-minute attempt phase. Phone away; produce a written answer that can be marked.' },
   { floor: 3 * 60, label: 'Mark · scheme only', note: '5-minute marking phase. Mark strictly, circle guesses, and count every lost marking point.' },
   { floor: 0, label: 'Repair · one cause', note: '3-minute repair phase. Name the error family and write one prevention rule.' }
@@ -864,8 +872,8 @@ function defaultState() {
   let migratedRatings = {};
   try { migratedRatings = JSON.parse(localStorage.getItem(LEGACY_KEY) || '{}') || {}; } catch (_) {}
   return {
-    version: 5,
-    profile: { name: 'A/L Student', line: 'Evidence over guesswork' },
+    version: 6,
+    profile: { name: 'A/L Student', line: '2027 · Evidence over guesswork' },
     profileSetupComplete: false,
     ratings: migratedRatings,
     syllabusProgress: {},
@@ -877,14 +885,16 @@ function defaultState() {
 
 function loadState() {
   try {
-    const saved = JSON.parse(localStorage.getItem(APP_KEY) || localStorage.getItem(PREVIOUS_APP_KEY) || localStorage.getItem(OLDER_APP_KEY) || 'null');
+    const saved = JSON.parse(localStorage.getItem(APP_KEY) || localStorage.getItem(PREVIOUS_APP_KEY) || localStorage.getItem(OLDER_APP_KEY) || localStorage.getItem(EARLIEST_APP_KEY) || 'null');
     if (!saved || typeof saved !== 'object') return defaultState();
     const base = defaultState();
+    const profile = { ...base.profile, ...(saved.profile || {}) };
+    if (/^2026 A\/L Bio Science/.test(profile.line)) profile.line = '2027 A/L Bio Science · 3 A target · Evidence over guesswork';
     return {
       ...base, ...saved,
-      version: 5,
+      version: 6,
       profileSetupComplete: saved.profileSetupComplete ?? true,
-      profile: { ...base.profile, ...(saved.profile || {}) },
+      profile,
       ratings: saved.ratings && typeof saved.ratings === 'object' ? saved.ratings : base.ratings,
       syllabusProgress: saved.syllabusProgress && typeof saved.syllabusProgress === 'object' ? saved.syllabusProgress : {},
       attempts: Array.isArray(saved.attempts) ? saved.attempts.map(a => ({ type: 'topic-question', ...a })) : [],
@@ -897,7 +907,9 @@ let state = loadState();
 let activePanel = 'command';
 let focusTopicKey = '';
 let timerPhaseIndex = 0;
-let timerRemaining = TIMER_TOTAL_SECONDS;
+let timerMode = 'attack';
+let timerTotalSeconds = ATTACK_SECONDS;
+let timerRemaining = ATTACK_SECONDS;
 let timerHandle = null;
 let plannerUnfinishedOnly = false;
 
@@ -1183,42 +1195,43 @@ function renderKPIs() {
   const earned = all.reduce((n, a) => n + Number(a.earned || 0), 0);
   const total = all.reduce((n, a) => n + Number(a.total || 0), 0);
   const sevenDaysAgo = addDays(todayISO(), -6);
-  const paperOutput = all.filter(a => a.date >= sevenDaysAgo && ['paper-section', 'full-paper'].includes(a.type)).length;
-  const firstPaper = new Date(EXAM_TIMELINE[0].start);
-  const examMs = firstPaper.getTime() - Date.now();
-  const examDays = Math.ceil(examMs / 86400000);
+  const recent = all.filter(a => a.date >= sevenDaysAgo);
+  const paperOutput = recent.filter(a => ['paper-section', 'full-paper'].includes(a.type)).length;
+  const focusHours = recent.reduce((n, a) => n + Number(a.minutes || 0), 0) / 60;
   $('kpi-accuracy').textContent = total ? `${Math.round(earned / total * 100)}%` : '—';
   $('kpi-tested').textContent = new Set(all.map(a => a.topicKey)).size;
   $('kpi-lost').textContent = Math.max(0, total - earned).toFixed((total - earned) % 1 ? 1 : 0);
   $('kpi-due').textContent = pendingRetests().filter(r => r.due <= todayISO()).length;
-  $('kpi-days').textContent = examMs > 86400000 ? examDays : examMs > 0 ? `${Math.ceil(examMs / 3600000)}h` : 'Started';
+  $('kpi-focus-hours').textContent = `${focusHours.toFixed(focusHours >= 10 || Number.isInteger(focusHours) ? 0 : 1)}h`;
   $('kpi-paper-output').textContent = paperOutput;
   $('attempt-count').textContent = all.length;
 }
 
 function renderExamTimeline() {
-  const now = Date.now();
-  const next = EXAM_TIMELINE.find(exam => new Date(exam.end).getTime() > now);
-  const active = next && new Date(next.start).getTime() <= now;
-  if (!next) {
-    $('exam-timeline-title').textContent = 'Your 2026 exam sequence is complete';
-    $('exam-timeline-summary').textContent = 'All listed Bio Science, Common General Test and optional General English papers have finished.';
-  } else {
-    const until = new Date(next.start).getTime() - now;
-    const countdown = until <= 0 ? 'in progress now' : until < 86400000 ? `in ${Math.ceil(until / 3600000)} hour${Math.ceil(until / 3600000) === 1 ? '' : 's'}` : `in ${Math.ceil(until / 86400000)} days`;
-    $('exam-timeline-title').textContent = `${next.paper} ${active ? 'is in progress' : countdown}`;
-    $('exam-timeline-summary').textContent = `${next.date} · ${next.time} · official Sri Lanka time (UTC+5:30).`;
-  }
-  $('exam-timeline').innerHTML = EXAM_TIMELINE.map(exam => {
-    const started = new Date(exam.start).getTime() <= now;
-    const finished = new Date(exam.end).getTime() <= now;
-    const isNext = next?.id === exam.id;
-    const status = finished ? 'Done' : isNext && started ? 'Now' : isNext ? 'Next' : exam.optional ? 'Optional' : 'Scheduled';
-    return `<article class="exam-item${isNext ? ' next' : ''}${finished ? ' done' : ''}${exam.optional ? ' optional' : ''}">
-      <div class="exam-item-top"><span class="exam-date">${exam.date}</span><span class="exam-status">${status}</span></div>
-      <strong class="exam-paper">${exam.paper}</strong><span class="exam-time">${exam.time}</span>
+  $('exam-timeline').innerHTML = RESET_ROADMAP.map(item => {
+    return `<article class="exam-item reset-card${item.current ? ' current next' : ''}">
+      <div class="exam-item-top"><span class="exam-date">${item.label}</span><span class="exam-status">${item.current ? 'Active' : 'Next gate'}</span></div>
+      <strong class="exam-paper">${item.title}</strong><span class="exam-time" style="line-height:1.5">${item.copy}</span>
     </article>`;
   }).join('');
+}
+
+function renderWeeklyAnalyst() {
+  const sevenDaysAgo = addDays(todayISO(), -6);
+  const recent = state.attempts.filter(a => a.date >= sevenDaysAgo);
+  const earned = recent.reduce((n, a) => n + Number(a.earned || 0), 0);
+  const total = recent.reduce((n, a) => n + Number(a.total || 0), 0);
+  const minutes = recent.reduce((n, a) => n + Number(a.minutes || 0), 0);
+  const papers = recent.filter(a => ['paper-section', 'full-paper'].includes(a.type)).length;
+  const retests = state.retests.filter(r => r.completedAt && r.completedAt >= sevenDaysAgo).length;
+  $('weekly-attempts').textContent = recent.length;
+  $('weekly-minutes').textContent = minutes;
+  $('weekly-accuracy').textContent = total ? `${Math.round(earned / total * 100)}%` : '—';
+  $('weekly-papers').textContent = papers;
+  $('weekly-retests').textContent = retests;
+  $('capacity-rule').innerHTML = papers >= 5
+    ? '<strong>Volume warning:</strong> output is high. Do not add more papers until every error is classified, repaired and placed into the delayed-retest queue.'
+    : '<strong>Reality gate:</strong> commit only work that fits into real 90/120-minute blocks, preserve catch-up capacity, and expand volume only after the current loop is completed and marked.';
 }
 
 function renderRetests() {
@@ -1265,13 +1278,13 @@ function attemptHTML(a, compact = false) {
   const pct = Math.round(Number(a.earned) / Number(a.total) * 100);
   const type = ATTEMPT_TYPE_NAMES[a.type] || ATTEMPT_TYPE_NAMES['topic-question'];
   if (compact) return `<div class="recent-item"><div class="queue-title">${escapeHTML(a.question)}</div><div class="queue-meta">${titleCase(a.subject)} · ${type} · ${escapeHTML(topic?.name || 'Topic')} · ${a.earned}/${a.total} (${pct}%) · ${a.error ? `${a.error} ${ERROR_NAMES[a.error]}` : 'full credit'}</div></div>`;
-  return `<tr><td class="mono">${escapeHTML(a.date)}</td><td>${titleCase(a.subject)}</td><td>${type}</td><td><strong>${escapeHTML(a.question)}</strong><br><span class="muted">${escapeHTML(topic?.name || 'Unknown topic')}</span></td><td><span class="score-chip">${a.earned}/${a.total} · ${pct}%</span></td><td>${escapeHTML(a.confidence)}</td><td>${a.error ? `<b style="color:var(--gold)">${a.error}</b> ${ERROR_NAMES[a.error]}` : '—'}</td><td><button class="log-mini" data-delete-attempt="${a.id}">Delete</button></td></tr>`;
+  return `<tr><td class="mono">${escapeHTML(a.date)}</td><td>${titleCase(a.subject)}</td><td>${type}</td><td><strong>${escapeHTML(a.question)}</strong><br><span class="muted">${escapeHTML(topic?.name || 'Unknown topic')}${a.note ? ` · ${escapeHTML(a.note)}` : ''}</span></td><td><span class="score-chip">${a.earned}/${a.total} · ${pct}%</span></td><td class="mono">${Number(a.minutes || 0)}m</td><td>${escapeHTML(a.confidence)}</td><td>${a.error ? `<b style="color:var(--gold)">${a.error}</b> ${ERROR_NAMES[a.error]}` : '—'}</td><td><button class="log-mini" data-delete-attempt="${a.id}">Delete</button></td></tr>`;
 }
 
 function renderAttempts() {
   const sorted = [...state.attempts].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
   $('recent-attempts').innerHTML = sorted.length ? sorted.slice(0, 4).map(a => attemptHTML(a, true)).join('') : '<div class="empty-state">Your evidence ledger is empty. A completed, marked question is the first useful input.</div>';
-  $('attempt-table-body').innerHTML = sorted.length ? sorted.map(a => attemptHTML(a)).join('') : '<tr><td colspan="8"><div class="empty-state">No completed attempts logged yet.</div></td></tr>';
+  $('attempt-table-body').innerHTML = sorted.length ? sorted.map(a => attemptHTML(a)).join('') : '<tr><td colspan="9"><div class="empty-state">No completed attempts logged yet.</div></td></tr>';
 }
 
 function renderNextAction() {
@@ -1282,16 +1295,16 @@ function renderNextAction() {
   if (topic) {
     $('next-action-title').textContent = overdue ? `Retest: ${topic.name}` : `Attack: ${topic.name}`;
     $('next-action-copy').textContent = overdue ? 'This repair is now due for fresh retrieval. Use a new question; recognition of the old answer does not count.' : 'This topic currently has the strongest combination of lost marks, weak recall and recurrence.';
-    $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">20 minutes</span><span class="pill">fresh question</span><span class="pill">strict marking</span>`;
+    $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">12–5–3 attack</span><span class="pill">fresh question</span><span class="pill">strict marking</span>`;
   } else {
     $('next-action-title').textContent = 'Log one honest timed attempt.';
     $('next-action-copy').textContent = 'The dashboard needs performance evidence before it can diagnose your highest-return repair.';
-    $('next-action-meta').innerHTML = '<span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span>';
+    $('next-action-meta').innerHTML = '<span class="pill">12–5–3 attack</span><span class="pill">closed book</span><span class="pill">strict marking</span>';
   }
 }
 
 function refreshAll() {
-  renderKPIs(); renderExamTimeline(); renderPlanner(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction();
+  renderKPIs(); renderExamTimeline(); renderWeeklyAnalyst(); renderPlanner(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction();
   SUBJECTS.forEach(updateSubjectPanel);
   $('identity-line').textContent = `${state.profile.name} · ${state.profile.line}`;
 }
@@ -1301,13 +1314,14 @@ function fillTopicSelect(subject, selectedKey = '') {
   select.innerHTML = SYL[subject].units.map((unit, ui) => `<optgroup label="${escapeHTML(unit.n)}">${unit.t.map((name, ti) => `<option value="${topicKey(subject, ui, ti)}"${topicKey(subject, ui, ti) === selectedKey ? ' selected' : ''}>${escapeHTML(name)}</option>`).join('')}</optgroup>`).join('');
 }
 
-function openAttemptDialog(key = '', type = 'topic-question') {
+function openAttemptDialog(key = '', type = 'topic-question', minutes = null) {
   const topic = getTopic(key);
   const subject = topic?.subject || (SUBJECTS.includes(activePanel) ? activePanel : 'physics');
   $('attempt-form').reset();
   $('attempt-date').value = todayISO();
   $('attempt-subject').value = subject;
   $('attempt-type').value = type;
+  if (minutes) $('attempt-minutes').value = minutes;
   fillTopicSelect(subject, key);
   $('attempt-dialog').showModal();
 }
@@ -1357,12 +1371,15 @@ function deleteAttempt(id) {
 }
 
 function renderTimer() {
-  timerPhaseIndex = timerRemaining > PHASES[0].floor ? 0 : timerRemaining > PHASES[1].floor ? 1 : 2;
-  const phase = PHASES[timerPhaseIndex];
+  if (timerMode === 'attack') timerPhaseIndex = timerRemaining > ATTACK_PHASES[0].floor ? 0 : timerRemaining > ATTACK_PHASES[1].floor ? 1 : 2;
+  else timerPhaseIndex = 0;
+  const phase = timerMode === 'attack' ? ATTACK_PHASES[timerPhaseIndex] : { label: 'Deep work · single objective', note: 'One concrete output. Phone away. Breaks are taken outside this timer and do not count as focused minutes.' };
   $('timer-phase').textContent = phase.label;
   $('timer-note').textContent = phase.note;
   $('timer-display').textContent = `${String(Math.floor(timerRemaining / 60)).padStart(2, '0')}:${String(timerRemaining % 60).padStart(2, '0')}`;
   $('timer-toggle').textContent = timerHandle ? 'Pause' : 'Start';
+  $('timer-reset').textContent = `Reset ${Math.round(timerTotalSeconds / 60)}:00`;
+  $('timer-skip').textContent = timerMode === 'attack' ? 'Next phase' : 'Finish block';
 }
 
 function timerBeep() {
@@ -1373,10 +1390,14 @@ function timerBeep() {
   } catch (_) {}
 }
 
-function startFocus() {
+function startFocus(minutes = 20) {
+  const safeMinutes = Math.max(15, Math.min(240, Number(minutes) || 20));
   const topic = getTopic(focusTopicKey);
-  $('timer-topic').textContent = topic?.name || 'Fresh official question';
-  timerPhaseIndex = 0; timerRemaining = TIMER_TOTAL_SECONDS; clearInterval(timerHandle); timerHandle = null; renderTimer();
+  timerMode = safeMinutes === 20 ? 'attack' : 'deep';
+  timerTotalSeconds = safeMinutes * 60;
+  $('timer-eyebrow').textContent = timerMode === 'attack' ? '12–5–3 attack' : `${safeMinutes}-minute deep work`;
+  $('timer-topic').textContent = topic?.name || (timerMode === 'attack' ? 'Fresh official question' : 'One measurable output');
+  timerPhaseIndex = 0; timerRemaining = timerTotalSeconds; clearInterval(timerHandle); timerHandle = null; renderTimer();
   $('timer-dialog').showModal();
 }
 
@@ -1394,19 +1415,21 @@ function toggleTimer() {
 
 function nextTimerPhase() {
   clearInterval(timerHandle); timerHandle = null;
-  if (timerPhaseIndex === 0) timerRemaining = PHASES[0].floor;
-  else if (timerPhaseIndex === 1) timerRemaining = PHASES[1].floor;
+  if (timerMode === 'deep') { finishTimer(); return; }
+  if (timerPhaseIndex === 0) timerRemaining = ATTACK_PHASES[0].floor;
+  else if (timerPhaseIndex === 1) timerRemaining = ATTACK_PHASES[1].floor;
   else { finishTimer(); return; }
   timerBeep(); renderTimer();
 }
 
 function finishTimer() {
   clearInterval(timerHandle); timerHandle = null;
-  $('timer-dialog').close(); openAttemptDialog(focusTopicKey);
-  toast('20-minute attack complete—log the marked result now.');
+  const minutes = Math.round(timerTotalSeconds / 60);
+  $('timer-dialog').close(); openAttemptDialog(focusTopicKey, minutes >= 90 ? 'paper-section' : 'topic-question', minutes);
+  toast(timerMode === 'attack' ? '12–5–3 attack complete—log the marked result now.' : 'Deep-work block complete—log the output that now exists.');
 }
 
-function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerRemaining = TIMER_TOTAL_SECONDS; renderTimer(); }
+function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerRemaining = timerTotalSeconds; renderTimer(); }
 
 function exportData() {
   state.lastExportedAt = new Date().toISOString();
@@ -1431,7 +1454,7 @@ function importData(file) {
       if (isBackup) {
         const base = defaultState();
         state = {
-          ...base, ...incoming, version: 5,
+          ...base, ...incoming, version: 6,
           profileSetupComplete: true,
           profile: { ...base.profile, ...(incoming.profile || {}) },
           syllabusProgress: incoming.syllabusProgress && typeof incoming.syllabusProgress === 'object' ? incoming.syllabusProgress : {},
@@ -1458,7 +1481,7 @@ function importData(file) {
 function showWelcome() {
   if (state.profileSetupComplete || $('welcome-dialog').open) return;
   $('welcome-name').value = '';
-  $('welcome-goal').value = '2026 A/L Bio Science · Evidence over guesswork';
+  $('welcome-goal').value = '2027 A/L Bio Science · 3 A target · Evidence over guesswork';
   $('welcome-dialog').showModal();
 }
 
@@ -1469,8 +1492,14 @@ function initEvents() {
   $('quick-log-btn').addEventListener('click', () => openAttemptDialog());
   $('log-from-ledger').addEventListener('click', () => openAttemptDialog());
   $('view-all-btn').addEventListener('click', () => navigate('attempts'));
-  $('start-focus-btn').addEventListener('click', startFocus);
-  $('paper-first-btn').addEventListener('click', () => openAttemptDialog('', 'full-paper'));
+  $('start-focus-btn').addEventListener('click', () => startFocus(20));
+  document.querySelectorAll('[data-focus-minutes]').forEach(button => button.addEventListener('click', () => startFocus(Number(button.dataset.focusMinutes))));
+  $('custom-focus-btn').addEventListener('click', () => {
+    const value = Number(prompt('Custom focus minutes (15–240):', '60'));
+    if (!value) return;
+    if (value < 15 || value > 240) { toast('Choose a focus block between 15 and 240 minutes.'); return; }
+    startFocus(value);
+  });
   $('attempt-subject').addEventListener('change', e => fillTopicSelect(e.target.value));
   $('attempt-form').addEventListener('submit', submitAttempt);
   document.querySelectorAll('[data-close-dialog]').forEach(b => b.addEventListener('click', () => $('attempt-dialog').close()));
