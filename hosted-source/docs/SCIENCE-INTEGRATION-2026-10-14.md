@@ -1,5 +1,7 @@
 # Three-subject private intelligence candidate
 
+> Historical v24–v26 checkpoint. Newer production v27 was independently confirmed live on 14 October; see `PHYSICS-PARITY-AND-PRACTICE-2026-10-14.md` for current baseline, source boundaries and available verification. The old unpublished status below is retained as history.
+
 Status: implemented and tested candidate; **not published** until the owner's required desktop/mobile browser gate and live-production checks can pass.
 
 Production baseline was independently resolved through Sites: existing V8, saved version 23, source commit `6c8802022469150b26f46b466f37b9f080ed5d86`. The production origin, Site identity, public audience, cloud APIs and existing storage namespaces are preserved. No GitHub mirror was treated as deployment source. The native source repository is canonical.
