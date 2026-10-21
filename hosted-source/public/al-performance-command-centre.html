@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/L Performance Command Centre · Henlley Niron</title>
+<title>A/L Performance Powerhouse · 2026 Bio Science</title>
+<meta name="description" content="A private, evidence-led G.C.E. A/L 2026 Bio Science study dashboard with the official examination timeline.">
 <style>
   :root {
     --bg: #0d0f14; --surface: #13161e; --card: #191d28; --border: #252a38;
@@ -226,6 +227,25 @@
   .bar-track { height: 7px; border-radius: 99px; background: rgba(255,255,255,.07); overflow: hidden; }
   .bar-fill { height: 100%; border-radius: inherit; transition: width .4s ease; }
 
+  .exam-panel { margin-bottom: 14px; padding: 20px; overflow: hidden; }
+  .exam-panel-head { display: flex; justify-content: space-between; align-items: start; gap: 18px; margin-bottom: 15px; }
+  .exam-panel h3 { margin: 5px 0 5px; font: clamp(21px,3vw,29px) "DM Serif Display", Georgia, serif; }
+  .exam-panel-head p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+  .official-link { flex: 0 0 auto; color: var(--gold); text-decoration: none; font-size: 10px; font-weight: 800; }
+  .official-link:hover { text-decoration: underline; }
+  .exam-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
+  .exam-item { position: relative; min-width: 0; padding: 13px; border: 1px solid var(--border); border-radius: 13px; background: rgba(7,17,31,.38); }
+  .exam-item.next { border-color: var(--gold); box-shadow: inset 0 0 0 1px rgba(255,209,102,.16); }
+  .exam-item.done { opacity: .55; }
+  .exam-item.optional { border-style: dashed; }
+  .exam-item-top { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+  .exam-date { color: var(--muted); font: 700 9px "DM Mono", monospace; }
+  .exam-status { padding: 3px 6px; border-radius: 999px; color: var(--muted); background: rgba(255,255,255,.06); font-size: 7px; font-weight: 850; text-transform: uppercase; letter-spacing: .07em; }
+  .exam-item.next .exam-status { color: #172033; background: var(--gold); }
+  .exam-paper { display: block; margin-top: 10px; font-size: 12px; line-height: 1.35; }
+  .exam-time { display: block; margin-top: 5px; color: var(--muted); font: 700 10px "DM Mono", monospace; }
+  .exam-footnote { margin: 12px 0 0; color: var(--muted-2); font-size: 9px; line-height: 1.55; }
+
   .dashboard-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 14px; }
   .panel { padding: 18px; box-shadow: none; min-width: 0; }
   .panel-head { display: flex; align-items: start; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
@@ -364,6 +384,7 @@
     .hero-grid, .dashboard-grid, .planner-hero { grid-template-columns: 1fr; }
     .kpi-grid { grid-template-columns: 1fr 1fr; }
     .planner-subjects { grid-template-columns: 1fr; }
+    .exam-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
     .tabs { top: 67px; }
     .subject-toolbar { top: 119px; grid-template-columns: 1fr 1fr; }
     .subject-toolbar .search-box { grid-column: 1 / -1; }
@@ -373,6 +394,8 @@
     .header-actions .label { display: none; }
     .header-actions .secondary-btn { padding: 10px; }
     .subject-grid { grid-template-columns: 1fr; }
+    .exam-panel-head { display: grid; gap: 9px; }
+    .exam-grid { grid-template-columns: 1fr; }
     .subject-card { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 12px; }
     .subject-card .bar-track { grid-column: 1 / -1; }
     .subject-card .subject-meta { margin: 2px 0 5px; }
@@ -437,11 +460,24 @@
       <article class="kpi"><span class="kpi-label">Evidence-tested</span><strong class="kpi-value" id="kpi-tested">0</strong><div class="kpi-note">unique syllabus topics attempted</div></article>
       <article class="kpi"><span class="kpi-label">Marks exposed</span><strong class="kpi-value" id="kpi-lost">0</strong><div class="kpi-note">lost marks available for repair</div></article>
       <article class="kpi"><span class="kpi-label">Retests due</span><strong class="kpi-value" id="kpi-due">0</strong><div class="kpi-note">48–72 h and 7-day checks</div></article>
-      <article class="kpi"><span class="kpi-label">Exam countdown</span><strong class="kpi-value" id="kpi-days">—</strong><div class="kpi-note">days to 5 August 2026</div></article>
+      <article class="kpi"><span class="kpi-label">First paper</span><strong class="kpi-value" id="kpi-days">—</strong><div class="kpi-note" id="kpi-exam-note">Biology I · 10 Aug · 13:00</div></article>
       <article class="kpi"><span class="kpi-label">Paper output · 7d</span><strong class="kpi-value" id="kpi-paper-output">0</strong><div class="kpi-note">paper sections and full papers</div></article>
     </div>
 
     <div class="subject-grid" id="subject-pulse"></div>
+
+    <section class="panel exam-panel" aria-labelledby="exam-timeline-title">
+      <div class="exam-panel-head">
+        <div>
+          <div class="eyebrow">Official amended timetable · Sri Lanka time</div>
+          <h3 id="exam-timeline-title">Your 2026 Bio Science exam run</h3>
+          <p id="exam-timeline-summary">Biology opens the sequence on 10 August. The next active paper will be highlighted automatically.</p>
+        </div>
+        <a class="official-link" href="https://www.doenets.lk/images/resources/NEWS/AL%20Time%20Table%20-%202026_1784173566860.pdf" target="_blank" rel="noopener noreferrer">Open official PDF ↗</a>
+      </div>
+      <div class="exam-grid" id="exam-timeline"></div>
+      <p class="exam-footnote">Core Bio Science papers finish on 21 August. The Common General Test follows on 22 August; General English is shown separately as optional. The amended timetable was issued by the Department of Examinations on 25 June 2026. Calculators are not permitted for Biology, Physics or Chemistry.</p>
+    </section>
 
     <div class="dashboard-grid">
       <section class="panel"><div class="panel-head"><div><div class="eyebrow">Priority queue</div><h3>Delayed retests</h3><p id="retest-status">Mastery requires fresh retrieval after time has passed.</p></div></div><div class="queue" id="retest-queue"></div></section>
@@ -545,7 +581,7 @@
 
 <header>
   <h1>A/L Bio Science · Self Analysis</h1>
-  <div class="owner">Samra Mulaffar &nbsp;·&nbsp; A/L 2025</div>
+  <div class="owner">Legacy dashboard migration shell</div>
 </header>
 
 <div class="legend">
@@ -592,7 +628,7 @@
 <div class="content" id="chemistry"></div>
 <div class="content" id="biology"></div>
 
-<div class="save-note">Auto-saved in browser · Samra Mulaffar A/L 2025</div>
+<div class="save-note">Legacy local-rating migration shell</div>
 </div>
 
 <script>
@@ -739,7 +775,7 @@ document.querySelectorAll('.tab').forEach(tab =>
 
 (function(){
   const el=document.getElementById('wm-layer');
-  const txt='Samra Mulaffar   A/L 2025';
+  const txt='Legacy migration reference';
   for(let r=0;r<14;r++) for(let c=0;c<5;c++){
     const s=document.createElement('span');
     s.textContent=txt; s.style.left=(c*26-4)+'%'; s.style.top=(r*8-1)+'%';
@@ -757,8 +793,18 @@ const APP_KEY = 'al_performance_command_centre_v5';
 const PREVIOUS_APP_KEY = 'al_performance_command_centre_v4';
 const OLDER_APP_KEY = 'al_performance_command_centre_v3';
 const LEGACY_KEY = 'al_v2_samra';
-const EXAM_DATE = '2026-08-05';
 const SUBJECTS = ['physics', 'chemistry', 'biology'];
+const EXAM_TIMELINE = [
+  { id:'biology-1', subject:'biology', paper:'Biology I', start:'2026-08-10T13:00:00+05:30', end:'2026-08-10T15:00:00+05:30', date:'Mon · 10 Aug', time:'13:00–15:00' },
+  { id:'biology-2', subject:'biology', paper:'Biology II', start:'2026-08-11T13:00:00+05:30', end:'2026-08-11T16:10:00+05:30', date:'Tue · 11 Aug', time:'13:00–16:10' },
+  { id:'physics-1', subject:'physics', paper:'Physics I', start:'2026-08-14T08:30:00+05:30', end:'2026-08-14T10:30:00+05:30', date:'Fri · 14 Aug', time:'08:30–10:30' },
+  { id:'physics-2', subject:'physics', paper:'Physics II', start:'2026-08-17T08:30:00+05:30', end:'2026-08-17T11:40:00+05:30', date:'Mon · 17 Aug', time:'08:30–11:40' },
+  { id:'chemistry-1', subject:'chemistry', paper:'Chemistry I', start:'2026-08-19T08:30:00+05:30', end:'2026-08-19T10:30:00+05:30', date:'Wed · 19 Aug', time:'08:30–10:30' },
+  { id:'chemistry-2', subject:'chemistry', paper:'Chemistry II', start:'2026-08-21T08:30:00+05:30', end:'2026-08-21T11:40:00+05:30', date:'Fri · 21 Aug', time:'08:30–11:40' },
+  { id:'cgt', subject:'general', paper:'Common General Test', start:'2026-08-22T08:30:00+05:30', end:'2026-08-22T10:30:00+05:30', date:'Sat · 22 Aug', time:'08:30–10:30' },
+  { id:'english-2', subject:'english', paper:'General English II', start:'2026-08-24T08:30:00+05:30', end:'2026-08-24T11:40:00+05:30', date:'Mon · 24 Aug', time:'08:30–11:40', optional:true },
+  { id:'english-1', subject:'english', paper:'General English I', start:'2026-08-24T13:00:00+05:30', end:'2026-08-24T14:00:00+05:30', date:'Mon · 24 Aug', time:'13:00–14:00', optional:true }
+];
 const SYLLABUS_PLAN = [
   { id:'physics-12-measurements', subject:'physics', grade:'12', name:'Measurements', periods:30 },
   { id:'physics-12-mechanics', subject:'physics', grade:'12', name:'Mechanics', periods:110 },
@@ -1138,14 +1184,41 @@ function renderKPIs() {
   const total = all.reduce((n, a) => n + Number(a.total || 0), 0);
   const sevenDaysAgo = addDays(todayISO(), -6);
   const paperOutput = all.filter(a => a.date >= sevenDaysAgo && ['paper-section', 'full-paper'].includes(a.type)).length;
-  const days = dateDiffDays(todayISO(), EXAM_DATE);
+  const firstPaper = new Date(EXAM_TIMELINE[0].start);
+  const examMs = firstPaper.getTime() - Date.now();
+  const examDays = Math.ceil(examMs / 86400000);
   $('kpi-accuracy').textContent = total ? `${Math.round(earned / total * 100)}%` : '—';
   $('kpi-tested').textContent = new Set(all.map(a => a.topicKey)).size;
   $('kpi-lost').textContent = Math.max(0, total - earned).toFixed((total - earned) % 1 ? 1 : 0);
   $('kpi-due').textContent = pendingRetests().filter(r => r.due <= todayISO()).length;
-  $('kpi-days').textContent = days > 0 ? days : days === 0 ? 'Today' : 'Done';
+  $('kpi-days').textContent = examMs > 86400000 ? examDays : examMs > 0 ? `${Math.ceil(examMs / 3600000)}h` : 'Started';
   $('kpi-paper-output').textContent = paperOutput;
   $('attempt-count').textContent = all.length;
+}
+
+function renderExamTimeline() {
+  const now = Date.now();
+  const next = EXAM_TIMELINE.find(exam => new Date(exam.end).getTime() > now);
+  const active = next && new Date(next.start).getTime() <= now;
+  if (!next) {
+    $('exam-timeline-title').textContent = 'Your 2026 exam sequence is complete';
+    $('exam-timeline-summary').textContent = 'All listed Bio Science, Common General Test and optional General English papers have finished.';
+  } else {
+    const until = new Date(next.start).getTime() - now;
+    const countdown = until <= 0 ? 'in progress now' : until < 86400000 ? `in ${Math.ceil(until / 3600000)} hour${Math.ceil(until / 3600000) === 1 ? '' : 's'}` : `in ${Math.ceil(until / 86400000)} days`;
+    $('exam-timeline-title').textContent = `${next.paper} ${active ? 'is in progress' : countdown}`;
+    $('exam-timeline-summary').textContent = `${next.date} · ${next.time} · official Sri Lanka time (UTC+5:30).`;
+  }
+  $('exam-timeline').innerHTML = EXAM_TIMELINE.map(exam => {
+    const started = new Date(exam.start).getTime() <= now;
+    const finished = new Date(exam.end).getTime() <= now;
+    const isNext = next?.id === exam.id;
+    const status = finished ? 'Done' : isNext && started ? 'Now' : isNext ? 'Next' : exam.optional ? 'Optional' : 'Scheduled';
+    return `<article class="exam-item${isNext ? ' next' : ''}${finished ? ' done' : ''}${exam.optional ? ' optional' : ''}">
+      <div class="exam-item-top"><span class="exam-date">${exam.date}</span><span class="exam-status">${status}</span></div>
+      <strong class="exam-paper">${exam.paper}</strong><span class="exam-time">${exam.time}</span>
+    </article>`;
+  }).join('');
 }
 
 function renderRetests() {
@@ -1218,7 +1291,7 @@ function renderNextAction() {
 }
 
 function refreshAll() {
-  renderKPIs(); renderPlanner(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction();
+  renderKPIs(); renderExamTimeline(); renderPlanner(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction();
   SUBJECTS.forEach(updateSubjectPanel);
   $('identity-line').textContent = `${state.profile.name} · ${state.profile.line}`;
 }
