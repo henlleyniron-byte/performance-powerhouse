@@ -31,9 +31,9 @@
   for(const subject of ['biology','chemistry','physics'])if(!tasks.some(t=>t.subject===subject))tasks.push({id:'baseline-'+subject,subject,label:subject[0].toUpperCase()+subject.slice(1)+' · one marked section',reason:'Choose from the canonical Error Bank. Existing unmarked work takes priority.',minutes:55,priority:0,type:'baseline'});
   return tasks.sort((a,b)=>b.priority-a.priority);
  }
- function fit(tasks,windows,maxMinutes){
+ function fit(tasks,windows,maxMinutes,notBefore=-Infinity){
   if(!Number.isFinite(maxMinutes)||maxMinutes<0||maxMinutes>720)throw Error('Use a work budget from 0 to 720 minutes.');
-  const ranges=merge(windows),available=ranges.reduce((n,[a,b])=>n+(b-a)/60000,0),capacity=Math.floor(Math.min(maxMinutes,available)*.8),placed=[],deferred=[];let used=0;
+  const ranges=merge(windows.map(([s,e])=>[Math.max(s,notBefore),e]).filter(([s,e])=>e>s)),available=ranges.reduce((n,[a,b])=>n+(b-a)/60000,0),capacity=Math.floor(Math.min(maxMinutes,available)*.8),placed=[],deferred=[];let used=0;
   for(const t of tasks){const duration=t.minutes*60000;if(used+t.minutes>capacity){deferred.push(t);continue;}
    const index=ranges.findIndex(([s,e])=>e-s>=duration);
    if(index<0){deferred.push(t);continue;}const start=ranges[index][0];placed.push({...t,start,end:start+duration});ranges[index][0]+=duration;used+=t.minutes;
