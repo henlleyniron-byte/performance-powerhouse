@@ -181,6 +181,7 @@
     flex: 0 0 auto; padding: 9px 14px; border: 1px solid transparent; border-radius: 999px;
     color: var(--muted); background: transparent; cursor: pointer; font-size: 12px; font-weight: 750;
   }
+  .tab-link { display: inline-flex; align-items: center; text-decoration: none; }
   .tab.active { color: var(--text) !important; background: var(--card) !important; border-color: var(--border) !important; }
   .tab-badge { margin-left: 5px; padding: 1px 6px; background: rgba(255,255,255,.08); border-radius: 999px; font-size: 9px; }
 
@@ -439,6 +440,7 @@
 <nav class="tabs" id="app-tabs" aria-label="Dashboard sections">
   <button class="tab active" type="button" data-panel="command">Command</button>
   <button class="tab" type="button" data-panel="physics">Physics</button>
+  <a class="tab tab-link" href="/physics-intelligence/" target="_top">Physics Intelligence</a>
   <button class="tab" type="button" data-panel="chemistry">Chemistry</button>
   <button class="tab" type="button" data-panel="biology">Biology</button>
   <button class="tab" type="button" data-panel="planner">Syllabus plan</button>
