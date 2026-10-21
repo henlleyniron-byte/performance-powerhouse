@@ -3,18 +3,18 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://al-performance-powerhouse.phenlleyniron.chatgpt.site"),
-  title: "A/L Performance Powerhouse · 2027 Reset",
-  description: "A private, evidence-first command centre for deep work, marked-paper output, error repair and delayed retesting across Physics, Chemistry and Biology.",
+  title: "A/L Performance Powerhouse · V4 Community Edition",
+  description: "A local-first G.C.E. A/L Biological Science system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.",
   openGraph: {
-    title: "A/L Performance Powerhouse",
-    description: "2027 Reset · Evidence → Repair → Retest",
+    title: "A/L Performance Powerhouse · V4 Community Edition",
+    description: "Attempt → Mark → Diagnose → Repair → Transfer → Retest",
     type: "website",
     images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "A/L Performance Powerhouse",
-    description: "2027 Reset · Evidence → Repair → Retest",
+    title: "A/L Performance Powerhouse · V4 Community Edition",
+    description: "Attempt → Mark → Diagnose → Repair → Transfer → Retest",
     images: ["/og.png"],
   },
   icons: {

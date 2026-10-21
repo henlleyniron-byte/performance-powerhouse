@@ -65,9 +65,7 @@ a { color: var(--physics); }
   border-bottom: 1px solid #11263b;
   background: #091526;
 }
-.subject-nav span, .subject-nav a { padding: 8px 14px; color: var(--muted); white-space: nowrap; font-size: .78rem; font-weight: 800; border-radius: 999px; }
-.subject-nav a { text-decoration: none; }
-.subject-nav a:hover, .subject-nav a:focus-visible { color: var(--text); background: var(--surface-2); outline: 2px solid rgb(84 200 255 / 30%); }
+.subject-nav span { padding: 8px 14px; color: var(--muted); white-space: nowrap; font-size: .78rem; font-weight: 800; border-radius: 999px; }
 .subject-nav .active { color: var(--text); border: 1px solid var(--border); background: var(--surface-2); }
 
 main { width: min(1180px, calc(100% - 32px)); margin: 16px auto 52px; }
@@ -209,3 +207,5 @@ body.share-mode .private-only { display: none !important; }
   .panel, .metric, .chart-card, .heatmap-card, .family-card, .evidence-grid article { color: #111; background: white; box-shadow: none; border-color: #bbb; }
   .panel *, .metric *, .chart-card *, .family-card * { color: #111 !important; }
 }
+
+.subject-nav a{color:inherit;text-decoration:none}.subject-nav a:hover{color:var(--gold,#ffd166)}
