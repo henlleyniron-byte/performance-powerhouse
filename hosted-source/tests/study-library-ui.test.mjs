@@ -1,0 +1,31 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const read=f=>readFileSync(new URL('../public/study-library/'+f,import.meta.url),'utf8');
+const path=process.env.STUDY_LIBRARY_PATH;
+class Element{
+ constructor(tag){this.tagName=tag;this.children=[];this.listeners={};this.dataset={};this.attrs={};this.value='';this.disabled=false;this.hidden=false;this._text='';this.style={setProperty(){}};}
+ set textContent(v){this._text=String(v);this.children=[];}get textContent(){return this._text+this.children.map(c=>typeof c==='string'?c:c.textContent).join(' ');}
+ append(...cs){this.children.push(...cs);}replaceChildren(...cs){this._text='';this.children=cs;}
+ setAttribute(k,v){this.attrs[k]=v;}addEventListener(k,fn){this.listeners[k]=fn;}querySelectorAll(tag){return this.children.flatMap(c=>typeof c==='string'?[]:[...(c.tagName===tag?[c]:[]),...c.querySelectorAll(tag)]);}closest(){return this;}scrollIntoView(){}click(){if(!this.disabled)this.listeners.click?.({target:this});}
+}
+async function fixture({share=false}={}){
+ const elements=new Map(),storageCalls=[],downloads=[];for(const id of ['import','load','forget','remember','export','close','share','views','overview','content','status'])elements.set(id,new Element(id==='views'?'nav':'div'));
+ for(const name of ['resources','heatmaps','recall','review']){const n=new Element('button');n.dataset.view=name;elements.get('views').append(n);}
+ const c=vm.createContext({URL:Object.assign(class extends URL{}, {createObjectURL(blob){downloads.push(blob);return 'blob:test';},revokeObjectURL(){}}),location:{href:'https://example.test/study-library/'+(share?'?share=1':'')},Date,Blob,setTimeout,document:{getElementById:id=>elements.get(id)||find(elements.get('content'),n=>n.id===id),createElement:tag=>new Element(tag),createTextNode:text=>String(text)},fetch(){throw Error('Network access attempted');},localStorage:{getItem(){storageCalls.push('read');},setItem(){storageCalls.push('write');}}});
+ for(const f of ['science-model.js','model.js','app.js'])vm.runInContext(read(f),c);
+ const flush=async()=>{await new Promise(setImmediate);await new Promise(setImmediate);};
+ async function importRaw(raw){elements.get('import').files=[{size:raw.length,text:async()=>raw}];elements.get('import').listeners.change();await flush();}
+ async function view(name){const b=elements.get('views').children.find(n=>n.dataset.view===name);elements.get('views').listeners.click({target:b});await flush();}
+ return {elements,c,storageCalls,downloads,flush,importRaw,view};
+}
+function find(node,match){if(match(node))return node;for(const child of node.children||[])if(typeof child!=='string'){const hit=find(child,match);if(hit)return hit;}return null;}
+const corpusTest=(name,fn)=>test(name,{skip:!path},fn);
+test('empty page performs no storage or network reads',async()=>{const f=await fixture();assert.equal(f.storageCalls.length,0);assert.equal(f.elements.get('remember').disabled,true);assert.match(f.elements.get('content').textContent,/private import/i);});
+test('share entry disables sensitive actions before any browser read',async()=>{const f=await fixture({share:true});assert.equal(f.elements.get('load').disabled,true);assert.equal(f.elements.get('import').disabled,true);assert.equal(f.storageCalls.length,0);});
+corpusTest('real import renders source library; failed replacement keeps the current import',async()=>{const f=await fixture(),raw=readFileSync(path,'utf8');await f.importRaw(raw);assert.match(f.elements.get('overview').textContent,/47/);assert.match(f.elements.get('content').textContent,/Biology Paper II/);await f.importRaw('{broken');assert.match(f.elements.get('status').textContent,/JSON/i);assert.match(f.elements.get('overview').textContent,/47/);assert.equal(f.storageCalls.length,0);});
+corpusTest('hide removes private DOM and disables import/export/save, then restores without creating marks',async()=>{const f=await fixture();await f.importRaw(readFileSync(path,'utf8'));await f.view('heatmaps');assert.match(f.elements.get('content').textContent,/Introduction to Biology/);f.elements.get('share').click();assert.ok(!f.elements.get('content').textContent.includes('Introduction to Biology'));assert.equal(f.elements.get('overview').textContent,'');assert.equal(f.elements.get('export').disabled,true);assert.equal(f.elements.get('import').disabled,true);f.elements.get('share').click();assert.match(f.elements.get('content').textContent,/Introduction to Biology/);assert.equal(f.storageCalls.length,0);});
+corpusTest('cloze answer stays hidden until reveal and changing card resets it',async()=>{const f=await fixture();await f.importRaw(readFileSync(path,'utf8'));await f.view('recall');const content=f.elements.get('content');assert.ok(!content.textContent.includes('science that studies living organisms'));find(content,n=>n.tagName==='button'&&n.textContent==='Reveal source answer').click();assert.ok(content.textContent.includes('science that studies living organisms'));find(content,n=>n.tagName==='button'&&n.textContent==='Next card').click();assert.ok(!content.textContent.includes('science that studies living organisms'));assert.equal(f.storageCalls.length,0);});
+corpusTest('unavailable browser storage leaves the imported library usable and exportable',async()=>{const f=await fixture();await f.importRaw(readFileSync(path,'utf8'));f.elements.get('remember').click();await f.flush();assert.match(f.elements.get('status').textContent,/unavailable/i);assert.match(f.elements.get('overview').textContent,/47/);f.elements.get('export').click();assert.equal(f.downloads.length,1);const out=JSON.parse(await f.downloads[0].text());assert.equal(out.resources.length,47);assert.equal(f.storageCalls.length,0);});
+corpusTest('closing a private file removes the source DOM and performs no learner writes',async()=>{const f=await fixture();await f.importRaw(readFileSync(path,'utf8'));f.elements.get('close').click();assert.equal(f.elements.get('overview').textContent,'');assert.ok(!f.elements.get('content').textContent.includes('Biology Paper II'));assert.equal(f.elements.get('export').disabled,true);assert.equal(f.storageCalls.length,0);});
