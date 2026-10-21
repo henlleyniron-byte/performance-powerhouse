@@ -454,7 +454,7 @@
 
 <dialog id="timer-dialog">
   <div class="dialog-head"><div><div class="eyebrow">20-minute attack</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
-  <div class="dialog-body"><div class="timer-phase" id="timer-phase">Attempt · closed book</div><div class="timer-display" id="timer-display">12:00</div><div class="timer-controls"><button class="secondary-btn" id="timer-reset" type="button">Reset</button><button class="primary-btn" id="timer-toggle" type="button">Start</button><button class="secondary-btn" id="timer-skip" type="button">Next phase</button></div><div class="timer-note" id="timer-note">Phone away. No notes, no video, no audio. Produce a written answer that can be marked.</div></div>
+  <div class="dialog-body"><div class="timer-phase" id="timer-phase">Attempt · closed book</div><div class="timer-display" id="timer-display">20:00</div><div class="timer-controls"><button class="secondary-btn" id="timer-reset" type="button">Reset 20:00</button><button class="primary-btn" id="timer-toggle" type="button">Start</button><button class="secondary-btn" id="timer-skip" type="button">Next phase</button></div><div class="timer-note" id="timer-note">Phone away. No notes, no video, no audio. Produce a written answer that can be marked.</div></div>
 </dialog>
 
 <dialog id="data-dialog">
@@ -691,10 +691,11 @@ const ERROR_NAMES = {
   K: 'Knowledge gap', C: 'Conceptual model', R: 'Retrieval failure',
   M: 'Method / calculation', P: 'Presentation', T: 'Timing / selection', A: 'Attention / misreading'
 };
+const TIMER_TOTAL_SECONDS = 20 * 60;
 const PHASES = [
-  { seconds: 12 * 60, label: 'Attempt · closed book', note: 'Phone away. No notes, no video, no audio. Produce a written answer that can be marked.' },
-  { seconds: 5 * 60, label: 'Mark · scheme only', note: 'Stop writing. Mark strictly, circle guesses, and count every lost marking point.' },
-  { seconds: 3 * 60, label: 'Repair · one cause', note: 'Name the dominant error family. Write one prevention rule and schedule the fresh retest.' }
+  { floor: 8 * 60, label: 'Attempt · closed book', note: '12-minute attempt phase. Phone away; produce a written answer that can be marked.' },
+  { floor: 3 * 60, label: 'Mark · scheme only', note: '5-minute marking phase. Mark strictly, circle guesses, and count every lost marking point.' },
+  { floor: 0, label: 'Repair · one cause', note: '3-minute repair phase. Name the error family and write one prevention rule.' }
 ];
 
 function defaultState() {
@@ -730,7 +731,7 @@ let state = loadState();
 let activePanel = 'command';
 let focusTopicKey = '';
 let timerPhaseIndex = 0;
-let timerRemaining = PHASES[0].seconds;
+let timerRemaining = TIMER_TOTAL_SECONDS;
 let timerHandle = null;
 
 const $ = (id) => document.getElementById(id);
@@ -1109,6 +1110,7 @@ function deleteAttempt(id) {
 }
 
 function renderTimer() {
+  timerPhaseIndex = timerRemaining > PHASES[0].floor ? 0 : timerRemaining > PHASES[1].floor ? 1 : 2;
   const phase = PHASES[timerPhaseIndex];
   $('timer-phase').textContent = phase.label;
   $('timer-note').textContent = phase.note;
@@ -1127,27 +1129,37 @@ function timerBeep() {
 function startFocus() {
   const topic = getTopic(focusTopicKey);
   $('timer-topic').textContent = topic?.name || 'Fresh official question';
-  timerPhaseIndex = 0; timerRemaining = PHASES[0].seconds; clearInterval(timerHandle); timerHandle = null; renderTimer();
+  timerPhaseIndex = 0; timerRemaining = TIMER_TOTAL_SECONDS; clearInterval(timerHandle); timerHandle = null; renderTimer();
   $('timer-dialog').showModal();
 }
 
 function toggleTimer() {
   if (timerHandle) { clearInterval(timerHandle); timerHandle = null; renderTimer(); return; }
   timerHandle = setInterval(() => {
+    const previousPhase = timerPhaseIndex;
     timerRemaining -= 1;
-    if (timerRemaining <= 0) { timerBeep(); nextTimerPhase(); }
+    if (timerRemaining <= 0) { timerRemaining = 0; timerBeep(); finishTimer(); return; }
     renderTimer();
+    if (timerPhaseIndex !== previousPhase) timerBeep();
   }, 1000);
   renderTimer();
 }
 
 function nextTimerPhase() {
   clearInterval(timerHandle); timerHandle = null;
-  if (timerPhaseIndex < PHASES.length - 1) { timerPhaseIndex += 1; timerRemaining = PHASES[timerPhaseIndex].seconds; renderTimer(); }
-  else { $('timer-dialog').close(); openAttemptDialog(focusTopicKey); toast('Attack complete—log the marked result now.'); }
+  if (timerPhaseIndex === 0) timerRemaining = PHASES[0].floor;
+  else if (timerPhaseIndex === 1) timerRemaining = PHASES[1].floor;
+  else { finishTimer(); return; }
+  timerBeep(); renderTimer();
 }
 
-function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerRemaining = PHASES[timerPhaseIndex].seconds; renderTimer(); }
+function finishTimer() {
+  clearInterval(timerHandle); timerHandle = null;
+  $('timer-dialog').close(); openAttemptDialog(focusTopicKey);
+  toast('20-minute attack complete—log the marked result now.');
+}
+
+function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerRemaining = TIMER_TOTAL_SECONDS; renderTimer(); }
 
 function exportData() {
   state.lastExportedAt = new Date().toISOString();
