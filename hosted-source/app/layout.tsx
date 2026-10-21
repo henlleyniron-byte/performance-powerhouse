@@ -3,10 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://al-performance-powerhouse.phenlleyniron.chatgpt.site"),
-  title: "A/L Performance Powerhouse · V4 Community Edition",
+  title: "A/L Performance Powerhouse · V5 Evidence Edition",
   description: "A local-first G.C.E. A/L Biological Science system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.",
   openGraph: {
-    title: "A/L Performance Powerhouse · V4 Community Edition",
+    title: "A/L Performance Powerhouse · V5 Evidence Edition",
     description: "Attempt → Mark → Diagnose → Repair → Transfer → Retest",
     type: "website",
     images: ["/og.png"],
