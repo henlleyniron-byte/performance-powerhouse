@@ -668,10 +668,10 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
     <section class="panel cycle-panel" aria-labelledby="cycle-title">
       <div class="cycle-head">
-        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action; progress is saved with your evidence when cloud saving is connected. This checklist records your actions; marked results provide the proof.</p></div>
+        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action. These self-recorded steps guide your workflow; they do not close an error or award mastery. Use the Verification desk to assess linked marked attempts.</p></div>
         <div class="cycle-controls"><label class="muted" for="cycle-subject" style="font-size:10px">Subject</label><select id="cycle-subject"><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select><button class="secondary-btn" id="cycle-reset" type="button">New loop</button></div>
       </div>
-      <div class="cycle-progress" id="cycle-progress" role="progressbar" aria-label="Evidence loop progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
+      <div class="cycle-progress" id="cycle-progress" role="progressbar" aria-label="Self-recorded workflow steps" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
       <div class="cycle-steps" id="cycle-steps" aria-label="Evidence loop steps"></div>
       <div class="cycle-next"><div><strong id="cycle-next-title">Step 1 · Timed attempt</strong><p id="cycle-next-copy">Attempt a bounded question closed book. Keep notes and AI out of the test.</p></div><div class="cycle-next-actions"><button class="primary-btn" id="cycle-action" type="button">Start this step</button><button class="secondary-btn" id="cycle-complete" type="button">Mark step done</button></div></div>
     </section>
@@ -2490,7 +2490,7 @@ function renderCycle() {
   $('cycle-action').textContent = current.label;
   $('cycle-action').disabled = evidenceCycle.step > 0 && !evidenceCycle.done.includes(evidenceCycle.step - 1);
   $('cycle-action').title = $('cycle-action').disabled ? 'Complete the previous stage before starting this action.' : ''; 
-  $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step completed' : 'Mark step done';
+  $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step recorded by you' : 'Mark step done';
   $('cycle-complete').setAttribute('aria-pressed', String(evidenceCycle.done.includes(evidenceCycle.step)));
   $('cycle-steps').innerHTML = CYCLE_STEPS.map((step,index) => `<button class="cycle-step" type="button" data-cycle-step="${index}" data-done="${evidenceCycle.done.includes(index)}" ${index===evidenceCycle.step?'aria-current="step"':''}><b>${evidenceCycle.done.includes(index)?'✓':String(index+1).padStart(2,'0')}</b><span>${escapeHTML(step.title)}</span></button>`).join('');
   const count = evidenceCycle.done.length;
@@ -2505,7 +2505,11 @@ function markCycleStepDone() {
   if (!evidenceCycle.done.includes(evidenceCycle.step)) evidenceCycle.done.push(evidenceCycle.step);
   if (evidenceCycle.step < CYCLE_STEPS.length - 1) evidenceCycle.step += 1;
   saveCycle(); renderCycle();
-  toast(evidenceCycle.step === CYCLE_STEPS.length-1 && evidenceCycle.done.length===CYCLE_STEPS.length ? 'Full evidence loop closed. Start a new loop when ready.' : 'Step recorded. Continue to the next evidence action.');
+  if (evidenceCycle.done.length === CYCLE_STEPS.length) {
+    navigate('repairs');
+    document.getElementById('v7-verification')?.scrollIntoView({block:'start'});
+    toast('All workflow steps recorded. Assess linked marked attempts in the Verification desk; this checklist does not close the error.');
+  } else toast('Step recorded by you. Continue to the next evidence action.');
 }
 function runCycleAction() {
   const step = CYCLE_STEPS[evidenceCycle.step];
@@ -2530,7 +2534,8 @@ function runCycleAction() {
   openAttemptDialog('', step.type);
   $('attempt-subject').value = subject;
   fillTopicSelect(subject);
-  $('attempt-question').value = evidenceCycle.step===4 ? 'Closed-book reattempt · link to diagnosed attempt' : evidenceCycle.step===5 ? 'Fresh transfer · different question, same concept' : 'Delayed retest · retrieval after a delay';
+  $('attempt-question').value = '';
+  $('attempt-question').placeholder = 'Actual paper, year and question reference';
   refreshDiagnosisHint();
 }
 
