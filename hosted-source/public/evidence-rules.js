@@ -59,6 +59,14 @@ globalThis.PowerhouseEvidence = Object.freeze({
     if (data.courseCorrection !== undefined && !object(data.courseCorrection)) fail('Invalid course correction');
     return data;
   },
+  completedLinks(retests) {
+    const links=Object.create(null);
+    for(const r of retests) if(r.completedAt && r.completedByAttemptId && r.sourceAttemptId) {
+      if(links[r.completedByAttemptId] && links[r.completedByAttemptId]!==r.sourceAttemptId) links[r.completedByAttemptId]=false;
+      else if(links[r.completedByAttemptId]!==false) links[r.completedByAttemptId]=r.sourceAttemptId;
+    }
+    return links;
+  },
   eligibleRetest(attempt, retests, attempts) {
     const stage = attempt.type === 'fresh-transfer' ? 1 : attempt.type === 'delayed-retest' ? 2 : 0;
     if (!stage || !attempt.unaided || !attempt.novelQuestion || !(attempt.total > 0) || attempt.earned !== attempt.total || attempt.error || Number(attempt.guesses || 0) > 0 || (attempt.trustedEarned != null && attempt.trustedEarned !== attempt.total)) return null;
@@ -67,7 +75,7 @@ globalThis.PowerhouseEvidence = Object.freeze({
       const source = attempts.find(item => item.id === retest.sourceAttemptId);
       const transfer = retests.find(item => item.sourceAttemptId === retest.sourceAttemptId && item.stage === 1);
       const stageReady = stage === 1 || (transfer?.completedAt && transfer.completedAt < attempt.date && attempts.some(item => item.id === transfer.completedByAttemptId && reference(item.question) !== reference(attempt.question)));
-      return stageReady && (!attempt.sourceAttemptId || attempt.sourceAttemptId === retest.sourceAttemptId) && !retest.completedAt && retest.stage === stage && retest.topicKey === attempt.topicKey && retest.due <= attempt.date && source && source.date < attempt.date && reference(source.question) !== reference(attempt.question);
+      return stageReady && (attempt.sourceAttemptId === retest.sourceAttemptId) && !retest.completedAt && retest.stage === stage && retest.topicKey === attempt.topicKey && retest.due <= attempt.date && source && source.date < attempt.date && reference(source.question) !== reference(attempt.question);
     }).sort((a, b) => a.due.localeCompare(b.due))[0] || null;
   },
   normalizeCycle(value, subjects, count) {

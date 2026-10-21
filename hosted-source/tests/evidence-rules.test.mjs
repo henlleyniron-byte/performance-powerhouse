@@ -4,7 +4,7 @@ import '../public/evidence-rules.js';
 const rules = globalThis.PowerhouseEvidence;
 const source = {id:'original', topicKey:'biology|0|0', question:'2023 Q1', date:'2026-10-01'};
 const retests = [1,2].map(stage => ({id:String(stage),sourceAttemptId:source.id,topicKey:source.topicKey,stage,due:stage===1?'2026-10-04':'2026-10-08',completedAt:null}));
-const proof = {id:'new',topicKey:source.topicKey,question:'2024 Q2',date:'2026-10-08',type:'fresh-transfer',earned:5,total:5,guesses:0,error:'',unaided:true,novelQuestion:true};
+const proof = {id:'new',sourceAttemptId:'original',topicKey:source.topicKey,question:'2024 Q2',date:'2026-10-08',type:'fresh-transfer',earned:5,total:5,guesses:0,error:'',unaided:true,novelQuestion:true};
 test('only a successful unaided fresh question closes the matching due retest stage', () => {
   assert.equal(rules.eligibleRetest(proof,retests,[source]).id,'1');
   assert.equal(rules.eligibleRetest({...proof,type:'delayed-retest'},retests,[source]),null);
@@ -35,3 +35,5 @@ test('backup validation accepts a real round-trip shape and rejects corrupted ev
   assert.throws(()=>validate({...valid,retests:[{id:'check',sourceAttemptId:'missing',topicKey:'biology|0|0',stage:1,due:'2026-10-09'}]}));
   assert.equal(valid.attempts[0].earned,5);
 });
+
+test('unlinked new checks cannot close an error, while historical exact links remain replayable',()=>{assert.equal(rules.eligibleRetest({...proof,sourceAttemptId:null},retests,[source]),null);assert.equal(rules.completedLinks([{sourceAttemptId:'original',completedByAttemptId:'old',completedAt:'2026-10-04'}]).old,'original');assert.equal(rules.completedLinks([{sourceAttemptId:'original',completedByAttemptId:'old',completedAt:'2026-10-04'},{sourceAttemptId:'another',completedByAttemptId:'old',completedAt:'2026-10-04'}]).old,false);});

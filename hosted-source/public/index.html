@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/L Performance Powerhouse · V8 Evidence & Capacity Edition</title>
+<title>A/L Performance Powerhouse · V9 Focus & Evidence Edition</title>
 <meta name="description" content="A local-first G.C.E. A/L Biological Science performance and error-correction system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.">
 <style>
   :root {
@@ -608,12 +608,12 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 </style>
 <link rel="stylesheet" href="./powerhouse/styles.css">
 <link rel="stylesheet" href="./powerhouse/planning.css">
-<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script></head>
+<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script><link rel="stylesheet" href="/workspace-shell/shell.css"></head>
 <body>
 
 <div class="app-header">
   <div class="shell header-row">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V8</h1><span class="edition-badge">EVIDENCE &amp; CAPACITY</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V9</h1><span class="edition-badge">FOCUS &amp; EVIDENCE</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
     <div class="header-actions">
       <button class="backup-chip" id="backup-health" type="button" title="Backup health">Backup —</button>
       <button class="icon-btn" id="share-safe-btn" type="button" title="Share-safe mode" aria-label="Toggle share-safe mode">◫</button>
@@ -976,7 +976,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   <form id="welcome-form">
     <div class="dialog-head"><div><div class="eyebrow">V8 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
     <div class="dialog-body">
-      <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance data stays only in this browser unless you export it yourself.</p>
+      <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance records are browser-first. Exports and optional cloud saving are explicit owner actions.</p>
       <div class="form-grid">
         <div class="field full"><label for="welcome-name">Your name</label><input id="welcome-name" maxlength="80" placeholder="e.g. Niron" autocomplete="name" required></div>
         <div class="field"><label for="welcome-year">Exam year</label><input id="welcome-year" maxlength="8" inputmode="numeric" value="2027" required></div>
@@ -2284,6 +2284,8 @@ function toggleShareSafe() {
   if (practicalLink) practicalLink.href = shareSafeMode ? './practical-lab/?share=1' : './practical-lab/';
   $('share-safe-btn')?.classList.toggle('on', shareSafeMode);
   $('share-safe-btn')?.setAttribute('aria-pressed', String(shareSafeMode));
+  $('identity-line').textContent = shareSafeMode ? 'Community Edition · private performance hidden' : `${state.profile.name} · ${profileDisplayLine()}`;
+  if (shareSafeMode) document.querySelectorAll('dialog[open]').forEach(d => d.close());
   toast(shareSafeMode ? 'Share-safe mode ON. Personal performance is obscured.' : 'Share-safe mode OFF.');
 }
 
@@ -2362,7 +2364,7 @@ function renderRepairs() {
 function refreshAll() {
   renderKPIs(); renderExamTimeline(); renderPlanner(); renderDailyOutput(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction(); renderCourseCorrection(); renderRepairs(); refreshBackupHealth();
   SUBJECTS.forEach(updateSubjectPanel);
-  $('identity-line').textContent = `${state.profile.name} · ${profileDisplayLine()}`;
+  $('identity-line').textContent = shareSafeMode ? 'Community Edition · private performance hidden' : `${state.profile.name} · ${profileDisplayLine()}`;
   window.PowerhouseUpgrade?.onRender();
 }
 
@@ -2407,8 +2409,9 @@ function scheduleRetests(attempt) {
 
 function rebuildRetests() {
   const existing = new Map(state.retests.map(r => [`${r.sourceAttemptId}|${r.stage}`, r.id]));
+  const historicalLinks = PowerhouseEvidence.completedLinks(state.retests);
   state.retests = [];
-  [...state.attempts].sort((a,b) => String(a.date + a.createdAt).localeCompare(String(b.date + b.createdAt))).forEach(a => { completeEligibleRetests(a); scheduleRetests(a); });
+  [...state.attempts].sort((a,b) => String(a.date + a.createdAt).localeCompare(String(b.date + b.createdAt))).forEach(a => { completeEligibleRetests(a.sourceAttemptId ? a : {...a, sourceAttemptId: historicalLinks[a.id] || null}); scheduleRetests(a); });
   state.retests.forEach(r => { r.id = existing.get(`${r.sourceAttemptId}|${r.stage}`) || r.id; });
 }
 
@@ -2713,7 +2716,7 @@ function importData(file) {
 }
 
 function showWelcome() {
-  if (state.profileSetupComplete || $('welcome-dialog').open) return;
+  if (shareSafeMode || state.profileSetupComplete || $('welcome-dialog').open) return;
   $('welcome-name').value = '';
   $('welcome-year').value = state.profile?.year || '2027';
   $('welcome-target').value = state.profile?.target || '';
@@ -2849,5 +2852,5 @@ setTimeout(showWelcome, 0);
 <script src="./practical-lab/host.js"></script>
 <script src="./powerhouse/launchpad-model.js"></script>
 <script src="./powerhouse/launchpad-ui.js"></script>
-</body>
+<script src="/workspace-shell/shell.js"></script></body>
 </html>
