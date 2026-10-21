@@ -1,3 +1,4 @@
+import { AppearanceControl } from "./appearance-control";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -29,8 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" data-theme="dark" data-ui-shell="react" suppressHydrationWarning>
+      <head><meta name="color-scheme" content="dark light" /><link rel="stylesheet" href="/ui-theme/theme.css" /><script src="/ui-theme/theme.js" /></head>
+      <body>{children}<AppearanceControl /></body>
     </html>
   );
 }
