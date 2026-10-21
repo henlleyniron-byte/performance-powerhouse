@@ -1,0 +1,410 @@
+[
+  {
+    "year": "2019",
+    "question": "36",
+    "topic": "Sri Lankan grasslands",
+    "status": "Medium"
+  },
+  {
+    "year": "2019",
+    "question": "37",
+    "topic": "Biodiversity values",
+    "status": "Medium"
+  },
+  {
+    "year": "2019",
+    "question": "42",
+    "topic": "Fertilisation across vertebrates",
+    "status": "Medium"
+  },
+  {
+    "year": "2019",
+    "question": "43",
+    "topic": "Respiratory pigments",
+    "status": "Medium"
+  },
+  {
+    "year": "2019",
+    "question": "47",
+    "topic": "Animal skeletons",
+    "status": "Medium"
+  },
+  {
+    "year": "2019",
+    "question": "48",
+    "topic": "Latitudinal biome sequence",
+    "status": "Medium"
+  },
+  {
+    "year": "2019",
+    "question": "49",
+    "topic": "Industrial microbiology",
+    "status": "Medium"
+  },
+  {
+    "year": "2020",
+    "question": "21",
+    "topic": "Human mineral functions",
+    "status": "Medium"
+  },
+  {
+    "year": "2020",
+    "question": "28",
+    "topic": "Growth hormone effects",
+    "status": "Medium"
+  },
+  {
+    "year": "2020",
+    "question": "34",
+    "topic": "Biome precipitation",
+    "status": "Medium"
+  },
+  {
+    "year": "2020",
+    "question": "35",
+    "topic": "Threatened organisms",
+    "status": "Medium"
+  },
+  {
+    "year": "2020",
+    "question": "41",
+    "topic": "Respiratory-system tissues",
+    "status": "Medium"
+  },
+  {
+    "year": "2020",
+    "question": "43",
+    "topic": "Circulatory-system examples",
+    "status": "Medium"
+  },
+  {
+    "year": "2020",
+    "question": "47",
+    "topic": "Mendelian conclusions",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "8",
+    "topic": "Domain characteristics",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "9",
+    "topic": "Plant evolutionary relationships",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "11",
+    "topic": "Phylum-level feature pairs",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "35",
+    "topic": "Tundra fauna",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "39",
+    "topic": "Rhizosphere microbes",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "42",
+    "topic": "Primary root growth",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "43",
+    "topic": "Single circulation",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "49",
+    "topic": "Stem-cell properties",
+    "status": "Medium"
+  },
+  {
+    "year": "2021",
+    "question": "50",
+    "topic": "Mosquito-vector control",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "4",
+    "topic": "Nuclear organisation",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "8",
+    "topic": "Phanerozoic eras",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "11",
+    "topic": "Seedless vascular plants",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "16",
+    "topic": "Mineral absorption forms",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "20",
+    "topic": "Large-intestine functions",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "38",
+    "topic": "Fission in microorganisms",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "39",
+    "topic": "Escherichia coli",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "46",
+    "topic": "Prokaryotic chromosome domains",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "47",
+    "topic": "Altitudinal vegetation sequence",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "49",
+    "topic": "Food- and water-borne bacteria",
+    "status": "Medium"
+  },
+  {
+    "year": "2022",
+    "question": "50",
+    "topic": "Aquarium maintenance",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "4",
+    "topic": "Cell-cycle events",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "8",
+    "topic": "Early oxygenation sequence",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "16",
+    "topic": "Root formation hormones",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "30",
+    "topic": "Dihybrid genotype count",
+    "status": "Needs_Review"
+  },
+  {
+    "year": "2023",
+    "question": "34",
+    "topic": "Northward biome sequence",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "41",
+    "topic": "Redox coenzymes",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "42",
+    "topic": "Fungal body organisation",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "43",
+    "topic": "Plant evolution",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "49",
+    "topic": "High-altitude flora",
+    "status": "Medium"
+  },
+  {
+    "year": "2023",
+    "question": "50",
+    "topic": "Secondary wastewater treatment",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "4",
+    "topic": "Meiotic telophase",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "8",
+    "topic": "Vascular-plant evolution",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "9",
+    "topic": "Plant phyla and gametophytes",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "10",
+    "topic": "Animal phyla",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "15",
+    "topic": "Mineral deficiency",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "31",
+    "topic": "Gene interaction",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "35",
+    "topic": "Sri Lankan ecosystems",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "36",
+    "topic": "Chickenpox vaccine",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "38",
+    "topic": "Solid-waste management",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "40",
+    "topic": "Filariasis transmission",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "42",
+    "topic": "History of life",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "45",
+    "topic": "Brain functions",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "46",
+    "topic": "Oogenesis",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "48",
+    "topic": "Microorganisms",
+    "status": "Medium"
+  },
+  {
+    "year": "2024",
+    "question": "50",
+    "topic": "Rainfall gradient and vegetation",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "2",
+    "topic": "Origin of life",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "16",
+    "topic": "Heterospory",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "18",
+    "topic": "Human saliva",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "34",
+    "topic": "Ecological efficiency",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "36",
+    "topic": "Environmental pollution",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "37",
+    "topic": "Vaccines",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "42",
+    "topic": "Protists",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "45",
+    "topic": "Leucocytes",
+    "status": "Medium"
+  },
+  {
+    "year": "2025",
+    "question": "47",
+    "topic": "Human sperm",
+    "status": "Medium"
+  }
+]
