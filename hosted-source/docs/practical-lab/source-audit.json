@@ -1,0 +1,15 @@
+{
+ "catalog_release":"2026-10-15-v3",
+ "catalog_content_modified":false,
+ "schema_validation":"Supplied Draft 2020-12 schema passed for all records",
+ "csv_agreement":"All 126 IDs, subjects, NIE strings, titles and printed pages agree",
+ "review_status":"independently_prepared_not_teacher_verified",
+ "source_reference_checks":[
+  {"subject":"biology","url":"https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf","viewer_index_pages_1_based":[7,8,9],"verified_print_pages":[1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,24,27,28,29,30,31,32,33,34,35,36,37,38,40,41,43,45,47]},
+  {"subject":"chemistry","url":"https://nie.lk/pdffiles/other/eALOM%20Chemistry%20Practical%20Handbook.pdf","viewer_index_pages_1_based":[7,8],"verified_print_pages":[10,15,17,21,23,27,31,35,42,44,46,49,51,54,57,59,61,63,65,67,69,71,73,75,80,81,83,86,88,90,95,98,102,105,109,111,114,117,120,122,126,130,133,135,138]},
+  {"subject":"physics","url":"https://nie.lk/pdffiles/other/eALOM%20PysicsPracBook.pdf","viewer_index_pages_1_based":[12,13],"verified_print_pages":[1,6,9,11,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,45,47,51,53,55,57,59,61,64,66,68,70,73,75,77,79,81,83,85,87,90,92,94,96],"split_refs":{"21.1":{"id":"phy-21-1","printed_page":47},"21.2":{"id":"phy-21-2","printed_page":51}}}
+ ],
+ "scope":"Index numbering, source URLs and printed-page references checked against primary NIE source tables; the independent companion answers have not received teacher peer review. No official assessment endorsement is claimed.",
+ "pdf_access":"Verified current Drive file metadata for combined 229-page and lighter 70-page files; independent preparation status retained. External links remain online-only.",
+ "mistake_categories":"Suggested search/filter categories are inferred transparently from common-error wording and can also match private recorded diagnoses. They are not official NIE classifications."
+}

@@ -624,6 +624,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 </div>
 
 <nav class="tabs" id="app-tabs" aria-label="Dashboard sections">
+  <a class="tab tab-link" href="./practical-lab/" id="practical-lab-link">Practical Lab</a>
   <a class="tab tab-link" href="./study-library/?view=practice">Private practice desk</a><a class="tab tab-link" href="./subscription-lab/">Compare one AI task</a>
   <a class="tab tab-link" href="./subscription-playbook/">AI Subscription Playbook</a>
   <button class="tab active" type="button" data-panel="command">Command</button>
@@ -2279,6 +2280,8 @@ let shareSafeMode = false;
 function toggleShareSafe() {
   shareSafeMode = !shareSafeMode;
   document.body.classList.toggle('share-safe', shareSafeMode);
+  const practicalLink = document.getElementById('practical-lab-link');
+  if (practicalLink) practicalLink.href = shareSafeMode ? './practical-lab/?share=1' : './practical-lab/';
   $('share-safe-btn')?.classList.toggle('on', shareSafeMode);
   $('share-safe-btn')?.setAttribute('aria-pressed', String(shareSafeMode));
   toast(shareSafeMode ? 'Share-safe mode ON. Personal performance is obscured.' : 'Share-safe mode OFF.');
@@ -2842,6 +2845,8 @@ setTimeout(showWelcome, 0);
 <script src="./powerhouse/verification-ui.js"></script>
 <script src="./powerhouse/planning.js"></script>
 <script src="./powerhouse/planning-ui.js"></script>
+<script src="./practical-lab/model.js"></script>
+<script src="./practical-lab/host.js"></script>
 <script src="./powerhouse/launchpad-model.js"></script>
 <script src="./powerhouse/launchpad-ui.js"></script>
 </body>

@@ -1,6 +1,6 @@
 (function(root){
   'use strict';
-  const KEYS={core:'al_performance_powerhouse_v4',physics:'al_performance_powerhouse_physics_intelligence_v1',chemistry:'al_performance_powerhouse_chemistry_intelligence_v1',biology:'al_performance_powerhouse_biology_intelligence_v1',science:'alpp_science_sessions_v1',verification:'alpp_verification_chains_v7',calendar:'alpp_calendar_projection_v1',tracker:'al_performance_powerhouse_study_tracker_v1'};
+  const KEYS={practical:'performance_powerhouse_practical_lab_v3',core:'al_performance_powerhouse_v4',physics:'al_performance_powerhouse_physics_intelligence_v1',chemistry:'al_performance_powerhouse_chemistry_intelligence_v1',biology:'al_performance_powerhouse_biology_intelligence_v1',science:'alpp_science_sessions_v1',verification:'alpp_verification_chains_v7',calendar:'alpp_calendar_projection_v1',tracker:'al_performance_powerhouse_study_tracker_v1'};
   const date=v=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(v)&&Number.isFinite(Date.parse(v+'T12:00:00Z'))&&new Date(v+'T12:00:00Z').toISOString().slice(0,10)===v;
   function read(storage){const snapshots={},errors=[];for(const [name,key] of Object.entries(KEYS)){try{const raw=storage.getItem(key);snapshots[name]={key,raw,data:raw===null?null:JSON.parse(raw)};}catch(e){let raw=null;try{raw=storage.getItem(key);}catch{}snapshots[name]={key,raw,data:null};errors.push({name,key,unreadable:raw!==null});}}return {snapshots,errors};}
   const marks=r=>r&&typeof r.earned==='number'&&Number.isFinite(r.earned)&&typeof r.total==='number'&&Number.isFinite(r.total)&&r.total>0&&r.earned>=0&&r.earned<=r.total;
@@ -16,6 +16,7 @@
       const latest=new Map();for(const r of rows)if(marks(r)&&typeof r.itemId==='string'&&typeof r.at==='string'&&Number.isFinite(Date.parse(r.at))&&Date.parse(r.at)<=Date.parse(today+'T23:59:59+05:30')){if(!latest.has(r.itemId)||Date.parse(latest.get(r.itemId).at)<Date.parse(r.at))latest.set(r.itemId,r);}
       for(const r of [...latest.values()].filter(r=>r.earned<r.total||r.guesses>0||r.error!=='none').slice(0,3))out.push({id:s+':'+r.itemId,subject:s,title:r.reference||r.itemId,due:today,priority:2,action:'Continue subject repair',href:'./'+s+'-intelligence/?item='+encodeURIComponent(r.itemId),note:'Latest marked subject record exposes an error. Review the narrow repair, then prove fresh transfer.'});
     }
+    out.push(...(root.PracticalLabHost?.actions?.()||[]));
     return out.sort((a,b)=>a.priority-b.priority||a.due.localeCompare(b.due)).slice(0,8);
   }
   function bundle(view,now=new Date().toISOString()){
