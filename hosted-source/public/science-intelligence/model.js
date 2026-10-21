@@ -5,6 +5,8 @@
   const KEY = 'alpp_science_sessions_v1';
   const STATUSES = ['PROVISIONAL','UNCLASSIFIED','TEACHER CHECK','SOURCE VALIDATED','INDEPENDENTLY CHECKED','OFFICIAL-SOURCE CHECKED','NOT AUDITED'];
   const STAGES = ['Target','Timed attempt','Strict marking','Diagnose','Minimum repair','Reattempt + fresh transfer','Schedule retests'];
+  const PHASE_MINUTES = [5,30,15,10,15,10,5];
+  const today = () => new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Colombo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   const BAD = new Set(['__proto__','constructor','prototype']);
   const fail = m => { throw new Error(m); };
   const plain = o => !!o && typeof o==='object' && !Array.isArray(o);
@@ -92,11 +94,30 @@
     for(const r of p.records) {
       if(!str(r.id,100)||ids.has(r.id)||!SUBJECTS.includes(r.subject)||!str(r.reference_id,150)||!str(r.session_id,100)||!date(r.date)||!number(r.earned,0,1e5)||!number(r.total,0.01,1e5)||r.earned>r.total||!integer(r.guesses,0,1000)||!number(r.minutes,0.01,1440)||!str(r.marking_source,1000)||!r.marking_source.trim()||!str(r.error,2000)||!str(r.repair,2000)||!['baseline','reattempt','transfer','delayed-retest'].includes(r.role)||typeof r.unaided!=='boolean'||typeof r.fresh!=='boolean'||!str(r.core_attempt_id,150))fail('Invalid marked evidence.');
       if(r.guesses>r.total)fail('Guesses exceed question total.');
+      if(r.date>today())fail('Marked evidence cannot be dated in the future.');
+      if(r.source_record_id!==undefined && (!str(r.source_record_id,100)||r.source_record_id===r.id))fail('Invalid source evidence link.');
       if(!p.sessions.some(s=>s.id===r.session_id && s.subject===r.subject))fail('Evidence has no matching session.');
       if(!Array.isArray(r.retest_dates)||r.retest_dates.length!==2||!r.retest_dates.every(date)||r.retest_dates[0]<=r.date||r.retest_dates[1]<=r.retest_dates[0])fail('Invalid retest dates.');
       ids.add(r.id);
     }
+    for(const r of p.records)if(r.source_record_id){const source=p.records.find(x=>x.id===r.source_record_id);if(!source||source.subject!==r.subject||source.role!=='baseline'||r.date<source.date)fail('Related evidence must link to an earlier baseline in the same subject.');}
     return p;
+  }
+  function followups(p,day=today()) {
+    validateProgress(p);if(!date(day))fail('Invalid review date.');
+    const clean=r=>r.unaided && r.earned===r.total && r.guesses===0 && !r.error.trim();
+    return p.records.filter(r=>r.role==='baseline'&&!clean(r)).flatMap(source=>{
+      const checks=p.records.filter(r=>r.source_record_id===source.id&&r.role==='delayed-retest').slice().sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
+      const used=new Set();return source.retest_dates.map((due,index)=>{
+        const check=checks.find(r=>r.date>=due&&!used.has(r.id));if(check)used.add(check.id);
+        return {source_id:source.id,subject:source.subject,reference_id:source.reference_id,stage:index+1,due,state:check&&clean(check)?'recorded':check?'repair':due<=day?'due':'scheduled',check_id:check?.id||null};
+      });
+    }).sort((a,b)=>a.due.localeCompare(b.due)||a.reference_id.localeCompare(b.reference_id));
+  }
+  function clockRemaining(clock,now=Date.now()) {
+    if(!clock||!number(clock.remainingMs,0,10800000))fail('Invalid stage clock.');
+    if(clock.running && !number(clock.startedAt,0,1e15))fail('Invalid stage clock start.');
+    return Math.max(0,clock.remainingMs-(clock.running?Math.max(0,now-clock.startedAt):0));
   }
   function retestDates(day,intervals=[3,10]) {
     if(!date(day)||!Array.isArray(intervals)||intervals.length!==2||!intervals.every(x=>integer(x,1,90))||intervals[0]>=intervals[1])fail('Invalid retest schedule.');
@@ -134,5 +155,5 @@
   function safeUrl(u) {
     try {const x=new URL(u);return x.protocol==='https:' && ['drive.google.com','docs.google.com','www.nie.lk','nie.lk','e-thaksalawa.moe.gov.lk'].includes(x.hostname)?x.href:null;}catch{return null;}
   }
-  globalThis.ScienceIntelligence={KEY,SUBJECTS,STAGES,parse,id,denominator,validatePackage,matrix,filter,initialProgress,validateProgress,retestDates,mergeProgress,bridge,csv,safeUrl};
+  globalThis.ScienceIntelligence={KEY,SUBJECTS,STAGES,PHASE_MINUTES,today,followups,clockRemaining,parse,id,denominator,validatePackage,matrix,filter,initialProgress,validateProgress,retestDates,mergeProgress,bridge,csv,safeUrl};
 })();

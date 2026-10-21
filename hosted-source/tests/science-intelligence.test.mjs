@@ -106,3 +106,9 @@ test('import preview creates no scores; real corpus initializes and an actual ma
  f.el('share').listeners.click();assert.equal(f.el('history').innerHTML,'');assert.equal(f.el('target').innerHTML,'');
  f.el('share').listeners.click();assert.match(f.el('history').innerHTML,/submitted local evidence/);
 });
+test('resuming and closing a plan changes only planning state, and stage timers create no evidence',{skip:!real},async()=>{
+ const f=await fixture();await f.el('packageFile').listeners.change({target:{files:[{size:1,text:async()=>JSON.stringify(real)}]}});await f.el('confirmImport').listeners.click();await f.el('start').listeners.click();
+ const first=JSON.parse(f.writes.at(-1).v).sessions[0].id;await f.el('advance').listeners.click();f.el('clockToggle').listeners.click();assert.equal(JSON.parse(f.writes.at(-1).v).records.length,0);
+ await f.el('start').listeners.click();f.el('resumeSession').value=first;f.el('resumeSession').listeners.change();assert.match(f.el('sessionState').innerHTML,/Phase 2/);
+ await f.el('finishSession').listeners.click();const p=JSON.parse(f.writes.at(-1).v);assert.equal(p.sessions.find(s=>s.id===first).closed,true);assert.equal(p.records.length,0);assert.equal(f.el('submitEvidence').disabled,true);
+});

@@ -29,3 +29,9 @@ test('a real submit stores normalized evidence and share toggle clears the perso
 test('unreadable saved bytes block ordinary writes and retain a recovery warning',async()=>{
  const f=await fixture('biology',{stored:'{broken'});assert.match(f.element('dataStatus').textContent,/preserved/);assert.equal(f.element('submit').disabled,true);f.element('attemptForm').listeners.submit({preventDefault(){}});assert.equal(f.writes.length,0);
 });
+test('an older tab cannot overwrite a newer subject log; unsaved evidence remains available in memory',async()=>{
+ const f=await fixture('chemistry'),key='al_performance_powerhouse_chemistry_intelligence_v1';
+ const newer=JSON.stringify({version:1,subject:'chemistry',records:[]});f.context.localStorage.setItem(key,newer);
+ for(const [k,v] of Object.entries({attemptItem:'chem-q5',role:'baseline',earned:'0',total:'1',guesses:'0',minutes:'2',target:'2',confidence:'5',error:'concept',reference:'2025 Q05',note:'Review pressures'}))f.element(k).value=v;f.element('unaided').checked=true;
+ f.element('attemptForm').listeners.submit({preventDefault(){}});assert.equal(f.writes.length,1);assert.match(f.element('dataStatus').textContent,/Another tab/);assert.match(f.element('history').innerHTML,/2025 Q05/);
+});

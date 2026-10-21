@@ -2,7 +2,8 @@
   'use strict';
   const M=ScienceIntelligence,$=id=>document.getElementById(id);
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  let shared=new URLSearchParams(location.search).get('share')==='1',dataset=null,progress=M.initialProgress(),storedRaw=null,unreadable=null,recovered=false,pending=null,page=0,activeId='',storageDenied=false,coreIDs=new Set(),hydrated=false;
+  let shared=new URLSearchParams(location.search).get('share')==='1',dataset=null,progress=M.initialProgress(),storedRaw=null,unreadable=null,recovered=false,pending=null,page=0,activeId='',storageDenied=false,coreIDs=new Set(),coreAttempts=new Map(),hydrated=false;
+  let clock={remainingMs:300000,running:false,startedAt:null},clockPhase='';
   const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Colombo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   const notice=s=>{$('status').textContent=s;};
   function download(name,data,type='application/json'){
@@ -20,11 +21,11 @@
     activeId=progress.sessions.at(-1)?.id||'';preferences();readCore();
   }
   function readCore(){
-    coreIDs=new Set();
+    coreIDs=new Set();coreAttempts=new Map();
     if(shared)return;
     try{
       const core=JSON.parse(localStorage.getItem('al_performance_powerhouse_v4')||'{}');
-      if(Array.isArray(core.attempts))core.attempts.forEach(r=>{if(typeof r.id==='string')coreIDs.add(r.id);});
+      if(Array.isArray(core.attempts))core.attempts.forEach(r=>{if(typeof r.id==='string'){coreIDs.add(r.id);coreAttempts.set(r.id,r);}});
       $('coreIDs').innerHTML=[...coreIDs].map(id=>'<option value="'+esc(id)+'"></option>').join('');
     }catch{$('coreIDs').innerHTML='';}
   }
@@ -98,6 +99,13 @@
     renderSummary();renderMatrix();renderAtlas();renderPaper2();renderPractice();renderQuality();renderSession();
   }
   function selectedDiagnostics(){return dataset?dataset.diagnostics.filter(d=>d.subject===$('sessionSubject').value&&d.set===$('set').value):[];}
+  function resetClock(minutes){clock={remainingMs:minutes*60000,running:false,startedAt:null};$('clockMinutes').value=String(minutes);$('clockNotice').textContent='Timer changes create no attempts, marks or completion evidence.';renderClock();}
+  function renderClock(){
+    if(shared)return;
+    const ms=M.clockRemaining(clock),seconds=Math.ceil(ms/1000);$('clockReadout').textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');
+    $('clockToggle').textContent=clock.running?'Pause stage timer':'Start stage timer';
+    if(clock.running&&ms===0){clock={remainingMs:0,running:false,startedAt:null};$('clockToggle').textContent='Timer finished';$('clockNotice').textContent='Stage budget reached. Choose the next action yourself; no marks or completion were recorded.';}
+  }
   function renderSession(){
     if(shared)return;
     const targets=selectedDiagnostics();
@@ -106,8 +114,13 @@
     $('diagnosticItems').innerHTML=targets.map(d=>'<article class="science-card"><span class="badge">'+esc(d.confidence)+'</span><h3>Set '+d.set+' · '+esc(d.exam_year+' Q'+d.question_number+' · '+d.principal_unit)+'</h3><p>'+esc(d.concept_focus_paraphrase)+'</p><p>'+esc(d.authentication_status)+'</p><p>'+link(d.original_paper_locator,'Open private source')+'</p><p>'+esc(d.review_flag)+'</p></article>').join('');
     const previous=$('target').value;$('target').innerHTML='<option value="">Select actual question</option>'+targets.map(d=>'<option value="'+esc(d.stable_id)+'">'+esc(d.exam_year+' Q'+d.question_number+' · '+d.principal_unit)+'</option>').join('');if(targets.some(d=>d.stable_id===previous))$('target').value=previous;
     const session=progress.sessions.find(s=>s.id===activeId);
+    $('resumeSession').innerHTML='<option value="">Choose a saved plan</option>'+progress.sessions.slice().reverse().map(s=>'<option value="'+esc(s.id)+'">'+esc(s.date+' · '+s.subject+' Set '+s.set+' · '+(s.closed?'closed':'phase '+(s.phase+1)))+'</option>').join('');$('resumeSession').value=activeId;
+    const baseline=$('sourceRecord').value;$('sourceRecord').innerHTML='<option value="">No baseline linked</option>'+progress.records.filter(r=>r.role==='baseline'&&r.subject===(session?.subject||$('sessionSubject').value)).map(r=>'<option value="'+esc(r.id)+'">'+esc(r.date+' · '+r.reference_id+' · '+r.earned+'/'+r.total)+'</option>').join('');if(progress.records.some(r=>r.id===baseline))$('sourceRecord').value=baseline;
+    const reviews=M.followups(progress,today());$('followups').innerHTML=reviews.length?reviews.map(r=>'<article class="science-card"><span class="badge">'+esc(r.state==='recorded'?'Retest recorded · self-reported':r.state==='repair'?'Retest failed · repair needed':r.state==='due'?'Scheduled check due':'Scheduled check ahead')+'</span><h3>'+esc(r.reference_id)+'</h3><p>Check '+r.stage+' · '+r.due+'</p>'+(r.state==='recorded'?'':'<button type="button" class="button button-quiet" data-review-source="'+esc(r.source_id)+'">Prepare this check</button>')+'</article>').join(''):'<p>No checks scheduled from an exposed baseline error. Mark a real attempt to start.</p>';
     $('sessionState').innerHTML=session?'<h3>'+esc(session.subject+' Set '+session.set)+'</h3><p>Session '+esc(session.id)+' · '+esc(session.date)+'</p><p>Phase '+(session.phase+1)+' / 7 · '+esc(M.STAGES[session.phase])+'</p><p>A phase change records workflow position only. It creates no marks or mastery.</p>':'<p>No active session plan. Create one after importing a private corpus.</p>';
-    $('advance').disabled=!session||session.closed||session.phase===6||!!unreadable&&!recovered;$('submitEvidence').disabled=!session||!dataset||!!unreadable&&!recovered;
+    $('advance').disabled=!session||session.closed||session.phase===6||!!unreadable&&!recovered;$('submitEvidence').disabled=!session||session.closed||!dataset||!!unreadable&&!recovered;
+    $('clockToggle').disabled=!session||session.closed;$('clockReset').disabled=!session||session.closed;$('finishSession').disabled=!session||session.closed;
+    const phase=session?session.id+':'+session.phase:'';if(phase!==clockPhase){clockPhase=phase;resetClock(M.PHASE_MINUTES[session?.phase||0]);}renderClock();
     $('history').innerHTML='<h3>'+progress.records.length+' submitted local evidence records</h3>'+progress.records.slice().reverse().map(r=>'<article class="science-card"><h3>'+esc(r.reference_id)+' · '+esc(r.role)+'</h3><p>'+r.earned+'/'+r.total+' · '+r.minutes+' minutes · guesses '+r.guesses+' · '+esc(r.date)+'</p><p>'+esc(r.error)+'</p><p>'+esc(r.repair)+'</p><p>Retests '+r.retest_dates.map(esc).join(' / ')+'</p><p>Core attempt '+esc(r.core_attempt_id||'not linked')+' · no retention or mastery awarded</p></article>').join('');
   }
   function applyShare(){
@@ -115,7 +128,7 @@
     document.querySelectorAll('.private-area input,.private-area button,.private-area select,.private-area textarea').forEach(e=>{e.disabled=shared;});
     document.querySelectorAll('nav a').forEach(a=>{const u=new URL(a.href,location.href);if(shared)u.searchParams.set('share','1');else u.searchParams.delete('share');a.href=u.href;});
     for(const n of ['home','verification']){const a=$(n),u=new URL(a.href,location.href);if(shared)u.searchParams.set('share','1');else u.searchParams.delete('share');a.href=u.href;}
-    if(shared){for(const n of ['items','summary','matrixTable','qualityItems','sources','history','sessionState','diagnosticItems','practiceItems','paper2Items','weekly','printWorksheet','coreIDs','target'])$(n).innerHTML='';$('workspace').hidden=true;$('importPreview').hidden=true;pending=null;}
+    if(shared){clock={remainingMs:M.clockRemaining(clock),running:false,startedAt:null};for(const n of ['items','summary','matrixTable','qualityItems','sources','history','sessionState','diagnosticItems','practiceItems','paper2Items','weekly','printWorksheet','coreIDs','target','resumeSession','sourceRecord','followups'])$(n).innerHTML='';$('workspace').hidden=true;$('importPreview').hidden=true;pending=null;}
     else{hydrate();if(dataset)choices();renderWorkspace();renderSession();}
   }
   async function readFile(file,kind){
@@ -165,12 +178,17 @@
     save({...progress,sessions:[...progress.sessions,s]});activeId=s.id;renderSession();
   }));
   $('advance').addEventListener('click',guard(()=>{const s=progress.sessions.find(s=>s.id===activeId);if(!s||s.phase>=6)return;save({...progress,sessions:progress.sessions.map(x=>x.id===s.id?{...x,phase:x.phase+1}:x)});}));
+  $('resumeSession').addEventListener('change',()=>{const s=progress.sessions.find(s=>s.id===$('resumeSession').value);if(shared||!s)return;activeId=s.id;$('sessionSubject').value=s.subject;$('set').value=s.set;renderSession();});
+  $('finishSession').addEventListener('click',guard(()=>{const s=progress.sessions.find(s=>s.id===activeId);if(!s||shared)return;clock={remainingMs:M.clockRemaining(clock),running:false,startedAt:null};save({...progress,sessions:progress.sessions.map(x=>x.id===s.id?{...x,closed:true}:x)});}));
+  $('clockToggle').addEventListener('click',()=>{if(shared||$('clockToggle').disabled)return;const remaining=M.clockRemaining(clock);if(clock.running)clock={remainingMs:remaining,running:false,startedAt:null};else if(remaining>0)clock={remainingMs:remaining,running:true,startedAt:Date.now()};renderClock();});
+  $('clockReset').addEventListener('click',guard(()=>{if(shared)return;const minutes=Number($('clockMinutes').value);if(!Number.isInteger(minutes)||minutes<1||minutes>180)throw Error('Choose a stage budget from 1 to 180 whole minutes.');resetClock(minutes);}));
   $('evidenceForm').addEventListener('submit',guard(e=>{
     e.preventDefault();if(!dataset)throw Error('Import the private corpus first.');
     const session=progress.sessions.find(s=>s.id===activeId),target=dataset.records.find(r=>r.stable_id===$('target').value);
-    if(!session||!target||target.subject!==session.subject)throw Error('Choose an actual question in the active session subject.');
+    if(!session||session.closed||!target||target.subject!==session.subject)throw Error('Choose an actual question in an open session for that subject.');
     const core=$('coreAttempt').value.trim();if(core&&!coreIDs.has(core))throw Error('The linked core attempt ID was not found in this browser. Record it in Command first.');
-    const record={id:crypto.randomUUID(),subject:target.subject,reference_id:target.stable_id,session_id:session.id,role:$('role').value,earned:Number($('earned').value),total:Number($('total').value),guesses:Number($('guesses').value),minutes:Number($('minutes').value),date:$('date').value,marking_source:$('markingSource').value.trim(),error:$('error').value.trim(),repair:$('repair').value.trim(),unaided:$('unaided').checked,fresh:$('fresh').checked,core_attempt_id:core,retest_dates:M.retestDates($('date').value,progress.intervals)};
+    const record={id:crypto.randomUUID(),subject:target.subject,reference_id:target.stable_id,session_id:session.id,role:$('role').value,earned:Number($('earned').value),total:Number($('total').value),guesses:Number($('guesses').value),minutes:Number($('minutes').value),date:$('date').value,marking_source:$('markingSource').value.trim(),error:$('error').value.trim(),repair:$('repair').value.trim(),unaided:$('unaided').checked,fresh:$('fresh').checked,core_attempt_id:core,source_record_id:$('sourceRecord').value||'',retest_dates:M.retestDates($('date').value,progress.intervals)};
+    if(core){const a=coreAttempts.get(core);if(a.subject!==record.subject||a.date!==record.date||Number(a.earned)!==record.earned||Number(a.total)!==record.total||Number(a.guesses||0)!==record.guesses)throw Error('The linked Command record does not match subject, date, marks and guesses. Keep separate records separate.');}
     if(record.role==='transfer'&&(!record.fresh||progress.records.some(r=>r.reference_id===record.reference_id)))throw Error('A fresh transfer needs a genuinely unseen reference.');
     save({...progress,records:[...progress.records,record]});
   }));
@@ -180,7 +198,8 @@
   });
   document.addEventListener('click',e=>{
     if(shared||!dataset)return;
-    const b=e.target.closest?.('[data-subject],[data-cell-unit],[data-target],[data-cue]');if(!b)return;
+    const b=e.target.closest?.('[data-subject],[data-cell-unit],[data-target],[data-cue],[data-review-source]');if(!b)return;
+    if(b.dataset.reviewSource){const r=progress.records.find(r=>r.id===b.dataset.reviewSource);if(!r)return;const s=progress.sessions.find(s=>s.id===r.session_id);if(s&&!s.closed){activeId=s.id;$('sessionSubject').value=s.subject;$('set').value=s.set;renderSession();}$('sourceRecord').value=r.id;$('role').value='delayed-retest';$('date').value=today();notice('Baseline linked. Choose the actual check question and its scheme; a plan is not a completed retest.');$('evidenceForm').scrollIntoView({behavior:'smooth'});}
     if(b.dataset.subject){$('subject').value=b.dataset.subject;choices();renderWorkspace();$('heatmap').scrollIntoView();}
     if(b.dataset.cellUnit){$('unit').value=b.dataset.cellUnit;$('year').value=b.dataset.cellYear;page=0;renderAtlas();}
     if(b.dataset.target)useTarget(b.dataset.target);
@@ -188,4 +207,5 @@
   });
   window.addEventListener('storage',e=>{if(!shared&&e.key===M.KEY&&e.newValue!==storedRaw)notice('Session data changed in another tab. Export this page, reload and review a merge before editing.');});
   $('date').value=today();applyShare();
+  if(typeof setInterval==='function')setInterval(renderClock,500);
 })();

@@ -34,7 +34,7 @@ test("ships the current core, Community Share, PWA shell and Physics Intelligenc
   assert.match(community, /href="\.\/\?share=1"/i);
   assert.match(community, /href="\.\/physics-intelligence\/\?share=1"/i);
   assert.equal(manifest.start_url, "./");
-  assert.match(serviceWorker, /powerhouse-v8-subject-intelligence/);
+  assert.match(serviceWorker, /powerhouse-v8-study-flow-candidate/);
   assert.match(serviceWorker, /community-share\.html/);
   assert.match(physicsModule, /Physics Intelligence \| Performance Powerhouse/i);
   assert.match(physicsModule, /href="\.\.\/index\.html"/i);
