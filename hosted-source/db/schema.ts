@@ -7,6 +7,13 @@ import {
   text,
 } from "drizzle-orm/sqlite-core";
 
+export const powerhouseSnapshots = sqliteTable("powerhouse_snapshots", {
+  userId: text("user_id").primaryKey(),
+  payloadJson: text("payload_json").notNull(),
+  revision: integer("revision").notNull().default(1),
+  updatedAt: text("updated_at").notNull(),
+});
+
 export const studySessions = sqliteTable(
   "study_sessions",
   {

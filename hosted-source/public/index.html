@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/L Performance Powerhouse · V5 Evidence Edition</title>
+<title>A/L Performance Powerhouse · V6 Evidence Edition</title>
 <meta name="description" content="A local-first G.C.E. A/L Biological Science performance and error-correction system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.">
 <style>
   :root {
@@ -447,7 +447,7 @@
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
 
-  /* Powerhouse V3 · integrated daily-output layer */
+  /* Powerhouse V6 · integrated daily-output layer */
   .daily-hero { display:grid; grid-template-columns:1.18fr .82fr; gap:14px; margin-bottom:14px; }
   .daily-summary-panel h2 { margin:6px 0 8px; font:clamp(24px,4vw,36px) "DM Serif Display", Georgia, serif; }
   .daily-summary-panel > p { margin:0 0 16px; line-height:1.65; font-size:10px; }
@@ -482,7 +482,7 @@
   .v3-badge { display:inline-flex; align-items:center; gap:6px; padding:5px 9px; border-radius:999px; border:1px solid rgba(255,209,102,.28); background:rgba(255,209,102,.08); color:var(--gold); font-size:9px; font-weight:850; letter-spacing:.04em; }
   .course-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:14px; margin-bottom:14px; }
   .course-hero { position:relative; overflow:hidden; padding:24px; }
-  .course-hero::after { content:"V3"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
+  .course-hero::after { content:"V6"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
   .course-hero h2 { margin:7px 0 8px; max-width:780px; font:clamp(25px,4vw,38px) "DM Serif Display", Georgia, serif; line-height:1.08; }
   .course-hero p { color:var(--muted); line-height:1.65; margin:0 0 15px; max-width:760px; }
   .course-status { display:flex; gap:7px; flex-wrap:wrap; }
@@ -606,17 +606,13 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 @media(max-width:600px) { .topic-row { flex-wrap:wrap; } .t-name { min-width:180px; } .proof-contract { flex-wrap:wrap; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *, *::before, *::after { animation:none!important; transition:none!important; } }
 </style>
-<style id="october-usability">
-body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queue-meta,.kpi-note,.save-note,.legend,.ov-card .lbl,.ov-card .sm {font-size:.875rem!important;line-height:1.5}
-.r-btn {min-width:36px;min-height:36px;font-size:.875rem} .tab,.icon-btn {min-height:44px} .topic-row {flex-wrap:wrap} .t-name {min-width:160px} dialog {max-height:90dvh;overflow:auto} .focus-actions {flex-wrap:wrap}
-@media(max-width:600px){.app-header{position:relative}.tabs{top:0}.brand p{white-space:normal}.header-row{flex-wrap:wrap}.r-grp{margin-left:auto}}
-@media print{.app-header,.tabs,.mobile-bar,dialog,.focus-actions{display:none!important}.content.active{display:block;width:100%;color:#111}.panel,.kpi{break-inside:avoid;background:white;color:#111;box-shadow:none}}
-</style></head>
+<link rel="stylesheet" href="./powerhouse/styles.css">
+</head>
 <body>
 
 <div class="app-header">
   <div class="shell header-row">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V5</h1><span class="edition-badge">COMMUNITY</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V6</h1><span class="edition-badge">EVIDENCE EDITION</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
     <div class="header-actions">
       <button class="backup-chip" id="backup-health" type="button" title="Backup health">Backup —</button>
       <button class="icon-btn" id="share-safe-btn" type="button" title="Share-safe mode" aria-label="Toggle share-safe mode">◫</button>
@@ -664,16 +660,16 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
 
     <section class="panel cycle-panel" aria-labelledby="cycle-title">
       <div class="cycle-head">
-        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action; progress stays in this browser so an unfinished loop is easy to resume.</p></div>
+        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action; progress is saved with your evidence when cloud saving is connected. This checklist records your actions; marked results provide the proof.</p></div>
         <div class="cycle-controls"><label class="muted" for="cycle-subject" style="font-size:10px">Subject</label><select id="cycle-subject"><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select><button class="secondary-btn" id="cycle-reset" type="button">New loop</button></div>
       </div>
-      <div class="cycle-progress" role="progressbar" aria-label="Evidence loop progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
+      <div class="cycle-progress" id="cycle-progress" role="progressbar" aria-label="Evidence loop progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
       <div class="cycle-steps" id="cycle-steps" aria-label="Evidence loop steps"></div>
       <div class="cycle-next"><div><strong id="cycle-next-title">Step 1 · Timed attempt</strong><p id="cycle-next-copy">Attempt a bounded question closed book. Keep notes and AI out of the test.</p></div><div class="cycle-next-actions"><button class="primary-btn" id="cycle-action" type="button">Start this step</button><button class="secondary-btn" id="cycle-complete" type="button">Mark step done</button></div></div>
     </section>
 
     <div class="kpi-grid" aria-label="Performance indicators">
-      <article class="kpi"><span class="kpi-label">Verified accuracy</span><strong class="kpi-value" id="kpi-accuracy">—</strong><div class="kpi-note">raw marks earned ÷ marks available</div></article>
+      <article class="kpi"><span class="kpi-label">Raw accuracy</span><strong class="kpi-value" id="kpi-accuracy">—</strong><div class="kpi-note">raw marks earned ÷ marks available</div></article>
       <article class="kpi"><span class="kpi-label">Trusted accuracy</span><strong class="kpi-value" id="kpi-trusted">—</strong><div class="kpi-note">only attempts where unsupported/lucky marks were audited</div></article>
       <article class="kpi"><span class="kpi-label">Retests due</span><strong class="kpi-value" id="kpi-due">0</strong><div class="kpi-note">unfinished delayed retrieval checks</div></article>
       <article class="kpi"><span class="kpi-label">Evidence days · 7d</span><strong class="kpi-value" id="kpi-tested">0/7</strong><div class="kpi-note">days with at least one marked attempt</div></article>
@@ -688,7 +684,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
         <div>
           <div class="eyebrow">2027 campaign · no fake countdowns</div>
           <h3 id="exam-timeline-title">Build the attempt that you want to sit.</h3>
-          <p id="exam-timeline-summary">V4 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
+          <p id="exam-timeline-summary">V6 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
         </div>
         <button class="secondary-btn" id="set-target-btn" type="button">Set planning target</button>
       </div>
@@ -720,7 +716,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
       <section class="panel planner-score">
         <div class="eyebrow">Syllabus map · context, not proof</div>
         <h2 id="planner-headline">0% period-weighted coverage</h2>
-        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V4 deliberately separates syllabus progress from evidence.</p>
+        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V6 deliberately separates syllabus progress from evidence.</p>
       </section>
       <section class="panel planner-kpis" aria-label="Syllabus plan indicators">
         <div class="planner-kpi"><span>Completed equivalent</span><b id="planner-done-periods">0</b></div>
@@ -748,7 +744,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
       <section class="panel course-hero">
         <div class="eyebrow">Course correction · brother mode</div>
         <h2 id="cc-verdict">First move: produce evidence before optimizing the system.</h2>
-        <p id="cc-reason">V3 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
+        <p id="cc-reason">V6 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
         <div class="course-status" id="cc-status-pills"></div>
       </section>
       <section class="panel">
@@ -765,7 +761,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
 
     <div class="dashboard-grid">
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V3 gives the replacement action.</p></div></div>
+        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V6 gives the replacement action.</p></div></div>
         <div class="correction-rule-grid" id="correction-rule-grid"></div>
         <div class="replacement-box"><strong id="cc-action-title">Default replacement</strong><p id="cc-action-copy">Open the current paper. Do one measurable question set. Mark it. Then decide what you actually need.</p></div>
       </section>
@@ -805,7 +801,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
       </section>
 
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">V3 doctrine</div><h3>What this site is allowed to do</h3></div></div>
+        <div class="panel-head"><div><div class="eyebrow">V6 doctrine</div><h3>What this site is allowed to do</h3></div></div>
         <div class="week-review">
           <div class="week-row"><span class="label">TEST</span><span class="value">Closed-book, timed, AI-free. The site measures; it does not rescue you mid-question.</span></div>
           <div class="week-row"><span class="label">DIAGNOSE</span><span class="value">Score + confidence + guesses + one primary error cause. Do not write essays about every mistake.</span></div>
@@ -822,7 +818,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
       <section class="panel daily-summary-panel">
         <div class="eyebrow">Daily execution layer</div>
         <h2 id="daily-headline">Turn activity into measurable output.</h2>
-        <p class="muted">The useful daily-output layer is integrated into Powerhouse V3. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
+        <p class="muted">The useful daily-output layer is integrated into Powerhouse V6. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
         <div class="daily-kpi-grid">
           <div class="planner-kpi"><span>Today · target score</span><b id="daily-target-score">0%</b></div>
           <div class="planner-kpi"><span>Today · outputs</span><b id="daily-output-count">0</b></div>
@@ -853,7 +849,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
     <section class="panel" style="margin-bottom:14px">
       <details class="daily-targets-details">
         <summary><strong>Daily targets</strong> · editable, local-only</summary>
-        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V3 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
+        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V6 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
         <div class="daily-subject-grid" id="daily-target-grid"></div>
         <div style="display:flex;justify-content:flex-end;margin-top:12px"><button class="secondary-btn" id="save-daily-targets" type="button">Save targets</button></div>
       </details>
@@ -871,7 +867,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
       <div>
         <div class="eyebrow">Error Intelligence · marks first</div>
         <h2>Repair what is repeatedly costing marks.</h2>
-        <p>V4 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
+        <p>V6 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
       </div>
       <button class="primary-btn" id="repair-log-btn" type="button">Log repair evidence</button>
     </section>
@@ -912,10 +908,10 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
     </div>
     <div class="dashboard-grid guide-lower">
       <section class="panel"><div class="eyebrow">Use AI in the right phase</div><h3>AI belongs after TEST.</h3><p class="guide-copy">Use AI to explain a diagnosed gap, compare your reasoning, generate a fresh transfer question or compress a correction rule. Do not use it to contaminate the first attempt.</p></section>
-      <section class="panel"><div class="eyebrow">Local-first privacy</div><h3>Your marks stay in this browser.</h3><p class="guide-copy">V4 does not require an account or central marks database. Export a JSON backup regularly. Share-safe mode hides personal performance details before screenshots.</p></section>
+      <section class="panel"><div class="eyebrow">Local-first privacy</div><h3>Keep your evidence safe.</h3><p class="guide-copy">Connect cloud saving on Command for a private account copy. Without it, progress remains in this browser. Export a JSON backup regularly. Share-safe mode hides personal details for screenshots; it does not change site access.</p></section>
       <section class="panel"><div class="eyebrow">Do not optimise the tracker</div><h3>The tracker is not the work.</h3><p class="guide-copy">If you are spending more time redesigning dashboards than answering and correcting questions, stop. One honest marked attempt is more useful than another system rebuild.</p></section>
       <section class="panel"><div class="eyebrow">Recommended progression</div><h3>Build exam skill gradually.</h3><p class="guide-copy">Topic questions → mixed questions → paper sections → full timed papers. Let performance evidence decide the next repair.</p></section>
-      <section class="panel"><div class="eyebrow">Validated Physics layer</div><h3>Open Physics Intelligence.</h3><p class="guide-copy">Explore the validated 2000–2025 MCQ distribution and 2019–2025 question families without treating historical frequency as prediction.</p><p style="margin:12px 0 0"><a class="secondary-btn tab-link" href="./physics-intelligence/">Open Physics Intelligence →</a></p></section>
+      <section class="panel"><div class="eyebrow">Validated Physics layer</div><h3>Open Physics Intelligence.</h3><p class="guide-copy">Explore the validated 2000–2025 MCQ distribution and 2019–2025 question families without treating historical frequency as prediction.</p><p style="margin:12px 0 0"><a class="secondary-btn tab-link" href="./physics-intelligence/">Open Physics Intelligence</a></p></section>
     </div>
   </section>
 
@@ -953,7 +949,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
 </dialog>
 
 <dialog id="timer-dialog">
-  <div class="dialog-head"><div><div class="eyebrow">Deep work · V4</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
+  <div class="dialog-head"><div><div class="eyebrow">Deep work · V6</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
   <div class="dialog-body">
     <div class="timer-phase" id="timer-phase">TEST · AI-free · closed book</div>
     <div class="timer-presets"><button class="secondary-btn" type="button" data-timer-preset="15">15 · recall</button><button class="secondary-btn" type="button" data-timer-preset="30">30 · rescue</button><button class="secondary-btn" type="button" data-timer-preset="60">60 · standard</button><button class="secondary-btn on" type="button" data-timer-preset="90">90 · deep</button><button class="secondary-btn" type="button" data-timer-preset="120">120 · full</button></div>
@@ -965,12 +961,12 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
 
 <dialog id="data-dialog">
   <div class="dialog-head"><div><div class="eyebrow">Local data</div><h2>Backup & identity</h2></div><button class="icon-btn" type="button" data-close-data aria-label="Close">×</button></div>
-  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your marks, ratings and corrections stay in this browser. V4 does not require a central account. Export a backup regularly because clearing browser/site data can erase local progress.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V4 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
+  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your browser copy works without sign-in. Connect cloud saving on Command to keep your evidence in your account across devices. Export a JSON backup for an independent copy.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V6 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
 </dialog>
 
 <dialog id="welcome-dialog">
   <form id="welcome-form">
-    <div class="dialog-head"><div><div class="eyebrow">V4 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
+    <div class="dialog-head"><div><div class="eyebrow">V6 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
     <div class="dialog-body">
       <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance data stays only in this browser unless you export it yourself.</p>
       <div class="form-grid">
@@ -997,8 +993,8 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
   <div class="owner">Legacy dashboard migration shell</div>
 </header>
 
-<aside class="proof-contract" aria-label="V5 evidence rule">
-  <strong>V5 EVIDENCE RULE</strong>
+<aside class="proof-contract" aria-label="V6 evidence rule">
+  <strong>V6 EVIDENCE RULE</strong>
   <span>Attempt → Mark → Diagnose → Repair → Transfer → Retest. A score without a repaired error is only a signal.</span>
 </aside>
 
@@ -1050,6 +1046,7 @@ body {font-size:1rem} .brand p,.tab,.t-name,.u-name,.prog-top,.field label,.queu
 </div>
 
 <script src="./evidence-rules.js"></script>
+<script src="./powerhouse/model.js"></script>
 <script>
 const SYL = {
   physics: { color:'var(--phy)', abbr:'phy', units:[
@@ -1354,7 +1351,7 @@ function defaultState() {
   try { migratedRatings = JSON.parse(localStorage.getItem(LEGACY_KEY) || '{}') || {}; } catch (_) {}
   return {
     version: 8,
-    productVersion: 'V4',
+    productVersion: 'V6',
     profile: { name: 'A/L Student', year: '2027', target: '', line: '2027 A/L Bio Science · evidence over guesswork' },
     profileSetupComplete: false,
     ratings: migratedRatings,
@@ -1391,7 +1388,7 @@ function loadState() {
     const migrated = {
       ...base, ...saved,
       version: 8,
-      productVersion: 'V4',
+      productVersion: 'V6',
       profileSetupComplete: saved.profileSetupComplete ?? true,
       profile: { ...base.profile, ...(saved.profile || {}) },
       ratings: saved.ratings && typeof saved.ratings === 'object' ? saved.ratings : base.ratings,
@@ -1429,11 +1426,7 @@ let plannerUnfinishedOnly = false;
 const $ = (id) => document.getElementById(id);
 const topicKey = (subject, unitIndex, topicIndex) => `${subject}|${unitIndex}|${topicIndex}`;
 const titleCase = (value) => value ? value[0].toUpperCase() + value.slice(1) : '';
-const todayISO = () => {
-  const parts = new Intl.DateTimeFormat('en-GB', { timeZone:'Asia/Colombo', year:'numeric', month:'2-digit', day:'2-digit' }).formatToParts(new Date());
-  const value = name => parts.find(p => p.type === name).value;
-  return `${value('year')}-${value('month')}-${value('day')}`;
-};
+const todayISO = () => PowerhouseModel.day();
 const addDays = (date, days) => PowerhouseEvidence.addDays(date, days);
 const dateDiffDays = (from, to) => Math.ceil((new Date(`${to}T12:00:00`) - new Date(`${from}T12:00:00`)) / 86400000);
 const escapeHTML = (value = '') => String(value).replace(/[&<>'"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' }[c]));
@@ -1442,6 +1435,7 @@ const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Ma
 function saveState() {
   try {
     localStorage.setItem(APP_KEY, JSON.stringify(state));
+    window.PowerhouseUpgrade?.onSave();
     return true;
   } catch (_) {
     toast('Progress could not be saved. Export a backup before closing.');
@@ -1623,7 +1617,7 @@ function renderCourseCorrection() {
 
   if (!outputToday) {
     $('cc-verdict').textContent = 'Do not optimize the system yet. Produce one marked output first.';
-    $('cc-reason').textContent = 'Your highest-return course correction today is execution: one closed-book block, strict marking, then the smallest repair. Planning before evidence is exactly the loop V3 is designed to interrupt.';
+    $('cc-reason').textContent = 'Your highest-return course correction today is execution: one closed-book block, strict marking, then the smallest repair. Planning before evidence is exactly the loop V6 is designed to interrupt.';
   } else if (overdue > 0) {
     $('cc-verdict').textContent = `Close ${overdue} overdue retest${overdue === 1 ? '' : 's'} before expanding the backlog.`;
     $('cc-reason').textContent = 'An old correction that has never survived delayed retrieval is still open. Closure outranks collecting another resource or starting another chapter.';
@@ -2152,7 +2146,7 @@ function renderExamTimeline() {
     $('exam-timeline-summary').textContent = `Saved planning date: ${targetDate}. Update it whenever the official timetable or your campaign plan changes.`;
   } else {
     $('exam-timeline-title').textContent = 'Build the attempt that you want to sit.';
-    $('exam-timeline-summary').textContent = 'V4 is aligned to your chosen A/L cycle. No unofficial countdown is loaded; execution evidence comes first.';
+    $('exam-timeline-summary').textContent = 'V6 is aligned to your chosen A/L cycle. No unofficial countdown is loaded; execution evidence comes first.';
   }
 }
 
@@ -2161,13 +2155,13 @@ function renderRetests() {
   const completed = state.retests.filter(r => r.completedAt).length;
   const total = state.retests.length;
   $('retest-status').textContent = total ? `${completed}/${total} scheduled retrieval checks completed. Fresh questions only.` : 'Mastery requires fresh retrieval after time has passed.';
-  const dueFirst = pending.filter(r => r.due <= addDays(todayISO(), 7)).slice(0, 6);
+  const dueFirst = actionableRetests().filter(r => r.due <= addDays(todayISO(), 7)).slice(0, 6);
   $('retest-queue').innerHTML = dueFirst.length ? dueFirst.map(r => {
     const topic = getTopic(r.topicKey);
     if (!topic) return '';
     const overdue = r.due < todayISO();
     const dueText = overdue ? `${Math.floor((new Date(todayISO()) - new Date(r.due)) / 86400000)}d overdue` : r.due === todayISO() ? 'due today' : `due ${r.due}`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${r.stage === 1 ? 'fresh-transfer check' : 'delayed stability check'}</div></div><button class="log-mini queue-due" data-retest-topic="${r.topicKey}" data-retest-type="${r.stage === 1 ? 'fresh-transfer' : 'delayed-retest'}">${dueText}</button></div>`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${r.stage === 1 ? 'fresh-transfer check' : 'delayed stability check'}</div></div><button class="log-mini queue-due" data-retest-source="${r.sourceAttemptId}" data-retest-topic="${r.topicKey}" data-retest-type="${r.stage === 1 ? 'fresh-transfer' : 'delayed-retest'}">${dueText}</button></div>`;
   }).join('') : '<div class="empty-state">No retests queued yet. Log a marked attempt with lost marks; the dashboard will schedule the 3-day and 7-day checks.</div>';
 }
 
@@ -2212,7 +2206,7 @@ function renderAttempts() {
 }
 
 function renderNextAction() {
-  const overdue = pendingRetests().find(r => r.due <= todayISO());
+  const overdue = actionableRetests().find(r => r.due <= todayISO());
   const priority = priorityTopics(1)[0];
   let topic = overdue ? getTopic(overdue.topicKey) : priority;
   focusTopicKey = topic?.key || '';
@@ -2220,7 +2214,7 @@ function renderNextAction() {
   if (!hasMarkedOutputToday()) {
     focusRecommendedMinutes = 90;
     $('next-action-title').textContent = topic ? `First proof today: ${topic.name}` : 'First proof today: one honest timed attempt.';
-    $('next-action-copy').textContent = 'Before planning, collecting or optimizing anything else, create one marked result. This is V4’s main execution guard.';
+    $('next-action-copy').textContent = 'Before planning, collecting or optimizing anything else, create one marked result. This is V6’s main execution guard.';
     $('next-action-meta').innerHTML = `<span class="pill">90-minute deep block</span><span class="pill">closed book</span><span class="pill">AI-free TEST</span><span class="pill">strict marking after</span>`;
   } else if (overdue && topic) {
     focusRecommendedMinutes = 30;
@@ -2239,7 +2233,7 @@ function renderNextAction() {
     $('next-action-meta').innerHTML = '<span class="pill">90-minute deep block</span><span class="pill">closed book</span><span class="pill">strict marking</span>';
   }
   $('start-focus-btn').textContent = `Start ${focusRecommendedMinutes}-min block`;
-  const trackerType = overdue ? 'delayed-retest' : topic ? 'repair' : 'timed-paper';
+  const trackerType = overdue ? (overdue.stage === 1 ? 'fresh-transfer' : 'delayed-retest') : topic ? 'repair' : 'timed-paper';
   const trackerParams = new URLSearchParams({
     subject: topic?.subject || 'physics',
     type: trackerType,
@@ -2340,13 +2334,13 @@ function renderRepairs() {
     return `<div class="queue-item repair-priority"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="priority-reasons">${titleCase(topic.subject)} · ${reason || 'repair evidence'}</div></div><div><div class="repair-priority-score">P${Math.round(row.score)}</div><button class="log-mini" data-repair-topic="${row.topicKey}" data-repair-type="reattempt">Repair</button></div></div>`;
   }).join('') : '<div class="empty-state">No repair intelligence yet. Log one honest marked attempt with the dominant cause of any lost marks.</div>';
 
-  const pending = pendingRetests().slice(0,6);
+  const pending = actionableRetests().slice(0,6);
   $('repair-transfer-list').innerHTML = pending.length ? pending.map(r => {
     const topic = getTopic(r.topicKey); if (!topic) return '';
     const stageName = r.stage === 1 ? 'Fresh transfer' : 'Delayed stability';
     const type = r.stage === 1 ? 'fresh-transfer' : 'delayed-retest';
     const due = r.due < todayISO() ? `${Math.floor((new Date(todayISO()) - new Date(r.due))/86400000)}d overdue` : r.due === todayISO() ? 'due today' : `due ${r.due}`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${stageName}</div></div><button class="log-mini queue-due" data-repair-topic="${r.topicKey}" data-repair-type="${type}">${due}</button></div>`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${stageName}</div></div><button class="log-mini queue-due" data-repair-source="${r.sourceAttemptId}" data-repair-topic="${r.topicKey}" data-repair-type="${type}">${due}</button></div>`;
   }).join('') : '<div class="empty-state">No transfer/retest checks are waiting. Lost marks or unsupported guesses will create a closure queue automatically.</div>';
 
   $('subject-playbooks').innerHTML = `
@@ -2359,6 +2353,7 @@ function refreshAll() {
   renderKPIs(); renderExamTimeline(); renderPlanner(); renderDailyOutput(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction(); renderCourseCorrection(); renderRepairs(); refreshBackupHealth();
   SUBJECTS.forEach(updateSubjectPanel);
   $('identity-line').textContent = `${state.profile.name} · ${profileDisplayLine()}`;
+  window.PowerhouseUpgrade?.onRender();
 }
 
 function fillTopicSelect(subject, selectedKey = '') {
@@ -2370,6 +2365,9 @@ function openAttemptDialog(key = '', type = 'topic-question') {
   const topic = getTopic(key);
   const subject = topic?.subject || (SUBJECTS.includes(activePanel) ? activePanel : 'physics');
   $('attempt-form').reset();
+  if ($('v6-edit-id')) $('v6-edit-id').value = '';
+  if ($('v6-source-id')) $('v6-source-id').value = '';
+  $('attempt-dialog').querySelector('h2').textContent = 'Log a completed attempt';
   $('attempt-date').value = todayISO();
   $('attempt-subject').value = subject;
   $('attempt-type').value = type;
@@ -2381,7 +2379,10 @@ function openAttemptDialog(key = '', type = 'topic-question') {
 
 function completeEligibleRetests(attempt) {
   const eligible = PowerhouseEvidence.eligibleRetest(attempt, state.retests, state.attempts);
-  if (eligible) { eligible.completedAt = attempt.date; eligible.completedByAttemptId = attempt.id; }
+  if (eligible) {
+    eligible.completedAt = attempt.date; eligible.completedByAttemptId = attempt.id;
+    if (eligible.stage === 1) { const delayed = state.retests.find(r => r.sourceAttemptId === eligible.sourceAttemptId && r.stage === 2); if (delayed) delayed.due = [delayed.due, addDays(attempt.date, 4)].sort().pop(); }
+  }
   return Boolean(eligible);
 }
 
@@ -2393,6 +2394,15 @@ function scheduleRetests(attempt) {
     { id: uid(), sourceAttemptId: attempt.id, topicKey: attempt.topicKey, due: addDays(attempt.date, 7), stage: 2, completedAt: null }
   );
 }
+
+function rebuildRetests() {
+  const existing = new Map(state.retests.map(r => [`${r.sourceAttemptId}|${r.stage}`, r.id]));
+  state.retests = [];
+  [...state.attempts].sort((a,b) => String(a.date + a.createdAt).localeCompare(String(b.date + b.createdAt))).forEach(a => { completeEligibleRetests(a); scheduleRetests(a); });
+  state.retests.forEach(r => { r.id = existing.get(`${r.sourceAttemptId}|${r.stage}`) || r.id; });
+}
+
+function actionableRetests() { return pendingRetests().filter(r => r.stage === 1 || state.retests.some(t => t.sourceAttemptId === r.sourceAttemptId && t.stage === 1 && t.completedAt)); }
 
 function submitAttempt(event) {
   event.preventDefault();
@@ -2412,15 +2422,19 @@ function submitAttempt(event) {
   const minutes = Number($('attempt-minutes').value);
   if (!Number.isInteger(items) || items < 1 || !Number.isInteger(guesses) || guesses > items || !Number.isFinite(minutes) || minutes < 0 || (trustedEarned !== null && !Number.isFinite(trustedEarned))) { toast('Check item count, guesses, time and trusted marks.'); return; }
   const attempt = {
-    id: uid(), date: $('attempt-date').value, subject: $('attempt-subject').value, topicKey: $('attempt-topic').value,
+    id: $('v6-edit-id')?.value || uid(), date: $('attempt-date').value, sourceAttemptId: $('v6-source-id')?.value || null, subject: $('attempt-subject').value, topicKey: $('attempt-topic').value,
     type: $('attempt-type').value,
     question: $('attempt-question').value.trim(), unaided: $('attempt-unaided').checked, novelQuestion: $('attempt-novel').checked, earned, trustedEarned, total, minutes: Number($('attempt-minutes').value),
     items: Math.max(1, Number($('attempt-items').value || 1)), guesses,
     confidence: $('attempt-confidence').value, error, note: $('attempt-note').value.trim(), createdAt: new Date().toISOString()
   };
-  const closedRetest = completeEligibleRetests(attempt);
-  state.attempts.push(attempt);
-  scheduleRetests(attempt);
+  const validation = PowerhouseModel.validateAttempt(attempt, todayISO());
+  if (validation) { toast(validation); return; }
+  const existingIndex = state.attempts.findIndex(a => a.id === attempt.id);
+  if (existingIndex >= 0) { attempt.createdAt = state.attempts[existingIndex].createdAt; attempt.updatedAt = new Date().toISOString(); snapshotState('pre-attempt-edit'); state.attempts[existingIndex] = attempt; }
+  else state.attempts.push(attempt);
+  rebuildRetests();
+  const closedRetest = state.retests.some(r => r.completedByAttemptId === attempt.id);
   saveState();
   $('attempt-dialog').close();
   refreshAll();
@@ -2431,8 +2445,7 @@ function deleteAttempt(id) {
   const attempt = state.attempts.find(a => a.id === id);
   if (!attempt || !confirm(`Delete the logged attempt “${attempt.question}”?`)) return;
   state.attempts = state.attempts.filter(a => a.id !== id);
-  state.retests = state.retests.filter(r => r.sourceAttemptId !== id);
-  state.retests.forEach(r => { if (r.completedByAttemptId === id) { r.completedAt = null; delete r.completedByAttemptId; } });
+  rebuildRetests();
   saveState(); refreshAll(); toast('Attempt deleted.');
 }
 
@@ -2453,7 +2466,7 @@ function readCycle() {
   } catch (_) { return { subject:'biology', step:0, done:[] }; }
 }
 let evidenceCycle = readCycle();
-function saveCycle() { try { localStorage.setItem(CYCLE_KEY, JSON.stringify(evidenceCycle)); } catch (_) {} }
+function saveCycle() { try { localStorage.setItem(CYCLE_KEY, JSON.stringify(evidenceCycle)); window.PowerhouseUpgrade?.onSave(); } catch (_) {} }
 function renderCycle() {
   const current = CYCLE_STEPS[evidenceCycle.step];
   $('cycle-subject').value = evidenceCycle.subject;
@@ -2510,7 +2523,7 @@ function runCycleAction() {
 
 function renderTimer() {
   $('timer-phase').textContent = 'TEST · AI-free · closed book';
-  $('timer-note').textContent = timerPresetMinutes === 30 ? 'Recovery mode: produce a real answer now. Mark immediately after. Do not turn a bad day into a new system.' : 'Long-form focus is the default. Phone away; no notes or AI during TEST. Mark and diagnose before opening more resources.';
+  $('timer-note').textContent = timerPresetMinutes === 15 ? 'One bounded closed-book question or recall set. Use the last part of the block to mark; record only work actually completed.' : timerPresetMinutes === 30 ? 'Recovery mode: produce a real answer now. Mark immediately after. Do not turn a bad day into a new system.' : 'Long-form focus is the default. Phone away; no notes or AI during TEST. Mark and diagnose before opening more resources.';
   const mins = Math.floor(timerRemaining / 60);
   const secs = timerRemaining % 60;
   $('timer-display').textContent = `${String(mins).padStart(mins >= 100 ? 3 : 2, '0')}:${String(secs).padStart(2, '0')}`;
@@ -2526,14 +2539,29 @@ function timerBeep() {
   } catch (_) {}
 }
 
+const FOCUS_TIMER_KEY = 'alpp_focus_timer_v1';
+function persistFocusTimer() { try { localStorage.setItem(FOCUS_TIMER_KEY, JSON.stringify({remaining:timerRemaining,deadline:timerDeadline,preset:timerPresetMinutes,topicKey:focusTopicKey,label:focusCustomLabel,at:Date.now()})); } catch (_) {} }
+function restoreFocusTimer() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(FOCUS_TIMER_KEY) || 'null');
+    if (!saved || Date.now()-saved.at>86400000 || !Number.isFinite(saved.remaining) || !Number.isFinite(saved.preset) || saved.preset<1 || saved.preset>360) return;
+    timerPresetMinutes=saved.preset; timerRemaining=Math.max(0,Math.min(saved.remaining,saved.preset*60));
+    focusTopicKey=saved.topicKey||'';focusCustomLabel=saved.label||'';
+    $('timer-topic').textContent=focusCustomLabel||getTopic(focusTopicKey)?.name||'Resumed closed-book block';
+    if (saved.deadline) { timerDeadline=saved.deadline;timerHandle=setInterval(syncTimerFromClock,250);syncTimerFromClock(); }
+    renderTimer();
+  } catch (_) {}
+}
+
 function setTimerPreset(minutes) {
   if (timerHandle) { clearInterval(timerHandle); timerHandle = null; timerDeadline = null; }
   timerPresetMinutes = Number(minutes) || DEFAULT_FOCUS_MINUTES;
   timerRemaining = timerPresetMinutes * 60;
-  renderTimer();
+  persistFocusTimer(); renderTimer();
 }
 
 function startFocus(minutes = focusRecommendedMinutes, label = '') {
+  if (timerHandle || timerRemaining < timerPresetMinutes*60) { $('timer-dialog').showModal(); renderTimer(); toast('Resume the current block, or Reset before starting a new one.'); return; }
   const topic = getTopic(focusTopicKey);
   focusCustomLabel = label || '';
   $('timer-topic').textContent = focusCustomLabel || topic?.name || 'Fresh official question / paper block';
@@ -2551,23 +2579,28 @@ function syncTimerFromClock() {
 function toggleTimer() {
   if (timerHandle) {
     syncTimerFromClock();
-    clearInterval(timerHandle); timerHandle = null; timerDeadline = null; renderTimer(); return;
+    clearInterval(timerHandle); timerHandle = null; timerDeadline = null; persistFocusTimer(); renderTimer(); return;
   }
   timerDeadline = Date.now() + timerRemaining * 1000;
   timerHandle = setInterval(syncTimerFromClock, 250);
-  syncTimerFromClock();
+  persistFocusTimer(); syncTimerFromClock();
 }
 
 function nextTimerPhase() { finishTimer(); }
 
 function finishTimer() {
+  if (timerDeadline) timerRemaining=Math.max(0,Math.ceil((timerDeadline-Date.now())/1000));
+  const usedMinutes=Math.max(0,Math.ceil((timerPresetMinutes*60-timerRemaining)/60));
+  try { localStorage.removeItem(FOCUS_TIMER_KEY); } catch (_) {}
   clearInterval(timerHandle); timerHandle = null; timerDeadline = null;
   if ($('timer-dialog').open) $('timer-dialog').close();
   openAttemptDialog(focusTopicKey, focusCustomLabel.startsWith('Full paper') ? 'full-paper' : 'topic-question');
-  toast(`${timerPresetMinutes}-minute block closed. Mark honestly and log the evidence now.`);
+  if (usedMinutes > 0) $('attempt-minutes').value=String(usedMinutes);
+  timerRemaining=timerPresetMinutes*60;
+  toast(`Block closed after ${usedMinutes} minute${usedMinutes===1?'':'s'}. Record only completed work.`);
 }
 
-function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerDeadline = null; timerRemaining = timerPresetMinutes * 60; renderTimer(); }
+function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerDeadline = null; timerRemaining = timerPresetMinutes * 60; persistFocusTimer(); renderTimer(); }
 
 function exportData() {
   snapshotState('pre-export');
@@ -2575,7 +2608,7 @@ function exportData() {
   saveState();
   const blob = new Blob([JSON.stringify({ ...state, evidenceCycle }, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob); const link = document.createElement('a');
-  link.href = url; link.download = `al-performance-powerhouse-v5-backup-${todayISO()}.json`; document.body.appendChild(link); link.click(); link.remove();
+  link.href = url; link.download = `al-performance-powerhouse-v6-backup-${todayISO()}.json`; document.body.appendChild(link); link.click(); link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
   $('backup-status').textContent = `Last backup exported: ${new Date(state.lastExportedAt).toLocaleString()}`;
   toast('Backup exported.');
@@ -2620,7 +2653,7 @@ function importData(file) {
         const previous = state;
         const base = defaultState();
         state = {
-          ...base, ...incoming, version: 8, productVersion:'V4',
+          ...base, ...incoming, version: 8, productVersion:'V6',
           profileSetupComplete: true,
           profile: { ...base.profile, ...(incoming.profile || {}) },
           ratings: incoming.ratings && typeof incoming.ratings === 'object' ? incoming.ratings : base.ratings,
@@ -2708,11 +2741,11 @@ function initEvents() {
   $('save-daily-targets').addEventListener('click', saveDailyTargets);
   $('daily-history-body').addEventListener('click', e => { const b = e.target.closest('[data-delete-daily]'); if (b) deleteDailyEntry(b.dataset.deleteDaily); });
   document.querySelectorAll('[data-close-dialog]').forEach(b => b.addEventListener('click', () => $('attempt-dialog').close()));
-  $('retest-queue').addEventListener('click', e => { const b = e.target.closest('[data-retest-topic]'); if (b) openAttemptDialog(b.dataset.retestTopic, b.dataset.retestType || 'fresh-transfer'); });
+  $('retest-queue').addEventListener('click', e => { const b = e.target.closest('[data-retest-topic]'); if (b) { openAttemptDialog(b.dataset.retestTopic, b.dataset.retestType || 'fresh-transfer'); if ($('v6-source-id')) $('v6-source-id').value = b.dataset.retestSource || ''; } });
   $('priority-topics').addEventListener('click', e => { const b = e.target.closest('[data-priority-topic]'); if (b) openAttemptDialog(b.dataset.priorityTopic); });
   $('calibration-risk').addEventListener('click', e => { const b = e.target.closest('[data-calibration-topic]'); if (b) openAttemptDialog(b.dataset.calibrationTopic); });
   $('repair-log-btn').addEventListener('click', () => openAttemptDialog('', 'reattempt'));
-  $('panel-repairs').addEventListener('click', e => { const b=e.target.closest('[data-repair-topic]'); if (b) openAttemptDialog(b.dataset.repairTopic, b.dataset.repairType || 'reattempt'); });
+  $('panel-repairs').addEventListener('click', e => { const b=e.target.closest('[data-repair-topic]'); if (b) { openAttemptDialog(b.dataset.repairTopic, b.dataset.repairType || 'reattempt'); if ($('v6-source-id')) $('v6-source-id').value = b.dataset.repairSource || ''; } });
   $('share-safe-btn').addEventListener('click', toggleShareSafe);
   $('mobile-quick-log').addEventListener('click', () => openAttemptDialog());
   $('backup-health').addEventListener('click', () => $('data-btn').click());
@@ -2734,7 +2767,7 @@ function initEvents() {
     $('planner-unfinished-only').textContent = plannerUnfinishedOnly ? 'Showing unfinished' : 'Unfinished only';
     renderPlanner();
   });
-  document.querySelectorAll('[data-close-timer]').forEach(b => b.addEventListener('click', () => { clearInterval(timerHandle); timerHandle = null; timerDeadline = null; $('timer-dialog').close(); }));
+  document.querySelectorAll('[data-close-timer]').forEach(b => b.addEventListener('click', () => { if (timerDeadline) timerRemaining=Math.max(0,Math.ceil((timerDeadline-Date.now())/1000)); clearInterval(timerHandle); timerHandle = null; timerDeadline = null; persistFocusTimer(); $('timer-dialog').close(); }));
   $('data-btn').addEventListener('click', () => {
     $('profile-name').value = state.profile.name;
     $('profile-year').value = state.profile.year || '2027';
@@ -2762,7 +2795,7 @@ function initEvents() {
   $('import-data').addEventListener('click', () => $('import-file').click());
   $('import-file').addEventListener('change', e => { if (e.target.files[0]) importData(e.target.files[0]); e.target.value = ''; });
   $('reset-data').addEventListener('click', () => {
-    const typed = prompt('This resets ratings, syllabus progress, attempts, retests, daily output and V4 execution-guard history. A recovery snapshot is created first. Type RESET to continue.');
+    const typed = prompt('This resets ratings, syllabus progress, attempts, retests, daily output and V6 execution-guard history. A recovery snapshot is created first. Type RESET to continue.');
     if (typed !== 'RESET') { toast('Reset cancelled.'); return; }
     snapshotState('pre-reset');
     state = defaultState(); state.ratings = {}; saveState(); refreshAll(); $('data-dialog').close();
@@ -2774,6 +2807,7 @@ SUBJECTS.forEach(buildSubjectPanel);
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 initEvents();
 refreshAll();
+restoreFocusTimer();
 try {
   const hashPanel = location.hash.replace('#','');
   if (['command','physics','chemistry','biology','repairs','course','daily','planner','attempts','guide'].includes(hashPanel)) navigate(hashPanel);
@@ -2796,5 +2830,6 @@ try {
 } catch (_) {}
 setTimeout(showWelcome, 0);
 </script>
+<script src="./powerhouse/app.js"></script>
 </body>
 </html>

@@ -65,7 +65,9 @@ globalThis.PowerhouseEvidence = Object.freeze({
     const reference = value => String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
     return retests.filter(retest => {
       const source = attempts.find(item => item.id === retest.sourceAttemptId);
-      return !retest.completedAt && retest.stage === stage && retest.topicKey === attempt.topicKey && retest.due <= attempt.date && source && source.date < attempt.date && reference(source.question) !== reference(attempt.question);
+      const transfer = retests.find(item => item.sourceAttemptId === retest.sourceAttemptId && item.stage === 1);
+      const stageReady = stage === 1 || (transfer?.completedAt && transfer.completedAt < attempt.date && attempts.some(item => item.id === transfer.completedByAttemptId && reference(item.question) !== reference(attempt.question)));
+      return stageReady && (!attempt.sourceAttemptId || attempt.sourceAttemptId === retest.sourceAttemptId) && !retest.completedAt && retest.stage === stage && retest.topicKey === attempt.topicKey && retest.due <= attempt.date && source && source.date < attempt.date && reference(source.question) !== reference(attempt.question);
     }).sort((a, b) => a.due.localeCompare(b.due))[0] || null;
   },
   normalizeCycle(value, subjects, count) {

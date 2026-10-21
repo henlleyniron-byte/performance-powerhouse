@@ -79,7 +79,7 @@ function colomboDay(value=new Date()){
 function localDateLabel(value){return new Intl.DateTimeFormat('en-GB',{timeZone:TIMEZONE,day:'2-digit',month:'short',year:'numeric'}).format(new Date(value))}
 function durationLabel(seconds){const mins=Math.round(Number(seconds||0)/60);if(mins<60)return `${mins}m`;const h=Math.floor(mins/60),m=mins%60;return `${h}h${m?` ${m}m`:''}`}
 function recentSessions(days=7){const cut=Date.now()-days*86400000;return state.sessions.filter(s=>new Date(s.startedAt).getTime()>=cut)}
-function isEvidence(session){return EVIDENCE_KINDS.has(session.evidenceKind)}
+function isEvidence(session){return EVIDENCE_KINDS.has(session.evidenceKind)&&!PASSIVE_TYPES.has(session.sessionType)&&(Number(session.outputCount)>0||!!session.linkedAttemptId)}
 
 function populateSelects(){
   const options=SESSION_TYPES.map(([v,l])=>`<option value="${v}">${l}</option>`).join('');
@@ -196,7 +196,7 @@ function renderHistory(){
   const rows=filteredSessions();$('historyBody').innerHTML=rows.length?rows.map(s=>`<tr><td class="private-value">${localDateLabel(s.startedAt)}<small>${new Intl.DateTimeFormat('en-GB',{timeZone:TIMEZONE,hour:'2-digit',minute:'2-digit'}).format(new Date(s.startedAt))}</small></td><td>${SUBJECT_LABELS[s.subject]}</td><td><strong>${TYPE_LABELS[s.sessionType]}</strong><small>${escapeHTML(s.topic||'No topic recorded')}</small></td><td>${durationLabel(s.durationSeconds)}</td><td><span class="tag ${isEvidence(s)?'good':'warn'}">${escapeHTML(s.evidenceKind==='none'?'No evidence':s.evidenceKind)}</span><small>${s.outputCount?`${s.outputCount} ${escapeHTML(s.outputUnit)}`:''}</small></td><td><span class="tag ${s.syncState==='synced'?'good':'warn'}">${s.syncState==='synced'?'Synced':'Pending'}</span></td><td><div class="row-actions"><button class="mini-button" data-edit="${escapeAttribute(s.id)}">Edit</button><button class="mini-button delete" data-delete="${escapeAttribute(s.id)}">Delete</button></div></td></tr>`).join(''):'<tr><td colspan="7"><div class="empty">No sessions match these filters. Complete one focused block before optimizing the tracker.</div></td></tr>';
 }
 
-function weekBounds(){const today=new Date(colomboDay()+'T12:00:00Z'),day=(today.getUTCDay()+6)%7,start=new Date(today.getTime()-day*86400000),end=new Date(start.getTime()+6*86400000);return{start:start.toISOString().slice(0,10),end:end.toISOString().slice(0,10)}}
+function weekBounds(){const today=colomboDay(),now=new Date(today+'T12:00:00Z'),day=(now.getUTCDay()+6)%7,start=new Date(now.getTime()-day*86400000),end=new Date(start.getTime()+6*86400000);return{start:start.toISOString().slice(0,10),end:end.toISOString().slice(0,10)}}
 function renderGoal(){
   const bounds=weekBounds(),goal=state.goals.find(g=>g.period==='weekly'&&g.metric==='evidence-sessions'&&g.startDate===bounds.start);const target=Number(goal?.target||5);$('goalTarget').value=String(target);
   const count=state.sessions.filter(s=>isEvidence(s)&&colomboDay(s.startedAt)>=bounds.start&&colomboDay(s.startedAt)<=bounds.end).length;$('goalBar').style.width=`${Math.min(100,count/target*100)}%`;$('goalSummary').textContent=`${count}/${target} evidence-producing sessions this week. The goal rewards useful output, not desk time.`;

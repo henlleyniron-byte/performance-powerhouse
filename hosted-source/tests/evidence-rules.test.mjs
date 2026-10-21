@@ -7,7 +7,12 @@ const retests = [1,2].map(stage => ({id:String(stage),sourceAttemptId:source.id,
 const proof = {id:'new',topicKey:source.topicKey,question:'2024 Q2',date:'2026-10-08',type:'fresh-transfer',earned:5,total:5,guesses:0,error:'',unaided:true,novelQuestion:true};
 test('only a successful unaided fresh question closes the matching due retest stage', () => {
   assert.equal(rules.eligibleRetest(proof,retests,[source]).id,'1');
-  assert.equal(rules.eligibleRetest({...proof,type:'delayed-retest'},retests,[source]).id,'2');
+  assert.equal(rules.eligibleRetest({...proof,type:'delayed-retest'},retests,[source]),null);
+  const transferred = {...proof,id:'transfer',date:'2026-10-04'};
+  const completed = retests.map(r=>r.stage===1?{...r,completedAt:'2026-10-04',completedByAttemptId:'transfer'}:r);
+  assert.equal(rules.eligibleRetest({...proof,type:'delayed-retest',question:'2025 Q3'},completed,[source,transferred]).id,'2');
+  assert.equal(rules.eligibleRetest({...proof,type:'delayed-retest'},completed,[source,transferred]),null);
+  assert.equal(rules.eligibleRetest({...proof,sourceAttemptId:'different-source'},retests,[source]),null);
   for(const patch of [{type:'topic-question'},{type:'reattempt'},{earned:4},{error:'K'},{guesses:1},{unaided:false},{novelQuestion:false},{question:'  2023 Q1 '},{trustedEarned:4},{date:'2026-10-03'},{topicKey:'physics|0|0'}]) assert.equal(rules.eligibleRetest({...proof,...patch},retests,[source]),null,JSON.stringify(patch));
   assert.equal(rules.eligibleRetest({...proof,type:'delayed-retest',date:'2026-10-07'},retests,[source]),null);
   assert.equal(rules.eligibleRetest(proof,retests,[]),null);
