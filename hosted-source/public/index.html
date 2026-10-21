@@ -608,7 +608,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 </style>
 <link rel="stylesheet" href="./powerhouse/styles.css">
 <link rel="stylesheet" href="./powerhouse/planning.css">
-<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script><link rel="stylesheet" href="/workspace-shell/shell.css"></head>
+<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script><link rel="stylesheet" href="/workspace-shell/shell.css"><link rel="stylesheet" href="/powerhouse/flagship.css"></head>
 <body>
 
 <div class="app-header">
@@ -623,28 +623,26 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   </div>
 </div>
 
-<nav class="tabs" id="app-tabs" aria-label="Dashboard sections">
-  <a class="tab tab-link" href="./practical-lab/" id="practical-lab-link">Practical Lab</a>
-  <a class="tab tab-link" href="./study-library/?view=practice">Private practice desk</a><a class="tab tab-link" href="./subscription-lab/">Compare one AI task</a>
-  <a class="tab tab-link" href="./subscription-playbook/">AI Subscription Playbook</a>
-  <button class="tab active" type="button" data-panel="command">Command</button>
-  <button class="tab" type="button" data-panel="physics">Physics</button>
-  <a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
-  <a class="tab tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a>
-  <a class="tab tab-link" href="./biology-intelligence/">Biology Intelligence</a>
-  <a class="tab tab-link" href="./science-intelligence/">Science Intelligence Hub</a>
-  <a class="tab tab-link" href="./study-library/">Private Study Library</a>
-  <a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
-  <a class="tab tab-link" href="./resource-desk/index.html">Resource Desk</a>
-  <button class="tab" type="button" data-panel="chemistry">Chemistry</button>
-  <button class="tab" type="button" data-panel="biology">Biology</button>
-  <button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
-  <button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge">ON</span></button>
-  <button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
-  <button class="tab" type="button" data-panel="planner">Syllabus Map</button>
-  <button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count">0</span></button>
-  <button class="tab" type="button" data-panel="guide">Guide</button>
-</nav>
+<nav class="tabs flagship-tabs" id="app-tabs" aria-label="Dashboard sections"><button class="tab active" type="button" data-panel="command">Command</button>
+<button class="tab" type="button" data-panel="physics">Physics</button>
+<button class="tab" type="button" data-panel="chemistry">Chemistry</button>
+<button class="tab" type="button" data-panel="biology">Biology</button>
+<button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
+<button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count">0</span></button>
+<button class="tab" type="button" data-panel="guide">Guide</button><details class="workspace-more"><summary>More workspaces</summary><div class="workspace-menu"><a class="tab tab-link" href="./practical-lab/" id="practical-lab-link">Practical Lab</a>
+<a class="tab tab-link" href="./study-library/?view=practice">Private practice desk</a>
+<a class="tab tab-link" href="./subscription-lab/">Compare one AI task</a>
+<a class="tab tab-link" href="./subscription-playbook/">AI Subscription Playbook</a>
+<a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
+<a class="tab tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a>
+<a class="tab tab-link" href="./biology-intelligence/">Biology Intelligence</a>
+<a class="tab tab-link" href="./science-intelligence/">Science Intelligence Hub</a>
+<a class="tab tab-link" href="./study-library/">Private Study Library</a>
+<a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
+<a class="tab tab-link" href="./resource-desk/index.html">Resource Desk</a>
+<button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge">ON</span></button>
+<button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
+<button class="tab" type="button" data-panel="planner">Syllabus Map</button></div></details></nav>
 
 <main>
   <section class="content active" id="panel-command">
@@ -926,7 +924,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   <section class="content" id="panel-attempts">
     <section class="panel">
       <div class="panel-head"><div><div class="eyebrow">Evidence ledger</div><h3>Completed question attempts</h3><p>Raw score, trusted score, time, confidence, guesses and causes of lost marks.</p></div><button class="primary-btn" id="log-from-ledger" type="button">Log attempt</button></div>
-      <div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Subject</th><th>Type</th><th>Question / topic</th><th>Score</th><th>Confidence</th><th>Error</th><th></th></tr></thead><tbody id="attempt-table-body"></tbody></table></div>
+      <div class="ledger-controls"><label for="ledger-query">Find a paper or question<input id="ledger-query" type="search" placeholder="Paper year, question or correction rule"></label><label for="ledger-subject">Subject<select id="ledger-subject"><option value="all">All subjects</option><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select></label><label for="ledger-type">Attempt stage<select id="ledger-type"><option value="all">All stages</option><option value="initial">Initial attempts</option><option value="reattempt">Closed-book reattempt</option><option value="fresh-transfer">Fresh transfer</option><option value="delayed-retest">Delayed retest</option></select></label><button type="button" class="secondary-btn" id="ledger-clear">Clear filters</button></div><p id="ledger-results" role="status" aria-live="polite"></p><div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Subject</th><th>Type</th><th>Question / topic</th><th>Score</th><th>Confidence</th><th>Error</th><th></th></tr></thead><tbody id="attempt-table-body"></tbody></table></div><div class="ledger-pages"><button id="ledger-prev" type="button" class="secondary-btn">Previous 25</button><button id="ledger-next" type="button" class="secondary-btn">Next 25</button></div>
     </section>
   </section>
 </main>
@@ -1988,7 +1986,8 @@ function navigate(panel) {
     }
   }
   activePanel = panel;
-  document.querySelectorAll('#app-tabs .tab').forEach(t => t.classList.toggle('active', t.dataset.panel === panel));
+  document.querySelectorAll('#app-tabs .tab').forEach(t => { t.classList.toggle('active', t.dataset.panel === panel); if(t.dataset.panel) {t.setAttribute('aria-controls','panel-'+t.dataset.panel); if(t.dataset.panel===panel)t.setAttribute('aria-current','page');else t.removeAttribute('aria-current');} });
+  document.querySelector('.workspace-more')?.removeAttribute('open');
   document.querySelectorAll('main > .content').forEach(c => c.classList.toggle('active', c.id === `panel-${panel}`));
   if (panel === 'course') renderCourseCorrection();
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2207,10 +2206,18 @@ function attemptHTML(a, compact = false) {
   return `<tr><td class="mono">${escapeHTML(a.date)}</td><td>${titleCase(a.subject)}</td><td>${type}</td><td><strong>${escapeHTML(a.question)}</strong><br><span class="muted">${escapeHTML(topic?.name || 'Unknown topic')}</span></td><td><span class="score-chip">${a.earned}/${a.total} · ${pct}%${trusted}</span></td><td>${escapeHTML(a.confidence)}</td><td>${a.error ? `<b style="color:var(--gold)">${a.error}</b> ${ERROR_NAMES[a.error]}` : '—'}</td><td><button class="log-mini" data-delete-attempt="${a.id}">Delete</button></td></tr>`;
 }
 
+let ledgerPage = 0;
 function renderAttempts() {
   const sorted = [...state.attempts].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
   $('recent-attempts').innerHTML = sorted.length ? sorted.slice(0, 4).map(a => attemptHTML(a, true)).join('') : '<div class="empty-state">Your evidence ledger is empty. A completed, marked question is the first useful input.</div>';
-  $('attempt-table-body').innerHTML = sorted.length ? sorted.map(a => attemptHTML(a)).join('') : '<tr><td colspan="8"><div class="empty-state">No completed attempts logged yet.</div></td></tr>';
+  const query = $('ledger-query').value.trim().toLowerCase(), subject = $('ledger-subject').value, type = $('ledger-type').value;
+  const followupTypes = ['reattempt','fresh-transfer','delayed-retest'];
+  const filtered = sorted.filter(a => (subject === 'all' || a.subject === subject) && (type === 'all' || (type === 'initial' ? !followupTypes.includes(a.type) : a.type === type)) && (!query || [a.question, a.note, getTopic(a.topicKey)?.name, a.date].join(' ').toLowerCase().includes(query)));
+  ledgerPage = Math.min(ledgerPage, Math.max(0, Math.ceil(filtered.length / 25) - 1));
+  const visible = filtered.slice(ledgerPage * 25, (ledgerPage + 1) * 25);
+  $('attempt-table-body').innerHTML = visible.length ? visible.map(a => attemptHTML(a)).join('') : '<tr><td colspan="8"><div class="empty-state">'+(sorted.length ? 'No matching evidence. Clear the filters to see all attempts.' : 'No completed attempts logged yet. Log a marked result to begin.')+'</div></td></tr>';
+  $('ledger-results').textContent = filtered.length ? 'Showing '+(ledgerPage*25+1)+'–'+(ledgerPage*25+visible.length)+' of '+filtered.length+' matching attempts · '+sorted.length+' total records.' : '0 matching attempts · '+sorted.length+' total records.';
+  $('ledger-prev').disabled = ledgerPage === 0; $('ledger-next').disabled = (ledgerPage + 1)*25 >= filtered.length;
 }
 
 function renderNextAction() {
@@ -2231,7 +2238,7 @@ function renderNextAction() {
     $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">30-minute rescue/retest</span><span class="pill">fresh question</span><span class="pill">strict marking</span>`;
   } else if (topic) {
     focusRecommendedMinutes = 90;
-    $('next-action-title').textContent = `Attack: ${topic.name}`;
+    $('next-action-title').textContent = `Repair next: ${topic.name}`;
     $('next-action-copy').textContent = 'This topic has the strongest current combination of lost marks, weak recall, recurrence or calibration risk. Repair it through output—not a lecture marathon.';
     $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">90-minute deep block</span><span class="pill">fresh questions</span><span class="pill">close the loop</span>`;
   } else {
@@ -2742,6 +2749,10 @@ function initEvents() {
   $('quick-log-btn').addEventListener('click', () => openAttemptDialog());
   $('log-from-ledger').addEventListener('click', () => openAttemptDialog());
   $('view-all-btn').addEventListener('click', () => navigate('attempts'));
+  ['ledger-query','ledger-subject','ledger-type'].forEach(id => $(id).addEventListener(id==='ledger-query'?'input':'change', () => { ledgerPage=0; renderAttempts(); }));
+  $('ledger-clear').addEventListener('click', () => { $('ledger-query').value=''; $('ledger-subject').value='all'; $('ledger-type').value='all'; ledgerPage=0; renderAttempts(); });
+  $('ledger-prev').addEventListener('click', () => { ledgerPage=Math.max(0,ledgerPage-1); renderAttempts(); });
+  $('ledger-next').addEventListener('click', () => { ledgerPage+=1; renderAttempts(); });
   $('start-focus-btn').addEventListener('click', () => startFocus(focusRecommendedMinutes));
   $('short-block-btn').addEventListener('click', () => startFocus(15, '15-minute closed-book recall / question block'));
   $('paper-first-btn').addEventListener('click', () => { focusTopicKey=''; startFocus(120, 'Full paper / substantial paper section'); });
