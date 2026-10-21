@@ -3,6 +3,28 @@ import test from 'node:test';
 import vm from 'node:vm';
 import {readFileSync} from 'node:fs';
 
+function cloudHarness(fetch){
+ const source=readFileSync(new URL('../public/powerhouse/app.js',import.meta.url),'utf8');
+ const helper=source.slice(source.indexOf('  async function cloudRequest('),source.indexOf('  async function fetchCloud('));
+ let timeout,cleared=0;
+ const context=vm.createContext({fetch,AbortController,Error,setTimeout:callback=>{timeout=callback;return 1},clearTimeout:()=>cleared++});
+ vm.runInContext(helper,context);
+ return {request:()=>vm.runInContext('cloudRequest()',context),expire:()=>timeout(),cleared:()=>cleared};
+}
+test('cloud timeout covers a stalled response body and releases the timer',async()=>{
+ let bodyReady;const ready=new Promise(resolve=>bodyReady=resolve);
+ const h=cloudHarness(async(url,options)=>({status:200,json:()=>new Promise((resolve,reject)=>{options.signal.addEventListener('abort',()=>reject(Error('aborted')));bodyReady()})}));
+ const request=h.request();await ready;h.expire();await assert.rejects(request,/Connection timed out.*browser evidence is intact/);assert.equal(h.cleared(),1);
+});
+test('cloud sign-in responses do not require a JSON body',async()=>{
+ const h=cloudHarness(async()=>({status:401,json:()=>{throw Error('HTML sign-in body')}}));
+ assert.equal((await h.request()).response.status,401);assert.equal(h.cleared(),1);
+});
+test('cloud success preserves revision data and releases the timeout',async()=>{
+ const h=cloudHarness(async()=>({status:200,json:async()=>({revision:7})}));
+ assert.equal((await h.request()).data.revision,7);assert.equal(h.cleared(),1);
+});
+
 function tracker(at,blocked=false){
  const nodes=new Map(),records=new Map();
  const node=id=>{if(!nodes.has(id))nodes.set(id,{textContent:'',hidden:true});return nodes.get(id)};
