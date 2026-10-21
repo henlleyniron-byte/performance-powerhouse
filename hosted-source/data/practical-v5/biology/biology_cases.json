@@ -1,0 +1,2962 @@
+[
+  {
+    "id": "PM5-B01",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-001"
+    ],
+    "title": "Four coded foods: evidence before identification",
+    "nie_number": "1",
+    "nie_print_page": 1,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Identification of starch, non-reducing sugars, reducing sugars, proteins and lipids using simple laboratory tests",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 1–1; PDF pp. 11–11 (1-based)."
+    },
+    "data": [
+      [
+        "Sample",
+        "Iodine",
+        "Benedict before hydrolysis",
+        "Benedict after hydrolysis and neutralisation",
+        "Biuret",
+        "Sudan III"
+      ],
+      [
+        "A",
+        "Blue-black",
+        "Blue",
+        "Brick-red precipitate",
+        "Blue",
+        "No stained oil layer"
+      ],
+      [
+        "B",
+        "Yellow-brown",
+        "Blue",
+        "Brick-red precipitate",
+        "Blue",
+        "No stained oil layer"
+      ],
+      [
+        "C",
+        "Yellow-brown",
+        "Brick-red precipitate",
+        "Brick-red precipitate",
+        "Violet",
+        "No stained oil layer"
+      ],
+      [
+        "D",
+        "Yellow-brown",
+        "Blue",
+        "Blue",
+        "Blue",
+        "Red-stained oil layer"
+      ]
+    ],
+    "scenario": "Interpret a fictional teacher-provided results table. Distilled-water negative controls gave their expected negative colours. No reagent preparation or testing is requested.",
+    "tasks": [
+      "Which sample supports the presence of starch?",
+      "Which sample supports a non-reducing sugar?",
+      "What carbohydrate class is detected in C before hydrolysis?",
+      "Which sample supports protein?",
+      "Which sample supports lipid?"
+    ],
+    "marks": [
+      "A.",
+      "B.",
+      "Reducing sugar.",
+      "C.",
+      "D."
+    ],
+    "worked_explanation": "A gives the starch–iodine colour. B becomes reducing only after hydrolysis, consistent with a non-reducing sugar such as sucrose. C contains evidence for both reducing sugar and protein; foods can contain multiple classes. Sudan III stains the lipid phase in D. These are qualitative class identifications, not concentration measurements.",
+    "common_error": "Calling C a pure protein or using colour intensity to calculate an unsupported concentration.",
+    "transfer_question": "An unknown is Benedict-positive before hydrolysis. Does a positive result afterwards, by itself, establish a non-reducing sugar?",
+    "transfer_answer": "No. The original reducing sugar can account for the later positive result; the before/after pair alone does not establish an additional non-reducing sugar.",
+    "skills": [
+      "qualitative-test interpretation",
+      "mixed-sample reasoning"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B02",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-002"
+    ],
+    "title": "Microscope field calibration and focusing",
+    "nie_number": "2",
+    "nie_print_page": 2,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Identification of parts and functions of the light microscope and the use of light microscope to observe specimens",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 2–3; PDF pp. 12–13 (1-based)."
+    },
+    "data": [
+      [
+        "Setting",
+        "Eyepiece",
+        "Objective",
+        "Field diameter"
+      ],
+      [
+        "Low power",
+        "10×",
+        "10×",
+        "1.80 mm"
+      ],
+      [
+        "High power",
+        "10×",
+        "40×",
+        "0.45 mm"
+      ],
+      [
+        "Cell row at high power",
+        "6 equal cells span full field",
+        "—",
+        "—"
+      ]
+    ],
+    "scenario": "A fictional calibrated light microscope shows six similar onion epidermal cells spanning the high-power field without gaps. Treat the field diameter as accurate and use only this row for the size estimate.",
+    "tasks": [
+      "Calculate total high-power magnification.",
+      "Estimate one cell length in micrometres.",
+      "Name the focusing control appropriate for the final high-power adjustment.",
+      "Name the component that changes the objective in use.",
+      "Explain why higher magnification need not reveal additional detail."
+    ],
+    "marks": [
+      "400×.",
+      "75 µm.",
+      "Fine-focus knob.",
+      "Rotatable nosepiece.",
+      "Resolution limits the ability to distinguish closely spaced structures."
+    ],
+    "worked_explanation": "Total magnification is 10 × 40 = 400. The 0.45 mm field is 450 µm wide, so 450/6 = 75 µm per cell. A larger image is not necessarily a better-resolved image; apparent enlargement and resolving power are distinct.",
+    "common_error": "Converting 0.45 mm to 45 µm, or using coarse focus for final high-power adjustment.",
+    "transfer_question": "A cell image measures 24 mm on a drawing and represents a 60 µm cell. What is the drawing magnification?",
+    "transfer_answer": "24,000 µm/60 µm = 400×.",
+    "skills": [
+      "unit conversion",
+      "image calibration",
+      "microscope components"
+    ],
+    "numeric_checks": [
+      {
+        "label": "total magnification",
+        "expression": "10*40",
+        "expected": 400,
+        "unit": "×",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "cell length",
+        "expression": "0.45*1000/6",
+        "expected": 75,
+        "unit": "µm",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer drawing magnification",
+        "expression": "24*1000/60",
+        "expected": 400,
+        "unit": "×",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B03",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-003"
+    ],
+    "title": "Three electron micrographs: organisation and scale",
+    "nie_number": "3",
+    "nie_print_page": 4,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Use of electron micrographs to understand the structure of cellular components",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 4–4; PDF pp. 14–14 (1-based)."
+    },
+    "data": [
+      [
+        "Image",
+        "Visible features"
+      ],
+      [
+        "P",
+        "Cell wall, chloroplasts, large vacuole, membrane-bound nucleus"
+      ],
+      [
+        "Q",
+        "Membrane-bound nucleus and mitochondria; no cell wall or chloroplast"
+      ],
+      [
+        "R",
+        "Cell wall, ribosomes and nucleoid; no membrane-bound nucleus"
+      ],
+      [
+        "P chloroplast scale",
+        "5.0 µm scale bar printed 20 mm long; chloroplast image 24 mm long"
+      ]
+    ],
+    "scenario": "Feature descriptions stand in for three fictional electron micrographs; no drawings are supplied. Identify the cell types using combinations of positive features.",
+    "tasks": [
+      "Identify P as plant, animal or prokaryotic.",
+      "Identify Q as plant, animal or prokaryotic.",
+      "Identify R as plant, animal or prokaryotic.",
+      "Name the structure supporting aerobic ATP production in Q.",
+      "Calculate the actual length of the chloroplast in P."
+    ],
+    "marks": [
+      "Plant cell.",
+      "Animal cell.",
+      "Prokaryotic cell.",
+      "Mitochondrion.",
+      "6.0 µm."
+    ],
+    "worked_explanation": "P has a plant-cell combination; Q fits an animal cell; R lacks a membrane-bound nucleus and is prokaryotic. Scaling against the bar avoids needing the original image magnification: 24/20 × 5 = 6 µm. Ribosomes occur in all three cell types and are not evidence of eukaryotic organisation.",
+    "common_error": "Identifying every walled cell as a plant cell.",
+    "transfer_question": "R is drawn with a 9 mm cell length and a 3 mm scale bar labelled 1 µm. What length does it represent?",
+    "transfer_answer": "9/3 × 1 = 3 µm.",
+    "skills": [
+      "ultrastructure identification",
+      "scale-bar calculation"
+    ],
+    "numeric_checks": [
+      {
+        "label": "chloroplast length",
+        "expression": "24/20*5",
+        "expected": 6,
+        "unit": "µm",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer prokaryote length",
+        "expression": "9/3*1",
+        "expected": 3,
+        "unit": "µm",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B04",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-004"
+    ],
+    "title": "Chromosome behaviour identifies the division",
+    "nie_number": "4",
+    "nie_print_page": 5,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Identification of different stages of mitosis and meiosis using microscopic slides",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 5–5; PDF pp. 15–15 (1-based)."
+    },
+    "data": [
+      [
+        "Panel",
+        "Visible chromosome arrangement in a species with 2n = 8"
+      ],
+      [
+        "A",
+        "Four bivalents at the equator"
+      ],
+      [
+        "B",
+        "Eight duplicated chromosomes individually at the equator"
+      ],
+      [
+        "C",
+        "Four duplicated chromosomes moving towards each pole; centromeres remain joined"
+      ],
+      [
+        "D",
+        "Sister chromatids moving apart; each becomes a daughter chromosome"
+      ]
+    ],
+    "scenario": "Panels are fictional chromosome-diagram descriptions. Distinguish homologous chromosome separation from sister-chromatid separation; cell shape is not diagnostic here.",
+    "tasks": [
+      "Name the stage represented by A.",
+      "Name the mitotic stage represented by B.",
+      "Name the stage represented by C.",
+      "What structures separate at anaphase of mitosis, as in D?",
+      "How many chromosomes occur in each daughter nucleus immediately after meiosis I?"
+    ],
+    "marks": [
+      "Metaphase I.",
+      "Metaphase.",
+      "Anaphase I.",
+      "Sister chromatids.",
+      "4 chromosomes."
+    ],
+    "worked_explanation": "Bivalents are paired homologues, so A belongs to meiosis I. Homologues separate in C without centromere division. After meiosis I each nucleus is haploid, n = 4, although its chromosomes still have two sister chromatids. D alone could also fit anaphase II; the task specifies mitosis.",
+    "common_error": "Counting chromatids as separate chromosomes before their centromeres divide.",
+    "transfer_question": "In the same species, how many chromosomes would a normal gamete contain after meiosis II?",
+    "transfer_answer": "4, each consisting of one chromatid before any subsequent DNA replication.",
+    "skills": [
+      "chromosome interpretation",
+      "mitosis-meiosis comparison"
+    ],
+    "numeric_checks": [
+      {
+        "label": "haploid chromosome number",
+        "expression": "8/2",
+        "expected": 4,
+        "unit": "chromosomes",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B05",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-005"
+    ],
+    "title": "Amylase: endpoint time and relative reaction rate",
+    "nie_number": "5",
+    "nie_print_page": 6,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Laboratory experiment to demonstrate enzyme activity and to determine the effect of temperature on the rate of enzymatic reaction (starch - amylase)",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 6–6; PDF pp. 16–16 (1-based)."
+    },
+    "data": [
+      [
+        "Temperature (°C)",
+        "Time until iodine no longer becomes blue-black (min)"
+      ],
+      [
+        "5",
+        "20"
+      ],
+      [
+        "25",
+        "8"
+      ],
+      [
+        "40",
+        "4"
+      ],
+      [
+        "60",
+        "No endpoint within 24 min"
+      ]
+    ],
+    "scenario": "Fictional starch–amylase tests used identical starting volumes, concentrations and pH. Endpoints were checked at two-minute intervals, matching the handbook sampling approach. Reciprocal time is an index of rate, not an absolute molar rate.",
+    "tasks": [
+      "Calculate the relative rate at 25 °C in min⁻¹.",
+      "Calculate the ratio of the 40 °C rate to the 25 °C rate.",
+      "Which tested temperature gave the fastest observed starch disappearance?",
+      "Name one variable, other than temperature, that must be controlled.",
+      "Why must the 60 °C result not be entered as an exact zero rate?"
+    ],
+    "marks": [
+      "0.125 min⁻¹.",
+      "2.0.",
+      "40 °C.",
+      "pH, or initial starch concentration, or initial amylase concentration (any one).",
+      "Failure to reach the endpoint within the observation period does not prove no reaction occurred."
+    ],
+    "worked_explanation": "Use 1/t: 1/8 = 0.125 and 1/4 = 0.25 min⁻¹. Thus the measured rate index doubles from 25 to 40 °C. High temperature can reduce amylase activity through denaturation, but the uncompleted endpoint only supplies an observational limit. Two-minute sampling also limits endpoint precision; 40 °C is the fastest tested condition, not a proven exact optimum.",
+    "common_error": "Plotting time as if a longer endpoint time meant a faster reaction, or declaring an exact optimum from four temperatures.",
+    "transfer_question": "A separate test reaches its endpoint in 10 min. What is its reciprocal-time rate index?",
+    "transfer_answer": "0.10 min⁻¹.",
+    "skills": [
+      "rate calculation",
+      "censored result",
+      "control variables"
+    ],
+    "numeric_checks": [
+      {
+        "label": "25 C rate",
+        "expression": "1/8",
+        "expected": 0.125,
+        "unit": "min⁻¹",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "rate ratio",
+        "expression": "(1/4)/(1/8)",
+        "expected": 2,
+        "unit": "",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer rate",
+        "expression": "1/10",
+        "expected": 0.1,
+        "unit": "min⁻¹",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B06",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-006"
+    ],
+    "title": "Audus readings: when more light stops increasing oxygen output",
+    "nie_number": "6",
+    "nie_print_page": 7,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Determination of rate of photosynthesis by the amount of oxygen released using Audus apparatus(for different CO2 concentrations and light intensities)",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 7–7; PDF pp. 17–17 (1-based)."
+    },
+    "data": [
+      [
+        "Lamp distance (cm)",
+        "Oxygen volume collected in 5 min (cm³)"
+      ],
+      [
+        "60",
+        "0.20"
+      ],
+      [
+        "40",
+        "0.40"
+      ],
+      [
+        "20",
+        "0.60"
+      ],
+      [
+        "10",
+        "0.60"
+      ]
+    ],
+    "scenario": "Fictional Audus-apparatus readings use the same aquatic shoot at constant temperature and carbon-dioxide supply. The collected gas is assumed to be oxygen. Distances are treatment labels; no inverse-square law is assumed for this lamp geometry.",
+    "tasks": [
+      "Calculate oxygen output rate at 40 cm.",
+      "Between which consecutive distances does output first plateau?",
+      "Suggest one factor that could limit output on this plateau.",
+      "Why is oxygen volume preferable to bubble count when bubble sizes vary?",
+      "Does measured oxygen release directly give gross photosynthesis?"
+    ],
+    "marks": [
+      "0.080 cm³ min⁻¹.",
+      "20 cm and 10 cm.",
+      "Carbon-dioxide availability, or another limiting factor such as temperature (any one plausible factor).",
+      "Volume accounts for unequal bubble sizes whereas a count does not.",
+      "No; respiration consumes some oxygen, so release is a net measure under these assumptions."
+    ],
+    "worked_explanation": "The 40 cm reading gives 0.40/5 = 0.080 cm³ min⁻¹. Moving the lamp nearer increases output initially, then the final two readings are equal. A plateau is compatible with another limiting factor; it does not identify that factor uniquely. Constant temperature is important because moving a lamp can also heat the apparatus.",
+    "common_error": "Calling the plateau proof that carbon dioxide alone was limiting.",
+    "transfer_question": "At a fixed light treatment a shoot releases 0.84 cm³ in 7 min. Find its output rate.",
+    "transfer_answer": "0.12 cm³ min⁻¹.",
+    "skills": [
+      "photosynthesis data",
+      "limiting-factor reasoning",
+      "proxy limitation"
+    ],
+    "numeric_checks": [
+      {
+        "label": "40 cm rate",
+        "expression": "0.40/5",
+        "expected": 0.08,
+        "unit": "cm³ min⁻¹",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer rate",
+        "expression": "0.84/7",
+        "expected": 0.12,
+        "unit": "cm³ min⁻¹",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B07",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-007"
+    ],
+    "title": "C3 and C4 sections: recognising a structural pattern",
+    "nie_number": "7",
+    "nie_print_page": 8,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Microscopic observation of cross sections of C3 and C4 plant leaves with special reference to the adaptations for photosynthesis",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 8–8; PDF pp. 18–18 (1-based)."
+    },
+    "data": [
+      [
+        "Section",
+        "Microscopic features"
+      ],
+      [
+        "L",
+        "Distinct upper palisade and lower spongy mesophyll; bundle sheath not conspicuously chloroplast-rich"
+      ],
+      [
+        "M",
+        "Prominent chloroplast-rich bundle sheath around vascular bundles; mesophyll arranged around that sheath"
+      ]
+    ],
+    "scenario": "Two fictional leaf sections represent the typical C3/C4 patterns used in the handbook comparison. These are representative examples, not a claim that every species follows an identical anatomy.",
+    "tasks": [
+      "Which section shows typical Kranz anatomy?",
+      "Which section is the typical C3 example?",
+      "Name the chloroplast-rich cells surrounding the vascular bundle in M.",
+      "In a typical C4 leaf, in which cell type is CO₂ initially fixed by PEP carboxylase?",
+      "What feature of C4 function reduces photorespiration at Rubisco?"
+    ],
+    "marks": [
+      "M.",
+      "L.",
+      "Bundle-sheath cells.",
+      "Mesophyll cells.",
+      "Concentration of CO₂ in bundle-sheath cells near Rubisco."
+    ],
+    "worked_explanation": "The diagnostic observation in M is the conspicuous sheath with surrounding mesophyll. Typical C4 photosynthesis separates initial carbon fixation in mesophyll from the Calvin cycle in bundle-sheath cells, increasing local CO₂ availability to Rubisco. L is the representative dorsiventral C3 section in this exercise; palisade tissue alone is not a universal C3 test.",
+    "common_error": "Assigning C4 status from leaf thickness alone or saying that C4 plants do not use the Calvin cycle.",
+    "transfer_question": "A new section has chloroplast-rich bundle-sheath cells encircled by mesophyll. What anatomical term describes this arrangement?",
+    "transfer_answer": "Kranz anatomy; it supports identification as a typical C4 leaf, subject to the stated representative context.",
+    "skills": [
+      "anatomical comparison",
+      "structure-function linkage"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B08",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-008"
+    ],
+    "title": "Two respirometers: derive CO₂ instead of guessing fuel",
+    "nie_number": "8",
+    "nie_print_page": 9,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Determination of rate of respiration and respiratory quotient using germinating seeds",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 9–9; PDF pp. 19–19 (1-based)."
+    },
+    "data": [
+      [
+        "Measurement",
+        "Fictional value"
+      ],
+      [
+        "Germinating seed mass in each vessel",
+        "25 g"
+      ],
+      [
+        "Duration",
+        "120 min"
+      ],
+      [
+        "Volume decrease with CO₂ absorbent",
+        "1.20 cm³"
+      ],
+      [
+        "Volume decrease without absorbent",
+        "0.24 cm³"
+      ]
+    ],
+    "scenario": "Two matched airtight respirometers operate at stable temperature and pressure. Control-corrected volume changes are supplied. With absorbent the decrease represents oxygen uptake; without it the decrease represents oxygen uptake minus carbon-dioxide production.",
+    "tasks": [
+      "State oxygen uptake over the run.",
+      "Calculate carbon-dioxide production over the run.",
+      "Calculate respiratory quotient.",
+      "Calculate oxygen uptake per gram per minute.",
+      "Does the RQ uniquely identify fat as the respiratory fuel?"
+    ],
+    "marks": [
+      "1.20 cm³.",
+      "0.96 cm³.",
+      "0.80.",
+      "0.00040 cm³ g⁻¹ min⁻¹.",
+      "No; an RQ of 0.80 is compatible with mixed substrates or protein and does not uniquely prove fat."
+    ],
+    "worked_explanation": "Without absorbent, outgoing CO₂ offsets part of oxygen consumption. Thus CO₂ produced = 1.20 − 0.24 = 0.96 cm³ and RQ = 0.96/1.20 = 0.80. Mass-specific oxygen uptake is 1.20/(25 × 120) = 0.00040 cm³ g⁻¹ min⁻¹. Stable temperature and matched controls matter because gas-volume changes need not otherwise be biological.",
+    "common_error": "Using the no-absorbent volume decrease directly as CO₂ produced.",
+    "transfer_question": "A second corrected run uses 2.00 cm³ oxygen and releases 1.40 cm³ CO₂. What is its RQ?",
+    "transfer_answer": "0.70; this is compatible with predominantly lipid respiration but is still interpreted with the experimental assumptions.",
+    "skills": [
+      "gas-balance reasoning",
+      "RQ",
+      "mass-specific rate"
+    ],
+    "numeric_checks": [
+      {
+        "label": "CO2 output",
+        "expression": "1.20-0.24",
+        "expected": 0.96,
+        "unit": "cm³",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "RQ",
+        "expression": "0.96/1.20",
+        "expected": 0.8,
+        "unit": "",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "specific uptake",
+        "expression": "1.20/(25*120)",
+        "expected": 0.0004,
+        "unit": "cm³ g⁻¹ min⁻¹",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer RQ",
+        "expression": "1.40/2.00",
+        "expected": 0.7,
+        "unit": "",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B09",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-009"
+    ],
+    "title": "Light-microscope prokaryotes: chains, sheaths and colonies",
+    "nie_number": "9",
+    "nie_print_page": 10,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observing and distinguishing bacteria and cyanobacteria under light microscope",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 10–10; PDF pp. 20–20 (1-based)."
+    },
+    "data": [
+      [
+        "Slide",
+        "Fictional visible features"
+      ],
+      [
+        "A",
+        "Bead-like trichome with occasional larger pale heterocysts"
+      ],
+      [
+        "B",
+        "Unbranched trichomes within a conspicuous sheath; no heterocysts visible"
+      ],
+      [
+        "C",
+        "Small rounded cells grouped in a mucilaginous colony"
+      ],
+      [
+        "D",
+        "Separate short rods without visible chlorophyll pigmentation"
+      ]
+    ],
+    "scenario": "For this exercise the cyanobacterial candidates are Anabaena, Lyngbya and Microcystis, as represented by the handbook slide set. Features support identification within that candidate set, not an unrestricted species diagnosis. The handbook spelling Lyngbia refers to Lyngbya.",
+    "tasks": [
+      "Assign Anabaena to A, B or C.",
+      "Assign Lyngbya to A, B or C.",
+      "Assign Microcystis to A, B or C.",
+      "What specialised role is associated with the heterocysts of A?",
+      "Are cyanobacteria eukaryotic algae or bacteria?"
+    ],
+    "marks": [
+      "A.",
+      "B.",
+      "C.",
+      "Nitrogen fixation.",
+      "Bacteria (prokaryotes)."
+    ],
+    "worked_explanation": "The feature combination and restricted candidate list distinguish the slides. Heterocysts support Anabaena, the sheathed trichome supports Lyngbya, and the mucilaginous colony supports Microcystis. Cyanobacteria belong among bacteria: the handbook comparison is between cyanobacteria and other bacteria, not two different domains. A routine light image does not resolve all internal ultrastructure.",
+    "common_error": "Treating cyanobacteria as eukaryotes because they photosynthesise.",
+    "transfer_question": "Why would failure to see a nucleus in one blurry light micrograph be insufficient, alone, to identify a cell as prokaryotic?",
+    "transfer_answer": "An absent visible nucleus may reflect preparation, focus or resolution; identification needs additional reliable structural evidence.",
+    "skills": [
+      "morphological discrimination",
+      "taxonomy precision",
+      "observation limits"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B10",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-010"
+    ],
+    "title": "Prokaryotic ultrastructure: a membrane is not a chloroplast",
+    "nie_number": "10",
+    "nie_print_page": 11,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Use of electron micrographs to study morphological features of bacteria and cyanobacteria",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 11–11; PDF pp. 21–21 (1-based)."
+    },
+    "data": [
+      [
+        "Electron image",
+        "Feature inventory"
+      ],
+      [
+        "E",
+        "Nucleoid, ribosomes, surface wall; no membrane-bound nucleus"
+      ],
+      [
+        "F",
+        "Nucleoid, ribosomes, wall and extensive internal photosynthetic thylakoid membranes; no chloroplast envelope"
+      ]
+    ],
+    "scenario": "Fictional electron-image inventories compare a non-photosynthetic bacterial example with a cyanobacterial example. The assignment does not claim every non-cyanobacterial bacterium lacks photosynthetic membranes.",
+    "tasks": [
+      "Which image fits the cyanobacterial example?",
+      "Name the DNA-containing region present in both.",
+      "Which listed structure is the site of protein synthesis?",
+      "Does F contain a membrane-bound chloroplast?",
+      "What observation supports classifying both as prokaryotic?"
+    ],
+    "marks": [
+      "F.",
+      "Nucleoid.",
+      "Ribosomes.",
+      "No.",
+      "DNA in a nucleoid without a membrane-bound nucleus."
+    ],
+    "worked_explanation": "F has photosynthetic internal membranes but not a chloroplast. Cyanobacterial thylakoids are inside a prokaryotic cell; a chloroplast is a membrane-bounded organelle of a eukaryotic cell. Both examples share a nucleoid and ribosomes. Additional evidence would be required for an unrestricted taxonomic identification.",
+    "common_error": "Labelling any internal photosynthetic membrane system as a chloroplast.",
+    "transfer_question": "An electron image shows a nucleus and chloroplasts. Does it fit either of these prokaryotic examples?",
+    "transfer_answer": "No. A membrane-bound nucleus supports eukaryotic organisation.",
+    "skills": [
+      "ultrastructure interpretation",
+      "organelle distinction"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B11",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-011"
+    ],
+    "title": "Seven organism cards: use observable characters",
+    "nie_number": "11",
+    "nie_print_page": 12,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observation of morphological features of Euglena, Paramecium, Amoeba, Ulva, Diatoms, Sargassum, Gelidium",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 12–12; PDF pp. 22–22 (1-based)."
+    },
+    "data": [
+      [
+        "Card",
+        "Feature combination"
+      ],
+      [
+        "A",
+        "Unicellular, flagellum, chloroplasts, eyespot"
+      ],
+      [
+        "B",
+        "Unicellular, cilia, oral groove"
+      ],
+      [
+        "C",
+        "Changing cell outline and pseudopodia"
+      ],
+      [
+        "D",
+        "Thin green sheet-like thallus"
+      ],
+      [
+        "E",
+        "Siliceous cell wall consisting of overlapping parts"
+      ],
+      [
+        "F",
+        "Brown branched thallus with air bladders"
+      ],
+      [
+        "G",
+        "Red branched cartilaginous thallus"
+      ]
+    ],
+    "scenario": "Cards are fictional representative drawings of Euglena, Paramecium, Amoeba, Ulva, a diatom, Sargassum and Gelidium. Use the full combination in the restricted set; colour is not the sole identification criterion.",
+    "tasks": [
+      "Identify A.",
+      "Identify B.",
+      "Identify C.",
+      "Which card represents a diatom?",
+      "Match D, F and G to Ulva, Sargassum and Gelidium respectively."
+    ],
+    "marks": [
+      "Euglena.",
+      "Paramecium.",
+      "Amoeba.",
+      "E.",
+      "D = Ulva, F = Sargassum, G = Gelidium (all three required for this matching point)."
+    ],
+    "worked_explanation": "Locomotory structures separate A–C in this set. The silica wall is diagnostic for the diatom card. The thallus combinations separate the selected algae: green sheet, brown bladder-bearing branch system, and red cartilaginous branches. A table of features is stronger than relying on an isolated colour or habitat.",
+    "common_error": "Calling Paramecium flagellated or treating the Sargassum air bladder as a reproductive structure.",
+    "transfer_question": "A new card shows a flexible unicellular body, an eyespot and one conspicuous flagellum. Which candidate fits best?",
+    "transfer_answer": "Euglena, within the given candidate set.",
+    "skills": [
+      "organism identification",
+      "feature combinations"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B12",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-012"
+    ],
+    "title": "A plant-group sorting tray",
+    "nie_number": "12",
+    "nie_print_page": 13,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observation of morphological features of organisms of phyla Hepatophyta, Bryophyta, Anthocerophyta, Lycophyta, Pterophyta, Cycadophyta, Gnetophyta,Coniferophyta, Anthophyta and classes Monocotyledoneae and Dicotyledoneae",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 13–13; PDF pp. 23–23 (1-based)."
+    },
+    "data": [
+      [
+        "Specimen card",
+        "Recorded characters"
+      ],
+      [
+        "A",
+        "Flattened thallus with gemma cups"
+      ],
+      [
+        "B",
+        "Leafy moss gametophyte bearing a capsule on a seta"
+      ],
+      [
+        "C",
+        "Thallus bearing elongated horn-like sporophytes"
+      ],
+      [
+        "D",
+        "Fern frond with sori; vascular sporophyte"
+      ],
+      [
+        "E",
+        "Needle leaves and cones; naked seeds"
+      ],
+      [
+        "F",
+        "Flowers; parallel-veined leaves; one cotyledon"
+      ],
+      [
+        "G",
+        "Flowers; net-veined leaves; two cotyledons"
+      ]
+    ],
+    "scenario": "A fictional identification tray uses representative Marchantia, Pogonatum, Anthoceros, Nephrolepis, Pinus, a monocot and a dicot, all included in the official practical candidate range. Use the NIE grouping names for this syllabus exercise.",
+    "tasks": [
+      "Identify the genus represented by A.",
+      "Assign B to Bryophyta or Anthocerophyta.",
+      "Identify the genus represented by C.",
+      "Which of D and E is a seed plant?",
+      "Classify F and G as monocot or dicot."
+    ],
+    "marks": [
+      "Marchantia.",
+      "Bryophyta.",
+      "Anthoceros.",
+      "E.",
+      "F = monocot; G = dicot (both required)."
+    ],
+    "worked_explanation": "Gemma cups support Marchantia and the horn-like sporophytes support Anthoceros. B has the moss capsule-on-seta pattern. Fern D is vascular but reproduces by spores without seeds; Pinus E is a naked-seeded gymnosperm. The flowering examples are distinguished by their supplied combinations, particularly cotyledon number.",
+    "common_error": "Equating vascular tissue with seed production, thereby treating a fern as a seed plant.",
+    "transfer_question": "An additional card has scale-like leaves, vascular tissue and strobili with spores, and is labelled Selaginella. Which handbook phylum contains it?",
+    "transfer_answer": "Lycophyta, using the handbook classification.",
+    "skills": [
+      "plant diversity",
+      "reproductive structures",
+      "syllabus classification"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B13",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-013"
+    ],
+    "title": "Four fungal drawings: reproductive structures matter",
+    "nie_number": "13",
+    "nie_print_page": 14,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observation of characteristic features of organisms of phyla Chytridiomycota, Zygomycota, Ascomycota and Basidiomycota",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 14–14; PDF pp. 24–24 (1-based)."
+    },
+    "data": [
+      [
+        "Drawing",
+        "Described structures"
+      ],
+      [
+        "A",
+        "Flagellated zoospore in a representative Allomyces life-cycle drawing"
+      ],
+      [
+        "B",
+        "Coenocytic hyphae bearing sporangia; labelled Mucor"
+      ],
+      [
+        "C",
+        "Septate hyphae with an upright conidiophore and chains of conidia; labelled Aspergillus"
+      ],
+      [
+        "D",
+        "Mushroom gill bearing basidia and external basidiospores; labelled Agaricus"
+      ]
+    ],
+    "scenario": "These fictional diagram descriptions follow the four representative genera and traditional phyla specified in the NIE handbook. No fungal cultivation is requested. Classification here follows the examination syllabus rather than claiming a current exhaustive fungal taxonomy.",
+    "tasks": [
+      "Assign A to the handbook phylum.",
+      "Assign B to the handbook phylum.",
+      "Assign C to the handbook phylum.",
+      "Assign D to the handbook phylum.",
+      "Which drawing explicitly shows conidia rather than sporangiospores?"
+    ],
+    "marks": [
+      "Chytridiomycota.",
+      "Zygomycota.",
+      "Ascomycota.",
+      "Basidiomycota.",
+      "C."
+    ],
+    "worked_explanation": "The exercise deliberately pairs the source genera with reproductive features. Mucor sporangia enclose sporangiospores, whereas Aspergillus conidia are borne externally. Agaricus basidia bear basidiospores. Allomyces is assigned using the handbook grouping, whose traditional categories should not be silently replaced during syllabus revision.",
+    "common_error": "Calling Aspergillus conidia spores inside a sporangium.",
+    "transfer_question": "A diagram shows sac-like asci containing ascospores. Which of the four syllabus groups is indicated?",
+    "transfer_answer": "Ascomycota.",
+    "skills": [
+      "fungal structures",
+      "classification context"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B14",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-014"
+    ],
+    "title": "Build a defensible invertebrate key",
+    "nie_number": "14",
+    "nie_print_page": 15,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observation of morphological features of organisms of phyla Cnidaria, Platyhelminthes, Nematoda, Annelida, Mollusca, Arthropoda and Echinodermata",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 15–15; PDF pp. 25–25 (1-based)."
+    },
+    "data": [
+      [
+        "Card",
+        "External features"
+      ],
+      [
+        "H",
+        "Radial tentacles around mouth; cnidocytes shown in inset"
+      ],
+      [
+        "P",
+        "Bilateral flattened unsegmented body"
+      ],
+      [
+        "N",
+        "Cylindrical unsegmented body tapering at ends"
+      ],
+      [
+        "A",
+        "Repeated body segments; chaetae shown"
+      ],
+      [
+        "M",
+        "Muscular foot, visceral mass and mantle"
+      ],
+      [
+        "R",
+        "Jointed appendages and external skeleton"
+      ],
+      [
+        "E",
+        "Adult pentaradial body with tube feet"
+      ]
+    ],
+    "scenario": "Fictional cards represent seven invertebrate phyla. The inset information is part of the supplied evidence. Construct classifications from positive distinguishing features rather than from assumed habitat.",
+    "tasks": [
+      "Assign H to a phylum.",
+      "Assign P and N to their respective phyla.",
+      "Assign A to a phylum.",
+      "Assign M and R to their respective phyla.",
+      "State a mutually exclusive first key couplet that separates R from every other card."
+    ],
+    "marks": [
+      "Cnidaria.",
+      "P = Platyhelminthes; N = Nematoda (both required).",
+      "Annelida.",
+      "M = Mollusca; R = Arthropoda (both required).",
+      "Jointed appendages present → R; jointed appendages absent → remaining cards."
+    ],
+    "worked_explanation": "The key uses a character visible or explicitly described in the cards. A valid couplet gives mutually exclusive alternatives for the same character. E is Echinodermata from pentaradial symmetry with tube feet; it is not Cnidaria merely because both adults may be radial.",
+    "common_error": "Using alternatives such as “lives in water” versus “has legs,” which are not mutually exclusive states of one character.",
+    "transfer_question": "Which card is identified by tube feet together with adult pentaradial symmetry?",
+    "transfer_answer": "E, Echinodermata.",
+    "skills": [
+      "dichotomous keys",
+      "invertebrate identification"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B15",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-015"
+    ],
+    "title": "Vertebrates: discriminate with combined characters",
+    "nie_number": "15",
+    "nie_print_page": 16,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observation of characteristic features of organisms of classes Osteichthyes, Chondrichthyes, Amphibia, Reptilia, Aves and Mammalia",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 16–16; PDF pp. 26–26 (1-based)."
+    },
+    "data": [
+      [
+        "Card",
+        "Representative visible characters"
+      ],
+      [
+        "S",
+        "Cartilaginous skeleton; separate exposed gill slits"
+      ],
+      [
+        "T",
+        "Bony skeleton; gills covered by operculum"
+      ],
+      [
+        "U",
+        "Moist glandular skin; no scales"
+      ],
+      [
+        "V",
+        "Dry epidermal scales"
+      ],
+      [
+        "W",
+        "Feathers"
+      ],
+      [
+        "X",
+        "Hair and mammary glands"
+      ]
+    ],
+    "scenario": "Six fictional specimen cards represent the classes named in the handbook. These are selected representative organisms, so do not generalise one example’s locomotion, habitat or reproductive mode to every member of its class.",
+    "tasks": [
+      "Classify S.",
+      "Classify T.",
+      "Classify U.",
+      "Classify V and W.",
+      "Which card is diagnosed by mammary glands?"
+    ],
+    "marks": [
+      "Chondrichthyes.",
+      "Osteichthyes.",
+      "Amphibia.",
+      "V = Reptilia; W = Aves (both required).",
+      "X, Mammalia."
+    ],
+    "worked_explanation": "The fish cards use skeleton and gill-cover features together. The other cards use characteristic integumentary features. Habitat is a weak classifier: aquatic mammals remain mammals and an amphibian is not identified merely by entering water.",
+    "common_error": "Using “flies” as a unique bird character or “lives in water” as a unique fish character.",
+    "transfer_question": "A flightless specimen bears feathers. Which class is indicated?",
+    "transfer_answer": "Aves; flight is not required for membership.",
+    "skills": [
+      "vertebrate comparison",
+      "diagnostic features"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B16",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-016"
+    ],
+    "title": "Plant tissues: read the cell walls and contents",
+    "nie_number": "16",
+    "nie_print_page": 17,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Identification of special characters of cell types of plant tissues using light microscope",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 17–17; PDF pp. 27–27 (1-based)."
+    },
+    "data": [
+      [
+        "Zone",
+        "Features in a fictional prepared section"
+      ],
+      [
+        "P",
+        "Living cells; thin primary walls; intercellular spaces"
+      ],
+      [
+        "C",
+        "Living elongated cells; unevenly thickened non-lignified corners"
+      ],
+      [
+        "S",
+        "Mature cells dead; very thick lignified walls and narrow lumens"
+      ],
+      [
+        "X",
+        "Hollow elongated conducting elements with lignified walls"
+      ],
+      [
+        "F",
+        "Sieve-tube elements with sieve plates and adjacent companion cells"
+      ]
+    ],
+    "scenario": "Interpret a representative prepared plant section. The descriptions are a concrete feature table rather than a claim that every cell in a complex tissue has the same structure.",
+    "tasks": [
+      "Identify P.",
+      "Identify C.",
+      "Identify S as a simple supporting tissue.",
+      "Identify the complex conducting tissue at X.",
+      "Identify the complex conducting tissue at F."
+    ],
+    "marks": [
+      "Parenchyma.",
+      "Collenchyma.",
+      "Sclerenchyma.",
+      "Xylem.",
+      "Phloem."
+    ],
+    "worked_explanation": "Thin primary walls with living contents support parenchyma. Uneven flexible wall thickening is characteristic of collenchyma; heavy lignification supports sclerenchyma. Xylem and phloem are complex tissues, so individual cells within them can differ in viability and structure. Mature conducting vessel elements differ from adjacent xylem parenchyma.",
+    "common_error": "Stating that every cell of xylem is dead because vessel elements are dead at maturity.",
+    "transfer_question": "A fruit preparation shows isolated thick-walled, lignified, irregular cells. Which sclerenchyma cell type is suggested?",
+    "transfer_answer": "Sclereids (stone cells).",
+    "skills": [
+      "histological discrimination",
+      "complex-tissue reasoning"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B17",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-017"
+    ],
+    "title": "Four transverse sections: organ before plant group",
+    "nie_number": "17",
+    "nie_print_page": 18,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observation of transverse sections of primary stem and primary root of a monocot and a dicot",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 18–18; PDF pp. 28–28 (1-based)."
+    },
+    "data": [
+      [
+        "Section",
+        "Tissue arrangement"
+      ],
+      [
+        "A",
+        "Vascular bundles scattered through ground tissue"
+      ],
+      [
+        "B",
+        "Vascular bundles in a ring; each has xylem inward and phloem outward"
+      ],
+      [
+        "C",
+        "Central star-like xylem with phloem between arms; little central pith"
+      ],
+      [
+        "D",
+        "Many xylem poles around a conspicuous central pith; distinct endodermis"
+      ]
+    ],
+    "scenario": "Four fictional primary sections are selected typical monocot stem, dicot stem, dicot root and monocot root. Identify the organ as well as the group; the supplied representative patterns are not universal species diagnoses.",
+    "tasks": [
+      "Identify A as the correct organ and group.",
+      "Identify B as the correct organ and group.",
+      "Identify C as the correct organ and group.",
+      "Identify D as the correct organ and group.",
+      "Name the tissue boundary surrounding the root stele."
+    ],
+    "marks": [
+      "Monocot stem.",
+      "Dicot stem.",
+      "Dicot root.",
+      "Monocot root.",
+      "Endodermis."
+    ],
+    "worked_explanation": "Scattered bundles and ring-arranged collateral bundles separate the selected stems. Root C has the typical central star-like xylem; D has polyarch xylem around pith. Roots have xylem and phloem arranged in separate alternating strands, so calling those root strands ordinary stem bundles obscures a useful anatomical difference.",
+    "common_error": "Identifying a root as a stem simply because xylem and phloem are visible.",
+    "transfer_question": "A primary section has central xylem and phloem alternating between its arms, surrounded by an endodermis. Is it more consistent with root or stem?",
+    "transfer_answer": "Root.",
+    "skills": [
+      "section interpretation",
+      "organ identification"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B18",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-018"
+    ],
+    "title": "Woody stem: production direction and growth rings",
+    "nie_number": "18",
+    "nie_print_page": 19,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Microscopic and macroscopic examination of secondary structure of dicotyledonous wood using transverse sections",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 19–19; PDF pp. 29–29 (1-based)."
+    },
+    "data": [
+      [
+        "Label",
+        "Position or feature"
+      ],
+      [
+        "A",
+        "Thin dividing cylinder between secondary xylem and secondary phloem"
+      ],
+      [
+        "B",
+        "Secondary conducting tissue immediately inside A"
+      ],
+      [
+        "C",
+        "Secondary conducting tissue immediately outside A"
+      ],
+      [
+        "D",
+        "Pale outer wood"
+      ],
+      [
+        "E",
+        "Darker inner wood"
+      ],
+      [
+        "Ring record",
+        "Six complete annual rings outside the first-year boundary"
+      ]
+    ],
+    "scenario": "A fictional woody dicot diagram explicitly states that each complete ring represents one annual growth cycle in this example. The first-year boundary is supplied to avoid confusing ring count with whole-tree age.",
+    "tasks": [
+      "Identify A.",
+      "Identify B.",
+      "Identify C.",
+      "Name D relative to E.",
+      "How many annual growth cycles are represented by the six complete rings?"
+    ],
+    "marks": [
+      "Vascular cambium.",
+      "Secondary xylem.",
+      "Secondary phloem.",
+      "D is sapwood (E is heartwood).",
+      "Six annual growth cycles."
+    ],
+    "worked_explanation": "Vascular cambium adds secondary xylem inward and secondary phloem outward. Sapwood is the younger outer wood involved in conduction; heartwood is older inner wood. Ring periodicity is explicitly assumed here because growth rings do not automatically equal years in every climate or species. The count describes the specified growth interval, not the age of every part of the plant.",
+    "common_error": "Adding secondary xylem outside the vascular cambium, or estimating tree age without verifying annual periodicity.",
+    "transfer_question": "A cambial cylinder forms three new xylem layers inward and phloem outward. Which meristem is responsible?",
+    "transfer_answer": "Vascular cambium; cork cambium instead produces periderm tissues.",
+    "skills": [
+      "secondary growth",
+      "spatial anatomy",
+      "inference limits"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B19",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-019"
+    ],
+    "title": "Leaf pores and woody-stem openings",
+    "nie_number": "19",
+    "nie_print_page": 20,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Observation of the structure of stomata and lenticels through light microscope",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 20–20; PDF pp. 30–30 (1-based)."
+    },
+    "data": [
+      [
+        "Feature",
+        "Leaf structure L",
+        "Woody-stem structure W"
+      ],
+      [
+        "Opening border",
+        "Two guard cells",
+        "Loosely arranged complementary cells"
+      ],
+      [
+        "Location",
+        "Leaf epidermis",
+        "Periderm"
+      ],
+      [
+        "Fictional microscope count",
+        "24 stomata in 0.12 mm²",
+        "Not counted"
+      ]
+    ],
+    "scenario": "Compare a fictional leaf peel and a secondary-stem section, as in the handbook practical. The count is supplied to practise density; it is not a real species measurement.",
+    "tasks": [
+      "Name L.",
+      "Name W.",
+      "Which cells regulate the aperture of L?",
+      "Calculate stomatal density in the leaf field.",
+      "State one shared role of L and W."
+    ],
+    "marks": [
+      "Stoma (plural stomata).",
+      "Lenticel.",
+      "Guard cells.",
+      "200 stomata mm⁻².",
+      "Gas exchange between internal tissues and the atmosphere."
+    ],
+    "worked_explanation": "The leaf opening has guard cells; the woody-stem opening has loosely packed complementary cells. Density is count/area = 24/0.12 = 200 stomata mm⁻². Lenticels lack a guard-cell aperture mechanism equivalent to a stoma. A single field estimates that sampled area and does not establish the entire leaf mean.",
+    "common_error": "Calling a lenticel a pair of guard cells, or reporting stomatal count as a density without area.",
+    "transfer_question": "A second field contains 18 stomata over 0.10 mm². What is its density?",
+    "transfer_answer": "180 stomata mm⁻².",
+    "skills": [
+      "surface structure",
+      "density calculation"
+    ],
+    "numeric_checks": [
+      {
+        "label": "stomatal density",
+        "expression": "24/0.12",
+        "expected": 200,
+        "unit": "stomata mm⁻²",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer density",
+        "expression": "18/0.10",
+        "expected": 180,
+        "unit": "stomata mm⁻²",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B20",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-020"
+    ],
+    "title": "Plasmolysis graph and the supplied solute-potential table",
+    "nie_number": "20",
+    "nie_print_page": 21,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Determination of solute potential of epidermal peels of Rhoeo (Tradescantia)",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 21–23; PDF pp. 31–33 (1-based)."
+    },
+    "data": [
+      [
+        "Sucrose (mol dm⁻³)",
+        "Cells counted",
+        "Plasmolysed cells",
+        "Table solute potential at 20 °C (kPa)"
+      ],
+      [
+        "0.20",
+        "100",
+        "10",
+        "−540"
+      ],
+      [
+        "0.25",
+        "100",
+        "30",
+        "−680"
+      ],
+      [
+        "0.30",
+        "100",
+        "50",
+        "−820"
+      ],
+      [
+        "0.35",
+        "100",
+        "75",
+        "−970"
+      ],
+      [
+        "0.40",
+        "100",
+        "92",
+        "−1120"
+      ]
+    ],
+    "scenario": "Fictional Tradescantia epidermal-cell counts follow the handbook percentage-plasmolysis method. The potential values shown are the handbook lookup values, not invented measurements. Use the 50% plasmolysis criterion as an estimate of the median cell solute potential.",
+    "tasks": [
+      "Calculate percentage plasmolysis at 0.35 mol dm⁻³.",
+      "Identify the concentration giving 50% plasmolysis.",
+      "Estimate the tissue cell solute potential using the supplied table.",
+      "What is the approximate pressure potential of a cell at incipient plasmolysis?",
+      "Why does 50% tissue plasmolysis not mean every cell has identical solute potential?"
+    ],
+    "marks": [
+      "75%.",
+      "0.30 mol dm⁻³.",
+      "Approximately −820 kPa at 20 °C.",
+      "Approximately zero.",
+      "Cells differ, so the 50% criterion estimates a representative median rather than a value shared by all cells."
+    ],
+    "worked_explanation": "Percentage plasmolysis = plasmolysed/total × 100. At the 50% criterion the corresponding sucrose concentration is 0.30 mol dm⁻³, with a supplied solute potential of −820 kPa. At incipient plasmolysis pressure potential is approximately zero, enabling the equilibrium comparison. The tissue estimate must not be described as an exact determination for every cell.",
+    "common_error": "Using the zero-change potato-strip criterion instead of the 50% plasmolysis criterion, or dropping the negative potential sign.",
+    "transfer_question": "Another field has 36 plasmolysed cells out of 80. What percentage is plasmolysed?",
+    "transfer_answer": "45%.",
+    "skills": [
+      "percentage plasmolysis",
+      "lookup interpretation",
+      "population variability"
+    ],
+    "numeric_checks": [
+      {
+        "label": "plasmolysis percent",
+        "expression": "75/100*100",
+        "expected": 75,
+        "unit": "%",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer percent",
+        "expression": "36/80*100",
+        "expected": 45,
+        "unit": "%",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B21",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-021"
+    ],
+    "title": "Potato length change: estimate tissue water potential",
+    "nie_number": "21",
+    "nie_print_page": 24,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Determination of water potential of petioles of Alocasia/ potato strips",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 24–26; PDF pp. 34–36 (1-based)."
+    },
+    "data": [
+      [
+        "Sucrose (mol dm⁻³)",
+        "Initial mean length (mm)",
+        "Final mean length (mm)",
+        "Supplied solution potential at 20 °C (kPa)"
+      ],
+      [
+        "0.15",
+        "50.0",
+        "53.0",
+        "−410"
+      ],
+      [
+        "0.20",
+        "50.0",
+        "51.5",
+        "−540"
+      ],
+      [
+        "0.25",
+        "50.0",
+        "50.0",
+        "−680"
+      ],
+      [
+        "0.30",
+        "50.0",
+        "48.5",
+        "−820"
+      ],
+      [
+        "0.35",
+        "50.0",
+        "47.0",
+        "−970"
+      ]
+    ],
+    "scenario": "Fictional potato-strip mean lengths represent the handbook length-change variant of Practical 21. Matched strips reached an approximate equilibrium. Potential values are supplied handbook lookup entries; the data do not use a mass-change method.",
+    "tasks": [
+      "Calculate percentage length change at 0.15 mol dm⁻³.",
+      "Calculate percentage length change at 0.30 mol dm⁻³.",
+      "Identify the zero-change concentration.",
+      "Estimate the initial tissue water potential.",
+      "At 0.15 mol dm⁻³, state the net direction of water movement consistent with the elongation."
+    ],
+    "marks": [
+      "+6.0%.",
+      "−3.0%.",
+      "0.25 mol dm⁻³.",
+      "Approximately −680 kPa.",
+      "Into the potato tissue."
+    ],
+    "worked_explanation": "Use (final − initial)/initial × 100: +3/50 × 100 = +6%, and −1.5/50 × 100 = −3%. Zero mean length change occurs at 0.25 mol dm⁻³, giving an approximate tissue water potential of −680 kPa using the supplied table. This is a water-potential estimate; it is not automatically the cells’ solute potential because tissue cells may have positive pressure potential.",
+    "common_error": "Equating zero length change with 50% plasmolysis, or reporting the estimate as solute potential without accounting for pressure potential.",
+    "transfer_question": "A 40.0 mm strip ends at 39.2 mm. Find percentage length change.",
+    "transfer_answer": "−2.0%.",
+    "skills": [
+      "percentage change",
+      "water potential",
+      "method discrimination"
+    ],
+    "numeric_checks": [
+      {
+        "label": "dilute solution length change",
+        "expression": "(53-50)/50*100",
+        "expected": 6,
+        "unit": "%",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "concentrated solution length change",
+        "expression": "(48.5-50)/50*100",
+        "expected": -3,
+        "unit": "%",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer change",
+        "expression": "(39.2-40)/40*100",
+        "expected": -2,
+        "unit": "%",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B22",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-022"
+    ],
+    "title": "Potometer capillary geometry and the uptake proxy",
+    "nie_number": "22",
+    "nie_print_page": 27,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Determination of rate of transpiration from leaves and shoots using a potometer",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 27–27; PDF pp. 37–37 (1-based)."
+    },
+    "data": [
+      [
+        "Condition",
+        "Bubble travel (mm)",
+        "Elapsed time (min)",
+        "Capillary internal area (mm²)"
+      ],
+      [
+        "Still air",
+        "30",
+        "5",
+        "0.50"
+      ],
+      [
+        "Moving air",
+        "50",
+        "5",
+        "0.50"
+      ]
+    ],
+    "scenario": "Fictional potometer records use the same intact leafy shoot, with temperature, light and humidity held constant. Internal capillary area is given directly, so no radius estimate is needed. The apparatus measures water uptake.",
+    "tasks": [
+      "Calculate water uptake volume in still air.",
+      "Calculate uptake rate in moving air.",
+      "Calculate the ratio of moving-air to still-air uptake rates.",
+      "State one reason uptake is not exactly equal to transpiration.",
+      "Explain the observed response to moving air in terms of the leaf boundary layer."
+    ],
+    "marks": [
+      "15 mm³.",
+      "5.0 mm³ min⁻¹.",
+      "5/3, approximately 1.67.",
+      "Some absorbed water is retained or used in growth/metabolism rather than lost by transpiration.",
+      "Moving air reduces the humid boundary layer and helps maintain a water-vapour gradient."
+    ],
+    "worked_explanation": "Volume displaced = capillary area × distance. Still-air uptake is 0.50 × 30 = 15 mm³, or 3 mm³ min⁻¹; moving-air uptake is 0.50 × 50/5 = 5 mm³ min⁻¹. The ratio is 5/3. The comparison supports a wind effect under the controlled conditions, but the reading remains an uptake proxy rather than direct measurement of every water molecule lost.",
+    "common_error": "Using distance/time as a volume rate without multiplying by the capillary area.",
+    "transfer_question": "Another calibrated capillary has area 0.20 mm² and bubble travel 45 mm in 3 min. Find uptake rate.",
+    "transfer_answer": "3.0 mm³ min⁻¹.",
+    "skills": [
+      "geometric volume",
+      "proxy interpretation",
+      "environmental effect"
+    ],
+    "numeric_checks": [
+      {
+        "label": "still air volume",
+        "expression": "0.5*30",
+        "expected": 15,
+        "unit": "mm³",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "moving air rate",
+        "expression": "0.5*50/5",
+        "expected": 5,
+        "unit": "mm³ min⁻¹",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "rate ratio",
+        "expression": "(0.5*50/5)/(0.5*30/5)",
+        "expected": 1.6666666666666667,
+        "unit": "",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer uptake",
+        "expression": "0.2*45/3",
+        "expected": 3,
+        "unit": "mm³ min⁻¹",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B23",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-023"
+    ],
+    "title": "Animal tissue slides: cells and extracellular matrix",
+    "nie_number": "23",
+    "nie_print_page": 28,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Microscopic observation and identification of different types of animal tissues",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 28–28; PDF pp. 38–38 (1-based)."
+    },
+    "data": [
+      [
+        "Slide",
+        "Fictional histological features"
+      ],
+      [
+        "A",
+        "Thin closely packed flattened cells forming a single lining layer"
+      ],
+      [
+        "B",
+        "Spindle-shaped cells; one central nucleus; no striations"
+      ],
+      [
+        "C",
+        "Branched striated cells with intercalated discs"
+      ],
+      [
+        "D",
+        "Chondrocytes in lacunae within firm extracellular matrix"
+      ],
+      [
+        "E",
+        "Cells and cell fragments suspended in plasma"
+      ]
+    ],
+    "scenario": "The table stands in for prepared slides of animal tissues. Classify from the supplied microscopic features; no tissue collection is requested.",
+    "tasks": [
+      "Name the epithelial subtype in A.",
+      "Identify the muscle type in B.",
+      "Identify the muscle type in C.",
+      "Identify D.",
+      "Classify E as epithelial, muscle or connective tissue."
+    ],
+    "marks": [
+      "Simple squamous epithelium.",
+      "Smooth muscle.",
+      "Cardiac muscle.",
+      "Cartilage.",
+      "Connective tissue (blood)."
+    ],
+    "worked_explanation": "A is a single thin squamous lining, suitable for rapid exchange in appropriate organs. B lacks striations and has spindle-shaped cells. C combines branching, striation and intercalated discs. D and E illustrate that connective tissues can have very different matrices: firm matrix in cartilage and fluid plasma in blood.",
+    "common_error": "Classifying every striated muscle as skeletal, or excluding blood from connective tissues because its matrix is fluid.",
+    "transfer_question": "A slide shows long unbranched striated fibres with multiple peripheral nuclei. Which muscle type is indicated?",
+    "transfer_answer": "Skeletal muscle.",
+    "skills": [
+      "histology",
+      "tissue classification"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B24",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-024"
+    ],
+    "title": "Digestive-system model: ducts and surface specialisation",
+    "nie_number": "24",
+    "nie_print_page": 29,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Explaining the structure of human digestive system using diagrams and models",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 29–29; PDF pp. 39–39 (1-based)."
+    },
+    "data": [
+      [
+        "Label",
+        "Model or section feature"
+      ],
+      [
+        "A",
+        "Muscular sac between oesophagus and duodenum"
+      ],
+      [
+        "B",
+        "Coiled intestinal segment with villi"
+      ],
+      [
+        "C",
+        "Accessory organ producing bile"
+      ],
+      [
+        "D",
+        "Small sac storing and concentrating bile"
+      ],
+      [
+        "E",
+        "Accessory gland with enzyme-secreting acini and a duct to the duodenum"
+      ]
+    ],
+    "scenario": "A fictional digestive-system model and section table focus on the gross tract, liver and pancreas, as specified in Practical 24. Identify structures from their location and visible organisation.",
+    "tasks": [
+      "Name A.",
+      "Name B as small or large intestine.",
+      "Name C.",
+      "Name D.",
+      "State the digestive role of the exocrine component of E."
+    ],
+    "marks": [
+      "Stomach.",
+      "Small intestine.",
+      "Liver.",
+      "Gall bladder.",
+      "Secretes digestive enzymes into the duodenum via the pancreatic duct."
+    ],
+    "worked_explanation": "The stomach is the muscular sac downstream of the oesophagus. Villi identify the selected small-intestinal section and increase absorptive surface area. Liver produces bile; gall bladder stores and concentrates it. The pancreatic acini are exocrine, delivering enzymes through ducts, unlike pancreatic endocrine islets, whose hormones enter the circulation.",
+    "common_error": "Saying the gall bladder produces bile or that all pancreatic secretions enter the blood.",
+    "transfer_question": "Why would a smooth-walled teaching model underestimate the absorptive surface of the small intestine?",
+    "transfer_answer": "It omits the increased surface provided by villi and microvilli (and folds).",
+    "skills": [
+      "anatomical identification",
+      "duct pathways",
+      "structure-function"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B25",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-025"
+    ],
+    "title": "Heart model: follow the vessel, not oxygen content alone",
+    "nie_number": "25",
+    "nie_print_page": 30,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Describing the organization of circulatory system of man using specimens/models/ diagrams",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 30–30; PDF pp. 40–40 (1-based)."
+    },
+    "data": [
+      [
+        "Code",
+        "Connection in a fictional heart model"
+      ],
+      [
+        "V1",
+        "Leaves right ventricle and goes to lungs"
+      ],
+      [
+        "V2",
+        "Returns from lungs to left atrium"
+      ],
+      [
+        "V3",
+        "Leaves left ventricle for systemic circulation"
+      ],
+      [
+        "V4",
+        "Returns systemic blood to right atrium"
+      ],
+      [
+        "W",
+        "Wall of left ventricle visibly thicker than right"
+      ]
+    ],
+    "scenario": "Use a model showing complete mammalian double circulation. Artery and vein are defined by direction relative to the heart, not by whether blood is oxygenated.",
+    "tasks": [
+      "Name V1.",
+      "Name V2.",
+      "Name V3.",
+      "Which atrioventricular valve lies between left atrium and left ventricle?",
+      "Explain the thicker wall at W."
+    ],
+    "marks": [
+      "Pulmonary artery (pulmonary trunk accepted for the initial vessel).",
+      "Pulmonary veins.",
+      "Aorta.",
+      "Bicuspid/mitral valve.",
+      "The left ventricle must generate the higher pressure needed for systemic circulation."
+    ],
+    "worked_explanation": "Right ventricle → pulmonary artery → lungs → pulmonary veins → left atrium is the pulmonary route. Left ventricle → aorta → systemic tissues → systemic veins → right atrium completes the systemic route. The pulmonary artery carries relatively deoxygenated blood despite being an artery. Wall thickness reflects pressure demand, not a requirement to pump a greater long-term flow than the right ventricle.",
+    "common_error": "Calling V1 a vein because its blood is relatively deoxygenated, or claiming the ventricles normally have unequal long-term outputs.",
+    "transfer_question": "Which vessels deliver oxygenated blood directly to the heart muscle itself?",
+    "transfer_answer": "Coronary arteries.",
+    "skills": [
+      "circulatory pathways",
+      "anatomical definition",
+      "pressure reasoning"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B26",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-026"
+    ],
+    "title": "Breathing and pulse: normalise unequal count windows",
+    "nie_number": "26",
+    "nie_print_page": 31,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Explaining the structure of human respiratory system using models or diagrams and observations of effects of exercise on respiratory rate and pulse rate",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 31–31; PDF pp. 41–41 (1-based)."
+    },
+    "data": [
+      [
+        "Fictional participant state",
+        "Breaths counted",
+        "Breath-count duration (min)",
+        "Pulse beats counted",
+        "Pulse-count duration (min)"
+      ],
+      [
+        "Rest",
+        "80",
+        "5",
+        "72",
+        "1"
+      ],
+      [
+        "After a standardised classroom exercise",
+        "84",
+        "3",
+        "120",
+        "1"
+      ],
+      [
+        "Recovery",
+        "54",
+        "3",
+        "84",
+        "1"
+      ]
+    ],
+    "scenario": "Analyse a fictional, already completed teacher-supervised exercise demonstration; no exercise is requested of the reader. Different observation windows make direct comparison of counts misleading.",
+    "tasks": [
+      "Calculate resting respiratory rate.",
+      "Calculate post-exercise respiratory rate.",
+      "Calculate the increase in pulse rate from rest to post-exercise.",
+      "Name the respiratory structure where most gas exchange occurs.",
+      "State one reason these observations do not prove the exact cause of a change in an untested individual."
+    ],
+    "marks": [
+      "16 breaths min⁻¹.",
+      "28 breaths min⁻¹.",
+      "48 beats min⁻¹.",
+      "Alveoli.",
+      "They are observations from one fictional participant; individual factors or unmeasured variables remain, so broad causal/clinical conclusions are unsupported."
+    ],
+    "worked_explanation": "Rest gives 80/5 = 16 breaths min⁻¹; post-exercise gives 84/3 = 28. Pulse increases by 120 − 72 = 48 beats min⁻¹. These responses are consistent with increased gas exchange and transport demands during exercise. Recovery values move towards baseline, but this small table is not a fitness test or diagnosis.",
+    "common_error": "Comparing 80 and 84 breaths directly despite their different counting durations.",
+    "transfer_question": "A recovery record has 45 breaths in 3 min. Find respiratory rate.",
+    "transfer_answer": "15 breaths min⁻¹.",
+    "skills": [
+      "rate normalisation",
+      "respiratory anatomy",
+      "inference limits"
+    ],
+    "numeric_checks": [
+      {
+        "label": "rest breathing rate",
+        "expression": "80/5",
+        "expected": 16,
+        "unit": "breaths min⁻¹",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "post exercise rate",
+        "expression": "84/3",
+        "expected": 28,
+        "unit": "breaths min⁻¹",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "pulse increase",
+        "expression": "120-72",
+        "expected": 48,
+        "unit": "beats min⁻¹",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer rate",
+        "expression": "45/3",
+        "expected": 15,
+        "unit": "breaths min⁻¹",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B27",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-027"
+    ],
+    "title": "Excretory drawings across animal groups",
+    "nie_number": "27",
+    "nie_print_page": 32,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Explaining the major types of excretory structures in animals using diagrams and charts",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 32–32; PDF pp. 42–42 (1-based)."
+    },
+    "data": [
+      [
+        "Panel",
+        "Structure or position"
+      ],
+      [
+        "A",
+        "Branched tubules ending in ciliated flame bulbs in a flatworm"
+      ],
+      [
+        "B",
+        "Segmental tubule with funnel and external opening in an annelid"
+      ],
+      [
+        "C",
+        "Blind-ending tubules joining the insect gut"
+      ],
+      [
+        "D",
+        "Paired human organs with cortex, medulla and pelvis"
+      ],
+      [
+        "E",
+        "Tube carrying urine from each kidney to bladder"
+      ]
+    ],
+    "scenario": "Fictional charts compare animal excretory structures and the human urinary system. Some listed systems also have major osmoregulatory functions; excretion and egestion must remain distinct.",
+    "tasks": [
+      "Name the excretory units represented by A.",
+      "Name B.",
+      "Name C.",
+      "Name D.",
+      "Name E."
+    ],
+    "marks": [
+      "Protonephridia/flame-cell system.",
+      "Nephridium (metanephridium accepted).",
+      "Malpighian tubules.",
+      "Kidneys.",
+      "Ureters."
+    ],
+    "worked_explanation": "A has the flame-cell/protonephridial arrangement; B is a segmentally repeated nephridium; C connects to the insect gut. The human kidney collects urine into its pelvis and ureter. Ureter and urethra differ: ureters deliver to the bladder; the urethra leads from the bladder to the exterior.",
+    "common_error": "Calling the ureter the urethra, or identifying removal of undigested food as metabolic excretion.",
+    "transfer_question": "A chart shows a freshwater protozoan organelle periodically expelling excess water. Name it and its main role.",
+    "transfer_answer": "Contractile vacuole; osmoregulation by expelling excess water.",
+    "skills": [
+      "comparative anatomy",
+      "urinary pathways"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B28",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-028"
+    ],
+    "title": "Nervous-system map: centre, connection and function",
+    "nie_number": "28",
+    "nie_print_page": 33,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Explaining the organization of the human nervous system using diagrams or models",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 33–33; PDF pp. 43–43 (1-based)."
+    },
+    "data": [
+      [
+        "Label",
+        "Diagram feature or connection"
+      ],
+      [
+        "A",
+        "Largest paired forebrain region with convoluted surface"
+      ],
+      [
+        "B",
+        "Posterior hindbrain region associated with coordination"
+      ],
+      [
+        "C",
+        "Brainstem region continuous with spinal cord"
+      ],
+      [
+        "D",
+        "Nerves linking CNS with body structures"
+      ],
+      [
+        "E",
+        "Brain and spinal cord grouped together"
+      ]
+    ],
+    "scenario": "Interpret a fictional labelled nervous-system model. The question assesses organisation and principal functions rather than asking for a clinical localisation diagnosis.",
+    "tasks": [
+      "Name A.",
+      "Name B.",
+      "Name C.",
+      "Identify D as central or peripheral nervous system.",
+      "Give the collective name for E."
+    ],
+    "marks": [
+      "Cerebrum.",
+      "Cerebellum.",
+      "Medulla oblongata.",
+      "Peripheral nervous system.",
+      "Central nervous system."
+    ],
+    "worked_explanation": "The cerebrum is the largest paired region. The cerebellum participates in coordination and balance, while the medulla is continuous with the spinal cord and contains important autonomic control centres. Peripheral nerves connect receptors and effectors with the CNS. A nerve is not itself a separate brain region.",
+    "common_error": "Including every nerve in the CNS, or equating the cerebellum with the cerebrum.",
+    "transfer_question": "A sensory neuron carries an impulse from a skin receptor towards the spinal cord. Is this direction afferent or efferent?",
+    "transfer_answer": "Afferent, towards the CNS.",
+    "skills": [
+      "nervous-system organisation",
+      "directional pathways"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B29",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-029"
+    ],
+    "title": "Sensory receptor cards: match the stimulus",
+    "nie_number": "29",
+    "nie_print_page": 34,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Describing sensory structures of human using diagrams/ models/ charts",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 34–34; PDF pp. 44–44 (1-based)."
+    },
+    "data": [
+      [
+        "Card",
+        "Location/feature"
+      ],
+      [
+        "A",
+        "Taste-bud receptor cells exposed to dissolved food chemicals"
+      ],
+      [
+        "B",
+        "Olfactory receptor neurons exposed to airborne odorants dissolved in mucus"
+      ],
+      [
+        "C",
+        "Retinal rods and cones"
+      ],
+      [
+        "D",
+        "Cutaneous endings responding to temperature change"
+      ],
+      [
+        "E",
+        "Pressure-sensitive skin receptor with layered capsule"
+      ],
+      [
+        "F",
+        "Free nerve endings responding to potentially damaging stimuli"
+      ]
+    ],
+    "scenario": "The fictional cards represent receptor types from Practical 29. Classify by the adequate stimulus; the anatomy and stimulus should agree.",
+    "tasks": [
+      "What receptor class includes both A and B?",
+      "What receptor class includes C?",
+      "What receptor class includes D?",
+      "What receptor class includes E?",
+      "What receptor class includes F?"
+    ],
+    "marks": [
+      "Chemoreceptors.",
+      "Photoreceptors.",
+      "Thermoreceptors.",
+      "Mechanoreceptors.",
+      "Pain receptors/nociceptors."
+    ],
+    "worked_explanation": "Taste and smell are chemical sensing. Rods and cones respond to light; thermoreceptors respond to temperature; pressure deforms mechanoreceptors; nociceptors respond to potentially damaging stimulation. A sensory label describes the transduction function rather than merely the organ containing the receptor.",
+    "common_error": "Calling every skin receptor a touch receptor or treating smell as direct light detection.",
+    "transfer_question": "Inner-ear hair cells respond when their stereocilia are mechanically deflected. Which broad receptor class applies?",
+    "transfer_answer": "Mechanoreceptors.",
+    "skills": [
+      "receptor classification",
+      "stimulus discrimination"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B30",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-030"
+    ],
+    "title": "Eye and ear sections: locate the transducer",
+    "nie_number": "30",
+    "nie_print_page": 35,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Describing the structures of human eye and ear using diagrams/ models/ charts",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 35–35; PDF pp. 45–45 (1-based)."
+    },
+    "data": [
+      [
+        "Label",
+        "Feature in a fictional model"
+      ],
+      [
+        "A",
+        "Transparent curved surface at front of eye"
+      ],
+      [
+        "B",
+        "Light-sensitive layer lining posterior eye"
+      ],
+      [
+        "C",
+        "Small opening surrounded by iris"
+      ],
+      [
+        "D",
+        "Spiral fluid-filled inner-ear structure"
+      ],
+      [
+        "E",
+        "Three looped inner-ear ducts in different planes"
+      ]
+    ],
+    "scenario": "Two section models show the eye and ear. The table provides structural descriptions instead of an image; no sensory self-test is requested.",
+    "tasks": [
+      "Name the transparent anterior eye surface labelled A.",
+      "Name the light-sensitive eye layer labelled B.",
+      "Name the opening in the iris labelled C.",
+      "Name the coiled inner-ear structure labelled D.",
+      "Name the balance-related inner-ear structures labelled E."
+    ],
+    "marks": [
+      "Cornea.",
+      "Retina.",
+      "Pupil.",
+      "Cochlea.",
+      "Semicircular canals (semicircular ducts accepted)."
+    ],
+    "worked_explanation": "The cornea is the anterior transparent surface, while the retina contains photoreceptors. The pupil is an opening, not a tissue that contracts. The cochlea is involved in hearing; the semicircular system detects angular acceleration. The iris controls pupil size; the lens changes shape for accommodation.",
+    "common_error": "Confusing the cochlea with semicircular canals, or saying the pupil itself is a muscle.",
+    "transfer_question": "Which membrane separates the external auditory canal from the middle ear?",
+    "transfer_answer": "Tympanic membrane (eardrum).",
+    "skills": [
+      "sense-organ anatomy",
+      "structure-function"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B31",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-031"
+    ],
+    "title": "Male reproductive model and testis section",
+    "nie_number": "31",
+    "nie_print_page": 36,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Identifying main components of male reproductive system using models/ diagrams",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 36–36; PDF pp. 46–46 (1-based)."
+    },
+    "data": [
+      [
+        "Label",
+        "Fictional anatomical feature"
+      ],
+      [
+        "A",
+        "Coiled duct closely associated with testis where sperm mature"
+      ],
+      [
+        "B",
+        "Duct carrying sperm away from A towards pelvic cavity"
+      ],
+      [
+        "C",
+        "Tubules containing developing germ cells"
+      ],
+      [
+        "D",
+        "Support cells within the seminiferous epithelium"
+      ],
+      [
+        "E",
+        "Interstitial cells between tubules"
+      ]
+    ],
+    "scenario": "Use a representative reproductive-system model and testis histology table. The exercise directly follows the handbook anatomical objectives; no personal or clinical data are involved.",
+    "tasks": [
+      "Name A.",
+      "Name B.",
+      "Name C.",
+      "Name D.",
+      "State the principal hormone secreted by E."
+    ],
+    "marks": [
+      "Epididymis.",
+      "Vas deferens/sperm duct.",
+      "Seminiferous tubules.",
+      "Sertoli cells.",
+      "Testosterone."
+    ],
+    "worked_explanation": "Sperm develop within seminiferous tubules, mature in the epididymis and travel through the vas deferens. Sertoli cells support developing germ cells within tubules. Leydig cells occupy interstitial spaces and secrete testosterone. Hormone-secreting cells and sperm-producing structures are therefore spatially distinct.",
+    "common_error": "Saying Leydig cells produce sperm or that sperm are formed in the epididymis.",
+    "transfer_question": "In a testis section, are the earliest spermatogonia closer to the basement membrane or the tubule lumen?",
+    "transfer_answer": "The basement membrane; more advanced stages lie progressively nearer the lumen.",
+    "skills": [
+      "reproductive anatomy",
+      "histological location"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B32",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-032"
+    ],
+    "title": "Female reproductive model: follicles, ducts and uterine layers",
+    "nie_number": "32",
+    "nie_print_page": 37,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Identifying main components of female reproductive system using models/ diagrams",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 37–37; PDF pp. 47–47 (1-based)."
+    },
+    "data": [
+      [
+        "Label",
+        "Fictional feature"
+      ],
+      [
+        "A",
+        "Gonad containing follicles at several stages"
+      ],
+      [
+        "B",
+        "Large antral follicle close to ovulation"
+      ],
+      [
+        "C",
+        "Temporary glandular structure after ovulation"
+      ],
+      [
+        "D",
+        "Tube linking the region near the ovary with uterus"
+      ],
+      [
+        "E",
+        "Inner uterine lining"
+      ]
+    ],
+    "scenario": "Interpret a model and an ovarian-section feature table. Use anatomical identity and normal function; the fictional cards do not describe any person’s reproductive status.",
+    "tasks": [
+      "Name A.",
+      "Name B.",
+      "Name C.",
+      "Name D.",
+      "Name E."
+    ],
+    "marks": [
+      "Ovary.",
+      "Mature/Graafian follicle.",
+      "Corpus luteum.",
+      "Oviduct/Fallopian tube/uterine tube.",
+      "Endometrium."
+    ],
+    "worked_explanation": "The ovary contains developing follicles. Following ovulation, the follicular remnant forms the corpus luteum, which secretes progesterone and oestrogen. The oviduct is distinct from the uterus; the endometrium is the inner uterine lining, while the myometrium is muscular. A mature follicle is not itself an embryo.",
+    "common_error": "Confusing the corpus luteum with the released oocyte, or naming the uterine lining as myometrium.",
+    "transfer_question": "Which uterine layer is predominantly smooth muscle?",
+    "transfer_answer": "Myometrium.",
+    "skills": [
+      "reproductive anatomy",
+      "structure identification"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B33",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-033"
+    ],
+    "title": "Skull and vertebral tray: articulation and load",
+    "nie_number": "33",
+    "nie_print_page": 38,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Describing the gross structure of the human skull and vertebral column in relation to functions of various parts using specimens/ models/ diagrams",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 38–39; PDF pp. 48–49 (1-based)."
+    },
+    "data": [
+      [
+        "Model",
+        "Feature"
+      ],
+      [
+        "A",
+        "Large opening at skull base"
+      ],
+      [
+        "B",
+        "First cervical vertebra supporting occipital condyles"
+      ],
+      [
+        "C",
+        "Second cervical vertebra with dens"
+      ],
+      [
+        "D",
+        "Vertebra with rib-articulation facets"
+      ],
+      [
+        "E",
+        "Large-bodied vertebra without rib facets or transverse foramina"
+      ]
+    ],
+    "scenario": "Five fictional osteology models illustrate distinctive skeletal structures. Interpret the joint relationships rather than assigning labels from apparent size alone.",
+    "tasks": [
+      "Name A.",
+      "Name B.",
+      "Name C.",
+      "Identify the vertebral region of D.",
+      "Identify the vertebral region of E."
+    ],
+    "marks": [
+      "Foramen magnum.",
+      "Atlas.",
+      "Axis.",
+      "Thoracic.",
+      "Lumbar."
+    ],
+    "worked_explanation": "The foramen magnum transmits the spinal cord into continuity with the brainstem. Atlas articulates with the occipital condyles and supports nodding; the axis dens participates in head rotation. Thoracic vertebrae articulate with ribs. A large centrum suits lumbar load bearing, supported here by the absence of the competing region-specific features.",
+    "common_error": "Swapping atlas and axis, or identifying lumbar vertebrae by size without checking other features.",
+    "transfer_question": "Which intervertebral structures cushion compressive forces between most adjacent vertebral bodies?",
+    "transfer_answer": "Intervertebral discs.",
+    "skills": [
+      "osteology",
+      "articulation",
+      "structural adaptation"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B34",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-034"
+    ],
+    "title": "Appendicular skeleton: movement from bone relationships",
+    "nie_number": "34",
+    "nie_print_page": 40,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Describing the human appendicular skeleton using specimens/ models/ diagrams",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 40–40; PDF pp. 50–50 (1-based)."
+    },
+    "data": [
+      [
+        "Card",
+        "Anatomical relationship"
+      ],
+      [
+        "A",
+        "Upper-arm bone articulating with scapula"
+      ],
+      [
+        "B",
+        "Forearm bone on thumb side in anatomical position"
+      ],
+      [
+        "C",
+        "Forearm rotation: radius crosses ulna"
+      ],
+      [
+        "D",
+        "Thigh bone joining hip and knee"
+      ],
+      [
+        "E",
+        "Foot arrangement with longitudinal and transverse arches"
+      ]
+    ],
+    "scenario": "The cards describe a fictional skeletal model in anatomical position. The practical focus is upper-limb movement and lower-limb support, not an invented exercise prescription.",
+    "tasks": [
+      "Name A.",
+      "Name B.",
+      "Name the movement in C.",
+      "Name D.",
+      "State one mechanical role of E."
+    ],
+    "marks": [
+      "Humerus.",
+      "Radius.",
+      "Pronation.",
+      "Femur.",
+      "Supports/distributes body weight or absorbs shock (any one)."
+    ],
+    "worked_explanation": "The humerus forms the upper arm; radius is lateral on the thumb side in anatomical position. During pronation the radius crosses the ulna, unlike supination where they are approximately parallel. Femur transmits load through the lower limb. Foot arches contribute support and resilience during standing and walking.",
+    "common_error": "Calling the crossing movement supination, or describing the tibia as the thigh bone.",
+    "transfer_question": "Name the larger medial weight-bearing bone of the lower leg.",
+    "transfer_answer": "Tibia.",
+    "skills": [
+      "appendicular anatomy",
+      "movement terminology",
+      "weight bearing"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B35",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-035"
+    ],
+    "title": "Sterilisation choices: a paper-based matching exercise",
+    "nie_number": "35",
+    "nie_print_page": 41,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Sterilization of water, culture media, glassware, heat labile substances and inoculating needles",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 41–42; PDF pp. 51–52 (1-based)."
+    },
+    "data": [
+      [
+        "Material card",
+        "Constraint"
+      ],
+      [
+        "A",
+        "Dry glass Petri dish; heat-stable"
+      ],
+      [
+        "B",
+        "Aqueous nutrient medium; heat-stable"
+      ],
+      [
+        "C",
+        "Heat-labile solution suitable for membrane filtration"
+      ],
+      [
+        "D",
+        "Heat-resistant metal inoculating loop"
+      ],
+      [
+        "E",
+        "Work surface with visible soil; disinfection is intended"
+      ]
+    ],
+    "scenario": "This is a theoretical selection exercise, not instructions to operate equipment or handle microbes. Match broad method categories from the handbook. No temperatures, durations or practical steps are supplied.",
+    "tasks": [
+      "Choose the handbook sterilisation method category for A.",
+      "Choose the category for B.",
+      "Choose the category for C.",
+      "Choose the category for D.",
+      "Does a disinfected surface automatically meet the definition of sterilisation?"
+    ],
+    "marks": [
+      "Dry heat in a hot-air oven.",
+      "Moist heat/autoclaving.",
+      "Membrane filtration.",
+      "Direct-flame dry heat (method identification only).",
+      "No; disinfection does not necessarily eliminate all viable microorganisms, including resistant spores."
+    ],
+    "worked_explanation": "The appropriate method depends on material stability and the intended outcome. Dry glass tolerates dry heat; an aqueous medium is suited to moist heat; a compatible heat-sensitive solution can be filtered. Filtration removes organisms rather than necessarily killing them. Surface disinfection must not be advertised as guaranteed sterilisation.",
+    "common_error": "Choosing heat for a heat-labile substance or treating “disinfected” and “sterile” as synonyms.",
+    "transfer_question": "Why is filtration a different control mechanism from thermal killing?",
+    "transfer_answer": "Filtration physically removes microorganisms from a compatible liquid; thermal treatment acts by heat-induced inactivation.",
+    "skills": [
+      "method selection",
+      "sterilisation-disinfection distinction"
+    ],
+    "numeric_checks": [],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B36",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-036"
+    ],
+    "title": "Colony records: morphology is not species identity",
+    "nie_number": "36",
+    "nie_print_page": 43,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Preparation of a microbiological culture medium (Nutrient Agar/ Potato Dextrose Agar), inoculation with a sample of toddy and yoghurt and observation of microbial colonies",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 43–44; PDF pp. 53–54 (1-based)."
+    },
+    "data": [
+      [
+        "Closed-plate image record",
+        "Circular cream colonies",
+        "Irregular white colonies",
+        "Other notes"
+      ],
+      [
+        "Inoculated teaching sample 1",
+        "18",
+        "6",
+        "Two distinct recorded morphotypes"
+      ],
+      [
+        "Inoculated teaching sample 2",
+        "11",
+        "1",
+        "Two distinct recorded morphotypes"
+      ],
+      [
+        "Uninoculated control",
+        "0",
+        "0",
+        "No visible colonies in the supplied image"
+      ]
+    ],
+    "scenario": "Analyse fictional photographs from an already completed, supervised teaching demonstration. All cultures remain outside this exercise. No medium recipe, inoculation or incubation instructions are included. “Morphotype” means an appearance class, not an identified species.",
+    "tasks": [
+      "Calculate total recorded colonies on sample 1.",
+      "How many morphotypes were recorded for sample 1?",
+      "State the result for the uninoculated control.",
+      "Does one colony necessarily represent one original microbial cell?",
+      "Can the cream colonies be assigned to a microbial species from colour and shape alone?"
+    ],
+    "marks": [
+      "24.",
+      "Two.",
+      "No visible colonies in the supplied observation.",
+      "No; a colony may arise from a cell cluster or other colony-forming unit.",
+      "No; morphology alone is insufficient for reliable species identification."
+    ],
+    "worked_explanation": "Sample 1 has 18 + 6 = 24 visible colonies in two appearance categories. The blank control supplies a check for visible background contamination under the stated observation conditions; it does not prove absence of every viable organism. Counts on these teaching plates cannot yield original sample concentration without suitable quantitative sampling/dilution information.",
+    "common_error": "Reporting two morphotypes as proof of exactly two species, or converting counts to cells per millilitre without a sampled volume.",
+    "transfer_question": "A photo has 9 small circular colonies and 5 large irregular colonies. Give total count and number of recorded morphotypes.",
+    "transfer_answer": "14 colonies; two recorded morphotypes. Neither value alone establishes the number of species.",
+    "skills": [
+      "colony morphology",
+      "control interpretation",
+      "quantitative limits"
+    ],
+    "numeric_checks": [
+      {
+        "label": "sample 1 total",
+        "expression": "18+6",
+        "expected": 24,
+        "unit": "colonies",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "sample 2 total",
+        "expression": "11+1",
+        "expected": 12,
+        "unit": "colonies",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer total",
+        "expression": "9+5",
+        "expected": 14,
+        "unit": "colonies",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B37",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-037"
+    ],
+    "title": "Simple stain: what the blue image can and cannot tell you",
+    "nie_number": "37",
+    "nie_print_page": 45,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Staining of microorganisms found in toddy and yoghurt using a simple stain (Methylene Blue)",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 45–46; PDF pp. 55–56 (1-based)."
+    },
+    "data": [
+      [
+        "Prepared-image field",
+        "Fictional features"
+      ],
+      [
+        "A",
+        "Small blue-stained rods"
+      ],
+      [
+        "B",
+        "Larger blue-stained oval cells; several show budding"
+      ],
+      [
+        "C",
+        "Dense overlapping blue objects with indistinct boundaries"
+      ],
+      [
+        "Scale for B",
+        "Cell image 15 mm; scale bar 5 mm represents 2 µm"
+      ]
+    ],
+    "scenario": "Fictional images come from already prepared and fixed teaching slides stained with methylene blue, the simple stain in the handbook. No smear preparation, handling or staining steps are requested.",
+    "tasks": [
+      "Describe the bacterial shape represented by A.",
+      "Which field supports identification of yeast-like cells?",
+      "Calculate the represented length of the B cell.",
+      "Can the common blue colour distinguish Gram-positive from Gram-negative bacteria?",
+      "Which field is least suitable for reliable individual-cell measurements?"
+    ],
+    "marks": [
+      "Rod-shaped/bacilli.",
+      "B.",
+      "6 µm.",
+      "No; methylene-blue simple staining is not the Gram differential stain.",
+      "C."
+    ],
+    "worked_explanation": "The larger oval budding cells support a yeast interpretation, whereas A consists of small rods. Scale-bar comparison gives 15/5 × 2 = 6 µm. A simple stain improves contrast and reveals shape/arrangement; it does not establish Gram reaction, viability or microbial species. Overlap in C obscures boundaries and compromises measurement.",
+    "common_error": "Calling all blue cells Gram-positive, or identifying bacteria to species from rod shape.",
+    "transfer_question": "A micrograph shows cells in spherical pairs. What morphology and arrangement can be reported without inferring a species?",
+    "transfer_answer": "Cocci in pairs (diplococcal arrangement); species identity and Gram reaction remain undetermined.",
+    "skills": [
+      "simple-stain interpretation",
+      "scale bar",
+      "measurement quality"
+    ],
+    "numeric_checks": [
+      {
+        "label": "yeast cell length",
+        "expression": "15/5*2",
+        "expected": 6,
+        "unit": "µm",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  },
+  {
+    "id": "PM5-B38",
+    "subject": "biology",
+    "activity_ids": [
+      "bio-038"
+    ],
+    "title": "Disinfectant comparison: counts, controls and restrained claims",
+    "nie_number": "38",
+    "nie_print_page": 47,
+    "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "official_title": "Use of alcohol and other disinfectants to control microorganisms",
+    "source_verification": {
+      "status": "method_checked",
+      "note": "Official handbook activity objectives, materials and method inspected; this original theoretical exercise uses fictional data or specimen features and does not reproduce a laboratory protocol.",
+      "page_location": "Printed pp. 47–47; PDF pp. 57–57 (1-based)."
+    },
+    "data": [
+      [
+        "Already completed teaching demonstration",
+        "Plate 1 colony count",
+        "Plate 2 colony count"
+      ],
+      [
+        "Untreated matched controls",
+        "30",
+        "34"
+      ],
+      [
+        "Disinfectant-treated group",
+        "6",
+        "10"
+      ]
+    ],
+    "scenario": "Use fictional closed-plate photograph counts from the handbook-style treated-versus-untreated comparison. Groups had matched exposure and observation conditions. No disinfectant formulation, microbial cultivation, exposure procedure or operational parameters are supplied.",
+    "tasks": [
+      "Calculate the mean control count.",
+      "Calculate the mean treated count.",
+      "Calculate percentage reduction relative to the control mean.",
+      "Does this result establish that the treated group was sterile?",
+      "Name one design feature, in addition to matching exposure, needed for a fair comparison."
+    ],
+    "marks": [
+      "32 colonies.",
+      "8 colonies.",
+      "75%.",
+      "No; visible colonies remained and reduced counts are not sterilisation evidence.",
+      "Same disinfectant concentration between treated replicates, or matched medium/observation duration/plate area (any one justified controlled condition)."
+    ],
+    "worked_explanation": "Means are (30 + 34)/2 = 32 and (6 + 10)/2 = 8. Reduction = (32 − 8)/32 × 100 = 75%. This measures relative reduction in the fictional visible-colony outcome, not the percentage of all microbes killed or universal product effectiveness. The original handbook comparison is based on colony counts, so a disc-diffusion zone has not been substituted.",
+    "common_error": "Calling a 75% colony-count reduction “75% of all microorganisms killed,” or claiming sterility.",
+    "transfer_question": "Another matched comparison has mean counts 50 untreated and 15 treated. What is the relative reduction?",
+    "transfer_answer": "(50 − 15)/50 × 100 = 70%; this is a reduction in the measured colony outcome under those conditions.",
+    "skills": [
+      "means",
+      "relative reduction",
+      "control design",
+      "claim calibration"
+    ],
+    "numeric_checks": [
+      {
+        "label": "control mean",
+        "expression": "(30+34)/2",
+        "expected": 32,
+        "unit": "colonies",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "treated mean",
+        "expression": "(6+10)/2",
+        "expected": 8,
+        "unit": "colonies",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "relative reduction",
+        "expression": "(32-8)/32*100",
+        "expected": 75,
+        "unit": "%",
+        "tolerance": 1e-09
+      },
+      {
+        "label": "transfer reduction",
+        "expression": "(50-15)/50*100",
+        "expected": 70,
+        "unit": "%",
+        "tolerance": 1e-09
+      }
+    ],
+    "review_status": "independent_model_teacher_review_pending",
+    "data_status": "fictional_practice_data",
+    "laboratory_procedure_included": false
+  }
+]

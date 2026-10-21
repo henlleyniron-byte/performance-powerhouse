@@ -1,0 +1,1158 @@
+{
+  "audit_version": "1.0",
+  "subject": "biology",
+  "source_handbook": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+  "source_basis": "Actual activity bodies read from locally downloaded official61-page PDF; retained authoring/biology/nie_biology.pdf. Existing source_audit.md details full38-activity inspection.",
+  "case_count": 17,
+  "numeric_assertion_count": 62,
+  "arithmetic_errors_found": 0,
+  "summary": "17 legacy Biology cases reviewed. All substantive numerical calculations and plotted reciprocals checked; no arithmetic error found. Two source-method mismatches (PM-B08 disc diffusion; PM32-B05 mass change) require explicit associated-enrichment labels. PM33-B01 requires RQ interpretation and spelling corrections. Minor timing-variant/lookup/authorship wording issues documented.",
+  "teacher_review_performed": false,
+  "cases": [
+    {
+      "id": "PM-B01",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-004"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "sample total",
+          "expression": "50+20+10+6+14",
+          "expected": 100,
+          "computed": 100,
+          "unit": "cells",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "interphase fraction",
+          "expression": "50/100",
+          "expected": 0.5,
+          "computed": 0.5,
+          "unit": "",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "interphase percentage",
+          "expression": "50/100*100",
+          "expected": 50,
+          "computed": 50.0,
+          "unit": "%",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer percentage",
+          "expression": "36/60*100",
+          "expected": 60,
+          "computed": 60.0,
+          "unit": "%",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_related_extension",
+      "source_method_location": "Printed p5, Practical4",
+      "interpretation_audit": "Stage-count inference appropriately conditional on a representative asynchronous population; no absolute duration claimed.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM-B02",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-007"
+      ],
+      "numeric_assertions": [],
+      "arithmetic_status": "not_applicable_no_calculated_values",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed p8, Practical7",
+      "interpretation_audit": "Typical C4 versus C3 inference and Kranz limitations are sound. No quantitative rate inferred.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM-B03",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-017"
+      ],
+      "numeric_assertions": [],
+      "arithmetic_status": "not_applicable_no_calculated_values",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed p18, Practical17",
+      "interpretation_audit": "Typical scattered monocot stem versus ringed cambial dicot stem classification valid within the specified stem models. Root comparison correct.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM-B04",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-019"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "mean count",
+          "expression": "(36+44+40)/3",
+          "expected": 40,
+          "computed": 40.0,
+          "unit": "stomata per field",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "mean density",
+          "expression": "((36+44+40)/3)/0.25",
+          "expected": 160,
+          "computed": 160.0,
+          "unit": "stomata mm⁻²",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "pooled density",
+          "expression": "(36+44+40)/(3*0.25)",
+          "expected": 160,
+          "computed": 160.0,
+          "unit": "stomata mm⁻²",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer density",
+          "expression": "50/0.50",
+          "expected": 100,
+          "computed": 100.0,
+          "unit": "stomata mm⁻²",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_related_extension",
+      "source_method_location": "Printed p20, Practical19",
+      "interpretation_audit": "Density calculation correct; distinction from aperture and direct transpiration is valid. Counting is an extension of the official observational practical.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM-B05",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-020"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "optional refined 50 percent interpolation",
+          "expression": "0.30+(50-48)/(75-48)*(0.40-0.30)",
+          "expected": 0.3074074074074074,
+          "computed": 0.3074074074074074,
+          "unit": "mol dm⁻³",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer interpolation",
+          "expression": "0.20+(50-30)/(55-30)*0.10",
+          "expected": 0.28,
+          "computed": 0.28,
+          "unit": "mol dm⁻³",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed pp21–23, Practical20",
+      "interpretation_audit": "Near0.30 is defensible as the requested approximate table estimate; a refined linear estimate would be0.3074. Concentration-versus-potential caution correct. Official handbook uses its provided potential lookup table, so an equation is not the only legitimate route.",
+      "issues": [
+        {
+          "code": "handbook_lookup_omitted",
+          "severity": "minor",
+          "field": "marks[4]",
+          "finding": "Additional variables/valid model are discussed without acknowledging the official supplied sucrose potential table.",
+          "recommendation": "Optionally add: a temperature-appropriate validated lookup table, such as the handbook table, can also convert concentration to a potential estimate."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM-B06",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-023"
+      ],
+      "numeric_assertions": [],
+      "arithmetic_status": "not_applicable_no_calculated_values",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed p28, Practical23",
+      "interpretation_audit": "Skeletal, cardiac and smooth muscle features and discriminators correct.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM-B07",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-026"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "rest mean",
+          "expression": "(72+76)/2",
+          "expected": 74,
+          "computed": 74.0,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "immediate mean",
+          "expression": "(110+118)/2",
+          "expected": 114,
+          "computed": 114.0,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "mean rise",
+          "expression": "(110+118)/2-(72+76)/2",
+          "expected": 40,
+          "computed": 40.0,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "recovery mean",
+          "expression": "(84+88)/2",
+          "expected": 86,
+          "computed": 86.0,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "mean fall",
+          "expression": "(110+118)/2-(84+88)/2",
+          "expected": 28,
+          "computed": 28.0,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer rise",
+          "expression": "104-80",
+          "expected": 24,
+          "computed": 24,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed p31, Practical26",
+      "interpretation_audit": "Paired-mean comparison and limitations appropriate for fictional exercise pulse observations.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM-B08",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "activity_ids": [
+        "bio-038"
+      ],
+      "numeric_assertions": [],
+      "arithmetic_status": "not_applicable_no_calculated_values",
+      "handbook_alignment": "associated_enrichment_not_official_method",
+      "source_method_location": "Printed p47, Practical38",
+      "interpretation_audit": "Inhibition-zone interpretation and diffusion caveat scientifically sound, but source method is different.",
+      "issues": [
+        {
+          "code": "source_method_mismatch",
+          "severity": "moderate",
+          "field": "activity mapping/provenance",
+          "finding": "NIE Practical38 compares treated-versus-untreated colony counts; this case instead uses inhibitory-zone diameters.",
+          "recommendation": "Preserve PM-B08 and bio-038 association, but explicitly label this case associated antimicrobial evidence enrichment, not the method specified in the handbook. PM5-B38 supplies the direct colony-count-method case."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM32-B01",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "activity_ids": [
+        "bio-005"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "graph reciprocal at 10 C",
+          "expression": "1/240",
+          "expected": 0.004167,
+          "computed": 0.004166666666666667,
+          "unit": "s⁻¹",
+          "tolerance": 5e-07,
+          "passed": true
+        },
+        {
+          "label": "graph reciprocal at 20 C",
+          "expression": "1/140",
+          "expected": 0.007143,
+          "computed": 0.007142857142857143,
+          "unit": "s⁻¹",
+          "tolerance": 5e-07,
+          "passed": true
+        },
+        {
+          "label": "graph reciprocal at 30 C",
+          "expression": "1/80",
+          "expected": 0.0125,
+          "computed": 0.0125,
+          "unit": "s⁻¹",
+          "tolerance": 5e-07,
+          "passed": true
+        },
+        {
+          "label": "graph reciprocal at 40 C",
+          "expression": "1/50",
+          "expected": 0.02,
+          "computed": 0.02,
+          "unit": "s⁻¹",
+          "tolerance": 5e-07,
+          "passed": true
+        },
+        {
+          "label": "graph reciprocal at 50 C",
+          "expression": "1/100",
+          "expected": 0.01,
+          "computed": 0.01,
+          "unit": "s⁻¹",
+          "tolerance": 5e-07,
+          "passed": true
+        },
+        {
+          "label": "graph reciprocal at 60 C",
+          "expression": "1/240",
+          "expected": 0.004167,
+          "computed": 0.004166666666666667,
+          "unit": "s⁻¹",
+          "tolerance": 5e-07,
+          "passed": true
+        },
+        {
+          "label": "20 C three significant figure value",
+          "expression": "1/140",
+          "expected": 0.00714,
+          "computed": 0.007142857142857143,
+          "unit": "s⁻¹",
+          "tolerance": 5e-06,
+          "passed": true
+        },
+        {
+          "label": "40 C worked rate",
+          "expression": "1/50",
+          "expected": 0.02,
+          "computed": 0.02,
+          "unit": "s⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "60 C worked rounded rate",
+          "expression": "1/240",
+          "expected": 0.00417,
+          "computed": 0.004166666666666667,
+          "unit": "s⁻¹",
+          "tolerance": 5e-06,
+          "passed": true
+        },
+        {
+          "label": "transfer rate",
+          "expression": "1/125",
+          "expected": 0.008,
+          "computed": 0.008,
+          "unit": "s⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned_with_sampling_variant",
+      "source_method_location": "Printed p6, Practical5",
+      "interpretation_audit": "Correct reciprocal-time proxy, trend and restricted optimum interpretation. Original handbook uses two-minute endpoint sampling; these second-level endpoint values must be identified as a finer-sampling theoretical variant rather than exact implementation of that timing schedule.",
+      "issues": [
+        {
+          "code": "sampling_variant",
+          "severity": "minor",
+          "field": "scenario/source scope",
+          "finding": "The endpoint times50–240s are not all multiples of the handbook two-minute sampling interval.",
+          "recommendation": "If claiming exact method alignment, clarify that this fictional rate-proxy dataset assumes finer endpoint timing than the original handbook schedule; do not alter scientifically valid reciprocals."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM32-B02",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "activity_ids": [
+        "bio-006"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "absolute decrease",
+          "expression": "18-4",
+          "expected": 14,
+          "computed": 14,
+          "unit": "mm³ min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "percentage decrease",
+          "expression": "(18-4)/18*100",
+          "expected": 77.8,
+          "computed": 77.77777777777779,
+          "unit": "%",
+          "tolerance": 0.05,
+          "passed": true
+        },
+        {
+          "label": "endpoint ratio",
+          "expression": "18/4",
+          "expected": 4.5,
+          "computed": 4.5,
+          "unit": "",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer volume",
+          "expression": "6*2",
+          "expected": 12,
+          "computed": 12,
+          "unit": "mm³",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed p7, Practical6",
+      "interpretation_audit": "Gas-volume output proxy, distance association, inverse-square caution and CO2/temperature confounders appropriate.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM32-B03",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "activity_ids": [
+        "bio-020"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "interpolation fraction",
+          "expression": "(50-34)/(55-34)",
+          "expected": 0.7619047619047619,
+          "computed": 0.7619047619047619,
+          "unit": "",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "nominal50 concentration",
+          "expression": "0.20+(50-34)/(55-34)*0.04",
+          "expected": 0.2305,
+          "computed": 0.2304761904761905,
+          "unit": "mol dm⁻³",
+          "tolerance": 5e-05,
+          "passed": true
+        },
+        {
+          "label": "three significant figure concentration",
+          "expression": "0.20+(50-34)/(55-34)*0.04",
+          "expected": 0.23,
+          "computed": 0.2304761904761905,
+          "unit": "mol dm⁻³",
+          "tolerance": 0.0005,
+          "passed": true
+        },
+        {
+          "label": "transfer threshold",
+          "expression": "0.20+(50-40)/(60-40)*0.10",
+          "expected": 0.25,
+          "computed": 0.25,
+          "unit": "mol dm⁻³",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed pp21–23, Practical20",
+      "interpretation_audit": "Local-linear interpolation and concentration-versus-potential limitations correct. Add handbook lookup-table option if improving marking guidance.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM32-B04",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "activity_ids": [
+        "bio-026"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "immediate excess",
+          "expression": "118-72",
+          "expected": 46,
+          "computed": 46,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "five minute fall",
+          "expression": "118-74",
+          "expected": 44,
+          "computed": 44,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "excess fraction lost",
+          "expression": "44/46",
+          "expected": 0.9565,
+          "computed": 0.9565217391304348,
+          "unit": "fraction",
+          "tolerance": 5e-05,
+          "passed": true
+        },
+        {
+          "label": "excess percent lost",
+          "expression": "44/46*100",
+          "expected": 95.7,
+          "computed": 95.65217391304348,
+          "unit": "%",
+          "tolerance": 0.05,
+          "passed": true
+        },
+        {
+          "label": "residual excess at five minutes",
+          "expression": "74-72",
+          "expected": 2,
+          "computed": 2,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer fall",
+          "expression": "110-80",
+          "expected": 30,
+          "computed": 30,
+          "unit": "beats min⁻¹",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed p31, Practical26",
+      "interpretation_audit": "Correct denominator for excess recovery. Individual fictional curve is not misrepresented as diagnosis.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM32-B05",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "activity_ids": [
+        "bio-021"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "interpolation fraction",
+          "expression": "1/(1+4)",
+          "expected": 0.2,
+          "computed": 0.2,
+          "unit": "",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "zero concentration",
+          "expression": "0.30+1/(1+4)*0.10",
+          "expected": 0.32,
+          "computed": 0.32,
+          "unit": "mol dm⁻³",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer zero concentration",
+          "expression": "0.25+2/(2+2)*0.10",
+          "expected": 0.3,
+          "computed": 0.3,
+          "unit": "mol dm⁻³",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "associated_enrichment_not_official_method",
+      "source_method_location": "Printed pp24–26, Practical21",
+      "interpretation_audit": "Mass-change osmosis inference is sound and zero net change does not imply no bidirectional water movement. It is not the source-specified measurement.",
+      "issues": [
+        {
+          "code": "source_method_mismatch",
+          "severity": "moderate",
+          "field": "title/scenario/y_label/source scope",
+          "finding": "NIE Practical21 uses Alocasia curvature or potato LENGTH change. PM32-B05 instead presents tissue MASS percentage change.",
+          "recommendation": "Preserve PM32-B05 and linked activity, label associated osmosis enrichment with a mass-change measurement variant. Do not call it exact handbook-method coverage; PM5-B21 supplies the direct length-change case."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM33-B01",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "activity_ids": [
+        "bio-008"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "RQ",
+          "expression": "36/45",
+          "expected": 0.8,
+          "computed": 0.8,
+          "unit": "dimensionless",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "transfer RQ",
+          "expression": "30/40",
+          "expected": 0.75,
+          "computed": 0.75,
+          "unit": "dimensionless",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed p9, Practical8",
+      "interpretation_audit": "Numerical RQ correct. Substrate wording needs revision:0.800 is more appropriately compatible with protein or mixed fuels and does not uniquely identify either; lipid-rich examples are too suggestive at this specific value.",
+      "issues": [
+        {
+          "code": "rq_interpretation",
+          "severity": "moderate",
+          "field": "marks[3]",
+          "finding": "Specific0.800 result is illustrated as fat-rich respiration; pure-fat RQ is typically near0.7, while protein is often about0.8 and mixtures can produce intermediate values.",
+          "recommendation": "Replace with: An RQ of0.800 is compatible with protein or mixed respiratory substrates under the model assumptions; it does not uniquely identify the substrate."
+        },
+        {
+          "code": "typo",
+          "severity": "minor",
+          "field": "common_error",
+          "finding": "Infering is misspelled.",
+          "recommendation": "Change to Inferring."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM33-B02",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "activity_ids": [
+        "bio-022"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "capillary area",
+          "expression": "3.141592653589793*0.250**2",
+          "expected": 0.19635,
+          "computed": 0.19634954084936207,
+          "unit": "mm²",
+          "tolerance": 5e-06,
+          "passed": true
+        },
+        {
+          "label": "volume",
+          "expression": "3.141592653589793*0.250**2*80",
+          "expected": 15.7,
+          "computed": 15.707963267948966,
+          "unit": "mm³",
+          "tolerance": 0.05,
+          "passed": true
+        },
+        {
+          "label": "flow rate",
+          "expression": "3.141592653589793*0.250**2*80/5",
+          "expected": 3.14,
+          "computed": 3.141592653589793,
+          "unit": "mm³ min⁻¹",
+          "tolerance": 0.005,
+          "passed": true
+        },
+        {
+          "label": "microlitre flow",
+          "expression": "3.141592653589793*0.250**2*80/5",
+          "expected": 3.14,
+          "computed": 3.141592653589793,
+          "unit": "µL min⁻¹",
+          "tolerance": 0.005,
+          "passed": true
+        },
+        {
+          "label": "radius doubling factor",
+          "expression": "(2*.25)**2/(.25**2)",
+          "expected": 4,
+          "computed": 4.0,
+          "unit": "",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_related_extension",
+      "source_method_location": "Printed p27, Practical22",
+      "interpretation_audit": "Geometry and mm³-to-µL conversion correct. Water-uptake proxy and radius sensitivity valid; geometrical calculation extends handbook bubble travel/time method.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM33-B03",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "activity_ids": [
+        "bio-003",
+        "bio-002"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "scale bar unit conversion",
+          "expression": "20*1000",
+          "expected": 20000,
+          "computed": 20000,
+          "unit": "µm",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "enlargement",
+          "expression": "20*1000/40",
+          "expected": 500,
+          "computed": 500.0,
+          "unit": "×",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "scale ratio",
+          "expression": "40/20",
+          "expected": 2,
+          "computed": 2.0,
+          "unit": "µm per mm",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "object size",
+          "expression": "7.5*40/20",
+          "expected": 15,
+          "computed": 15.0,
+          "unit": "µm",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "double enlargement",
+          "expression": "2*20*1000/40",
+          "expected": 1000,
+          "computed": 1000.0,
+          "unit": "×",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "size invariant after resizing",
+          "expression": "(2*7.5)*40/(2*20)",
+          "expected": 15,
+          "computed": 15.0,
+          "unit": "µm",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_related_extension",
+      "source_method_location": "Printed pp2–4, Practicals2–3",
+      "interpretation_audit": "Scale calibration, enlargement and scale-bar co-resizing invariance correct. Generic15µm organelle could fit a large organelle; no incompatible organelle identity specified.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    },
+    {
+      "id": "PM33-B04",
+      "subject": "biology",
+      "source_file": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "activity_ids": [
+        "bio-020"
+      ],
+      "numeric_assertions": [
+        {
+          "label": "bracket percentage rise",
+          "expression": "55-20",
+          "expected": 35,
+          "computed": 35,
+          "unit": "percentage points",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "needed percentage rise",
+          "expression": "50-20",
+          "expected": 30,
+          "computed": 30,
+          "unit": "percentage points",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "fraction",
+          "expression": "30/35",
+          "expected": 0.8571428571428571,
+          "computed": 0.8571428571428571,
+          "unit": "",
+          "tolerance": 1e-09,
+          "passed": true
+        },
+        {
+          "label": "nominal threshold4dp",
+          "expression": "0.20+(30/35)*.10",
+          "expected": 0.2857,
+          "computed": 0.2857142857142857,
+          "unit": "mol dm⁻³",
+          "tolerance": 5e-05,
+          "passed": true
+        },
+        {
+          "label": "nominal threshold3dp",
+          "expression": "0.20+(30/35)*.10",
+          "expected": 0.286,
+          "computed": 0.2857142857142857,
+          "unit": "mol dm⁻³",
+          "tolerance": 0.0005,
+          "passed": true
+        },
+        {
+          "label": "transfer threshold",
+          "expression": "0.20+(50-35)/(60-35)*.10",
+          "expected": 0.26,
+          "computed": 0.26,
+          "unit": "mol dm⁻³",
+          "tolerance": 1e-09,
+          "passed": true
+        }
+      ],
+      "arithmetic_status": "checked_no_error_found",
+      "handbook_alignment": "method_aligned",
+      "source_method_location": "Printed pp21–23, Practical20",
+      "interpretation_audit": "Interpolation and uncertainty correct. Temperature-appropriate potential lookup is another acceptable way to infer solute potential in the source method.",
+      "issues": [
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        },
+        {
+          "code": "unsupported_authorship_label",
+          "severity": "minor",
+          "field": "dataset_status",
+          "finding": "Dataset says FICTIONAL TEACHER-WRITTEN EXAMPLE, but authorship by a teacher is not established.",
+          "recommendation": "Use FICTIONAL PRACTICE DATASET — independently prepared; teacher review pending. This does not change the questions or claim actual observations."
+        }
+      ],
+      "review_scope": "Independent scientific/content audit against actual NIE activity text and supplied fictional data. Not teacher review or official marking verification."
+    }
+  ]
+}

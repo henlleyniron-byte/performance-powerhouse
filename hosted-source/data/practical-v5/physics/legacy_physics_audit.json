@@ -1,0 +1,612 @@
+{
+  "scope": "All 17 existing Physics cases only: V3.1 eight, V3.2 five, V3.3 four. Numerical answers, transfers, dimensional/sign checks and obvious physical consistency reviewed against supplied data. Not a full PDF-layout audit, independent teacher review, or complete laboratory-procedure audit.",
+  "review_type": "same_model_subject_authoring_audit_not_teacher_review",
+  "case_count": 17,
+  "numeric_check_count": 60,
+  "overall_finding": "Two known required overlays confirmed; no additional substantive numerical or physical defects found in the other 15 Physics cases. One minor logic-gate wording improvement and optional resonance tube-length clarification recorded.",
+  "cross_release_note": "V3.2 has six mark points per question, consistent with marks_per_question=6; V3.3 has eight, consistent with marks_per_question=8. Do not flatten these into five-mark totals without rewriting. Fictional teacher-written/supplied scenario labels do not establish actual teacher review; all release teacher_reviewed flags are false.",
+  "cases": [
+    {
+      "case_id": "PM-P01",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "corrected reading",
+          "expression": "5.26-0.02",
+          "expected": 5.24,
+          "unit": "cm",
+          "tolerance": 5.240000000000001e-09
+        },
+        {
+          "label": "transfer corrected reading",
+          "expression": "3.12-(-0.01)",
+          "expected": 3.13,
+          "unit": "cm",
+          "tolerance": 3.13e-09
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM-P02",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "unknown force",
+          "expression": "2*0.15/0.10",
+          "expected": 2.9999999999999996,
+          "unit": "N",
+          "tolerance": 2.9999999999999996e-09
+        },
+        {
+          "label": "transfer force",
+          "expression": "1.5*0.2/0.15",
+          "expected": 2.0000000000000004,
+          "unit": "N",
+          "tolerance": 2.0000000000000005e-09
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM-P03",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "first T²/m",
+          "expression": "0.63**2/0.10",
+          "expected": 3.9690000000000003,
+          "unit": "s² kg^-1",
+          "tolerance": 3.969000000000001e-09
+        },
+        {
+          "label": "second T²/m",
+          "expression": "0.89**2/0.20",
+          "expected": 3.9605,
+          "unit": "s² kg^-1",
+          "tolerance": 3.9605e-09
+        },
+        {
+          "label": "spring constant using displayed mean",
+          "expression": "4*math.pi**2/3.965",
+          "expected": 9.956725751414233,
+          "unit": "N m^-1",
+          "tolerance": 9.956725751414233e-09
+        },
+        {
+          "label": "spring constant using exact mean",
+          "expression": "4*math.pi**2/((0.63**2/0.10+0.89**2/0.20)/2)",
+          "expected": 9.957353579508778,
+          "unit": "N m^-1",
+          "tolerance": 9.957353579508779e-09
+        },
+        {
+          "label": "transfer period ratio",
+          "expression": "math.sqrt(2)",
+          "expected": 1.4142135623730951,
+          "unit": "",
+          "tolerance": 1.4142135623730953e-09
+        }
+      ],
+      "issues": [
+        {
+          "severity": "answer_correction",
+          "finding": "Displayed k≈9.95 N m^-1 is rounded incorrectly. Both the displayed average 3.965 and the exact mean 3.96475 give k≈9.96 to two decimal places.",
+          "required_overlay": "Replace 9.95 with 9.96; retain approximate-data qualification.",
+          "parent_already_aware": true
+        }
+      ],
+      "status": "requires_known_overlay"
+    },
+    {
+      "case_id": "PM-P04",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "original separation",
+          "expression": "0.53-0.18",
+          "expected": 0.35000000000000003,
+          "unit": "m",
+          "tolerance": 3.5000000000000003e-10
+        },
+        {
+          "label": "original end correction",
+          "expression": "(0.53-3*0.18)/2",
+          "expected": -0.0050000000000000044,
+          "unit": "m",
+          "tolerance": 5.0000000000000045e-12
+        },
+        {
+          "label": "corrected end correction",
+          "expression": "(0.52-3*0.17)/2",
+          "expected": 0.0050000000000000044,
+          "unit": "m",
+          "tolerance": 5.0000000000000045e-12
+        },
+        {
+          "label": "corrected wavelength",
+          "expression": "2*(0.52-0.17)",
+          "expected": 0.7,
+          "unit": "m",
+          "tolerance": 7e-10
+        },
+        {
+          "label": "corrected wave speed",
+          "expression": "480*2*(0.52-0.17)",
+          "expected": 336.0,
+          "unit": "m s^-1",
+          "tolerance": 3.3600000000000004e-07
+        },
+        {
+          "label": "transfer wave speed",
+          "expression": "400*2*0.40",
+          "expected": 320.0,
+          "unit": "m s^-1",
+          "tolerance": 3.2e-07
+        }
+      ],
+      "issues": [
+        {
+          "severity": "physical_consistency",
+          "finding": "Original first/second lengths 0.18/0.53 m imply e=-0.005 m, inconsistent with the ordinary positive open-end correction model.",
+          "required_overlay": "Use first 0.17 m and second 0.52 m; separation and speed remain 0.35 m and 336 m s^-1. Update the worked subtraction too. The corrected e is +0.005 m.",
+          "parent_already_aware": true
+        },
+        {
+          "severity": "clarification",
+          "finding": "A second resonance at 0.52 m requires usable tube length exceeding 0.52 m if any apparatus size is stated. The legacy case states no tube size, so no additional defect is established.",
+          "required_overlay": "Optional: specify a hypothetical tube with usable length at least 0.55 m if adding a tube dimension."
+        }
+      ],
+      "status": "requires_known_overlay"
+    },
+    {
+      "case_id": "PM-P05",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "prism index",
+          "expression": "math.sin(50*math.pi/180)/math.sin(30*math.pi/180)",
+          "expected": 1.5320888862379562,
+          "unit": "",
+          "tolerance": 1.5320888862379564e-09
+        },
+        {
+          "label": "transfer index",
+          "expression": "math.sin(45*math.pi/180)/math.sin(30*math.pi/180)",
+          "expected": 1.4142135623730951,
+          "unit": "",
+          "tolerance": 1.4142135623730953e-09
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM-P06",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "first ratio",
+          "expression": "100/300",
+          "expected": 0.3333333333333333,
+          "unit": "cm³ K^-1",
+          "tolerance": 3.333333333333333e-10
+        },
+        {
+          "label": "second ratio",
+          "expression": "110/330",
+          "expected": 0.3333333333333333,
+          "unit": "cm³ K^-1",
+          "tolerance": 3.333333333333333e-10
+        },
+        {
+          "label": "predicted volume",
+          "expression": "100*360/300",
+          "expected": 120.0,
+          "unit": "cm³",
+          "tolerance": 1.2000000000000002e-07
+        },
+        {
+          "label": "transfer volume",
+          "expression": "100*450/300",
+          "expected": 150.0,
+          "unit": "cm³",
+          "tolerance": 1.5000000000000002e-07
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM-P07",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "emf ratio",
+          "expression": "65/80",
+          "expected": 0.8125,
+          "unit": "",
+          "tolerance": 8.125e-10
+        },
+        {
+          "label": "transfer ratio",
+          "expression": "70/100",
+          "expected": 0.7,
+          "unit": "",
+          "tolerance": 7e-10
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM-P08",
+      "source_release": "v3.1",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-question-bank-v3_1.json",
+      "numeric_checks": [
+        {
+          "label": "NAND00",
+          "expression": "1-0*0",
+          "expected": 1,
+          "unit": "",
+          "tolerance": 1e-09
+        },
+        {
+          "label": "NAND01",
+          "expression": "1-0*1",
+          "expected": 1,
+          "unit": "",
+          "tolerance": 1e-09
+        },
+        {
+          "label": "NAND10",
+          "expression": "1-1*0",
+          "expected": 1,
+          "unit": "",
+          "tolerance": 1e-09
+        },
+        {
+          "label": "NAND11",
+          "expression": "1-1*1",
+          "expected": 0,
+          "unit": "",
+          "tolerance": 1e-15
+        }
+      ],
+      "issues": [
+        {
+          "severity": "minor_wording",
+          "finding": "The misconception says an OR gate is similar in the “three other rows”; NAND and OR actually agree in only rows 01 and 10 and differ in rows 00 and 11. The conclusion and supplied explanation that they differ at 00 and 11 are correct.",
+          "recommended_text": "NAND and OR agree for 01 and 10 but differ for 00 and 11; inspect all four rows."
+        }
+      ],
+      "status": "pass_minor_wording_improvement"
+    },
+    {
+      "case_id": "PM32-P01",
+      "source_release": "v3.2",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "numeric_checks": [
+        {
+          "label": "slope",
+          "expression": "(3.224-0.806)/(0.8-0.2)",
+          "expected": 4.029999999999999,
+          "unit": "s² m^-1",
+          "tolerance": 4.0299999999999995e-09
+        },
+        {
+          "label": "g",
+          "expression": "4*math.pi**2/4.03",
+          "expected": 9.79613340058497,
+          "unit": "m s^-2",
+          "tolerance": 9.79613340058497e-09
+        },
+        {
+          "label": "transfer g",
+          "expression": "4*math.pi**2/4.10",
+          "expected": 9.628882342526204,
+          "unit": "m s^-2",
+          "tolerance": 9.628882342526204e-09
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM32-P02",
+      "source_release": "v3.2",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "numeric_checks": [
+        {
+          "label": "slope",
+          "expression": "(1.66-0.49)/(0.4-0.1)",
+          "expected": 3.899999999999999,
+          "unit": "s² kg^-1",
+          "tolerance": 3.899999999999999e-09
+        },
+        {
+          "label": "intercept",
+          "expression": "0.49-3.9*0.1",
+          "expected": 0.09999999999999998,
+          "unit": "s²",
+          "tolerance": 9.999999999999998e-11
+        },
+        {
+          "label": "spring constant",
+          "expression": "4*math.pi**2/3.90",
+          "expected": 10.12267118060447,
+          "unit": "N m^-1",
+          "tolerance": 1.0122671180604471e-08
+        },
+        {
+          "label": "transfer constant",
+          "expression": "4*math.pi**2/5",
+          "expected": 7.895683520871486,
+          "unit": "N m^-1",
+          "tolerance": 7.895683520871487e-09
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions",
+      "physical_note": "The inferred effective-mass offset is intercept/slope = 0.10/3.90 = 0.0256 kg; plausible as an unmodelled spring/pan mass contribution."
+    },
+    {
+      "case_id": "PM32-P03",
+      "source_release": "v3.2",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "numeric_checks": [
+        {
+          "label": "gradient",
+          "expression": "(1.34-1.46)/(0.4-0.1)",
+          "expected": -0.3999999999999996,
+          "unit": "ohm",
+          "tolerance": 3.999999999999996e-10
+        },
+        {
+          "label": "emf",
+          "expression": "1.46+0.4*0.1",
+          "expected": 1.5,
+          "unit": "V",
+          "tolerance": 1.5000000000000002e-09
+        },
+        {
+          "label": "transfer resistance",
+          "expression": "0.15/0.30",
+          "expected": 0.5,
+          "unit": "ohm",
+          "tolerance": 5e-10
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM32-P04",
+      "source_release": "v3.2",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "numeric_checks": [
+        {
+          "label": "gradient",
+          "expression": "(2.48-2)/(80-20)",
+          "expected": 0.008,
+          "unit": "ohm K^-1",
+          "tolerance": 8.000000000000001e-12
+        },
+        {
+          "label": "alpha20",
+          "expression": "0.008/2",
+          "expected": 0.004,
+          "unit": "K^-1",
+          "tolerance": 4.000000000000001e-12
+        },
+        {
+          "label": "transfer alpha20",
+          "expression": "0.015/5",
+          "expected": 0.003,
+          "unit": "K^-1",
+          "tolerance": 3e-12
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions",
+      "physical_note": "Alpha is explicitly referenced to 20 degrees C; no error from using slope/R20. The extrapolated R0 would differ, so do not silently relabel alpha20 as alpha0."
+    },
+    {
+      "case_id": "PM32-P05",
+      "source_release": "v3.2",
+      "source_path": "/workspace/scratch/8274d4b74500/powerhouse/public/practical-lab/clinic/practical-lab-graph-clinic-v3_2.json",
+      "numeric_checks": [
+        {
+          "label": "ms graph slope",
+          "expression": "(0.197-0.146)/(2.4-1.8)",
+          "expected": 0.08500000000000005,
+          "unit": "m ms^-1",
+          "tolerance": 8.500000000000006e-11
+        },
+        {
+          "label": "SI slope",
+          "expression": "((0.197-0.146)/(2.4-1.8))*1000",
+          "expected": 85.00000000000004,
+          "unit": "m s^-1",
+          "tolerance": 8.500000000000005e-08
+        },
+        {
+          "label": "wave speed",
+          "expression": "4*((0.197-0.146)/(2.4-1.8))*1000",
+          "expected": 340.00000000000017,
+          "unit": "m s^-1",
+          "tolerance": 3.400000000000002e-07
+        },
+        {
+          "label": "end correction",
+          "expression": "-(0.146-0.0850*1.8)",
+          "expected": 0.007000000000000034,
+          "unit": "m",
+          "tolerance": 7.000000000000035e-12
+        },
+        {
+          "label": "transfer wave speed",
+          "expression": "4*0.0825*1000",
+          "expected": 330.0,
+          "unit": "m s^-1",
+          "tolerance": 3.3e-07
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions",
+      "physical_note": "Positive e=0.007 m and quarter-wave lengths imply plausible sound speed and no negative correction. Millisecond-to-second conversion is correct."
+    },
+    {
+      "case_id": "PM33-P01",
+      "source_release": "v3.3",
+      "source_path": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "numeric_checks": [
+        {
+          "label": "slope",
+          "expression": "(3.24-0.84)/(0.80-0.20)",
+          "expected": 4.0,
+          "unit": "s² m^-1",
+          "tolerance": 4e-09
+        },
+        {
+          "label": "intercept",
+          "expression": "0.84-4*0.2",
+          "expected": 0.039999999999999925,
+          "unit": "s²",
+          "tolerance": 3.9999999999999926e-11
+        },
+        {
+          "label": "g",
+          "expression": "4*math.pi**2/4",
+          "expected": 9.869604401089358,
+          "unit": "m s^-2",
+          "tolerance": 9.869604401089358e-09
+        },
+        {
+          "label": "transfer g",
+          "expression": "4*math.pi**2/4.05",
+          "expected": 9.747757433174675,
+          "unit": "m s^-2",
+          "tolerance": 9.747757433174675e-09
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM33-P02",
+      "source_release": "v3.3",
+      "source_path": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "numeric_checks": [
+        {
+          "label": "focal length",
+          "expression": "1/(1/0.3+1/0.6)",
+          "expected": 0.2,
+          "unit": "m",
+          "tolerance": 2.0000000000000003e-10
+        },
+        {
+          "label": "power",
+          "expression": "1/0.3+1/0.6",
+          "expected": 5.0,
+          "unit": "dioptres",
+          "tolerance": 5e-09
+        },
+        {
+          "label": "magnification magnitude",
+          "expression": "0.6/0.3",
+          "expected": 2.0,
+          "unit": "",
+          "tolerance": 2e-09
+        },
+        {
+          "label": "transfer image distance",
+          "expression": "1/(1/0.2-1/0.4)",
+          "expected": 0.4,
+          "unit": "m",
+          "tolerance": 4.0000000000000007e-10
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM33-P03",
+      "source_release": "v3.3",
+      "source_path": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "numeric_checks": [
+        {
+          "label": "gradient",
+          "expression": "(1.37-1.49)/(0.4-0.1)",
+          "expected": -0.3999999999999996,
+          "unit": "ohm",
+          "tolerance": 3.999999999999996e-10
+        },
+        {
+          "label": "emf",
+          "expression": "1.49+0.1*0.4",
+          "expected": 1.53,
+          "unit": "V",
+          "tolerance": 1.53e-09
+        },
+        {
+          "label": "voltage prediction",
+          "expression": "1.53-0.25*0.4",
+          "expected": 1.43,
+          "unit": "V",
+          "tolerance": 1.43e-09
+        },
+        {
+          "label": "transfer voltage",
+          "expression": "1.53-0.5*0.4",
+          "expected": 1.33,
+          "unit": "V",
+          "tolerance": 1.3300000000000002e-09
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions"
+    },
+    {
+      "case_id": "PM33-P04",
+      "source_release": "v3.3",
+      "source_path": "/workspace/scratch/8274d4b74500/practical-v5/input/v3_3/practical-lab-evidence-integrity-v3_3.json",
+      "numeric_checks": [
+        {
+          "label": "area",
+          "expression": "math.pi*(0.0005/2)**2",
+          "expected": 1.9634954084936206e-07,
+          "unit": "m²",
+          "tolerance": 1e-15
+        },
+        {
+          "label": "Young modulus",
+          "expression": "10*2/(math.pi*(0.0005/2)**2*0.0005)",
+          "expected": 203718327157.62604,
+          "unit": "Pa",
+          "tolerance": 203.71832715762605
+        },
+        {
+          "label": "transfer Young modulus",
+          "expression": "10*2/(math.pi*(0.001/2)**2*0.0005)",
+          "expected": 50929581789.40651,
+          "unit": "Pa",
+          "tolerance": 50.92958178940651
+        }
+      ],
+      "issues": [],
+      "status": "pass_with_stated_model_assumptions",
+      "physical_note": "Y=2.037e11 Pa is steel-like; doubling diameter at fixed other values makes inferred Y one quarter, as stated."
+    }
+  ]
+}
