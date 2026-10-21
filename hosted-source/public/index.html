@@ -344,6 +344,39 @@
   .source-audit summary { padding: 13px; cursor: pointer; color: var(--gold); font-size: 10px; font-weight: 800; }
   .source-audit div { padding: 0 13px 14px; color: var(--muted); font-size: 9px; line-height: 1.65; }
 
+  .cycle-panel { margin: 0 0 14px; padding: 18px; }
+  .cycle-head { display:flex; justify-content:space-between; align-items:flex-start; gap:14px; margin-bottom:13px; }
+  .cycle-head h3 { margin:5px 0 4px; font:clamp(19px,3vw,25px) "DM Serif Display", Georgia, serif; }
+  .cycle-head p { margin:0; max-width:640px; color:var(--muted); font-size:10px; line-height:1.55; }
+  .cycle-controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .cycle-controls select { color:var(--text); background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:9px 11px; }
+  .cycle-progress { height:5px; border-radius:99px; background:rgba(255,255,255,.07); overflow:hidden; margin-bottom:12px; }
+  .cycle-progress span { display:block; width:0; height:100%; background:linear-gradient(90deg,var(--gold),var(--green)); transition:width .2s ease; }
+  .cycle-steps { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:7px; }
+  .cycle-step { min-width:0; min-height:82px; display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:10px; border:1px solid var(--border); border-radius:12px; background:rgba(7,17,31,.38); color:var(--muted); text-align:left; cursor:pointer; }
+  .cycle-step:hover { border-color:#4a6687; color:var(--text); }
+  .cycle-step[aria-current="step"] { border-color:var(--gold); color:var(--text); background:rgba(255,209,102,.08); box-shadow:inset 0 0 0 1px rgba(255,209,102,.13); }
+  .cycle-step[data-done="true"] { border-color:rgba(104,227,164,.4); color:var(--green); }
+  .cycle-step b { color:inherit; font:700 10px "DM Mono",monospace; }
+  .cycle-step span { font-size:9px; line-height:1.35; font-weight:750; }
+  .cycle-next { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-top:11px; padding:12px; border-radius:12px; background:rgba(7,17,31,.45); }
+  .cycle-next strong { display:block; margin-bottom:4px; font-size:11px; }
+  .cycle-next p { margin:0; color:var(--muted); font-size:10px; line-height:1.5; }
+  .cycle-next-actions { display:flex; flex-shrink:0; gap:7px; }
+  .cycle-subject-accent[data-subject="physics"] { color:var(--phy); }
+  .cycle-subject-accent[data-subject="chemistry"] { color:var(--chem); }
+  .cycle-subject-accent[data-subject="biology"] { color:var(--bio); }
+  @media(max-width:900px) { .cycle-steps { grid-template-columns:repeat(4,minmax(0,1fr)); } }
+  @media(max-width:620px) {
+    .cycle-panel { padding:14px; }
+    .cycle-head { display:grid; }
+    .cycle-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .cycle-step { min-height:66px; }
+    .cycle-next { align-items:flex-start; flex-direction:column; }
+    .cycle-next-actions { width:100%; }
+    .cycle-next-actions > * { flex:1; }
+  }
+
   .attempt-table { width: 100%; border-collapse: collapse; }
   .attempt-table th { padding: 9px; color: var(--muted); text-align: left; font-size: 8px; text-transform: uppercase; letter-spacing: .08em; border-bottom: 1px solid var(--border); }
   .attempt-table td { padding: 11px 9px; font-size: 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -611,6 +644,16 @@
         </div>
       </aside>
     </div>
+
+    <section class="panel cycle-panel" aria-labelledby="cycle-title">
+      <div class="cycle-head">
+        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action; progress stays in this browser so an unfinished loop is easy to resume.</p></div>
+        <div class="cycle-controls"><label class="muted" for="cycle-subject" style="font-size:10px">Subject</label><select id="cycle-subject"><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select><button class="secondary-btn" id="cycle-reset" type="button">New loop</button></div>
+      </div>
+      <div class="cycle-progress" role="progressbar" aria-label="Evidence loop progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
+      <div class="cycle-steps" id="cycle-steps" aria-label="Evidence loop steps"></div>
+      <div class="cycle-next"><div><strong id="cycle-next-title">Step 1 · Timed attempt</strong><p id="cycle-next-copy">Attempt a bounded question closed book. Keep notes and AI out of the test.</p></div><div class="cycle-next-actions"><button class="primary-btn" id="cycle-action" type="button">Start this step</button><button class="secondary-btn" id="cycle-complete" type="button">Mark step done</button></div></div>
+    </section>
 
     <div class="kpi-grid" aria-label="Performance indicators">
       <article class="kpi"><span class="kpi-label">Verified accuracy</span><strong class="kpi-value" id="kpi-accuracy">—</strong><div class="kpi-note">raw marks earned ÷ marks available</div></article>
@@ -2372,6 +2415,76 @@ function deleteAttempt(id) {
   saveState(); refreshAll(); toast('Attempt deleted.');
 }
 
+const CYCLE_KEY = 'alpp_evidence_cycle_v1';
+const CYCLE_STEPS = [
+  { title:'Timed attempt', hint:'Attempt a bounded question closed book. Keep notes and AI out of the test.', type:'topic-question', label:'Start timed block' },
+  { title:'Strict marking', hint:'Mark against the scheme line by line. Record earned and available marks honestly.', type:'topic-question', label:'Log marked attempt' },
+  { title:'Error diagnosis', hint:'Name the first cause of each lost mark: recall, concept, method, interpretation, or execution.', type:'topic-question', label:'Review evidence' },
+  { title:'Targeted repair', hint:'Repair only the diagnosed gap. Close the source before retrieving the rule or method.', type:'reattempt', label:'Open repair action' },
+  { title:'Closed-book reattempt', hint:'Redo the missed question without notes; compare only after completing it.', type:'reattempt', label:'Log reattempt' },
+  { title:'Transfer question', hint:'Solve a different question that tests the same idea, without copying the original route.', type:'fresh-transfer', label:'Log transfer' },
+  { title:'Delayed retest', hint:'Return after a delay and test the idea again from memory. Schedule the next due check.', type:'delayed-retest', label:'Log delayed retest' }
+];
+function readCycle() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(CYCLE_KEY) || '{}');
+    return { subject:SUBJECTS.includes(saved.subject) ? saved.subject : 'biology', step:Math.max(0,Math.min(CYCLE_STEPS.length-1,Number(saved.step)||0)), done:Array.isArray(saved.done) ? saved.done.map(Number).filter(n => n>=0 && n<CYCLE_STEPS.length) : [] };
+  } catch (_) { return { subject:'biology', step:0, done:[] }; }
+}
+let evidenceCycle = readCycle();
+function saveCycle() { try { localStorage.setItem(CYCLE_KEY, JSON.stringify(evidenceCycle)); } catch (_) {} }
+function renderCycle() {
+  const current = CYCLE_STEPS[evidenceCycle.step];
+  $('cycle-subject').value = evidenceCycle.subject;
+  $('cycle-next-title').textContent = `Step ${evidenceCycle.step+1} · ${current.title}`;
+  $('cycle-next-title').className = 'cycle-subject-accent';
+  $('cycle-next-title').dataset.subject = evidenceCycle.subject;
+  $('cycle-next-copy').textContent = current.hint;
+  $('cycle-action').textContent = current.label;
+  $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step completed' : 'Mark step done';
+  $('cycle-complete').setAttribute('aria-pressed', String(evidenceCycle.done.includes(evidenceCycle.step)));
+  $('cycle-steps').innerHTML = CYCLE_STEPS.map((step,index) => `<button class="cycle-step" type="button" data-cycle-step="${index}" data-done="${evidenceCycle.done.includes(index)}" ${index===evidenceCycle.step?'aria-current="step"':''}><b>${evidenceCycle.done.includes(index)?'✓':String(index+1).padStart(2,'0')}</b><span>${escapeHTML(step.title)}</span></button>`).join('');
+  const count = evidenceCycle.done.length;
+  $('cycle-progress-fill').style.width = `${count/CYCLE_STEPS.length*100}%`;
+  $('cycle-progress').setAttribute('aria-valuenow', String(count));
+}
+function markCycleStepDone() {
+  if (evidenceCycle.step > 0 && !evidenceCycle.done.includes(evidenceCycle.step - 1)) {
+    toast('Complete the previous stage before closing this one.');
+    return;
+  }
+  if (!evidenceCycle.done.includes(evidenceCycle.step)) evidenceCycle.done.push(evidenceCycle.step);
+  if (evidenceCycle.step < CYCLE_STEPS.length - 1) evidenceCycle.step += 1;
+  saveCycle(); renderCycle();
+  toast(evidenceCycle.step === CYCLE_STEPS.length-1 && evidenceCycle.done.length===CYCLE_STEPS.length ? 'Full evidence loop closed. Start a new loop when ready.' : 'Step recorded. Continue to the next evidence action.');
+}
+function runCycleAction() {
+  const step = CYCLE_STEPS[evidenceCycle.step];
+  const subject = evidenceCycle.subject;
+  if (evidenceCycle.step === 0) {
+    focusTopicKey = '';
+    $('attempt-subject').value = subject;
+    fillTopicSelect(subject);
+    startFocus(focusRecommendedMinutes, `${titleCase(subject)} · timed closed-book attempt`);
+    return;
+  }
+  if (evidenceCycle.step === 1 || evidenceCycle.step === 2) {
+    navigate('attempts');
+    toast(evidenceCycle.step===1 ? 'Compare the answer with the marking scheme, then log the awarded marks.' : 'Inspect the logged errors and name the first cause before repair.');
+    return;
+  }
+  if (evidenceCycle.step === 3) {
+    navigate('repairs');
+    toast('Choose the diagnosed topic and make one narrow repair.');
+    return;
+  }
+  openAttemptDialog('', step.type);
+  $('attempt-subject').value = subject;
+  fillTopicSelect(subject);
+  $('attempt-question').value = evidenceCycle.step===4 ? 'Closed-book reattempt · link to diagnosed attempt' : evidenceCycle.step===5 ? 'Fresh transfer · different question, same concept' : 'Delayed retest · retrieval after a delay';
+  refreshDiagnosisHint();
+}
+
 function renderTimer() {
   $('timer-phase').textContent = 'TEST · AI-free · closed book';
   $('timer-note').textContent = timerPresetMinutes === 30 ? 'Recovery mode: produce a real answer now. Mark immediately after. Do not turn a bad day into a new system.' : 'Long-form focus is the default. Phone away; no notes or AI during TEST. Mark and diagnose before opening more resources.';
@@ -2516,6 +2629,12 @@ function showWelcome() {
 }
 
 function initEvents() {
+  renderCycle();
+  $('cycle-subject').addEventListener('change', e => { evidenceCycle.subject=e.target.value; saveCycle(); renderCycle(); });
+  $('cycle-steps').addEventListener('click', e => { const button=e.target.closest('[data-cycle-step]'); if (!button) return; evidenceCycle.step=Number(button.dataset.cycleStep); saveCycle(); renderCycle(); });
+  $('cycle-action').addEventListener('click', runCycleAction);
+  $('cycle-complete').addEventListener('click', markCycleStepDone);
+  $('cycle-reset').addEventListener('click', () => { evidenceCycle={subject:evidenceCycle.subject,step:0,done:[]}; saveCycle(); renderCycle(); toast('A new evidence loop is ready.'); });
   $('app-tabs').addEventListener('click', e => { const tab = e.target.closest('[data-panel]'); if (tab) navigate(tab.dataset.panel); });
   $('subject-pulse').addEventListener('click', e => { const card = e.target.closest('[data-jump]'); if (card) navigate(card.dataset.jump); });
   $('subject-pulse').addEventListener('keydown', e => { const card = e.target.closest('[data-jump]'); if (card && (e.key === 'Enter' || e.key === ' ')) navigate(card.dataset.jump); });

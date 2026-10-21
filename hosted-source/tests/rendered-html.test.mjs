@@ -2,13 +2,19 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFile } from "node:fs/promises";
 
-test("renders the V4 Community Edition metadata", async () => {
+test("renders the V5 Evidence Edition metadata and seven-stage cycle", async () => {
   const html = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
-  assert.match(html, /<title>A\/L Performance Powerhouse · V4 Community Edition<\/title>/i);
+  assert.match(html, /<title>A\/L Performance Powerhouse · V5 Evidence Edition<\/title>/i);
   assert.match(html, /Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest/i);
+  assert.match(html, /id="cycle-steps"/);
+  assert.match(html, /id="cycle-subject"/);
+  assert.match(html, /const CYCLE_STEPS = \[/);
+  assert.match(html, /CYCLE_KEY = 'alpp_evidence_cycle_v1'/);
+  assert.match(html, /fresh-transfer/);
+  assert.match(html, /delayed-retest/);
 });
 
-test("ships the V4 core, Community Share, PWA shell and Physics Intelligence", async () => {
+test("ships the current core, Community Share, PWA shell and Physics Intelligence", async () => {
   const host = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
   const legacyAlias = await readFile(new URL("../public/al-performance-command-centre.html", import.meta.url), "utf8");
   const community = await readFile(new URL("../public/community-share.html", import.meta.url), "utf8");
@@ -18,7 +24,7 @@ test("ships the V4 core, Community Share, PWA shell and Physics Intelligence", a
   const moduleScript = await readFile(new URL("../public/physics-intelligence/app.js", import.meta.url), "utf8");
   const data = JSON.parse(await readFile(new URL("../public/physics-intelligence/assets/physics-intelligence-data.json", import.meta.url), "utf8"));
 
-  assert.equal(legacyAlias, host);
+  assert.notEqual(legacyAlias, host);
   assert.match(host, /al_performance_powerhouse_v4/);
   assert.match(host, /al_performance_powerhouse_v3/);
   assert.match(host, /href="\.\/physics-intelligence\/"/i);
