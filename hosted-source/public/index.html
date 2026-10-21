@@ -595,12 +595,23 @@
   .proof-contract span{opacity:.9}
   @media (max-width:640px){.proof-contract{display:block}.proof-contract strong{display:block;margin-bottom:4px}}
 </style>
+<style>
+body { font-size: 16px; }
+p, .guide-copy, .guide-card p, .queue-title, .t-name, .unit-name, .subject-playbook span, .closure-steps span, .privacy-box span, .next-action-copy { font-size: 1rem; line-height: 1.55; }
+.tab, .field label, .queue-meta, .trusted-note, .diagnosis-hint, .pill, .cycle-step, .cycle-controls label, .save-note, .legend { font-size: .875rem; }
+button, .tab, .r-btn, .log-mini { min-height: 44px; }
+.r-btn { min-width: 36px; }
+.field label:has(input[type=checkbox]) { display:flex; gap:10px; align-items:center; margin:10px 0; }
+.field input[type=checkbox] { width:20px; height:20px; flex:none; }
+@media(max-width:600px) { .topic-row { flex-wrap:wrap; } .t-name { min-width:180px; } .proof-contract { flex-wrap:wrap; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *, *::before, *::after { animation:none!important; transition:none!important; } }
+</style>
 </head>
 <body>
 
 <div class="app-header">
   <div class="shell header-row">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V4</h1><span class="edition-badge">COMMUNITY</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V5</h1><span class="edition-badge">COMMUNITY</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
     <div class="header-actions">
       <button class="backup-chip" id="backup-health" type="button" title="Backup health">Backup —</button>
       <button class="icon-btn" id="share-safe-btn" type="button" title="Share-safe mode" aria-label="Toggle share-safe mode">◫</button>
@@ -928,6 +939,7 @@
         <div class="field"><label for="attempt-confidence">Confidence before marking</label><select id="attempt-confidence" required><option value="low">Low / guessed</option><option value="medium">Medium / unsure</option><option value="high">High / expected correct</option></select></div>
         <div class="field"><label for="attempt-guesses">Guessed / unsupported items</label><input id="attempt-guesses" type="number" min="0" max="500" step="1" value="0"></div>
         <div class="field full"><label for="attempt-error">Dominant error family</label><select id="attempt-error"><option value="">None — full-credit performance</option><option value="K">K — knowledge gap</option><option value="C">C — conceptual model</option><option value="R">R — retrieval failure</option><option value="M">M — method / calculation</option><option value="P">P — presentation / scheme language</option><option value="T">T — timing / selection</option><option value="A">A — attention / misreading</option><option value="G">G — lucky / unsupported guess</option></select><div class="error-key"><span><b>K/R</b> recall then delay</span><span><b>C</b> explain-back + fresh Q</span><span><b>M</b> mixed procedure set</span><span><b>P</b> scheme-perfect rewrite</span><span><b>T/A</b> explicit exam rule</span><span><b>G</b> fresh Q + justify choice</span></div><div class="diagnosis-hint" id="attempt-diagnosis-hint"></div></div>
+        <div class="field full"><label><input id="attempt-unaided" type="checkbox"> Completed closed book without AI or help</label><label><input id="attempt-novel" type="checkbox"> A different question testing the same concept</label><p class="muted">A due retest closes only for the matching transfer/retest type, full credit, no guesses and these two confirmations. An unsuccessful check stays open for repair.</p></div>
         <div class="field full"><label for="attempt-note">Correction / prevention rule</label><textarea id="attempt-note" maxlength="360" placeholder="One precise rule that prevents this mark loss next time."></textarea></div>
       </div>
       <div class="dialog-actions"><button class="secondary-btn" type="button" data-close-dialog>Cancel</button><button class="primary-btn" type="submit">Save evidence + update repair queue</button></div>
@@ -1032,6 +1044,7 @@
 <div class="save-note">Legacy local-rating migration shell</div>
 </div>
 
+<script src="./evidence-rules.js"></script>
 <script>
 const SYL = {
   physics: { color:'var(--phy)', abbr:'phy', units:[
@@ -1081,8 +1094,9 @@ const SYL = {
 
 /* Legacy v2 implementation retained only as an inert migration reference.
 const STORE_KEY = 'al_v2_samra';
-let R = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
-const save = () => localStorage.setItem(STORE_KEY, JSON.stringify(R));
+let R = {};
+try { R = JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; } catch (_) {}
+const save = () => { try { localStorage.setItem(STORE_KEY, JSON.stringify(R)); } catch (_) {} };
 const tk = (s,u,t) => `${s}|${u}|${t}`;
 
 function buildSubject(sub) {
@@ -2365,10 +2379,9 @@ function openAttemptDialog(key = '', type = 'topic-question') {
 }
 
 function completeEligibleRetests(attempt) {
-  const eligible = state.retests
-    .filter(retest => !retest.completedAt && retest.topicKey === attempt.topicKey && retest.due <= attempt.date && retest.sourceAttemptId !== attempt.id)
-    .sort((a,b) => a.stage - b.stage || a.due.localeCompare(b.due));
-  if (eligible[0]) eligible[0].completedAt = attempt.date;
+  const eligible = PowerhouseEvidence.eligibleRetest(attempt, state.retests, state.attempts);
+  if (eligible) { eligible.completedAt = attempt.date; eligible.completedByAttemptId = attempt.id; }
+  return Boolean(eligible);
 }
 
 function scheduleRetests(attempt) {
@@ -2384,6 +2397,8 @@ function submitAttempt(event) {
   event.preventDefault();
   const earned = Number($('marks-earned').value);
   const total = Number($('marks-total').value);
+  if (!Number.isFinite(earned) || !Number.isFinite(total) || total <= 0 || earned < 0) { toast('Enter valid earned and available marks.'); return; }
+  if (!$('attempt-date').value || $('attempt-date').value > todayISO()) { toast('Use the date of a completed attempt, not a future date.'); return; }
   let error = $('attempt-error').value;
   const guesses = Math.max(0, Number($('attempt-guesses').value || 0));
   if (!error && guesses > 0) error = 'G';
@@ -2395,17 +2410,17 @@ function submitAttempt(event) {
   const attempt = {
     id: uid(), date: $('attempt-date').value, subject: $('attempt-subject').value, topicKey: $('attempt-topic').value,
     type: $('attempt-type').value,
-    question: $('attempt-question').value.trim(), earned, trustedEarned, total, minutes: Number($('attempt-minutes').value),
+    question: $('attempt-question').value.trim(), unaided: $('attempt-unaided').checked, novelQuestion: $('attempt-novel').checked, earned, trustedEarned, total, minutes: Number($('attempt-minutes').value),
     items: Math.max(1, Number($('attempt-items').value || 1)), guesses,
     confidence: $('attempt-confidence').value, error, note: $('attempt-note').value.trim(), createdAt: new Date().toISOString()
   };
-  completeEligibleRetests(attempt);
+  const closedRetest = completeEligibleRetests(attempt);
   state.attempts.push(attempt);
   scheduleRetests(attempt);
   saveState();
   $('attempt-dialog').close();
   refreshAll();
-  toast(earned === total ? 'Full-credit evidence saved.' : 'Evidence saved. Retests scheduled for +3 and +7 days.');
+  toast(closedRetest ? 'Successful proof saved. Matching due retest closed.' : ['fresh-transfer','delayed-retest'].includes(attempt.type) ? 'Check saved. No due retest met the closure criteria; keep repairing and retesting.' : earned === total ? 'Full-credit evidence saved.' : 'Evidence saved. Retests scheduled for +3 and +7 days.');
 }
 
 function deleteAttempt(id) {
@@ -2413,6 +2428,7 @@ function deleteAttempt(id) {
   if (!attempt || !confirm(`Delete the logged attempt “${attempt.question}”?`)) return;
   state.attempts = state.attempts.filter(a => a.id !== id);
   state.retests = state.retests.filter(r => r.sourceAttemptId !== id);
+  state.retests.forEach(r => { if (r.completedByAttemptId === id) { r.completedAt = null; delete r.completedByAttemptId; } });
   saveState(); refreshAll(); toast('Attempt deleted.');
 }
 
@@ -2429,7 +2445,7 @@ const CYCLE_STEPS = [
 function readCycle() {
   try {
     const saved = JSON.parse(localStorage.getItem(CYCLE_KEY) || '{}');
-    return { subject:SUBJECTS.includes(saved.subject) ? saved.subject : 'biology', step:Math.max(0,Math.min(CYCLE_STEPS.length-1,Number(saved.step)||0)), done:Array.isArray(saved.done) ? saved.done.map(Number).filter(n => n>=0 && n<CYCLE_STEPS.length) : [] };
+    return PowerhouseEvidence.normalizeCycle(saved, SUBJECTS, CYCLE_STEPS.length);
   } catch (_) { return { subject:'biology', step:0, done:[] }; }
 }
 let evidenceCycle = readCycle();
@@ -2553,9 +2569,9 @@ function exportData() {
   snapshotState('pre-export');
   state.lastExportedAt = new Date().toISOString();
   saveState();
-  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+  const blob = new Blob([JSON.stringify({ ...state, evidenceCycle }, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob); const link = document.createElement('a');
-  link.href = url; link.download = `al-performance-powerhouse-v4-backup-${todayISO()}.json`; document.body.appendChild(link); link.click(); link.remove();
+  link.href = url; link.download = `al-performance-powerhouse-v5-backup-${todayISO()}.json`; document.body.appendChild(link); link.click(); link.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
   $('backup-status').textContent = `Last backup exported: ${new Date(state.lastExportedAt).toLocaleString()}`;
   toast('Backup exported.');
@@ -2597,6 +2613,7 @@ function importData(file) {
         saveState(); refreshAll();
         if ($('data-dialog').open) $('data-dialog').close();
         if ($('welcome-dialog').open) $('welcome-dialog').close();
+        if (incoming.evidenceCycle) { evidenceCycle = PowerhouseEvidence.normalizeCycle(incoming.evidenceCycle, SUBJECTS, CYCLE_STEPS.length); saveCycle(); renderCycle(); }
         toast('Powerhouse backup imported successfully.');
       } else if (isLegacyRatings) {
         state.ratings = { ...state.ratings, ...incoming };
