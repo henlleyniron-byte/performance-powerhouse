@@ -2,11 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFile } from "node:fs/promises";
 
-test("renders the V9 Focus & Evidence Edition metadata and seven-stage cycle", async () => {
+test("renders the V10 Guided Execution Edition metadata and seven-stage cycle", async () => {
   const html = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
-  assert.match(html, /<title>A\/L Performance Powerhouse · V9 Focus & Evidence Edition<\/title>/i);
+  assert.match(html, /<title>A\/L Performance Powerhouse · V10 Guided Execution Edition<\/title>/i);
   assert.match(html, /Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest/i);
-  assert.match(html, /<h1>Performance Powerhouse V9<\/h1>/);
+  assert.match(html, /<h1>Performance Powerhouse V10<\/h1>/);
   assert.match(html, /id="cycle-steps"/);
   assert.match(html, /id="cycle-subject"/);
   assert.match(html, /const CYCLE_STEPS = \[/);
@@ -34,7 +34,7 @@ test("ships the current core, Community Share, PWA shell and Physics Intelligenc
   assert.match(community, /href="\.\/\?share=1"/i);
   assert.match(community, /href="\.\/physics-intelligence\/\?share=1"/i);
   assert.equal(manifest.start_url, "./");
-  assert.match(serviceWorker, /powerhouse-v8-study-flow-candidate/);
+  assert.match(serviceWorker, /powerhouse-v10-guided-execution-/);
   assert.match(serviceWorker, /community-share\.html/);
   assert.match(physicsModule, /Physics Intelligence \| Performance Powerhouse/i);
   assert.match(physicsModule, /href="\.\.\/index\.html"/i);
