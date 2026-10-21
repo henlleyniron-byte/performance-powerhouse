@@ -362,7 +362,7 @@
 
 <div class="app-header">
   <div class="shell header-row">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><h1>Performance Powerhouse</h1><p id="identity-line">Henlley Niron · 2026 A/L Bio Science · AAA → Colombo Medicine</p></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><h1>Performance Powerhouse</h1><p id="identity-line">A/L Student · Evidence over guesswork</p></div></div>
     <div class="header-actions">
       <button class="secondary-btn" id="quick-log-btn" type="button"><span aria-hidden="true">＋</span> <span class="label">Log evidence</span></button>
       <button class="icon-btn" id="data-btn" type="button" title="Data and backup" aria-label="Data and backup">⋯</button>
@@ -459,7 +459,21 @@
 
 <dialog id="data-dialog">
   <div class="dialog-head"><div><div class="eyebrow">Local data</div><h2>Backup & identity</h2></div><button class="icon-btn" type="button" data-close-data aria-label="Close">×</button></div>
-  <div class="dialog-body"><div class="form-grid"><div class="field full"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field full"><label for="profile-line">Goal line</label><input id="profile-line" maxlength="120"></div></div><p class="muted" style="font-size:10px;line-height:1.6;margin:16px 0">Everything stays in this browser. Export a backup regularly; clearing browser data can erase local progress.</p><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:-8px 0 16px">No backup recorded yet.</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON</button><button class="secondary-btn" id="import-data" type="button">Import backup or legacy ratings</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
+  <div class="dialog-body"><div class="form-grid"><div class="field full"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field full"><label for="profile-line">Goal line</label><input id="profile-line" maxlength="120"></div></div><p class="muted" style="font-size:10px;line-height:1.6;margin:16px 0">Your progress is private to this browser. This public site does not upload scores or share them with other students. Export a backup regularly; clearing browser data can erase local progress.</p><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:-8px 0 16px">No backup recorded yet.</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON</button><button class="secondary-btn" id="import-data" type="button">Import backup or legacy ratings</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
+</dialog>
+
+<dialog id="welcome-dialog">
+  <form id="welcome-form">
+    <div class="dialog-head"><div><div class="eyebrow">Your private command centre</div><h2>Make the Powerhouse yours</h2></div></div>
+    <div class="dialog-body">
+      <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">Each student receives an independent dashboard stored only in their own browser. Your scores, ratings and corrections are never visible to other students.</p>
+      <div class="form-grid">
+        <div class="field full"><label for="welcome-name">Your name</label><input id="welcome-name" maxlength="80" placeholder="e.g. Niron" autocomplete="name" required></div>
+        <div class="field full"><label for="welcome-goal">Your goal line</label><input id="welcome-goal" maxlength="120" value="2026 A/L Bio Science · Evidence over guesswork" required></div>
+      </div>
+      <div class="dialog-actions"><button class="secondary-btn" id="welcome-import" type="button">Restore a backup</button><button class="primary-btn" type="submit">Enter my Powerhouse</button></div>
+    </div>
+  </form>
 </dialog>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -703,7 +717,8 @@ function defaultState() {
   try { migratedRatings = JSON.parse(localStorage.getItem(LEGACY_KEY) || '{}') || {}; } catch (_) {}
   return {
     version: 4,
-    profile: { name: 'Henlley Niron', line: '2026 A/L Bio Science · AAA → Colombo Medicine' },
+    profile: { name: 'A/L Student', line: 'Evidence over guesswork' },
+    profileSetupComplete: false,
     ratings: migratedRatings,
     attempts: [],
     retests: [],
@@ -719,6 +734,7 @@ function loadState() {
     return {
       ...base, ...saved,
       version: 4,
+      profileSetupComplete: saved.profileSetupComplete ?? true,
       profile: { ...base.profile, ...(saved.profile || {}) },
       ratings: saved.ratings && typeof saved.ratings === 'object' ? saved.ratings : base.ratings,
       attempts: Array.isArray(saved.attempts) ? saved.attempts.map(a => ({ type: 'topic-question', ...a })) : [],
@@ -1185,20 +1201,33 @@ function importData(file) {
         const base = defaultState();
         state = {
           ...base, ...incoming, version: 4,
+          profileSetupComplete: true,
           profile: { ...base.profile, ...(incoming.profile || {}) },
           attempts: incoming.attempts.map(a => ({ type: 'topic-question', ...a })),
           retests: Array.isArray(incoming.retests) ? incoming.retests : []
         };
-        saveState(); refreshAll(); $('data-dialog').close(); toast('Backup imported successfully.');
+        saveState(); refreshAll();
+        if ($('data-dialog').open) $('data-dialog').close();
+        if ($('welcome-dialog').open) $('welcome-dialog').close();
+        toast('Backup imported successfully.');
       } else if (isLegacyRatings) {
         state.ratings = { ...state.ratings, ...incoming };
-        saveState(); refreshAll(); $('data-dialog').close(); toast(`${ratingEntries.length} legacy ratings imported.`);
+        saveState(); refreshAll();
+        if ($('data-dialog').open) $('data-dialog').close();
+        toast(`${ratingEntries.length} legacy ratings imported. Add your identity to continue.`);
       } else {
         throw new Error('Invalid backup');
       }
     } catch (_) { toast('That file is not a valid command-centre backup.'); }
   };
   reader.readAsText(file);
+}
+
+function showWelcome() {
+  if (state.profileSetupComplete || $('welcome-dialog').open) return;
+  $('welcome-name').value = '';
+  $('welcome-goal').value = '2026 A/L Bio Science · Evidence over guesswork';
+  $('welcome-dialog').showModal();
 }
 
 function initEvents() {
@@ -1226,16 +1255,30 @@ function initEvents() {
     $('data-dialog').showModal();
   });
   document.querySelectorAll('[data-close-data]').forEach(b => b.addEventListener('click', () => $('data-dialog').close()));
-  $('save-profile').addEventListener('click', () => { state.profile.name = $('profile-name').value.trim() || 'Student'; state.profile.line = $('profile-line').value.trim() || 'A/L Bio Science'; saveState(); refreshAll(); $('data-dialog').close(); toast('Identity updated.'); });
+  $('save-profile').addEventListener('click', () => { state.profile.name = $('profile-name').value.trim() || 'Student'; state.profile.line = $('profile-line').value.trim() || 'A/L Bio Science'; state.profileSetupComplete = true; saveState(); refreshAll(); $('data-dialog').close(); toast('Identity updated.'); });
+  $('welcome-form').addEventListener('submit', event => {
+    event.preventDefault();
+    state.profile.name = $('welcome-name').value.trim();
+    state.profile.line = $('welcome-goal').value.trim();
+    state.profileSetupComplete = true;
+    saveState(); refreshAll(); $('welcome-dialog').close();
+    toast('Your private Powerhouse is ready.');
+  });
+  $('welcome-import').addEventListener('click', () => $('import-file').click());
   $('export-data').addEventListener('click', exportData);
   $('import-data').addEventListener('click', () => $('import-file').click());
   $('import-file').addEventListener('change', e => { if (e.target.files[0]) importData(e.target.files[0]); e.target.value = ''; });
-  $('reset-data').addEventListener('click', () => { if (!confirm('Reset every rating, attempt and scheduled retest? Export a backup first if needed.')) return; state = defaultState(); state.ratings = {}; saveState(); refreshAll(); $('data-dialog').close(); toast('All local progress was reset.'); });
+  $('reset-data').addEventListener('click', () => {
+    if (!confirm('Reset every rating, attempt and scheduled retest? Export a backup first if needed.')) return;
+    state = defaultState(); state.ratings = {}; saveState(); refreshAll(); $('data-dialog').close();
+    toast('All local progress was reset.'); setTimeout(showWelcome, 80);
+  });
 }
 
 SUBJECTS.forEach(buildSubjectPanel);
 initEvents();
 refreshAll();
+setTimeout(showWelcome, 0);
 </script>
 </body>
 </html>
