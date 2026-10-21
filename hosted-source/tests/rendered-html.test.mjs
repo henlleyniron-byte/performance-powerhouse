@@ -2,9 +2,9 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFile } from "node:fs/promises";
 
-test("renders the V6 Evidence Edition metadata and seven-stage cycle", async () => {
+test("renders the V7 Verified Repair Edition metadata and seven-stage cycle", async () => {
   const html = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
-  assert.match(html, /<title>A\/L Performance Powerhouse · V6 Evidence Edition<\/title>/i);
+  assert.match(html, /<title>A\/L Performance Powerhouse · V7 Verified Repair Edition<\/title>/i);
   assert.match(html, /Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest/i);
   assert.match(html, /id="cycle-steps"/);
   assert.match(html, /id="cycle-subject"/);

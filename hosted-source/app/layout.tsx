@@ -3,17 +3,17 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://al-performance-powerhouse.phenlleyniron.chatgpt.site"),
-  title: "A/L Performance Powerhouse · V6 Evidence Edition",
+  title: "A/L Performance Powerhouse · V7 Verified Repair Edition",
   description: "A local-first G.C.E. A/L Biological Science system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.",
   openGraph: {
-    title: "A/L Performance Powerhouse · V6 Evidence Edition",
+    title: "A/L Performance Powerhouse · V7 Verified Repair Edition",
     description: "Attempt → Mark → Diagnose → Repair → Transfer → Retest",
     type: "website",
     images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "A/L Performance Powerhouse · V6 Evidence Edition",
+    title: "A/L Performance Powerhouse · V7 Verified Repair Edition",
     description: "Attempt → Mark → Diagnose → Repair → Transfer → Retest",
     images: ["/og.png"],
   },
