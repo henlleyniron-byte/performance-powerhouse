@@ -24,7 +24,7 @@
     el('data-dialog').querySelector('.dialog-body').insertAdjacentHTML('beforeend', '<div class="field" style="margin-top:20px"><label for="v6-recovery-select">Recovery snapshots</label><select id="v6-recovery-select"></select><button class="secondary-btn" id="v6-restore-recovery" type="button" style="margin-top:10px">Restore selected snapshot</button></div>');
     el('data-btn').addEventListener('click',renderRecovery);el('backup-health').addEventListener('click',renderRecovery);
     el('v6-restore-recovery').onclick=restoreRecovery;
-    const nav=el('app-tabs'),tools=document.createElement('details');tools.className='v6-tools-menu';tools.innerHTML='<summary>Study tools · tracker, resources and Physics Intelligence</summary><nav aria-label="Study tools"></nav>';
+    const nav=el('app-tabs'),tools=document.createElement('details');tools.className='v6-tools-menu';tools.innerHTML='<summary>Study tools · tracker, resources and subject Intelligence</summary><nav aria-label="Study tools"></nav>';
     nav.querySelectorAll('a').forEach(a=>tools.querySelector('nav').append(a));document.querySelector('main').prepend(tools);
     // Move the frequent actions together while retaining every original view.
     ['command','attempts','repairs','physics','chemistry','biology','daily','course','planner','guide'].forEach(p=>{const b=nav.querySelector(`[data-panel="${p}"]`);if(b)nav.append(b)});
