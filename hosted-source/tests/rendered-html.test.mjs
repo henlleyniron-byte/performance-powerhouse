@@ -39,6 +39,7 @@ test("ships the V4 core, Community Share, PWA shell and Physics Intelligence", a
   const manifest = JSON.parse(await readFile(new URL("../public/manifest.webmanifest", import.meta.url), "utf8"));
   const serviceWorker = await readFile(new URL("../public/sw.js", import.meta.url), "utf8");
   const module = await readFile(new URL("../public/physics-intelligence/index.html", import.meta.url), "utf8");
+  const moduleScript = await readFile(new URL("../public/physics-intelligence/app.js", import.meta.url), "utf8");
   const data = JSON.parse(await readFile(new URL("../public/physics-intelligence/assets/physics-intelligence-data.json", import.meta.url), "utf8"));
 
   assert.equal(legacyAlias, host);
@@ -52,8 +53,8 @@ test("ships the V4 core, Community Share, PWA shell and Physics Intelligence", a
   assert.match(serviceWorker, /powerhouse-v4-community-2/);
   assert.match(serviceWorker, /community-share\.html/);
   assert.match(module, /Physics Intelligence \| Performance Powerhouse/i);
-  assert.match(module, /href="\.\.\/" class="nav-home"/i);
-  assert.match(module, /al_performance_powerhouse_physics_intelligence_v1/);
+  assert.match(module, /href="\.\.\/index\.html"/i);
+  assert.match(moduleScript, /al_performance_powerhouse_physics_intelligence_v1/);
   assert.equal(data.overview.questions, 1410);
   assert.equal(data.overview.currentEra.questions, 350);
   assert.equal(data.overview.currentEra.families, 173);
