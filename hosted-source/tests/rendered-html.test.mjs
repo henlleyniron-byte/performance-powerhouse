@@ -10,6 +10,7 @@ test("renders the V5 Evidence Edition metadata and seven-stage cycle", async () 
   assert.match(html, /id="cycle-subject"/);
   assert.match(html, /const CYCLE_STEPS = \[/);
   assert.match(html, /CYCLE_KEY = 'alpp_evidence_cycle_v1'/);
+  assert.match(html, /cycle-action'\)\.disabled = evidenceCycle\.step > 0/);
   assert.match(html, /fresh-transfer/);
   assert.match(html, /delayed-retest/);
 });

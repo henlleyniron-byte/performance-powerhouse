@@ -2441,6 +2441,8 @@ function renderCycle() {
   $('cycle-next-title').dataset.subject = evidenceCycle.subject;
   $('cycle-next-copy').textContent = current.hint;
   $('cycle-action').textContent = current.label;
+  $('cycle-action').disabled = evidenceCycle.step > 0 && !evidenceCycle.done.includes(evidenceCycle.step - 1);
+  $('cycle-action').title = $('cycle-action').disabled ? 'Complete the previous stage before starting this action.' : ''; 
   $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step completed' : 'Mark step done';
   $('cycle-complete').setAttribute('aria-pressed', String(evidenceCycle.done.includes(evidenceCycle.step)));
   $('cycle-steps').innerHTML = CYCLE_STEPS.map((step,index) => `<button class="cycle-step" type="button" data-cycle-step="${index}" data-done="${evidenceCycle.done.includes(index)}" ${index===evidenceCycle.step?'aria-current="step"':''}><b>${evidenceCycle.done.includes(index)?'✓':String(index+1).padStart(2,'0')}</b><span>${escapeHTML(step.title)}</span></button>`).join('');
