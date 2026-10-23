@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "source_commit": "e1bcdc53e7140eae0d9a535aa987d9d9c339b5ea",
+  "source_tree": "723c148451e3c6590b0744cbc554b5c6c6550976",
+  "scope": "Sanitized review snapshot imported on 23 October 2026. Historical source dates are not recreated. Not a production recovery artifact.",
+  "source_repository": "https://github.com/HenlleyNiron/performance-powerhouse",
+  "source_kind": "secondary legacy V5.1 development line",
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "mode": "100644",
+      "source_blob": "ae7c2eb480ffde8496ad74aa5f31921c59cad5a9",
+      "public_sha256": "ea7e1c674b1c8210b7eef1f50716a56c48ba383578164d9189db432c9de297da",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/data_correction.md",
+      "mode": "100644",
+      "source_blob": "86d5a7a26ec3898421af67218899fa7743238fc8",
+      "public_sha256": "056d5e3dfea38793c2279e7ad9ec33389709614c2a3ce7d9befc432948031e7b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "mode": "100644",
+      "source_blob": "6fc338f9037fd6d937aa5b02edeab8243dff2862",
+      "public_sha256": "74b72033381b2a93c218434d05536fe9198f0b80ce779918cd3d129a36603a6c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "source_blob": "01c382f89d7318167547fbece77a141ae6f9166a",
+      "public_sha256": "51da921960d8ba7cc91af19b9ff5ff57b84bce0dbd7d95850f7bbe4777a6ed38",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "source_blob": "82c5201f461c50dbefdcdfba326b4601e3e3d1e7",
+      "public_sha256": "d5d7d1048f57bff792383da4001d03ac5bc75fa89080a4906c27cceefb419721",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "source_blob": "7eb9cb4bb070342440547e1a58efecfdaccdde3e",
+      "public_sha256": "47a1c19d723a58a5b908950fef21b48b0257ef11692994aa2f336f15b65019eb",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "source_blob": "44d692ba38731b579ab9a4d534a5eff564fb3aeb",
+      "public_sha256": "ef9fe864b7cc7d246c2eb6ee4b3ff8af2a8a8eac0ce6cc737d057c97d00899ac",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "DEPLOYMENT_NOTES.md",
+      "mode": "100644",
+      "source_blob": "65c5f6ef48afe55bd963e5bb61f497497c631b70",
+      "public_sha256": "6340250d6a9cc629f24a8e7df96e5e7113e1877db169aa0a05b7d8ca91e46656",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "FINAL_QA_REPORT.md",
+      "mode": "100644",
+      "source_blob": "62b001758a1c3824f5b4c34b1d0c922a8ce02c17",
+      "public_sha256": "23ab052b7250838a84e309d54299a014336af526781040b4a3b42f80451b404f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "source_blob": "ed1f6ef623a0bba70faae72a55af3ae787bac96f",
+      "public_sha256": "afa33c451fcca0ad1dd706d6c98ef8558f52fc3ba4654e41e9da99a81d5214be",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "PRODUCT_MANIFEST.csv",
+      "mode": "100644",
+      "source_blob": "50103e778ff52a38c1f2cc6d3606a3e378d630ba",
+      "public_sha256": "553f381f333fe9559983cc152fed105e6e60965f17766a2e4173922fbf20f173",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "QA_REPORT.md",
+      "mode": "100644",
+      "source_blob": "11c59d3ed5783dd7b386c510c9e58cfb77820f7f",
+      "public_sha256": "7a6a464d490a4871af01474dbb196bf58525b5d3f2dc4c5957d88c632b5109f3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "source_blob": "d8ae03cd73114ca2ebc979020df781eb0dc14047",
+      "public_sha256": "8341df5f2c59eb1e177605da90391ba1578363d72a13c40651750d9ec28e2503",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "RELEASE_NOTES_2026-08-24.md",
+      "mode": "100644",
+      "source_blob": "5e21df8486e0bf98ea0a9798513c1dc23349f393",
+      "public_sha256": "f3a415d6eb0c9e7a6b4833428e4626ab639b36dc61827589a7c122b6814691d7",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "ROADMAP.md",
+      "mode": "100644",
+      "source_blob": "a6432f6b445542a54552be07df52219bd415a631",
+      "public_sha256": "5543fef233b86510e0c5cee14d181410cec3fa2ead8cc6fadbacc83a05c08b37",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "source_blob": "98ae0330d6622b47f80722c711863b5b6ca8072a",
+      "public_sha256": "6be2d534c218964b7743ee124c631340a44e7a01b5e4a0e589914827e033c08e",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "START_HERE.md",
+      "mode": "100644",
+      "source_blob": "c41757b51c203a7f76b39e3875d40b90cee6c2fe",
+      "public_sha256": "15887959435e7019c5c0bb2fb0bba23b54bfa20898e2a1c277705b153399c159",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "community-share.html",
+      "mode": "100644",
+      "source_blob": "724da95be65be0f91fa44fb0fd66c1ddfd93fab3",
+      "public_sha256": "6bbebfad6aee782c8fcbdf92008b41dbe2769672cb705c521128376dda1def62",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "css/app.css",
+      "mode": "100644",
+      "source_blob": "dbae93887e2905616579a315810d8ff4615ed157",
+      "public_sha256": "c3289bc4d7bcf13a57a86c1c8c6921edc0b4a4398fb67328892ad42faf7612fe",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "css/v5.css",
+      "mode": "100644",
+      "source_blob": "055acb102576f8fc7bfb0328fb741c4bd2105684",
+      "public_sha256": "388c14592716222f1e81ee321e541e6fc405c16494197a099f64932a40258489",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "deployments/focus-notes-studio-v3-20260926.html",
+      "mode": "100644",
+      "source_blob": "a7f23ddc92d08385dd706922f49ec4b32d10c4b0",
+      "public_sha256": "e6301f3a119287ac16bbbeec3daef1d3a6ef52463226791150aed53c3314ed6f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/CHATGPT_SITES_ARCHIVE.md",
+      "mode": "100644",
+      "source_blob": "d65635716c1c59649b47623fcf02ada3f990f8e8",
+      "public_sha256": "383d952837ce6401db210939fe4fb8245cea6da4bc53ac9993600d8199edd75f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/DATA_PROVENANCE.md",
+      "mode": "100644",
+      "source_blob": "883997b09ee8e3829ef2bd98cf50ff0a7924f06e",
+      "public_sha256": "490054415b025d566c670fee5a974578aaf213a2876e7aea917e01a00a5dceab",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/PROJECT_HISTORY.md",
+      "mode": "100644",
+      "source_blob": "f873dbebc4f9610db9dc00bd9aa3d88f65778524",
+      "public_sha256": "3d02b48dacd96404c1523cbcbb2cf1310864729f00855f4976affb6670ada0c6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "eslint.config.mjs",
+      "mode": "100644",
+      "source_blob": "c6682bf7be364834d89743a7e9b927188eb6a22a",
+      "public_sha256": "a7a4b7129cf0735cabccf67bb5a3361444e1738d4031e0f2ef1a02ce5f2335b0",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "icon-192.png",
+      "mode": "100644",
+      "source_blob": "1411b98d61a00436843310bbd907263730f4c9dc",
+      "public_sha256": "6974946948e2ab04dba50eddfc845efc1edf8777de64b2d06611a8548d49e892",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "icon-512.png",
+      "mode": "100644",
+      "source_blob": "a64e4648ea8a872a260f81b1a62e87ac325823c7",
+      "public_sha256": "90af5ad30444870e33362fd086a086da4fb2aff81c8f1b9cfda3f5ee4e68ead2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "index.html",
+      "mode": "100644",
+      "source_blob": "5ede09c4c96e0c03ae83c7c69d8bbb41df27a466",
+      "public_sha256": "6b305f099771d0283094a553d1059d34b919e66ad716133f09543dbb4884af04",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "js/app.js",
+      "mode": "100644",
+      "source_blob": "46286f1ddaa9d9062376ca0a0068bce6cf8d851b",
+      "public_sha256": "115267541f0d58f12c576ba123986efe5dd6a6d501f67242789b6e9a3c9cb16f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "js/core.js",
+      "mode": "100644",
+      "source_blob": "a216b291b94f4273be88aeccc898e9b270842046",
+      "public_sha256": "3eab4ac733cf581dc43e6639202c8bc92eb2c9a833120f1cbe0fe325c84f7da9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "js/v5-additions.js",
+      "mode": "100644",
+      "source_blob": "2ef1824a0cc7679464db020fee59cc30ba58120c",
+      "public_sha256": "97510f3016d704881125d795332ab71bf85bf95e47a130a3034769d078fe4fa8",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "manifest.webmanifest",
+      "mode": "100644",
+      "source_blob": "27892a69cd65693c6f90b96f914b929ff48abe96",
+      "public_sha256": "735a71e18876f807d28f4c106137d399332aca024da14ab5e44f9abe05b0a902",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "source_blob": "654a14aac349a3a934503b1b2159920927dfad43",
+      "public_sha256": "ab001a38e9442333286335095322aff89c2004c2cc13def27b86b8b43e61a646",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "source_blob": "cff08df6f119cdb9bc3bb0cd462b0d5dc893f13b",
+      "public_sha256": "f461768222963f5e78083e55926bbb71540b61b0c1881f0fb30c4c9c2d04be58",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "physics-intelligence/app.js",
+      "mode": "100644",
+      "source_blob": "517e3eb21b93fc622a9fc21e36ceedd37dbbde6c",
+      "public_sha256": "1d60f30a409b51374973cdefe438cffe5dc0623ec0e2b32e85d94edcbc72fb87",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "physics-intelligence/assets/physics-intelligence-data.json",
+      "mode": "100644",
+      "source_blob": "dc800076997e60774c9973969f462c235e55abf3",
+      "public_sha256": "4911c67ffc3e7cd85e8a0f06b21635393f3a79c882c83d09e729c12e592706ce",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "physics-intelligence/favicon.svg",
+      "mode": "100644",
+      "source_blob": "ca46ffb970ca63ad9dcfa5494cc268fd8f5fc217",
+      "public_sha256": "600516f3eabdab4da63be2fecf354fa7074344cb495d931a85b0f0cc9e69f9ca",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "physics-intelligence/index.html",
+      "mode": "100644",
+      "source_blob": "d0ceac8b2e300bf7efca2886218ccd2d98837bfe",
+      "public_sha256": "c1530d5719f18d4530e8166512e12c9e1314cdd6fb7190051d6b8ab97b8c74fa",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "physics-intelligence/styles.css",
+      "mode": "100644",
+      "source_blob": "e5087bfc45ddae102259a6bfc70e648a19ec28cf",
+      "public_sha256": "9d5cba21597b2630c21986edec7bd3c229cccb3e370b158b93a20a1943af584d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "playwright.config.mjs",
+      "mode": "100644",
+      "source_blob": "a1317e240ada6267d3597767483c23b073bfccf8",
+      "public_sha256": "19d5b10568614e8d847263f61f4362f525a6ca0e9822d53cdad216170dce9c61",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/build-site.mjs",
+      "mode": "100644",
+      "source_blob": "4f001b23fd1f6661dece9ea674bf5d8aa7abb637",
+      "public_sha256": "e5a8c7114c8e5305d0a03cba0af11630b8658f579e71b4d78bda545f2fd8d55c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/serve.mjs",
+      "mode": "100644",
+      "source_blob": "5ff83531a95a4d1ec22faea71f70aac9e399dfdb",
+      "public_sha256": "ee07220838ce15874e28eba6ef72b8646139faffed4926916d9d742f563c521d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "study-tracker/index.html",
+      "mode": "100644",
+      "source_blob": "3da8d79ae2d40e199941e0f3f06a7e7230034cb4",
+      "public_sha256": "891cd27e9f752928e6cb51fcdaf2283ea9a19c06986a20455071bac57a4bace9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "study-tracker/tracker.css",
+      "mode": "100644",
+      "source_blob": "a009bd7ea0d8ac3a878db0c6edd36b45087be27e",
+      "public_sha256": "99da2e302a60aef75c71b48965e3f5ad7571a3f919309dc59b38e6353ddcadd5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "study-tracker/tracker.js",
+      "mode": "100644",
+      "source_blob": "5717439f6cf21edb792fbf597f85375832c4d920",
+      "public_sha256": "39f064e063b4c2a32ed50496706028667e7421802c7f66af47e828fac6774bc4",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "sw.js",
+      "mode": "100644",
+      "source_blob": "d68473e04fc3df5af5e3bb0390dd8777c8e8a808",
+      "public_sha256": "6eaa93ce3fc50cfafcd3ec6cfb8acfd408f525f14129cfb9931bf3e52fe82153",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/e2e/app.spec.mjs",
+      "mode": "100644",
+      "source_blob": "1fbc743511feb8527a13b1beff3768c018e43e4c",
+      "public_sha256": "85ffdace08f5ea45763e3bff029e2b14b8b3cf77b7b601bbc2a95a00bad99bc2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/e2e/helpers.mjs",
+      "mode": "100644",
+      "source_blob": "bfc0c7398ade4d787d3d84dcf7cdb4d9140752b6",
+      "public_sha256": "0965dbb14b2421d3e02da7573bb8445f2a5a733ff9b67aa215bf8654f455c7a3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/e2e/mobile.spec.mjs",
+      "mode": "100644",
+      "source_blob": "7cd02a1825ebc61bcc2808ea04a67d6d19b28c98",
+      "public_sha256": "a6fbd7acee2dba80f66ac23e5eab3c1cae820f1afc8bf7284e6dd36f0f94babd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/e2e/regressions.spec.mjs",
+      "mode": "100644",
+      "source_blob": "db153de767bd467d2422f7655728e9f560dcce55",
+      "public_sha256": "7e6e921a6eef7d727413369907d7fd119ccd7e585a15fc691e9ec5b6bd495d8d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/unit/core.test.mjs",
+      "mode": "100644",
+      "source_blob": "2d06456a64ef8116f5c4f4e99f50fe3425740b70",
+      "public_sha256": "8f8cdf73c5328c8d40a8a7cb0ce88165696a6099b4eef854dbc72c0480d09067",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/unit/integrity.test.mjs",
+      "mode": "100644",
+      "source_blob": "87971f0c93b86218e8ac4fe5ca976e3d9a5c45a9",
+      "public_sha256": "1fad7a3758c3b7b4ab798be1eec22dfc8c1a84578de288a4163ec6b30467904b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/unit/load-core.mjs",
+      "mode": "100644",
+      "source_blob": "960d12c2a067870a277098758731bb5276a538ce",
+      "public_sha256": "e8a4013dd6e228a1acdeea1a242101fcf28c2ebcd8a5c117ff28560e1c260720",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/unit/sw-contract.test.mjs",
+      "mode": "100644",
+      "source_blob": "05a3f2643242ebbfc07065e4bf583a18f26c4401",
+      "public_sha256": "04ea8a036d79847bc5ab7ffaaf953e0c5ad692c7170a9315277c27c010638403",
+      "redacted_link_count": 0
+    }
+  ],
+  "omitted": [],
+  "redacted_links": []
+}
