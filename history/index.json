@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "import_date": "2026-10-21",
-  "scope": "All 41 saved Site versions returned by the owner records. Sanitized source snapshots, not exact production artifacts. No merge or deployment performed.",
-  "latest_site_version": 41,
-  "latest_product_label": "V15 — Evidence Trail",
+  "scope": "All 42 saved Site versions, six additional reachable intermediate hosted commits and four secondary legacy commits recovered on 23 October 2026. Sanitized public review snapshots; no production migration.",
+  "latest_site_version": 42,
+  "latest_product_label": "V16 \u2014 Evidence & Recovery",
   "versions": [
     {
       "version": 1,
@@ -414,7 +414,111 @@
       "redacted_files": 6,
       "manifest": "history/manifests/site-version-041.json",
       "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/f434de2f19933cb18ccf182b363cccba53ed06f4/hosted-source"
+    },
+    {
+      "version": 42,
+      "source_commit": "8295a54feae1878777768fea4ce25c383cdffec4",
+      "public_commit": "7f0bc9b9fb0866f885e66fd3e3945b16896ea4c4",
+      "manifest": "history/manifests/site-version-042.json",
+      "included_files": 262,
+      "omitted_files": 7,
+      "redacted_files": 8,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/7f0bc9b9fb0866f885e66fd3e3945b16896ea4c4/hosted-source"
+    }
+  ],
+  "updated_on": "2026-10-23",
+  "intermediate_source_commits": [
+    {
+      "source_commit": "1e997c5cb2da045e720d066ada597905088effbf",
+      "public_commit": "170aabb13637e8d9a4cb328c0a899d96521274d1",
+      "manifest": "history/manifests/intermediate-1e997c5cb2da.json",
+      "included_files": 76,
+      "omitted_files": 0,
+      "redacted_files": 2,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/170aabb13637e8d9a4cb328c0a899d96521274d1/hosted-source"
+    },
+    {
+      "source_commit": "a626a02a7c1c88e75b17f7da92188242652ed428",
+      "public_commit": "667b9b54093c399b207594e796f6cb7b2828df68",
+      "manifest": "history/manifests/intermediate-a626a02a7c1c.json",
+      "included_files": 89,
+      "omitted_files": 0,
+      "redacted_files": 4,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/667b9b54093c399b207594e796f6cb7b2828df68/hosted-source"
+    },
+    {
+      "source_commit": "97f1ce61000c871ac1c924c2cfa8a1e435afb22b",
+      "public_commit": "28f42e14b3f7e3b36a48d189de66bc2c82607d17",
+      "manifest": "history/manifests/intermediate-97f1ce61000c.json",
+      "included_files": 89,
+      "omitted_files": 0,
+      "redacted_files": 4,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/28f42e14b3f7e3b36a48d189de66bc2c82607d17/hosted-source"
+    },
+    {
+      "source_commit": "04ef74d1bb02bc4fef362b2fda332f6d887d2f51",
+      "public_commit": "336eb0296eabadc6ba6d3c797538e3dac87e55d3",
+      "manifest": "history/manifests/intermediate-04ef74d1bb02.json",
+      "included_files": 90,
+      "omitted_files": 0,
+      "redacted_files": 4,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/336eb0296eabadc6ba6d3c797538e3dac87e55d3/hosted-source"
+    },
+    {
+      "source_commit": "1a215d172c87ac35949bf85ecc7538fa545d3ee3",
+      "public_commit": "2879947f13a1cc6b02ed2056535c6342c23a5749",
+      "manifest": "history/manifests/intermediate-1a215d172c87.json",
+      "included_files": 127,
+      "omitted_files": 0,
+      "redacted_files": 7,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/2879947f13a1cc6b02ed2056535c6342c23a5749/hosted-source"
+    },
+    {
+      "source_commit": "51adad751dc4a26430ae762b06e3d1ffcf67215f",
+      "public_commit": "c3d444eec4bda0bf08c5c64b230368ed0be5fb50",
+      "manifest": "history/manifests/intermediate-51adad751dc4.json",
+      "included_files": 145,
+      "omitted_files": 0,
+      "redacted_files": 7,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/c3d444eec4bda0bf08c5c64b230368ed0be5fb50/hosted-source"
+    }
+  ],
+  "secondary_source_commits": [
+    {
+      "source_commit": "bfe846340a086516580894e53528ee6bb741b940",
+      "public_commit": "5cd97ce509c8ebbc4d81d3e036ab4b58f9742125",
+      "manifest": "history/manifests/secondary-bfe846340a08.json",
+      "included_files": 42,
+      "omitted_files": 0,
+      "redacted_files": 0,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/5cd97ce509c8ebbc4d81d3e036ab4b58f9742125/related-source/legacy-v5.1"
+    },
+    {
+      "source_commit": "e1bcdc53e7140eae0d9a535aa987d9d9c339b5ea",
+      "public_commit": "6e797e231b293b3892edfc750b449afa48ed6ade",
+      "manifest": "history/manifests/secondary-e1bcdc53e714.json",
+      "included_files": 54,
+      "omitted_files": 0,
+      "redacted_files": 0,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/6e797e231b293b3892edfc750b449afa48ed6ade/related-source/legacy-v5.1"
+    },
+    {
+      "source_commit": "db203798fca9774d7d84d26231d1a4606cc50b6a",
+      "public_commit": "29abaaae9639d1aa4689de7ac944e75324db22a4",
+      "manifest": "history/manifests/secondary-db203798fca9.json",
+      "included_files": 66,
+      "omitted_files": 0,
+      "redacted_files": 0,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/29abaaae9639d1aa4689de7ac944e75324db22a4/related-source/legacy-v5.1"
+    },
+    {
+      "source_commit": "2d9af8cd933adb9baad3e08641b9fe2322f927ef",
+      "public_commit": "10e1fef67b408c4f39de9b8736848ba819e0bb2b",
+      "manifest": "history/manifests/secondary-2d9af8cd933a.json",
+      "included_files": 67,
+      "omitted_files": 4,
+      "redacted_files": 0,
+      "source_url": "https://github.com/henlleyniron-byte/performance-powerhouse/tree/10e1fef67b408c4f39de9b8736848ba819e0bb2b/related-source/legacy-v5.1"
     }
   ]
 }
-

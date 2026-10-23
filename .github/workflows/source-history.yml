@@ -1,0 +1,30 @@
+name: Public source archive checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Verify all indexed source snapshots
+        run: python3 scripts/verify-source-history.py --json
+      - name: Legacy service-worker source checks
+        run: npm test
+      - name: Hosted source regression checks (optional fixture skips reported)
+        working-directory: hosted-source
+        run: node --test tests/*.test.mjs tests/*.test.cjs
+      - name: Secondary legacy unit and integrity checks
+        working-directory: related-source/legacy-v5.1
+        run: npm test

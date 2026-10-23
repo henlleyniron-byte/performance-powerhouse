@@ -1,3 +1,5 @@
+> Historical import record. The [23 October update](SOURCE_IMPORT_2026-10-23.md) supersedes its latest-version and current-test statements.
+
 # Hosted source import — 21 October 2026
 
 ## What is included

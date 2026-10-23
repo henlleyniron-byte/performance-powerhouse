@@ -1,8 +1,8 @@
 # Saved Site version history
 
-All **41 saved Site versions (1–41)** returned by the owner records on 21 October 2026 are represented below. The latest product label is **V15 — Evidence Trail**, saved Site version **41**; product V-numbers and saved Site version numbers are different namespaces. Saved versions are not automatically proof of production deployment.
+All **42 saved Site versions (1–42)** returned by the owner records on 23 October 2026 are represented below. The latest product label is **V16 — Evidence & Recovery**, saved Site version **42**; product V-numbers and saved Site version numbers are different namespaces. Saved versions are not automatically proof of production deployment.
 
-Each link opens its own sanitized source snapshot under `hosted-source/`. Imports were created on 21 October 2026, without backdating or inventing release history. Original source commits are provenance identifiers from the separate Site repository; the GitHub import commits are different because the source is nested and sanitized. Intermediate commits that were not saved Site versions are not recreated.
+Each link opens its own sanitized source snapshot under `hosted-source/`. The first 41 imports were created on 21 October 2026; version 42 and the additional source snapshots were imported on 23 October 2026, without backdating or inventing release history. Original source commits are provenance identifiers from the separate Site repository; the GitHub import commits are different because the source is nested and sanitized. Six additional reachable intermediate commits are now preserved below. Original author dates are provenance, not backdated GitHub activity.
 
 Private Drive/Docs/chat/message URLs were replaced with deterministic `example.invalid` placeholders. Downloadable PDF/ZIP content and generated Python bytecode are excluded. Original learner records and credentials were not imported. Every snapshot has a manifest recording included paths, original Git blob IDs, public SHA-256 hashes, redactions and exclusions. The originals remain in the owned source history; these public snapshots cannot substitute for complete production recovery artifacts.
 
@@ -49,6 +49,30 @@ Private Drive/Docs/chat/message URLs were replaced with deterministic `example.i
 | 39 | [snapshot](https://github.com/henlleyniron-byte/performance-powerhouse/tree/66f0584acbaaacb19a07c38fc50176bd45d4350c/hosted-source) | `fc9edc70e3c90056cae4070cd30987b5727dba27` | 240 | 7 | 6 |
 | 40 | [snapshot](https://github.com/henlleyniron-byte/performance-powerhouse/tree/037a4377cf3d45954f6ea444ba42341131835972/hosted-source) | `1b51110dd4e12031fc786203f513ec8363edefe0` | 245 | 7 | 6 |
 | 41 | [snapshot](https://github.com/henlleyniron-byte/performance-powerhouse/tree/f434de2f19933cb18ccf182b363cccba53ed06f4/hosted-source) | `55c6bb30bf66f474d315c61f217f3f8ce7b81138` | 251 | 7 | 6 |
+| 42 | [snapshot](https://github.com/henlleyniron-byte/performance-powerhouse/tree/7f0bc9b9fb0866f885e66fd3e3945b16896ea4c4/hosted-source) | `8295a54feae1878777768fea4ce25c383cdffec4` | 262 | 7 | 8 |
 
 Machine-readable mapping: [index.json](index.json). Per-version provenance: [manifests](manifests/). Latest import notes and test limits: [source import report](../docs/SOURCE_IMPORT_2026-10-21.md).
 
+
+
+## Intermediate hosted source commits
+
+| Original commit | Public snapshot | Manifest |
+| --- | --- | --- |
+| `1e997c5cb2da045e720d066ada597905088effbf` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/170aabb13637e8d9a4cb328c0a899d96521274d1/hosted-source) | [manifest](manifests/intermediate-1e997c5cb2da.json) |
+| `a626a02a7c1c88e75b17f7da92188242652ed428` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/667b9b54093c399b207594e796f6cb7b2828df68/hosted-source) | [manifest](manifests/intermediate-a626a02a7c1c.json) |
+| `97f1ce61000c871ac1c924c2cfa8a1e435afb22b` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/28f42e14b3f7e3b36a48d189de66bc2c82607d17/hosted-source) | [manifest](manifests/intermediate-97f1ce61000c.json) |
+| `04ef74d1bb02bc4fef362b2fda332f6d887d2f51` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/336eb0296eabadc6ba6d3c797538e3dac87e55d3/hosted-source) | [manifest](manifests/intermediate-04ef74d1bb02.json) |
+| `1a215d172c87ac35949bf85ecc7538fa545d3ee3` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/2879947f13a1cc6b02ed2056535c6342c23a5749/hosted-source) | [manifest](manifests/intermediate-1a215d172c87.json) |
+| `51adad751dc4a26430ae762b06e3d1ffcf67215f` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/c3d444eec4bda0bf08c5c64b230368ed0be5fb50/hosted-source) | [manifest](manifests/intermediate-51adad751dc4.json) |
+
+## Secondary legacy V5.1 development line
+
+| Original commit | Public snapshot | Manifest |
+| --- | --- | --- |
+| `bfe846340a086516580894e53528ee6bb741b940` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/5cd97ce509c8ebbc4d81d3e036ab4b58f9742125/related-source/legacy-v5.1) | [manifest](manifests/secondary-bfe846340a08.json) |
+| `e1bcdc53e7140eae0d9a535aa987d9d9c339b5ea` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/6e797e231b293b3892edfc750b449afa48ed6ade/related-source/legacy-v5.1) | [manifest](manifests/secondary-e1bcdc53e714.json) |
+| `db203798fca9774d7d84d26231d1a4606cc50b6a` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/29abaaae9639d1aa4689de7ac944e75324db22a4/related-source/legacy-v5.1) | [manifest](manifests/secondary-db203798fca9.json) |
+| `2d9af8cd933adb9baad3e08641b9fe2322f927ef` | [source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/10e1fef67b408c4f39de9b8736848ba819e0bb2b/related-source/legacy-v5.1) | [manifest](manifests/secondary-2d9af8cd933a.json) |
+
+The secondary line is preserved under `related-source/legacy-v5.1/`. Its historical documentation names another canonical repository; that statement is superseded by the owner’s current instruction to use **henlleyniron-byte/performance-powerhouse**. Its nested workflows are source records and are not active repository workflows. Four screenshot files in the latest secondary snapshot are omitted because their synthetic-data provenance was not independently verified.

@@ -1,10 +1,12 @@
 # Performance Powerhouse
 
-## Latest hosted source and complete saved-version history
+## Current source and review history
 
-The live product is **V15 — Evidence Trail**, saved Site version **41**. Its reviewed public source copy is in **[hosted-source/](hosted-source/)**. Browse **[all 41 saved Site versions](history/SITE_VERSIONS.md)** with original source SHAs, per-file hashes and disclosure of public-archive exclusions.
+**Flagship repository: henlleyniron-byte/performance-powerhouse.** The hosted product is **V16 — Evidence & Recovery**, saved Site version **42**, while the root runtime below remains the legacy V5.0.1 application.
 
-**This is a review archive, not a production migration.** The root application below remains the legacy V5 snapshot. Private resource links are redacted; five downloadable PDF/ZIP files and two bytecode files are excluded from the latest snapshot. No merge or deployment is implied. See the **[source import report](docs/SOURCE_IMPORT_2026-10-21.md)** for setup, test results, omissions and remaining release gates.
+Start with the **[reviewer guide](docs/REVIEWER_GUIDE.md)**, **[current hosted source](hosted-source/)** and **[complete source catalogue](history/SITE_VERSIONS.md)**. The catalogue preserves all **48 reachable hosted-source commits** (42 saved versions plus six intermediate commits) and **four secondary legacy commits**. Each indexed snapshot has original source references, public hashes and explicit omissions.
+
+This is a sanitized public review archive. The latest hosted snapshot includes 262 files; seven files are omitted and eight have private/contact links redacted. The separate secondary legacy source is in [related-source/legacy-v5.1/](related-source/legacy-v5.1/). These sources do not establish production parity, restore safety, adoption or academic outcomes. See [the current import report](docs/SOURCE_IMPORT_2026-10-23.md) and [draft PR #8](https://github.com/henlleyniron-byte/performance-powerhouse/pull/8).
 
 ## Legacy V5 public application
 
