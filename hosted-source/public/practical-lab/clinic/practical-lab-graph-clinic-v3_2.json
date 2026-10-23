@@ -1,0 +1,808 @@
+{
+  "schema_version": "1.0.0",
+  "release": "2026-10-16-v3.2-additive",
+  "release_label": "Practical Mastery V3.2 - Graph and Evidence Clinic",
+  "extends_catalog_release": "2026-10-15-v3",
+  "compatible_with_optional_bank": "2026-10-15-v3.1-supplement",
+  "content_kind": "independent_exam_style_model_questions_not_official_marking",
+  "publisher_kind": "independently_prepared_student_companion",
+  "total_questions": 15,
+  "subject_counts": {
+    "biology": 5,
+    "chemistry": 5,
+    "physics": 5
+  },
+  "marks_per_question": 6,
+  "total_marks": 90,
+  "teacher_reviewed": false,
+  "source_verified_scope": "NIE activity numbering and printed pages matched for linked activity entries; not teacher-certified answer key",
+  "source_handbooks": {
+    "biology": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "chemistry": "https://nie.lk/pdffiles/other/eALOM%20Chemistry%20Practical%20Handbook.pdf",
+    "physics": "https://www.nie.lk/pdffiles/other/eALOM%20PysicsPracBook.pdf"
+  },
+  "policy": [
+    "Static fictional educational datasets only; no actual lab results",
+    "No laboratory setup, handling instructions or claim of completed practicals",
+    "Model marks are illustrative, not official marking schemes",
+    "Keep saved attempts private and in the existing versioned user store",
+    "Do not modify the 126 original catalog IDs or 24 V3.1 question IDs"
+  ],
+  "questions": [
+    {
+      "id": "PM32-B01",
+      "subject": "biology",
+      "activity_ids": [
+        "bio-005"
+      ],
+      "title": "Enzyme data: rate proxy against temperature",
+      "nie_number": "5",
+      "nie_print_page": 6,
+      "plot": {
+        "x_label": "Temperature (°C)",
+        "y_label": "Rate proxy 1/t (s⁻¹)",
+        "x": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0,
+          60.0
+        ],
+        "y": [
+          0.004167,
+          0.007143,
+          0.0125,
+          0.02,
+          0.01,
+          0.004167
+        ],
+        "kind": "line"
+      },
+      "scenario": "A fictional teacher dataset reports times to an indicator endpoint for the same substrate amount: 240, 140, 80, 50, 100 and 240 s at 10, 20, 30, 40, 50 and 60 °C respectively. The graph plots 1/t, a relative proxy rather than an independently calibrated reaction rate.",
+      "tasks": [
+        "(a) State the temperature with the highest model rate proxy.",
+        "(b) Calculate 1/t at 20 °C (3 significant figures).",
+        "(c) Describe the trend and give two limitations or controls."
+      ],
+      "marks": [
+        "The peak of this particular model dataset is at 40 °C.",
+        "At 20 °C: 1/140 = 0.00714 s⁻¹ (3 s.f.).",
+        "The rate proxy rises up to 40 °C.",
+        "It declines in the model data beyond 40 °C.",
+        "1/t is a comparative endpoint proxy, not an absolute initial rate; a single trial does not prove a universal temperature optimum.",
+        "Temperature, pH, substrate concentration and enzyme preparation should be controlled or independently checked when interpreting comparisons."
+      ],
+      "worked_explanation": "At 40 °C, t=50 s so 1/t=0.0200 s⁻¹. At 60 °C, t=240 s so 1/t≈0.00417 s⁻¹; these are relative measures for equal endpoint criteria.",
+      "common_error": "Interpreting a 1/t peak as the exact optimum for every amylase sample or as direct evidence for one mechanism.",
+      "transfer_question": "If the endpoint time were 125 s, calculate the rate proxy.",
+      "transfer_answer": "1/125 = 0.00800 s⁻¹.",
+      "model_assumption": "Assume identical endpoint criterion and substrate quantity; all numbers are hypothetical.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-B02",
+      "subject": "biology",
+      "activity_ids": [
+        "bio-006"
+      ],
+      "title": "Photosynthesis evidence and confounding variables",
+      "nie_number": "6",
+      "nie_print_page": 7,
+      "plot": {
+        "x_label": "Model lamp distance (cm)",
+        "y_label": "Collected gas volume per minute (mm³ min⁻¹)",
+        "x": [
+          10.0,
+          20.0,
+          30.0,
+          40.0,
+          50.0
+        ],
+        "y": [
+          18.0,
+          11.0,
+          7.0,
+          5.0,
+          4.0
+        ],
+        "kind": "line"
+      },
+      "scenario": "A fictional teacher dataset reports a gas-collection proxy at different lamp distances for an aquatic-plant model. The identity of gas is assumed by the teaching model; temperature and dissolved inorganic carbon were not independently measured.",
+      "tasks": [
+        "(a) State the direction of association between distance and collected gas.",
+        "(b) Determine the decrease from 10 to 50 cm and its percentage of the 10 cm value.",
+        "(c) Identify two reasons not to equate this graph with an exact light-response law."
+      ],
+      "marks": [
+        "Collected gas per minute decreases as lamp distance increases in this dataset.",
+        "Absolute decrease: 18 − 4 = 14 mm³ min⁻¹.",
+        "Percentage decrease: (14/18) × 100 ≈ 77.8%.",
+        "Gas collection is a proxy, not necessarily a direct measure of carbon fixation.",
+        "Lamp geometry, absorption, reflection and scattering prevent inference of a precise inverse-square relationship from these measurements alone.",
+        "Temperature or dissolved CO₂ can also change the result unless accounted for."
+      ],
+      "worked_explanation": "The endpoints 18 and 4 mm³ min⁻¹ imply 4.5-fold difference, not a proven 4.5-fold difference in total photosynthesis.",
+      "common_error": "Drawing a precise inverse-square law from lamp distance alone or assuming all collected gas is confirmed oxygen.",
+      "transfer_question": "The model gas output is 6 mm³ min⁻¹ for two minutes. What volume is predicted at that same rate?",
+      "transfer_answer": "12 mm³.",
+      "model_assumption": "Correlation in an illustrative plant model does not establish a causal light-intensity law.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-B03",
+      "subject": "biology",
+      "activity_ids": [
+        "bio-020"
+      ],
+      "title": "Plasmolysis interpolation and inference limits",
+      "nie_number": "20",
+      "nie_print_page": 21,
+      "plot": {
+        "x_label": "Nominal solution concentration (mol dm⁻³)",
+        "y_label": "Plasmolysed cells (%)",
+        "x": [
+          0.16,
+          0.2,
+          0.24,
+          0.28
+        ],
+        "y": [
+          18.0,
+          34.0,
+          55.0,
+          74.0
+        ],
+        "kind": "line"
+      },
+      "scenario": "A hypothetical teacher-prepared microscope summary reports the percentage of sampled epidermal cells classified as plasmolysed at four labelled concentrations. Students are asked only to interpret this dataset.",
+      "tasks": [
+        "(a) Identify the two data points bracketing 50% plasmolysis.",
+        "(b) Interpolate a nominal 50% concentration.",
+        "(c) Explain why this does not give an exact pressure-valued solute potential."
+      ],
+      "marks": [
+        "The 0.20 mol dm⁻³ point corresponds to 34%.",
+        "The 0.24 mol dm⁻³ point corresponds to 55%.",
+        "Linear interpolation fraction: (50−34)/(55−34) = 16/21.",
+        "Estimated concentration: 0.20 + (16/21)×0.04 ≈ 0.2305 mol dm⁻³.",
+        "The interpolation assumes local approximate linearity and contains sampling/classification uncertainty.",
+        "Converting concentration into solute potential additionally needs assumptions about effective particle concentration, temperature and solution behaviour."
+      ],
+      "worked_explanation": "Interpolated nominal midpoint ≈0.230 mol dm⁻³. It is an estimate of an operational threshold, not a directly measured tissue pressure.",
+      "common_error": "Claiming that a 50% cell-count threshold equals a perfectly measured solute potential in pascals.",
+      "transfer_question": "For 40% at 0.20 mol dm⁻³ and 60% at 0.30 mol dm⁻³, estimate the 50% concentration.",
+      "transfer_answer": "0.25 mol dm⁻³ under linear interpolation.",
+      "model_assumption": "Assume percentages describe comparable sampled populations and interpolation is local.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-B04",
+      "subject": "biology",
+      "activity_ids": [
+        "bio-026"
+      ],
+      "title": "Pulse recovery: quantify without over-generalising",
+      "nie_number": "26",
+      "nie_print_page": 31,
+      "plot": {
+        "x_label": "Time after model activity (min)",
+        "y_label": "Pulse (beats min⁻¹)",
+        "x": [
+          0.0,
+          1.0,
+          3.0,
+          5.0
+        ],
+        "y": [
+          118.0,
+          104.0,
+          84.0,
+          74.0
+        ],
+        "kind": "line"
+      },
+      "scenario": "In a fictional, teacher-provided classroom record, one student has a resting pulse of 72 beats min⁻¹. An existing dataset reports 118 immediately after an event and 104, 84 and 74 at 1, 3 and 5 minutes into recovery. This is analysis only, not an exercise instruction.",
+      "tasks": [
+        "(a) Find the increase above rest immediately afterward.",
+        "(b) Find the fall from 0 to 5 minutes.",
+        "(c) Calculate the fraction of the initial excess that had disappeared by 5 minutes, and state limitations."
+      ],
+      "marks": [
+        "Immediate excess over rest: 118 − 72 = 46 beats min⁻¹.",
+        "Fall from the immediate value to 5 min: 118 − 74 = 44 beats min⁻¹.",
+        "Fraction of excess lost: 44/46 ≈ 0.9565.",
+        "Equivalent percentage: approximately 95.7%.",
+        "Single-person, single-occasion data cannot establish population responses.",
+        "Measurement timing, stress and other uncontrolled variables can affect pulse rate; the record is not a clinical diagnosis."
+      ],
+      "worked_explanation": "Pulse nearly returns to the stated rest value by 5 min in this one hypothetical series (74 versus 72 beats min⁻¹).",
+      "common_error": "Treating a single fictional pulse curve as a fitness ranking, medical diagnosis or universal recovery time.",
+      "transfer_question": "If a recorded pulse falls from 110 to 80 beats min⁻¹, calculate the fall.",
+      "transfer_answer": "30 beats min⁻¹.",
+      "model_assumption": "The baseline and timing refer to the same hypothetical record; no real physiological advice is implied.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-B05",
+      "subject": "biology",
+      "activity_ids": [
+        "bio-021"
+      ],
+      "title": "Plant tissue mass change: locate the zero crossing",
+      "nie_number": "21",
+      "nie_print_page": 24,
+      "plot": {
+        "x_label": "External concentration (mol dm⁻³)",
+        "y_label": "Mass change (%)",
+        "x": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5
+        ],
+        "y": [
+          10.0,
+          5.0,
+          1.0,
+          -4.0,
+          -8.0
+        ],
+        "kind": "line"
+      },
+      "scenario": "A fictional teaching worksheet reports the percentage change in tissue mass across five labelled solutions. The zero crossing is used as an approximate condition of no net mass change for this model.",
+      "tasks": [
+        "(a) Locate the points bracketing zero mass change.",
+        "(b) Interpolate the concentration at zero mass change.",
+        "(c) Explain why the estimate is not the precise water potential of every cell."
+      ],
+      "marks": [
+        "At 0.30 mol dm⁻³, mass change is +1%.",
+        "At 0.40 mol dm⁻³, mass change is −4%.",
+        "Interpolation fraction from +1 to zero is 1/(1+4)=0.2.",
+        "Estimated zero crossing: 0.30+0.2(0.10)=0.32 mol dm⁻³.",
+        "The estimate assumes interpolation is reasonable between sampled concentrations and measurement variability is limited.",
+        "Tissue heterogeneity and solution nonideality prevent this concentration from being treated as a precise water-potential measurement without further information."
+      ],
+      "worked_explanation": "The model crosses the x-axis near 0.32 mol dm⁻³, suggesting no net percentage mass change under the given assumptions.",
+      "common_error": "Treating zero net mass change as proof of no microscopic water movement.",
+      "transfer_question": "Data at 0.25 mol dm⁻³ show +2%; at 0.35 show −2%. Find a linear zero crossing.",
+      "transfer_answer": "0.30 mol dm⁻³.",
+      "model_assumption": "Use the model mass percentages only; not a step-by-step tissue practical protocol.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-C01",
+      "subject": "chemistry",
+      "activity_ids": [
+        "che-044"
+      ],
+      "title": "Concordant results and an outlier: numerical judgement",
+      "nie_number": "44",
+      "nie_print_page": 135,
+      "plot": {
+        "x_label": "Trial number",
+        "y_label": "Illustrative delivered volume (cm³)",
+        "x": [
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "y": [
+          24.65,
+          24.6,
+          25.9,
+          24.63
+        ],
+        "kind": "scatter"
+      },
+      "scenario": "A teacher gives four fictional titration readings from a generic 1:1 neutralisation model: 24.65, 24.60, 25.90 and 24.63 cm³. For this worked example, treat a range ≤0.10 cm³ as concordant; a 25.00 cm³ sample of unknown acid was compared with a 0.1000 mol dm⁻³ standard. No chemical preparation is requested.",
+      "tasks": [
+        "(a) Identify the anomalous reading for review.",
+        "(b) Calculate the mean of the concordant readings.",
+        "(c) Under the stated 1:1 model, find the acid concentration and explain why the anomaly must be investigated."
+      ],
+      "marks": [
+        "25.90 cm³ is inconsistent with the cluster and must be investigated, not silently deleted.",
+        "The concordant set is 24.65, 24.60 and 24.63 cm³ (spread 0.05 cm³).",
+        "Mean = (24.65+24.60+24.63)/3 ≈ 24.63 cm³.",
+        "Amount of standard = 0.1000×(24.6267/1000) ≈ 0.00246267 mol.",
+        "For 1:1 stoichiometry, unknown concentration = 0.00246267/0.02500 ≈ 0.09851 mol dm⁻³.",
+        "Endpoint detection and reading uncertainty can introduce errors; investigate trial 3 before deciding how to report."
+      ],
+      "worked_explanation": "Calculated concentration 0.09851 mol dm⁻³ under this hypothetical, explicitly 1:1 model.",
+      "common_error": "Averaging every reading despite an obvious anomaly, or assuming the stoichiometric ratio for an unspecified reaction.",
+      "transfer_question": "At a hypothetical 1:1 equivalence, 20.00 cm³ of 0.1000 mol dm⁻³ standard neutralises 25.00 cm³ unknown. Find c(unknown).",
+      "transfer_answer": "0.08000 mol dm⁻³.",
+      "model_assumption": "The 1:1 reaction ratio and example concordance tolerance are supplied; they must not be assumed universally.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Chemistry%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-C02",
+      "subject": "chemistry",
+      "activity_ids": [
+        "che-032"
+      ],
+      "title": "Initial-rate graph: what order can actually be inferred?",
+      "nie_number": "32",
+      "nie_print_page": 98,
+      "plot": {
+        "x_label": "Model concentration of reactant A (mol dm⁻³)",
+        "y_label": "Initial rate (arbitrary units)",
+        "x": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "y": [
+          0.5,
+          1.0,
+          1.5,
+          2.0
+        ],
+        "kind": "line"
+      },
+      "scenario": "A classroom model varies A while another reactant B, temperature and total conditions are fixed. The plotted initial rates are labelled in arbitrary units, so this exercise concerns proportionality and conditional reaction order.",
+      "tasks": [
+        "(a) State how the rate changes when A doubles from 0.10 to 0.20.",
+        "(b) Determine the order in A under the stated controlled conditions.",
+        "(c) State what cannot be inferred about B or the rate constant."
+      ],
+      "marks": [
+        "When A doubles, observed initial rate rises from 0.5 to 1.0 units.",
+        "Rate ratio = 1.0/0.5 = 2.",
+        "Under fixed B and temperature, doubling A doubles the rate, consistent with first order in A.",
+        "The plotted rate vs concentration is linear through the origin in this idealised dataset.",
+        "The order in reactant B cannot be determined because B was not varied.",
+        "An absolute rate constant with SI units cannot be calculated from an arbitrary rate scale without defining those units and the full rate law."
+      ],
+      "worked_explanation": "The model supports rate proportional to [A] when other conditions are fixed; no conclusion about [B] follows.",
+      "common_error": "Declaring an overall first-order reaction simply because one reactant has first-order dependence.",
+      "transfer_question": "If a controlled initial rate becomes four times larger when [A] doubles, estimate the order in A.",
+      "transfer_answer": "Second order in A, since 2² = 4.",
+      "model_assumption": "Initial-rate technique and ideal controlled data are assumed; no reaction operation is described.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Chemistry%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-C03",
+      "subject": "chemistry",
+      "activity_ids": [
+        "che-005"
+      ],
+      "title": "Boyle-model consistency with proper units",
+      "nie_number": "5",
+      "nie_print_page": 23,
+      "plot": {
+        "x_label": "Volume (dm³)",
+        "y_label": "Absolute pressure (kPa)",
+        "x": [
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "y": [
+          200.0,
+          150.0,
+          120.0,
+          100.0
+        ],
+        "kind": "line"
+      },
+      "scenario": "A fictional data table describes one fixed amount of approximately ideal gas at constant absolute temperature. Values are chosen for a Boyle-law analysis. This is theoretical modelling only.",
+      "tasks": [
+        "(a) Compute pV for two different plotted points.",
+        "(b) Predict pressure at 0.75 dm³ under the same model.",
+        "(c) Convert the common pV into joules and identify a limitation."
+      ],
+      "marks": [
+        "At V=0.30 dm³, pV=200×0.30=60 kPa dm³.",
+        "At V=0.60 dm³, pV=100×0.60=60 kPa dm³.",
+        "Constant pV supports p inversely proportional to V at constant T and n.",
+        "At V=0.75 dm³, p=60/0.75=80 kPa.",
+        "1 kPa dm³ = 1 J, so pV=60 J.",
+        "Real gases may deviate from ideal behaviour and changing temperature would invalidate this particular simple relation."
+      ],
+      "worked_explanation": "Pressure decreases along a curved inverse relation while pV stays 60 J in the supplied model.",
+      "common_error": "Using temperature in degrees Celsius inside an ideal-gas relation or calling p versus V a straight line.",
+      "transfer_question": "At constant T and n, p=150 kPa when V=0.40 dm³. Find p at V=0.80 dm³.",
+      "transfer_answer": "75 kPa.",
+      "model_assumption": "Absolute pressures; fixed n and T; ideal-gas approximation.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Chemistry%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-C04",
+      "subject": "chemistry",
+      "activity_ids": [
+        "che-007"
+      ],
+      "title": "Calorimetry curve: peak versus heat losses",
+      "nie_number": "7",
+      "nie_print_page": 31,
+      "plot": {
+        "x_label": "Model time (min)",
+        "y_label": "Mixture temperature (°C)",
+        "x": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "y": [
+          22.0,
+          25.0,
+          27.5,
+          27.0,
+          26.5
+        ],
+        "kind": "line"
+      },
+      "scenario": "A fictional teacher dataset for an already-completed neutralisation reports temperatures at five times. For a simplified model, solution mass=100.0 g, c=4.18 J g⁻¹ K⁻¹, and 0.0500 mol reacts. Ignore calorimeter heat capacity in the numerical calculation, but evaluate that assumption.",
+      "tasks": [
+        "(a) Identify the maximum temperature and model ΔT from the initial value.",
+        "(b) Estimate heat absorbed by the solution and enthalpy per mole reacted.",
+        "(c) Give two reasons the magnitude may be underestimated."
+      ],
+      "marks": [
+        "The recorded peak is 27.5 °C.",
+        "ΔT=27.5−22.0=5.5 K.",
+        "q_solution=mcΔT=100.0×4.18×5.5=2299 J.",
+        "Under the exothermic model, ΔH≈−2299/0.0500=−45.98 kJ mol⁻¹.",
+        "Heat may escape to the surrounding environment before or during the reported maximum.",
+        "Neglected calorimeter heat capacity also causes the inferred reaction heat magnitude to be too small."
+      ],
+      "worked_explanation": "q for the surroundings in this simplified example is +2.299 kJ; the reaction is assigned approximately −2.299 kJ for 0.0500 mol.",
+      "common_error": "Giving an exothermic reaction a positive ΔH or confusing a Celsius temperature difference with an absolute temperature.",
+      "transfer_question": "If m=80.0 g, c=4.18 J g⁻¹ K⁻¹ and ΔT=4.0 K, estimate q absorbed.",
+      "transfer_answer": "+1.34 kJ (to three significant figures).",
+      "model_assumption": "A pure illustrative energy balance; ignore calorimeter capacity only during arithmetic.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Chemistry%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-C05",
+      "subject": "chemistry",
+      "activity_ids": [
+        "che-038"
+      ],
+      "title": "Partition graph: slope is not automatic proof",
+      "nie_number": "38",
+      "nie_print_page": 117,
+      "plot": {
+        "x_label": "Aqueous model concentration (mol dm⁻³)",
+        "y_label": "Organic model concentration (mol dm⁻³)",
+        "x": [
+          0.08,
+          0.12,
+          0.16,
+          0.2
+        ],
+        "y": [
+          0.16,
+          0.24,
+          0.32,
+          0.4
+        ],
+        "kind": "line"
+      },
+      "scenario": "Fictional teacher-provided pairs show measured total concentrations in two phases at nominally similar conditions. This dataset has a straight line through the origin. Speciation, association and temperature consistency are not demonstrated.",
+      "tasks": [
+        "(a) Calculate two observed organic/aqueous concentration ratios.",
+        "(b) Determine the graph slope and units.",
+        "(c) Explain why the slope need not be a fundamental thermodynamic partition constant."
+      ],
+      "marks": [
+        "At the first pair, 0.16/0.08=2.0.",
+        "At the last pair, 0.40/0.20=2.0.",
+        "Slope Δc_org/Δc_aq = (0.40−0.16)/(0.20−0.08)=2.0.",
+        "The ratio is dimensionless because both axes use the same concentration units.",
+        "Total observed concentrations may include multiple chemical species, association or ionisation effects.",
+        "A thermodynamic partition constant requires suitable specified species, equilibrium and controlled conditions; the observed slope alone does not establish that."
+      ],
+      "worked_explanation": "The only safe conclusion here is that the measured total-concentration ratio equals 2 in this fictional range.",
+      "common_error": "Calling any observed concentration ratio a universal equilibrium constant regardless of speciation and conditions.",
+      "transfer_question": "If aqueous concentration=0.15 and organic=0.45 mol dm⁻³, find the observed organic/aqueous ratio.",
+      "transfer_answer": "3.0 (dimensionless).",
+      "model_assumption": "Pairs are supplied as finished model data; no solvent-handling procedure included.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://nie.lk/pdffiles/other/eALOM%20Chemistry%20Practical%20Handbook.pdf"
+    },
+    {
+      "id": "PM32-P01",
+      "subject": "physics",
+      "activity_ids": [
+        "phy-010"
+      ],
+      "title": "Pendulum T² versus length: slope to g",
+      "nie_number": "10",
+      "nie_print_page": 24,
+      "plot": {
+        "x_label": "Length L (m)",
+        "y_label": "Period squared T² (s²)",
+        "x": [
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "y": [
+          0.806,
+          1.612,
+          2.418,
+          3.224
+        ],
+        "kind": "line"
+      },
+      "scenario": "Fictional teacher-supplied points represent a small-angle ideal pendulum model. The graph is intentionally linear to focus on calculating slope and the theoretical connection T²=(4π²/g)L.",
+      "tasks": [
+        "(a) Calculate the graph slope with units.",
+        "(b) Infer the model value of g.",
+        "(c) Explain why the small-angle assumption matters."
+      ],
+      "marks": [
+        "Slope=(3.224−0.806)/(0.80−0.20)=4.03 s² m⁻¹.",
+        "For the small-angle model, T²=(4π²/g)L.",
+        "Hence g=4π²/slope≈9.796 m s⁻².",
+        "The near-zero model intercept is consistent with the idealised relation.",
+        "At larger amplitudes, the small-angle approximation becomes less accurate.",
+        "Measurement bias in length or timing could affect slope and hence calculated g."
+      ],
+      "worked_explanation": "g=4π²/4.03≈9.80 m s⁻² (three significant figures) in this ideal dataset.",
+      "common_error": "Using the slope directly as g, or omitting the s² m⁻¹ slope units.",
+      "transfer_question": "If the measured T²–L slope is 4.10 s² m⁻¹, calculate g.",
+      "transfer_answer": "4π²/4.10≈9.63 m s⁻².",
+      "model_assumption": "Only theoretical interpretation; no pendulum setup directions.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://www.nie.lk/pdffiles/other/eALOM%20PysicsPracBook.pdf"
+    },
+    {
+      "id": "PM32-P02",
+      "subject": "physics",
+      "activity_ids": [
+        "phy-011"
+      ],
+      "title": "Spring period graph: handle a nonzero intercept",
+      "nie_number": "11",
+      "nie_print_page": 26,
+      "plot": {
+        "x_label": "Attached model mass m (kg)",
+        "y_label": "Period squared T² (s²)",
+        "x": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "y": [
+          0.49,
+          0.88,
+          1.27,
+          1.66
+        ],
+        "kind": "line"
+      },
+      "scenario": "A fictitious model gives nearly linear T² values with nonzero intercept. It is consistent with a simple elastic-oscillation approximation including unmodelled effective mass or systematic effects.",
+      "tasks": [
+        "(a) Find slope and intercept.",
+        "(b) Infer k from gradient 4π²/k.",
+        "(c) Explain why forcing the fitted line through the origin may bias k."
+      ],
+      "marks": [
+        "Slope=(1.66−0.49)/(0.40−0.10)=3.90 s² kg⁻¹.",
+        "Intercept=0.49−3.90×0.10=0.10 s².",
+        "For an ideal effective-mass model, slope=4π²/k.",
+        "Thus k=4π²/3.90≈10.12 N m⁻¹.",
+        "Nonzero intercept can arise from effective spring mass or systematic timing/mass-model effects.",
+        "Artificially forcing the intercept to zero changes the fitted slope and may bias inferred k."
+      ],
+      "worked_explanation": "The best-fit model is T²=3.90m+0.10 with units used consistently.",
+      "common_error": "Dividing T² directly by m for one point and ignoring the intercept.",
+      "transfer_question": "If the T²–m slope is 5.00 s² kg⁻¹, find k.",
+      "transfer_answer": "4π²/5.00≈7.90 N m⁻¹.",
+      "model_assumption": "Small oscillations, linear spring and simple effective-mass approximation only.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://www.nie.lk/pdffiles/other/eALOM%20PysicsPracBook.pdf"
+    },
+    {
+      "id": "PM32-P03",
+      "subject": "physics",
+      "activity_ids": [
+        "phy-031"
+      ],
+      "title": "Terminal voltage graph: emf and internal resistance",
+      "nie_number": "31",
+      "nie_print_page": 73,
+      "plot": {
+        "x_label": "Model current I (A)",
+        "y_label": "Terminal voltage V (V)",
+        "x": [
+          0.1,
+          0.2,
+          0.3,
+          0.4
+        ],
+        "y": [
+          1.46,
+          1.42,
+          1.38,
+          1.34
+        ],
+        "kind": "line"
+      },
+      "scenario": "An already-collected ideal teaching dataset reports terminal voltage V across a cell at four model currents I. Interpret V=E−Ir on the graph; no physical circuit assembly is required.",
+      "tasks": [
+        "(a) Find the graph gradient and explain its sign.",
+        "(b) Estimate open-circuit emf E and internal resistance r.",
+        "(c) State a limitation of extrapolation or the simple model."
+      ],
+      "marks": [
+        "Gradient=(1.34−1.46)/(0.40−0.10)=−0.40 V A⁻¹.",
+        "From V=E−Ir the gradient is −r.",
+        "Thus r=0.40 Ω because V/A = Ω.",
+        "Intercept E=1.46+(0.40×0.10)=1.50 V.",
+        "Voltage falls with increased current in this simple fixed-resistance model.",
+        "Real r and E can vary with cell temperature and state; an extrapolated intercept inherits measurement uncertainty."
+      ],
+      "worked_explanation": "Model fitted equation is V=1.50−0.40I, with V in volts and I in amperes.",
+      "common_error": "Reporting a negative physical internal resistance from the negative graph slope.",
+      "transfer_question": "If the voltage falls by 0.15 V when current increases by 0.30 A, estimate r.",
+      "transfer_answer": "0.50 Ω.",
+      "model_assumption": "Simple steady model; no electrical construction or high-current operation.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://www.nie.lk/pdffiles/other/eALOM%20PysicsPracBook.pdf"
+    },
+    {
+      "id": "PM32-P04",
+      "subject": "physics",
+      "activity_ids": [
+        "phy-032"
+      ],
+      "title": "Resistance–temperature gradient and reference alpha",
+      "nie_number": "32",
+      "nie_print_page": 75,
+      "plot": {
+        "x_label": "Temperature (°C)",
+        "y_label": "Model resistance R (Ω)",
+        "x": [
+          20.0,
+          40.0,
+          60.0,
+          80.0
+        ],
+        "y": [
+          2.0,
+          2.16,
+          2.32,
+          2.48
+        ],
+        "kind": "line"
+      },
+      "scenario": "Fictional data follow a near-linear resistance increase for a metallic conductor across a limited temperature interval. The reference temperature is 20 °C with R20=2.00 Ω.",
+      "tasks": [
+        "(a) Calculate the slope in Ω per °C.",
+        "(b) Estimate temperature coefficient α at 20 °C from slope/R20.",
+        "(c) Explain why the same α is not automatically valid at every temperature."
+      ],
+      "marks": [
+        "Slope=(2.48−2.00)/(80−20)=0.00800 Ω °C⁻¹.",
+        "R20=2.00 Ω.",
+        "For a local linear model, dR/dT≈α20 R20.",
+        "Hence α20≈0.00800/2.00=0.00400 °C⁻¹.",
+        "The value applies to the selected reference temperature and model region.",
+        "The approximation may vary outside the selected interval; measurement and heating effects also matter."
+      ],
+      "worked_explanation": "The illustrated R(T) increases from 2.00 Ω at 20 °C to 2.48 Ω at 80 °C.",
+      "common_error": "Omitting the reference resistance when inferring the temperature coefficient from slope.",
+      "transfer_question": "If R20=5.00 Ω and slope=0.0150 Ω °C⁻¹, find α20.",
+      "transfer_answer": "0.00300 °C⁻¹.",
+      "model_assumption": "This is a simple data model, not a procedure involving powered circuits.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://www.nie.lk/pdffiles/other/eALOM%20PysicsPracBook.pdf"
+    },
+    {
+      "id": "PM32-P05",
+      "subject": "physics",
+      "activity_ids": [
+        "phy-015"
+      ],
+      "title": "Resonance plot: milliseconds versus seconds",
+      "nie_number": "15",
+      "nie_print_page": 34,
+      "plot": {
+        "x_label": "Inverse frequency 1/f (ms)",
+        "y_label": "First-resonance length L (m)",
+        "x": [
+          1.8,
+          2.0,
+          2.2,
+          2.4
+        ],
+        "y": [
+          0.146,
+          0.163,
+          0.18,
+          0.197
+        ],
+        "kind": "line"
+      },
+      "scenario": "A fictional closed-tube resonance exercise uses an ideal model L=v/(4f)−e with a frequency-independent end correction e. The x-axis shows inverse frequency in milliseconds: read the units before using the slope.",
+      "tasks": [
+        "(a) Find the slope from the plotted endpoints in m per millisecond.",
+        "(b) Convert it to m s⁻¹ and infer v.",
+        "(c) Determine e from the intercept and describe one assumption."
+      ],
+      "marks": [
+        "Slope=(0.197−0.146)/(2.4−1.8)=0.0850 m ms⁻¹.",
+        "Because 1 ms=0.001 s, this is 85.0 m s⁻¹ on a seconds-based 1/f axis.",
+        "Under L=(v/4)(1/f)−e, gradient in SI units is v/4.",
+        "Hence v=4×85.0=340 m s⁻¹.",
+        "Intercept: L=0.146−0.0850×1.8=−0.0070 m, so e≈0.0070 m.",
+        "The model assumes uniform conditions and effectively constant end correction across the selected frequencies."
+      ],
+      "worked_explanation": "Speed of sound=340 m s⁻¹ and end correction=0.0070 m for this hypothetical teaching graph.",
+      "common_error": "Multiplying the numerical m/ms gradient directly by 4 without converting ms to s.",
+      "transfer_question": "If the slope is 0.0825 m ms⁻¹, what speed does the same resonance model give?",
+      "transfer_answer": "4×82.5=330 m s⁻¹.",
+      "model_assumption": "Ideal quarter-wave first resonance; no equipment setup instruction.",
+      "data_status": "fictional_teacher_supplied_model",
+      "review_status": "independently_prepared_not_teacher_reviewed",
+      "laboratory_procedure_included": false,
+      "official_exam_question": false,
+      "handbook_url": "https://www.nie.lk/pdffiles/other/eALOM%20PysicsPracBook.pdf"
+    }
+  ]
+}

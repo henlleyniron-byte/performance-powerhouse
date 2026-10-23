@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V3.2 optional graph clinic question bank",
+  "type": "object",
+  "required": [
+    "release",
+    "extends_catalog_release",
+    "questions",
+    "total_questions"
+  ],
+  "properties": {
+    "release": {
+      "const": "2026-10-16-v3.2-additive"
+    },
+    "extends_catalog_release": {
+      "const": "2026-10-15-v3"
+    },
+    "total_questions": {
+      "const": 15
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "subject",
+          "activity_ids",
+          "plot",
+          "marks",
+          "data_status",
+          "review_status",
+          "transfer_question",
+          "transfer_answer"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^PM32-[BCP][0-9]{2}$"
+          },
+          "subject": {
+            "enum": [
+              "biology",
+              "chemistry",
+              "physics"
+            ]
+          },
+          "activity_ids": {
+            "type": "array",
+            "minItems": 1
+          },
+          "plot": {
+            "type": "object",
+            "required": [
+              "x",
+              "y",
+              "x_label",
+              "y_label"
+            ]
+          },
+          "marks": {
+            "type": "array",
+            "minItems": 6,
+            "maxItems": 6
+          },
+          "data_status": {
+            "const": "fictional_teacher_supplied_model"
+          },
+          "laboratory_procedure_included": {
+            "const": false
+          }
+        }
+      }
+    }
+  }
+}

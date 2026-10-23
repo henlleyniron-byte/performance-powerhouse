@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "site_version": 5,
+  "source_commit": "7cd57bba6739ec47419de1d769e09790c6779faf",
+  "source_tree": "78e2f86a3fa4f9f7df7747756c9e26464acff70f",
+  "original_archive_sha256": "sha256:b7a843be47dbbcddf26284d062abb1a207d7435602960debc09f8c2e7b650130",
+  "scope": "Sanitized public source snapshot; not an exact release archive or production deployment. Imported on 21 October 2026. Original historical timestamps are not recreated.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "source_blob": "c413892c95e069c0862e351d890b69b192bddf49",
+      "public_sha256": "35d940f5e608b2a4ef2a41ecf7263d2d4e3e18aa8aab9a98a57fa57e5607dfa5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".npmrc",
+      "mode": "100644",
+      "source_blob": "0edab15acd641cb940bbc25a32a6a60eae98ced7",
+      "public_sha256": "494e64a8818b6158e89321250500ad5ad018e33ad5cfea06a1cacd2cf4da75fa",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".openai/hosting.json",
+      "mode": "100644",
+      "source_blob": "901ba9f42a83b0a4eee7d2a28ea8909eaa95465a",
+      "public_sha256": "4e5e7853d862be46069e017c0c7e5cf2956e3234f111a5b4170db4390e8a6597",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "source_blob": "a14b0e6e3789b9d46d491f636cf17f583f5be073",
+      "public_sha256": "70ef40d45f8c381c87651db8828a2b085bfe3522eebccef2e074fc93a68716d9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "mode": "100644",
+      "source_blob": "8d1fb3534463fb53fc0ff10ce6d5eccebf5964fa",
+      "public_sha256": "17a965f8948b21510cdf8ecbd70c5fdf58100e10970463f6a8fd2cc4795f8044",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/globals.css",
+      "mode": "100644",
+      "source_blob": "61de8879eb5f321dc171ccf6e7da726debfc69ce",
+      "public_sha256": "79563274315ecfccf2041c27e050bc7afab1960091b58bf2a18d7949d27fb123",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/layout.tsx",
+      "mode": "100644",
+      "source_blob": "d3b22a2739480f05ea84ddc4f100590841ee0793",
+      "public_sha256": "ebddee2114562f8a65fc835e380d0ac95645ba07ddc61346c994c8bb088ca5c0",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/page.tsx",
+      "mode": "100644",
+      "source_blob": "9fe66177a0ed08057067f8570569fbc26105c00c",
+      "public_sha256": "8ffa57d744ce7f96215cb4055b0dd9e76418abfe732d2f244e1a780d0c1a3312",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "build/sites-vite-plugin.ts",
+      "mode": "100644",
+      "source_blob": "26563fdd77ff1027eeb08917d15d733da79a560a",
+      "public_sha256": "81b7cbfaeb970611572256aba0e313425beb3809f6426f63750696c15d9c756b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "db/index.ts",
+      "mode": "100644",
+      "source_blob": "19b379900d94124b674f07ffe2dbba8f70bd8d6d",
+      "public_sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "db/schema.ts",
+      "mode": "100644",
+      "source_blob": "d2dd83cd250ecaa6ac022559fc9640271f2b2dd5",
+      "public_sha256": "13ddacbf0be50e054d450a6c642b7fdc1aa943fd6b99084711e07e58b600390d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle.config.ts",
+      "mode": "100644",
+      "source_blob": "c2b2f34376984744343453838ce66658ad9d9b6a",
+      "public_sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "mode": "100644",
+      "source_blob": "4377507400414768c5915808bf080a1403cf6cb3",
+      "public_sha256": "90cb374e093894d0efce6f1830d873a42aadd8ba49d2f024495e5cb2e1c8c303",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "eslint.config.mjs",
+      "mode": "100644",
+      "source_blob": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+      "public_sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "examples/d1/app/api/notes/route.ts",
+      "mode": "100644",
+      "source_blob": "07f8318c3c290d68163e95aa3e170ad92a235f27",
+      "public_sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "examples/d1/db/schema.ts",
+      "mode": "100644",
+      "source_blob": "7bb0c157110799b9b53c767517e0d192b7201f2e",
+      "public_sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "next.config.ts",
+      "mode": "100644",
+      "source_blob": "e9ffa3083ad279ecf95fd8eae59cb253e9a539c4",
+      "public_sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "source_blob": "7ce7ea0f219bc1ed90f1ed1c91bdb0adbe201b5c",
+      "public_sha256": "283dbdf55081ff6e460baff80764f39f722f13a0720e1a5fa13153ea877051a5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "source_blob": "6677a95d93415a585a8b54c1116837d741f11074",
+      "public_sha256": "518ff68dd9bce4c09899fbbe41022a1bd7721e3be21c2af3d9e2b77410e9aa24",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "postcss.config.mjs",
+      "mode": "100644",
+      "source_blob": "61e36849cf7cfa9f1f71b4a3964a4953e3e243d3",
+      "public_sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/al-performance-command-centre.html",
+      "mode": "100644",
+      "source_blob": "b3e3f300363d4cf5ac95fd082f4dba62e883e1cd",
+      "public_sha256": "93b4371c3e1d96fb3afd8fc63e4d0fede15e213036b5abbd2e8bab5394d6a2e5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/favicon.svg",
+      "mode": "100644",
+      "source_blob": "ca747cb66b233fedec5ff0c84f97bb4631c05dbf",
+      "public_sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/file.svg",
+      "mode": "100644",
+      "source_blob": "004145cddf3f9db91b57b9cb596683c8eb420862",
+      "public_sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/globe.svg",
+      "mode": "100644",
+      "source_blob": "567f17b0d7c7fb662c16d4357dd74830caf2dccb",
+      "public_sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/window.svg",
+      "mode": "100644",
+      "source_blob": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651",
+      "public_sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/build-verified.sh",
+      "mode": "100755",
+      "source_blob": "2368b5a94d96bea8274f83136993008aafa84a2e",
+      "public_sha256": "41714b636524ed4aa1eb5a77a4c95a6471fd53d2957e852ccf187f9335eee17f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/install-ci.sh",
+      "mode": "100755",
+      "source_blob": "7a22fd4631338ffc59f5fd83dcd5a910411e988a",
+      "public_sha256": "c86541a04dec39f982eb6b103b60e3b376c518e84816b7876635877fb4c8569f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/sites-env.sh",
+      "mode": "100755",
+      "source_blob": "728416424d5d2f4c9a746d53621668225645356c",
+      "public_sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/validate-artifact.sh",
+      "mode": "100755",
+      "source_blob": "4eb9041c488eba3a3ba8994c18c66ae78e7b0971",
+      "public_sha256": "826354a781d909a664342b6a6f1a3155529e21f757dc163befa937420c713c2b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/rendered-html.test.mjs",
+      "mode": "100644",
+      "source_blob": "5392f9f23264cf69fc55b087532d8ea3d1bc219e",
+      "public_sha256": "eae1d187870ad9a4b3f0c37b40589b25c1a2090dcbee19964555cf70c136b118",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "source_blob": "3a13f90a773b0facb675bf5b1a8239c8f33d36f5",
+      "public_sha256": "be18523b23b78b6e1a876ddd107d330f0168bddf09d751b57e0b5edce69c66f3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "vite.config.ts",
+      "mode": "100644",
+      "source_blob": "d8c8054909af78d5d882f49271e1e322c2bfc4dd",
+      "public_sha256": "43e5f02f727ca043f08ebf34789f330580a7a0cb90f426c92f4a454d066988fc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "worker/index.ts",
+      "mode": "100644",
+      "source_blob": "b3cd137862c517c1053481cf6efdf6dd4d423cdc",
+      "public_sha256": "2ed36d7fa996e946d9d7695c5925e7760246f6bf8fa35c06f1bc515c087dc450",
+      "redacted_link_count": 0
+    }
+  ],
+  "omitted": [],
+  "redacted_links": []
+}

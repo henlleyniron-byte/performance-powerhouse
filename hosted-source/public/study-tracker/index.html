@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head><script src="/data-safety/compatible-read.js"></script><script src="/data-safety/safe-store.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Performance Powerhouse Study Tracker — execution measured against exam evidence.">
+  <title>Study Tracker | Performance Powerhouse</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script><link rel="stylesheet" href="/workspace-shell/shell.css"></head>
+<body>
+  <p class="storage-warning" id="storageWarning" role="status" hidden></p>
+  <header class="topbar">
+    <a class="brand" href="../index.html" aria-label="Back to Performance Powerhouse">
+      <span class="brand-mark" aria-hidden="true">A+</span>
+      <span><strong>Performance Powerhouse</strong><small>Study Tracker · execution, not achievement</small></span>
+    </a>
+    <div class="top-actions">
+      <span class="sync-chip" id="syncStatus" role="status">Local first</span>
+      <a class="button quiet" id="authButton" target="_top" href="/signin-with-chatgpt?return_to=%2Fstudy-tracker%2F">Sign in to sync</a>
+      <button class="button quiet" id="shareToggle" type="button" aria-pressed="false">Share-safe</button>
+    </div>
+  </header>
+
+  <nav class="subject-nav" aria-label="Powerhouse sections">
+    <a href="../index.html">Command</a>
+    <a href="../index.html#physics">Physics</a>
+    <span class="active">Study Tracker</span>
+    <a href="../index.html#repairs">Repairs</a>
+    <a href="../physics-intelligence/">Physics Intelligence</a><a href="../chemistry-intelligence/">Chemistry Intelligence</a><a href="../biology-intelligence/">Biology Intelligence</a>
+  <a href="../subscription-playbook/">AI Subscription Playbook</a></nav>
+
+  <main>
+    <section class="command-bridge" id="commandBridge" hidden>
+      <div><p class="eyebrow">COMMAND → EXECUTION</p><h2 id="bridgeTitle">Recommended block ready</h2><p id="bridgeCopy">The subject, activity and intended duration came from your Powerhouse command.</p></div>
+      <span class="bridge-badge">Prefilled</span>
+    </section>
+
+    <section class="working-grid" aria-label="Study timer and completion plan">
+      <article class="panel timer-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow physics">FOCUSED EXECUTION</p><h1>Run the block. Then prove what it produced.</h1></div>
+          <span class="timer-state" id="timerState">Ready</span>
+        </div>
+
+        <div class="timer-display" id="timerDisplay" aria-live="polite">00:00:00</div>
+        <div class="timer-progress"><span id="timerProgress"></span></div>
+
+        <form class="session-setup" id="sessionSetup">
+          <label>Subject
+            <select id="subject" required>
+              <option value="physics">Physics</option>
+              <option value="chemistry">Chemistry</option>
+              <option value="biology">Biology</option>
+              <option value="other">Other / Combined activity</option>
+            </select>
+          </label>
+          <label>Session type
+            <select id="sessionType" required></select>
+          </label>
+          <label class="wide">Task / topic
+            <input id="topic" maxlength="240" placeholder="e.g. 2023 Paper II · electrostatics repair">
+          </label>
+          <label>Planned minutes
+            <input id="plannedMinutes" type="number" min="1" max="720" value="90" required>
+          </label>
+          <label>Output intention
+            <select id="outputIntent">
+              <option value="marked-attempt">Produce marked evidence</option>
+              <option value="repair">Close a repair</option>
+              <option value="retest">Complete a retest</option>
+              <option value="closed-book-recall">Closed-book recall</option>
+              <option value="theory-repair">Targeted theory repair</option>
+              <option value="none">No measurable evidence expected</option>
+            </select>
+          </label>
+        </form>
+
+        <div class="timer-actions">
+          <button class="button primary" id="startButton" type="button">Start block</button>
+          <button class="button" id="pauseButton" type="button" disabled>Pause</button>
+          <button class="button" id="stopButton" type="button" disabled>Finish</button>
+          <button class="button danger quiet" id="cancelButton" type="button" disabled>Discard active block</button>
+        </div>
+        <p class="timer-note">The clock uses real timestamps, so background tabs and screen sleep do not inflate or erase elapsed time. One shared active block is enforced across tabs.</p>
+      </article>
+
+      <aside class="panel conversion-panel">
+        <p class="eyebrow gold">MARKS FIRST · HOURS SECOND</p>
+        <h2>What will make this block valuable?</h2>
+        <p>Time describes behaviour. It does not prove mastery. A strong session ends with marked work, a closed repair, a fresh transfer or a delayed retest.</p>
+        <ol class="flow-list">
+          <li><b>01</b><span><strong>Powerhouse chooses</strong><small>Use evidence to select the next task.</small></span></li>
+          <li><b>02</b><span><strong>Tracker measures</strong><small>Protect focused execution without rewarding extreme hours.</small></span></li>
+          <li><b>03</b><span><strong>Evidence closes</strong><small>Record the output and let Repairs decide what remains.</small></span></li>
+        </ol>
+        <div class="passive-warning" id="passiveWarning" hidden><b>Low-evidence activity</b><span>Lecture and resource/admin sessions are tracked separately. They do not count as marked-output conversion.</span></div>
+      </aside>
+    </section>
+
+    <section class="metric-grid" aria-label="Recent tracker indicators">
+      <article class="metric"><span>EVIDENCE SESSIONS · 7D</span><strong id="metricEvidence">0</strong><small>marked attempts, repairs and retests</small></article>
+      <article class="metric"><span>STUDY → EVIDENCE</span><strong id="metricConversion">—</strong><small>share of completed blocks with useful output</small></article>
+      <article class="metric"><span>FOCUSED TIME · 7D</span><strong id="metricTime">0h</strong><small>behavioural evidence, not a mastery score</small></article>
+      <article class="metric"><span>EVIDENCE STREAK</span><strong id="metricStreak">0d</strong><small>derived from output-producing days</small></article>
+      <article class="metric passive"><span>PASSIVE / ADMIN · 7D</span><strong id="metricPassive">0m</strong><small>kept visible to catch productive procrastination</small></article>
+    </section>
+
+    <section class="analytics-grid">
+      <article class="panel">
+        <div class="section-heading"><div><p class="eyebrow">CALENDAR SIGNAL</p><h2>Activity heatmap</h2></div><label>Mode<select id="heatmapMode"><option value="evidence">Evidence outputs</option><option value="minutes">Focused minutes</option><option value="repairs">Repairs closed</option><option value="retests">Retests completed</option></select></label></div>
+        <div class="heatmap" id="heatmap" role="img" aria-label="Eight-week study activity heatmap"></div>
+        <p class="method-note" id="heatmapSummary">Squares describe recent output. Darker does not automatically mean better learning.</p>
+      </article>
+      <article class="panel">
+        <div class="section-heading"><div><p class="eyebrow">SUBJECT BALANCE</p><h2>Time and evidence</h2></div></div>
+        <div class="subject-bars" id="subjectBars"></div>
+        <p class="method-note">Any score/time relationship is descriptive only. It does not establish that more time caused a higher mark.</p>
+      </article>
+    </section>
+
+    <section class="panel history-panel">
+      <div class="section-heading"><div><p class="eyebrow">SESSION LEDGER</p><h2>Searchable execution history</h2></div><div class="history-actions"><button class="button quiet" id="exportJson" type="button">Export JSON</button><button class="button quiet" id="exportCsv" type="button">Export CSV</button><button class="button quiet" id="importButton" type="button">Import / migrate</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></div>
+      <div class="filters">
+        <label>Search<input id="historySearch" type="search" placeholder="topic, note or output"></label>
+        <label>Subject<select id="historySubject"><option value="all">All subjects</option><option value="physics">Physics</option><option value="chemistry">Chemistry</option><option value="biology">Biology</option><option value="other">Other</option></select></label>
+        <label>Type<select id="historyType"><option value="all">All session types</option></select></label>
+        <label>Link<select id="historyEvidence"><option value="all">All sessions</option><option value="linked">Evidence-producing</option><option value="unlinked">No evidence</option></select></label>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Date</th><th>Subject</th><th>Type / task</th><th>Duration</th><th>Output</th><th>Sync</th><th>Actions</th></tr></thead><tbody id="historyBody"></tbody></table></div>
+    </section>
+
+    <section class="lower-grid">
+      <article class="panel">
+        <div class="section-heading"><div><p class="eyebrow">REALISTIC TARGET</p><h2>Weekly evidence goal</h2></div></div>
+        <form class="goal-form" id="goalForm"><label>Evidence-producing sessions<input id="goalTarget" type="number" min="1" max="50" value="5"></label><button class="button" type="submit">Save goal</button></form>
+        <div class="goal-progress"><span id="goalBar"></span></div><p class="method-note" id="goalSummary">Set a small output goal—not an extreme hour target.</p>
+      </article>
+      <article class="panel data-panel">
+        <div class="section-heading"><div><p class="eyebrow">OWNERSHIP & PORTABILITY</p><h2>Your data remains exportable</h2></div></div>
+        <p>Sessions save locally first. Signed-in users can sync to the Powerhouse database; every cloud request is scoped server-side to the authenticated user.</p>
+        <div class="data-actions"><button class="button" id="syncButton" type="button">Sync now</button><button class="button quiet" id="completeBackup" type="button">Complete backup</button><button class="button danger quiet" id="deleteAllData" type="button">Delete tracker data</button></div>
+        <div class="migration-status" id="migrationStatus">Original tracker migration awaits an authorized Supabase export. Nothing will be silently discarded.</div>
+      </article>
+    </section>
+  </main>
+
+  <dialog id="completionDialog">
+    <form method="dialog" class="dialog-card" id="completionForm">
+      <div class="dialog-heading"><div><p class="eyebrow">SESSION COMPLETE</p><h2>What did this block produce?</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+      <p class="dialog-summary" id="completionSummary"></p>
+      <label>Evidence produced<select id="evidenceKind" required><option value="marked-attempt">Marked attempt</option><option value="repair">Repair completed</option><option value="retest">Delayed retest completed</option><option value="fresh-transfer">Fresh transfer completed</option><option value="closed-book-recall">Closed-book recall</option><option value="theory-repair">Targeted theory repair</option><option value="none">No measurable evidence</option></select></label>
+      <div class="two-col"><label>Output count<input id="outputCount" type="number" min="0" max="100000" value="0"></label><label>Output unit<input id="outputUnit" maxlength="40" placeholder="questions / marks / essay"></label></div>
+      <label>Linked Powerhouse attempt ID (optional)<input id="linkedAttemptId" maxlength="100" placeholder="Paste an attempt ID only when known"></label>
+      <label>Session note<textarea id="sessionNotes" maxlength="4000" rows="3" placeholder="One concise outcome or next action"></textarea></label>
+      <div class="dialog-actions"><button class="button quiet" id="saveWithoutEvidence" type="button">Save as no evidence</button><button class="button primary" id="saveCompletion" type="submit">Save session</button></div>
+      <a class="evidence-link" id="openEvidenceLogger" href="../index.html#attempts">Save, then log marked evidence in Powerhouse →</a>
+    </form>
+  </dialog>
+
+  <dialog id="editDialog">
+    <form method="dialog" class="dialog-card" id="editForm">
+      <div class="dialog-heading"><div><p class="eyebrow">CORRECT RECORD</p><h2>Edit session</h2></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
+      <input id="editId" type="hidden">
+      <div class="two-col"><label>Subject<select id="editSubject"><option value="physics">Physics</option><option value="chemistry">Chemistry</option><option value="biology">Biology</option><option value="other">Other</option></select></label><label>Type<select id="editType"></select></label></div>
+      <label>Task / topic<input id="editTopic" maxlength="240"></label>
+      <div class="two-col"><label>Duration minutes<input id="editDuration" type="number" min="0" max="1440"></label><label>Evidence<select id="editEvidence"><option value="marked-attempt">Marked attempt</option><option value="repair">Repair completed</option><option value="retest">Delayed retest</option><option value="fresh-transfer">Fresh transfer</option><option value="closed-book-recall">Closed-book recall</option><option value="theory-repair">Theory repair</option><option value="none">No evidence</option></select></label></div>
+      <label>Notes<textarea id="editNotes" maxlength="4000" rows="3"></textarea></label>
+      <div class="dialog-actions"><button class="button primary" type="submit">Save correction</button></div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+<script src="/workspace-shell/shell.js"></script></body>
+</html>

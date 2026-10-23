@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "site_version": 12,
+  "source_commit": "5501c0760360c4a02e01a71336564973e72f54d9",
+  "source_tree": "5a2f29720cd404a66f63be4d0d5f47cd3a9ecaa0",
+  "original_archive_sha256": "sha256:61d94bafd61456f0ddeae51645d018adc7920ce698d896ecc2339f7facb93cf5",
+  "scope": "Sanitized public source snapshot; not an exact release archive or production deployment. Imported on 21 October 2026. Original historical timestamps are not recreated.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "source_blob": "c413892c95e069c0862e351d890b69b192bddf49",
+      "public_sha256": "35d940f5e608b2a4ef2a41ecf7263d2d4e3e18aa8aab9a98a57fa57e5607dfa5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".npmrc",
+      "mode": "100644",
+      "source_blob": "0edab15acd641cb940bbc25a32a6a60eae98ced7",
+      "public_sha256": "494e64a8818b6158e89321250500ad5ad018e33ad5cfea06a1cacd2cf4da75fa",
+      "redacted_link_count": 0
+    },
+    {
+      "path": ".openai/hosting.json",
+      "mode": "100644",
+      "source_blob": "d45411cf6a32474dd15b768506a44eedd4ffbd8c",
+      "public_sha256": "f9dfdafaa30da7687c0ed33af4f4aa81da01442fe3a20bc21141c63d07bd8dbb",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "source_blob": "a14b0e6e3789b9d46d491f636cf17f583f5be073",
+      "public_sha256": "70ef40d45f8c381c87651db8828a2b085bfe3522eebccef2e074fc93a68716d9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/api/study-tracker/route.ts",
+      "mode": "100644",
+      "source_blob": "209a086580d0af9a68c10b5f4bb85b7658b72f07",
+      "public_sha256": "dddaac29cbe0abb66f7d6832953791db9beabe7018db3a20b3137e286b7f9a94",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "mode": "100644",
+      "source_blob": "8d1fb3534463fb53fc0ff10ce6d5eccebf5964fa",
+      "public_sha256": "17a965f8948b21510cdf8ecbd70c5fdf58100e10970463f6a8fd2cc4795f8044",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/globals.css",
+      "mode": "100644",
+      "source_blob": "61de8879eb5f321dc171ccf6e7da726debfc69ce",
+      "public_sha256": "79563274315ecfccf2041c27e050bc7afab1960091b58bf2a18d7949d27fb123",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/layout.tsx",
+      "mode": "100644",
+      "source_blob": "2a1b890ac906d12de9cb6bcc77f927121a75e8c9",
+      "public_sha256": "ff467b289afe8e434498bf6ee570f307800cc6213ea1aca7316355a8b90ed406",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "app/page.tsx",
+      "mode": "100644",
+      "source_blob": "53c009b51d3843d32d447c185dc0231cf665d28b",
+      "public_sha256": "2ce87211d2b975b647bfbb72b04e1c63277b437b80791a693fa8407686a3b948",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "build/sites-vite-plugin.ts",
+      "mode": "100644",
+      "source_blob": "26563fdd77ff1027eeb08917d15d733da79a560a",
+      "public_sha256": "81b7cbfaeb970611572256aba0e313425beb3809f6426f63750696c15d9c756b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "db/index.ts",
+      "mode": "100644",
+      "source_blob": "19b379900d94124b674f07ffe2dbba8f70bd8d6d",
+      "public_sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "db/schema.ts",
+      "mode": "100644",
+      "source_blob": "d221362e5b256aa43ed8f4170d58b351a539dbaa",
+      "public_sha256": "a7a125a52045d33be8a81583446dd64522cca4840e134fb25fe6cbe19051f900",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/CHANGELOG_STUDY_TRACKER.md",
+      "mode": "100644",
+      "source_blob": "160cf3170aaa04901aeff3f9adfedbaa746e5ee5",
+      "public_sha256": "c253a1a35b25f1b52adb2f7d12a3bbd7ec1cc11a50894de343d053d590073a4a",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/DATABASE_SCHEMA.md",
+      "mode": "100644",
+      "source_blob": "5b4aa0fbef77dbfef221571e41acf93e35d2800b",
+      "public_sha256": "5809bb339cd7df66c2a82dba71c4e42d592e4248eaa523f2b0d0af8e985a2e24",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/DATA_PORTABILITY.md",
+      "mode": "100644",
+      "source_blob": "0d7da4d2c3ea90c355bf086d472cf6eda3166e50",
+      "public_sha256": "ff04ddccec836e4be859d3c0c097564f7811c47417fce9d3e88ba58eb908dc57",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/DEPLOYMENT_INSTRUCTIONS.md",
+      "mode": "100644",
+      "source_blob": "43e1fa2c16ccea0ddfb1fd960ca915b0209c8e08",
+      "public_sha256": "5efb0ce61260b627ba82c53fc432462bb148c194c3460e73c6f8811fc9fcfbfc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/POST_INTEGRATION_QA_REPORT.md",
+      "mode": "100644",
+      "source_blob": "536a990a18ada5c50a2a087616e25d892bd149ea",
+      "public_sha256": "218ea5caaba61213ad8ca17d5423e4b1c57742753646ea65557a4b97df78a4ea",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/ROLLBACK_README.md",
+      "mode": "100644",
+      "source_blob": "309cfaa15adf5b33d9b8d0bae1f94749dc376606",
+      "public_sha256": "de1a2c322871a0e88ec37cbba363c7c92a2dc3d510fe35596d1b6b44f08292c2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "docs/study-tracker/STUDY_TRACKER_MIGRATION_REPORT.md",
+      "mode": "100644",
+      "source_blob": "4c15c112bf9af38361fcd6b23450acd1a2170861",
+      "public_sha256": "20f22d306a76909a5ce9abc86f2d5ebcf2a033034e7ee62e7de4dd5d54e2a573",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle.config.ts",
+      "mode": "100644",
+      "source_blob": "c2b2f34376984744343453838ce66658ad9d9b6a",
+      "public_sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/0000_wet_moon_knight.sql",
+      "mode": "100644",
+      "source_blob": "643d455b854dd4d01119e8e2016ebeb61fca0443",
+      "public_sha256": "dc9f0199e9393febd172d0ba4a44e19d46f1239c6106f36ef3c58a828f8821fa",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "mode": "100644",
+      "source_blob": "ec2d89e5b976d406daee9a5c163dea81f8abc8dd",
+      "public_sha256": "0a6ddf72a529da1f220b12ed319064851fbf178b9ac1e29162064a84bc272f20",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "mode": "100644",
+      "source_blob": "7fa52bdb7f497c4cb4544adce416345ccac45823",
+      "public_sha256": "6a3943e055b923c8630072e8326bed1c2166a41990c65afe22e9da57328cb659",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "eslint.config.mjs",
+      "mode": "100644",
+      "source_blob": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+      "public_sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "examples/d1/app/api/notes/route.ts",
+      "mode": "100644",
+      "source_blob": "07f8318c3c290d68163e95aa3e170ad92a235f27",
+      "public_sha256": "a3d4a74fd53b7bf53e2df41f169d9d9d44a8b22aeb6d92f4e754956079af8909",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "examples/d1/db/schema.ts",
+      "mode": "100644",
+      "source_blob": "7bb0c157110799b9b53c767517e0d192b7201f2e",
+      "public_sha256": "d89eabd95716ce404f5f7ca2a254220435be8ddce7c899d7ef461ff22ec80454",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "next.config.ts",
+      "mode": "100644",
+      "source_blob": "e9ffa3083ad279ecf95fd8eae59cb253e9a539c4",
+      "public_sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package-lock.json",
+      "mode": "100644",
+      "source_blob": "7ce7ea0f219bc1ed90f1ed1c91bdb0adbe201b5c",
+      "public_sha256": "283dbdf55081ff6e460baff80764f39f722f13a0720e1a5fa13153ea877051a5",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "source_blob": "6677a95d93415a585a8b54c1116837d741f11074",
+      "public_sha256": "518ff68dd9bce4c09899fbbe41022a1bd7721e3be21c2af3d9e2b77410e9aa24",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "postcss.config.mjs",
+      "mode": "100644",
+      "source_blob": "61e36849cf7cfa9f1f71b4a3964a4953e3e243d3",
+      "public_sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/al-performance-command-centre.html",
+      "mode": "100644",
+      "source_blob": "1eb6f398b8404704afd2e20d3ebc31d1b2ae520f",
+      "public_sha256": "999eece1ab6b2e15194a8625c3547994f346c408958a51dd55e5d8021c0ba21b",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/community-share.html",
+      "mode": "100644",
+      "source_blob": "bf35fd84cab82c0dba2854e7fbbf3a7f7a41b60c",
+      "public_sha256": "923079c67368653152f0b61dd8367dcf87cadc160bc6f9a5a37e45edcffc7faf",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/favicon.svg",
+      "mode": "100644",
+      "source_blob": "ca747cb66b233fedec5ff0c84f97bb4631c05dbf",
+      "public_sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/file.svg",
+      "mode": "100644",
+      "source_blob": "004145cddf3f9db91b57b9cb596683c8eb420862",
+      "public_sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/globe.svg",
+      "mode": "100644",
+      "source_blob": "567f17b0d7c7fb662c16d4357dd74830caf2dccb",
+      "public_sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/icon-192.png",
+      "mode": "100644",
+      "source_blob": "1411b98d61a00436843310bbd907263730f4c9dc",
+      "public_sha256": "6974946948e2ab04dba50eddfc845efc1edf8777de64b2d06611a8548d49e892",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/icon-512.png",
+      "mode": "100644",
+      "source_blob": "a64e4648ea8a872a260f81b1a62e87ac325823c7",
+      "public_sha256": "90af5ad30444870e33362fd086a086da4fb2aff81c8f1b9cfda3f5ee4e68ead2",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/index.html",
+      "mode": "100644",
+      "source_blob": "10c6af486953122623bf871e6dc15e96c92f9348",
+      "public_sha256": "7b9c7fbc3190486944f49dc3d3c83d730ba5d9013778923b726c51cd5c6640a6",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/manifest.webmanifest",
+      "mode": "100644",
+      "source_blob": "b7de70de12c6ea7d32ec658942df9622deab736b",
+      "public_sha256": "ea2916e8b462f32eb755b261f0982bca72b2fc06dfd228cc1ba3847353f24791",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/og.png",
+      "mode": "100644",
+      "source_blob": "64423440c69a1b52bd0908c74d2ae8ee8f486089",
+      "public_sha256": "e511d0a60252714bb8203ac9e6680743147b067376aea1521d71c8cfa2d8130c",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/app.js",
+      "mode": "100644",
+      "source_blob": "517e3eb21b93fc622a9fc21e36ceedd37dbbde6c",
+      "public_sha256": "1d60f30a409b51374973cdefe438cffe5dc0623ec0e2b32e85d94edcbc72fb87",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/assets/physics-intelligence-data.json",
+      "mode": "100644",
+      "source_blob": "1a6b67b20b819188fad58f28daaa6eacdbc4a87a",
+      "public_sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/favicon.svg",
+      "mode": "100644",
+      "source_blob": "ca46ffb970ca63ad9dcfa5494cc268fd8f5fc217",
+      "public_sha256": "600516f3eabdab4da63be2fecf354fa7074344cb495d931a85b0f0cc9e69f9ca",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/index.html",
+      "mode": "100644",
+      "source_blob": "8c535581942543bce72ec0df8d9775d135e7eb33",
+      "public_sha256": "ffcf869bd55adb9a35ed5804df397a309da1ee8d38a7445e00890d2f33002c2f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/physics-intelligence/styles.css",
+      "mode": "100644",
+      "source_blob": "e5087bfc45ddae102259a6bfc70e648a19ec28cf",
+      "public_sha256": "9d5cba21597b2630c21986edec7bd3c229cccb3e370b158b93a20a1943af584d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-tracker/app.js",
+      "mode": "100644",
+      "source_blob": "447356021b2a3bd4a01f49aa89fcd8d8437118b1",
+      "public_sha256": "8255a6fb53186757fa3c168082fd3ee00999f5125aa974b85b57bf467334f7f9",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-tracker/index.html",
+      "mode": "100644",
+      "source_blob": "86bdfdff892f45416f74b6cc589f2d077140ef2a",
+      "public_sha256": "fee8e2d1bd336a213456eaf4784b8dbbda56a2065e52e50777b2abcb1e1efc9d",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/study-tracker/styles.css",
+      "mode": "100644",
+      "source_blob": "b2caa82c225f29c2f6de78afce5856110cee8231",
+      "public_sha256": "426d1107c3e2eedd01cd0ab7c039e9024e3ab4c7a3c32034085c30c0055641c3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/sw.js",
+      "mode": "100644",
+      "source_blob": "ad40040fb9c3155f9f7a320e06730dbf475b0c5e",
+      "public_sha256": "ea9c331329e29327051c484e5d31c3bbb0b56f434993f6a219452cff0752b746",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "public/window.svg",
+      "mode": "100644",
+      "source_blob": "b2b2a44f6ebc70c450043c05a002e7a93ba5d651",
+      "public_sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/build-verified.sh",
+      "mode": "100755",
+      "source_blob": "2368b5a94d96bea8274f83136993008aafa84a2e",
+      "public_sha256": "41714b636524ed4aa1eb5a77a4c95a6471fd53d2957e852ccf187f9335eee17f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/install-ci.sh",
+      "mode": "100755",
+      "source_blob": "7a22fd4631338ffc59f5fd83dcd5a910411e988a",
+      "public_sha256": "c86541a04dec39f982eb6b103b60e3b376c518e84816b7876635877fb4c8569f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/sites-env.sh",
+      "mode": "100755",
+      "source_blob": "728416424d5d2f4c9a746d53621668225645356c",
+      "public_sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "scripts/validate-artifact.sh",
+      "mode": "100755",
+      "source_blob": "bf4a17809fc584eeced122f5ae3115eba9b1597b",
+      "public_sha256": "186867b00720df359e8fc5b18385a51dfbaa0b7ca6cd1e02303140f4efd98088",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tests/rendered-html.test.mjs",
+      "mode": "100644",
+      "source_blob": "b6beb59cfafa5072d31b3f541d7e18e9fafeda3a",
+      "public_sha256": "12bcf35a10753d47bd0c000a12d01c37b2311ca3baa5f3e2e2bc550f585d391f",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tools/convert-study-tracker-export.mjs",
+      "mode": "100644",
+      "source_blob": "b22ea364c238635651198d2c98db12c4640c2aca",
+      "public_sha256": "b4f9bfd889c3f312cdb3269bcff6cc56977aedddd19cff044088b5aea287bce0",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "source_blob": "3a13f90a773b0facb675bf5b1a8239c8f33d36f5",
+      "public_sha256": "be18523b23b78b6e1a876ddd107d330f0168bddf09d751b57e0b5edce69c66f3",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "vite.config.ts",
+      "mode": "100644",
+      "source_blob": "d8c8054909af78d5d882f49271e1e322c2bfc4dd",
+      "public_sha256": "43e5f02f727ca043f08ebf34789f330580a7a0cb90f426c92f4a454d066988fc",
+      "redacted_link_count": 0
+    },
+    {
+      "path": "worker/index.ts",
+      "mode": "100644",
+      "source_blob": "b3cd137862c517c1053481cf6efdf6dd4d423cdc",
+      "public_sha256": "2ed36d7fa996e946d9d7695c5925e7760246f6bf8fa35c06f1bc515c087dc450",
+      "redacted_link_count": 0
+    }
+  ],
+  "omitted": [],
+  "redacted_links": []
+}

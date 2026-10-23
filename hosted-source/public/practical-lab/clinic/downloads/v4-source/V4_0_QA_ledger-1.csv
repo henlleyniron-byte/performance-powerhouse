@@ -1,0 +1,71 @@
+record_id,linked_activity_id,kind,numeric_checks,numeric_regression,curriculum_reference,lab_data,peer_review
+PM40-B01,bio-001,qualitative,0,N/A (qualitative),NIE printed p. 1 (index-verified),FICTIONAL,NOT YET
+PM40-B09,bio-009,qualitative,1,PASS,NIE printed p. 10 (index-verified),FICTIONAL,NOT YET
+PM40-B10,bio-010,numerical,5,PASS,NIE printed p. 11 (index-verified),FICTIONAL,NOT YET
+PM40-B11,bio-011,qualitative,0,N/A (qualitative),NIE printed p. 12 (index-verified),FICTIONAL,NOT YET
+PM40-B12,bio-012,qualitative,0,N/A (qualitative),NIE printed p. 13 (index-verified),FICTIONAL,NOT YET
+PM40-B13,bio-013,qualitative,0,N/A (qualitative),NIE printed p. 14 (index-verified),FICTIONAL,NOT YET
+PM40-B14,bio-014,qualitative,0,N/A (qualitative),NIE printed p. 15 (index-verified),FICTIONAL,NOT YET
+PM40-B15,bio-015,qualitative,0,N/A (qualitative),NIE printed p. 16 (index-verified),FICTIONAL,NOT YET
+PM40-B16,bio-016,qualitative,0,N/A (qualitative),NIE printed p. 17 (index-verified),FICTIONAL,NOT YET
+PM40-B18,bio-018,numerical,3,PASS,NIE printed p. 19 (index-verified),FICTIONAL,NOT YET
+PM40-B24,bio-024,qualitative,0,N/A (qualitative),NIE printed p. 29 (index-verified),FICTIONAL,NOT YET
+PM40-B25,bio-025,numerical,5,PASS,NIE printed p. 30 (index-verified),FICTIONAL,NOT YET
+PM40-B27,bio-027,qualitative,0,N/A (qualitative),NIE printed p. 32 (index-verified),FICTIONAL,NOT YET
+PM40-B28,bio-028,numerical,3,PASS,NIE printed p. 33 (index-verified),FICTIONAL,NOT YET
+PM40-B29,bio-029,numerical,2,PASS,NIE printed p. 34 (index-verified),FICTIONAL,NOT YET
+PM40-B30,bio-030,numerical,3,PASS,NIE printed p. 35 (index-verified),FICTIONAL,NOT YET
+PM40-B31,bio-031,qualitative,0,N/A (qualitative),NIE printed p. 36 (index-verified),FICTIONAL,NOT YET
+PM40-B32,bio-032,qualitative,1,PASS,NIE printed p. 37 (index-verified),FICTIONAL,NOT YET
+PM40-B33,bio-033,numerical,2,PASS,NIE printed p. 38 (index-verified),FICTIONAL,NOT YET
+PM40-B34,bio-034,numerical,4,PASS,NIE printed p. 40 (index-verified),FICTIONAL,NOT YET
+PM40-B35,bio-035,numerical,4,PASS,NIE printed p. 41 (index-verified),FICTIONAL,NOT YET
+PM40-B36,bio-036,numerical,3,PASS,NIE printed p. 43 (index-verified),FICTIONAL,NOT YET
+PM40-B37,bio-037,numerical,4,PASS,NIE printed p. 45 (index-verified),FICTIONAL,NOT YET
+PM40-C01,che-001,mixed,3,PASS,NIE printed p. 10 (index-verified),FICTIONAL,NOT YET
+PM40-C02,che-002,qualitative,0,N/A (qualitative),NIE printed p. 15 (index-verified),FICTIONAL,NOT YET
+PM40-C06,che-006,numerical,5,PASS,NIE printed p. 27 (index-verified),FICTIONAL,NOT YET
+PM40-C09,che-009,mixed,2,PASS,NIE printed p. 42 (index-verified),FICTIONAL,NOT YET
+PM40-C10,che-010,mixed,3,PASS,NIE printed p. 44 (index-verified),FICTIONAL,NOT YET
+PM40-C11,che-011,qualitative,0,N/A (qualitative),NIE printed p. 46 (index-verified),FICTIONAL,NOT YET
+PM40-C12,che-012,qualitative,0,N/A (qualitative),NIE printed p. 49 (index-verified),FICTIONAL,NOT YET
+PM40-C13,che-013,qualitative,0,N/A (qualitative),NIE printed p. 51 (index-verified),FICTIONAL,NOT YET
+PM40-C15,che-015,mixed,3,PASS,NIE printed p. 57 (index-verified),FICTIONAL,NOT YET
+PM40-C16,che-016,mixed,4,PASS,NIE printed p. 59 (index-verified),FICTIONAL,NOT YET
+PM40-C17,che-017,mixed,4,PASS,NIE printed p. 61 (index-verified),FICTIONAL,NOT YET
+PM40-C23,che-023,qualitative,0,N/A (qualitative),NIE printed p. 73 (index-verified),FICTIONAL,NOT YET
+PM40-C24,che-024,mixed,3,PASS,NIE printed p. 75 (index-verified),FICTIONAL,NOT YET
+PM40-C25,che-025,qualitative,0,N/A (qualitative),NIE printed p. 80 (index-verified),FICTIONAL,NOT YET
+PM40-C26,che-026,mixed,3,PASS,NIE printed p. 81 (index-verified),FICTIONAL,NOT YET
+PM40-C27,che-027,qualitative,0,N/A (qualitative),NIE printed p. 83 (index-verified),FICTIONAL,NOT YET
+PM40-C28,che-028,numerical,4,PASS,NIE printed p. 86 (index-verified),FICTIONAL,NOT YET
+PM40-C29,che-029,mixed,1,PASS,NIE printed p. 88 (from V3 catalogue; not re-verified),FICTIONAL,NOT YET
+PM40-C34,che-034,mixed,2,PASS,NIE printed p. 105 (from V3 catalogue; not re-verified),FICTIONAL,NOT YET
+PM40-C36,che-036,numerical,4,PASS,NIE printed p. 111 (from V3 catalogue; not re-verified),FICTIONAL,NOT YET
+PM40-C40,che-040,numerical,5,PASS,NIE printed p. 122 (from V3 catalogue; not re-verified),FICTIONAL,NOT YET
+PM40-C41,che-041,numerical,5,PASS,NIE printed p. 126 (from V3 catalogue; not re-verified),FICTIONAL,NOT YET
+PM40-C42,che-042,numerical,4,PASS,NIE printed p. 130 (from V3 catalogue; not re-verified),FICTIONAL,NOT YET
+PM40-C43,che-043,numerical,3,PASS,NIE printed p. 133 (from V3 catalogue; not re-verified),FICTIONAL,NOT YET
+PM40-P03,phy-003,numerical,4,PASS,NIE printed p. 9 (index-verified),FICTIONAL,NOT YET
+PM40-P04,phy-004,numerical,5,PASS,NIE printed p. 11 (index-verified),FICTIONAL,NOT YET
+PM40-P05,phy-005,numerical,4,PASS,NIE printed p. 14 (index-verified),FICTIONAL,NOT YET
+PM40-P16,phy-016,numerical,4,PASS,NIE printed p. 36 (index-verified),FICTIONAL,NOT YET
+PM40-P17,phy-017,numerical,2,PASS,NIE printed p. 38 (index-verified),FICTIONAL,NOT YET
+PM40-P18,phy-018,numerical,5,PASS,NIE printed p. 40 (index-verified),FICTIONAL,NOT YET
+PM40-P19,phy-019,numerical,3,PASS,NIE printed p. 42 (index-verified),FICTIONAL,NOT YET
+PM40-P21-2,phy-21-2,numerical,3,PASS,NIE printed p. 51 (index-verified),FICTIONAL,NOT YET
+PM40-P22,phy-022,numerical,3,PASS,NIE printed p. 53 (index-verified),FICTIONAL,NOT YET
+PM40-P24,phy-024,numerical,5,PASS,NIE printed p. 57 (index-verified),FICTIONAL,NOT YET
+PM40-P25,phy-025,numerical,4,PASS,NIE printed p. 59 (index-verified),FICTIONAL,NOT YET
+PM40-P26,phy-026,numerical,3,PASS,NIE printed p. 61 (index-verified),FICTIONAL,NOT YET
+PM40-P27,phy-027,numerical,3,PASS,NIE printed p. 64 (index-verified),FICTIONAL,NOT YET
+PM40-P28,phy-028,numerical,5,PASS,NIE printed p. 66 (index-verified),FICTIONAL,NOT YET
+PM40-P29,phy-029,numerical,4,PASS,NIE printed p. 68 (index-verified),FICTIONAL,NOT YET
+PM40-P30,phy-030,numerical,3,PASS,NIE printed p. 70 (index-verified),FICTIONAL,NOT YET
+PM40-P34,phy-034,numerical,3,PASS,NIE printed p. 79 (index-verified),FICTIONAL,NOT YET
+PM40-P35,phy-035,numerical,4,PASS,NIE printed p. 81 (index-verified),FICTIONAL,NOT YET
+PM40-P36,phy-036,numerical,3,PASS,NIE printed p. 83 (index-verified),FICTIONAL,NOT YET
+PM40-P39,phy-039,numerical,4,PASS,NIE printed p. 90 (index-verified),FICTIONAL,NOT YET
+PM40-P40,phy-040,numerical,6,PASS,NIE printed p. 92 (index-verified),FICTIONAL,NOT YET
+PM40-P41,phy-041,numerical,3,PASS,NIE printed p. 94 (index-verified),FICTIONAL,NOT YET
+PM40-P42,phy-042,numerical,2,PASS,NIE printed p. 96 (index-verified),FICTIONAL,NOT YET
