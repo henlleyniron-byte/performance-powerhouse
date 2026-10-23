@@ -1,6 +1,7 @@
 const DATA_URL = "assets/physics-intelligence-data.json";
 const STORAGE_KEY = "al_performance_powerhouse_physics_intelligence_v1";
 
+let physicsStore=null;
 const state = {
   data: null,
   attempts: [],
@@ -23,16 +24,12 @@ function normalizeAttempts(rows, strict=false) {
 }
 function reportData(message) { el('dataStatus').textContent=message; }
 function loadLocalState() {
-  try {
-    const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    state.attempts = normalizeAttempts(parsed.attempts || []);
-  } catch {
-    state.attempts = [];
-  }
+  physicsStore=TrinityStore.open({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value),keys:()=>Object.keys(localStorage),removeItem:key=>localStorage.removeItem(key)},STORAGE_KEY,{isolated:true,validate:value=>{if(value.version!==1)throw Error('Unsupported Physics schema.');normalizeAttempts(value.attempts,true);}});
+  if(physicsStore.readOnly){state.attempts=[];reportData(physicsStore.problem);return;}
+  state.attempts=physicsStore.value?.attempts||[];
 }
-
 function saveLocalState() {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, attempts: state.attempts })); reportData("Attempt evidence saved on this browser."); } catch { reportData("Storage is unavailable. Export a backup before closing; your attempts remain usable for this visit."); }
+  try{if(!physicsStore)throw Error('Storage is not ready.');physicsStore.save({...physicsStore.value,version:1,attempts:state.attempts});reportData('Attempt evidence saved in this browser.');return true;}catch(error){reportData(error.message+' Export a backup before leaving; your current visit still holds its work.');return false;}
 }
 
 function setShareMode(enabled) {
@@ -252,6 +249,7 @@ function bindEvents() {
   el("shareToggle").addEventListener("click", () => setShareMode(!state.shareMode));
   el("attemptForm").addEventListener("submit", (event) => {
     event.preventDefault();
+    if(physicsStore?.readOnly){reportData(physicsStore.problem);return;}
     state.attempts.push({
       familyId: el("attemptFamily").value,
       outcome: el("attemptOutcome").value,
@@ -263,7 +261,7 @@ function bindEvents() {
     renderPerformance();
   });
   el("exportBackup").addEventListener("click", () => {
-    const blob = new Blob([JSON.stringify({ version: 1, storageKey: STORAGE_KEY, attempts: state.attempts }, null, 2)], { type: "application/json" });
+    const blob = new Blob([physicsStore?.readOnly?physicsStore.raw:JSON.stringify({ ...physicsStore?.value,version:1,storageKey:STORAGE_KEY,attempts:state.attempts },null,2)], { type: "application/json" });
     const link = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "physics-intelligence-private-backup.json" });
     link.click(); URL.revokeObjectURL(link.href);
   });
@@ -276,7 +274,7 @@ function bindEvents() {
       if(parsed.version!==1||parsed.storageKey!==STORAGE_KEY)throw new Error("Choose a Physics Intelligence backup.");
       const clean=normalizeAttempts(parsed.attempts,true);
       if(!confirm("Replace your Physics Intelligence attempts with this backup? Export first to keep the current evidence."))return;
-      state.attempts=clean;saveLocalState();renderPerformance();
+      physicsStore.replace({...parsed,attempts:parsed.attempts});state.attempts=parsed.attempts;renderPerformance();reportData('Reviewed Physics backup restored; exact prior bytes retained.');
     } catch(error) { reportData(`${error.message||'Invalid backup.'} Existing attempts were kept.`); }
     finally { event.target.value=''; }
   });

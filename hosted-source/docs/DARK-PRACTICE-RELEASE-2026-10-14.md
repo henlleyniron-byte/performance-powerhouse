@@ -13,3 +13,5 @@ Original source directories contained unpublished draft work. That work was pres
 Required validation: framework builds, existing suites with original private Library fixture, new comparison/theme tests, practice baseline tests, JS syntax and HTML link/ID checks. Expanded-corpus-only tests may be skipped if that distinct fixture is unavailable. Real browser visual QA is unavailable in the managed environment; contrast checks cover selected palette combinations, not every rendered state or full accessibility compliance.
 
 Rollback uses previous saved versions Atlas 71 / Powerhouse 27 without learner-data migration. Existing source imports, attempts and recovery exports remain valid. Publication details, snapshots and test counts belong in the final release record.
+
+Publication reconciliation: merged newer source parents Atlas bfb345b and Powerhouse 0138fca. Their saved versions 72 / 28 and advanced Chemistry/Biology source panels are preserved. Updated Library version 1 was materialized separately from the original fixture and used for expanded-corpus tests. All-source data stays outside public source and deployment assets.

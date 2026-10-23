@@ -8,7 +8,7 @@ test("unreadable verification bytes are exported unchanged and block ordinary sa
   assert.match(source, /if\(unreadableRaw!==null\).*Save blocked/);
   assert.match(source, /damaged\?unreadableRaw:JSON\.stringify/);
   assert.match(source, /unreadable-recovery\.json/);
-  assert.match(source, /records=clean;unreadableRaw=null;hydrated=true/);
+  assert.match(source, /records=clean;storedBaseline=JSON\.stringify\(clean\);unreadableRaw=null;hydrated=true/);
 });
 
 import vm from "node:vm";

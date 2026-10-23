@@ -32,7 +32,7 @@ function tracker(at,blocked=false){
  class Clock extends RealDate{constructor(...args){super(...(args.length?args:[at]))}static now(){return new RealDate(at).getTime()}}
  const context=vm.createContext({Date:Clock,Intl,URLSearchParams,crypto:{randomUUID:()=> 'test-id'},window:{},document:{getElementById:node},localStorage:{getItem:key=>{if(blocked)throw Error('blocked');return records.get(key)||null},setItem:(key,value)=>{if(blocked)throw Error('blocked');records.set(key,value)}}});
  const source=readFileSync(new URL('../public/study-tracker/app.js',import.meta.url),'utf8').split('populateSelects();applyCommandBridge();')[0];
- vm.runInContext(source,context);return {context,node,records};
+ vm.runInContext(readFileSync(new URL('../public/data-safety/safe-store.js',import.meta.url),'utf8'),context);vm.runInContext(source,context);return {context,node,records};
 }
 
 test('weekly goal switches at Monday midnight in Colombo, even while UTC is still Sunday',()=>{

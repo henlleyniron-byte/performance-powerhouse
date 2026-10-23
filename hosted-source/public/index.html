@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/data-safety/compatible-read.js"></script><script src="/data-safety/safe-store.js"></script><script>globalThis.PowerhouseCoreStore=TrinityStore.open({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value),keys:()=>Object.keys(localStorage),removeItem:key=>localStorage.removeItem(key)},'al_performance_powerhouse_v4',{isolated:true,validate:TrinityStore.core,fallbacks:['al_performance_powerhouse_v3','al_performance_command_centre_v6','al_performance_command_centre_v5','al_performance_command_centre_v4','al_performance_command_centre_v3']});</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/L Performance Powerhouse · V8 Evidence & Capacity Edition</title>
+<title>A/L Performance Powerhouse · V16 Evidence & Recovery</title>
 <meta name="description" content="A local-first G.C.E. A/L Biological Science performance and error-correction system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.">
 <style>
   :root {
@@ -447,7 +447,7 @@
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
 
-  /* Powerhouse V8 · integrated daily-output layer */
+  /* Powerhouse V16 · integrated daily-output layer */
   .daily-hero { display:grid; grid-template-columns:1.18fr .82fr; gap:14px; margin-bottom:14px; }
   .daily-summary-panel h2 { margin:6px 0 8px; font:clamp(24px,4vw,36px) "DM Serif Display", Georgia, serif; }
   .daily-summary-panel > p { margin:0 0 16px; line-height:1.65; font-size:10px; }
@@ -482,7 +482,7 @@
   .v3-badge { display:inline-flex; align-items:center; gap:6px; padding:5px 9px; border-radius:999px; border:1px solid rgba(255,209,102,.28); background:rgba(255,209,102,.08); color:var(--gold); font-size:9px; font-weight:850; letter-spacing:.04em; }
   .course-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:14px; margin-bottom:14px; }
   .course-hero { position:relative; overflow:hidden; padding:24px; }
-  .course-hero::after { content:"V8"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
+  .course-hero::after { content:"V16"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
   .course-hero h2 { margin:7px 0 8px; max-width:780px; font:clamp(25px,4vw,38px) "DM Serif Display", Georgia, serif; line-height:1.08; }
   .course-hero p { color:var(--muted); line-height:1.65; margin:0 0 15px; max-width:760px; }
   .course-status { display:flex; gap:7px; flex-wrap:wrap; }
@@ -608,12 +608,12 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 </style>
 <link rel="stylesheet" href="./powerhouse/styles.css">
 <link rel="stylesheet" href="./powerhouse/planning.css">
-<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script></head>
+<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script><link rel="stylesheet" href="/workspace-shell/shell.css"><link rel="stylesheet" href="/powerhouse/flagship.css"></head>
 <body>
 
 <div class="app-header">
   <div class="shell header-row">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V8</h1><span class="edition-badge">EVIDENCE &amp; CAPACITY</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V16</h1><span class="edition-badge">FLAGSHIP / EVIDENCE & RECOVERY</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
     <div class="header-actions">
       <button class="backup-chip" id="backup-health" type="button" title="Backup health">Backup —</button>
       <button class="icon-btn" id="share-safe-btn" type="button" title="Share-safe mode" aria-label="Toggle share-safe mode">◫</button>
@@ -623,29 +623,28 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   </div>
 </div>
 
-<nav class="tabs" id="app-tabs" aria-label="Dashboard sections">
-  <a class="tab tab-link" href="./study-library/?view=practice">Private practice desk</a><a class="tab tab-link" href="./subscription-lab/">Compare one AI task</a>
-  <a class="tab tab-link" href="./subscription-playbook/">AI Subscription Playbook</a>
-  <button class="tab active" type="button" data-panel="command">Command</button>
-  <button class="tab" type="button" data-panel="physics">Physics</button>
-  <a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
-  <a class="tab tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a>
-  <a class="tab tab-link" href="./biology-intelligence/">Biology Intelligence</a>
-  <a class="tab tab-link" href="./science-intelligence/">Science Intelligence Hub</a>
-  <a class="tab tab-link" href="./study-library/">Private Study Library</a>
-  <a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
-  <a class="tab tab-link" href="./resource-desk/index.html">Resource Desk</a>
-  <button class="tab" type="button" data-panel="chemistry">Chemistry</button>
-  <button class="tab" type="button" data-panel="biology">Biology</button>
-  <button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
-  <button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge">ON</span></button>
-  <button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
-  <button class="tab" type="button" data-panel="planner">Syllabus Map</button>
-  <button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count">0</span></button>
-  <button class="tab" type="button" data-panel="guide">Guide</button>
-</nav>
+<nav class="tabs flagship-tabs" id="app-tabs" aria-label="Dashboard sections"><button class="tab active" type="button" data-panel="command">Command</button>
+<button class="tab" type="button" data-panel="physics">Physics</button>
+<button class="tab" type="button" data-panel="chemistry">Chemistry</button>
+<button class="tab" type="button" data-panel="biology">Biology</button>
+<button class="tab" type="button" data-panel="review">Review</button><button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
+<button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count">0</span></button>
+<button class="tab" type="button" data-panel="guide">Guide</button><details class="workspace-more"><summary>More workspaces</summary><div class="workspace-menu"><a class="tab tab-link" href="./practical-lab/" id="practical-lab-link">Practical Lab</a>
+<a class="tab tab-link" href="./study-library/?view=practice">Private practice desk</a>
+<a class="tab tab-link" href="./subscription-lab/">Compare one AI task</a>
+<a class="tab tab-link" href="./subscription-playbook/">AI Subscription Playbook</a>
+<a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
+<a class="tab tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a>
+<a class="tab tab-link" href="./biology-intelligence/">Biology Intelligence</a>
+<a class="tab tab-link" href="./science-intelligence/">Science Intelligence Hub</a>
+<a class="tab tab-link" href="./study-library/">Private Study Library</a>
+<a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
+<a class="tab tab-link" href="./resource-desk/index.html">Resource Desk</a>
+<button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge">ON</span></button>
+<button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
+<button class="tab" type="button" data-panel="planner">Syllabus Map</button></div></details></nav>
 
-<main>
+<main><section class="content" id="panel-review"><div class="v12-section-heading"><p class="eyebrow">EVIDENCE REVIEW / V16</p><h2>What changed in your marked work?</h2><p>Review the core ledger, find the next check and return to one useful action.</p></div><section class="panel" id="v12-review-summary"><div class="v12-review-controls"><label for="v12-review-range">Evidence window<select id="v12-review-range"><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label><label for="v12-review-subject">Subject<select id="v12-review-subject"><option value="all">All subjects</option><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select></label><button class="secondary-btn" id="v12-summary-export" type="button">Export portable evidence summary</button></div><div id="v12-review-data" aria-live="polite"></div><p class="v6-note">Core-ledger coverage only. Separate subject labs and external Notion records are not merged. Marks describe the selected questions; they are not a predicted grade.</p></section><div id="v12-review-existing"></div></section>
   <section class="content active" id="panel-command">
     <div class="hero-grid">
       <article class="focus-card">
@@ -667,10 +666,10 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
     <section class="panel cycle-panel" aria-labelledby="cycle-title">
       <div class="cycle-head">
-        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action; progress is saved with your evidence when cloud saving is connected. This checklist records your actions; marked results provide the proof.</p></div>
+        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action. These self-recorded steps guide your workflow; they do not close an error or award mastery. Use the Verification desk to assess linked marked attempts.</p></div>
         <div class="cycle-controls"><label class="muted" for="cycle-subject" style="font-size:10px">Subject</label><select id="cycle-subject"><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select><button class="secondary-btn" id="cycle-reset" type="button">New loop</button></div>
       </div>
-      <div class="cycle-progress" id="cycle-progress" role="progressbar" aria-label="Evidence loop progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
+      <div class="cycle-progress" id="cycle-progress" role="progressbar" aria-label="Self-recorded workflow steps" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
       <div class="cycle-steps" id="cycle-steps" aria-label="Evidence loop steps"></div>
       <div class="cycle-next"><div><strong id="cycle-next-title">Step 1 · Timed attempt</strong><p id="cycle-next-copy">Attempt a bounded question closed book. Keep notes and AI out of the test.</p></div><div class="cycle-next-actions"><button class="primary-btn" id="cycle-action" type="button">Start this step</button><button class="secondary-btn" id="cycle-complete" type="button">Mark step done</button></div></div>
     </section>
@@ -691,7 +690,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
         <div>
           <div class="eyebrow">2027 campaign · no fake countdowns</div>
           <h3 id="exam-timeline-title">Build the attempt that you want to sit.</h3>
-          <p id="exam-timeline-summary">V8 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
+          <p id="exam-timeline-summary">V16 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
         </div>
         <button class="secondary-btn" id="set-target-btn" type="button">Set planning target</button>
       </div>
@@ -723,7 +722,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel planner-score">
         <div class="eyebrow">Syllabus map · context, not proof</div>
         <h2 id="planner-headline">0% period-weighted coverage</h2>
-        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V8 deliberately separates syllabus progress from evidence.</p>
+        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V16 deliberately separates syllabus progress from evidence.</p>
       </section>
       <section class="panel planner-kpis" aria-label="Syllabus plan indicators">
         <div class="planner-kpi"><span>Completed equivalent</span><b id="planner-done-periods">0</b></div>
@@ -751,7 +750,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel course-hero">
         <div class="eyebrow">Course correction · brother mode</div>
         <h2 id="cc-verdict">First move: produce evidence before optimizing the system.</h2>
-        <p id="cc-reason">V8 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
+        <p id="cc-reason">V16 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
         <div class="course-status" id="cc-status-pills"></div>
       </section>
       <section class="panel">
@@ -768,7 +767,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
     <div class="dashboard-grid">
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V8 gives the replacement action.</p></div></div>
+        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V16 gives the replacement action.</p></div></div>
         <div class="correction-rule-grid" id="correction-rule-grid"></div>
         <div class="replacement-box"><strong id="cc-action-title">Default replacement</strong><p id="cc-action-copy">Open the current paper. Do one measurable question set. Mark it. Then decide what you actually need.</p></div>
       </section>
@@ -808,7 +807,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       </section>
 
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">V8 doctrine</div><h3>What this site is allowed to do</h3></div></div>
+        <div class="panel-head"><div><div class="eyebrow">V16 doctrine</div><h3>What this site is allowed to do</h3></div></div>
         <div class="week-review">
           <div class="week-row"><span class="label">TEST</span><span class="value">Closed-book, timed, AI-free. The site measures; it does not rescue you mid-question.</span></div>
           <div class="week-row"><span class="label">DIAGNOSE</span><span class="value">Score + confidence + guesses + one primary error cause. Do not write essays about every mistake.</span></div>
@@ -825,7 +824,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel daily-summary-panel">
         <div class="eyebrow">Daily execution layer</div>
         <h2 id="daily-headline">Turn activity into measurable output.</h2>
-        <p class="muted">The useful daily-output layer is integrated into Powerhouse V8. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
+        <p class="muted">The useful daily-output layer is integrated into Powerhouse V16. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
         <div class="daily-kpi-grid">
           <div class="planner-kpi"><span>Today · target score</span><b id="daily-target-score">0%</b></div>
           <div class="planner-kpi"><span>Today · outputs</span><b id="daily-output-count">0</b></div>
@@ -856,7 +855,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
     <section class="panel" style="margin-bottom:14px">
       <details class="daily-targets-details">
         <summary><strong>Daily targets</strong> · editable, local-only</summary>
-        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V8 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
+        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V16 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
         <div class="daily-subject-grid" id="daily-target-grid"></div>
         <div style="display:flex;justify-content:flex-end;margin-top:12px"><button class="secondary-btn" id="save-daily-targets" type="button">Save targets</button></div>
       </details>
@@ -874,7 +873,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <div>
         <div class="eyebrow">Error Intelligence · marks first</div>
         <h2>Repair what is repeatedly costing marks.</h2>
-        <p>V8 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
+        <p>V16 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
       </div>
       <button class="primary-btn" id="repair-log-btn" type="button">Log repair evidence</button>
     </section>
@@ -956,7 +955,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 </dialog>
 
 <dialog id="timer-dialog">
-  <div class="dialog-head"><div><div class="eyebrow">Deep work · V8</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
+  <div class="dialog-head"><div><div class="eyebrow">Deep work · V16</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
   <div class="dialog-body">
     <div class="timer-phase" id="timer-phase">TEST · AI-free · closed book</div>
     <div class="timer-presets"><button class="secondary-btn" type="button" data-timer-preset="15">15 · recall</button><button class="secondary-btn" type="button" data-timer-preset="30">30 · rescue</button><button class="secondary-btn" type="button" data-timer-preset="60">60 · standard</button><button class="secondary-btn on" type="button" data-timer-preset="90">90 · deep</button><button class="secondary-btn" type="button" data-timer-preset="120">120 · full</button></div>
@@ -968,14 +967,14 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
 <dialog id="data-dialog">
   <div class="dialog-head"><div><div class="eyebrow">Local data</div><h2>Backup & identity</h2></div><button class="icon-btn" type="button" data-close-data aria-label="Close">×</button></div>
-  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your browser copy works without sign-in. Connect cloud saving on Command to keep your evidence in your account across devices. Export a JSON backup for an independent copy.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V8 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
+  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your browser copy works without sign-in. Connect cloud saving on Command to keep your evidence in your account across devices. Export a JSON backup for an independent copy.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V16 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
 </dialog>
 
 <dialog id="welcome-dialog">
   <form id="welcome-form">
-    <div class="dialog-head"><div><div class="eyebrow">V8 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
+    <div class="dialog-head"><div><div class="eyebrow">V16 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
     <div class="dialog-body">
-      <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance data stays only in this browser unless you export it yourself.</p>
+      <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance records are browser-first. Exports and optional cloud saving are explicit owner actions.</p>
       <div class="form-grid">
         <div class="field full"><label for="welcome-name">Your name</label><input id="welcome-name" maxlength="80" placeholder="e.g. Niron" autocomplete="name" required></div>
         <div class="field"><label for="welcome-year">Exam year</label><input id="welcome-year" maxlength="8" inputmode="numeric" value="2027" required></div>
@@ -1000,8 +999,8 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   <div class="owner">Legacy dashboard migration shell</div>
 </header>
 
-<aside class="proof-contract" aria-label="V8 evidence rule">
-  <strong>V8 EVIDENCE RULE</strong>
+<aside class="proof-contract" aria-label="V16 evidence rule">
+  <strong>V16 EVIDENCE RULE</strong>
   <span>Attempt → Mark → Diagnose → Repair → Transfer → Retest. A score without a repaired error is only a signal.</span>
 </aside>
 
@@ -1381,14 +1380,9 @@ function defaultState() {
 }
 
 function loadState() {
+  if (!globalThis.PowerhouseCoreStore || (PowerhouseCoreStore.readOnly && !PowerhouseCoreStore.value)) { const view=defaultState(); view.profileSetupComplete=true; return view; }
   try {
-    const raw = localStorage.getItem(APP_KEY)
-      || localStorage.getItem(PREVIOUS_POWERHOUSE_APP_KEY)
-      || localStorage.getItem(PREVIOUS_APP_KEY)
-      || localStorage.getItem(OLDER_APP_KEY)
-      || localStorage.getItem(OLDEST_APP_KEY)
-      || localStorage.getItem(VERY_OLD_APP_KEY)
-      || 'null';
+    const raw = PowerhouseCoreStore.raw || 'null';
     const saved = JSON.parse(raw);
     if (!saved || typeof saved !== 'object') return defaultState();
     const base = defaultState();
@@ -1413,9 +1407,6 @@ function loadState() {
         rescueRuns: Array.isArray(saved.courseCorrection?.rescueRuns) ? saved.courseCorrection.rescueRuns : []
       }
     };
-    if (!localStorage.getItem(APP_KEY)) {
-      try { localStorage.setItem(APP_KEY, JSON.stringify(migrated)); } catch (_) {}
-    }
     return migrated;
   } catch (_) { return defaultState(); }
 }
@@ -1440,14 +1431,8 @@ const escapeHTML = (value = '') => String(value).replace(/[&<>'"]/g, c => ({ '&'
 const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
 
 function saveState() {
-  try {
-    localStorage.setItem(APP_KEY, JSON.stringify(state));
-    window.PowerhouseUpgrade?.onSave();
-    return true;
-  } catch (_) {
-    toast('Progress could not be saved. Export a backup before closing.');
-    return false;
-  }
+  try { if (!globalThis.PowerhouseCoreStore) throw Error('The data-safety guard is unavailable.'); PowerhouseCoreStore.save(state); window.PowerhouseUpgrade?.onSave(); return true; }
+  catch(error) { toast(error.message+' Export your current work before leaving.'); document.dispatchEvent(new Event('trinity-core-problem')); return false; }
 }
 
 function toast(message) {
@@ -1987,7 +1972,8 @@ function navigate(panel) {
     }
   }
   activePanel = panel;
-  document.querySelectorAll('#app-tabs .tab').forEach(t => t.classList.toggle('active', t.dataset.panel === panel));
+  document.querySelectorAll('#app-tabs .tab').forEach(t => { t.classList.toggle('active', t.dataset.panel === panel); if(t.dataset.panel) {t.setAttribute('aria-controls','panel-'+t.dataset.panel); if(t.dataset.panel===panel)t.setAttribute('aria-current','page');else t.removeAttribute('aria-current');} });
+  document.querySelector('.workspace-more')?.removeAttribute('open');
   document.querySelectorAll('main > .content').forEach(c => c.classList.toggle('active', c.id === `panel-${panel}`));
   if (panel === 'course') renderCourseCorrection();
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2207,9 +2193,9 @@ function attemptHTML(a, compact = false) {
 }
 
 function renderAttempts() {
-  const sorted = [...state.attempts].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
-  $('recent-attempts').innerHTML = sorted.length ? sorted.slice(0, 4).map(a => attemptHTML(a, true)).join('') : '<div class="empty-state">Your evidence ledger is empty. A completed, marked question is the first useful input.</div>';
-  $('attempt-table-body').innerHTML = sorted.length ? sorted.map(a => attemptHTML(a)).join('') : '<tr><td colspan="8"><div class="empty-state">No completed attempts logged yet.</div></td></tr>';
+ const sorted=[...state.attempts].sort((a,b)=>String(b.date+b.createdAt).localeCompare(String(a.date+a.createdAt)));
+ $('recent-attempts').innerHTML=sorted.length?sorted.slice(0,4).map(a=>attemptHTML(a,true)).join(''):'<div class="empty-state">Log one marked attempt to begin.</div>';
+ $('attempt-table-body').innerHTML=sorted.length?sorted.map(a=>attemptHTML(a)).join(''):'<tr><td colspan="8"><div class="empty-state">No marked attempts recorded.</div></td></tr>';
 }
 
 function renderNextAction() {
@@ -2230,7 +2216,7 @@ function renderNextAction() {
     $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">30-minute rescue/retest</span><span class="pill">fresh question</span><span class="pill">strict marking</span>`;
   } else if (topic) {
     focusRecommendedMinutes = 90;
-    $('next-action-title').textContent = `Attack: ${topic.name}`;
+    $('next-action-title').textContent = `Repair next: ${topic.name}`;
     $('next-action-copy').textContent = 'This topic has the strongest current combination of lost marks, weak recall, recurrence or calibration risk. Repair it through output—not a lecture marathon.';
     $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">90-minute deep block</span><span class="pill">fresh questions</span><span class="pill">close the loop</span>`;
   } else {
@@ -2279,8 +2265,12 @@ let shareSafeMode = false;
 function toggleShareSafe() {
   shareSafeMode = !shareSafeMode;
   document.body.classList.toggle('share-safe', shareSafeMode);
+  const practicalLink = document.getElementById('practical-lab-link');
+  if (practicalLink) practicalLink.href = shareSafeMode ? './practical-lab/?share=1' : './practical-lab/';
   $('share-safe-btn')?.classList.toggle('on', shareSafeMode);
   $('share-safe-btn')?.setAttribute('aria-pressed', String(shareSafeMode));
+  $('identity-line').textContent = shareSafeMode ? 'Community Edition · private performance hidden' : `${state.profile.name} · ${profileDisplayLine()}`;
+  if (shareSafeMode) document.querySelectorAll('dialog[open]').forEach(d => d.close());
   toast(shareSafeMode ? 'Share-safe mode ON. Personal performance is obscured.' : 'Share-safe mode OFF.');
 }
 
@@ -2359,7 +2349,7 @@ function renderRepairs() {
 function refreshAll() {
   renderKPIs(); renderExamTimeline(); renderPlanner(); renderDailyOutput(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction(); renderCourseCorrection(); renderRepairs(); refreshBackupHealth();
   SUBJECTS.forEach(updateSubjectPanel);
-  $('identity-line').textContent = `${state.profile.name} · ${profileDisplayLine()}`;
+  $('identity-line').textContent = shareSafeMode ? 'Community Edition · private performance hidden' : `${state.profile.name} · ${profileDisplayLine()}`;
   window.PowerhouseUpgrade?.onRender();
 }
 
@@ -2404,8 +2394,9 @@ function scheduleRetests(attempt) {
 
 function rebuildRetests() {
   const existing = new Map(state.retests.map(r => [`${r.sourceAttemptId}|${r.stage}`, r.id]));
+  const historicalLinks = PowerhouseEvidence.completedLinks(state.retests);
   state.retests = [];
-  [...state.attempts].sort((a,b) => String(a.date + a.createdAt).localeCompare(String(b.date + b.createdAt))).forEach(a => { completeEligibleRetests(a); scheduleRetests(a); });
+  [...state.attempts].sort((a,b) => String(a.date + a.createdAt).localeCompare(String(b.date + b.createdAt))).forEach(a => { completeEligibleRetests(a.sourceAttemptId ? a : {...a, sourceAttemptId: historicalLinks[a.id] || null}); scheduleRetests(a); });
   state.retests.forEach(r => { r.id = existing.get(`${r.sourceAttemptId}|${r.stage}`) || r.id; });
 }
 
@@ -2437,12 +2428,13 @@ function submitAttempt(event) {
   };
   const validation = PowerhouseModel.validateAttempt(attempt, todayISO());
   if (validation) { toast(validation); return; }
+  const previousState = JSON.parse(JSON.stringify(state));
   const existingIndex = state.attempts.findIndex(a => a.id === attempt.id);
   if (existingIndex >= 0) { attempt.createdAt = state.attempts[existingIndex].createdAt; attempt.updatedAt = new Date().toISOString(); snapshotState('pre-attempt-edit'); state.attempts[existingIndex] = attempt; }
   else state.attempts.push(attempt);
   rebuildRetests();
   const closedRetest = state.retests.some(r => r.completedByAttemptId === attempt.id);
-  saveState();
+  if (!saveState()) { state=previousState; toast('This attempt was not saved. Keep the form open and export its draft before leaving.'); return; }
   $('attempt-dialog').close();
   refreshAll();
   toast(closedRetest ? 'Successful proof saved. Matching due retest closed.' : ['fresh-transfer','delayed-retest'].includes(attempt.type) ? 'Check saved. No due retest met the closure criteria; keep repairing and retesting.' : earned === total ? 'Full-credit evidence saved.' : 'Evidence saved. Retests scheduled for +3 and +7 days.');
@@ -2484,7 +2476,7 @@ function renderCycle() {
   $('cycle-action').textContent = current.label;
   $('cycle-action').disabled = evidenceCycle.step > 0 && !evidenceCycle.done.includes(evidenceCycle.step - 1);
   $('cycle-action').title = $('cycle-action').disabled ? 'Complete the previous stage before starting this action.' : ''; 
-  $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step completed' : 'Mark step done';
+  $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step recorded by you' : 'Mark step done';
   $('cycle-complete').setAttribute('aria-pressed', String(evidenceCycle.done.includes(evidenceCycle.step)));
   $('cycle-steps').innerHTML = CYCLE_STEPS.map((step,index) => `<button class="cycle-step" type="button" data-cycle-step="${index}" data-done="${evidenceCycle.done.includes(index)}" ${index===evidenceCycle.step?'aria-current="step"':''}><b>${evidenceCycle.done.includes(index)?'✓':String(index+1).padStart(2,'0')}</b><span>${escapeHTML(step.title)}</span></button>`).join('');
   const count = evidenceCycle.done.length;
@@ -2499,7 +2491,11 @@ function markCycleStepDone() {
   if (!evidenceCycle.done.includes(evidenceCycle.step)) evidenceCycle.done.push(evidenceCycle.step);
   if (evidenceCycle.step < CYCLE_STEPS.length - 1) evidenceCycle.step += 1;
   saveCycle(); renderCycle();
-  toast(evidenceCycle.step === CYCLE_STEPS.length-1 && evidenceCycle.done.length===CYCLE_STEPS.length ? 'Full evidence loop closed. Start a new loop when ready.' : 'Step recorded. Continue to the next evidence action.');
+  if (evidenceCycle.done.length === CYCLE_STEPS.length) {
+    navigate('repairs');
+    document.getElementById('v7-verification')?.scrollIntoView({block:'start'});
+    toast('All workflow steps recorded. Assess linked marked attempts in the Verification desk; this checklist does not close the error.');
+  } else toast('Step recorded by you. Continue to the next evidence action.');
 }
 function runCycleAction() {
   const step = CYCLE_STEPS[evidenceCycle.step];
@@ -2524,7 +2520,8 @@ function runCycleAction() {
   openAttemptDialog('', step.type);
   $('attempt-subject').value = subject;
   fillTopicSelect(subject);
-  $('attempt-question').value = evidenceCycle.step===4 ? 'Closed-book reattempt · link to diagnosed attempt' : evidenceCycle.step===5 ? 'Fresh transfer · different question, same concept' : 'Delayed retest · retrieval after a delay';
+  $('attempt-question').value = '';
+  $('attempt-question').placeholder = 'Actual paper, year and question reference';
   refreshDiagnosisHint();
 }
 
@@ -2610,6 +2607,8 @@ function finishTimer() {
 function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerDeadline = null; timerRemaining = timerPresetMinutes * 60; persistFocusTimer(); renderTimer(); }
 
 function exportData() {
+  if (shareSafeMode) return;
+  if (PowerhouseCoreStore.readOnly) { const recovery={...PowerhouseCoreStore.copies(),inMemoryDraft:state},url=URL.createObjectURL(new Blob([JSON.stringify(recovery,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='powerhouse-paused-recovery-copies.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Saving is paused. Recovery copies exported without replacing any record.');return; }
   snapshotState('pre-export');
   state.lastExportedAt = new Date().toISOString();
   saveState();
@@ -2622,6 +2621,8 @@ function exportData() {
 }
 
 function exportWeeklyReport() {
+  if (shareSafeMode) return;
+  if (PowerhouseCoreStore.readOnly) { exportData(); return; }
   const end = todayISO(), start = addDays(end, -6), rows = attemptsInLastDays(7);
   const lines = [`A/L Performance Powerhouse — 7-day review`, `${start} to ${end} · Asia/Colombo`, `Self-reported, strictly marked evidence. Logged time is not proof of mastery.`, ''];
   for (const subject of SUBJECTS) {
@@ -2710,7 +2711,7 @@ function importData(file) {
 }
 
 function showWelcome() {
-  if (state.profileSetupComplete || $('welcome-dialog').open) return;
+  if (shareSafeMode || state.profileSetupComplete || $('welcome-dialog').open) return;
   $('welcome-name').value = '';
   $('welcome-year').value = state.profile?.year || '2027';
   $('welcome-target').value = state.profile?.target || '';
@@ -2776,6 +2777,7 @@ function initEvents() {
   });
   document.querySelectorAll('[data-close-timer]').forEach(b => b.addEventListener('click', () => { if (timerDeadline) timerRemaining=Math.max(0,Math.ceil((timerDeadline-Date.now())/1000)); clearInterval(timerHandle); timerHandle = null; timerDeadline = null; persistFocusTimer(); $('timer-dialog').close(); }));
   $('data-btn').addEventListener('click', () => {
+    if (shareSafeMode) { toast('Return to your private view before opening personal records.'); return; }
     $('profile-name').value = state.profile.name;
     $('profile-year').value = state.profile.year || '2027';
     $('profile-target').value = state.profile.target || '';
@@ -2817,7 +2819,7 @@ refreshAll();
 restoreFocusTimer();
 try {
   const hashPanel = location.hash.replace('#','');
-  if (['command','physics','chemistry','biology','repairs','course','daily','planner','attempts','guide'].includes(hashPanel)) navigate(hashPanel);
+  if (['command','physics','chemistry','biology','repairs','course','daily','planner','attempts','guide','review'].includes(hashPanel)) navigate(hashPanel);
   const queryParams = new URLSearchParams(location.search);
   if (queryParams.get('share') === '1' && !shareSafeMode) toggleShareSafe();
   if (queryParams.get('log') === '1') {
@@ -2837,12 +2839,16 @@ try {
 } catch (_) {}
 setTimeout(showWelcome, 0);
 </script>
-<script src="./powerhouse/app.js"></script>
+<script src="/data-safety/powerhouse-record-review.js"></script><script src="./powerhouse/app.js"></script>
 <script src="./powerhouse/verification.js"></script>
 <script src="./powerhouse/verification-ui.js"></script>
 <script src="./powerhouse/planning.js"></script>
 <script src="./powerhouse/planning-ui.js"></script>
+<script src="./practical-lab/model.js"></script>
+<script src="./practical-lab/host.js"></script>
 <script src="./powerhouse/launchpad-model.js"></script>
 <script src="./powerhouse/launchpad-ui.js"></script>
-</body>
+<script src="/workspace-shell/shell.js"></script>
+<script src="/powerhouse/execution-v10.js"></script>
+<script type="module" src="/workflow-studio/home.js"></script><script src="/powerhouse/review-model.js"></script><script src="/powerhouse/workspace-v12.js"></script><link rel="stylesheet" href="/powerhouse/workspace-v12.css"><link rel="stylesheet" href="/powerhouse/command-plan-shared.css"><link rel="stylesheet" href="/powerhouse/command-workspace-v13.css"><script src="/powerhouse/command-plan-model.js"></script><script src="/powerhouse/command-plan-ui.js"></script><script src="/powerhouse/command-workspace-v13.js"></script><link rel="stylesheet" href="/powerhouse/repair-board.css"><script src="/powerhouse/repair-inspector-model.js"></script><script src="/powerhouse/repair-board-model.js"></script><script src="/powerhouse/repair-board-ui.js"></script><link rel="stylesheet" href="/data-safety/powerhouse-v14.css"><script src="/data-safety/powerhouse-core-ui.js"></script><script src="/data-safety/powerhouse-evidence-v14.js"></script></body>
 </html>

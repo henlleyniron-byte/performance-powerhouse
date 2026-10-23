@@ -12,7 +12,7 @@ export default async function Home({ searchParams }: HomeProps) {
       <iframe
         className="command-centre"
         src={source}
-        title="A/L Performance Powerhouse V8 Evidence & Capacity Edition"
+        title="A/L Performance Powerhouse V16 with Study Execution Studio and Practical Mastery V5"
       />
     </main>
   );

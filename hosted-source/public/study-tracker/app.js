@@ -1,4 +1,5 @@
 const STORAGE_KEY = 'al_performance_powerhouse_study_tracker_v1';
+const trackerStore=TrinityStore.open({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value),keys:()=>Object.keys(localStorage),removeItem:key=>localStorage.removeItem(key)},STORAGE_KEY,{isolated:true,validate:value=>{if(value.version!==1||!Array.isArray(value.sessions)||!Array.isArray(value.goals)||value.sessions.some(row=>!row||typeof row.id!=='string'||typeof row.notes!=='string'||!Number.isFinite(row.durationSeconds)))throw Error('Unsupported or malformed tracker records.');const ids=new Set(value.sessions.map(row=>row.id));if(ids.size!==value.sessions.length)throw Error('Duplicate tracker identifiers.');}});
 const CHANNEL_NAME = 'performance-powerhouse-study-tracker-v1';
 const TIMEZONE = 'Asia/Colombo';
 const SESSION_TYPES = [
@@ -51,9 +52,9 @@ function validIso(value){if(!value)return null;const d=new Date(value);return Nu
 function boundedInt(value,min,max){const n=Number(value);return Number.isFinite(n)?Math.min(max,Math.max(min,Math.round(n))):min}
 
 function loadState(){
-  let raw;try{raw=safeJson(localStorage.getItem(STORAGE_KEY),null)}catch{storageFailed=true;raw=volatileState}const base=defaultState();
+  let raw;try{if(trackerStore.readOnly){storageFailed=true;return volatileState||defaultState();}raw=trackerStore.value;}catch{storageFailed=true;raw=volatileState}const base={...defaultState(),...(raw||{})};
   if(!raw||typeof raw!=='object')return base;
-  base.sessions=Array.isArray(raw.sessions)?raw.sessions.map(normalizeSession):[];
+  base.sessions=Array.isArray(raw.sessions)?raw.sessions.map(row=>({...normalizeSession(row),...row})):[];
   base.goals=Array.isArray(raw.goals)?raw.goals:[];base.migrations=Array.isArray(raw.migrations)?raw.migrations:[];
   base.preferences={...base.preferences,...(raw.preferences||{})};base.active=raw.active&&typeof raw.active==='object'?raw.active:null;
   base.sync={...base.sync,...(raw.sync||{}),queue:Array.isArray(raw.sync?.queue)?raw.sync.queue:[]};return base;
@@ -63,8 +64,8 @@ let state=loadState();
 
 function saveState(notify=true){
   volatileState=state;
-  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));storageFailed=false}catch{storageFailed=true}
-  const warning=$('storageWarning');if(warning){warning.hidden=!storageFailed;warning.textContent=storageFailed?'Browser storage is unavailable. This session remains open, but export a backup before closing. Cloud sync has a separate status below.':''}
+  try{trackerStore.save(state);storageFailed=false}catch{storageFailed=true}
+  const warning=$('storageWarning');if(warning){warning.hidden=!storageFailed;warning.textContent=storageFailed?(trackerStore.problem?trackerStore.problem+' Keep this session open and export a backup before closing.':'Browser storage is unavailable. This session remains open, but export a backup before closing. Cloud sync has a separate status below.') :''}
   if(notify)channel?.postMessage({type:'state-updated',at:Date.now()});
 }
 
@@ -209,7 +210,7 @@ function saveEdit(event){event.preventDefault();const s=state.sessions.find(x=>x
 
 function deleteSession(id){const s=state.sessions.find(x=>x.id===id);if(!s||!confirm(`Delete “${s.topic||TYPE_LABELS[s.sessionType]}”? This removes the session from local and synced history.`))return;state.sessions=state.sessions.filter(x=>x.id!==id);queueSync({action:'delete-session',id});saveState();renderAll();toast('Session deleted.');}
 
-function download(name,content,type='application/json'){const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function download(name,content,type='application/json'){if(document.body.classList.contains('share-safe')||new URLSearchParams(location.search).get('share')==='1')return;const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 function exportJson(){download(`powerhouse-study-tracker-${colomboDay()}.json`,JSON.stringify({kind:'performance-powerhouse-study-tracker-backup',version:1,exportedAt:new Date().toISOString(),studyTracker:state},null,2))}
 function csvCell(v){const s=String(v??'');return /[",\n]/.test(s)?`"${s.replaceAll('"','""')}"`:s}
 function exportCsv(){const columns=['id','startedAt','endedAt','subject','sessionType','topic','durationSeconds','plannedDurationSeconds','evidenceKind','outputCount','outputUnit','linkedAttemptId','notes','source'];const lines=[columns.join(','),...state.sessions.map(s=>columns.map(c=>csvCell(s[c])).join(','))];download(`powerhouse-study-tracker-${colomboDay()}.csv`,lines.join('\n'),'text/csv')}
@@ -237,7 +238,7 @@ async function importPayload(file){
   saveState();renderAll();$('migrationStatus').textContent=migration?`Source ${sourceRows} rows → ${sessions.length} output records transformed → ${sessions.length} imported locally. SHA-256 ${migration.sourceChecksum.slice(0,16)}… retained for verification.`:`${sessions.length} tracker sessions restored from backup.`;toast(`${sessions.length} tracker records imported safely.`);syncNow();
 }
 
-function completeBackup(){const core=safeJson(localStorage.getItem('al_performance_powerhouse_v4'),null),physics=safeJson(localStorage.getItem('al_performance_powerhouse_physics_intelligence_v1'),null);download(`performance-powerhouse-complete-backup-${colomboDay()}.json`,JSON.stringify({kind:'performance-powerhouse-complete-backup',version:1,exportedAt:new Date().toISOString(),powerhouseCore:core,studyTracker:state,physicsIntelligence:physics,moduleSnapshots:{scienceSessions:localStorage.getItem('alpp_science_sessions_v1'),verification:localStorage.getItem('alpp_verification_chains_v7'),calendar:localStorage.getItem('alpp_calendar_projection_v1')},subjectIntelligence:{chemistry:localStorage.getItem('al_performance_powerhouse_chemistry_intelligence_v1'),biology:localStorage.getItem('al_performance_powerhouse_biology_intelligence_v1')}},null,2))}
+function completeBackup(){if(document.body.classList.contains('share-safe')||new URLSearchParams(location.search).get('share')==='1')return;const current=key=>{try{return TrinityRead.raw(localStorage,key);}catch{return null;}},keys=['al_performance_powerhouse_v4',STORAGE_KEY,'al_performance_powerhouse_physics_intelligence_v1','alpp_verification_chains_v7'],trinityRecovery=keys.map(key=>TrinityRead.copies(localStorage,key));const core=safeJson(current('al_performance_powerhouse_v4'),null),physics=safeJson(current('al_performance_powerhouse_physics_intelligence_v1'),null);download('performance-powerhouse-complete-backup-'+colomboDay()+'.json',JSON.stringify({kind:'performance-powerhouse-complete-backup',version:1,exportedAt:new Date().toISOString(),powerhouseCore:core,studyTracker:state,physicsIntelligence:physics,trinityRecovery,moduleSnapshots:{scienceSessions:localStorage.getItem('alpp_science_sessions_v1'),verification:current('alpp_verification_chains_v7'),calendar:localStorage.getItem('alpp_calendar_projection_v1')},subjectIntelligence:{chemistry:localStorage.getItem('al_performance_powerhouse_chemistry_intelligence_v1'),biology:localStorage.getItem('al_performance_powerhouse_biology_intelligence_v1')}},null,2))}
 
 async function deleteAllData(){
   if(prompt('This permanently deletes Study Tracker sessions, goals, settings and migration receipts. Type DELETE to continue.')!=='DELETE')return;
@@ -254,6 +255,8 @@ function mergeCloud(data){
 }
 
 async function syncNow(){
+  if(trackerStore.readOnly){storageFailed=true;saveState(false);return renderSync();}
+
   if(syncRunning||!navigator.onLine)return;syncRunning=true;state.sync.status='syncing';renderSync();
   try{const response=await fetch('/api/study-tracker',{headers:{accept:'application/json'}});if(response.status===401){state.sync.status='local';saveState(false);return renderSync()}if(!response.ok)throw new Error('sync unavailable');const data=await response.json();mergeCloud(data);
     const remaining=[];for(const item of state.sync.queue){try{const res=await apiPost(item);if(!res.ok)throw new Error('write failed');if(item.action==='upsert-session'){const s=state.sessions.find(x=>x.id===item.session.id);if(s)s.syncState='synced';}}catch{remaining.push(item)}}state.sync.queue=remaining;state.sync.lastSyncedAt=new Date().toISOString();state.sync.status=remaining.length?'pending':'synced';saveState(false);renderAll();
@@ -262,7 +265,7 @@ async function syncNow(){
 
 function renderSync(){const el=$('syncStatus'),pending=state.sync.queue.length;el.className='sync-chip';if(state.sync.status==='synced'){el.classList.add('synced');el.textContent='Cloud synced';$('authButton').textContent='Signed in';$('authButton').href='/signout-with-chatgpt?return_to=%2Fstudy-tracker%2F'}else if(pending){el.classList.add('pending');el.textContent=`${pending} pending sync`;$('authButton').textContent='Sign in / retry sync'}else{el.textContent=navigator.onLine?'Local first':'Offline · saved locally'}$('syncButton').textContent=state.sync.status==='syncing'?'Syncing…':'Sync now';$('syncButton').disabled=state.sync.status==='syncing'}
 
-function toggleShareSafe(force){const on=typeof force==='boolean'?force:!document.body.classList.contains('share-safe');document.body.classList.toggle('share-safe',on);$('shareToggle').setAttribute('aria-pressed',String(on));state.preferences.shareSafe=on;saveState(false)}
+function toggleShareSafe(force){const on=typeof force==='boolean'?force:!document.body.classList.contains('share-safe');document.body.classList.toggle('share-safe',on);$('shareToggle').setAttribute('aria-pressed',String(on));state.preferences.shareSafe=on;const url=new URL(location.href);if(on)url.searchParams.set('share','1');else url.searchParams.delete('share');history.replaceState(null,'',url);saveState(false)}
 
 function renderAll(){renderTimer();renderMetrics();renderSubjectBars();renderHeatmap();renderHistory();renderGoal();renderSync();const passive=PASSIVE_TYPES.has($('sessionType').value);$('passiveWarning').hidden=!passive}
 
@@ -274,7 +277,7 @@ function initEvents(){
   $('historyBody').addEventListener('click',e=>{const edit=e.target.closest('[data-edit]'),del=e.target.closest('[data-delete]');if(edit)editSession(edit.dataset.edit);if(del)deleteSession(del.dataset.delete)});
   $('editForm').addEventListener('submit',saveEdit);$('goalForm').addEventListener('submit',saveGoal);$('exportJson').addEventListener('click',exportJson);$('exportCsv').addEventListener('click',exportCsv);$('completeBackup').addEventListener('click',completeBackup);$('deleteAllData').addEventListener('click',deleteAllData);
   $('importButton').addEventListener('click',()=>$('importFile').click());$('importFile').addEventListener('change',async e=>{const file=e.target.files[0];if(file)try{await importPayload(file)}catch(error){toast(error.message||'Import failed safely.')}e.target.value=''});
-  $('syncButton').addEventListener('click',syncNow);$('shareToggle').addEventListener('click',()=>toggleShareSafe());window.addEventListener('online',syncNow);window.addEventListener('storage',e=>{if(e.key===STORAGE_KEY){state=loadState();renderAll()}});channel?.addEventListener('message',()=>{state=loadState();renderAll()});
+  $('syncButton').addEventListener('click',syncNow);$('shareToggle').addEventListener('click',()=>toggleShareSafe());window.addEventListener('online',syncNow);window.addEventListener('storage',e=>{if(e.key===STORAGE_KEY){try{trackerStore.save(state);}catch{}storageFailed=true;saveState(false);renderAll()}});channel?.addEventListener('message',()=>{state=loadState();renderAll()});
 }
 
 populateSelects();applyCommandBridge();initEvents();renderAll();if(storageFailed){$('storageWarning').hidden=false;$('storageWarning').textContent='Browser storage is unavailable. Export a backup before closing; work remains usable for this visit.';}setInterval(renderTimer,250);syncNow();

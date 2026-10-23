@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/data-safety/compatible-read.js"></script><script src="/data-safety/safe-store.js"></script><script>globalThis.PowerhouseCoreStore=TrinityStore.open({getItem:key=>localStorage.getItem(key),setItem:(key,value)=>localStorage.setItem(key,value),keys:()=>Object.keys(localStorage),removeItem:key=>localStorage.removeItem(key)},'al_performance_powerhouse_v4',{isolated:true,validate:TrinityStore.core,fallbacks:['al_performance_powerhouse_v3','al_performance_command_centre_v6','al_performance_command_centre_v5','al_performance_command_centre_v4','al_performance_command_centre_v3']});</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A/L Performance Powerhouse · V4 Community Edition</title>
@@ -1309,14 +1309,9 @@ function defaultState() {
 }
 
 function loadState() {
+  if (!globalThis.PowerhouseCoreStore || (PowerhouseCoreStore.readOnly && !PowerhouseCoreStore.value)) { const view=defaultState(); view.profileSetupComplete=true; return view; }
   try {
-    const raw = localStorage.getItem(APP_KEY)
-      || localStorage.getItem(PREVIOUS_POWERHOUSE_APP_KEY)
-      || localStorage.getItem(PREVIOUS_APP_KEY)
-      || localStorage.getItem(OLDER_APP_KEY)
-      || localStorage.getItem(OLDEST_APP_KEY)
-      || localStorage.getItem(VERY_OLD_APP_KEY)
-      || 'null';
+    const raw = PowerhouseCoreStore.raw || 'null';
     const saved = JSON.parse(raw);
     if (!saved || typeof saved !== 'object') return defaultState();
     const base = defaultState();
@@ -1341,9 +1336,6 @@ function loadState() {
         rescueRuns: Array.isArray(saved.courseCorrection?.rescueRuns) ? saved.courseCorrection.rescueRuns : []
       }
     };
-    if (!localStorage.getItem(APP_KEY)) {
-      try { localStorage.setItem(APP_KEY, JSON.stringify(migrated)); } catch (_) {}
-    }
     return migrated;
   } catch (_) { return defaultState(); }
 }
@@ -1376,13 +1368,8 @@ const escapeHTML = (value = '') => String(value).replace(/[&<>'"]/g, c => ({ '&'
 const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
 
 function saveState() {
-  try {
-    localStorage.setItem(APP_KEY, JSON.stringify(state));
-    return true;
-  } catch (_) {
-    toast('Progress could not be saved. Export a backup before closing.');
-    return false;
-  }
+  try { if (!globalThis.PowerhouseCoreStore) throw Error('The data-safety guard is unavailable.'); PowerhouseCoreStore.save(state); window.PowerhouseUpgrade?.onSave(); return true; }
+  catch(error) { toast(error.message+' Export your current work before leaving.'); document.dispatchEvent(new Event('trinity-core-problem')); return false; }
 }
 
 function toast(message) {
@@ -2353,7 +2340,7 @@ function submitAttempt(event) {
   completeEligibleRetests(attempt);
   state.attempts.push(attempt);
   scheduleRetests(attempt);
-  saveState();
+  if (!saveState()) { state=previousState; toast('This attempt was not saved. Keep the form open and export its draft before leaving.'); return; }
   $('attempt-dialog').close();
   refreshAll();
   toast(earned === total ? 'Full-credit evidence saved.' : 'Evidence saved. Retests scheduled for +3 and +7 days.');
@@ -2429,6 +2416,8 @@ function finishTimer() {
 function resetTimer() { clearInterval(timerHandle); timerHandle = null; timerDeadline = null; timerRemaining = timerPresetMinutes * 60; renderTimer(); }
 
 function exportData() {
+  if (shareSafeMode) return;
+  if (PowerhouseCoreStore.readOnly) { const recovery={...PowerhouseCoreStore.copies(),inMemoryDraft:state},url=URL.createObjectURL(new Blob([JSON.stringify(recovery,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='powerhouse-paused-recovery-copies.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('Saving is paused. Recovery copies exported without replacing any record.');return; }
   snapshotState('pre-export');
   state.lastExportedAt = new Date().toISOString();
   saveState();
@@ -2561,6 +2550,7 @@ function initEvents() {
   });
   document.querySelectorAll('[data-close-timer]').forEach(b => b.addEventListener('click', () => { clearInterval(timerHandle); timerHandle = null; timerDeadline = null; $('timer-dialog').close(); }));
   $('data-btn').addEventListener('click', () => {
+    if (shareSafeMode) { toast('Return to your private view before opening personal records.'); return; }
     $('profile-name').value = state.profile.name;
     $('profile-year').value = state.profile.year || '2027';
     $('profile-target').value = state.profile.target || '';
@@ -2620,5 +2610,5 @@ try {
 } catch (_) {}
 setTimeout(showWelcome, 0);
 </script>
-</body>
+<link rel="stylesheet" href="/data-safety/powerhouse-v14.css"><script src="/data-safety/powerhouse-core-ui.js"></script></body>
 </html>

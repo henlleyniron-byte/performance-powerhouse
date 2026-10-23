@@ -1,5 +1,6 @@
+import { fileURLToPath as toNativeTestPath } from "node:url";
 import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync,existsSync,writeFileSync} from 'node:fs';import vm from 'node:vm';
-const roots=[new URL('../',import.meta.url).pathname.replace(/\/$/,'')];
+const roots=[toNativeTestPath(new URL('../',import.meta.url)).replace(/\/$/,'')];
 function model(root){const c=vm.createContext({});vm.runInContext(readFileSync(root+'/public/subscription-playbook/model.js','utf8'),c);return c.SubscriptionPlaybook}
 test('timed tests never route into an assistant, including when all three are available',()=>{for(const r of roots){const x=model(r).route('test',['chatgpt','claude','gemini']);assert.equal(x.tool,null);assert.match(x.text,/no AI/);assert.equal(x.fallback,null)}});
 test('routing uses only available access and gives a manual/free fallback',()=>{const m=model(roots[0]);assert.equal(m.route('sources',['claude']).tool,'claude');assert.equal(m.route('sources',[]).tool,null);assert.match(m.route('sources',[]).fallback,/free/);assert.equal(m.route('sources',['gemini','chatgpt']).tool,'gemini')});
