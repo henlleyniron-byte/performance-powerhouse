@@ -67,6 +67,8 @@ Use fictional records and a separate browser profile. This preview does not supp
 | Legacy root `npm test` | 7 passed; 0 failed | Service-worker source contracts |
 | Secondary legacy `npm test` | 63 passed; 0 failed | Its unit and static-integrity checks |
 
+The new [public source archive CI run](https://github.com/henlleyniron-byte/performance-powerhouse/actions/runs/39952317952) passed on `df16ff71f016a891c4bce87c3fd99d1ab013f86a`. This is remote verification of the listed archive/source/unit checks, not a deployment or browser test.
+
 The verifier reads hashes from Git objects, compares complete snapshot path sets and rejects published omissions. It also compares all 42 saved version/source associations to the captured first-party record inventory. The original source trees were independently compared with the public manifests locally. Runtime source files are copied without dependency upgrades.
 
 No full Worker build, real-browser run, authenticated API test, data migration, backup/restore rehearsal or production rollout was performed for this reconciliation. Secondary Playwright test files are preserved but were not executed. Historical green CI results or imported QA documents do not extend these results. A skipped test is not a pass.

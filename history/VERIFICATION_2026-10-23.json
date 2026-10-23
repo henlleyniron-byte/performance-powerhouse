@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-23",
+  "timezone": "Asia/Colombo",
+  "archive": {
+    "checked_head": "df16ff71f016a891c4bce87c3fd99d1ab013f86a",
+    "saved_versions": 42,
+    "intermediate_hosted_commits": 6,
+    "secondary_commits": 4,
+    "snapshots_verified": 52,
+    "file_hash_checks": 5763,
+    "unique_public_blobs": 631,
+    "result": "pass",
+    "limits": "Proves indexed Git paths, modes, hashes and original unredacted blob associations. Does not prove hosted HTTP parity, deployment, academic accuracy, browser behavior, build reproducibility or recovery."
+  },
+  "node_version": "v24.19.0",
+  "test_results": [
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/clinic-v32.test.mjs",
+        "tests/evidence-rules.test.mjs",
+        "tests/planning-v8.test.mjs",
+        "tests/powerhouse-model.test.mjs",
+        "tests/practical-lab.test.mjs",
+        "tests/practical-v5-ui.test.mjs",
+        "tests/practical-v5.test.mjs",
+        "tests/practice-baseline.test.mjs",
+        "tests/prudent-dark-upgrade.test.mjs",
+        "tests/reliability.test.mjs",
+        "tests/rendered-html.test.mjs",
+        "tests/repair-board-dom.test.mjs",
+        "tests/science-intelligence.test.mjs",
+        "tests/study-flow.test.mjs",
+        "tests/study-library-practice.test.mjs",
+        "tests/study-library-storage.test.mjs",
+        "tests/study-library-ui.test.mjs",
+        "tests/study-library.test.mjs",
+        "tests/subject-advanced-ui.test.mjs",
+        "tests/subject-advanced.test.mjs",
+        "tests/subject-intelligence-ui.test.mjs",
+        "tests/subject-intelligence.test.mjs",
+        "tests/subscription-playbook.test.mjs",
+        "tests/unreadable-recovery.test.mjs",
+        "tests/verification-draft-dom.test.mjs",
+        "tests/verification-integrity.test.mjs",
+        "tests/verification-v7.test.mjs",
+        "tests/workflow-runs.test.mjs",
+        "tests/workflow-studio.test.mjs",
+        "tests/command-plan.test.cjs",
+        "tests/repair-board.test.cjs",
+        "tests/repair-inspector.test.cjs",
+        "tests/review-summary.test.cjs",
+        "tests/trinity-compatible-read.test.cjs",
+        "tests/trinity-data-safety.test.cjs",
+        "tests/trinity-share-navigation.test.cjs"
+      ],
+      "cwd": "hosted-source",
+      "exit_code": 0,
+      "tests": 241,
+      "pass": 187,
+      "fail": 0,
+      "skipped": 54
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "related-source/legacy-v5.1",
+      "exit_code": 0,
+      "tests": 63,
+      "pass": 63,
+      "fail": 0,
+      "skipped": 0
+    }
+  ],
+  "original_source_comparison": {
+    "original_trees": 52,
+    "included_path_associations": 5763,
+    "result": "pass",
+    "method": "Local original Git tree path/mode/blob comparisons against every indexed manifest; omissions also associated with original blobs."
+  },
+  "bounded_latest_pattern_scan": {
+    "result": "no matches",
+    "scope": "Latest hosted and secondary source only; GitHub/OpenAI token and private-key patterns; not a complete secret audit."
+  },
+  "not_performed": [
+    "framework/Worker build",
+    "real-browser tests",
+    "authenticated API tests",
+    "database migration",
+    "release archive byte hashing",
+    "recovery rehearsal",
+    "production deployment"
+  ],
+  "remote_ci": {
+    "head_sha": "df16ff71f016a891c4bce87c3fd99d1ab013f86a",
+    "conclusion": "success",
+    "url": "https://github.com/henlleyniron-byte/performance-powerhouse/actions/runs/39952317952"
+  }
+}
