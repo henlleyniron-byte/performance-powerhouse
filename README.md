@@ -1,14 +1,20 @@
 # Performance Powerhouse
 
-## Current source and review history
+## Current hosted source and complete upgrade history
 
-**Flagship repository: henlleyniron-byte/performance-powerhouse.** The hosted product is **V16 — Evidence & Recovery**, saved Site version **42**, while the root runtime below remains the legacy V5.0.1 application.
+**This is the flagship repository: henlleyniron-byte/performance-powerhouse.** The hosted product is **V16 — Evidence & Recovery**, saved Site version **42**. The application at the root of this default branch remains the **legacy V5.0.1** snapshot.
 
-Start with the **[reviewer guide](docs/REVIEWER_GUIDE.md)**, **[current hosted source](hosted-source/)** and **[complete source catalogue](history/SITE_VERSIONS.md)**. The catalogue preserves all **48 reachable hosted-source commits** (42 saved versions plus six intermediate commits) and **four secondary legacy commits**. Each indexed snapshot has original source references, public hashes and explicit omissions.
+- **[Start here: reviewer guide and verification evidence](docs/REVIEWER_GUIDE.md)**
+- **[Inspect the latest V16 source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/hosted-source)**
+- **[Browse all 42 saved versions, six additional hosted commits and four secondary upgrades](https://github.com/henlleyniron-byte/performance-powerhouse/blob/archive/site-history-review-20261021/history/SITE_VERSIONS.md)**
+- **[Inspect the separate legacy V5.1 development line](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/related-source/legacy-v5.1)**
+- **[Draft PR #8: source reconciliation](https://github.com/henlleyniron-byte/performance-powerhouse/pull/8)** · **[Verification receipt](https://github.com/henlleyniron-byte/performance-powerhouse/blob/archive/site-history-review-20261021/history/VERIFICATION_2026-10-23.json)**
 
-This is a sanitized public review archive. The latest hosted snapshot includes 262 files; seven files are omitted and eight have private/contact links redacted. The separate secondary legacy source is in [related-source/legacy-v5.1/](related-source/legacy-v5.1/). These sources do not establish production parity, restore safety, adoption or academic outcomes. See [the current import report](docs/SOURCE_IMPORT_2026-10-23.md) and [draft PR #8](https://github.com/henlleyniron-byte/performance-powerhouse/pull/8).
+All **48 reachable hosted-source commits** and **four secondary legacy commits** are represented by traceable public snapshots. The archive verifier passed **5,763 file-hash checks across 52 snapshots**. Latest hosted Node checks: **187 passed, 54 skipped, zero failed**. Legacy root: **seven passed**. Secondary legacy: **63 passed**. [Remote archive CI passed](https://github.com/henlleyniron-byte/performance-powerhouse/actions/runs/39952317952).
 
-## Legacy V5 public application
+The newer source is available on the public review branch and has not been merged into the legacy root. Private/contact links are redacted, and document/archive/screenshot exclusions are disclosed per snapshot. These are sanitized review sources, not complete production recovery artifacts. Browser, authenticated API, migration and recovery acceptance remain open in [#5](https://github.com/henlleyniron-byte/performance-powerhouse/issues/5) and [#7](https://github.com/henlleyniron-byte/performance-powerhouse/issues/7).
+
+## Legacy V5 application
 
 **Performance Powerhouse** is a local-first, privacy-conscious study evidence system for Sri Lankan G.C.E. A/L Biological Science students.
 
