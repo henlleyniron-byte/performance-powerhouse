@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A/L Performance Powerhouse · V15 Evidence Trail</title>
+<title>A/L Performance Powerhouse · V6 Evidence Edition</title>
 <meta name="description" content="A local-first G.C.E. A/L Biological Science performance and error-correction system for honest attempts, diagnosis, repair, fresh transfer and delayed retesting.">
 <style>
   :root {
@@ -447,7 +447,7 @@
   }
   @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
 
-  /* Powerhouse V15 · integrated daily-output layer */
+  /* Powerhouse V3 · integrated daily-output layer */
   .daily-hero { display:grid; grid-template-columns:1.18fr .82fr; gap:14px; margin-bottom:14px; }
   .daily-summary-panel h2 { margin:6px 0 8px; font:clamp(24px,4vw,36px) "DM Serif Display", Georgia, serif; }
   .daily-summary-panel > p { margin:0 0 16px; line-height:1.65; font-size:10px; }
@@ -482,7 +482,7 @@
   .v3-badge { display:inline-flex; align-items:center; gap:6px; padding:5px 9px; border-radius:999px; border:1px solid rgba(255,209,102,.28); background:rgba(255,209,102,.08); color:var(--gold); font-size:9px; font-weight:850; letter-spacing:.04em; }
   .course-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:14px; margin-bottom:14px; }
   .course-hero { position:relative; overflow:hidden; padding:24px; }
-  .course-hero::after { content:"V15"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
+  .course-hero::after { content:"V3"; position:absolute; right:18px; bottom:-38px; font:120px "DM Serif Display", Georgia, serif; color:rgba(255,255,255,.025); pointer-events:none; }
   .course-hero h2 { margin:7px 0 8px; max-width:780px; font:clamp(25px,4vw,38px) "DM Serif Display", Georgia, serif; line-height:1.08; }
   .course-hero p { color:var(--muted); line-height:1.65; margin:0 0 15px; max-width:760px; }
   .course-status { display:flex; gap:7px; flex-wrap:wrap; }
@@ -607,13 +607,12 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *, *::before, *::after { animation:none!important; transition:none!important; } }
 </style>
 <link rel="stylesheet" href="./powerhouse/styles.css">
-<link rel="stylesheet" href="./powerhouse/planning.css">
-<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script><link rel="stylesheet" href="/workspace-shell/shell.css"><link rel="stylesheet" href="/powerhouse/flagship.css"></head>
+</head>
 <body>
 
 <div class="app-header">
   <div class="shell header-row">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V15</h1><span class="edition-badge">FLAGSHIP / EVIDENCE TRAIL</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V6</h1><span class="edition-badge">EVIDENCE EDITION</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
     <div class="header-actions">
       <button class="backup-chip" id="backup-health" type="button" title="Backup health">Backup —</button>
       <button class="icon-btn" id="share-safe-btn" type="button" title="Share-safe mode" aria-label="Toggle share-safe mode">◫</button>
@@ -623,28 +622,23 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   </div>
 </div>
 
-<nav class="tabs flagship-tabs" id="app-tabs" aria-label="Dashboard sections"><button class="tab active" type="button" data-panel="command">Command</button>
-<button class="tab" type="button" data-panel="physics">Physics</button>
-<button class="tab" type="button" data-panel="chemistry">Chemistry</button>
-<button class="tab" type="button" data-panel="biology">Biology</button>
-<button class="tab" type="button" data-panel="review">Review</button><button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
-<button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count">0</span></button>
-<button class="tab" type="button" data-panel="guide">Guide</button><details class="workspace-more"><summary>More workspaces</summary><div class="workspace-menu"><a class="tab tab-link" href="./practical-lab/" id="practical-lab-link">Practical Lab</a>
-<a class="tab tab-link" href="./study-library/?view=practice">Private practice desk</a>
-<a class="tab tab-link" href="./subscription-lab/">Compare one AI task</a>
-<a class="tab tab-link" href="./subscription-playbook/">AI Subscription Playbook</a>
-<a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
-<a class="tab tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a>
-<a class="tab tab-link" href="./biology-intelligence/">Biology Intelligence</a>
-<a class="tab tab-link" href="./science-intelligence/">Science Intelligence Hub</a>
-<a class="tab tab-link" href="./study-library/">Private Study Library</a>
-<a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
-<a class="tab tab-link" href="./resource-desk/index.html">Resource Desk</a>
-<button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge">ON</span></button>
-<button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
-<button class="tab" type="button" data-panel="planner">Syllabus Map</button></div></details></nav>
+<nav class="tabs" id="app-tabs" aria-label="Dashboard sections">
+  <button class="tab active" type="button" data-panel="command">Command</button>
+  <button class="tab" type="button" data-panel="physics">Physics</button>
+  <a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
+  <a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
+  <a class="tab tab-link" href="./resource-desk/index.html">Resource Desk</a>
+  <button class="tab" type="button" data-panel="chemistry">Chemistry</button>
+  <button class="tab" type="button" data-panel="biology">Biology</button>
+  <button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
+  <button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge">ON</span></button>
+  <button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
+  <button class="tab" type="button" data-panel="planner">Syllabus Map</button>
+  <button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count">0</span></button>
+  <button class="tab" type="button" data-panel="guide">Guide</button>
+</nav>
 
-<main><section class="content" id="panel-review"><div class="v12-section-heading"><p class="eyebrow">EVIDENCE REVIEW / V15</p><h2>What changed in your marked work?</h2><p>Review the core ledger, find the next check and return to one useful action.</p></div><section class="panel" id="v12-review-summary"><div class="v12-review-controls"><label for="v12-review-range">Evidence window<select id="v12-review-range"><option value="7">Last 7 days</option><option value="30">Last 30 days</option></select></label><label for="v12-review-subject">Subject<select id="v12-review-subject"><option value="all">All subjects</option><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select></label><button class="secondary-btn" id="v12-summary-export" type="button">Export portable evidence summary</button></div><div id="v12-review-data" aria-live="polite"></div><p class="v6-note">Core-ledger coverage only. Separate subject labs and external Notion records are not merged. Marks describe the selected questions; they are not a predicted grade.</p></section><div id="v12-review-existing"></div></section>
+<main>
   <section class="content active" id="panel-command">
     <div class="hero-grid">
       <article class="focus-card">
@@ -652,7 +646,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
         <h2 id="next-action-title">Log one honest timed attempt.</h2>
         <p id="next-action-copy">The dashboard needs performance evidence before it can diagnose your highest-return repair.</p>
         <div class="focus-meta" id="next-action-meta"><span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
-        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" href="./study-tracker/">Track this block</a><button class="secondary-btn" id="short-block-btn" type="button">Start 15-min recall block</button><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
+        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" href="./study-tracker/">Track this block</a><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
       </article>
       <aside class="mission-card">
         <div class="eyebrow">The governing loop</div><h3>Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest</h3>
@@ -666,10 +660,10 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
     <section class="panel cycle-panel" aria-labelledby="cycle-title">
       <div class="cycle-head">
-        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action. These self-recorded steps guide your workflow; they do not close an error or award mastery. Use the Verification desk to assess linked marked attempts.</p></div>
+        <div><div class="eyebrow">One question · complete evidence</div><h3 id="cycle-title">Run the seven-step repair loop</h3><p>Choose a subject. Each stage opens the matching action; progress is saved with your evidence when cloud saving is connected. This checklist records your actions; marked results provide the proof.</p></div>
         <div class="cycle-controls"><label class="muted" for="cycle-subject" style="font-size:10px">Subject</label><select id="cycle-subject"><option value="biology">Biology</option><option value="chemistry">Chemistry</option><option value="physics">Physics</option></select><button class="secondary-btn" id="cycle-reset" type="button">New loop</button></div>
       </div>
-      <div class="cycle-progress" id="cycle-progress" role="progressbar" aria-label="Self-recorded workflow steps" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
+      <div class="cycle-progress" id="cycle-progress" role="progressbar" aria-label="Evidence loop progress" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><span id="cycle-progress-fill"></span></div>
       <div class="cycle-steps" id="cycle-steps" aria-label="Evidence loop steps"></div>
       <div class="cycle-next"><div><strong id="cycle-next-title">Step 1 · Timed attempt</strong><p id="cycle-next-copy">Attempt a bounded question closed book. Keep notes and AI out of the test.</p></div><div class="cycle-next-actions"><button class="primary-btn" id="cycle-action" type="button">Start this step</button><button class="secondary-btn" id="cycle-complete" type="button">Mark step done</button></div></div>
     </section>
@@ -690,7 +684,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
         <div>
           <div class="eyebrow">2027 campaign · no fake countdowns</div>
           <h3 id="exam-timeline-title">Build the attempt that you want to sit.</h3>
-          <p id="exam-timeline-summary">V15 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
+          <p id="exam-timeline-summary">V4 stays aligned to your chosen A/L cycle without inventing an unofficial exam countdown.</p>
         </div>
         <button class="secondary-btn" id="set-target-btn" type="button">Set planning target</button>
       </div>
@@ -722,7 +716,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel planner-score">
         <div class="eyebrow">Syllabus map · context, not proof</div>
         <h2 id="planner-headline">0% period-weighted coverage</h2>
-        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V15 deliberately separates syllabus progress from evidence.</p>
+        <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V4 deliberately separates syllabus progress from evidence.</p>
       </section>
       <section class="panel planner-kpis" aria-label="Syllabus plan indicators">
         <div class="planner-kpi"><span>Completed equivalent</span><b id="planner-done-periods">0</b></div>
@@ -750,7 +744,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel course-hero">
         <div class="eyebrow">Course correction · brother mode</div>
         <h2 id="cc-verdict">First move: produce evidence before optimizing the system.</h2>
-        <p id="cc-reason">V15 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
+        <p id="cc-reason">V3 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
         <div class="course-status" id="cc-status-pills"></div>
       </section>
       <section class="panel">
@@ -767,7 +761,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
     <div class="dashboard-grid">
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V15 gives the replacement action.</p></div></div>
+        <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V3 gives the replacement action.</p></div></div>
         <div class="correction-rule-grid" id="correction-rule-grid"></div>
         <div class="replacement-box"><strong id="cc-action-title">Default replacement</strong><p id="cc-action-copy">Open the current paper. Do one measurable question set. Mark it. Then decide what you actually need.</p></div>
       </section>
@@ -807,7 +801,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       </section>
 
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">V15 doctrine</div><h3>What this site is allowed to do</h3></div></div>
+        <div class="panel-head"><div><div class="eyebrow">V3 doctrine</div><h3>What this site is allowed to do</h3></div></div>
         <div class="week-review">
           <div class="week-row"><span class="label">TEST</span><span class="value">Closed-book, timed, AI-free. The site measures; it does not rescue you mid-question.</span></div>
           <div class="week-row"><span class="label">DIAGNOSE</span><span class="value">Score + confidence + guesses + one primary error cause. Do not write essays about every mistake.</span></div>
@@ -824,7 +818,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <section class="panel daily-summary-panel">
         <div class="eyebrow">Daily execution layer</div>
         <h2 id="daily-headline">Turn activity into measurable output.</h2>
-        <p class="muted">The useful daily-output layer is integrated into Powerhouse V15. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
+        <p class="muted">The useful daily-output layer is integrated into Powerhouse V3. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
         <div class="daily-kpi-grid">
           <div class="planner-kpi"><span>Today · target score</span><b id="daily-target-score">0%</b></div>
           <div class="planner-kpi"><span>Today · outputs</span><b id="daily-output-count">0</b></div>
@@ -855,7 +849,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
     <section class="panel" style="margin-bottom:14px">
       <details class="daily-targets-details">
         <summary><strong>Daily targets</strong> · editable, local-only</summary>
-        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V15 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
+        <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V3 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
         <div class="daily-subject-grid" id="daily-target-grid"></div>
         <div style="display:flex;justify-content:flex-end;margin-top:12px"><button class="secondary-btn" id="save-daily-targets" type="button">Save targets</button></div>
       </details>
@@ -873,7 +867,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <div>
         <div class="eyebrow">Error Intelligence · marks first</div>
         <h2>Repair what is repeatedly costing marks.</h2>
-        <p>V15 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
+        <p>V4 ranks weaknesses using your own evidence: marks lost, recurrence, confidence traps and unfinished retests. This is not a prediction engine; it is a repair-priority engine.</p>
       </div>
       <button class="primary-btn" id="repair-log-btn" type="button">Log repair evidence</button>
     </section>
@@ -913,11 +907,11 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
       <article class="guide-card"><span class="guide-num">06</span><h3>RETEST</h3><p>Return after a delay. Only repeated clean retrieval closes the loop.</p></article>
     </div>
     <div class="dashboard-grid guide-lower">
-      <section class="panel"><div class="eyebrow">Use AI in the right phase</div><p><a href="./subscription-playbook/">Open the complete subscription guide</a> · <a href="./subscription-playbook/#router">Choose a tool</a> · <a href="./subscription-playbook/#value">Review value</a></p><h3>AI belongs after TEST.</h3><p class="guide-copy">Use AI to explain a diagnosed gap, compare your reasoning, generate a fresh transfer question or compress a correction rule. Do not use it to contaminate the first attempt.</p></section>
+      <section class="panel"><div class="eyebrow">Use AI in the right phase</div><h3>AI belongs after TEST.</h3><p class="guide-copy">Use AI to explain a diagnosed gap, compare your reasoning, generate a fresh transfer question or compress a correction rule. Do not use it to contaminate the first attempt.</p></section>
       <section class="panel"><div class="eyebrow">Local-first privacy</div><h3>Keep your evidence safe.</h3><p class="guide-copy">Connect cloud saving on Command for a private account copy. Without it, progress remains in this browser. Export a JSON backup regularly. Share-safe mode hides personal details for screenshots; it does not change site access.</p></section>
       <section class="panel"><div class="eyebrow">Do not optimise the tracker</div><h3>The tracker is not the work.</h3><p class="guide-copy">If you are spending more time redesigning dashboards than answering and correcting questions, stop. One honest marked attempt is more useful than another system rebuild.</p></section>
       <section class="panel"><div class="eyebrow">Recommended progression</div><h3>Build exam skill gradually.</h3><p class="guide-copy">Topic questions → mixed questions → paper sections → full timed papers. Let performance evidence decide the next repair.</p></section>
-      <section class="panel"><div class="eyebrow">Private source-to-practice desk</div><h3>Turn one source into one marked answer.</h3><p class="guide-copy">Import your Study Library file, choose a reference or original practice prompt, write before revealing source cues, then prepare a narrow repair and a private worksheet. Nothing is recorded as mastery or sent to another app.</p><p><a class="secondary-btn tab-link" href="./study-library/?view=practice">Open private practice desk</a></p></section><section class="panel"><div class="eyebrow">Chemistry / Biology evidence companions</div><h3>Choose a subject Intelligence explorer.</h3><p class="guide-copy">Chemistry: 50 mapped MCQs with exact prior references. Biology: seven year-pair audits, 40 essay topics and recent-evidence families. Personal marks guide repair; historical evidence does not predict a paper.</p><p><a class="secondary-btn tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a> <a class="secondary-btn tab-link" href="./biology-intelligence/">Biology Intelligence</a></p></section><section class="panel"><div class="eyebrow">Validated Physics layer</div><h3>Open Physics Intelligence.</h3><p class="guide-copy">Explore the validated 2000–2025 MCQ distribution and 2019–2025 question families without treating historical frequency as prediction.</p><p style="margin:12px 0 0"><a class="secondary-btn tab-link" href="./physics-intelligence/">Open Physics Intelligence</a></p></section>
+      <section class="panel"><div class="eyebrow">Validated Physics layer</div><h3>Open Physics Intelligence.</h3><p class="guide-copy">Explore the validated 2000–2025 MCQ distribution and 2019–2025 question families without treating historical frequency as prediction.</p><p style="margin:12px 0 0"><a class="secondary-btn tab-link" href="./physics-intelligence/">Open Physics Intelligence</a></p></section>
     </div>
   </section>
 
@@ -955,7 +949,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 </dialog>
 
 <dialog id="timer-dialog">
-  <div class="dialog-head"><div><div class="eyebrow">Deep work · V15</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
+  <div class="dialog-head"><div><div class="eyebrow">Deep work · V4</div><h2 id="timer-topic">Closed-book attempt</h2></div><button class="icon-btn" type="button" data-close-timer aria-label="Close">×</button></div>
   <div class="dialog-body">
     <div class="timer-phase" id="timer-phase">TEST · AI-free · closed book</div>
     <div class="timer-presets"><button class="secondary-btn" type="button" data-timer-preset="15">15 · recall</button><button class="secondary-btn" type="button" data-timer-preset="30">30 · rescue</button><button class="secondary-btn" type="button" data-timer-preset="60">60 · standard</button><button class="secondary-btn on" type="button" data-timer-preset="90">90 · deep</button><button class="secondary-btn" type="button" data-timer-preset="120">120 · full</button></div>
@@ -967,14 +961,14 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 
 <dialog id="data-dialog">
   <div class="dialog-head"><div><div class="eyebrow">Local data</div><h2>Backup & identity</h2></div><button class="icon-btn" type="button" data-close-data aria-label="Close">×</button></div>
-  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your browser copy works without sign-in. Connect cloud saving on Command to keep your evidence in your account across devices. Export a JSON backup for an independent copy.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V15 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="weekly-report" type="button">Export 7-day review</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
+  <div class="dialog-body"><div class="form-grid"><div class="field"><label for="profile-name">Student name</label><input id="profile-name" maxlength="80"></div><div class="field"><label for="profile-year">Exam year</label><input id="profile-year" maxlength="8" inputmode="numeric" placeholder="2027"></div><div class="field full"><label for="profile-target">Target / goal (optional)</label><input id="profile-target" maxlength="100" placeholder="e.g. 3 As · Medicine"></div><div class="field full"><label for="profile-line">Display line</label><input id="profile-line" maxlength="140"></div></div><div class="privacy-box"><b>Local-first by design.</b><span>Your browser copy works without sign-in. Connect cloud saving on Command to keep your evidence in your account across devices. Export a JSON backup for an independent copy.</span></div><p class="muted" id="backup-status" style="font-size:10px;line-height:1.6;margin:12px 0 6px">No backup recorded yet.</p><p class="muted" id="recovery-status" style="font-size:10px;line-height:1.6;margin:0 0 16px">Recovery snapshots: 0 · V4 keeps up to 10</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="primary-btn" id="save-profile" type="button">Save identity</button><button class="secondary-btn" id="export-data" type="button">Export JSON backup</button><button class="secondary-btn" id="import-data" type="button">Import backup / legacy data</button><button class="danger-btn" id="reset-data" type="button">Reset all data</button></div><input class="hidden" id="import-file" type="file" accept="application/json,.json"></div>
 </dialog>
 
 <dialog id="welcome-dialog">
   <form id="welcome-form">
-    <div class="dialog-head"><div><div class="eyebrow">V15 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
+    <div class="dialog-head"><div><div class="eyebrow">V4 Community Edition · local-first</div><h2>Build your private A/L performance system</h2></div></div>
     <div class="dialog-body">
-      <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance records are browser-first. Exports and optional cloud saving are explicit owner actions.</p>
+      <p class="muted" style="font-size:11px;line-height:1.7;margin:0 0 18px">This dashboard is for G.C.E. A/L Biological Science students studying Physics, Chemistry and Biology. Your performance data stays only in this browser unless you export it yourself.</p>
       <div class="form-grid">
         <div class="field full"><label for="welcome-name">Your name</label><input id="welcome-name" maxlength="80" placeholder="e.g. Niron" autocomplete="name" required></div>
         <div class="field"><label for="welcome-year">Exam year</label><input id="welcome-year" maxlength="8" inputmode="numeric" value="2027" required></div>
@@ -999,8 +993,8 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
   <div class="owner">Legacy dashboard migration shell</div>
 </header>
 
-<aside class="proof-contract" aria-label="V15 evidence rule">
-  <strong>V15 EVIDENCE RULE</strong>
+<aside class="proof-contract" aria-label="V5 evidence rule">
+  <strong>V5 EVIDENCE RULE</strong>
   <span>Attempt → Mark → Diagnose → Repair → Transfer → Retest. A score without a repaired error is only a signal.</span>
 </aside>
 
@@ -1433,7 +1427,7 @@ const $ = (id) => document.getElementById(id);
 const topicKey = (subject, unitIndex, topicIndex) => `${subject}|${unitIndex}|${topicIndex}`;
 const titleCase = (value) => value ? value[0].toUpperCase() + value.slice(1) : '';
 const todayISO = () => PowerhouseModel.day();
-const addDays = (date, days) => PowerhouseEvidence.addDays(date, days);
+const addDays = (date, days) => PowerhouseModel.shift(date, days);
 const dateDiffDays = (from, to) => Math.ceil((new Date(`${to}T12:00:00`) - new Date(`${from}T12:00:00`)) / 86400000);
 const escapeHTML = (value = '') => String(value).replace(/[&<>'"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' }[c]));
 const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
@@ -1623,7 +1617,7 @@ function renderCourseCorrection() {
 
   if (!outputToday) {
     $('cc-verdict').textContent = 'Do not optimize the system yet. Produce one marked output first.';
-    $('cc-reason').textContent = 'Your highest-return course correction today is execution: one closed-book block, strict marking, then the smallest repair. Planning before evidence is exactly the loop V6 is designed to interrupt.';
+    $('cc-reason').textContent = 'Your highest-return course correction today is execution: one closed-book block, strict marking, then the smallest repair. Planning before evidence is exactly the loop V3 is designed to interrupt.';
   } else if (overdue > 0) {
     $('cc-verdict').textContent = `Close ${overdue} overdue retest${overdue === 1 ? '' : 's'} before expanding the backlog.`;
     $('cc-reason').textContent = 'An old correction that has never survived delayed retrieval is still open. Closure outranks collecting another resource or starting another chapter.';
@@ -1986,8 +1980,7 @@ function navigate(panel) {
     }
   }
   activePanel = panel;
-  document.querySelectorAll('#app-tabs .tab').forEach(t => { t.classList.toggle('active', t.dataset.panel === panel); if(t.dataset.panel) {t.setAttribute('aria-controls','panel-'+t.dataset.panel); if(t.dataset.panel===panel)t.setAttribute('aria-current','page');else t.removeAttribute('aria-current');} });
-  document.querySelector('.workspace-more')?.removeAttribute('open');
+  document.querySelectorAll('#app-tabs .tab').forEach(t => t.classList.toggle('active', t.dataset.panel === panel));
   document.querySelectorAll('main > .content').forEach(c => c.classList.toggle('active', c.id === `panel-${panel}`));
   if (panel === 'course') renderCourseCorrection();
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2153,7 +2146,7 @@ function renderExamTimeline() {
     $('exam-timeline-summary').textContent = `Saved planning date: ${targetDate}. Update it whenever the official timetable or your campaign plan changes.`;
   } else {
     $('exam-timeline-title').textContent = 'Build the attempt that you want to sit.';
-    $('exam-timeline-summary').textContent = 'V6 is aligned to your chosen A/L cycle. No unofficial countdown is loaded; execution evidence comes first.';
+    $('exam-timeline-summary').textContent = 'V4 is aligned to your chosen A/L cycle. No unofficial countdown is loaded; execution evidence comes first.';
   }
 }
 
@@ -2207,9 +2200,9 @@ function attemptHTML(a, compact = false) {
 }
 
 function renderAttempts() {
- const sorted=[...state.attempts].sort((a,b)=>String(b.date+b.createdAt).localeCompare(String(a.date+a.createdAt)));
- $('recent-attempts').innerHTML=sorted.length?sorted.slice(0,4).map(a=>attemptHTML(a,true)).join(''):'<div class="empty-state">Log one marked attempt to begin.</div>';
- $('attempt-table-body').innerHTML=sorted.length?sorted.map(a=>attemptHTML(a)).join(''):'<tr><td colspan="8"><div class="empty-state">No marked attempts recorded.</div></td></tr>';
+  const sorted = [...state.attempts].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
+  $('recent-attempts').innerHTML = sorted.length ? sorted.slice(0, 4).map(a => attemptHTML(a, true)).join('') : '<div class="empty-state">Your evidence ledger is empty. A completed, marked question is the first useful input.</div>';
+  $('attempt-table-body').innerHTML = sorted.length ? sorted.map(a => attemptHTML(a)).join('') : '<tr><td colspan="8"><div class="empty-state">No completed attempts logged yet.</div></td></tr>';
 }
 
 function renderNextAction() {
@@ -2221,7 +2214,7 @@ function renderNextAction() {
   if (!hasMarkedOutputToday()) {
     focusRecommendedMinutes = 90;
     $('next-action-title').textContent = topic ? `First proof today: ${topic.name}` : 'First proof today: one honest timed attempt.';
-    $('next-action-copy').textContent = 'Before planning, collecting or optimizing anything else, create one marked result. This is V6’s main execution guard.';
+    $('next-action-copy').textContent = 'Before planning, collecting or optimizing anything else, create one marked result. This is V4’s main execution guard.';
     $('next-action-meta').innerHTML = `<span class="pill">90-minute deep block</span><span class="pill">closed book</span><span class="pill">AI-free TEST</span><span class="pill">strict marking after</span>`;
   } else if (overdue && topic) {
     focusRecommendedMinutes = 30;
@@ -2230,7 +2223,7 @@ function renderNextAction() {
     $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">30-minute rescue/retest</span><span class="pill">fresh question</span><span class="pill">strict marking</span>`;
   } else if (topic) {
     focusRecommendedMinutes = 90;
-    $('next-action-title').textContent = `Repair next: ${topic.name}`;
+    $('next-action-title').textContent = `Attack: ${topic.name}`;
     $('next-action-copy').textContent = 'This topic has the strongest current combination of lost marks, weak recall, recurrence or calibration risk. Repair it through output—not a lecture marathon.';
     $('next-action-meta').innerHTML = `<span class="pill">${titleCase(topic.subject)}</span><span class="pill">90-minute deep block</span><span class="pill">fresh questions</span><span class="pill">close the loop</span>`;
   } else {
@@ -2279,12 +2272,8 @@ let shareSafeMode = false;
 function toggleShareSafe() {
   shareSafeMode = !shareSafeMode;
   document.body.classList.toggle('share-safe', shareSafeMode);
-  const practicalLink = document.getElementById('practical-lab-link');
-  if (practicalLink) practicalLink.href = shareSafeMode ? './practical-lab/?share=1' : './practical-lab/';
   $('share-safe-btn')?.classList.toggle('on', shareSafeMode);
   $('share-safe-btn')?.setAttribute('aria-pressed', String(shareSafeMode));
-  $('identity-line').textContent = shareSafeMode ? 'Community Edition · private performance hidden' : `${state.profile.name} · ${profileDisplayLine()}`;
-  if (shareSafeMode) document.querySelectorAll('dialog[open]').forEach(d => d.close());
   toast(shareSafeMode ? 'Share-safe mode ON. Personal performance is obscured.' : 'Share-safe mode OFF.');
 }
 
@@ -2363,7 +2352,7 @@ function renderRepairs() {
 function refreshAll() {
   renderKPIs(); renderExamTimeline(); renderPlanner(); renderDailyOutput(); renderSubjectPulse(); renderRetests(); renderErrors(); renderPriorityTopics(); renderCalibration(); renderAttempts(); renderNextAction(); renderCourseCorrection(); renderRepairs(); refreshBackupHealth();
   SUBJECTS.forEach(updateSubjectPanel);
-  $('identity-line').textContent = shareSafeMode ? 'Community Edition · private performance hidden' : `${state.profile.name} · ${profileDisplayLine()}`;
+  $('identity-line').textContent = `${state.profile.name} · ${profileDisplayLine()}`;
   window.PowerhouseUpgrade?.onRender();
 }
 
@@ -2408,9 +2397,8 @@ function scheduleRetests(attempt) {
 
 function rebuildRetests() {
   const existing = new Map(state.retests.map(r => [`${r.sourceAttemptId}|${r.stage}`, r.id]));
-  const historicalLinks = PowerhouseEvidence.completedLinks(state.retests);
   state.retests = [];
-  [...state.attempts].sort((a,b) => String(a.date + a.createdAt).localeCompare(String(b.date + b.createdAt))).forEach(a => { completeEligibleRetests(a.sourceAttemptId ? a : {...a, sourceAttemptId: historicalLinks[a.id] || null}); scheduleRetests(a); });
+  [...state.attempts].sort((a,b) => String(a.date + a.createdAt).localeCompare(String(b.date + b.createdAt))).forEach(a => { completeEligibleRetests(a); scheduleRetests(a); });
   state.retests.forEach(r => { r.id = existing.get(`${r.sourceAttemptId}|${r.stage}`) || r.id; });
 }
 
@@ -2421,7 +2409,7 @@ function submitAttempt(event) {
   const earned = Number($('marks-earned').value);
   const total = Number($('marks-total').value);
   if (!Number.isFinite(earned) || !Number.isFinite(total) || total <= 0 || earned < 0) { toast('Enter valid earned and available marks.'); return; }
-  if (!PowerhouseEvidence.validDate($('attempt-date').value) || $('attempt-date').value > todayISO()) { toast('Use the date of a completed attempt, not a future date.'); return; }
+  if (!$('attempt-date').value || $('attempt-date').value > todayISO()) { toast('Use the date of a completed attempt, not a future date.'); return; }
   let error = $('attempt-error').value;
   const guesses = Math.max(0, Number($('attempt-guesses').value || 0));
   if (!error && guesses > 0) error = 'G';
@@ -2430,9 +2418,6 @@ function submitAttempt(event) {
   if (trustedEarned !== null && (trustedEarned < 0 || trustedEarned > earned)) { toast('Trusted marks must be between 0 and the raw marks earned.'); return; }
   if (earned > total) { toast('Marks earned cannot exceed marks available.'); return; }
   if (earned < total && !error) { toast('Choose the dominant error family for the lost marks.'); return; }
-  const items = Number($('attempt-items').value || 1);
-  const minutes = Number($('attempt-minutes').value);
-  if (!Number.isInteger(items) || items < 1 || !Number.isInteger(guesses) || guesses > items || !Number.isFinite(minutes) || minutes < 0 || (trustedEarned !== null && !Number.isFinite(trustedEarned))) { toast('Check item count, guesses, time and trusted marks.'); return; }
   const attempt = {
     id: $('v6-edit-id')?.value || uid(), date: $('attempt-date').value, sourceAttemptId: $('v6-source-id')?.value || null, subject: $('attempt-subject').value, topicKey: $('attempt-topic').value,
     type: $('attempt-type').value,
@@ -2489,7 +2474,7 @@ function renderCycle() {
   $('cycle-action').textContent = current.label;
   $('cycle-action').disabled = evidenceCycle.step > 0 && !evidenceCycle.done.includes(evidenceCycle.step - 1);
   $('cycle-action').title = $('cycle-action').disabled ? 'Complete the previous stage before starting this action.' : ''; 
-  $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step recorded by you' : 'Mark step done';
+  $('cycle-complete').textContent = evidenceCycle.done.includes(evidenceCycle.step) ? 'Step completed' : 'Mark step done';
   $('cycle-complete').setAttribute('aria-pressed', String(evidenceCycle.done.includes(evidenceCycle.step)));
   $('cycle-steps').innerHTML = CYCLE_STEPS.map((step,index) => `<button class="cycle-step" type="button" data-cycle-step="${index}" data-done="${evidenceCycle.done.includes(index)}" ${index===evidenceCycle.step?'aria-current="step"':''}><b>${evidenceCycle.done.includes(index)?'✓':String(index+1).padStart(2,'0')}</b><span>${escapeHTML(step.title)}</span></button>`).join('');
   const count = evidenceCycle.done.length;
@@ -2504,11 +2489,7 @@ function markCycleStepDone() {
   if (!evidenceCycle.done.includes(evidenceCycle.step)) evidenceCycle.done.push(evidenceCycle.step);
   if (evidenceCycle.step < CYCLE_STEPS.length - 1) evidenceCycle.step += 1;
   saveCycle(); renderCycle();
-  if (evidenceCycle.done.length === CYCLE_STEPS.length) {
-    navigate('repairs');
-    document.getElementById('v7-verification')?.scrollIntoView({block:'start'});
-    toast('All workflow steps recorded. Assess linked marked attempts in the Verification desk; this checklist does not close the error.');
-  } else toast('Step recorded by you. Continue to the next evidence action.');
+  toast(evidenceCycle.step === CYCLE_STEPS.length-1 && evidenceCycle.done.length===CYCLE_STEPS.length ? 'Full evidence loop closed. Start a new loop when ready.' : 'Step recorded. Continue to the next evidence action.');
 }
 function runCycleAction() {
   const step = CYCLE_STEPS[evidenceCycle.step];
@@ -2533,8 +2514,7 @@ function runCycleAction() {
   openAttemptDialog('', step.type);
   $('attempt-subject').value = subject;
   fillTopicSelect(subject);
-  $('attempt-question').value = '';
-  $('attempt-question').placeholder = 'Actual paper, year and question reference';
+  $('attempt-question').value = evidenceCycle.step===4 ? 'Closed-book reattempt · link to diagnosed attempt' : evidenceCycle.step===5 ? 'Fresh transfer · different question, same concept' : 'Delayed retest · retrieval after a delay';
   refreshDiagnosisHint();
 }
 
@@ -2631,43 +2611,19 @@ function exportData() {
   toast('Backup exported.');
 }
 
-function exportWeeklyReport() {
-  const end = todayISO(), start = addDays(end, -6), rows = attemptsInLastDays(7);
-  const lines = [`A/L Performance Powerhouse — 7-day review`, `${start} to ${end} · Asia/Colombo`, `Self-reported, strictly marked evidence. Logged time is not proof of mastery.`, ''];
-  for (const subject of SUBJECTS) {
-    const list = rows.filter(a => a.subject === subject);
-    const earned = list.reduce((s,a) => s + Number(a.earned),0), total = list.reduce((s,a) => s + Number(a.total),0);
-    const audited = list.filter(a => a.trustedEarned != null);
-    const trusted = audited.reduce((s,a) => s + Number(a.trustedEarned),0), auditedTotal = audited.reduce((s,a) => s + Number(a.total),0);
-    lines.push(`${titleCase(subject)}: ${list.length} attempts · ${earned}/${total} marks${total ? ` (${Math.round(earned/total*100)}%)` : ' · no evidence'}`, `Trusted marks: ${auditedTotal ? `${trusted}/${auditedTotal}` : 'not audited'}`, '');
-  }
-  lines.push(`Evidence days: ${new Set(rows.map(a => a.date)).size}/7`, `Due unfinished checks: ${pendingRetests().filter(r => r.due <= end).length}`, '', 'Priority repairs:');
-  priorityTopics(5).forEach(t => lines.push(`- ${titleCase(t.subject)}: ${t.name}`));
-  lines.push('', 'Weekly self-analysis', '1. Which error repeated, and why?', '2. What narrow repair did I make?', '3. Which fresh question proved the repair?', '4. Which delayed retest remains due?', '5. What one adjustment will protect next week’s paper practice?', '', 'Attempt ledger');
-  rows.forEach(a => lines.push(`${a.date} · ${titleCase(a.subject)} · ${a.question} · ${a.earned}/${a.total} · ${a.type} · ${a.error || 'no error recorded'}`));
-  const url = URL.createObjectURL(new Blob([lines.join('\n')], {type:'text/plain;charset=utf-8'}));
-  const link = document.createElement('a'); link.href = url; link.download = `powerhouse-weekly-review-${end}.txt`; link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000); toast('7-day evidence review exported.');
-}
-
 function importData(file) {
-  if (!file || file.size > 5_000_000) { toast('Choose a JSON backup under 5 MB. Existing data was kept.'); return; }
   const reader = new FileReader();
   reader.onload = () => {
     try {
       const incoming = JSON.parse(reader.result);
       if (!incoming || typeof incoming !== 'object') throw new Error('Invalid backup');
-
+      snapshotState('pre-import');
 
       const isBackup = !Array.isArray(incoming) && Array.isArray(incoming.attempts) && incoming.ratings && typeof incoming.ratings === 'object';
       const ratingEntries = !Array.isArray(incoming) ? Object.entries(incoming) : [];
       const isLegacyRatings = ratingEntries.length > 0 && ratingEntries.every(([key, value]) => /^(physics|chemistry|biology)\|\d+\|\d+$/.test(key) && [1, 2, 3].includes(Number(value)));
 
       if (isBackup) {
-        PowerhouseEvidence.validateBackup(incoming, allTopics().map(t => t.key), SUBJECTS, Object.keys(ATTEMPT_TYPE_NAMES), Object.keys(ERROR_NAMES), todayISO(), SYLLABUS_PLAN.map(row => row.id));
-        if (!confirm(`Replace this browser’s ${state.attempts.length} attempts with ${incoming.attempts.length} imported attempts? Export your current backup first if needed.`)) return;
-        snapshotState('pre-import');
-        const previous = state;
         const base = defaultState();
         state = {
           ...base, ...incoming, version: 8, productVersion:'V6',
@@ -2688,8 +2644,7 @@ function importData(file) {
             rescueRuns: Array.isArray(incoming.courseCorrection?.rescueRuns) ? incoming.courseCorrection.rescueRuns : []
           }
         };
-        if (!saveState()) { state = previous; toast('Import could not be saved. Existing data was kept.'); return; }
-        refreshAll();
+        saveState(); refreshAll();
         if ($('data-dialog').open) $('data-dialog').close();
         if ($('welcome-dialog').open) $('welcome-dialog').close();
         if (incoming.evidenceCycle) { evidenceCycle = PowerhouseEvidence.normalizeCycle(incoming.evidenceCycle, SUBJECTS, CYCLE_STEPS.length); saveCycle(); renderCycle(); }
@@ -2713,14 +2668,13 @@ function importData(file) {
           throw new Error('Invalid backup');
         }
       }
-    } catch (error) { toast(`Import rejected: ${error.message || 'invalid backup'}. Existing evidence was kept.`); }
+    } catch (_) { toast('That JSON could not be safely mapped into Powerhouse.'); }
   };
-  reader.onerror = () => toast('Backup could not be read. Existing data was kept.');
   reader.readAsText(file);
 }
 
 function showWelcome() {
-  if (shareSafeMode || state.profileSetupComplete || $('welcome-dialog').open) return;
+  if (state.profileSetupComplete || $('welcome-dialog').open) return;
   $('welcome-name').value = '';
   $('welcome-year').value = state.profile?.year || '2027';
   $('welcome-target').value = state.profile?.target || '';
@@ -2742,7 +2696,6 @@ function initEvents() {
   $('log-from-ledger').addEventListener('click', () => openAttemptDialog());
   $('view-all-btn').addEventListener('click', () => navigate('attempts'));
   $('start-focus-btn').addEventListener('click', () => startFocus(focusRecommendedMinutes));
-  $('short-block-btn').addEventListener('click', () => startFocus(15, '15-minute closed-book recall / question block'));
   $('paper-first-btn').addEventListener('click', () => { focusTopicKey=''; startFocus(120, 'Full paper / substantial paper section'); });
   $('course-correct-btn').addEventListener('click', () => navigate('course'));
   $('set-target-btn').addEventListener('click', () => navigate('course'));
@@ -2807,12 +2760,11 @@ function initEvents() {
     toast('Your private Powerhouse is ready.');
   });
   $('welcome-import').addEventListener('click', () => $('import-file').click());
-  $('weekly-report').addEventListener('click', exportWeeklyReport);
   $('export-data').addEventListener('click', exportData);
   $('import-data').addEventListener('click', () => $('import-file').click());
   $('import-file').addEventListener('change', e => { if (e.target.files[0]) importData(e.target.files[0]); e.target.value = ''; });
   $('reset-data').addEventListener('click', () => {
-    const typed = prompt('This resets ratings, syllabus progress, attempts, retests, daily output and V6 execution-guard history. A recovery snapshot is created first. Type RESET to continue.');
+    const typed = prompt('This resets ratings, syllabus progress, attempts, retests, daily output and V4 execution-guard history. A recovery snapshot is created first. Type RESET to continue.');
     if (typed !== 'RESET') { toast('Reset cancelled.'); return; }
     snapshotState('pre-reset');
     state = defaultState(); state.ratings = {}; saveState(); refreshAll(); $('data-dialog').close();
@@ -2827,7 +2779,7 @@ refreshAll();
 restoreFocusTimer();
 try {
   const hashPanel = location.hash.replace('#','');
-  if (['command','physics','chemistry','biology','repairs','course','daily','planner','attempts','guide','review'].includes(hashPanel)) navigate(hashPanel);
+  if (['command','physics','chemistry','biology','repairs','course','daily','planner','attempts','guide'].includes(hashPanel)) navigate(hashPanel);
   const queryParams = new URLSearchParams(location.search);
   if (queryParams.get('share') === '1' && !shareSafeMode) toggleShareSafe();
   if (queryParams.get('log') === '1') {
@@ -2848,15 +2800,5 @@ try {
 setTimeout(showWelcome, 0);
 </script>
 <script src="./powerhouse/app.js"></script>
-<script src="./powerhouse/verification.js"></script>
-<script src="./powerhouse/verification-ui.js"></script>
-<script src="./powerhouse/planning.js"></script>
-<script src="./powerhouse/planning-ui.js"></script>
-<script src="./practical-lab/model.js"></script>
-<script src="./practical-lab/host.js"></script>
-<script src="./powerhouse/launchpad-model.js"></script>
-<script src="./powerhouse/launchpad-ui.js"></script>
-<script src="/workspace-shell/shell.js"></script>
-<script src="/powerhouse/execution-v10.js"></script>
-<script type="module" src="/workflow-studio/home.js"></script><script src="/powerhouse/review-model.js"></script><script src="/powerhouse/workspace-v12.js"></script><link rel="stylesheet" href="/powerhouse/workspace-v12.css"><link rel="stylesheet" href="/powerhouse/command-plan-shared.css"><link rel="stylesheet" href="/powerhouse/command-workspace-v13.css"><script src="/powerhouse/command-plan-model.js"></script><script src="/powerhouse/command-plan-ui.js"></script><script src="/powerhouse/command-workspace-v13.js"></script><link rel="stylesheet" href="/powerhouse/repair-board.css"><script src="/powerhouse/repair-inspector-model.js"></script><script src="/powerhouse/repair-board-model.js"></script><script src="/powerhouse/repair-board-ui.js"></script></body>
+</body>
 </html>

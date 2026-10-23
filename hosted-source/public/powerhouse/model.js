@@ -9,9 +9,8 @@
     return {rows,total,earned,accuracy:total?earned/total*100:null,trusted:trustedTotal?audited.reduce((n,a)=>n+Number(a.trustedEarned),0)/trustedTotal*100:null,audited:audited.length,days:new Set(rows.map(a=>a.date)).size,minutes:rows.reduce((n,a)=>n+Number(a.minutes||0),0),errors,clean:rows.filter(a=>a.unaided&&Number(a.earned)===Number(a.total)&&!a.error&&!Number(a.guesses||0)).length};
   }
   function validateAttempt(a,today) {
-    const validDate=value=>typeof value==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&Number.isFinite(Date.parse(value+'T00:00:00Z'))&&new Date(value+'T00:00:00Z').toISOString().slice(0,10)===value;
     if(!a.question?.trim())return 'Add a question or paper reference.';
-    if(!validDate(today)||!validDate(a.date)||a.date>today)return 'Use a real calendar date for a completed attempt.';
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(a.date)||a.date>today)return 'Use the date of a completed attempt.';
     if(!Number.isFinite(a.earned)||!Number.isFinite(a.total)||a.total<=0||a.earned<0||a.earned>a.total)return 'Marks earned must be between zero and the marks available.';
     if(a.trustedEarned!==null&&(!Number.isFinite(a.trustedEarned)||a.trustedEarned<0||a.trustedEarned>a.earned))return 'Trusted marks must be between zero and raw marks.';
     if(!Number.isFinite(a.minutes)||a.minutes<=0||a.minutes>360)return 'Enter a duration between 1 and 360 minutes.';

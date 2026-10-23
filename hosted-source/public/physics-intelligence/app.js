@@ -12,27 +12,17 @@ const el = (id) => document.getElementById(id);
 const pct = (value, digits = 1) => `${(value * 100).toFixed(digits)}%`;
 const escapeCsv = (value) => `"${String(value).replaceAll('"', '""')}"`;
 
-function normalizeAttempts(rows, strict=false) {
-  if (!Array.isArray(rows) || rows.length>50000) throw new Error("Invalid attempts list.");
-  const families=new Set(state.data.currentFamilies.map(item=>item.familyId));
-  return rows.flatMap(row=>{
-    const valid=row&&typeof row==='object'&&families.has(row.familyId)&&['correct','wrong','guessed','slow','unattempted'].includes(row.outcome)&&Number.isFinite(row.timeSeconds)&&row.timeSeconds>=0&&row.timeSeconds<=1200&&Number.isInteger(row.confidence)&&row.confidence>=1&&row.confidence<=5&&typeof row.recordedAt==='string'&&!Number.isNaN(Date.parse(row.recordedAt));
-    if(!valid){if(strict)throw new Error("The backup contains an invalid attempt.");return []}
-    return [{familyId:row.familyId,outcome:row.outcome,timeSeconds:row.timeSeconds,confidence:row.confidence,recordedAt:row.recordedAt}];
-  });
-}
-function reportData(message) { el('dataStatus').textContent=message; }
 function loadLocalState() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    state.attempts = normalizeAttempts(parsed.attempts || []);
+    state.attempts = Array.isArray(parsed.attempts) ? parsed.attempts : [];
   } catch {
     state.attempts = [];
   }
 }
 
 function saveLocalState() {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, attempts: state.attempts })); reportData("Attempt evidence saved on this browser."); } catch { reportData("Storage is unavailable. Export a backup before closing; your attempts remain usable for this visit."); }
+  localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, attempts: state.attempts }));
 }
 
 function setShareMode(enabled) {
@@ -43,11 +33,6 @@ function setShareMode(enabled) {
   const url = new URL(location.href);
   if (enabled) url.searchParams.set("share", "1"); else url.searchParams.delete("share");
   history.replaceState(null, "", url);
-  document.querySelectorAll('.subject-nav a').forEach(a => {
-    const target = new URL(a.href, location.href);
-    if (enabled) target.searchParams.set('share', '1'); else target.searchParams.delete('share');
-    a.href = target.href;
-  });
 }
 
 function populateControls() {
@@ -270,15 +255,10 @@ function bindEvents() {
   el("importBackup").addEventListener("change", async (event) => {
     const file = event.target.files?.[0];
     if (!file) return;
-    try {
-      if(file.size>10000000)throw new Error("The backup is too large.");
-      const parsed=JSON.parse(await file.text());
-      if(parsed.version!==1||parsed.storageKey!==STORAGE_KEY)throw new Error("Choose a Physics Intelligence backup.");
-      const clean=normalizeAttempts(parsed.attempts,true);
-      if(!confirm("Replace your Physics Intelligence attempts with this backup? Export first to keep the current evidence."))return;
-      state.attempts=clean;saveLocalState();renderPerformance();
-    } catch(error) { reportData(`${error.message||'Invalid backup.'} Existing attempts were kept.`); }
-    finally { event.target.value=''; }
+    const parsed = JSON.parse(await file.text());
+    if (!Array.isArray(parsed.attempts)) throw new Error("Backup does not contain an attempts array.");
+    state.attempts = parsed.attempts;
+    saveLocalState(); renderPerformance();
   });
 }
 
