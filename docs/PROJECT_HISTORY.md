@@ -25,3 +25,10 @@ AI systems have been used extensively as implementation and verification tools. 
 ## Git history boundary
 
 The first GitHub commit should be read as **"import existing maintained project into public open source"**, not as the project's original creation date.
+
+
+## Recovered source history — 23 October 2026
+
+The owner's flagship repository remains **henlleyniron-byte/performance-powerhouse**. The [reviewer guide](REVIEWER_GUIDE.md) distinguishes the legacy default-branch application, the hosted V16 source and a separately recovered legacy V5.1 development line. All 42 saved Site versions, six other reachable hosted commits, and four newer secondary-account commits are available in [the public source catalogue](https://github.com/henlleyniron-byte/performance-powerhouse/blob/archive/site-history-review-20261021/history/SITE_VERSIONS.md). Each has source provenance, a browsable sanitized snapshot and a file manifest.
+
+The original secondary source's canonical-repository statement is historical; it does not override the owner's current flagship selection. Public imports retain original source identities without backdating GitHub activity. Earlier releases, draft changes and source variants are preserved rather than represented as one already-integrated production release. See draft PR #8 for source checks, exclusions and release gates.
