@@ -1,16 +1,16 @@
 ## Summary
 
-<!-- What changes, and why is it useful to a student using the evidence loop? -->
+## Why this change is useful
 
-## Validation
+## Validation performed
 
-- [ ] `npm run check` passes (lint, unit/integrity tests, browser tests)
-- [ ] New behaviour has a test in `tests/unit/` or `tests/e2e/`
-- [ ] No existing storage key renamed, deleted or repurposed (see `AGENTS.md`)
-- [ ] New shipped files added to `sw.js` `ASSETS` and `scripts/build-site.mjs` `PUBLISHED`
-- [ ] Share-safe mode still hides personal performance (if UI changed)
-- [ ] No credentials, personal study records or copyrighted exam content included
+- [ ] Main navigation checked
+- [ ] Attempt logging checked (if relevant)
+- [ ] Repair / retest logic checked (if relevant)
+- [ ] Share-safe mode checked (if relevant)
+- [ ] No new console errors
+- [ ] No credentials or personal study data included
 
 ## AI assistance
 
-<!-- If AI tools substantially generated or transformed this change, note how you reviewed and tested it. -->
+If AI tools substantially generated or transformed this change, briefly note how you reviewed and tested the result.
