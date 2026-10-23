@@ -43,6 +43,11 @@ function setShareMode(enabled) {
   const url = new URL(location.href);
   if (enabled) url.searchParams.set("share", "1"); else url.searchParams.delete("share");
   history.replaceState(null, "", url);
+  document.querySelectorAll('.subject-nav a').forEach(a => {
+    const target = new URL(a.href, location.href);
+    if (enabled) target.searchParams.set('share', '1'); else target.searchParams.delete('share');
+    a.href = target.href;
+  });
 }
 
 function populateControls() {
