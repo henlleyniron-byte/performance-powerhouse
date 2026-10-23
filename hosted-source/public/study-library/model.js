@@ -22,6 +22,7 @@
       if(!r||!text(r.id,200)||!r.id||ids.has(r.id)||!text(r.title,500)||!SUBJECTS.includes(r.subject)||!['document','workbook','source','slides'].includes(r.kind)||!text(r.status,2000)||!text(r.text,1_000_000)||!text(r.modified_at,100)||!date(r.captured_at)||!text(r.sha256,64)||!safeUrl(r.url)||!list(r.tables,60))fail('Invalid or duplicate resource.');
       ids.add(r.id);const tabs=new Set();
       for(const t of r.tables){if(!t||!text(t.id,100)||tabs.has(t.id)||!text(t.title,500)||!list(t.columns,60)||!t.columns.every(x=>text(x,2000))||!list(t.rows,6000)||!t.rows.every(row=>list(row,60)&&row.every(x=>text(x,20000))))fail('Invalid workbook table.');tabs.add(t.id);}
+      if(r.sections!==undefined){if(r.kind!=='slides'||!list(r.sections,700))fail('Invalid slide text collection.');const sections=new Set();for(const [i,s]of r.sections.entries()){if(!s||!text(s.id,200)||sections.has(s.id)||!text(s.title,300)||!text(s.text,60000)||s.order!==i+1||!safeUrl(s.source_url))fail('Invalid or duplicate source slide.');sections.add(s.id);}}
     }
     const mapIds=new Set();
     for(const h of p.heatmaps){
@@ -33,6 +34,7 @@
       if(required.some(u=>!units.has(u))||[...units].some(u=>u!=='UNCLASSIFIED'&&!required.includes(u)))fail('Heatmap unit coverage is incomplete.');
     }
     globalThis.ScienceIntelligence.validatePackage(p.science_package);
+    if(p.practice_prompts!==undefined){if(!list(p.practice_prompts,500))fail('Invalid original prompt collection.');const prompts=new Set();for(const r of p.practice_prompts){if(!r||!text(r.id,200)||prompts.has(r.id)||!['biology','chemistry','physics'].includes(r.subject)||!p.science_package.units[r.subject].some(u=>u.code===r.unit)||!text(r.prompt,10000)||!r.prompt.trim()||!ids.has(r.source_id)||!text(r.source_version,100)||!text(r.status,1000))fail('Invalid original retrieval prompt.');prompts.add(r.id);}}
     // Version-specific classification labels must reconcile with the retained corpus.
     const versions={'bio-earlier':'earlier','bio-claude':'claude','bio-audit':'audit_copy'};
     for(const h of p.heatmaps){
@@ -45,11 +47,11 @@
     return p;
   }
   function parse(raw){if(!text(raw,16_000_000))fail('Choose a JSON file smaller than 16 MB.');return validate(JSON.parse(raw));}
-  function content(r){return [r.title,r.subject,r.status,r.text,...r.tables.flatMap(t=>[t.title,...t.columns,...t.rows.flat()])].join('\n');}
+  function content(r){return [r.title,r.subject,r.status,r.text,...r.tables.flatMap(t=>[t.title,...t.columns,...t.rows.flat()]),...(r.sections||[]).flatMap(s=>[s.title,s.text])].join('\n');}
   const terms=q=>q.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean).slice(0,12);
   function matches(s,q){const lower=s.toLocaleLowerCase();return terms(q).every(t=>lower.includes(t));}
   function search(p,{query='',subject='all',kind='all'}={}){return p.resources.filter(r=>(subject==='all'||r.subject===subject||r.subject==='all')&&(kind==='all'||r.kind===kind)&&matches(content(r),query));}
-  function excerpt(r,q){const s=[r.title,r.subject,r.status,r.text.replace(/\{\{([^}]+)\}\}/g,'[ … ]'),...r.tables.flatMap(t=>{const cues=t.columns.map((c,i)=>/answer|model response|marking insight|common trap/i.test(c)?i:-1);return [t.title,...t.rows.flatMap(row=>row.filter((_,i)=>!cues.includes(i)))];})].join('\n'),first=terms(q)[0],at=first?s.toLocaleLowerCase().indexOf(first):0;return s.slice(Math.max(0,at-80),Math.max(0,at-80)+260).replace(/\s+/g,' ');}
+  function excerpt(r,q){const s=[r.title,r.subject,r.status,r.text.replace(/\{\{([^}]+)\}\}/g,'[ … ]'),...r.tables.flatMap(t=>{const cues=t.columns.map((c,i)=>/answer|model response|marking insight|common trap/i.test(c)?i:-1);return [t.title,...t.rows.flatMap(row=>row.filter((_,i)=>!cues.includes(i)))];}),...(r.sections||[]).flatMap(s=>[s.title,s.text])].join('\n'),first=terms(q)[0],at=first?s.toLocaleLowerCase().indexOf(first):0;return s.slice(Math.max(0,at-80),Math.max(0,at-80)+260).replace(/\s+/g,' ');}
   function compare(a,b){
     if(a.subject!==b.subject)fail('Compare versions of the same subject.');
     const years=a.years.filter(y=>b.years.includes(y));

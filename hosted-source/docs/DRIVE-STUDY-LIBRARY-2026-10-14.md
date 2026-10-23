@@ -1,5 +1,7 @@
 # Drive Study Library integration
 
+> Superseded release status: the newer live v27/v71 baseline and current source-to-practice expansion are documented in `PHYSICS-PARITY-AND-PRACTICE-2026-10-14.md`. The save-only language below is the earlier checkpoint history, not the current production state.
+
 The additive `/study-library/` route is a read-only, owner-imported resource workspace. Atlas navigation and its academic transfer lab link to it. Powerhouse has the same route and a main navigation entry in its saved candidate. Existing Site IDs, audiences, origins, attempts and all old persistence namespaces are unchanged.
 
 ## Import coverage
