@@ -1,12 +1,15 @@
 # Performance Powerhouse
 
-## Current hosted source and complete upgrade history
+## Hosted source archive and development history
 
-**This is the flagship repository: henlleyniron-byte/performance-powerhouse.** The hosted product is **V16 — Evidence & Recovery**, saved Site version **42**. The application at the root of this default branch remains the **legacy V5.0.1** snapshot.
+**Historical hosted-product repository for Performance Powerhouse.** The repository preserves a public source snapshot of hosted **V16 — Evidence & Recovery** (saved Site version **42**). The linked live deployment was subsequently observed identifying itself as **V22**. The archived V16 source and current V22 deployment must not be treated as identical without source verification. The application at the root of this default branch is the **legacy V5.0.1** snapshot.
+
+**Offline status, by version:** the legacy V5 root application includes an installable PWA shell. Complete offline acceptance has not been verified for the archived V16 source or the current V22 deployment.
 
 - **[Start here: reviewer guide and verification evidence](docs/REVIEWER_GUIDE.md)**
-- **[Inspect the latest V16 source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/hosted-source)**
+- **[Inspect the archived V16 source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/hosted-source)**
 - **[Browse all 42 saved versions, six additional hosted commits and four secondary upgrades](https://github.com/henlleyniron-byte/performance-powerhouse/blob/archive/site-history-review-20261021/history/SITE_VERSIONS.md)**
+- **Separate engineering repository (V5.3.0, distinct development line):** [HenlleyNiron/performance-powerhouse](https://github.com/HenlleyNiron/performance-powerhouse) — a different codebase from the archived V16 source above; not a direct successor to V16.
 - **[Inspect the separate legacy V5.1 development line](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/related-source/legacy-v5.1)**
 - **[Draft PR #8: source reconciliation](https://github.com/henlleyniron-byte/performance-powerhouse/pull/8)** · **[Verification receipt](https://github.com/henlleyniron-byte/performance-powerhouse/blob/archive/site-history-review-20261021/history/VERIFICATION_2026-10-23.json)**
 
