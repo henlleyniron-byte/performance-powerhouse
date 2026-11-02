@@ -1,0 +1,127 @@
+activity_id,subject,nie_number,catalog_print_page,verified_body_page,question_id,title,source_check,teacher_reviewed
+bio-001,biology,1,1,1,PM5-B01,Four coded foods: evidence before identification,method_checked,False
+bio-002,biology,2,2,2,PM5-B02,Microscope field calibration and focusing,method_checked,False
+bio-003,biology,3,4,4,PM5-B03,Three electron micrographs: organisation and scale,method_checked,False
+bio-004,biology,4,5,5,PM5-B04,Chromosome behaviour identifies the division,method_checked,False
+bio-005,biology,5,6,6,PM5-B05,Amylase: endpoint time and relative reaction rate,method_checked,False
+bio-006,biology,6,7,7,PM5-B06,Audus readings: when more light stops increasing oxygen output,method_checked,False
+bio-007,biology,7,8,8,PM5-B07,C3 and C4 sections: recognising a structural pattern,method_checked,False
+bio-008,biology,8,9,9,PM5-B08,Two respirometers: derive CO₂ instead of guessing fuel,method_checked,False
+bio-009,biology,9,10,10,PM5-B09,"Light-microscope prokaryotes: chains, sheaths and colonies",method_checked,False
+bio-010,biology,10,11,11,PM5-B10,Prokaryotic ultrastructure: a membrane is not a chloroplast,method_checked,False
+bio-011,biology,11,12,12,PM5-B11,Seven organism cards: use observable characters,method_checked,False
+bio-012,biology,12,13,13,PM5-B12,A plant-group sorting tray,method_checked,False
+bio-013,biology,13,14,14,PM5-B13,Four fungal drawings: reproductive structures matter,method_checked,False
+bio-014,biology,14,15,15,PM5-B14,Build a defensible invertebrate key,method_checked,False
+bio-015,biology,15,16,16,PM5-B15,Vertebrates: discriminate with combined characters,method_checked,False
+bio-016,biology,16,17,17,PM5-B16,Plant tissues: read the cell walls and contents,method_checked,False
+bio-017,biology,17,18,18,PM5-B17,Four transverse sections: organ before plant group,method_checked,False
+bio-018,biology,18,19,19,PM5-B18,Woody stem: production direction and growth rings,method_checked,False
+bio-019,biology,19,20,20,PM5-B19,Leaf pores and woody-stem openings,method_checked,False
+bio-020,biology,20,21,21,PM5-B20,Plasmolysis graph and the supplied solute-potential table,method_checked,False
+bio-021,biology,21,24,24,PM5-B21,Potato length change: estimate tissue water potential,method_checked,False
+bio-022,biology,22,27,27,PM5-B22,Potometer capillary geometry and the uptake proxy,method_checked,False
+bio-023,biology,23,28,28,PM5-B23,Animal tissue slides: cells and extracellular matrix,method_checked,False
+bio-024,biology,24,29,29,PM5-B24,Digestive-system model: ducts and surface specialisation,method_checked,False
+bio-025,biology,25,30,30,PM5-B25,"Heart model: follow the vessel, not oxygen content alone",method_checked,False
+bio-026,biology,26,31,31,PM5-B26,Breathing and pulse: normalise unequal count windows,method_checked,False
+bio-027,biology,27,32,32,PM5-B27,Excretory drawings across animal groups,method_checked,False
+bio-028,biology,28,33,33,PM5-B28,"Nervous-system map: centre, connection and function",method_checked,False
+bio-029,biology,29,34,34,PM5-B29,Sensory receptor cards: match the stimulus,method_checked,False
+bio-030,biology,30,35,35,PM5-B30,Eye and ear sections: locate the transducer,method_checked,False
+bio-031,biology,31,36,36,PM5-B31,Male reproductive model and testis section,method_checked,False
+bio-032,biology,32,37,37,PM5-B32,"Female reproductive model: follicles, ducts and uterine layers",method_checked,False
+bio-033,biology,33,38,38,PM5-B33,Skull and vertebral tray: articulation and load,method_checked,False
+bio-034,biology,34,40,40,PM5-B34,Appendicular skeleton: movement from bone relationships,method_checked,False
+bio-035,biology,35,41,41,PM5-B35,Sterilisation choices: a paper-based matching exercise,method_checked,False
+bio-036,biology,36,43,43,PM5-B36,Colony records: morphology is not species identity,method_checked,False
+bio-037,biology,37,45,45,PM5-B37,Simple stain: what the blue image can and cannot tell you,method_checked,False
+bio-038,biology,38,47,47,PM5-B38,"Disinfectant comparison: counts, controls and restrained claims",method_checked,False
+che-001,chemistry,1,10,10,PM5-C01,Cathode-ray evidence: charge versus straight-line travel,method_checked,False
+che-002,chemistry,2,15,15,PM5-C02,Distinguish molecular shape from electron-domain geometry,method_checked,False
+che-003,chemistry,3,17,17,PM5-C03,Burette difference and balance zero correction,method_checked,False
+che-004,chemistry,4,21,21,PM5-C04,Anhydrous carbonate standard: mass and dilution audit,method_checked,False
+che-005,chemistry,5,23,23,PM5-C05,Oxygen molar volume from mass-loss and dry-gas data,method_checked,False
+che-006,chemistry,6,27,27,PM5-C06,Magnesium molar mass with water-vapour correction,method_checked,False
+che-007,chemistry,7,31,31,PM5-C07,Neutralisation calorimetry: sign and mole basis,method_checked,False
+che-008,chemistry,8,35,35,PM5-C08,Hess cycle: dissolve then neutralise,method_checked,False
+che-009,chemistry,9,42,42,PM5-C09,Interpret sodium and magnesium observation cards,method_checked,False
+che-010,chemistry,10,44,44,PM5-C10,Flame-colour identification with a contamination control,method_checked,False
+che-011,chemistry,11,46,46,PM5-C11,"Separate sulfate, sulfite and thiosulfate evidence",method_checked,False
+che-012,chemistry,12,49,49,PM5-C12,Nitrogen-in-air evidence from a nitride record,method_checked,False
+che-013,chemistry,13,51,51,PM5-C13,Halide identification using colour and ammonia behaviour,method_checked,False
+che-014,chemistry,14,54,54,PM5-C14,Iodate-to-thiosulfate mole-chain audit,method_checked,False
+che-015,chemistry,15,57,57,PM5-C15,Ammonium ion versus ammonia gas,method_checked,False
+che-016,chemistry,16,59,59,PM5-C16,Use a salt-solubility matrix without overgeneralising,method_checked,False
+che-017,chemistry,17,61,61,PM5-C17,Thermal decomposition: carbonate versus nitrate products,method_checked,False
+che-018,chemistry,18,63,63,PM5-C18,Aqueous ion colours and electron configurations,method_checked,False
+che-019,chemistry,19,65,65,PM5-C19,Ferrous analysis with a concordant-titre decision,method_checked,False
+che-020,chemistry,20,67,67,PM5-C20,Permanganate standardisation: repair the 2:5 equation,method_checked,False
+che-021,chemistry,21,69,69,PM5-C21,Ligand change versus oxidation-state change,method_checked,False
+che-022,chemistry,22,71,71,PM5-C22,Manganese oxidation states from labelled species,method_checked,False
+che-023,chemistry,23,73,73,PM5-C23,"Distinguish Cu2+, Fe3+ and Cr3+ using paired records",method_checked,False
+che-024,chemistry,24,75,75,PM5-C24,Unsaturation evidence does not uniquely identify an alkyne,method_checked,False
+che-025,chemistry,25,80,78,PM5-C25,Alcohol oxidation records: ethanol versus propan-2-ol,method_checked,False
+che-026,chemistry,26,81,81,PM5-C26,Phenol: paired evidence for acidity and substitution,method_checked,False
+che-027,chemistry,27,83,83,PM5-C27,Carbonyl identification with the aromatic-aldehyde exception,method_checked,False
+che-028,chemistry,28,86,86,PM5-C28,Carboxylic-acid evidence and the methanoic-acid exception,method_checked,False
+che-029,chemistry,29,88,88,PM5-C29,Aniline and azo-linkage evidence: interpret supplied structures,method_checked,False
+che-030,chemistry,30,90,90,PM5-C30,Magnesium rate comparison at a fixed gas endpoint,method_checked,False
+che-031,chemistry,31,95,95,PM5-C31,Thiosulfate cloudiness: use concentration after mixing,method_checked,False
+che-032,chemistry,32,98,98,PM5-C32,Iron(III)-iodide clock: respect the factor of two,method_checked,False
+che-033,chemistry,33,102,102,PM5-C33,Iron-thiocyanate equilibrium: colour is concentration evidence,method_checked,False
+che-034,chemistry,34,105,105,PM5-C34,NO2/N2O4: temperature changes both colour and K,method_checked,False
+che-035,chemistry,35,109,109,PM5-C35,Salt pH: identify which ion hydrolyses,method_checked,False
+che-036,chemistry,36,111,111,PM5-C36,Carbonate titration: cumulative versus additional acid,method_checked,False
+che-037,chemistry,37,114,114,PM5-C37,Calcium hydroxide: infer Ksp from an acid titre,method_checked,False
+che-038,chemistry,38,117,117,PM5-C38,Phase-specific acid titration: label the ratio explicitly,method_checked,False
+che-039,chemistry,39,120,120,PM5-C39,Displacement matrix: rank metals from actual evidence,method_checked,False
+che-040,chemistry,40,122,122,PM5-C40,Ag/AgCl reference: standard versus actual filling solution,method_checked,False
+che-041,chemistry,41,126,126,PM5-C41,Soap evidence: stoichiometry and hard-water scum,method_checked,False
+che-042,chemistry,42,130,130,PM5-C42,Steam-distillation interpretation: vapour pressures and dry mass,method_checked,False
+che-043,chemistry,43,133,133,PM5-C43,Biodiesel model: ester product and limiting reagent,method_checked,False
+che-044,chemistry,44,135,135,PM5-C44,Vinegar result: dilution and two percentage bases,method_checked,False
+che-045,chemistry,45,138,138,PM5-C45,Winkler dissolved oxygen: the four-thiosulfate factor,method_checked,False
+phy-001,physics,1,1,1,PM5-P01,Vernier calipers: measurement and geometry,method_checked,False
+phy-002,physics,2,6,6,PM5-P02,Micrometer screw gauge,method_checked,False
+phy-003,physics,3,9,9,PM5-P03,Spherometer and radius of curvature,method_checked,False
+phy-004,physics,4,11,11,PM5-P04,Travelling microscope: precise position,method_checked,False
+phy-005,physics,5,14,14,PM5-P05,Parallelogram of forces and unknown mass,method_checked,False
+phy-006,physics,6,16,16,PM5-P06,Principle of moments: unknown mass,method_checked,False
+phy-007,physics,7,18,18,PM5-P07,Relative density from a U-tube,method_checked,False
+phy-008,physics,8,20,20,PM5-P08,Relative density with Hare's apparatus,method_checked,False
+phy-009,physics,9,22,22,PM5-P09,Density with a weighted test tube,method_checked,False
+phy-010,physics,10,24,24,PM5-P10,Gravitational acceleration from a simple pendulum,method_checked,False
+phy-011,physics,11,26,26,PM5-P11,Loaded spring: mass versus period,method_checked,False
+phy-012,physics,12,28,28,PM5-P12,Sonometer: tuning fork frequency,method_checked,False
+phy-013,physics,13,30,30,PM5-P13,Sonometer: frequency versus length,method_checked,False
+phy-014,physics,14,32,32,PM5-P14,Closed-tube resonance: one fork and end correction,method_checked,False
+phy-015,physics,15,34,34,PM5-P15,Closed-tube resonance: several frequencies,method_checked,False
+phy-016,physics,16,36,36,PM5-P16,Glass refractive index: apparent depth,method_checked,False
+phy-017,physics,17,38,38,PM5-P17,Prism deviation versus incidence,method_checked,False
+phy-018,physics,18,40,40,PM5-P18,Prism refractive index from critical angle,method_checked,False
+phy-019,physics,19,42,42,PM5-P19,Spectrometer adjustment and prism angle,method_checked,False
+phy-020,physics,20,45,45,PM5-P20,Spectrometer: minimum deviation and n,method_checked,False
+phy-21-1,physics,21.1,47,47,PM5-P21,Convex lens: no-parallax focal length,method_checked,False
+phy-21-2,physics,21.2,51,51,PM5-P22,Concave lens: no-parallax focal length,method_checked,False
+phy-022,physics,22,53,53,PM5-P23,Atmospheric pressure: quill-tube model,method_checked,False
+phy-023,physics,23,55,55,PM5-P24,Gas volume versus absolute temperature,method_checked,False
+phy-024,physics,24,57,57,PM5-P25,Pressure versus temperature at fixed volume,method_checked,False
+phy-025,physics,25,59,59,PM5-P26,Solid heat capacity: mixture method,method_checked,False
+phy-026,physics,26,61,61,PM5-P27,Liquid heat capacity by cooling,method_checked,False
+phy-027,physics,27,64,64,PM5-P28,Latent heat of fusion of ice,method_checked,False
+phy-028,physics,28,66,66,PM5-P29,Latent heat of vaporisation of water,method_checked,False
+phy-029,physics,29,68,68,PM5-P30,Relative humidity: polished calorimeter,method_checked,False
+phy-030,physics,30,70,70,PM5-P31,Thermal conductivity: Searle method,method_checked,False
+phy-031,physics,31,73,73,PM5-P32,Cell electromotive force and internal resistance,method_checked,False
+phy-032,physics,32,75,75,PM5-P33,Copper resistance and temperature coefficient,method_checked,False
+phy-033,physics,33,77,77,PM5-P34,Potentiometer comparison of two cell EMFs,method_checked,False
+phy-034,physics,34,79,79,PM5-P35,Internal resistance of a cell: potentiometer,method_checked,False
+phy-035,physics,35,81,81,PM5-P36,Forward diode current-voltage relation,method_checked,False
+phy-036,physics,36,83,83,PM5-P37,Transistor common-emitter transfer characteristic,method_checked,False
+phy-037,physics,37,85,85,PM5-P38,Logic gate identification using truth tables,method_checked,False
+phy-038,physics,38,87,87,PM5-P39,Young modulus from extension of steel wire,method_checked,False
+phy-039,physics,39,90,90,PM5-P40,Liquid viscosity from laminar capillary flow,method_checked,False
+phy-040,physics,40,92,92,PM5-P41,Surface tension from a microscope slide,method_checked,False
+phy-041,physics,41,94,94,PM5-P42,Surface tension via capillary rise,method_checked,False
+phy-042,physics,42,96,96,PM5-P43,Surface tension from Jaeger bubble method,method_checked,False

@@ -1,0 +1,7 @@
+# Next 16.4.1 compatibility and dependency maintenance
+
+Continue published Powerhouse V22 with its planner, latest-attempt recovery, public origin, audience and academic record formats intact. Change the exact Next dependency from16.2.6 to16.4.1; hold React/ReactDOM/RSC19.2.8, Vinext0.0.50, Vite8.0.13, existing lint configuration and package scripts fixed. Required transitive lock changes need an independent complete record-by-record review and fresh installation before release.
+
+The [maintainer release](https://github.com/vercel/next.js/releases/tag/v16.4.1) identifies patches for the retained critical Next version ranges. This removes affected package-version matches; it is not proof that this deployment was exploitable or that all Vinext paths are secure. The deployed Worker uses Vinext/Cloudflare Images rather than the Next native image pipeline. No authored use-cache/ImageResponse path was found in the bounded prior inspection. Separate Vinext image/cache/RSC behavior and unrelated advisories require their own evidence.
+
+Require fresh independent install, types/lint/build/full tests, actual compiled provenance, benign mocked actual image-handler controls and complete synthetic legacy/recovery/private/shared browser gates bound to exact source. No production exploit requests or real student-profile tests. Existing recovery/export behavior and no automatic academic credit remain. Code rollback restores older dependencies; it is not student-data rollback. Actual publication belongs in native receipts, not this source note.

@@ -1,0 +1,6 @@
+(function(root){'use strict';
+ const suffix='__trinity_checkpoint_v1';
+ function raw(storage,key){const checkpointRaw=storage.getItem(key+suffix);if(checkpointRaw!==null){const checkpoint=JSON.parse(checkpointRaw);if(!checkpoint||typeof checkpoint!=='object'||Array.isArray(checkpoint)||!['trinity-checkpoint-v1','atlas-raw-checkpoint-v1'].includes(checkpoint.schema))throw Error('Unsupported recovery checkpoint.');if(checkpoint.mode==='isolated-v1'){if(typeof checkpoint.head!=='string')throw Error('Unreadable candidate head.');const value=JSON.parse(checkpoint.head);if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Unreadable candidate payload.');return checkpoint.head;}if(checkpoint.mode!==undefined)throw Error('Unsupported recovery mode.');}return storage.getItem(key);}
+ function copies(storage,key){const keys=typeof storage.keys==='function'?storage.keys():Object.keys(storage);return {key,legacyRaw:storage.getItem(key),checkpointRaw:storage.getItem(key+suffix),originalsRaw:storage.getItem(key+'__trinity_originals_v1'),pendingWrites:keys.filter(name=>name.startsWith(key+'__trinity_claim_v1:')).map(name=>({key:name,raw:storage.getItem(name)}))};}
+ root.TrinityRead={raw,copies};if(typeof module!=='undefined')module.exports=root.TrinityRead;
+})(globalThis);

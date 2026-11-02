@@ -1,0 +1,1654 @@
+{
+  "schema": "al-paper-observatory-v1",
+  "title": "Existing source inventory · review status retained",
+  "notes": "Physics:26inherited2000–2025aggregate mappings (1410MCQs); Chemistry:50inherited2025mappings; Biology2019:50visually inspected question references with provisional single-analyst classifications and Q42held as a boundary case. No official answer key or second-review certification. This is not complete Chemistry/Physics1980-onward or Biology2019-onward coverage. Scanned ChemistryMCQbooks contain observed1980s questions despite misleadingfilenames; OCR citation extraction and complete historical/variant coverage remain under review. Missing data is never a zero or exam prediction.",
+  "papers": [
+    {
+      "id": "inherited-physics-2000",
+      "subject": "physics",
+      "examYear": 2000,
+      "sitting": "National examination 2000",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2000",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 3,
+        "Mechanics": 10,
+        "Oscillations and Waves": 13,
+        "Thermal Physics": 5,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 7,
+        "Magnetic Field": 4,
+        "Current Electricity": 6,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 5,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2001",
+      "subject": "physics",
+      "examYear": 2001,
+      "sitting": "National examination 2001",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2001",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 10,
+        "Oscillations and Waves": 13,
+        "Thermal Physics": 8,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 5,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 7,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2002",
+      "subject": "physics",
+      "examYear": 2002,
+      "sitting": "National examination 2002",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2002",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 1,
+        "Mechanics": 5,
+        "Oscillations and Waves": 13,
+        "Thermal Physics": 12,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 8,
+        "Electronics": 2,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 4
+      }
+    },
+    {
+      "id": "inherited-physics-2003",
+      "subject": "physics",
+      "examYear": 2003,
+      "sitting": "National examination 2003",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2003",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 1,
+        "Mechanics": 10,
+        "Oscillations and Waves": 13,
+        "Thermal Physics": 8,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 3,
+        "Current Electricity": 7,
+        "Electronics": 4,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2004",
+      "subject": "physics",
+      "examYear": 2004,
+      "sitting": "National examination 2004",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2004",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 9,
+        "Oscillations and Waves": 12,
+        "Thermal Physics": 6,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 11,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2005",
+      "subject": "physics",
+      "examYear": 2005,
+      "sitting": "National examination 2005",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2005",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 8,
+        "Oscillations and Waves": 10,
+        "Thermal Physics": 9,
+        "Gravitational Field": 0,
+        "Electrostatic Field": 5,
+        "Magnetic Field": 4,
+        "Current Electricity": 9,
+        "Electronics": 4,
+        "Mechanical Properties of Matter": 7,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2006",
+      "subject": "physics",
+      "examYear": 2006,
+      "sitting": "National examination 2006",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2006",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 4,
+        "Mechanics": 9,
+        "Oscillations and Waves": 12,
+        "Thermal Physics": 5,
+        "Gravitational Field": 2,
+        "Electrostatic Field": 5,
+        "Magnetic Field": 5,
+        "Current Electricity": 8,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 4,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2007",
+      "subject": "physics",
+      "examYear": 2007,
+      "sitting": "National examination 2007",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2007",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 3,
+        "Mechanics": 11,
+        "Oscillations and Waves": 11,
+        "Thermal Physics": 6,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 8,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 5,
+        "Matter and Radiation": 4
+      }
+    },
+    {
+      "id": "inherited-physics-2008",
+      "subject": "physics",
+      "examYear": 2008,
+      "sitting": "National examination 2008",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2008",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 1,
+        "Mechanics": 11,
+        "Oscillations and Waves": 12,
+        "Thermal Physics": 7,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 8,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2009",
+      "subject": "physics",
+      "examYear": 2009,
+      "sitting": "National examination 2009",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2009",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 7,
+        "Oscillations and Waves": 11,
+        "Thermal Physics": 7,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 5,
+        "Current Electricity": 9,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 7,
+        "Matter and Radiation": 4
+      }
+    },
+    {
+      "id": "inherited-physics-2010",
+      "subject": "physics",
+      "examYear": 2010,
+      "sitting": "National examination 2010",
+      "medium": "English",
+      "syllabus": "Source format era: old_60_question",
+      "expectedQuestions": 60,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2010",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 8,
+        "Oscillations and Waves": 13,
+        "Thermal Physics": 11,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 3,
+        "Magnetic Field": 6,
+        "Current Electricity": 6,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 5,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2011",
+      "subject": "physics",
+      "examYear": 2011,
+      "sitting": "National examination 2011",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2011",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 4,
+        "Mechanics": 7,
+        "Oscillations and Waves": 12,
+        "Thermal Physics": 5,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 3,
+        "Magnetic Field": 4,
+        "Current Electricity": 5,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 4,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2012",
+      "subject": "physics",
+      "examYear": 2012,
+      "sitting": "National examination 2012",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2012",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 4,
+        "Mechanics": 7,
+        "Oscillations and Waves": 9,
+        "Thermal Physics": 6,
+        "Gravitational Field": 2,
+        "Electrostatic Field": 3,
+        "Magnetic Field": 4,
+        "Current Electricity": 4,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 4,
+        "Matter and Radiation": 4
+      }
+    },
+    {
+      "id": "inherited-physics-2013",
+      "subject": "physics",
+      "examYear": 2013,
+      "sitting": "National examination 2013",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2013",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 1,
+        "Mechanics": 8,
+        "Oscillations and Waves": 11,
+        "Thermal Physics": 4,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 6,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2014",
+      "subject": "physics",
+      "examYear": 2014,
+      "sitting": "National examination 2014",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2014",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 3,
+        "Mechanics": 8,
+        "Oscillations and Waves": 9,
+        "Thermal Physics": 5,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 3,
+        "Magnetic Field": 5,
+        "Current Electricity": 4,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2015",
+      "subject": "physics",
+      "examYear": 2015,
+      "sitting": "National examination 2015",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2015",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 9,
+        "Oscillations and Waves": 10,
+        "Thermal Physics": 5,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 4,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2016",
+      "subject": "physics",
+      "examYear": 2016,
+      "sitting": "National examination 2016",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2016",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 1,
+        "Mechanics": 9,
+        "Oscillations and Waves": 7,
+        "Thermal Physics": 7,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 3,
+        "Magnetic Field": 4,
+        "Current Electricity": 6,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2017",
+      "subject": "physics",
+      "examYear": 2017,
+      "sitting": "National examination 2017",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2017",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 3,
+        "Mechanics": 7,
+        "Oscillations and Waves": 9,
+        "Thermal Physics": 6,
+        "Gravitational Field": 0,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 5,
+        "Current Electricity": 5,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2018",
+      "subject": "physics",
+      "examYear": 2018,
+      "sitting": "National examination 2018",
+      "medium": "English",
+      "syllabus": "Source format era: historical_50_question",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2018",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 3,
+        "Mechanics": 8,
+        "Oscillations and Waves": 8,
+        "Thermal Physics": 7,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 3,
+        "Current Electricity": 5,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 7,
+        "Matter and Radiation": 1
+      }
+    },
+    {
+      "id": "inherited-physics-2019",
+      "subject": "physics",
+      "examYear": 2019,
+      "sitting": "National examination 2019",
+      "medium": "English",
+      "syllabus": "Source format era: current_2019_2025",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2019",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 3,
+        "Mechanics": 7,
+        "Oscillations and Waves": 7,
+        "Thermal Physics": 5,
+        "Gravitational Field": 2,
+        "Electrostatic Field": 5,
+        "Magnetic Field": 4,
+        "Current Electricity": 4,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 4
+      }
+    },
+    {
+      "id": "inherited-physics-2020",
+      "subject": "physics",
+      "examYear": 2020,
+      "sitting": "National examination 2020",
+      "medium": "English",
+      "syllabus": "Source format era: current_2019_2025",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2020",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 8,
+        "Oscillations and Waves": 9,
+        "Thermal Physics": 6,
+        "Gravitational Field": 2,
+        "Electrostatic Field": 6,
+        "Magnetic Field": 4,
+        "Current Electricity": 4,
+        "Electronics": 2,
+        "Mechanical Properties of Matter": 5,
+        "Matter and Radiation": 2
+      }
+    },
+    {
+      "id": "inherited-physics-2021",
+      "subject": "physics",
+      "examYear": 2021,
+      "sitting": "National examination 2021",
+      "medium": "English",
+      "syllabus": "Source format era: current_2019_2025",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2021",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 8,
+        "Oscillations and Waves": 9,
+        "Thermal Physics": 5,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 5,
+        "Electronics": 2,
+        "Mechanical Properties of Matter": 7,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2022",
+      "subject": "physics",
+      "examYear": 2022,
+      "sitting": "National examination 2022",
+      "medium": "English",
+      "syllabus": "Source format era: current_2019_2025",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2022",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 9,
+        "Oscillations and Waves": 9,
+        "Thermal Physics": 5,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 5,
+        "Current Electricity": 4,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 5,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2023",
+      "subject": "physics",
+      "examYear": 2023,
+      "sitting": "National examination 2023",
+      "medium": "English",
+      "syllabus": "Source format era: current_2019_2025",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2023",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 9,
+        "Oscillations and Waves": 9,
+        "Thermal Physics": 4,
+        "Gravitational Field": 2,
+        "Electrostatic Field": 4,
+        "Magnetic Field": 4,
+        "Current Electricity": 5,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 5,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2024",
+      "subject": "physics",
+      "examYear": 2024,
+      "sitting": "National examination 2024",
+      "medium": "English",
+      "syllabus": "Source format era: current_2019_2025",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2024",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 11,
+        "Oscillations and Waves": 7,
+        "Thermal Physics": 6,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 3,
+        "Magnetic Field": 4,
+        "Current Electricity": 4,
+        "Electronics": 3,
+        "Mechanical Properties of Matter": 6,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-physics-2025",
+      "subject": "physics",
+      "examYear": 2025,
+      "sitting": "National examination 2025",
+      "medium": "English",
+      "syllabus": "Source format era: current_2019_2025",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing packaged Physics Intelligence primary-unit aggregate",
+        "locator": "/physics-intelligence/assets/physics-intelligence-data.json · byYear 2025",
+        "sha256": "0e8a0733aabe830b41cc3995926bcd246a39096d3c2f5949445729d0ce26eddc",
+        "review": "inherited",
+        "basis": "aggregate"
+      },
+      "questions": [],
+      "unitCounts": {
+        "Measurement": 2,
+        "Mechanics": 9,
+        "Oscillations and Waves": 10,
+        "Thermal Physics": 5,
+        "Gravitational Field": 1,
+        "Electrostatic Field": 6,
+        "Magnetic Field": 4,
+        "Current Electricity": 3,
+        "Electronics": 2,
+        "Mechanical Properties of Matter": 5,
+        "Matter and Radiation": 3
+      }
+    },
+    {
+      "id": "inherited-chemistry-2025",
+      "subject": "chemistry",
+      "examYear": 2025,
+      "sitting": "National examination 2025 (inherited mapping)",
+      "medium": "English",
+      "syllabus": "Inherited mapping; variant not rechecked",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Existing Chemistry Intelligence source layer",
+        "locator": "/chemistry-intelligence/source-audit.json · questions",
+        "sha256": "47a3198f6a8515edd1c42d691d2da02f3784837db038a9661328f4d362dbe5d3",
+        "review": "inherited",
+        "basis": "question-records"
+      },
+      "questions": [
+        {
+          "number": 1,
+          "unit": "Atomic Structure",
+          "topic": "Becquerel and the discovery of radioactivity",
+          "review": "inherited",
+          "locator": "Existing source-audit Q1",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 2,
+          "unit": "Atomic Structure",
+          "topic": "Maximum electrons in a subshell; quantum-number reasoning",
+          "review": "inherited",
+          "locator": "Existing source-audit Q2",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 3,
+          "unit": "Structure & Bonding",
+          "topic": "Identify types of intermolecular attraction",
+          "review": "inherited",
+          "locator": "Existing source-audit Q3",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 4,
+          "unit": "Basic Concepts of Organic Chemistry",
+          "topic": "Substituent effects and electronegativity of carbon",
+          "review": "inherited",
+          "locator": "Existing source-audit Q4",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 5,
+          "unit": "Equilibrium",
+          "topic": "Kp, conversion and equilibrium partial pressures",
+          "review": "inherited",
+          "locator": "Existing source-audit Q5",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 6,
+          "unit": "Atomic Structure",
+          "topic": "Infer proton, neutron, electron and mass-number relations from a table",
+          "review": "inherited",
+          "locator": "Existing source-audit Q6",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 7,
+          "unit": "Basic Concepts of Organic Chemistry",
+          "topic": "IUPAC naming of a multifunctional organic compound",
+          "review": "inherited",
+          "locator": "Existing source-audit Q7",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 8,
+          "unit": "Chemical Calculations",
+          "topic": "Thermal decomposition of a carbonate mixture and CO₂ stoichiometry",
+          "review": "inherited",
+          "locator": "Existing source-audit Q8",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 9,
+          "unit": "Hydrocarbons & Halo-hydrocarbons",
+          "topic": "Free-radical chlorination of methane",
+          "review": "inherited",
+          "locator": "Existing source-audit Q9",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 10,
+          "unit": "Chemical Kinetics",
+          "topic": "Zero-order concentration–time behaviour",
+          "review": "inherited",
+          "locator": "Existing source-audit Q10",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 11,
+          "unit": "Structure & Bonding",
+          "topic": "VSEPR molecular-shape reasoning",
+          "review": "inherited",
+          "locator": "Existing source-audit Q11",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 12,
+          "unit": "Chemical Calculations",
+          "topic": "Iodometric titration and thiosulfate calculation",
+          "review": "inherited",
+          "locator": "Existing source-audit Q12",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 13,
+          "unit": "Energetics",
+          "topic": "Solution enthalpy and final-temperature calorimetry",
+          "review": "inherited",
+          "locator": "Existing source-audit Q13",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 14,
+          "unit": "Equilibrium",
+          "topic": "Acid–base titration curve and indicator selection",
+          "review": "inherited",
+          "locator": "Existing source-audit Q14",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 15,
+          "unit": "Hydrocarbons & Halo-hydrocarbons",
+          "topic": "Reaction routes to prepare 1,2-dibromopropane",
+          "review": "inherited",
+          "locator": "Existing source-audit Q15",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 16,
+          "unit": "Chemical Kinetics",
+          "topic": "Derive a rate law from a pre-equilibrium mechanism",
+          "review": "inherited",
+          "locator": "Existing source-audit Q16",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 17,
+          "unit": "Equilibrium",
+          "topic": "AgBr/AgI solubility products and precipitation displacement",
+          "review": "inherited",
+          "locator": "Existing source-audit Q17",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 18,
+          "unit": "Energetics",
+          "topic": "Signs of ΔH, ΔS and ΔG for spontaneous vaporisation",
+          "review": "inherited",
+          "locator": "Existing source-audit Q18",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 19,
+          "unit": "Chemistry of s, p and d Block Elements",
+          "topic": "Properties of d-block elements",
+          "review": "inherited",
+          "locator": "Existing source-audit Q19",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 20,
+          "unit": "Oxygen-containing Organic Compounds",
+          "topic": "Selective oxidation of alcohol groups with PCC",
+          "review": "inherited",
+          "locator": "Existing source-audit Q20",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 21,
+          "unit": "Energetics",
+          "topic": "Use ΔS = ΔH/T for a phase transition",
+          "review": "inherited",
+          "locator": "Existing source-audit Q21",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 22,
+          "unit": "Electrochemistry",
+          "topic": "Ni/Cu galvanic cell: EMF, polarity and electron flow",
+          "review": "inherited",
+          "locator": "Existing source-audit Q22",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 23,
+          "unit": "Nitrogen-containing Organic Compounds",
+          "topic": "Diazonium ion as an electrophile in azo coupling",
+          "review": "inherited",
+          "locator": "Existing source-audit Q23",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 24,
+          "unit": "Gaseous State of Matter",
+          "topic": "Boiling condition: vapour pressure versus external pressure",
+          "review": "inherited",
+          "locator": "Existing source-audit Q24",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 25,
+          "unit": "Electrochemistry",
+          "topic": "Build the overall cell reaction and E° from half-reactions",
+          "review": "inherited",
+          "locator": "Existing source-audit Q25",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 26,
+          "unit": "Electrochemistry",
+          "topic": "Determine a spontaneous redox reaction from reduction potentials",
+          "review": "inherited",
+          "locator": "Existing source-audit Q26",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 27,
+          "unit": "Oxygen-containing Organic Compounds",
+          "topic": "Identify C₄H₈O₂ isomers using qualitative organic tests",
+          "review": "inherited",
+          "locator": "Existing source-audit Q27",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 28,
+          "unit": "Chemical Calculations",
+          "topic": "Calculate percentage yield from stoichiometry",
+          "review": "inherited",
+          "locator": "Existing source-audit Q28",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 29,
+          "unit": "Equilibrium",
+          "topic": "Obtain Kp from conversion in a heterogeneous gas equilibrium",
+          "review": "inherited",
+          "locator": "Existing source-audit Q29",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 30,
+          "unit": "Equilibrium",
+          "topic": "Forward and reverse rates after adding reactant to an equilibrium",
+          "review": "inherited",
+          "locator": "Existing source-audit Q30",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 31,
+          "unit": "Hydrocarbons & Halo-hydrocarbons",
+          "topic": "Sigma-complex resonance in bromobenzene nitration",
+          "review": "inherited",
+          "locator": "Existing source-audit Q31",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 32,
+          "unit": "Equilibrium",
+          "topic": "Effect of temperature and concentration on an exothermic equilibrium",
+          "review": "inherited",
+          "locator": "Existing source-audit Q32",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 33,
+          "unit": "Industrial Chemistry & Environmental Pollution",
+          "topic": "Mixed statements about industrial chemical processes",
+          "review": "inherited",
+          "locator": "Existing source-audit Q33",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 34,
+          "unit": "Chemistry of s, p and d Block Elements",
+          "topic": "Periodic properties of s-block elements",
+          "review": "inherited",
+          "locator": "Existing source-audit Q34",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 35,
+          "unit": "Nitrogen-containing Organic Compounds",
+          "topic": "Amide hydrolysis, oxidation and the 2,4-DNP test",
+          "review": "inherited",
+          "locator": "Existing source-audit Q35",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 36,
+          "unit": "Gaseous State of Matter",
+          "topic": "Read a P–T phase diagram with a negative fusion-curve slope",
+          "review": "inherited",
+          "locator": "Existing source-audit Q36",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 37,
+          "unit": "Industrial Chemistry & Environmental Pollution",
+          "topic": "Atmospheric ozone: location, function and formation",
+          "review": "inherited",
+          "locator": "Existing source-audit Q37",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 38,
+          "unit": "Energetics",
+          "topic": "Scale ΔH using stoichiometric coefficients",
+          "review": "inherited",
+          "locator": "Existing source-audit Q38",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 39,
+          "unit": "Chemistry of s, p and d Block Elements",
+          "topic": "Hydrogen halides: acidity, bond strength and bond length",
+          "review": "inherited",
+          "locator": "Existing source-audit Q39",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 40,
+          "unit": "Industrial Chemistry & Environmental Pollution",
+          "topic": "Contact process conditions for SO₂ → SO₃",
+          "review": "inherited",
+          "locator": "Existing source-audit Q40",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 41,
+          "unit": "Atomic Structure",
+          "topic": "Electron affinity of Be and N; subshell stability",
+          "review": "inherited",
+          "locator": "Existing source-audit Q41",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 42,
+          "unit": "Oxygen-containing Organic Compounds",
+          "topic": "Ester + Grignard reaction: ketone intermediate",
+          "review": "inherited",
+          "locator": "Existing source-audit Q42",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 43,
+          "unit": "Gaseous State of Matter",
+          "topic": "Boiling point of water under lower external pressure",
+          "review": "inherited",
+          "locator": "Existing source-audit Q43",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 44,
+          "unit": "Structure & Bonding",
+          "topic": "Bond-angle trend in H₂O, H₂S and H₂Se",
+          "review": "inherited",
+          "locator": "Existing source-audit Q44",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 45,
+          "unit": "Industrial Chemistry & Environmental Pollution",
+          "topic": "Water vapour as a greenhouse gas",
+          "review": "inherited",
+          "locator": "Existing source-audit Q45",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 46,
+          "unit": "Energetics",
+          "topic": "Compare ΔHfus and ΔHvap of water",
+          "review": "inherited",
+          "locator": "Existing source-audit Q46",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 47,
+          "unit": "Oxygen-containing Organic Compounds",
+          "topic": "Basic hydrolysis of an acyl chloride and the tetrahedral intermediate",
+          "review": "inherited",
+          "locator": "Existing source-audit Q47",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 48,
+          "unit": "Equilibrium",
+          "topic": "Effect of pH on Cu(OH)₂ solubility",
+          "review": "inherited",
+          "locator": "Existing source-audit Q48",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 49,
+          "unit": "Industrial Chemistry & Environmental Pollution",
+          "topic": "Solvay process: ammoniation and carbonation stages",
+          "review": "inherited",
+          "locator": "Existing source-audit Q49",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        },
+        {
+          "number": 50,
+          "unit": "Chemistry of s, p and d Block Elements",
+          "topic": "H₂O₂ acting as both oxidising and reducing agent",
+          "review": "inherited",
+          "locator": "Existing source-audit Q50",
+          "rationale": "Existing primary-unit classification. Original paper/page and prior-reference similarity claims have not been independently rechecked in this release."
+        }
+      ],
+      "unitCounts": {},
+      "unitRegister": [
+        "Atomic Structure",
+        "Structure & Bonding",
+        "Chemical Calculations",
+        "Gaseous State of Matter",
+        "Energetics",
+        "Chemistry of s, p and d Block Elements",
+        "Basic Concepts of Organic Chemistry",
+        "Hydrocarbons & Halo-hydrocarbons",
+        "Oxygen-containing Organic Compounds",
+        "Nitrogen-containing Organic Compounds",
+        "Chemical Kinetics",
+        "Equilibrium",
+        "Electrochemistry",
+        "Industrial Chemistry & Environmental Pollution"
+      ]
+    },
+    {
+      "id": "biology-2019-new-en-provisional",
+      "subject": "biology",
+      "examYear": 2019,
+      "sitting": "2019-08-05 · 13:00–15:00 · AL/2019/09/E-I(NEW)",
+      "medium": "English",
+      "syllabus": "New syllabus · NIE2017 · provisional mapping",
+      "expectedQuestions": 50,
+      "source": {
+        "label": "Mirrored Department of Examinations paper · one analyst visual review; classification provisional",
+        "locator": "https://pastpapers.wiki/download/7820/gce-a-l/28387/2019-new-english.pdf · paper I PDFpages1–7; syllabus https://www.nie.lk/pdffiles/tg/AL_Syl%20Biology2017.pdf",
+        "sha256": "24ac9fa8b62b729f67536b9d4794a6462b531cacbc850a4a38e5ad8c5d4ef039",
+        "review": "provisional",
+        "basis": "question-records"
+      },
+      "questions": [
+        {
+          "number": 1,
+          "unit": "Introduction to Biology",
+          "topic": "Cellular organization",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 1, Q1",
+          "rationale": "Provisional single-analyst inference; NIE competency 1.1.2 (syllabus PDFpages8,9). Explicit U1 outcome; cell-theory overlap in U2."
+        },
+        {
+          "number": 2,
+          "unit": "Chemical & cellular basis of life",
+          "topic": "Nucleotide functions",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 1, Q2",
+          "rationale": "Provisional single-analyst inference; NIE competency 2.1.3 (syllabus PDFpages10,11). null"
+        },
+        {
+          "number": 3,
+          "unit": "Chemical & cellular basis of life",
+          "topic": "Microscopy principles",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 1, Q3",
+          "rationale": "Provisional single-analyst inference; NIE competency 2.2.1 (syllabus PDFpages12). null"
+        },
+        {
+          "number": 4,
+          "unit": "Chemical & cellular basis of life",
+          "topic": "Cytoskeletal structures",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 1, Q4",
+          "rationale": "Provisional single-analyst inference; NIE competency 2.2.2 (syllabus PDFpages13). null"
+        },
+        {
+          "number": 5,
+          "unit": "Chemical & cellular basis of life",
+          "topic": "Cell-cycle events",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 1, Q5",
+          "rationale": "Provisional single-analyst inference; NIE competency 2.3.1 (syllabus PDFpages14,15). null"
+        },
+        {
+          "number": 6,
+          "unit": "Chemical & cellular basis of life",
+          "topic": "Photosynthetic pigments",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q6",
+          "rationale": "Provisional single-analyst inference; NIE competency 2.4.3 (syllabus PDFpages16,17). null"
+        },
+        {
+          "number": 7,
+          "unit": "Chemical & cellular basis of life",
+          "topic": "Respiratory pathways",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q7",
+          "rationale": "Provisional single-analyst inference; NIE competency 2.4.4 (syllabus PDFpages18). null"
+        },
+        {
+          "number": 8,
+          "unit": "Evolution and diversity of organisms",
+          "topic": "Body-plan evolution",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q8",
+          "rationale": "Provisional single-analyst inference; NIE competency 3.2.6 (syllabus PDFpages24). null"
+        },
+        {
+          "number": 9,
+          "unit": "Evolution and diversity of organisms",
+          "topic": "Invertebrate comparison",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q9",
+          "rationale": "Provisional single-analyst inference; NIE competency 3.2.6 (syllabus PDFpages24). null"
+        },
+        {
+          "number": 10,
+          "unit": "Evolution and diversity of organisms",
+          "topic": "Plant relationships",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q10",
+          "rationale": "Provisional single-analyst inference; NIE competency 3.2.4 (syllabus PDFpages22,23). null"
+        },
+        {
+          "number": 11,
+          "unit": "Evolution and diversity of organisms",
+          "topic": "Dicot characteristics",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q11",
+          "rationale": "Provisional single-analyst inference; NIE competency 3.2.4 (syllabus PDFpages22,23). Classification is explicit in U3; anatomy/reproduction overlap U4."
+        },
+        {
+          "number": 12,
+          "unit": "Plant form and function",
+          "topic": "Dermal tissue",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q12",
+          "rationale": "Provisional single-analyst inference; NIE competency 4.1.1 (syllabus PDFpages26). null"
+        },
+        {
+          "number": 13,
+          "unit": "Plant form and function",
+          "topic": "Light-capture architecture",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q13",
+          "rationale": "Provisional single-analyst inference; NIE competency 4.2.1 (syllabus PDFpages27,28). Architecture is explicit U4; photosynthetic mechanism overlaps U2."
+        },
+        {
+          "number": 14,
+          "unit": "Plant form and function",
+          "topic": "Stomatal regulation",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 2, Q14",
+          "rationale": "Provisional single-analyst inference; NIE competency 4.2.2 (syllabus PDFpages28). null"
+        },
+        {
+          "number": 15,
+          "unit": "Plant form and function",
+          "topic": "Mineral nutrition",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q15",
+          "rationale": "Provisional single-analyst inference; NIE competency 4.3.2 (syllabus PDFpages31). null"
+        },
+        {
+          "number": 16,
+          "unit": "Plant form and function",
+          "topic": "Land-plant reproduction",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q16",
+          "rationale": "Provisional single-analyst inference; NIE competency 4.4.1 (syllabus PDFpages31,32). Land-plant life cycles are explicit U4; phylogenetic comparison overlaps U3."
+        },
+        {
+          "number": 17,
+          "unit": "Plant form and function",
+          "topic": "Plant light-responses",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q17",
+          "rationale": "Provisional single-analyst inference; NIE competency 4.5.0 (syllabus PDFpages33,34). null"
+        },
+        {
+          "number": 18,
+          "unit": "Animal form and function",
+          "topic": "Connective tissues",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q18",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.1.1 (syllabus PDFpages35). null"
+        },
+        {
+          "number": 19,
+          "unit": "Animal form and function",
+          "topic": "Feeding strategies",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q19",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.2.1 (syllabus PDFpages35,36). null"
+        },
+        {
+          "number": 20,
+          "unit": "Animal form and function",
+          "topic": "Digestive enzymes",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q20",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.2.2 (syllabus PDFpages36,37). Digestive-system application is primary; biomolecule/enzyme background U2."
+        },
+        {
+          "number": 21,
+          "unit": "Animal form and function",
+          "topic": "Circulatory dysfunction",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q21",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.3.2 (syllabus PDFpages38,39). null"
+        },
+        {
+          "number": 22,
+          "unit": "Animal form and function",
+          "topic": "Innate immunity",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 3, Q22",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.4.1 (syllabus PDFpages41). null"
+        },
+        {
+          "number": 23,
+          "unit": "Animal form and function",
+          "topic": "Nitrogenous excretion",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 4, Q23",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.5.1 (syllabus PDFpages42). Comparative excretion is explicit U5; animal-group traits overlap U3."
+        },
+        {
+          "number": 24,
+          "unit": "Animal form and function",
+          "topic": "Brain coordination",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 4, Q24",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.6.2 (syllabus PDFpages45). null"
+        },
+        {
+          "number": 25,
+          "unit": "Animal form and function",
+          "topic": "Sensory pathways",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 4, Q25",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.6.5 (syllabus PDFpages47,48). null"
+        },
+        {
+          "number": 26,
+          "unit": "Animal form and function",
+          "topic": "Endocrine regulation",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 4, Q26",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.7.1 (syllabus PDFpages49). null"
+        },
+        {
+          "number": 27,
+          "unit": "Animal form and function",
+          "topic": "Male gametogenesis",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 4, Q27",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.8.2 (syllabus PDFpages51). Spermatogenesis is explicit U5; meiotic reduction overlaps U2."
+        },
+        {
+          "number": 28,
+          "unit": "Animal form and function",
+          "topic": "Reproductive-cycle graph",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 4, Q28",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.8.3 (syllabus PDFpages52). null"
+        },
+        {
+          "number": 29,
+          "unit": "Animal form and function",
+          "topic": "Skeletal organization",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 5, Q29",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.9.2 / 5.9.3 (syllabus PDFpages55,56,57). null"
+        },
+        {
+          "number": 30,
+          "unit": "Genetics",
+          "topic": "Inheritance patterns",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 5, Q30",
+          "rationale": "Provisional single-analyst inference; NIE competency 6.1.3 (syllabus PDFpages59,60). Inheritance-pattern classification is U6; the underlying mutation overlaps U7."
+        },
+        {
+          "number": 31,
+          "unit": "Genetics",
+          "topic": "Mendelian crosses",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 5, Q31",
+          "rationale": "Provisional single-analyst inference; NIE competency 6.1.1 (syllabus PDFpages58). null"
+        },
+        {
+          "number": 32,
+          "unit": "Molecular Biology & Recombinant DNA Technology",
+          "topic": "Chromosomal mutation",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 5, Q32",
+          "rationale": "Provisional single-analyst inference; NIE competency 7.1.3 (syllabus PDFpages62,63). NIE places chromosomal mutations/disorders in U7; meiosis/inheritance overlap U2/U6."
+        },
+        {
+          "number": 33,
+          "unit": "Molecular Biology & Recombinant DNA Technology",
+          "topic": "Gene mutation",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 5, Q33",
+          "rationale": "Provisional single-analyst inference; NIE competency 7.1.3 (syllabus PDFpages62,63). null"
+        },
+        {
+          "number": 34,
+          "unit": "Molecular Biology & Recombinant DNA Technology",
+          "topic": "PCR technique",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 5, Q34",
+          "rationale": "Provisional single-analyst inference; NIE competency 7.2.2 (syllabus PDFpages64). PCR is explicit U7; enzyme-stability background U2."
+        },
+        {
+          "number": 35,
+          "unit": "Molecular Biology & Recombinant DNA Technology",
+          "topic": "DNA cloning",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 5, Q35",
+          "rationale": "Provisional single-analyst inference; NIE competency 7.2.1 (syllabus PDFpages63). null"
+        },
+        {
+          "number": 36,
+          "unit": "Environmental Biology",
+          "topic": "Local ecosystems",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 6, Q36",
+          "rationale": "Provisional single-analyst inference; NIE competency 8.2.2 (syllabus PDFpages66). null"
+        },
+        {
+          "number": 37,
+          "unit": "Environmental Biology",
+          "topic": "Biodiversity values",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 6, Q37",
+          "rationale": "Provisional single-analyst inference; NIE competency 8.3.1 (syllabus PDFpages67). null"
+        },
+        {
+          "number": 38,
+          "unit": "Environmental Biology",
+          "topic": "Global environmental-change",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 6, Q38",
+          "rationale": "Provisional single-analyst inference; NIE competency 8.3.2 (syllabus PDFpages68). null"
+        },
+        {
+          "number": 39,
+          "unit": "Microbiology",
+          "topic": "Culture-media methods",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 6, Q39",
+          "rationale": "Provisional single-analyst inference; NIE competency 9.1.2 (syllabus PDFpages70). null"
+        },
+        {
+          "number": 40,
+          "unit": "Microbiology",
+          "topic": "Potable-water microbiology",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 6, Q40",
+          "rationale": "Provisional single-analyst inference; NIE competency 9.4.1 (syllabus PDFpages75). Water-quality/microbial contamination is explicit U9; human disease overlaps U5."
+        },
+        {
+          "number": 41,
+          "unit": "Chemical & cellular basis of life",
+          "topic": "Metabolic energetics",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 6, Q41",
+          "rationale": "Provisional single-analyst inference; NIE competency 2.4.1 / 2.4.3 / 2.4.4 (syllabus PDFpages15,16,17,18). null"
+        },
+        {
+          "number": 42,
+          "unit": "Unclassified / boundary review",
+          "topic": "Comparative fertilization",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 6, Q42",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.8.1 (syllabus PDFpages50). Boundary case: reproduction modes U5 versus chordate-class characteristics U3. Needs second-review adjudication. Held outside either candidate primary unit until a second review."
+        },
+        {
+          "number": 43,
+          "unit": "Animal form and function",
+          "topic": "Respiratory pigments",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q43",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.3.3 (syllabus PDFpages39). Respiratory pigments are explicit U5; animal-group examples overlap U3."
+        },
+        {
+          "number": 44,
+          "unit": "Animal form and function",
+          "topic": "Respiratory health",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q44",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.3.5 (syllabus PDFpages40). null"
+        },
+        {
+          "number": 45,
+          "unit": "Animal form and function",
+          "topic": "Neural resting-potential",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q45",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.6.3 (syllabus PDFpages46,47). Neuron function is explicit U5; membrane transport background U2."
+        },
+        {
+          "number": 46,
+          "unit": "Animal form and function",
+          "topic": "Reproductive modes",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q46",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.8.1 (syllabus PDFpages50). null"
+        },
+        {
+          "number": 47,
+          "unit": "Animal form and function",
+          "topic": "Comparative skeletons",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q47",
+          "rationale": "Provisional single-analyst inference; NIE competency 5.9.1 (syllabus PDFpages54,55). Comparative skeletal systems are explicit U5; phylum examples overlap U3."
+        },
+        {
+          "number": 48,
+          "unit": "Environmental Biology",
+          "topic": "Biome distribution",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q48",
+          "rationale": "Provisional single-analyst inference; NIE competency 8.2.1 (syllabus PDFpages65). null"
+        },
+        {
+          "number": 49,
+          "unit": "Microbiology",
+          "topic": "Industrial microbiology",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q49",
+          "rationale": "Provisional single-analyst inference; NIE competency 9.3.1 (syllabus PDFpages73,74). null"
+        },
+        {
+          "number": 50,
+          "unit": "Microbiology",
+          "topic": "Food microbiology",
+          "review": "provisional",
+          "locator": "AL/2019/09/E-I(NEW), printed/PDF page 7, Q50",
+          "rationale": "Provisional single-analyst inference; NIE competency 9.5.1 (syllabus PDFpages76). null"
+        }
+      ],
+      "unitCounts": {},
+      "unitRegister": [
+        "Introduction to Biology",
+        "Chemical & cellular basis of life",
+        "Evolution and diversity of organisms",
+        "Plant form and function",
+        "Animal form and function",
+        "Genetics",
+        "Molecular Biology & Recombinant DNA Technology",
+        "Environmental Biology",
+        "Microbiology",
+        "Applied Biology",
+        "Unclassified / boundary review"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2964 @@
+{
+ "release": "2026-10-16-v4.0-additive",
+ "schema_note": "Read-only practice content. Fictional data. Not an official marking scheme. Teacher review pending.",
+ "items": [
+  {
+   "id": "PM40-B01",
+   "sec": "bio",
+   "no": "1",
+   "page": 1,
+   "practical_title": "Detecting the main classes of biological food molecules",
+   "title": "Food-test records: a negative result is not an absence",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies completed, fictional test records for four unlabelled food samples. No student handling of reagents is involved.",
+   "question": "Identify the food class indicated for P, Q, R and S, and explain why the direct Benedict's result for Q does not show that sugar is absent.",
+   "marks": [
+    "P contains a reducing sugar: Benedict's reagent gives a brick-red (orange-red) precipitate on heating.",
+    "Q is consistent with a non-reducing sugar: it is negative directly but positive after hydrolysis releases reducing sugars.",
+    "R contains starch: iodine solution turns blue-black.",
+    "S contains protein: the biuret test gives a violet / purple colour (peptide bonds in alkaline copper(II) solution).",
+    "A direct negative Benedict's result excludes only reducing sugars; hydrolysis with acid (then neutralising) is the comparison that reveals a non-reducing sugar. All four tests are qualitative."
+   ],
+   "mistake": "Reporting \"no sugar\" from a negative direct Benedict's test without the hydrolysis comparison.",
+   "tq": "A sample dissolved in ethanol gives a white cloudy emulsion when the solution is poured into water. Which food class is indicated?",
+   "ta": "Lipid (the ethanol emulsion test): the cloudy white emulsion is dispersed lipid droplets.",
+   "table": {
+    "head": [
+     "Sample",
+     "Benedict's test (direct)",
+     "Iodine solution",
+     "Biuret test",
+     "Benedict's after hydrolysis and neutralisation"
+    ],
+    "rows": [
+     [
+      "P",
+      "brick-red precipitate",
+      "no change (orange-brown)",
+      "no change (blue)",
+      "not done"
+     ],
+     [
+      "Q",
+      "stays blue",
+      "no change",
+      "no change (blue)",
+      "brick-red precipitate"
+     ],
+     [
+      "R",
+      "stays blue",
+      "blue-black",
+      "no change (blue)",
+      "not done"
+     ],
+     [
+      "S",
+      "stays blue",
+      "no change",
+      "violet / purple",
+      "not done"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-001",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B09",
+   "sec": "bio",
+   "no": "9",
+   "page": 10,
+   "practical_title": "Bacteria and cyanobacteria in light micrographs",
+   "title": "Light-microscope bacteria and cyanobacteria: size and features together",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional descriptions of three prepared slides viewed with the light microscope at high power, with a calibrated eyepiece scale.",
+   "question": "Classify A, B and C as prokaryotic or eukaryotic using the evidence, identify the most likely cyanobacterium, and explain why \"no nucleus visible\" is weak evidence on its own.",
+   "marks": [
+    "A is consistent with a bacterium (prokaryote): about 1 µm wide with no visible nucleus; \"clusters\" describes shape and arrangement only.",
+    "B is the most likely cyanobacterium: filamentous, blue-green pigmentation throughout the cell, and no chloroplasts.",
+    "C is eukaryotic: a distinct nucleus and a chloroplast are visible, and its cells are ten times wider than A (10.0 ÷ 1.0).",
+    "Cyanobacteria photosynthesise but are prokaryotes, so their pigments are in the cytoplasm / thylakoids, not in chloroplasts, and they have no membrane-bound nucleus.",
+    "A light microscope cannot resolve the nucleoid, so \"not visible\" does not mean \"absent\"; use cell size, pigment and arrangement together."
+   ],
+   "mistake": "Treating any green or blue-green cell as eukaryotic because it is photosynthetic.",
+   "tq": "A cell 8 µm wide shows a clear nucleus but no pigment. Prokaryote or eukaryote?",
+   "ta": "Eukaryote: a distinct nucleus is visible; the absence of pigment does not change this.",
+   "table": {
+    "head": [
+     "Slide",
+     "Cell width",
+     "Arrangement",
+     "Internal features seen"
+    ],
+    "rows": [
+     [
+      "A",
+      "1.0 µm",
+      "spherical cells in grape-like clusters",
+      "no nucleus visible; no pigment"
+     ],
+     [
+      "B",
+      "2.0 µm",
+      "long unbranched filament; a few larger clear cells at intervals",
+      "blue-green colour throughout; no nucleus or chloroplast visible"
+     ],
+     [
+      "C",
+      "10.0 µm",
+      "single oval cells",
+      "distinct nucleus; green chloroplast"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-009",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B10",
+   "sec": "bio",
+   "no": "10",
+   "page": 11,
+   "practical_title": "Interpreting electron images of prokaryotes",
+   "title": "Prokaryote electron micrograph: use the scale bar, then limit the claim",
+   "kind": "numerical",
+   "scenario": "A fictional printed TEM image of a rod-shaped bacterium has a scale bar labelled 0.50 µm that measures 15.0 mm on the page. On the same page the cell is 48.0 mm long and 20.0 mm wide, and its flagellum measures 90.0 mm.",
+   "question": "Calculate the actual cell length, cell width and flagellum length, state the image magnification, and explain why a visible flagellum does not prove that the cell was motile.",
+   "marks": [
+    "Scale factor = 0.50 µm ÷ 15.0 mm = 0.0333 µm per mm of image.",
+    "Cell length = 48.0 × 0.0333 = 1.60 µm.",
+    "Cell width = 20.0 × 0.0333 = 0.667 µm and flagellum length = 90.0 × 0.0333 = 3.00 µm.",
+    "Magnification = 15.0 mm ÷ 0.50 µm = 15 000 µm ÷ 0.50 µm = 30 000 times (convert mm to µm first).",
+    "A flagellum is a structure; motility is a function that a static image cannot demonstrate. The scale bar stays valid after resizing, a stated magnification may not."
+   ],
+   "mistake": "Dividing 15.0 mm by 0.50 µm without converting units, giving 30 instead of 30 000.",
+   "tq": "A scale bar of 1.0 µm measures 25 mm and the cell is 60 mm long. What is the actual length?",
+   "ta": "60 ÷ 25 × 1.0 = 2.4 µm.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "bio-010",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B11",
+   "sec": "bio",
+   "no": "11",
+   "page": 12,
+   "practical_title": "Comparing selected protists and algae",
+   "title": "Protists and algae: combine features before naming",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional notes on four specimens seen in prepared slides and a demonstration.",
+   "question": "Match A to D with Euglena, Amoeba, Paramecium and Spirogyra, and explain why green colour alone cannot classify A and D.",
+   "marks": [
+    "A is Euglena: flagellum, eyespot and chloroplasts in a single cell.",
+    "B is Amoeba: pseudopodia and a constantly changing shape.",
+    "C is Paramecium: cilia, fixed slipper shape, oral groove and two kinds of nuclei.",
+    "D is Spirogyra: a filamentous green alga whose cells each contain a spiral chloroplast.",
+    "A and D are both green, but A is a single motile cell with an eyespot and D is a non-motile multicellular filament; classification needs movement, cell number and internal structure together."
+   ],
+   "mistake": "Grouping A and D together because both look green.",
+   "tq": "Which of the four specimens moves using cilia?",
+   "ta": "C (Paramecium).",
+   "table": {
+    "head": [
+     "Specimen",
+     "Size / structure",
+     "Movement",
+     "Key features"
+    ],
+    "rows": [
+     [
+      "A",
+      "single cell, about 50 µm",
+      "whip-like flagellum",
+      "green chloroplasts; red eyespot"
+     ],
+     [
+      "B",
+      "single cell, about 300 µm",
+      "changes shape; extends pseudopodia",
+      "colourless; no fixed shape"
+     ],
+     [
+      "C",
+      "single cell, about 200 µm, slipper-shaped",
+      "beating cilia over the surface",
+      "oral groove; two kinds of nuclei"
+     ],
+     [
+      "D",
+      "filament of many cells",
+      "non-motile",
+      "spiral, ribbon-like chloroplast in each cell"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-011",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B12",
+   "sec": "bio",
+   "no": "12",
+   "page": 13,
+   "practical_title": "Recognising major groups of plants",
+   "title": "Plant groups: vascular tissue, seeds and class evidence",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional specimen notes for four plants.",
+   "question": "Classify W, X, Y and Z (including the class of Z), and explain why \"has leaf-like structures\" does not separate W from the others.",
+   "marks": [
+    "W is a bryophyte: no vascular tissue, rhizoids, and a spore capsule.",
+    "X is a fern (pteridophyte): vascular tissue and true roots, reproducing by spores, with no seeds.",
+    "Y is a gymnosperm: seeds are naked and borne in cones.",
+    "Z is an angiosperm, and a dicotyledon: seeds enclosed in a fruit, net venation, floral parts in fours or fives, two seed leaves.",
+    "Leaf-like structures also occur in bryophytes, so they do not separate groups; vascular tissue, true roots and spores versus seeds do."
+   ],
+   "mistake": "Using \"has leaves\" as the test for a vascular plant.",
+   "tq": "A flowering plant has parallel-veined leaves, floral parts in threes and one seed leaf. Monocot or dicot?",
+   "ta": "Monocotyledon.",
+   "table": {
+    "head": [
+     "Specimen",
+     "Vascular tissue",
+     "Roots",
+     "Reproductive structure",
+     "Other features"
+    ],
+    "rows": [
+     [
+      "W",
+      "absent",
+      "rhizoids",
+      "capsule on a stalk, releasing spores",
+      "leaf-like structures present"
+     ],
+     [
+      "X",
+      "present",
+      "true roots",
+      "clusters of spore cases under fronds",
+      "no seeds"
+     ],
+     [
+      "Y",
+      "present",
+      "true roots",
+      "woody cones carrying naked seeds",
+      "needle-like leaves"
+     ],
+     [
+      "Z",
+      "present",
+      "true roots",
+      "flowers; seeds enclosed in a fruit",
+      "net-veined leaves; flower parts in fours or fives; two seed leaves"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-012",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B13",
+   "sec": "bio",
+   "no": "13",
+   "page": 14,
+   "practical_title": "Recognising selected fungal groups",
+   "title": "Fungal phyla: reproductive structures decide, not appearance",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional descriptions of three fungi seen in prepared slides.",
+   "question": "Assign P, Q and R to Zygomycota, Ascomycota or Basidiomycota with evidence, and explain why a fungal hypha is not a root.",
+   "marks": [
+    "P is a zygomycete: coenocytic hyphae, a sporangium on a stalk and a thick-walled zygospore.",
+    "Q is an ascomycete: spores (ascospores) are formed inside sac-like asci, eight per ascus here.",
+    "R is a basidiomycete: spores (basidiospores) are borne externally on club-shaped basidia.",
+    "Hyphae are not roots: fungi are heterotrophs that secrete enzymes and absorb nutrients, have chitin walls and no vascular tissue.",
+    "Identification to genus or species needs more evidence; sterile hyphae without reproductive structures cannot be assigned to a phylum reliably."
+   ],
+   "mistake": "Calling hyphae \"roots\", or assigning a phylum from colour or shape alone.",
+   "tq": "A fungus shows septate hyphae but no spore-bearing structures. Can you assign it to a phylum from this sample alone?",
+   "ta": "No: the phylum depends on the reproductive structures, which are not visible here.",
+   "table": {
+    "head": [
+     "Specimen",
+     "Hyphae",
+     "Reproductive structures seen"
+    ],
+    "rows": [
+     [
+      "P",
+      "no cross-walls (coenocytic)",
+      "round spore case on an erect stalk; thick-walled resting spore"
+     ],
+     [
+      "Q",
+      "divided by cross-walls",
+      "sac-like cells each holding eight spores"
+     ],
+     [
+      "R",
+      "divided by cross-walls",
+      "club-shaped cells bearing four spores on their outer surface"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-013",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B14",
+   "sec": "bio",
+   "no": "14",
+   "page": 15,
+   "practical_title": "Distinguishing major invertebrate phyla",
+   "title": "Invertebrate phyla: more than one diagnostic character",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional notes on five specimens seen as models and preserved displays.",
+   "question": "Name the phylum of each of A to D with a supporting feature, and explain why E is not a cnidarian even though it is radially symmetrical.",
+   "marks": [
+    "A is Cnidaria: radial symmetry, a gut with one opening and stinging cells.",
+    "B is Platyhelminthes (flatworm): flattened bilateral body with no body cavity.",
+    "C is Annelida: repeated body segments with bristles and a soft, unjointed body.",
+    "D is Arthropoda: jointed legs and a chitin exoskeleton.",
+    "E is Echinodermata: it has a complete gut, tube feet and a spiny skin and lacks stinging cells; radial symmetry alone cannot place it with Cnidaria."
+   ],
+   "mistake": "Using radial symmetry as the only feature and grouping E with A.",
+   "tq": "Which phylum has a soft body, a muscular foot and a mantle?",
+   "ta": "Mollusca.",
+   "table": {
+    "head": [
+     "Specimen",
+     "Symmetry",
+     "Body features"
+    ],
+    "rows": [
+     [
+      "A",
+      "radial",
+      "sac-like gut with a single opening; tentacles bearing stinging cells"
+     ],
+     [
+      "B",
+      "bilateral",
+      "flattened, ribbon-shaped; no body cavity"
+     ],
+     [
+      "C",
+      "bilateral",
+      "body divided into repeated segments; bristles; soft and unjointed"
+     ],
+     [
+      "D",
+      "bilateral",
+      "segmented body; jointed legs; hard chitin exoskeleton"
+     ],
+     [
+      "E",
+      "adult radial (five-part)",
+      "spiny skin; tube feet; gut with both mouth and anus"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-014",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B15",
+   "sec": "bio",
+   "no": "15",
+   "page": 16,
+   "practical_title": "Comparing the main vertebrate groups",
+   "title": "Vertebrate classes: use a set of traits",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional notes on five vertebrates.",
+   "question": "Classify A to E, and use E to explain why live birth cannot be the defining feature of mammals.",
+   "marks": [
+    "A is a fish: gills, fins and scales.",
+    "B is an amphibian: moist skin and a larval gill stage that changes to lungs.",
+    "C is a reptile: dry scaly skin, lungs and shelled eggs laid on land.",
+    "D is a bird: feathers, air sacs and constant body temperature.",
+    "E is a mammal (a monotreme): hair and mammary glands define mammals; because E lays eggs, live birth is not a defining feature."
+   ],
+   "mistake": "Defining mammals by live birth.",
+   "tq": "Which two of the five specimens keep a constant body temperature?",
+   "ta": "D (bird) and E (mammal).",
+   "table": {
+    "head": [
+     "Specimen",
+     "Skin / covering",
+     "Breathing",
+     "Reproduction and other"
+    ],
+    "rows": [
+     [
+      "A",
+      "wet scales; fins",
+      "gills",
+      "eggs laid in water"
+     ],
+     [
+      "B",
+      "moist, thin, no scales",
+      "gills as a larva; lungs and skin as an adult",
+      "eggs laid in water"
+     ],
+     [
+      "C",
+      "dry scales",
+      "lungs",
+      "shelled eggs laid on land"
+     ],
+     [
+      "D",
+      "feathers",
+      "lungs with air sacs",
+      "shelled eggs; constant body temperature"
+     ],
+     [
+      "E",
+      "hair",
+      "lungs",
+      "feeds young on milk from mammary glands; lays eggs"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-015",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B16",
+   "sec": "bio",
+   "no": "16",
+   "page": 17,
+   "practical_title": "Cell types in plant tissues",
+   "title": "Plant cell types: wall, living status and function",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional notes on five plant cell types seen in prepared sections.",
+   "question": "Identify A to E, and explain how wall thickness and living status are related to the function of each.",
+   "marks": [
+    "A is parenchyma: thin-walled living cells that store material and carry out metabolism.",
+    "B is collenchyma (living, flexible support) and C is sclerenchyma (dead, rigid, lignified support): living versus dead walls give flexible versus rigid support.",
+    "D is a xylem vessel element: lignified, dead and hollow, forming a tube for water transport.",
+    "E is a phloem sieve-tube element: living, with sieve plates and a companion cell, transporting sugars.",
+    "Lignification strengthens and waterproofs walls but kills the cell; do not confuse dead lignified xylem with living phloem sieve tubes."
+   ],
+   "mistake": "Describing sieve tubes as dead, lignified cells.",
+   "tq": "Which of A to E gives rigid support in mature stems and is dead at maturity?",
+   "ta": "C (sclerenchyma).",
+   "table": {
+    "head": [
+     "Cell",
+     "Wall",
+     "Living at maturity?",
+     "Other"
+    ],
+    "rows": [
+     [
+      "A",
+      "thin primary wall; large vacuole",
+      "living",
+      "roughly rounded; stores material"
+     ],
+     [
+      "B",
+      "extra thickening at the corners",
+      "living",
+      "elongated; flexible support"
+     ],
+     [
+      "C",
+      "thick lignified wall; very narrow lumen",
+      "dead",
+      "long fibre"
+     ],
+     [
+      "D",
+      "lignified wall with pits; end walls absent",
+      "dead",
+      "hollow tube carrying water"
+     ],
+     [
+      "E",
+      "thin wall with sieve plates",
+      "living, no nucleus",
+      "companion cell alongside"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-016",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B18",
+   "sec": "bio",
+   "no": "18",
+   "page": 19,
+   "practical_title": "Secondary growth and woody tissues",
+   "title": "Dicot wood: ring widths and the limits of ring counting",
+   "kind": "numerical",
+   "scenario": "A teacher supplies a fictional cross-section of a dicot tree stem with five rings, assumed annual. Widths are listed from the pith outward, so ring 1 is the innermost.",
+   "question": "Calculate the mean ring width, identify the widest and narrowest rings, state where the vascular cambium adds new tissue, and explain why counting rings may not give age in some tropical trees.",
+   "marks": [
+    "Total wood radius = 2.0 + 3.0 + 2.5 + 1.0 + 1.5 = 10.0 mm, so mean ring width = 10.0 ÷ 5 = 2.00 mm per ring.",
+    "Ring 4 is narrowest (1.0 mm) and ring 2 widest (3.0 mm, 1.5 times the mean); width shows growth rate only, not its cause (rainfall, shade or damage).",
+    "The vascular cambium makes secondary xylem on its inner side and secondary phloem on its outer side, so wood accumulates inward and ring 1 is the oldest.",
+    "Secondary xylem is dead, lignified tissue that supports the tree and conducts water.",
+    "In weakly seasonal tropical climates the cambium may be active all year or in several bursts, giving indistinct or false rings, so counts need independent evidence."
+   ],
+   "mistake": "Treating the outermost ring as the oldest.",
+   "tq": "A wood radius of 12.0 mm contains six equal rings. What is each ring width?",
+   "ta": "12.0 ÷ 6 = 2.00 mm.",
+   "table": {
+    "head": [
+     "Ring (from pith)",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "rows": [
+     [
+      "Width / mm",
+      "2.0",
+      "3.0",
+      "2.5",
+      "1.0",
+      "1.5"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-018",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B24",
+   "sec": "bio",
+   "no": "24",
+   "page": 29,
+   "practical_title": "Human digestive tract: anatomy and function",
+   "title": "Digestive tract: matching samples to regions",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional single-sample records taken from three regions of a human digestive tract.",
+   "question": "Match A, B and C to mouth, stomach and duodenum, name one digestive secretion or enzyme for each, and explain how the pH values fit those enzymes.",
+   "marks": [
+    "A is the mouth: salivary amylase starts starch digestion to maltose at about neutral pH.",
+    "B is the stomach: pepsin hydrolyses proteins to polypeptides at an acidic pH of about 2.",
+    "C is the duodenum: bile salts emulsify lipids, and pancreatic enzymes act in an alkaline medium.",
+    "Each enzyme has an optimum pH, so the pH differences between regions allow different enzymes to work in sequence.",
+    "The values are single fictional samples; real pH varies with meal and individual, and one sample cannot prove its location."
+   ],
+   "mistake": "Assigning pepsin to an alkaline region.",
+   "tq": "Which of the three regions has the lowest pH?",
+   "ta": "The stomach (pH 2.0).",
+   "table": {
+    "head": [
+     "Sample",
+     "pH",
+     "Main substances detected"
+    ],
+    "rows": [
+     [
+      "A",
+      "6.8",
+      "starch partly broken down; maltose present"
+     ],
+     [
+      "B",
+      "2.0",
+      "long polypeptides; no starch"
+     ],
+     [
+      "C",
+      "8.0",
+      "emulsified lipid droplets; short peptides; maltose"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-024",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B25",
+   "sec": "bio",
+   "no": "25",
+   "page": 30,
+   "practical_title": "Human circulatory-system organization",
+   "title": "Circulation: cardiac output and vessel structure",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional values for one person and two vessel descriptions. Vessel A has a thick, elastic, muscular wall, a narrow lumen and a pulse. Vessel B has a thin wall, a wide lumen and valves.",
+   "question": "Calculate cardiac output at rest and during exercise in dm³ min⁻¹, find the factor of increase, and identify vessels A and B with one structural reason each.",
+   "marks": [
+    "Cardiac output = heart rate × stroke volume.",
+    "At rest: 72 × 70 = 5040 cm³ min⁻¹ = 5.04 dm³ min⁻¹.",
+    "During exercise: 140 × 100 = 14 000 cm³ min⁻¹ = 14.0 dm³ min⁻¹, a factor of 14.0 ÷ 5.04 = 2.78.",
+    "Both changes contribute: heart rate rises by a factor of 1.94 and stroke volume by 1.43.",
+    "A is an artery (thick elastic muscular wall withstands pulsing high pressure) and B is a vein (thin wall, valves prevent backflow at low pressure)."
+   ],
+   "mistake": "Using heart rate alone as cardiac output, or forgetting to convert cm³ to dm³.",
+   "tq": "Heart rate 60 beats min⁻¹ and stroke volume 80 cm³. What is the cardiac output in dm³ min⁻¹?",
+   "ta": "60 × 80 = 4800 cm³ min⁻¹ = 4.8 dm³ min⁻¹.",
+   "table": {
+    "head": [
+     "Condition",
+     "Heart rate / beats min⁻¹",
+     "Stroke volume / cm³"
+    ],
+    "rows": [
+     [
+      "Rest",
+      "72",
+      "70"
+     ],
+     [
+      "Exercise",
+      "140",
+      "100"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-025",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B27",
+   "sec": "bio",
+   "no": "27",
+   "page": 32,
+   "practical_title": "Animal excretory structures compared",
+   "title": "Excretory structures: similar jobs, different designs",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional descriptions of four excretory structures from four animals (a flatworm, an earthworm, an insect and a mammal).",
+   "question": "Name each structure and its animal, and explain why the similarity of function among them does not mean they share the same structure.",
+   "marks": [
+    "A is the Malpighian tubules (insect): semi-solid uric acid is excreted, losing little water.",
+    "B is a nephridium (earthworm): the ciliated funnel collects fluid from the coelom.",
+    "C is a flame cell / protonephridium (flatworm).",
+    "D is the nephron / kidney (mammal): ultrafiltration followed by selective reabsorption and concentrated urine, mainly urea.",
+    "All four remove nitrogenous waste and regulate water, but the designs evolved separately, so function alone does not show shared structure; waste form (uric acid vs urea) relates to water conservation."
+   ],
+   "mistake": "Matching structures to animals by function alone.",
+   "tq": "Which nitrogenous waste do insects excrete as a semi-solid paste that conserves water?",
+   "ta": "Uric acid.",
+   "table": {
+    "head": [
+     "Structure",
+     "Description"
+    ],
+    "rows": [
+     [
+      "A",
+      "blind-ending tubules attached to the gut; produce a semi-solid white waste"
+     ],
+     [
+      "B",
+      "one pair in each body segment; ciliated funnel opening into the body cavity"
+     ],
+     [
+      "C",
+      "bulb-like cells with a beating tuft of cilia, joined to a tubule that opens at the surface"
+     ],
+     [
+      "D",
+      "blood is filtered at a capsule; useful solutes are reabsorbed along loops; urine is concentrated"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-027",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B28",
+   "sec": "bio",
+   "no": "28",
+   "page": 33,
+   "practical_title": "Organization of the human nervous system",
+   "title": "Nervous system: reflex arc timing",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional values for a leg reflex arc. The sensory neuron is 0.80 m long and the motor neuron 0.80 m long; both conduct at 80 m s⁻¹. One synapse in the spinal cord adds a delay of 1.0 ms. A separate voluntary response to the same stimulus is recorded as 200 ms.",
+   "question": "Put the reflex-arc components in order, calculate the total reflex time, compare it with the voluntary response, and state one limitation.",
+   "marks": [
+    "Order: receptor, sensory neuron, relay in the spinal cord (integration), motor neuron, effector (muscle).",
+    "Conduction time = (0.80 + 0.80) ÷ 80 = 0.020 s = 20 ms.",
+    "Total reflex time = 20 ms + 1.0 ms synaptic delay = 21 ms.",
+    "Voluntary response ÷ reflex = 200 ÷ 21 = 9.5, about ten times longer, because more synapses and processing in the brain are involved.",
+    "Limitation: conduction velocity depends on myelination and fibre diameter, and receptor and muscle delays were ignored."
+   ],
+   "mistake": "Using the distance in centimetres with a velocity in m s⁻¹.",
+   "tq": "If the conduction velocity were 40 m s⁻¹, what would the conduction time be for the same 1.60 m?",
+   "ta": "1.60 ÷ 40 = 0.040 s = 40 ms.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "bio-028",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B29",
+   "sec": "bio",
+   "no": "29",
+   "page": 34,
+   "practical_title": "Sensory receptors and stimulus detection",
+   "title": "Sensory receptors: reading two-point threshold data",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional class-mean values for the smallest separation of two touch points that is felt as two points.",
+   "question": "State which region has the finest discrimination, calculate how many times coarser the back is than the fingertip, explain the pattern, and state one limitation.",
+   "marks": [
+    "A smaller threshold means finer discrimination, so the fingertip (2 mm) discriminates best.",
+    "Back ÷ fingertip = 45 ÷ 2 = 22.5, so the back is 22.5 times coarser.",
+    "Regions with more touch receptors per unit area, and larger representation in the sensory cortex, can resolve closer points.",
+    "Touch receptors are mechanoreceptors: deformation produces a generator potential which can trigger action potentials in the sensory neuron.",
+    "Limitation: the reports are subjective and class means hide individual variation; pressure and attention also affect results."
+   ],
+   "mistake": "Concluding that a larger number means better sensitivity.",
+   "tq": "The forearm threshold is 35 mm and the palm threshold is 10 mm. How many times coarser is the forearm?",
+   "ta": "35 ÷ 10 = 3.5 times.",
+   "table": {
+    "head": [
+     "Body region",
+     "Smallest separation felt as two points / mm"
+    ],
+    "rows": [
+     [
+      "Fingertip",
+      "2"
+     ],
+     [
+      "Palm",
+      "10"
+     ],
+     [
+      "Forearm",
+      "35"
+     ],
+     [
+      "Back",
+      "45"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-029",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B30",
+   "sec": "bio",
+   "no": "30",
+   "page": 35,
+   "practical_title": "Human eye and ear structures",
+   "title": "Eye and ear: pupil area and the route of sound",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional values: the pupil diameter is 2.0 mm in bright light and 6.0 mm in dim light.",
+   "question": "Calculate the pupil area in each light level and the ratio, name the iris muscles responsible for the change, and list the route of sound from the pinna to the nerve signal.",
+   "marks": [
+    "Area = π(d ÷ 2)²: bright light π(1.0)² = 3.14 mm², dim light π(3.0)² = 28.3 mm².",
+    "The ratio is 28.3 ÷ 3.14 = 9.0, so about nine times more light can enter in dim light, other factors equal.",
+    "In bright light the circular iris muscles contract (smaller pupil); in dim light the radial muscles contract (larger pupil); the two sets act antagonistically.",
+    "Sound route: pinna, ear canal, tympanic membrane, ear ossicles, oval window, fluid in the cochlea, hair cells, auditory nerve.",
+    "Limitation: pupil size is only one of several adjustments to light level; the retina also adapts, so the area ratio is not the whole change in sensitivity."
+   ],
+   "mistake": "Comparing diameters (a factor of 3) and forgetting that area depends on diameter squared.",
+   "tq": "The pupil diameter changes from 3.0 mm to 6.0 mm. By what factor does its area change?",
+   "ta": "(6.0 ÷ 3.0)² = 4.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "bio-030",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B31",
+   "sec": "bio",
+   "no": "31",
+   "page": 36,
+   "practical_title": "Male reproductive system: diagram study",
+   "title": "Male reproductive system: structures and temperature",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional diagram notes. P: coiled tubules inside the testis in which sperm form. Q: a tightly coiled tube on the surface of the testis. R: a muscular tube carrying sperm toward the urethra. S: a gland adding a fructose-rich fluid. The scrotum is recorded at 34.5 °C and the body core at 37.0 °C.",
+   "question": "Name P, Q, R and S with their functions, and use the temperature values to explain the position of the testes.",
+   "marks": [
+    "P is the seminiferous tubules: sperm are produced here.",
+    "Q is the epididymis: sperm mature and are stored.",
+    "R is the vas deferens: muscular contractions carry sperm toward the urethra.",
+    "S is the seminal vesicle: its fluid contains fructose that supplies energy to sperm.",
+    "The scrotum is 37.0 − 34.5 = 2.5 °C cooler than the core; sperm production is temperature sensitive, so this cooler site supports it."
+   ],
+   "mistake": "Placing sperm production in the epididymis instead of the seminiferous tubules.",
+   "tq": "Which cells in the testis secrete testosterone?",
+   "ta": "The interstitial (Leydig) cells.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "bio-031",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B32",
+   "sec": "bio",
+   "no": "32",
+   "page": 37,
+   "practical_title": "Female reproductive system: diagram study",
+   "title": "Female reproductive system: reading a hormone timeline",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional timeline notes for a model 28-day menstrual cycle.",
+   "question": "State when ovulation is expected and explain why, name the structure that secretes progesterone after ovulation, explain what low progesterone on day 28 allows, and state a limitation of the day numbers.",
+   "marks": [
+    "Ovulation is expected shortly after the LH surge on day 14.",
+    "Rising oestrogen from the developing follicle (peak on day 13) triggers the LH surge through positive feedback.",
+    "The corpus luteum, formed from the ruptured follicle, secretes progesterone, which maintains the thickened endometrium.",
+    "If there is no pregnancy the corpus luteum degenerates, progesterone falls, and the endometrium breaks down (menstruation).",
+    "Limitation: this is a model 28-day cycle; cycle length varies between people and cycles, so these day numbers cannot predict ovulation for an individual."
+   ],
+   "mistake": "Placing ovulation on day 1 of the cycle or confusing the follicle with the corpus luteum.",
+   "tq": "In a 32-day cycle, ovulation occurs about 14 days before the next menstruation. On which day does it occur?",
+   "ta": "32 − 14 = day 18.",
+   "table": {
+    "head": [
+     "Cycle day",
+     "Hormone event recorded"
+    ],
+    "rows": [
+     [
+      "5",
+      "follicle-stimulating hormone (FSH) rising"
+     ],
+     [
+      "13",
+      "oestrogen at its peak"
+     ],
+     [
+      "14",
+      "sharp surge of luteinising hormone (LH)"
+     ],
+     [
+      "21",
+      "progesterone at its peak"
+     ],
+     [
+      "28",
+      "progesterone and oestrogen low"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-032",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B33",
+   "sec": "bio",
+   "no": "33",
+   "page": 38,
+   "practical_title": "Skull and vertebral column on models",
+   "title": "Vertebral column: identify regions and count bones",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional notes on three vertebrae seen on models. A: very large body, thick blunt spine, no rib facets. B: small body with a hole through each transverse process. C: facets for ribs on the body and the transverse processes.",
+   "question": "Identify the region of A, B and C, calculate the number of separate vertebrae in the cervical, thoracic and lumbar regions together, and explain the difference between the number of vertebrae and the number of bones in an adult column.",
+   "marks": [
+    "A is lumbar: the very large body bears the weight of the upper body.",
+    "B is cervical: the transverse foramina allow the vertebral arteries to pass.",
+    "C is thoracic: rib facets show that ribs articulate here.",
+    "Free vertebrae = 7 cervical + 12 thoracic + 5 lumbar = 24.",
+    "Five sacral and about four coccygeal vertebrae fuse, giving 33 vertebrae but about 26 separate bones in an adult (the coccyx count varies)."
+   ],
+   "mistake": "Counting the fused sacrum as five separate adult bones.",
+   "tq": "How many vertebrae fuse to form the sacrum?",
+   "ta": "Five.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "bio-033",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B34",
+   "sec": "bio",
+   "no": "34",
+   "page": 40,
+   "practical_title": "Appendicular skeleton and movement",
+   "title": "Appendicular skeleton and movement: the forearm as a lever",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional values for a forearm holding a load. The biceps tendon attaches 0.040 m from the elbow. A load of 20.0 N is held 0.300 m from the elbow, with the forearm weight ignored and the forearm at rest.",
+   "question": "Use moments about the elbow to find the force in the biceps, state the mechanical advantage, name the joint type with the antagonistic muscle, and state a limitation.",
+   "marks": [
+    "Moments about the elbow balance: F × 0.040 = 20.0 × 0.300.",
+    "F = 6.00 ÷ 0.040 = 150 N.",
+    "Mechanical advantage = 0.040 ÷ 0.300 = 0.133, so the muscle force is 7.5 times the load.",
+    "The elbow is a hinge joint (movement in one plane); the triceps is the antagonist that extends the forearm while the biceps flexes it.",
+    "Limitation: the forearm weight, the angle of pull and tendon elasticity were ignored, so 150 N is a model estimate."
+   ],
+   "mistake": "Taking moments about the load instead of the pivot, or using the longer distance in the denominator.",
+   "tq": "The load is moved to 0.250 m from the elbow. What is the biceps force?",
+   "ta": "20.0 × 0.250 ÷ 0.040 = 125 N.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "bio-034",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B35",
+   "sec": "bio",
+   "no": "35",
+   "page": 41,
+   "practical_title": "Sterilisation: selecting safe methods",
+   "title": "Sterilisation: survivor data and choosing methods",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional survivor counts for a resistant spore culture held at a fixed high temperature. This question analyses data; it is not a sterilisation protocol.",
+   "question": "Calculate the time for each tenfold reduction (D-value), the time for a 12-log reduction under the same conditions, and match culture medium, glassware, an inoculating needle and a heat-sensitive solution to suitable methods.",
+   "marks": [
+    "Each 5 min gives a 100-fold (2-log) reduction, so 0.40 log per minute and D = 1 ÷ 0.40 = 2.5 min per tenfold reduction.",
+    "A 12-log reduction needs 12 × 2.5 = 30 min if the line stays straight.",
+    "Culture medium: steam under pressure (autoclave); glassware: dry heat in a hot-air oven; inoculating needle: flaming in a flame.",
+    "A heat-sensitive solution cannot be heated, so it is filtered through a membrane filter small enough to retain bacteria.",
+    "Limitation: real survivor curves can have shoulders and tails, so a straight-line extrapolation can understate the time needed."
+   ],
+   "mistake": "Reading a 2-log fall in 5 minutes as a 2-fold fall.",
+   "tq": "If D = 3.0 min, how long is needed for a 6-log reduction?",
+   "ta": "6 × 3.0 = 18 min.",
+   "table": {
+    "head": [
+     "Time / min",
+     "0",
+     "5",
+     "10",
+     "15"
+    ],
+    "rows": [
+     [
+      "Survivors / cm⁻³",
+      "1.0 × 10⁶",
+      "1.0 × 10⁴",
+      "1.0 × 10²",
+      "1.0 × 10⁰"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-035",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B36",
+   "sec": "bio",
+   "no": "36",
+   "page": 43,
+   "practical_title": "Microbial growth medium: interpreting demonstrations",
+   "title": "Culture medium and plate counts: working out viable counts",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results from plating 0.100 cm³ portions of tenfold dilutions of a yoghurt suspension on nutrient medium, after incubation.",
+   "question": "Choose the plate that should be used for the count, calculate the colony-forming units per cm³ of the original suspension, compare with the other countable plate, and state two limits of the result.",
+   "marks": [
+    "Use a plate with a countable number of colonies (usually 30 to 300): the 10⁻³ plate with 45.",
+    "CFU cm⁻³ = 45 ÷ (0.100 × 10⁻³) = 4.5 × 10⁵.",
+    "The 10⁻⁴ plate gives 5 ÷ (0.100 × 10⁻⁴) = 5.0 × 10⁵, consistent, but five colonies is too few to be statistically reliable.",
+    "A colony can arise from a clump of cells, so CFU counts underestimate cell number; only organisms able to grow on this medium are counted.",
+    "Colonies do not identify species, and an uninoculated control plate is needed to show that the medium was not contaminated."
+   ],
+   "mistake": "Counting the overgrown plate or forgetting the 0.100 cm³ volume and the dilution factor.",
+   "tq": "A 10⁻⁴ plate (0.100 cm³) has 120 colonies. What is the CFU per cm³ of the original suspension?",
+   "ta": "120 ÷ (0.100 × 10⁻⁴) = 1.2 × 10⁷.",
+   "table": {
+    "head": [
+     "Dilution plated",
+     "Colonies counted"
+    ],
+    "rows": [
+     [
+      "10⁻²",
+      "too many to count"
+     ],
+     [
+      "10⁻³",
+      "45"
+     ],
+     [
+      "10⁻⁴",
+      "5"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-036",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-B37",
+   "sec": "bio",
+   "no": "37",
+   "page": 45,
+   "practical_title": "Understanding simple staining of microbes",
+   "title": "Methylene blue staining: what a simple stain can and cannot show",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional methylene blue slide notes. The calibrated eyepiece scale is 2.5 µm per division at the objective used.",
+   "question": "Explain what a simple stain such as methylene blue shows, calculate the actual size of each cell type, identify the likely group of each, and state what cannot be concluded.",
+   "marks": [
+    "Methylene blue is a simple (single dye) stain: it colours cells against a pale background so shape, arrangement and size can be seen.",
+    "Slide 1 rod length = 2.0 × 2.5 = 5.0 µm, a size typical of bacteria; the rods are likely bacteria.",
+    "Slide 2 diameter = 3.0 × 2.5 = 7.5 µm, 1.5 times the rod length, with buds: likely yeast, which are eukaryotic and reproduce by budding.",
+    "The stain does not give the species or the Gram reaction, so no species name or cell-wall type can be assigned from these slides.",
+    "Over-staining and distortion on fixing can create artefacts, and fixed stained cells are dead, so motility or growth cannot be claimed."
+   ],
+   "mistake": "Naming a bacterial species from the shape seen after simple staining.",
+   "tq": "A bacterial cell spans 4.0 eyepiece divisions at 2.5 µm per division. What is its length?",
+   "ta": "4.0 × 2.5 = 10.0 µm.",
+   "table": {
+    "head": [
+     "Slide",
+     "Source",
+     "Appearance",
+     "Size in eyepiece divisions"
+    ],
+    "rows": [
+     [
+      "1",
+      "yoghurt sample",
+      "blue rod-shaped cells in short chains",
+      "length 2.0"
+     ],
+     [
+      "2",
+      "toddy sample",
+      "larger blue oval cells, some with small buds",
+      "diameter 3.0"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "bio-037",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C01",
+   "sec": "che",
+   "no": "1",
+   "page": 10,
+   "practical_title": "Cathode-ray properties in a demonstrated apparatus",
+   "title": "Cathode rays: properties and the charge-to-mass ratio",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional results from a demonstration with a cathode-ray tube. For the speed measurement the electric and magnetic deflections cancel when E = 3.0 × 10⁴ V m⁻¹ and B = 1.5 × 10⁻³ T. With the magnetic field alone, the beam moves on a circle of radius 0.0758 m.",
+   "question": "Deduce three properties of cathode rays from the table, calculate the beam speed and the charge-to-mass ratio, and state what the ratio cannot give.",
+   "marks": [
+    "The sharp shadow shows that cathode rays travel in straight lines, and the turning paddle wheel shows that they carry momentum, so they consist of particles with mass.",
+    "Deflection towards the positive plate, reversing with polarity, shows the particles are negatively charged.",
+    "Balanced forces: eE = evB, so v = E ÷ B = 3.0 × 10⁴ ÷ 1.5 × 10⁻³ = 2.0 × 10⁷ m s⁻¹.",
+    "With the magnetic field alone, evB = mv²/r, so e/m = v ÷ (Br) = 2.0 × 10⁷ ÷ (1.5 × 10⁻³ × 0.0758) = 1.76 × 10¹¹ C kg⁻¹.",
+    "The same behaviour for different gases and metals suggests a universal particle (the electron); e/m is only a ratio, so charge and mass separately need another measurement."
+   ],
+   "mistake": "Using the radius in centimetres in an SI equation.",
+   "tq": "With E = 4.5 × 10⁴ V m⁻¹ and B = 1.5 × 10⁻³ T in the balanced condition, what is the beam speed?",
+   "ta": "4.5 × 10⁴ ÷ 1.5 × 10⁻³ = 3.0 × 10⁷ m s⁻¹.",
+   "table": {
+    "head": [
+     "Observation",
+     "Result"
+    ],
+    "rows": [
+     [
+      "Metal cross placed in the beam",
+      "sharp shadow on the screen"
+     ],
+     [
+      "Light paddle wheel placed in the beam",
+      "wheel turns"
+     ],
+     [
+      "Deflection between charged plates",
+      "towards the positive plate; reverses when polarity is reversed"
+     ],
+     [
+      "Different gases and cathode metals",
+      "same behaviour in each"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-001",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C02",
+   "sec": "che",
+   "no": "2",
+   "page": 15,
+   "practical_title": "Molecular and ionic shapes using models",
+   "title": "Molecular shapes: electron-pair counts to shape and angle",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies electron-pair counts for four species A to D, which are CH₄, NH₃, H₂O and BF₃ in some order. The counts refer to the central atom.",
+   "question": "Name the shape and approximate bond angle of each species, rank the four bond angles, and explain the ranking.",
+   "marks": [
+    "A (4 bonding pairs, no lone pair; CH₄) is tetrahedral with an angle of about 109.5°.",
+    "B (3 bonding pairs, 1 lone pair; NH₃) is trigonal pyramidal with an angle of about 107°.",
+    "C (2 bonding pairs, 2 lone pairs; H₂O) is bent (V-shaped) with an angle of about 104.5°.",
+    "D (3 bonding pairs, no lone pair; BF₃) is trigonal planar with an angle of 120°.",
+    "Order: D > A > B > C. Lone pair–bonding pair repulsion is greater than bonding pair–bonding pair repulsion, so each lone pair squeezes the bond angles together."
+   ],
+   "mistake": "Counting only bonding pairs when naming the shape, so that NH₃ is called planar.",
+   "tq": "A central atom has five bonding pairs and no lone pairs. What is its shape?",
+   "ta": "Trigonal bipyramidal.",
+   "table": {
+    "head": [
+     "Species",
+     "Bonding pairs",
+     "Lone pairs"
+    ],
+    "rows": [
+     [
+      "A",
+      "4",
+      "0"
+     ],
+     [
+      "B",
+      "3",
+      "1"
+     ],
+     [
+      "C",
+      "2",
+      "2"
+     ],
+     [
+      "D",
+      "3",
+      "0"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-002",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C06",
+   "sec": "che",
+   "no": "6",
+   "page": 27,
+   "practical_title": "Estimating magnesium relative atomic mass from gas data",
+   "title": "Relative atomic mass of magnesium from gas data",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional completed results: 0.0480 g of magnesium reacted completely with excess dilute acid and 49.6 cm³ of hydrogen was collected over water at 298 K. The atmospheric pressure was 101.3 kPa and the vapour pressure of water at 298 K is taken as 3.2 kPa. Use R = 8.314 J mol⁻¹ K⁻¹.",
+   "question": "Calculate the relative atomic mass of magnesium from these data, and explain the effect on your answer of (i) ignoring the water vapour pressure and (ii) an oxide layer on the magnesium.",
+   "marks": [
+    "Mg + 2H⁺ → Mg²⁺ + H₂, so n(Mg) = n(H₂).",
+    "The gas is saturated with water vapour: p(H₂) = 101.3 − 3.2 = 98.1 kPa.",
+    "n(H₂) = pV ÷ RT = 98 100 × 49.6 × 10⁻⁶ ÷ (8.314 × 298) = 1.96 × 10⁻³ mol.",
+    "Ar = 0.0480 g ÷ 1.964 × 10⁻³ mol = 24.4 (close to the accepted 24.3).",
+    "Ignoring vapour pressure overestimates the hydrogen and gives Ar = 23.7 (too low); an oxide layer means less magnesium metal reacts per measured gram, so the hydrogen is lower and Ar is too high."
+   ],
+   "mistake": "Using the total pressure for hydrogen, or using cm³ with the SI gas constant.",
+   "tq": "If 0.0486 g of magnesium gave 0.00200 mol of hydrogen, what Ar results?",
+   "ta": "0.0486 ÷ 0.00200 = 24.3.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "che-006",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C09",
+   "sec": "che",
+   "no": "9",
+   "page": 42,
+   "practical_title": "Comparing s-block metal reactivity (theory only)",
+   "title": "s-block metals: reactivity trend (theory only)",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional summary notes. No student handling is involved.",
+   "question": "State the trend in reactivity down group 1 and group 2, calculate the fall in first ionisation energy from Li to K, and explain the trend.",
+   "marks": [
+    "Reactivity with water increases down group 1: Li < Na < K.",
+    "The first ionisation energy falls from 520 to 419 kJ mol⁻¹, a decrease of 101 kJ mol⁻¹ (19.4%).",
+    "Down the group, the atoms are larger and have more shielding, so the outer electron is held less strongly and is lost more easily.",
+    "Group 2 shows the same trend: Mg shows no visible reaction with cold water while Ca reacts steadily.",
+    "Reaction rate also depends on surface oxide, melting point and the heat released, so first ionisation energy is only one factor."
+   ],
+   "mistake": "Linking reactivity to atomic number alone without mentioning ionisation energy or shielding.",
+   "tq": "Rubidium has a first ionisation energy of 403 kJ mol⁻¹. Is it expected to be more or less reactive than potassium?",
+   "ta": "More reactive: its ionisation energy is lower and its atom is larger.",
+   "table": {
+    "head": [
+     "Metal",
+     "First ionisation energy / kJ mol⁻¹",
+     "Reaction with cold water"
+    ],
+    "rows": [
+     [
+      "Li",
+      "520",
+      "steady fizzing"
+     ],
+     [
+      "Na",
+      "496",
+      "vigorous; melts into a ball"
+     ],
+     [
+      "K",
+      "419",
+      "very vigorous; lilac flame"
+     ],
+     [
+      "Mg",
+      "—",
+      "no visible reaction"
+     ],
+     [
+      "Ca",
+      "—",
+      "steady bubbles of gas"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-009",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C10",
+   "sec": "che",
+   "no": "10",
+   "page": 44,
+   "practical_title": "Recognising flame-test evidence",
+   "title": "Flame-test records: what colour can and cannot show",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional flame-test colours for five salts (each is a Li, Na, K, Ca, Sr or Ba compound). No student handling is involved.",
+   "question": "Identify the metal in A, B, C and E, explain why D cannot be named from the colour alone, and calculate the energy of a photon of wavelength 589 nm. Use h = 6.63 × 10⁻³⁴ J s, c = 3.00 × 10⁸ m s⁻¹ and L = 6.02 × 10²³ mol⁻¹.",
+   "marks": [
+    "A contains potassium (lilac); a trace of sodium can hide this colour.",
+    "B contains sodium (golden-yellow, near 589 nm).",
+    "C contains calcium (brick-red) and E contains barium (apple-green).",
+    "D (crimson) is shown by both lithium and strontium, so the colour cannot decide between them without another test.",
+    "Excited electrons return to lower levels and emit light: E = hc ÷ λ = 6.63 × 10⁻³⁴ × 3.00 × 10⁸ ÷ 589 × 10⁻⁹ = 3.38 × 10⁻¹⁹ J per photon (about 203 kJ mol⁻¹)."
+   ],
+   "mistake": "Naming lithium from crimson when strontium looks similar.",
+   "tq": "Using the same constants, what is the energy of a photon of wavelength 700 nm?",
+   "ta": "6.63 × 10⁻³⁴ × 3.00 × 10⁸ ÷ 700 × 10⁻⁹ = 2.84 × 10⁻¹⁹ J.",
+   "table": {
+    "head": [
+     "Sample",
+     "Flame colour"
+    ],
+    "rows": [
+     [
+      "A",
+      "lilac / pale violet"
+     ],
+     [
+      "B",
+      "persistent intense golden-yellow"
+     ],
+     [
+      "C",
+      "brick-red"
+     ],
+     [
+      "D",
+      "crimson"
+     ],
+     [
+      "E",
+      "apple-green"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-010",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C11",
+   "sec": "che",
+   "no": "11",
+   "page": 46,
+   "practical_title": "Reasoning about inorganic anions",
+   "title": "Anion test records: order and overlap of tests",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional test records for three sodium salts of different anions. No student handling is involved.",
+   "question": "Identify the anion in X, Y and Z, and explain why limewater alone is not conclusive for X and why acid is added before barium chloride when testing for sulfate.",
+   "marks": [
+    "X contains carbonate: acid releases carbon dioxide, which turns limewater milky.",
+    "Y contains sulfate: it gives a white barium sulfate precipitate that is insoluble in acid.",
+    "Z contains thiosulfate: acid gives a pungent gas (sulfur dioxide) and a fine pale yellow-white precipitate of sulfur.",
+    "Sulfur dioxide from sulfite or thiosulfate also turns limewater milky, so limewater alone does not distinguish carbon dioxide from sulfur dioxide; the smell and a sulfur precipitate give extra evidence.",
+    "Acid is added first so carbonate and sulfite, which also give white barium precipitates, dissolve and cannot be mistaken for sulfate."
+   ],
+   "mistake": "Reporting carbonate whenever limewater turns milky.",
+   "tq": "A sample gives a pungent gas with acid but no solid sulfur. Which of sulfite or thiosulfate is more likely?",
+   "ta": "Sulfite: thiosulfate also forms a sulfur precipitate.",
+   "table": {
+    "head": [
+     "Sample",
+     "Dilute hydrochloric acid added",
+     "Acidified barium chloride solution added"
+    ],
+    "rows": [
+     [
+      "X",
+      "colourless gas that turns limewater milky",
+      "no precipitate"
+     ],
+     [
+      "Y",
+      "no visible change",
+      "white precipitate that does not dissolve"
+     ],
+     [
+      "Z",
+      "pungent gas; solution slowly turns cloudy with a pale yellow-white solid",
+      "no precipitate"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-011",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C12",
+   "sec": "che",
+   "no": "12",
+   "page": 49,
+   "practical_title": "Nitrogen as a component of air",
+   "title": "Nitrogen in air: reading a control experiment",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional results of burning magnesium. No student handling is involved.",
+   "question": "Explain how these results show that air contains nitrogen, write the two equations involved, and explain the role of the control.",
+   "marks": [
+    "In air magnesium forms white magnesium oxide and a yellow-grey magnesium nitride.",
+    "Equations: 3Mg + N₂ → Mg₃N₂ and Mg₃N₂ + 6H₂O → 3Mg(OH)₂ + 2NH₃.",
+    "Damp red litmus turning blue shows an alkaline gas (ammonia), so nitrogen from the air was combined in the ash.",
+    "The pure-oxygen control gives no ammonia, so the nitrogen came from the air and not from impurities in the magnesium or the water.",
+    "The results show that nitrogen is present, not how much; litmus detects an alkaline gas, so a second test such as white fumes with hydrochloric acid supports ammonia."
+   ],
+   "mistake": "Concluding that air has no nitrogen because magnesium burns mainly with oxygen.",
+   "tq": "Why is the control in pure oxygen needed?",
+   "ta": "It shows that the ammonia does not come from the magnesium or the water.",
+   "table": {
+    "head": [
+     "Experiment",
+     "Observation"
+    ],
+    "rows": [
+     [
+      "Magnesium burned in air",
+      "white ash with a few yellow-grey patches"
+     ],
+     [
+      "Ash from air added to a few drops of water",
+      "pungent gas; damp red litmus paper turns blue"
+     ],
+     [
+      "Control: magnesium burned in pure oxygen, ash added to water",
+      "white ash only; no gas; litmus unchanged"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-012",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C13",
+   "sec": "che",
+   "no": "13",
+   "page": 51,
+   "practical_title": "Distinguishing halide ions from evidence",
+   "title": "Halide test records: colour plus ammonia solubility",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional test records for three sodium halides. Each solution was acidified with dilute nitric acid and silver nitrate solution was added. No student handling is involved.",
+   "question": "Identify the halide in X, Y and Z, and explain the role of nitric acid and why colour alone is not enough. State what fluoride would show.",
+   "marks": [
+    "X is chloride: white silver chloride, soluble in dilute ammonia.",
+    "Y is bromide: cream silver bromide, soluble only in concentrated ammonia.",
+    "Z is iodide: yellow silver iodide, insoluble in both.",
+    "Nitric acid is added first to remove carbonate and other ions that would give silver precipitates.",
+    "Colours are subjective and shade into each other, so solubility in ammonia is a second line of evidence; silver fluoride is soluble, so fluoride gives no precipitate."
+   ],
+   "mistake": "Naming a halide from the colour of the precipitate alone.",
+   "tq": "A halide solution gives no precipitate with acidified silver nitrate. Could it contain fluoride?",
+   "ta": "Yes: silver fluoride is soluble.",
+   "table": {
+    "head": [
+     "Sample",
+     "Precipitate colour",
+     "Dilute ammonia",
+     "Concentrated ammonia"
+    ],
+    "rows": [
+     [
+      "X",
+      "white",
+      "dissolves",
+      "dissolves"
+     ],
+     [
+      "Y",
+      "cream",
+      "does not dissolve",
+      "dissolves"
+     ],
+     [
+      "Z",
+      "yellow",
+      "does not dissolve",
+      "does not dissolve"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-013",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C15",
+   "sec": "che",
+   "no": "15",
+   "page": 57,
+   "practical_title": "Identifying ammonium-related observations",
+   "title": "Ammonia and ammonium salts: observations and yield",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional results: 0.535 g of a pure ammonium chloride sample was warmed with excess sodium hydroxide solution and all the ammonia was collected as a gas at a temperature where one mole of gas occupies 24.0 dm³. M(NH₄Cl) = 53.5 g mol⁻¹.",
+   "question": "Identify the gas and write the ionic equation, explain what each test shows, calculate the volume of gas, and state a limitation.",
+   "marks": [
+    "The gas is ammonia, released when an ammonium salt is warmed with an alkali.",
+    "NH₄⁺ + OH⁻ → NH₃ + H₂O.",
+    "Damp red litmus turning blue shows an alkaline gas, and dense white fumes with hydrochloric acid (solid ammonium chloride) support ammonia specifically.",
+    "n(NH₄Cl) = 0.535 ÷ 53.5 = 0.0100 mol, so n(NH₃) = 0.0100 mol and V = 0.0100 × 24.0 = 0.240 dm³ = 240 cm³.",
+    "Ammonia is very soluble in water, so a collected volume is likely smaller; litmus alone cannot separate alkaline gases."
+   ],
+   "mistake": "Reporting ammonia from the litmus change alone.",
+   "tq": "What volume of ammonia (24.0 dm³ per mole) comes from 0.0200 mol of ammonium chloride?",
+   "ta": "0.0200 × 24.0 = 0.480 dm³.",
+   "table": {
+    "head": [
+     "Test",
+     "Observation"
+    ],
+    "rows": [
+     [
+      "Warm sample with sodium hydroxide solution",
+      "pungent gas"
+     ],
+     [
+      "Hold damp red litmus paper in the gas",
+      "turns blue"
+     ],
+     [
+      "Hold a glass rod wet with concentrated hydrochloric acid in the gas",
+      "dense white fumes"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-015",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C16",
+   "sec": "che",
+   "no": "16",
+   "page": 59,
+   "practical_title": "Solubility of s-block salts: trends and exceptions",
+   "title": "s-block salt solubility: Ksp and the opposite hydroxide trend",
+   "kind": "mixed",
+   "scenario": "A teacher supplies illustrative solubility product values at 298 K for the sulfates of group 2 metals, together with a qualitative note on the hydroxides.",
+   "question": "State the sulfate and hydroxide trends down group 2, calculate the molar solubility of BaSO₄ and CaSO₄ and their ratio, and give one reason the Ksp values of different salt types cannot be compared directly.",
+   "marks": [
+    "Sulfate solubility decreases down group 2: CaSO₄ > SrSO₄ > BaSO₄, as the Ksp values fall.",
+    "For a 1:1 salt s = √Ksp, so s(BaSO₄) = √(1.1 × 10⁻¹⁰) = 1.05 × 10⁻⁵ mol dm⁻³.",
+    "s(CaSO₄) = √(4.9 × 10⁻⁵) = 7.0 × 10⁻³ mol dm⁻³, about 6.7 × 10² times more soluble than BaSO₄.",
+    "The hydroxide trend is the opposite: solubility increases down group 2 (Mg(OH)₂ is sparingly soluble, Ba(OH)₂ is much more soluble).",
+    "The trends reflect the balance between lattice enthalpy and hydration enthalpy as the cation grows; Ksp values can be compared directly only for salts with the same formula type."
+   ],
+   "mistake": "Comparing the Ksp of a 1:1 salt with that of a 1:2 salt as if it were solubility.",
+   "tq": "The Ksp of SrSO₄ is 3.4 × 10⁻⁷. What is its molar solubility?",
+   "ta": "√(3.4 × 10⁻⁷) = 5.8 × 10⁻⁴ mol dm⁻³.",
+   "table": {
+    "head": [
+     "Salt",
+     "Ksp / mol² dm⁻⁶"
+    ],
+    "rows": [
+     [
+      "CaSO₄",
+      "4.9 × 10⁻⁵"
+     ],
+     [
+      "SrSO₄",
+      "3.4 × 10⁻⁷"
+     ],
+     [
+      "BaSO₄",
+      "1.1 × 10⁻¹⁰"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-016",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C17",
+   "sec": "che",
+   "no": "17",
+   "page": 61,
+   "practical_title": "Thermal stability of nitrates and carbonates",
+   "title": "Thermal stability of group 2 carbonates",
+   "kind": "mixed",
+   "scenario": "A teacher supplies illustrative decomposition temperatures and a mass-loss record. M(CaCO₃) = 100.1 g mol⁻¹; M(CO₂) = 44.0 g mol⁻¹. No student handling is involved.",
+   "question": "State the trend and explain it using polarising power, write the equation, calculate the mass of carbon dioxide and of solid residue from 2.000 g of CaCO₃, and state a limitation of the table.",
+   "marks": [
+    "Thermal stability of group 2 carbonates increases down the group (540 to 1300 °C).",
+    "Smaller cations with greater charge density polarise the carbonate ion more strongly, weakening the C–O bond; polarising power falls down the group.",
+    "MCO₃(s) → MO(s) + CO₂(g).",
+    "n(CaCO₃) = 2.000 ÷ 100.1 = 0.01998 mol, so m(CO₂) = 0.01998 × 44.0 = 0.879 g and m(CaO) = 2.000 − 0.879 = 1.121 g.",
+    "The observed temperature depends on heating rate and CO₂ pressure, so the table values are indicative; the same polarising-power argument explains the trend for nitrates."
+   ],
+   "mistake": "Saying the carbonate becomes more stable because the metal becomes more reactive, without the polarising-power argument.",
+   "tq": "What mass of carbon dioxide is released when 1.000 g of CaCO₃ decomposes completely?",
+   "ta": "1.000 ÷ 100.1 × 44.0 = 0.440 g.",
+   "table": {
+    "head": [
+     "Carbonate",
+     "Approximate decomposition temperature / °C"
+    ],
+    "rows": [
+     [
+      "MgCO₃",
+      "540"
+     ],
+     [
+      "CaCO₃",
+      "900"
+     ],
+     [
+      "SrCO₃",
+      "1100"
+     ],
+     [
+      "BaCO₃",
+      "1300"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-017",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C23",
+   "sec": "che",
+   "no": "23",
+   "page": 73,
+   "practical_title": "Recognising transition-ion patterns",
+   "title": "Transition-metal ion tests with sodium hydroxide and ammonia",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional test records for five solutions that each contain one of Ni²⁺, Fe²⁺, Fe³⁺, Cu²⁺ or Cr³⁺. No student handling is involved.",
+   "question": "Identify the cation in each of A to E with the evidence that distinguishes it.",
+   "marks": [
+    "A is Cu²⁺: pale blue Cu(OH)₂ that dissolves in excess ammonia to a deep blue complex.",
+    "B is Fe²⁺: green Fe(OH)₂ that oxidises to brown in air and does not dissolve in ammonia.",
+    "C is Fe³⁺: red-brown Fe(OH)₃ that is insoluble in excess of either reagent.",
+    "D is Ni²⁺: pale green Ni(OH)₂ that is insoluble in excess NaOH but dissolves in excess ammonia to a blue / violet solution.",
+    "E is Cr³⁺: grey-green Cr(OH)₃ is amphoteric and dissolves in excess NaOH to a dark green solution."
+   ],
+   "mistake": "Calling a green precipitate iron(II) without checking the colour change on standing and the response to excess ammonia (Ni(OH)₂ is also green).",
+   "tq": "Which samples (A to E) give precipitates that dissolve in excess ammonia?",
+   "ta": "A and D.",
+   "table": {
+    "head": [
+     "Sample",
+     "NaOH(aq) added dropwise",
+     "Excess NaOH(aq)",
+     "Excess NH₃(aq)"
+    ],
+    "rows": [
+     [
+      "A",
+      "pale blue precipitate",
+      "no change",
+      "precipitate dissolves to a deep blue solution"
+     ],
+     [
+      "B",
+      "green precipitate that darkens to brown on standing in air",
+      "no change",
+      "precipitate remains"
+     ],
+     [
+      "C",
+      "red-brown precipitate",
+      "no change",
+      "precipitate remains"
+     ],
+     [
+      "D",
+      "pale green precipitate",
+      "no change",
+      "precipitate dissolves to a blue / violet solution"
+     ],
+     [
+      "E",
+      "grey-green precipitate",
+      "precipitate dissolves to a dark green solution",
+      "not recorded"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-023",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C24",
+   "sec": "che",
+   "no": "24",
+   "page": 75,
+   "practical_title": "Chemical behaviour of alkenes and alkynes",
+   "title": "Alkenes and alkynes: bromine data and unsaturation",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional results for three hydrocarbons, X (C₄H₆), Y (C₄H₈) and Z (C₄H₁₀), tested with bromine water in the dark. No student handling is involved.",
+   "question": "Interpret the results for X, Y and Z, calculate the degree of unsaturation of each formula, and state a limitation of the bromine water test.",
+   "marks": [
+    "Y adds one mole of Br₂ per mole: it has one C=C double bond (an alkene).",
+    "X adds two moles of Br₂ per mole: one C≡C triple bond or two C=C bonds (an alkyne or a diene) fits C₄H₆.",
+    "Z does not react in the dark: it is saturated (an alkane); substitution would need ultraviolet light.",
+    "Degree of unsaturation = (2C + 2 − H) ÷ 2 gives 2 for C₄H₆, 1 for C₄H₈ and 0 for C₄H₁₀, matching the bromine results.",
+    "Decolourisation is not specific to alkenes, because other unsaturated or reducing compounds can also react, so a second test is needed."
+   ],
+   "mistake": "Saying that Z reacts slowly with bromine water because it is unreactive, instead of saturated.",
+   "tq": "A hydrocarbon C₅H₈ absorbs 2 mol of H₂ per mole. What does this indicate?",
+   "ta": "Two C=C bonds or one C≡C bond.",
+   "table": {
+    "head": [
+     "Hydrocarbon",
+     "Bromine water",
+     "Moles of Br₂ consumed per mole of hydrocarbon"
+    ],
+    "rows": [
+     [
+      "X",
+      "decolourised rapidly",
+      "2"
+     ],
+     [
+      "Y",
+      "decolourised rapidly",
+      "1"
+     ],
+     [
+      "Z",
+      "no change",
+      "0"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-024",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C25",
+   "sec": "che",
+   "no": "25",
+   "page": 80,
+   "practical_title": "Alcohols: comparing physical and chemical properties",
+   "title": "Alcohols: classification from oxidation results",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional results for three isomeric C₄ alcohols oxidised by warm acidified potassium dichromate(VI). No student handling is involved.",
+   "question": "Classify alcohols 1, 2 and 3 as primary, secondary or tertiary with the product of oxidation, explain the colour change, and explain why alcohols have higher boiling points than alkanes of similar mass.",
+   "marks": [
+    "Alcohol 1 is primary: it is oxidised to an aldehyde, which gives the silver mirror.",
+    "Alcohol 2 is secondary: it is oxidised to a ketone, which reacts with 2,4-DNPH but not with Tollens' reagent.",
+    "Alcohol 3 is tertiary: the carbon bearing the –OH has no hydrogen, so it resists oxidation.",
+    "The orange dichromate(VI) is reduced to green chromium(III) when an alcohol is oxidised.",
+    "Hydrogen bonding between alcohol molecules raises the boiling point (ethanol 78 °C versus propane −42 °C); the green colour alone cannot separate primary from secondary alcohols."
+   ],
+   "mistake": "Concluding \"primary\" from the green colour alone.",
+   "tq": "Which class of alcohol is not oxidised by acidified dichromate?",
+   "ta": "Tertiary alcohols.",
+   "table": {
+    "head": [
+     "Alcohol",
+     "Colour change of the dichromate",
+     "Test on the oxidation product"
+    ],
+    "rows": [
+     [
+      "1",
+      "orange to green",
+      "silver mirror with Tollens' reagent"
+     ],
+     [
+      "2",
+      "orange to green",
+      "no silver mirror; orange precipitate with 2,4-DNPH"
+     ],
+     [
+      "3",
+      "stays orange",
+      "not applicable"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-025",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C26",
+   "sec": "che",
+   "no": "26",
+   "page": 81,
+   "practical_title": "Phenol: acidity and aromatic substitution",
+   "title": "Phenol: weak acidity and ring activation",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional results for aqueous phenol, C₆H₅OH, with Ka = 1.0 × 10⁻¹⁰ mol dm⁻³ for the acid at 298 K.",
+   "question": "Explain what the first two tests show about the acidity of phenol, calculate the pH of 0.10 mol dm⁻³ phenol, explain the bromine result, and say why phenol is more acidic than ethanol.",
+   "marks": [
+    "Phenol dissolves in alkali (forming the phenoxide ion) but does not release CO₂ from carbonate, so it is a weak acid, weaker than carbonic acid.",
+    "[H⁺] = √(Ka c) = √(1.0 × 10⁻¹⁰ × 0.10) = 3.2 × 10⁻⁶ mol dm⁻³, so pH = 5.50.",
+    "Bromine water is decolourised at once with a white precipitate of 2,4,6-tribromophenol, because the –OH group activates the ring.",
+    "The phenoxide charge is delocalised into the ring, stabilising the ion, which makes phenol more acidic than ethanol.",
+    "A violet colour with iron(III) chloride is characteristic of phenols but not unique to them; the approximation [H⁺] = √(Ka c) is valid because [H⁺] is far smaller than 0.10."
+   ],
+   "mistake": "Using [H⁺] = c for a weak acid.",
+   "tq": "Using the same Ka, what is the pH of 0.010 mol dm⁻³ phenol?",
+   "ta": "[H⁺] = √(1.0 × 10⁻¹⁰ × 0.010) = 1.0 × 10⁻⁶, so pH = 6.00.",
+   "table": {
+    "head": [
+     "Test",
+     "Observation"
+    ],
+    "rows": [
+     [
+      "Add sodium hydroxide solution",
+      "dissolves to a clear solution"
+     ],
+     [
+      "Add sodium carbonate solution",
+      "no effervescence"
+     ],
+     [
+      "Add bromine water",
+      "decolourised at once; white precipitate"
+     ],
+     [
+      "Add neutral iron(III) chloride solution",
+      "violet colour"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-026",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C27",
+   "sec": "che",
+   "no": "27",
+   "page": 83,
+   "practical_title": "Aldehydes and ketones: functional-group evidence",
+   "title": "Aldehydes and ketones: group tests and their overlaps",
+   "kind": "qualitative",
+   "scenario": "A teacher supplies fictional test records for three liquids A, B and C. No student handling is involved.",
+   "question": "Classify A, B and C using the tests, and explain why the iodoform result alone does not prove a carbonyl group.",
+   "marks": [
+    "A positive 2,4-DNPH test for A and B shows that each contains a carbonyl group (C=O).",
+    "A is an aldehyde: it is oxidised by Tollens' reagent, giving the silver mirror.",
+    "B is a ketone: it does not reduce Tollens' reagent, and the yellow iodoform solid shows a CH₃–C(=O)– group (a methyl ketone).",
+    "C does not contain a carbonyl group (DNPH negative); its yellow iodoform solid arises from a CH₃CH(OH)– group such as in ethanol.",
+    "So the iodoform test alone does not prove a carbonyl group; these are group tests, and identity needs, for example, the melting point of a derivative."
+   ],
+   "mistake": "Concluding that a positive iodoform test means the compound is a ketone.",
+   "tq": "Which of A, B and C could be propanone?",
+   "ta": "B (carbonyl present, Tollens' negative, iodoform positive).",
+   "table": {
+    "head": [
+     "Test",
+     "A",
+     "B",
+     "C"
+    ],
+    "rows": [
+     [
+      "2,4-DNPH",
+      "orange precipitate",
+      "orange precipitate",
+      "no precipitate"
+     ],
+     [
+      "Tollens' reagent (warm)",
+      "silver mirror",
+      "no change",
+      "no change"
+     ],
+     [
+      "Iodine and sodium hydroxide",
+      "no yellow solid",
+      "yellow solid with antiseptic smell",
+      "yellow solid with antiseptic smell"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-027",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C28",
+   "sec": "che",
+   "no": "28",
+   "page": 86,
+   "practical_title": "Carboxylic acids: acid-base and structural properties",
+   "title": "Carboxylic acids: strength from pH data",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional measured pH values at 298 K: 0.100 mol dm⁻³ hydrochloric acid has pH 1.00 and 0.100 mol dm⁻³ ethanoic acid has pH 2.88. Ethanoic acid also releases CO₂ from sodium carbonate solution.",
+   "question": "Calculate [H⁺], the percentage ionisation and Ka for ethanoic acid, compare [H⁺] with that of the hydrochloric acid, and explain what the carbonate result shows.",
+   "marks": [
+    "[H⁺] = 10^(−2.88) = 1.32 × 10⁻³ mol dm⁻³.",
+    "Percentage ionisation = 1.32 × 10⁻³ ÷ 0.100 × 100 = 1.3%.",
+    "Ka = [H⁺]² ÷ ([HA] − [H⁺]) = (1.32 × 10⁻³)² ÷ 0.0987 = 1.76 × 10⁻⁵ mol dm⁻³ (about 1.8 × 10⁻⁵).",
+    "The hydrochloric acid [H⁺] is 0.100, about 76 times larger, so ethanoic acid is a weak acid that ionises only partly.",
+    "Releasing CO₂ from carbonate shows ethanoic acid is stronger than carbonic acid, unlike phenol; pH-meter accuracy and temperature limit the Ka value."
+   ],
+   "mistake": "Treating a weak acid as fully ionised.",
+   "tq": "A 0.050 mol dm⁻³ solution of a weak monoprotic acid is 2.0% ionised. Find [H⁺] and the pH.",
+   "ta": "[H⁺] = 0.020 × 0.050 = 1.0 × 10⁻³ mol dm⁻³; pH = 3.00.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "che-028",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C29",
+   "sec": "che",
+   "no": "29",
+   "page": 88,
+   "practical_title": "Aromatic amines: aniline case-study",
+   "title": "Tests for aniline: basicity and diazonium chemistry",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional reference and test data. The pKa values are for the conjugate acids: anilinium 4.6 and ethylammonium 10.7.",
+   "question": "Explain why aniline is a weaker base than ethylamine and calculate the factor from the pKa values, explain the bromine result, and explain the effect of temperature on the diazonium test.",
+   "marks": [
+    "In aniline the nitrogen lone pair is delocalised into the benzene ring, so it is less available to accept a proton.",
+    "The factor is 10^(10.7 − 4.6) = 10^6.1 = 1.3 × 10⁶ (the ethylammonium ion is that many times weaker as an acid, so ethylamine is the far stronger base).",
+    "Bromine water gives an immediate white precipitate of 2,4,6-tribromoaniline because the –NH₂ group activates the ring.",
+    "The diazonium ion is stable only in the cold (0–5 °C); on warming it decomposes, giving off nitrogen gas, so little dye forms.",
+    "The orange-red azo dye shows coupling, but these are group tests; a single observation does not identify a compound."
+   ],
+   "mistake": "Saying that aniline is more basic because nitrogen has a lone pair.",
+   "tq": "Why must the diazotisation be kept at 0–5 °C?",
+   "ta": "The diazonium ion decomposes to nitrogen on warming.",
+   "table": {
+    "head": [
+     "Test",
+     "Observation"
+    ],
+    "rows": [
+     [
+      "Bromine water added to aniline solution",
+      "decolourised at once; white precipitate"
+     ],
+     [
+      "Aniline in dilute acid with sodium nitrite at 0–5 °C, then 2-naphthol solution",
+      "orange-red precipitate"
+     ],
+     [
+      "Same diazonium solution allowed to reach 25 °C before adding 2-naphthol",
+      "bubbles of gas; very little coloured solid"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-029",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C34",
+   "sec": "che",
+   "no": "34",
+   "page": 105,
+   "practical_title": "Temperature effects on NO2/N2O4 equilibrium (theory)",
+   "title": "NO₂ / N₂O₄ equilibrium: temperature and Kc (theory)",
+   "kind": "mixed",
+   "scenario": "A teacher supplies fictional notes for 2NO₂(g) ⇌ N₂O₄(g), ΔH = −57 kJ mol⁻¹. NO₂ is brown and N₂O₄ is colourless. Kc = 170 dm³ mol⁻¹ at 298 K. A sealed tube is brown at 298 K, much paler in ice-water and darker brown in hot water.",
+   "question": "Explain the colour changes, write the expression for Kc, calculate [N₂O₄] when [NO₂] = 0.0100 mol dm⁻³ at 298 K, state which change alters Kc, and state a limitation of using colour.",
+   "marks": [
+    "The forward reaction is exothermic, so cooling shifts the equilibrium right (more colourless N₂O₄, paler) and heating shifts it left (more brown NO₂, darker).",
+    "Kc = [N₂O₄] ÷ [NO₂]², with units dm³ mol⁻¹.",
+    "[N₂O₄] = Kc × [NO₂]² = 170 × (0.0100)² = 0.0170 mol dm⁻³.",
+    "Only a change of temperature changes Kc; here Kc decreases as temperature rises. A catalyst or a change of concentration does not alter Kc.",
+    "Colour depends on path length and amounts as well as on temperature, and heating a sealed tube also raises its pressure, so colour is qualitative evidence only."
+   ],
+   "mistake": "Saying that a catalyst shifts the equilibrium position or changes Kc.",
+   "tq": "At the same temperature, what is [N₂O₄] when [NO₂] = 0.0200 mol dm⁻³?",
+   "ta": "170 × (0.0200)² = 0.0680 mol dm⁻³.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "che-034",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C36",
+   "sec": "che",
+   "no": "36",
+   "page": 111,
+   "practical_title": "Carbonate/acid titration: endpoint interpretation",
+   "title": "Na₂CO₃ with HCl: two indicators, two end points",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional completed titration results: 25.00 cm³ of 0.0500 mol dm⁻³ sodium carbonate was titrated with hydrochloric acid. The phenolphthalein end point (pink to colourless) was at 10.25 cm³ and the methyl orange end point, reached by continuing the titration, was at a total of 20.50 cm³.",
+   "question": "Write the equations for the two stages, calculate the concentration of the hydrochloric acid, check the two end points for consistency, and explain one limitation of the methyl orange end point.",
+   "marks": [
+    "Stage 1: CO₃²⁻ + H⁺ → HCO₃⁻ (phenolphthalein). Stage 2: HCO₃⁻ + H⁺ → CO₂ + H₂O (methyl orange). Overall: Na₂CO₃ + 2HCl → 2NaCl + CO₂ + H₂O.",
+    "n(Na₂CO₃) = 0.0500 × 0.02500 = 1.250 × 10⁻³ mol.",
+    "n(HCl) at the total end point = 2 × 1.250 × 10⁻³ = 2.500 × 10⁻³ mol, so c(HCl) = 2.500 × 10⁻³ ÷ 0.02050 = 0.122 mol dm⁻³.",
+    "The first end point (10.25 cm³) is exactly half of the total (20.50 cm³), as 1:1 then 1:1 stoichiometry predicts.",
+    "Dissolved CO₂ makes the methyl orange end point gradual and the colour change is judged by eye, so the volume has a reading uncertainty; indicators are chosen by the pH at each equivalence point."
+   ],
+   "mistake": "Using a 1:1 mole ratio for the overall reaction.",
+   "tq": "If the total methyl orange end point had been 22.00 cm³, what would c(HCl) be?",
+   "ta": "2.500 × 10⁻³ ÷ 0.02200 = 0.114 mol dm⁻³.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "che-036",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C40",
+   "sec": "che",
+   "no": "40",
+   "page": 122,
+   "practical_title": "Reference electrodes and standard-potential measurement",
+   "title": "Standard electrodes: converting between reference electrodes",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional measurements of two half-cells made against a saturated calomel reference electrode (SCE), whose potential is +0.241 V relative to the standard hydrogen electrode (SHE). All ion concentrations are 1.00 mol dm⁻³ at 298 K.",
+   "question": "Convert both potentials to the SHE scale, calculate E°cell for the Cu–Zn cell, show that the reference electrode cancels, and state a limitation.",
+   "marks": [
+    "E (versus SHE) = E (versus SCE) + 0.241 V.",
+    "Cu²⁺ | Cu: +0.10 + 0.241 = +0.34 V.",
+    "Zn²⁺ | Zn: −1.00 + 0.241 = −0.76 V.",
+    "E°cell = 0.34 − (−0.76) = 1.10 V, which equals the direct difference of the SCE readings, 0.10 − (−1.00) = 1.10 V: the reference potential cancels in a cell voltage.",
+    "Standard values need ion activity 1.00 and 298 K; the SCE potential depends on the KCl concentration, and practical electrodes only approximate standard conditions."
+   ],
+   "mistake": "Adding the reference potential to one half-cell only, or subtracting it instead of adding.",
+   "tq": "A half-cell reads −0.20 V versus SCE. What is its potential versus SHE?",
+   "ta": "−0.20 + 0.241 = +0.04 V.",
+   "table": {
+    "head": [
+     "Half-cell",
+     "Measured potential versus SCE / V"
+    ],
+    "rows": [
+     [
+      "Cu²⁺(aq) | Cu(s)",
+      "+0.10"
+     ],
+     [
+      "Zn²⁺(aq) | Zn(s)",
+      "−1.00"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "che-040",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C41",
+   "sec": "che",
+   "no": "41",
+   "page": 126,
+   "practical_title": "Soap formation: reaction concept and purification",
+   "title": "Soap formation: saponification value",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional completed results: 2.00 g of a pure triglyceride fat consumed 13.4 cm³ of 0.500 mol dm⁻³ potassium hydroxide in complete saponification. M(KOH) = 56.1 g mol⁻¹.",
+   "question": "Write the word equation, calculate the amount of KOH, the saponification value (mg KOH per g of fat) and the molar mass of the fat, and explain how adding concentrated salt solution helps purify soap.",
+   "marks": [
+    "Triglyceride + 3KOH → glycerol + 3 potassium soap (carboxylate salt).",
+    "n(KOH) = 0.500 × 0.0134 = 6.70 × 10⁻³ mol.",
+    "Saponification value = 6.70 × 10⁻³ × 56.1 × 1000 mg ÷ 2.00 g = 188 mg g⁻¹.",
+    "n(fat) = 6.70 × 10⁻³ ÷ 3 = 2.23 × 10⁻³ mol, so M = 2.00 ÷ 2.23 × 10⁻³ = 896 g mol⁻¹ (assuming a pure triglyceride).",
+    "Concentrated sodium chloride solution \"salts out\" soap by lowering its solubility (common-ion effect), separating it from glycerol and excess alkali; free fatty acids would change the values."
+   ],
+   "mistake": "Using a 1:1 ratio of fat to KOH.",
+   "tq": "A fat has a saponification value of 190 mg g⁻¹. What mass of KOH saponifies 5.00 g?",
+   "ta": "190 × 5.00 = 950 mg.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "che-041",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C42",
+   "sec": "che",
+   "no": "42",
+   "page": 130,
+   "practical_title": "Steam distillation: essential-oil concept",
+   "title": "Steam distillation: vapour pressures and distillate composition",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional data for an immiscible oil–water mixture that boils at 98.0 °C under 101.3 kPa. The vapour pressure of water at 98.0 °C is 94.3 kPa. The oil component has M = 136 g mol⁻¹ and water M = 18.0 g mol⁻¹. Assume ideal vapours.",
+   "question": "Find the vapour pressure of the oil at 98.0 °C, the mole ratio and mass ratio of oil to water in the distillate, and explain why steam distillation suits heat-sensitive oils.",
+   "marks": [
+    "For immiscible liquids the total vapour pressure is the sum, p(total) = p(oil) + p(water); the mixture boils when this equals atmospheric pressure.",
+    "p(oil) = 101.3 − 94.3 = 7.0 kPa.",
+    "In the vapour, n(oil) ÷ n(water) = 7.0 ÷ 94.3 = 0.0742.",
+    "Mass ratio = 0.0742 × 136 ÷ 18.0 = 0.561 g of oil per gram of water in the distillate.",
+    "The mixture boils below 100 °C, so heat-sensitive oils are distilled without decomposing; real yields are lower because vapours are not ideal and are not fully saturated."
+   ],
+   "mistake": "Using mole fractions of liquids instead of the vapour-pressure ratio.",
+   "tq": "If p(oil) were 14.0 kPa and p(water) 87.3 kPa for the same oil, what would the mass ratio be?",
+   "ta": "(14.0 ÷ 87.3) × 136 ÷ 18.0 = 1.21 g of oil per gram of water.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "che-042",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-C43",
+   "sec": "che",
+   "no": "43",
+   "page": 133,
+   "practical_title": "Biodiesel: transesterification model",
+   "title": "Biodiesel: transesterification and percentage yield",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional completed results: 100.0 g of a triglyceride oil (taken as triolein, M = 885.4 g mol⁻¹) was converted to methyl esters (methyl oleate, M = 296.5 g mol⁻¹) with excess methanol and a base catalyst, giving 94.0 g of purified ester.",
+   "question": "Write the balanced equation in words, calculate the amount of oil, the theoretical mass of ester and the percentage yield, and give two reasons why the yield is below 100%.",
+   "marks": [
+    "Triglyceride + 3CH₃OH → 3 methyl esters + glycerol (ratio 1 : 3 : 3 : 1).",
+    "n(oil) = 100.0 ÷ 885.4 = 0.113 mol.",
+    "Theoretical ester = 3 × 0.11294 × 296.5 = 100.46 g.",
+    "Percentage yield = 94.0 ÷ 100.46 × 100 = 93.6%.",
+    "Water and free fatty acids in the oil react with the catalyst to form soap, lowering the yield, and equilibrium or incomplete conversion leaves some mono- and diglycerides; methanol is used in excess to push the equilibrium towards the esters."
+   ],
+   "mistake": "Forgetting that one triglyceride gives three ester molecules.",
+   "tq": "If only 90.0 g of ester were obtained from the same oil, what would the percentage yield be?",
+   "ta": "90.0 ÷ 100.46 × 100 = 89.6%.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "che-043",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P03",
+   "sec": "phy",
+   "no": "3",
+   "page": 9,
+   "practical_title": "Spherometer and radius of curvature",
+   "title": "Spherometer: radius of curvature and the dominant uncertainty",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings. The spherometer screw has a pitch of 1.0 mm and the circular scale has 100 divisions. The mean distance between the legs is l = 30.0 mm and the measured height (sagitta) is h = 0.400 mm, read to ±0.01 mm. Use R = l² ÷ (6h) + h ÷ 2.",
+   "question": "Find the least count, calculate the radius of curvature, and estimate the uncertainty in R assuming the error in h dominates.",
+   "marks": [
+    "Least count = pitch ÷ number of divisions = 1.0 mm ÷ 100 = 0.01 mm.",
+    "l² ÷ (6h) = 900 ÷ 2.40 = 375.0 mm.",
+    "R = 375.0 + 0.400 ÷ 2 = 375.2 mm (about 0.375 m).",
+    "Because h is small, ±0.01 mm in 0.400 mm is 2.5%, and R is roughly proportional to 1/h, so R is uncertain by about 2.5% (±9.4 mm).",
+    "Report R = (375 ± 9) mm; a small sagitta is the weak point, so l and h should be measured carefully and h repeated."
+   ],
+   "mistake": "Using the leg distance as a diameter or forgetting the h ÷ 2 term.",
+   "tq": "With l = 30.0 mm and h = 0.600 mm, what is R?",
+   "ta": "900 ÷ 3.60 + 0.300 = 250.3 mm.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-003",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P04",
+   "sec": "phy",
+   "no": "4",
+   "page": 11,
+   "practical_title": "Travelling microscope: precise position",
+   "title": "Travelling microscope: precise positions and backlash",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings (least count 0.01 mm) for the two edges of the bore of a glass capillary tube, each read three times with the crosswire approached from the same direction.",
+   "question": "Calculate the mean position of each edge, the bore diameter and its approximate absolute and percentage uncertainty, and explain why the crosswire is always approached from the same direction.",
+   "marks": [
+    "Mean left reading = (23.45 + 23.46 + 23.44) ÷ 3 = 23.45 mm.",
+    "Mean right reading = (27.03 + 27.05 + 27.04) ÷ 3 = 27.04 mm.",
+    "Diameter = 27.04 − 23.45 = 3.59 mm.",
+    "Each mean is uncertain by about ±0.01 mm (half the range), so the difference is about ±0.02 mm, which is 0.56% of 3.59 mm.",
+    "Approaching from one direction avoids backlash (slack in the screw), a systematic error that repeated readings would not reveal."
+   ],
+   "mistake": "Reporting one reading as the diameter, or adding the two positions instead of subtracting.",
+   "tq": "The edges read 12.36 mm and 15.84 mm. What is the diameter?",
+   "ta": "15.84 − 12.36 = 3.48 mm.",
+   "table": {
+    "head": [
+     "Edge",
+     "Reading 1 / mm",
+     "Reading 2 / mm",
+     "Reading 3 / mm"
+    ],
+    "rows": [
+     [
+      "Left",
+      "23.45",
+      "23.46",
+      "23.44"
+     ],
+     [
+      "Right",
+      "27.03",
+      "27.05",
+      "27.04"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "phy-004",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P05",
+   "sec": "phy",
+   "no": "5",
+   "page": 14,
+   "practical_title": "Parallelogram of forces and unknown mass",
+   "title": "Parallelogram of forces: finding an unknown mass",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings: a body hangs at rest from a knot held by two strings. The tensions are 3.00 N and 4.00 N, and the strings are at 90° to each other. Take g = 9.81 m s⁻².",
+   "question": "Find the resultant of the two tensions, the mass of the body, and the angle the resultant makes with the 3.00 N string, and state two sources of error.",
+   "marks": [
+    "At equilibrium the resultant of the two tensions is equal and opposite to the weight.",
+    "R = √(3.00² + 4.00²) = 5.00 N.",
+    "m = W ÷ g = 5.00 ÷ 9.81 = 0.510 kg.",
+    "Angle from the 3.00 N string: tan θ = 4.00 ÷ 3.00, θ = 53.1°.",
+    "Errors: zero errors or friction in the spring balances or pulleys, and the accuracy of the angles in a scale drawing."
+   ],
+   "mistake": "Adding the magnitudes (7.00 N) as if the forces were in the same direction.",
+   "tq": "Two 5.0 N forces act at 120° to each other. What is the magnitude of their resultant?",
+   "ta": "5.0 N (from R² = 5.0² + 5.0² + 2 × 5.0 × 5.0 cos 120°).",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-005",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P16",
+   "sec": "phy",
+   "no": "16",
+   "page": 36,
+   "practical_title": "Glass refractive index: apparent depth",
+   "title": "Refractive index of glass from real and apparent depth",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional travelling-microscope results for a glass block: real thickness 4.50 ± 0.05 cm; apparent thickness measured three times as 3.02, 2.98 and 3.00 cm, taken as 3.00 ± 0.02 cm.",
+   "question": "Calculate the refractive index and its uncertainty, and state the condition for the formula to be valid.",
+   "marks": [
+    "For near-normal viewing, n = real depth ÷ apparent depth.",
+    "Mean apparent depth = (3.02 + 2.98 + 3.00) ÷ 3 = 3.00 cm.",
+    "n = 4.50 ÷ 3.00 = 1.50.",
+    "Percentage uncertainties add: 0.05 ÷ 4.50 + 0.02 ÷ 3.00 = 1.1% + 0.7% = 1.8%, so n = 1.50 ± 0.03.",
+    "The relation holds for rays close to the normal (small angles); viewing obliquely gives a different apparent depth."
+   ],
+   "mistake": "Dividing apparent depth by real depth (giving a value less than 1).",
+   "tq": "A block 6.00 cm thick appears 4.20 cm thick. What is n?",
+   "ta": "6.00 ÷ 4.20 = 1.43.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-016",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P17",
+   "sec": "phy",
+   "no": "17",
+   "page": 38,
+   "practical_title": "Prism deviation versus incidence",
+   "title": "Prism: deviation against angle of incidence",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results for an equilateral prism (A = 60.0°) showing the angle of deviation D for several angles of incidence i.",
+   "question": "Describe the shape of the D–i graph, read the minimum deviation from the table, calculate the refractive index, and explain why the table value is only an estimate of the true minimum.",
+   "marks": [
+    "D first decreases and then increases as i increases, so the graph is a curve with a minimum.",
+    "The smallest tabulated deviation is 37.2° at i = 48°; this is taken as Dmin.",
+    "n = sin[(A + Dmin) ÷ 2] ÷ sin(A ÷ 2) = sin(48.60°) ÷ sin 30.0° = 1.500.",
+    "At minimum deviation the ray passes symmetrically, so the angle of emergence equals the angle of incidence.",
+    "The curve is flat near its minimum and the table steps are 4°, so the true minimum may lie between readings; finer steps near the minimum improve the estimate."
+   ],
+   "mistake": "Taking the smallest angle of incidence as the minimum deviation.",
+   "tq": "For A = 60.0° and Dmin = 30.0°, what is n?",
+   "ta": "sin 45.0° ÷ sin 30.0° = 1.41.",
+   "table": {
+    "head": [
+     "i / °",
+     "40",
+     "44",
+     "48",
+     "52",
+     "56",
+     "60"
+    ],
+    "rows": [
+     [
+      "D / °",
+      "38.5",
+      "37.5",
+      "37.2",
+      "37.3",
+      "37.9",
+      "38.9"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "phy-017",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P18",
+   "sec": "phy",
+   "no": "18",
+   "page": 40,
+   "practical_title": "Prism refractive index from critical angle",
+   "title": "Refractive index from the critical angle",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results for light inside a glass prism meeting a glass–air surface: at an angle of incidence of 41.0° a faint refracted ray still emerges; at 42.5° the light is totally internally reflected.",
+   "question": "Estimate the critical angle, calculate the refractive index and its range, and state the conditions for total internal reflection.",
+   "marks": [
+    "The critical angle lies between 41.0° and 42.5°; the best estimate is the midpoint, C = 41.75° (about 41.8°).",
+    "n = 1 ÷ sin C = 1 ÷ sin 41.75° = 1.50.",
+    "The bracketing angles give n from 1 ÷ sin 42.5° = 1.48 to 1 ÷ sin 41.0° = 1.52, so n = 1.50 ± 0.02.",
+    "Total internal reflection needs light travelling from the denser to the less dense medium with an angle of incidence greater than C.",
+    "C depends on wavelength (dispersion), so white light gives a slightly blurred boundary; a narrower bracket would reduce the uncertainty."
+   ],
+   "mistake": "Using n = sin C, or measuring the angle from the surface instead of the normal.",
+   "tq": "If the critical angle were 40.0°, what would n be?",
+   "ta": "1 ÷ sin 40.0° = 1.56.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-018",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P19",
+   "sec": "phy",
+   "no": "19",
+   "page": 42,
+   "practical_title": "Spectrometer adjustment and prism angle",
+   "title": "Spectrometer: angle of a prism by reflection",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional vernier readings for the telescope receiving light reflected from the two refracting faces of a prism (reflection method, collimator fixed).",
+   "question": "Calculate the angle turned by the telescope from each vernier, find the angle A of the prism, and explain why two verniers are read.",
+   "marks": [
+    "In the reflection method the telescope turns through 2A between the two reflected images.",
+    "Vernier 1: 182° 14′ − 62° 10′ = 120° 04′.",
+    "Vernier 2 passes through 360°: (360° + 2° 16′) − 242° 12′ = 120° 04′.",
+    "A = 120° 04′ ÷ 2 = 60° 02′ (60.03°).",
+    "Averaging two verniers 180° apart cancels eccentricity of the scale; the crossing of 0° on vernier 2 must be handled by adding 360°."
+   ],
+   "mistake": "Subtracting 242° 12′ from 2° 16′ directly and getting a negative or 240° result.",
+   "tq": "The telescope turns through 119° 50′ between the reflections. What is A?",
+   "ta": "59° 55′.",
+   "table": {
+    "head": [
+     "Face",
+     "Vernier 1",
+     "Vernier 2"
+    ],
+    "rows": [
+     [
+      "First face",
+      "62° 10′",
+      "242° 12′"
+     ],
+     [
+      "Second face",
+      "182° 14′",
+      "2° 16′"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "phy-019",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P21-2",
+   "sec": "phy",
+   "no": "21.2",
+   "page": 51,
+   "practical_title": "Concave lens: no-parallax focal length",
+   "title": "Concave lens focal length using a convex lens in contact",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional no-parallax results: a convex lens alone has f₁ = +10.0 cm, and the convex lens in contact with a concave lens behaves as a converging combination with f = +25.0 cm. Use the real-is-positive convention.",
+   "question": "Calculate the focal length of the concave lens, explain why the combination must remain converging for this method, and state one source of error.",
+   "marks": [
+    "For thin lenses in contact, 1/f = 1/f₁ + 1/f₂.",
+    "1/f₂ = 1/25.0 − 1/10.0 = −0.0600 cm⁻¹.",
+    "f₂ = −16.7 cm: the negative sign shows a diverging (concave) lens with a virtual focus.",
+    "A concave lens alone forms no real image, so it is paired with a stronger convex lens (|f₂| > f₁, here 16.7 > 10.0) to give a real image that can be located by no parallax.",
+    "Errors: judging the no-parallax position, lens thickness and the gap between the lenses; the sign convention must be stated and used consistently."
+   ],
+   "mistake": "Writing f₂ = 25.0 − 10.0 = 15.0 cm by subtracting focal lengths.",
+   "tq": "With f₁ = +12.0 cm and f(combination) = +30.0 cm, find f₂.",
+   "ta": "1/f₂ = 1/30.0 − 1/12.0, f₂ = −20.0 cm.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-21-2",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P22",
+   "sec": "phy",
+   "no": "22",
+   "page": 53,
+   "practical_title": "Atmospheric pressure: quill-tube model",
+   "title": "Atmospheric pressure with a quill tube",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings for a uniform quill tube with air trapped by a 10.0 cm mercury thread. With the open end upward the air column is 33.0 cm long; with the open end downward it is 43.0 cm long. Temperature is constant. Density of mercury 13 600 kg m⁻³, g = 9.81 m s⁻².",
+   "question": "Write the pressures of the trapped air in both positions, apply Boyle's law to find the atmospheric pressure in cm of mercury and in pascals, and state the effect of a ±0.2 cm reading error on each length.",
+   "marks": [
+    "Open end up: p₁ = P₀ + 10.0; open end down: p₂ = P₀ − 10.0 (in cm Hg).",
+    "Boyle's law with uniform bore: (P₀ + 10.0) × 33.0 = (P₀ − 10.0) × 43.0.",
+    "Solving, 10.0 P₀ = 760, so P₀ = 76.0 cm Hg.",
+    "P₀ = 0.760 × 13 600 × 9.81 = 1.01 × 10⁵ Pa.",
+    "P₀ depends on the difference 43.0 − 33.0 = 10.0 cm; ±0.2 cm on each length gives up to ±0.4 cm (4%) in that difference, so P₀ is sensitive to reading errors; temperature must stay constant."
+   ],
+   "mistake": "Using the same pressure for both positions, or adding the thread length in the wrong position.",
+   "tq": "Why does a small error in each length give a large error in P₀?",
+   "ta": "P₀ depends on the small difference between two nearly equal lengths.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-022",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P24",
+   "sec": "phy",
+   "no": "24",
+   "page": 57,
+   "practical_title": "Pressure versus temperature at fixed volume",
+   "title": "Pressure against temperature at constant volume",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings for a fixed mass of gas at constant volume.",
+   "question": "Calculate the gradient, find the temperature at which the pressure would extrapolate to zero, test whether p/T is constant using kelvin, and state two limitations.",
+   "marks": [
+    "Gradient = (136.6 − 100.0) ÷ 100 = 0.366 kPa K⁻¹ (a step of 1 °C equals 1 K).",
+    "Extrapolating to p = 0: θ = −100.0 ÷ 0.366 = −273.2 °C.",
+    "This intercept is the absolute zero of the kelvin scale: T / K = θ / °C + 273.15.",
+    "p/T is constant: 100.0 ÷ 273.15 = 0.3661 and 136.6 ÷ 373.15 = 0.3661 kPa K⁻¹, so p ∝ T in kelvin.",
+    "The extrapolation is far outside the data, real gases liquefy before 0 K, and expansion of the vessel means the volume is not perfectly constant."
+   ],
+   "mistake": "Testing p ∝ θ with Celsius temperatures.",
+   "tq": "At 75 °C, what pressure does the same straight line predict?",
+   "ta": "100.0 + 0.366 × 75 = 127 kPa.",
+   "table": {
+    "head": [
+     "Temperature / °C",
+     "0",
+     "50",
+     "100"
+    ],
+    "rows": [
+     [
+      "Pressure / kPa",
+      "100.0",
+      "118.3",
+      "136.6"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "phy-024",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P25",
+   "sec": "phy",
+   "no": "25",
+   "page": 59,
+   "practical_title": "Solid heat capacity: mixture method",
+   "title": "Specific heat capacity of a solid by mixtures",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results: a 0.250 kg metal block at 100.0 °C is transferred into 0.200 kg of water at 20.0 °C in a calorimeter of heat capacity 100 J K⁻¹. The final steady temperature is 27.4 °C. Take c(water) = 4180 J kg⁻¹ K⁻¹.",
+   "question": "Calculate the heat gained by the water and calorimeter, the specific heat capacity of the metal, the value obtained if the calorimeter is ignored, and the effect of heat loss during transfer.",
+   "marks": [
+    "Heat lost by the block = heat gained by the water and the calorimeter (no losses assumed).",
+    "Heat gained = (0.200 × 4180 + 100) × (27.4 − 20.0) = 936 × 7.4 = 6926 J.",
+    "c = 6926 ÷ [0.250 × (100.0 − 27.4)] = 6926 ÷ 18.15 = 382 J kg⁻¹ K⁻¹.",
+    "Ignoring the calorimeter gives 836 × 7.4 ÷ 18.15 = 341 J kg⁻¹ K⁻¹, about 11% too low.",
+    "Heat lost by the block during transfer lowers the final temperature, so c is underestimated; transfer should be quick and the calorimeter lagged."
+   ],
+   "mistake": "Using the temperature rise of the water as the fall of the block.",
+   "tq": "If the block were 0.500 kg with everything else the same, would the final temperature be higher or lower?",
+   "ta": "Higher: the hotter block supplies more heat.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-025",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P26",
+   "sec": "phy",
+   "no": "26",
+   "page": 61,
+   "practical_title": "Liquid heat capacity by cooling",
+   "title": "Specific heat capacity of a liquid by the method of cooling",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results for the same calorimeter (heat capacity 40 J K⁻¹), filled in turn with equal volumes of water and of a liquid, and cooled from 60 °C to 50 °C under the same conditions. Water: 0.100 kg, 300 s. Liquid: 0.090 kg, 170 s. Take c(water) = 4180 J kg⁻¹ K⁻¹.",
+   "question": "Explain why the rates of heat loss are equal, calculate the specific heat capacity of the liquid, and state two assumptions.",
+   "marks": [
+    "Same calorimeter, surface and temperature range, so the rate of heat loss is the same: (mc + C)Δθ ÷ t is equal for both.",
+    "Water: (0.100 × 4180 + 40) = 458 J K⁻¹, cooling through 10 K in 300 s.",
+    "Liquid: m c + 40 = 458 × 170 ÷ 300 = 259.5 J K⁻¹.",
+    "c(liquid) = (259.5 − 40) ÷ 0.090 = 2.44 × 10³ J kg⁻¹ K⁻¹.",
+    "Assumptions: identical surface and surroundings and stirring, cooling over the same temperature range; evaporation of the liquid would make the result unreliable."
+   ],
+   "mistake": "Comparing cooling times without including the calorimeter heat capacity.",
+   "tq": "If the liquid took 200 s instead, would its c be larger or smaller?",
+   "ta": "Larger: a longer time means more heat stored per kelvin.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-026",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P27",
+   "sec": "phy",
+   "no": "27",
+   "page": 64,
+   "practical_title": "Latent heat of fusion of ice",
+   "title": "Specific latent heat of fusion of ice by mixtures",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results: 0.050 kg of dry ice at 0 °C is added to 0.200 kg of water at 40.0 °C in a calorimeter of heat capacity 100 J K⁻¹. The final temperature is 18.1 °C. Take c(water) = 4180 J kg⁻¹ K⁻¹.",
+   "question": "Write the energy balance, calculate the specific latent heat of fusion, and explain the effect of using wet ice.",
+   "marks": [
+    "Heat lost by water and calorimeter = heat to melt the ice + heat to warm the melted ice from 0 °C to the final temperature.",
+    "Heat lost = (0.200 × 4180 + 100) × (40.0 − 18.1) = 936 × 21.9 = 20 498 J.",
+    "Heat to warm the melt water = 0.050 × 4180 × 18.1 = 3783 J.",
+    "L = (20 498 − 3783) ÷ 0.050 = 3.34 × 10⁵ J kg⁻¹.",
+    "Wet ice includes water that needs no melting, so the true ice mass is smaller than recorded and L is underestimated; the ice should be dried first."
+   ],
+   "mistake": "Forgetting to warm the melted ice from 0 °C to the final temperature.",
+   "tq": "Would heat gained from warm surroundings during the experiment raise or lower the calculated L?",
+   "ta": "Lower it: heat from the surroundings reduces the measured temperature fall, so less heat appears to have gone into melting the ice.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-027",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P28",
+   "sec": "phy",
+   "no": "28",
+   "page": 66,
+   "practical_title": "Latent heat of vaporisation of water",
+   "title": "Specific latent heat of vaporisation of water by mixtures",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results: dry steam at 100 °C is passed into 0.200 kg of water at 20.0 °C in a calorimeter of heat capacity 100 J K⁻¹ until the temperature is 40.0 °C. The mass gain is 0.0075 kg (7.5 g). Take c(water) = 4180 J kg⁻¹ K⁻¹.",
+   "question": "Write the energy balance, calculate the specific latent heat of vaporisation, find the value obtained if the cooling of the condensed water is ignored, and explain the effect of wet steam.",
+   "marks": [
+    "Heat from steam condensing + heat from the condensed water cooling from 100 °C to 40.0 °C = heat gained by water and calorimeter.",
+    "Heat gained = (0.200 × 4180 + 100) × (40.0 − 20.0) = 936 × 20.0 = 18 720 J.",
+    "Cooling of condensed water = 0.0075 × 4180 × 60.0 = 1881 J, so L = (18 720 − 1881) ÷ 0.0075 = 2.25 × 10⁶ J kg⁻¹.",
+    "Ignoring the cooling term gives 18 720 ÷ 0.0075 = 2.50 × 10⁶ J kg⁻¹, about 11% too high.",
+    "Wet steam carries water that releases no latent heat, so L is underestimated; a steam trap is used and heat loss is reduced by lagging."
+   ],
+   "mistake": "Forgetting that the condensed water also cools to the final temperature.",
+   "tq": "Does the small mass of steam make the result more or less sensitive to weighing errors?",
+   "ta": "More sensitive: a 0.1 g error is over 1% of 7.5 g.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-028",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P29",
+   "sec": "phy",
+   "no": "29",
+   "page": 68,
+   "practical_title": "Relative humidity: polished calorimeter",
+   "title": "Relative humidity from the dew point",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings with a polished calorimeter: room temperature 25.0 °C; mist appears at 15.4 °C on cooling and disappears at 14.6 °C on warming. Saturated vapour pressure (SVP) values are given.",
+   "question": "Find the dew point, calculate the relative humidity, estimate its range, and state one assumption.",
+   "marks": [
+    "Dew point = mean of the appearance and disappearance temperatures = (15.4 + 14.6) ÷ 2 = 15.0 °C.",
+    "The actual vapour pressure equals the SVP at the dew point, 1.71 kPa.",
+    "RH = 1.71 ÷ 3.17 × 100 = 54%.",
+    "Using 14.6 °C and 15.4 °C gives 1.66 ÷ 3.17 = 52% to 1.75 ÷ 3.17 = 55%, so RH ≈ 54 ± 2%.",
+    "Assumption: the air at the polished surface has the same vapour content as the room; breath near the calorimeter would raise the dew point."
+   ],
+   "mistake": "Dividing the dew point by room temperature (15 ÷ 25) instead of the vapour pressures.",
+   "tq": "If SVP at the dew point were 1.23 kPa (room SVP 3.17 kPa), what is RH?",
+   "ta": "1.23 ÷ 3.17 × 100 = 39%.",
+   "table": {
+    "head": [
+     "Temperature / °C",
+     "14.6",
+     "15.0",
+     "15.4",
+     "25.0"
+    ],
+    "rows": [
+     [
+      "SVP / kPa",
+      "1.66",
+      "1.71",
+      "1.75",
+      "3.17"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "phy-029",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P30",
+   "sec": "phy",
+   "no": "30",
+   "page": 70,
+   "practical_title": "Thermal conductivity: Searle method",
+   "title": "Thermal conductivity by Searle's method",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional steady-state readings for a lagged copper bar of diameter 2.00 cm. Thermometers 0.100 m apart along the bar differ by 10.0 K. Cooling water flows at 0.145 kg per 100 s and rises by 2.00 K. Take c(water) = 4180 J kg⁻¹ K⁻¹.",
+   "question": "Calculate the rate of heat flow, the cross-sectional area and the thermal conductivity, and explain why the bar must be lagged and in a steady state.",
+   "marks": [
+    "Rate of heat flow into the water: Q/t = m c Δθ ÷ t = 0.145 × 4180 × 2.00 ÷ 100 = 12.1 W.",
+    "A = πd² ÷ 4 = π × (0.0200)² ÷ 4 = 3.14 × 10⁻⁴ m².",
+    "K = (Q/t) × L ÷ (A Δθ) = 12.1 × 0.100 ÷ (3.14 × 10⁻⁴ × 10.0) = 386 W m⁻¹ K⁻¹.",
+    "Without lagging, heat escapes from the sides, so less reaches the water than passes the thermometers and K is underestimated.",
+    "Readings must be taken in the steady state (all temperatures constant), otherwise part of the heat is still warming the bar."
+   ],
+   "mistake": "Using the diameter instead of the radius in πr², or Celsius temperatures as absolute values (only differences matter here).",
+   "tq": "If the water rise were 1.00 K with the same flow and gradient, what would K be?",
+   "ta": "Half: about 193 W m⁻¹ K⁻¹.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-030",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P34",
+   "sec": "phy",
+   "no": "34",
+   "page": 79,
+   "practical_title": "Internal resistance of a cell: potentiometer",
+   "title": "Internal resistance of a cell with a potentiometer",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional balance lengths with a steady driver current: with the cell on open circuit the balance length is l₁ = 70.0 cm; with a 10.0 Ω resistor across the cell it is l₂ = 62.0 cm. Each length is read to ±0.1 cm.",
+   "question": "Derive the expression for r, calculate it with its uncertainty, and state two conditions for the method.",
+   "marks": [
+    "E ∝ l₁ (no current drawn at balance) and the terminal p.d. V ∝ l₂.",
+    "E = I(R + r) and V = IR, so l₁ ÷ l₂ = (R + r) ÷ R, giving r = R(l₁ − l₂) ÷ l₂.",
+    "r = 10.0 × (70.0 − 62.0) ÷ 62.0 = 1.29 Ω.",
+    "The difference 8.0 cm carries ±0.2 cm (2.5%) and l₂ ±0.1 cm (0.2%), so r = 1.29 ± 0.03 Ω.",
+    "Conditions: the driver current (potential gradient) must not change between readings, and the resistor is connected only while balancing so the cell does not run down."
+   ],
+   "mistake": "Using r = R × l₂ ÷ l₁ or inverting the ratio.",
+   "tq": "With R = 5.0 Ω, l₁ = 80.0 cm and l₂ = 60.0 cm, find r.",
+   "ta": "5.0 × 20.0 ÷ 60.0 = 1.67 Ω.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-034",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P35",
+   "sec": "phy",
+   "no": "35",
+   "page": 81,
+   "practical_title": "Forward diode current-voltage relation",
+   "title": "Forward-biased diode: non-ohmic I–V data",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional forward-bias readings for a silicon diode.",
+   "question": "Describe the I–V relationship, state the approximate turn-on voltage, calculate the dynamic resistance between 0.70 V and 0.75 V and the static resistance at 0.75 V, and state a limitation.",
+   "marks": [
+    "The current rises very steeply rather than in proportion to V, so the diode is non-ohmic.",
+    "Conduction becomes significant at about 0.6–0.7 V, typical of silicon.",
+    "Dynamic resistance = ΔV ÷ ΔI = 0.05 ÷ (0.030 − 0.012) = 2.8 Ω (it was 0.05 ÷ 0.008 = 6.25 Ω between 0.65 V and 0.70 V).",
+    "Static resistance at 0.75 V = V ÷ I = 0.75 ÷ 0.030 = 25.0 Ω; static and dynamic resistance differ for a non-linear device.",
+    "Heating at higher current changes the characteristic, and a series resistor is needed to limit the current."
+   ],
+   "mistake": "Calculating one \"resistance\" for the whole curve.",
+   "tq": "Between 0.60 V and 0.65 V, what is the dynamic resistance?",
+   "ta": "0.05 ÷ 0.0028 = 18 Ω.",
+   "table": {
+    "head": [
+     "V / V",
+     "0.50",
+     "0.60",
+     "0.65",
+     "0.70",
+     "0.75"
+    ],
+    "rows": [
+     [
+      "I / mA",
+      "0.1",
+      "1.2",
+      "4.0",
+      "12",
+      "30"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "phy-035",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P36",
+   "sec": "phy",
+   "no": "36",
+   "page": 83,
+   "practical_title": "Transistor common-emitter transfer characteristic",
+   "title": "Transistor transfer characteristic: current gain",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional common-emitter readings at a fixed collector–emitter voltage.",
+   "question": "Calculate the a.c. current gain over the whole range, the d.c. gain at I_B = 30 µA, comment on linearity, and state a limitation.",
+   "marks": [
+    "a.c. gain β = ΔI_C ÷ ΔI_B.",
+    "Over the range: (5.8 − 1.5) mA ÷ (40 − 10) µA = 4.3 mA ÷ 30 µA = 143.",
+    "d.c. gain at 30 µA: h_FE = I_C ÷ I_B = 4.4 mA ÷ 30 µA = 147.",
+    "The local gain is 150 from 10 to 20 µA and 140 above, so the transfer characteristic is nearly, but not exactly, linear.",
+    "At high current the transistor approaches saturation and the gain also changes with temperature, so a single β applies only to this region."
+   ],
+   "mistake": "Dividing mA by µA without converting units, getting 0.143.",
+   "tq": "I_C = 2.0 mA when I_B = 12.5 µA. What is h_FE?",
+   "ta": "2.0 mA ÷ 12.5 µA = 160.",
+   "table": {
+    "head": [
+     "I_B / µA",
+     "10",
+     "20",
+     "30",
+     "40"
+    ],
+    "rows": [
+     [
+      "I_C / mA",
+      "1.5",
+      "3.0",
+      "4.4",
+      "5.8"
+     ]
+    ]
+   },
+   "max_marks": 5,
+   "activity_id": "phy-036",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P39",
+   "sec": "phy",
+   "no": "39",
+   "page": 90,
+   "practical_title": "Liquid viscosity from laminar capillary flow",
+   "title": "Viscosity of water by capillary flow (Poiseuille)",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional steady-flow results: capillary radius 0.250 mm, length 0.200 m, constant pressure head 0.300 m of water, and 1.00 cm³ collected in 44.3 s. Density of water 1000 kg m⁻³, g = 9.81 m s⁻².",
+   "question": "Calculate the pressure difference and the viscosity, explain which measurement dominates the uncertainty, and check that the flow is laminar.",
+   "marks": [
+    "Poiseuille: V/t = πr⁴ΔP ÷ (8ηL), so η = πr⁴ΔP t ÷ (8VL).",
+    "ΔP = ρgh = 1000 × 9.81 × 0.300 = 2943 Pa.",
+    "η = π × (2.50 × 10⁻⁴)⁴ × 2943 × 44.3 ÷ (8 × 1.00 × 10⁻⁶ × 0.200) = 1.00 × 10⁻³ Pa s.",
+    "η depends on r⁴, so a 2% error in the radius gives about 8%: the bore radius must be measured most carefully (travelling microscope).",
+    "Mean speed = (1.00 × 10⁻⁶ ÷ 44.3) ÷ πr² = 0.115 m s⁻¹, giving a Reynolds number ρvd/η ≈ 57, far below about 2000, so the flow is laminar and the formula applies."
+   ],
+   "mistake": "Using the diameter instead of the radius, which changes η by a factor of 16.",
+   "tq": "If the radius were measured 2% too large, how would the calculated η change?",
+   "ta": "About 8% too large (r⁴ dependence).",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-039",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P40",
+   "sec": "phy",
+   "no": "40",
+   "page": 92,
+   "practical_title": "Surface tension from a microscope slide",
+   "title": "Surface tension using a microscope slide",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional results: a clean slide 25.0 mm wide and 1.0 mm thick touches a water surface; just before it pulls free, the extra pull (after allowing for weight and upthrust) corresponds to a mass of 0.382 g. Take g = 9.81 m s⁻² and a contact angle of zero.",
+   "question": "Calculate the length of the contact line, the surface-tension force and the surface tension, find the error from ignoring the slide thickness, and state two assumptions.",
+   "marks": [
+    "The contact line runs round the slide: 2(l + t) = 2(0.0250 + 0.0010) = 0.0520 m.",
+    "F = mg = 0.382 × 10⁻³ × 9.81 = 3.75 × 10⁻³ N.",
+    "γ = F ÷ 2(l + t) = 3.75 × 10⁻³ ÷ 0.0520 = 0.0721 N m⁻¹.",
+    "Ignoring the thickness, γ = F ÷ 2l = 0.0749 N m⁻¹, about 4.0% too high.",
+    "Assumptions: zero contact angle (clean glass wets fully) and only the net pull is used; grease or detergent lowers γ."
+   ],
+   "mistake": "Using only one face of the slide (length l) as the contact line.",
+   "tq": "If the pull corresponded to 0.400 g with the same slide, what is γ?",
+   "ta": "0.400 × 10⁻³ × 9.81 ÷ 0.0520 = 0.0755 N m⁻¹.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-040",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P41",
+   "sec": "phy",
+   "no": "41",
+   "page": 94,
+   "practical_title": "Surface tension via capillary rise",
+   "title": "Surface tension from capillary rise",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings: water rises 3.70 cm in a clean capillary of internal radius 0.400 mm. Density 1000 kg m⁻³, g = 9.81 m s⁻², contact angle taken as zero.",
+   "question": "Calculate the surface tension, apply the meniscus correction h + r/3, and state the main sources of uncertainty.",
+   "marks": [
+    "h = 2γ cos θ ÷ (ρgr), so with θ = 0, γ = ρgrh ÷ 2.",
+    "Units: r = 4.00 × 10⁻⁴ m and h = 0.0370 m.",
+    "γ = 1000 × 9.81 × 4.00 × 10⁻⁴ × 0.0370 ÷ 2 = 0.0726 N m⁻¹.",
+    "With the meniscus correction, h = 0.0370 + 0.000133 = 0.03713 m, giving γ = 0.0729 N m⁻¹.",
+    "γ is proportional to r and h, so the bore radius (±0.01 mm is 2.5%) dominates; a dirty tube changes the contact angle."
+   ],
+   "mistake": "Using the diameter of the tube as r.",
+   "tq": "In a tube of radius 0.200 mm the rise is 7.40 cm. What is γ (no correction)?",
+   "ta": "1000 × 9.81 × 2.00 × 10⁻⁴ × 0.0740 ÷ 2 = 0.0726 N m⁻¹.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-041",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  },
+  {
+   "id": "PM40-P42",
+   "sec": "phy",
+   "no": "42",
+   "page": 96,
+   "practical_title": "Surface tension from Jaeger bubble method",
+   "title": "Surface tension by Jaeger's method",
+   "kind": "numerical",
+   "scenario": "A teacher supplies fictional readings: air bubbles form slowly at the tip of a capillary of radius 0.500 mm held 1.00 cm below a water surface. The water manometer shows a maximum difference of 3.94 cm just before each bubble breaks away. Density 1000 kg m⁻³, g = 9.81 m s⁻².",
+   "question": "Write the pressure balance at maximum pressure, calculate the excess pressure due to surface tension and the surface tension, and state two conditions.",
+   "marks": [
+    "At maximum pressure the bubble is a hemisphere of radius r: manometer pressure = hydrostatic pressure at the tip + 2γ/r.",
+    "Subtract the depth: h − d = 3.94 − 1.00 = 2.94 cm of water.",
+    "Excess pressure 2γ/r = 1000 × 9.81 × 0.0294 = 288 Pa.",
+    "γ = r × ΔP ÷ 2 = 5.00 × 10⁻⁴ × 288 ÷ 2 = 0.0721 N m⁻¹.",
+    "Conditions: bubbles must form slowly (quasi-static) so the maximum is read correctly, and the bubble radius at maximum equals the bore radius, which must be measured accurately."
+   ],
+   "mistake": "Forgetting to subtract the depth of the tip below the surface.",
+   "tq": "With the tip 2.00 cm deep and the maximum manometer reading 4.94 cm, does γ change?",
+   "ta": "No: h − d is still 2.94 cm, so γ = 0.0721 N m⁻¹.",
+   "table": null,
+   "max_marks": 5,
+   "activity_id": "phy-042",
+   "labels": [
+    "fictional-dataset",
+    "independent-not-teacher-reviewed"
+   ]
+  }
+ ]
+}

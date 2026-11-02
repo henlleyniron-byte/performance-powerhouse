@@ -1,0 +1,3319 @@
+{
+  "biology": {
+    "audit_version": "1.0",
+    "subject": "biology",
+    "source_file": "/workspace/scratch/8274d4b74500/upload/practical-lab-coverage-completion-v4_0.json",
+    "source_retained_unchanged": true,
+    "handbook": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+    "source_verification": "Actual activity text previously inspected, as detailed in source_audit.md; this report distinguishes direct method alignment from associated theoretical enrichment.",
+    "case_count": 23,
+    "numeric_check_count": 58,
+    "numeric_errors_found": 0,
+    "review_status": "independent_model_teacher_review_pending",
+    "summary": "All23 BiologyV4 items independently reviewed. Computed values, including transfers, are arithmetically correct. Main corrections concern lignification/complex-xylem viability, comparative excretory function, monosynaptic assumptions, illumination-versus-pupil geometry, lever geometry/statics and official specimen-set matching. Associated enrichment must be labelled rather than counted as exact laboratory-method replication.",
+    "cases": [
+      {
+        "id": "PM40-B01",
+        "activity_id": "bio-001",
+        "handbook_print_page": 1,
+        "issues": [
+          {
+            "code": "negative_test_inference",
+            "severity": "minor",
+            "detail": "A negative Benedict result means reducing sugar was not detected under the test conditions; it does not establish absolute absence, even of reducing sugar."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "main_food_tests_aligned_transfer_is_enrichment",
+        "audit_note": "Main table tests align with NIE Practical1. The ethanol emulsion transfer is valid associated food-test enrichment; handbook annex instead lists SudanIII for lipids. No arithmetic required."
+      },
+      {
+        "id": "PM40-B09",
+        "activity_id": "bio-009",
+        "handbook_print_page": 10,
+        "issues": [
+          {
+            "code": "nucleoid_visibility_overstatement",
+            "severity": "minor",
+            "detail": "Ordinary unstained light images do not reliably resolve bacterial nucleoids as distinct structures; a categorical claim that light microscopy can never reveal DNA is unnecessarily broad."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "C to A width ratio",
+            "expression": "10/1",
+            "expected": 10,
+            "tolerance": 1e-09,
+            "unit": "times"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Combined size/pigment/filament evidence is suitably provisional. Cyanobacteria correctly treated as prokaryotes."
+      },
+      {
+        "id": "PM40-B10",
+        "activity_id": "bio-010",
+        "handbook_print_page": 11,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "scale factor",
+            "expression": "0.5/15",
+            "expected": 0.0333,
+            "tolerance": 5e-05,
+            "unit": "µm per mm"
+          },
+          {
+            "label": "cell length",
+            "expression": "48*0.5/15",
+            "expected": 1.6,
+            "tolerance": 1e-09,
+            "unit": "µm"
+          },
+          {
+            "label": "cell width",
+            "expression": "20*0.5/15",
+            "expected": 0.667,
+            "tolerance": 0.0005,
+            "unit": "µm"
+          },
+          {
+            "label": "flagellum length",
+            "expression": "90*0.5/15",
+            "expected": 3,
+            "tolerance": 1e-09,
+            "unit": "µm"
+          },
+          {
+            "label": "magnification",
+            "expression": "15*1000/.5",
+            "expected": 30000,
+            "tolerance": 1e-09,
+            "unit": "times"
+          },
+          {
+            "label": "transfer length",
+            "expression": "60/25*1",
+            "expected": 2.4,
+            "tolerance": 1e-09,
+            "unit": "µm"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "All arithmetic correct. Retain full scale factor internally; the0.0333 printed value is rounded. Size and static-motility caveats appropriate."
+      },
+      {
+        "id": "PM40-B11",
+        "activity_id": "bio-011",
+        "handbook_print_page": 12,
+        "issues": [
+          {
+            "code": "official_candidate_mismatch",
+            "severity": "moderate",
+            "detail": "Spirogyra is not among the practical11 candidate list (Euglena, Paramecium, Amoeba, Ulva, Diatoms, Sargassum, Gelidium). The exercise is valid enrichment, but does not follow the stated official specimen set."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "needs_official_candidate_replacement",
+        "audit_note": "Use Ulva as the fourth specimen for direct alignment, keeping the original case ID."
+      },
+      {
+        "id": "PM40-B12",
+        "activity_id": "bio-012",
+        "handbook_print_page": 13,
+        "issues": [],
+        "numeric_checks": [],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Representative moss, fern, Pinus-like gymnosperm and dicot features sound. No calculated numbers; cotyledon/floral counts are supplied diagnostic traits."
+      },
+      {
+        "id": "PM40-B13",
+        "activity_id": "bio-013",
+        "handbook_print_page": 14,
+        "issues": [
+          {
+            "code": "traditional_taxonomy_scope",
+            "severity": "minor",
+            "detail": "Phylum names follow the2017 NIE syllabus and should not be advertised as an exhaustive current fungal taxonomy."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Reproductive-structure classifications valid in the stated traditional groups. Restrict the sterile-hypha inference to this limited sample; molecular identification is outside this exercise. No arithmetic required."
+      },
+      {
+        "id": "PM40-B14",
+        "activity_id": "bio-014",
+        "handbook_print_page": 15,
+        "issues": [],
+        "numeric_checks": [],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Features correctly distinguish the five representative phyla. Complete gut is a supplied feature of E, not a universal echinoderm claim; tube feet and adult pentaradial structure are the stronger cues."
+      },
+      {
+        "id": "PM40-B15",
+        "activity_id": "bio-015",
+        "handbook_print_page": 16,
+        "issues": [
+          {
+            "code": "fish_class_underdetermined",
+            "severity": "moderate",
+            "detail": "A is identified only as fish; the official practical distinguishes Osteichthyes and Chondrichthyes, and current features do not discriminate them."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Monotreme counterexample to live-birth definition is valid. Endothermic temperature is regulated, not literally unchanging."
+      },
+      {
+        "id": "PM40-B16",
+        "activity_id": "bio-016",
+        "handbook_print_page": 17,
+        "issues": [
+          {
+            "code": "lignification_does_not_universally_kill",
+            "severity": "major",
+            "detail": "Lignification is incorrectly presented as directly killing every affected cell. Living lignified cells exist; death of mature vessel elements/fibres is not a universal consequence of lignin deposition."
+          },
+          {
+            "code": "walls_not_living",
+            "severity": "moderate",
+            "detail": "Living versus dead walls is incorrect: living/dead describes cells/protoplasts, not cell walls."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Cell identifications correct; explanations need correction."
+      },
+      {
+        "id": "PM40-B18",
+        "activity_id": "bio-018",
+        "handbook_print_page": 19,
+        "issues": [
+          {
+            "code": "complex_xylem_viability",
+            "severity": "major",
+            "detail": "Secondary xylem is a complex tissue containing living parenchyma as well as dead conducting and supporting elements."
+          },
+          {
+            "code": "radial_increment_not_total_radius",
+            "severity": "minor",
+            "detail": "The sum of the five ring widths is the represented radial increment, not necessarily the full stem or wood radius if a pith/earlier region is not accounted for."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "sum ring widths",
+            "expression": "2+3+2.5+1+1.5",
+            "expected": 10,
+            "tolerance": 1e-09,
+            "unit": "mm"
+          },
+          {
+            "label": "mean ring width",
+            "expression": "(2+3+2.5+1+1.5)/5",
+            "expected": 2,
+            "tolerance": 1e-09,
+            "unit": "mm per ring"
+          },
+          {
+            "label": "widest over mean",
+            "expression": "3/2",
+            "expected": 1.5,
+            "tolerance": 1e-09,
+            "unit": "times"
+          },
+          {
+            "label": "transfer equal width",
+            "expression": "12/6",
+            "expected": 2,
+            "tolerance": 1e-09,
+            "unit": "mm"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": ""
+      },
+      {
+        "id": "PM40-B24",
+        "activity_id": "bio-024",
+        "handbook_print_page": 29,
+        "issues": [],
+        "numeric_checks": [],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Mouth/stomach/duodenum matching is correctly provisional. Secretions and pH functions sound; descriptive rather than a literal anatomical-handbook method. Input pHs are fictional observations, not derived numerical values."
+      },
+      {
+        "id": "PM40-B25",
+        "activity_id": "bio-025",
+        "handbook_print_page": 30,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "rest output cm3",
+            "expression": "72*70",
+            "expected": 5040,
+            "tolerance": 1e-09,
+            "unit": "cm³ min⁻¹"
+          },
+          {
+            "label": "rest output dm3",
+            "expression": "72*70/1000",
+            "expected": 5.04,
+            "tolerance": 1e-09,
+            "unit": "dm³ min⁻¹"
+          },
+          {
+            "label": "exercise output cm3",
+            "expression": "140*100",
+            "expected": 14000,
+            "tolerance": 1e-09,
+            "unit": "cm³ min⁻¹"
+          },
+          {
+            "label": "exercise output dm3",
+            "expression": "140*100/1000",
+            "expected": 14,
+            "tolerance": 1e-09,
+            "unit": "dm³ min⁻¹"
+          },
+          {
+            "label": "output ratio",
+            "expression": "14/5.04",
+            "expected": 2.78,
+            "tolerance": 0.005,
+            "unit": "times"
+          },
+          {
+            "label": "heart rate ratio",
+            "expression": "140/72",
+            "expected": 1.94,
+            "tolerance": 0.005,
+            "unit": "times"
+          },
+          {
+            "label": "stroke volume ratio",
+            "expression": "100/70",
+            "expected": 1.43,
+            "tolerance": 0.005,
+            "unit": "times"
+          },
+          {
+            "label": "transfer output cm3",
+            "expression": "60*80",
+            "expected": 4800,
+            "tolerance": 1e-09,
+            "unit": "cm³ min⁻¹"
+          },
+          {
+            "label": "transfer output dm3",
+            "expression": "60*80/1000",
+            "expected": 4.8,
+            "tolerance": 1e-09,
+            "unit": "dm³ min⁻¹"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "All computed values correct. Artery/vein structure examples are representative rather than universal; no new procedure."
+      },
+      {
+        "id": "PM40-B27",
+        "activity_id": "bio-027",
+        "handbook_print_page": 32,
+        "issues": [
+          {
+            "code": "flame_cell_function_overstated",
+            "severity": "moderate",
+            "detail": "The claim all four structures remove nitrogenous waste overstates protonephridial contribution in flatworms; their major role is osmoregulation, with much ammonia lost over the body surface."
+          },
+          {
+            "code": "nephron_reabsorption_location",
+            "severity": "minor",
+            "detail": "Useful solutes are reabsorbed along loops is too loose; reabsorption occurs across specialised nephron tubule regions, while loops contribute to concentration gradients."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": ""
+      },
+      {
+        "id": "PM40-B28",
+        "activity_id": "bio-028",
+        "handbook_print_page": 33,
+        "issues": [
+          {
+            "code": "monosynaptic_vs_relay_ambiguity",
+            "severity": "moderate",
+            "detail": "A stated single synapse fits a direct sensory-to-motor spinal connection; relay wording could be mistaken for an additional interneuron, which would require at least two central synapses."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "conduction seconds",
+            "expression": "(.8+.8)/80",
+            "expected": 0.02,
+            "tolerance": 1e-09,
+            "unit": "s"
+          },
+          {
+            "label": "conduction milliseconds",
+            "expression": "(.8+.8)/80*1000",
+            "expected": 20,
+            "tolerance": 1e-09,
+            "unit": "ms"
+          },
+          {
+            "label": "model reflex total",
+            "expression": "20+1",
+            "expected": 21,
+            "tolerance": 1e-09,
+            "unit": "ms"
+          },
+          {
+            "label": "voluntary/reflex ratio",
+            "expression": "200/21",
+            "expected": 9.5,
+            "tolerance": 0.05,
+            "unit": "times"
+          },
+          {
+            "label": "transfer seconds",
+            "expression": "1.6/40",
+            "expected": 0.04,
+            "tolerance": 1e-09,
+            "unit": "s"
+          },
+          {
+            "label": "transfer milliseconds",
+            "expression": "1.6/40*1000",
+            "expected": 40,
+            "tolerance": 1e-09,
+            "unit": "ms"
+          }
+        ],
+        "source_alignment": "associated_neural_timing_enrichment",
+        "audit_note": "Arithmetic correct under one-synapse assumptions. Official28 focuses gross nervous-system organisation/brain diagrams; this timing problem is associated physiology enrichment."
+      },
+      {
+        "id": "PM40-B29",
+        "activity_id": "bio-029",
+        "handbook_print_page": 34,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "back/fingertip threshold ratio",
+            "expression": "45/2",
+            "expected": 22.5,
+            "tolerance": 1e-09,
+            "unit": "times"
+          },
+          {
+            "label": "transfer forearm/palm ratio",
+            "expression": "35/10",
+            "expected": 3.5,
+            "tolerance": 1e-09,
+            "unit": "times"
+          }
+        ],
+        "source_alignment": "associated_sensory_physiology_enrichment",
+        "audit_note": "Arithmetic correct. Smaller threshold means better spatial discrimination. Receptor density, receptive-field size and cortical representation influence it; ratios describe threshold separation rather than a universal scalar of all sensitivity. Official29 is receptor-model/diagram observation."
+      },
+      {
+        "id": "PM40-B30",
+        "activity_id": "bio-030",
+        "handbook_print_page": 35,
+        "issues": [
+          {
+            "code": "light_flux_condition",
+            "severity": "moderate",
+            "detail": "A ninefold area increase does not show that the actual dim-light flux exceeds bright-light flux ninefold; incident illumination differs between those settings."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "bright pupil area",
+            "expression": "3.141592653589793*(2/2)**2",
+            "expected": 3.14,
+            "tolerance": 0.005,
+            "unit": "mm²"
+          },
+          {
+            "label": "dim pupil area",
+            "expression": "3.141592653589793*(6/2)**2",
+            "expected": 28.3,
+            "tolerance": 0.05,
+            "unit": "mm²"
+          },
+          {
+            "label": "exact area ratio",
+            "expression": "(6/2)**2",
+            "expected": 9,
+            "tolerance": 1e-09,
+            "unit": "times"
+          },
+          {
+            "label": "rounded area ratio",
+            "expression": "28.3/3.14",
+            "expected": 9,
+            "tolerance": 0.05,
+            "unit": "times"
+          },
+          {
+            "label": "transfer area factor",
+            "expression": "(6/3)**2",
+            "expected": 4,
+            "tolerance": 1e-09,
+            "unit": "times"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Iris antagonism and sound path correct at the requested schematic level."
+      },
+      {
+        "id": "PM40-B31",
+        "activity_id": "bio-031",
+        "handbook_print_page": 36,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "scrotum/core temperature difference",
+            "expression": "37-34.5",
+            "expected": 2.5,
+            "tolerance": 1e-09,
+            "unit": "°C"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Anatomy and lower-temperature role sound; figures explicitly fictional."
+      },
+      {
+        "id": "PM40-B32",
+        "activity_id": "bio-032",
+        "handbook_print_page": 37,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "assumed32day cycle ovulation day",
+            "expression": "32-14",
+            "expected": 18,
+            "tolerance": 1e-09,
+            "unit": "cycle day"
+          }
+        ],
+        "source_alignment": "anatomy_related_hormone_timeline_enrichment",
+        "audit_note": "Timeline and feedback reasonable within stated ideal28day model. Day18 follows only the supplied14day-before-next-menses assumption, not an individual prediction. Official32 primarily anatomical structures and ovarian follicles."
+      },
+      {
+        "id": "PM40-B33",
+        "activity_id": "bio-033",
+        "handbook_print_page": 38,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "free vertebrae",
+            "expression": "7+12+5",
+            "expected": 24,
+            "tolerance": 1e-09,
+            "unit": "vertebrae"
+          },
+          {
+            "label": "usual total segments",
+            "expression": "7+12+5+5+4",
+            "expected": 33,
+            "tolerance": 1e-09,
+            "unit": "vertebral segments"
+          },
+          {
+            "label": "adult separate bones model",
+            "expression": "24+1+1",
+            "expected": 26,
+            "tolerance": 1e-09,
+            "unit": "bones"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Usual counts correct with stated coccygeal variation. Cervical transverse foramina diagnose region; avoid implying the vertebral artery passes through every cervical transverse foramen."
+      },
+      {
+        "id": "PM40-B34",
+        "activity_id": "bio-034",
+        "handbook_print_page": 40,
+        "issues": [
+          {
+            "code": "perpendicular_moment_arm_unspecified",
+            "severity": "moderate",
+            "detail": "Distances from a pivot equal moment arms only for perpendicular forces; the force geometry needs an explicit model assumption."
+          },
+          {
+            "code": "valid_moment_origin_mislabelled",
+            "severity": "moderate",
+            "detail": "Taking moments about the load is not inherently wrong; static torque balance can use any origin if all relevant forces are included."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "load torque",
+            "expression": "20*.3",
+            "expected": 6,
+            "tolerance": 1e-09,
+            "unit": "N m"
+          },
+          {
+            "label": "biceps force",
+            "expression": "20*.3/.04",
+            "expected": 150,
+            "tolerance": 1e-09,
+            "unit": "N"
+          },
+          {
+            "label": "mechanical advantage",
+            "expression": ".04/.3",
+            "expected": 0.133,
+            "tolerance": 0.0005,
+            "unit": "dimensionless"
+          },
+          {
+            "label": "muscle/load ratio",
+            "expression": "150/20",
+            "expected": 7.5,
+            "tolerance": 1e-09,
+            "unit": "times"
+          },
+          {
+            "label": "transfer biceps force",
+            "expression": "20*.25/.04",
+            "expected": 125,
+            "tolerance": 1e-09,
+            "unit": "N"
+          }
+        ],
+        "source_alignment": "associated_biomechanics_enrichment",
+        "audit_note": "Numerical results correct with the perpendicular-arm assumption. Official34 observes appendicular bones/movement rather than quantifying lever forces."
+      },
+      {
+        "id": "PM40-B35",
+        "activity_id": "bio-035",
+        "handbook_print_page": 41,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "first5min survivor reduction",
+            "expression": "10**6/10**4",
+            "expected": 100,
+            "tolerance": 1e-09,
+            "unit": "fold"
+          },
+          {
+            "label": "second5min survivor reduction",
+            "expression": "10**4/10**2",
+            "expected": 100,
+            "tolerance": 1e-09,
+            "unit": "fold"
+          },
+          {
+            "label": "third5min survivor reduction",
+            "expression": "10**2/10**0",
+            "expected": 100,
+            "tolerance": 1e-09,
+            "unit": "fold"
+          },
+          {
+            "label": "two log factor",
+            "expression": "10**2",
+            "expected": 100,
+            "tolerance": 1e-09,
+            "unit": "fold"
+          },
+          {
+            "label": "log decline rate",
+            "expression": "2/5",
+            "expected": 0.4,
+            "tolerance": 1e-09,
+            "unit": "log10 units min⁻¹"
+          },
+          {
+            "label": "D value",
+            "expression": "5/2",
+            "expected": 2.5,
+            "tolerance": 1e-09,
+            "unit": "min"
+          },
+          {
+            "label": "12log time",
+            "expression": "12*2.5",
+            "expected": 30,
+            "tolerance": 1e-09,
+            "unit": "min"
+          },
+          {
+            "label": "transfer time",
+            "expression": "6*3",
+            "expected": 18,
+            "tolerance": 1e-09,
+            "unit": "min"
+          }
+        ],
+        "source_alignment": "method_selection_with_thermal_model_enrichment",
+        "audit_note": "Theoretical D-value arithmetic correct and conditional. Low expected survivors do not guarantee sterility. A membrane suitable for bacteria need not remove every virus or dissolved toxin; wording should not make an unrestricted guarantee. No actual temperature supplied; not an operating protocol."
+      },
+      {
+        "id": "PM40-B36",
+        "activity_id": "bio-036",
+        "handbook_print_page": 43,
+        "issues": [
+          {
+            "code": "countable_wording",
+            "severity": "minor",
+            "detail": "Question calls the5-colony plate the other countable plate, while the key correctly says it falls below the stated30–300 illustrative counting range."
+          },
+          {
+            "code": "blank_control_proof",
+            "severity": "minor",
+            "detail": "An uninoculated plate with no visible colonies does not prove absence of every contaminant."
+          },
+          {
+            "code": "CFU_count_vs_total_cells",
+            "severity": "minor",
+            "detail": "CFU can underestimate total cell number through clumping and growth conditions; the wording should remain conditional rather than universal."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "chosen plate original CFU",
+            "expression": "45/(.1*10**-3)",
+            "expected": 450000,
+            "tolerance": 1e-09,
+            "unit": "CFU cm⁻³"
+          },
+          {
+            "label": "low count plate original CFU",
+            "expression": "5/(.1*10**-4)",
+            "expected": 500000,
+            "tolerance": 1e-09,
+            "unit": "CFU cm⁻³"
+          },
+          {
+            "label": "transfer original CFU",
+            "expression": "120/(.1*10**-4)",
+            "expected": 12000000,
+            "tolerance": 1e-06,
+            "unit": "CFU cm⁻³"
+          }
+        ],
+        "source_alignment": "associated_viable_count_enrichment",
+        "audit_note": "All CFU arithmetic correct. Official36 uses streaking and colony-morphology observation rather than a serial-dilution viable-count assay."
+      },
+      {
+        "id": "PM40-B37",
+        "activity_id": "bio-037",
+        "handbook_print_page": 45,
+        "issues": [
+          {
+            "code": "fixation_not_viability_test",
+            "severity": "minor",
+            "detail": "Fixed stained slides do not demonstrate live behaviour; asserting all cells are dead from image information alone is a stronger claim than needed and must not imply guaranteed sterilisation."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "rod length",
+            "expression": "2*2.5",
+            "expected": 5,
+            "tolerance": 1e-09,
+            "unit": "µm"
+          },
+          {
+            "label": "yeast diameter",
+            "expression": "3*2.5",
+            "expected": 7.5,
+            "tolerance": 1e-09,
+            "unit": "µm"
+          },
+          {
+            "label": "yeast/rod represented size ratio",
+            "expression": "7.5/5",
+            "expected": 1.5,
+            "tolerance": 1e-09,
+            "unit": "times"
+          },
+          {
+            "label": "transfer bacterial length",
+            "expression": "4*2.5",
+            "expected": 10,
+            "tolerance": 1e-09,
+            "unit": "µm"
+          }
+        ],
+        "source_alignment": "activity_related_theoretical_practice",
+        "audit_note": "Simple-stain/Gram distinction correct; calibration and likely morphology interpretations sound."
+      }
+    ],
+    "corrections": [
+      {
+        "question_id": "PM40-B01",
+        "reason": "Avoid absolute absence claims from qualitative negative tests.",
+        "patch": {
+          "marks": [
+            "P contains a reducing sugar: Benedict's reagent gives a brick-red (orange-red) precipitate on heating.",
+            "Q is consistent with a non-reducing sugar: it is negative directly but positive after hydrolysis releases reducing sugars.",
+            "R contains starch: iodine solution turns blue-black.",
+            "S contains protein: the biuret test gives a violet / purple colour (peptide bonds in alkaline copper(II) solution).",
+            "A direct negative Benedict's result means no reducing sugar was detected under those test conditions; it does not exclude all sugars. Q becoming positive after hydrolysis and neutralisation supports a non-reducing sugar. These tests are qualitative, with detection limits."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B09",
+        "reason": "Scope the observation limit to the supplied routine images.",
+        "patch": {
+          "marks": [
+            "A is consistent with a bacterium (prokaryote): about 1 µm wide with no visible nucleus; \"clusters\" describes shape and arrangement only.",
+            "B is the most likely cyanobacterium: filamentous, blue-green pigmentation throughout the cell, and no chloroplasts.",
+            "C is eukaryotic: a distinct nucleus and a chloroplast are visible, and its cells are ten times wider than A (10.0 ÷ 1.0).",
+            "Cyanobacteria photosynthesise but are prokaryotes, so their pigments are in the cytoplasm / thylakoids, not in chloroplasts, and they have no membrane-bound nucleus.",
+            "These routine light-microscope descriptions do not reliably resolve a bacterial nucleoid or establish nuclear organisation from absence alone; combine size, pigmentation and arrangement. A nucleoid is not a membrane-bound nucleus."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B11",
+        "reason": "Replace an unlisted genus with the handbook-listed Ulva for exact specimen-set alignment.",
+        "patch": {
+          "question": "Match A to D with Euglena, Amoeba, Paramecium and Ulva, and explain why green colour alone cannot classify A and D.",
+          "marks": [
+            "A is Euglena: flagellum, eyespot and chloroplasts in a single cell.",
+            "B is Amoeba: pseudopodia and a constantly changing shape.",
+            "C is Paramecium: cilia, fixed slipper shape, oral groove and two kinds of nuclei.",
+            "D is Ulva: a flat, green, multicellular sheet-like thallus.",
+            "A and D are both green, but A is a single motile cell with an eyespot and D is a multicellular sheet-like thallus. Colour alone is insufficient; combine cell organisation, movement and structural features."
+          ],
+          "data": [
+            [
+              "Specimen",
+              "Size / structure",
+              "Movement",
+              "Key features"
+            ],
+            [
+              "A",
+              "single cell, about 50 µm",
+              "whip-like flagellum",
+              "green chloroplasts; red eyespot"
+            ],
+            [
+              "B",
+              "single cell, about 300 µm",
+              "changes shape; extends pseudopodia",
+              "colourless; no fixed shape"
+            ],
+            [
+              "C",
+              "single cell, about 200 µm, slipper-shaped",
+              "beating cilia over the surface",
+              "oral groove; two kinds of nuclei"
+            ],
+            [
+              "D",
+              "flat, multicellular green sheet",
+              "thallus non-motile",
+              "thin sheet-like thallus; green chloroplasts in the cells of the sheet-like thallus"
+            ]
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B15",
+        "reason": "Supply discriminatory bony-fish evidence so the identification reaches the official class level.",
+        "patch": {
+          "marks": [
+            "A is Osteichthyes (a bony fish): a bony skeleton and operculum covering the gills support this identification.",
+            "B is an amphibian: moist skin and a larval gill stage that changes to lungs.",
+            "C is a reptile: dry scaly skin, lungs and shelled eggs laid on land.",
+            "D is Aves (a bird): feathers, lungs with air sacs and regulated endothermic body temperature.",
+            "E is a mammal (a monotreme): hair and mammary glands define mammals; because E lays eggs, live birth is not a defining feature."
+          ],
+          "data": [
+            [
+              "Specimen",
+              "Skin / covering",
+              "Breathing",
+              "Reproduction and other"
+            ],
+            [
+              "A",
+              "scales; fins",
+              "gills covered by an operculum",
+              "bony skeleton; eggs laid in water"
+            ],
+            [
+              "B",
+              "moist, thin, no scales",
+              "gills as a larva; lungs and skin as an adult",
+              "eggs laid in water"
+            ],
+            [
+              "C",
+              "dry scales",
+              "lungs",
+              "shelled eggs laid on land"
+            ],
+            [
+              "D",
+              "feathers",
+              "lungs with air sacs",
+              "shelled eggs; regulated endothermic body temperature"
+            ],
+            [
+              "E",
+              "hair",
+              "lungs",
+              "feeds young on milk from mammary glands; lays eggs"
+            ]
+          ],
+          "transfer": "Which two specimens are endothermic and ordinarily maintain relatively stable body temperatures?",
+          "transfer_answer": "D (bird) and E (mammal); their temperatures are regulated rather than perfectly constant."
+        }
+      },
+      {
+        "question_id": "PM40-B16",
+        "reason": "Correct false causal and universal statements about lignification and cell viability.",
+        "patch": {
+          "marks": [
+            "A is parenchyma: thin-walled living cells that store material and carry out metabolism.",
+            "B is collenchyma: living cells with unevenly thickened primary walls provide flexible support. C is a sclerenchyma fibre: typically dead at maturity, with thick lignified secondary walls providing rigid support.",
+            "D is a xylem vessel element: lignified, dead and hollow, forming a tube for water transport.",
+            "E is a phloem sieve-tube element: living, with sieve plates and a companion cell, transporting sugars.",
+            "Lignin strengthens walls and reduces their permeability. Mature vessel elements and many sclerenchyma fibres lose their protoplasts during differentiation, but lignification itself does not imply every lignified cell is dead. Sieve-tube elements remain living."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B18",
+        "reason": "Distinguish complex secondary xylem from its dead elements and clarify what the ring-width sum represents.",
+        "patch": {
+          "marks": [
+            "Total radial increment represented by the five rings = 2.0 + 3.0 + 2.5 + 1.0 + 1.5 = 10.0 mm; mean ring width = 10.0/5 = 2.00 mm per ring.",
+            "Ring 4 is narrowest (1.0 mm) and ring 2 widest (3.0 mm, 1.5 times the mean); width shows growth rate only, not its cause (rainfall, shade or damage).",
+            "The vascular cambium makes secondary xylem on its inner side and secondary phloem on its outer side, so wood accumulates inward and ring 1 is the oldest.",
+            "Secondary xylem is a complex tissue. Its mature vessel elements/tracheids are dead and lignified for water transport/support, while xylem parenchyma can remain alive.",
+            "In weakly seasonal tropical climates the cambium may be active all year or in several bursts, giving indistinct or false rings, so counts need independent evidence."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B27",
+        "reason": "Correct comparative excretory/osmoregulatory functions without making unsupported evolutionary claims.",
+        "patch": {
+          "marks": [
+            "A is the Malpighian tubules (insect): semi-solid uric acid is excreted, losing little water.",
+            "B is a nephridium (earthworm): the ciliated funnel collects fluid from the coelom.",
+            "C is a flame cell / protonephridium (flatworm).",
+            "D is a mammalian nephron: glomerular filtration is followed by selective tubular reabsorption and secretion; loops and collecting ducts contribute to producing urine of variable concentration. Urea is the principal nitrogenous waste in humans.",
+            "These structures contribute to excretion and/or osmoregulation but are not structurally identical. Flame-cell systems mainly regulate water balance; in flatworms much ammonia is lost across the body surface. Function alone does not establish structural identity or evolutionary origin."
+          ],
+          "data": [
+            [
+              "Structure",
+              "Description"
+            ],
+            [
+              "A",
+              "blind-ending tubules attached to the gut; produce a semi-solid white waste"
+            ],
+            [
+              "B",
+              "one pair in each body segment; ciliated funnel opening into the body cavity"
+            ],
+            [
+              "C",
+              "bulb-like cells with a beating tuft of cilia, joined to a tubule that opens at the surface"
+            ],
+            [
+              "D",
+              "blood is filtered at a capsule; useful solutes are reabsorbed along nephron tubules; urine concentration is adjusted"
+            ]
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B28",
+        "reason": "Specify a monosynaptic model so the anatomical pathway matches the single delay and preserve correct arithmetic.",
+        "patch": {
+          "scenario": "A fictional monosynaptic spinal-reflex model has a sensory neuron 0.80 m long and a motor neuron 0.80 m long; both conduct at 80 m s⁻¹. One direct sensory-to-motor spinal synapse adds 1.0 ms. Receptor activation, neuromuscular transmission and muscle response delays are excluded. A separately supplied voluntary-response time is 200 ms. This is an associated theoretical timing exercise, not the gross-anatomy method specified in NIE Practical 28.",
+          "marks": [
+            "For this specified monosynaptic model: receptor → sensory neuron → one direct sensory-to-motor synapse in spinal cord → motor neuron → muscle effector; no spinal interneuron is included.",
+            "Conduction time = (0.80 + 0.80) ÷ 80 = 0.020 s = 20 ms.",
+            "Total reflex time = 20 ms + 1.0 ms synaptic delay = 21 ms.",
+            "200/21 = 9.52, approximately 9.5 times as long. Additional processing can contribute to a voluntary-response delay, but these two timing values do not independently identify its precise mechanisms.",
+            "Limitation: conduction velocity depends on myelination and fibre diameter, and receptor and muscle delays were ignored."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B30",
+        "reason": "Separate geometric aperture ratio from light flux under different illumination.",
+        "patch": {
+          "marks": [
+            "Area = π(d ÷ 2)²: bright light π(1.0)² = 3.14 mm², dim light π(3.0)² = 28.3 mm².",
+            "Pupil-area ratio = (6.0/2.0)² = 9.0. At equal incident irradiance this aperture-area increase would admit about nine times the light; actual bright-versus-dim light flux cannot be calculated from pupil diameters alone.",
+            "In bright light the circular iris muscles contract (smaller pupil); in dim light the radial muscles contract (larger pupil); the two sets act antagonistically.",
+            "Sound route: pinna, ear canal, tympanic membrane, ear ossicles, oval window, fluid in the cochlea, hair cells, auditory nerve.",
+            "Limitation: pupil size is only one of several adjustments to light level; the retina also adapts, so the area ratio is not the whole change in sensitivity."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B34",
+        "reason": "State perpendicular lever arms and remove an incorrect statics rule.",
+        "patch": {
+          "scenario": "A fictional forearm lever model is at rest. The biceps force has a perpendicular moment arm of 0.040 m about the elbow; a 20.0 N external load has a perpendicular moment arm of 0.300 m. Neglect forearm weight. The model includes only biceps force, external load and the elbow reaction. This associated biomechanics exercise extends the handbook skeletal-model observations.",
+          "error": "Confusing radial distance with perpendicular moment arm, mixing units, or omitting a force when choosing a different moment origin.",
+          "transfer": "If the external load’s perpendicular moment arm becomes 0.250 m while the biceps moment arm remains 0.040 m, what biceps force balances the model?"
+        }
+      },
+      {
+        "question_id": "PM40-B36",
+        "reason": "Clarify statistical counting terminology and evidence limits; preserve correct calculation.",
+        "patch": {
+          "question": "Select the plate within the stated illustrative 30–300-colony counting range. Calculate CFU per cm³ of the original suspension, compare the low-count plate estimate, and state two limitations. This is associated quantitative culture-data enrichment, not the handbook streak-plate morphology method.",
+          "marks": [
+            "Use a plate with a countable number of colonies (usually 30 to 300): the 10⁻³ plate with 45.",
+            "CFU cm⁻³ = 45 ÷ (0.100 × 10⁻³) = 4.5 × 10⁵.",
+            "The 10⁻⁴ plate gives 5 ÷ (0.100 × 10⁻⁴) = 5.0 × 10⁵, consistent, but five colonies is too few to be statistically reliable.",
+            "A colony may arise from a cell clump, so CFU need not equal individual-cell number; only organisms forming colonies under the supplied conditions contribute to the count.",
+            "Colony appearance does not establish species. An uninoculated control checks for visible background growth under the same conditions; no visible colonies do not prove universal absence of contamination."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-B37",
+        "reason": "State what fixed stained images establish without an unsupported viability guarantee.",
+        "patch": {
+          "marks": [
+            "Methylene blue is a simple (single dye) stain: it colours cells against a pale background so shape, arrangement and size can be seen.",
+            "Slide 1 rod length = 2.0 × 2.5 = 5.0 µm, a size typical of bacteria; the rods are likely bacteria.",
+            "Slide 2 diameter = 3.0 × 2.5 = 7.5 µm, 1.5 times the rod length, with buds: likely yeast, which are eukaryotic and reproduce by budding.",
+            "The stain does not give the species or the Gram reaction, so no species name or cell-wall type can be assigned from these slides.",
+            "Staining and fixation can distort appearance. A static fixed stained preparation cannot demonstrate active motility or growth, and it is not itself a viability or sterility test."
+          ]
+        }
+      }
+    ]
+  },
+  "chemistry": {
+    "source_file": "/workspace/scratch/8274d4b74500/upload/practical-lab-coverage-completion-v4_0.json",
+    "raw_source_unchanged": true,
+    "case_count": 24,
+    "numeric_assertion_count": 67,
+    "all_numeric_assertions_pass": true,
+    "teacher_reviewed": false,
+    "audit_scope": "All24che items read in full; main and transfer arithmetic recomputed; empirical reference values and qualitative observations checked conceptually, not falsely counted as numerical recomputations. Source alignment compared with previously inspected official NIE handbook. Independent model audit, teacher review pending.",
+    "summary": "Final numerical values are correct to their stated rounding except checks will report any discrepancy. Material conceptual fixes concern underdetermined carbonate identification, potassiumsoap/NaCl saltingout, and unjustified standard-potential labels. Other patches clarify assumptions, denominators, evidence limits and source-method fit. Activity25 actual source start is78, not80.",
+    "cases": [
+      {
+        "id": "PM40-C01",
+        "activity_id": "che-001",
+        "issues": [
+          {
+            "kind": "inference_limit",
+            "detail": "Paddle-wheel turning alone is overstated as proof of particle mass. The calculated e/m ratio is sound under nonrelativistic perpendicular-field assumptions."
+          },
+          {
+            "kind": "source_scope",
+            "detail": "Crossed-field e/m calculation is associated enrichment beyond the observed-properties emphasis of NIE activity1."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Beam speed",
+            "expression": "3e4/1.5e-3",
+            "expected": 20000000.0,
+            "tolerance": 1,
+            "unit": "m s-1",
+            "computed": 20000000.0,
+            "passed": true
+          },
+          {
+            "label": "Charge-to-mass ratio",
+            "expression": "(3e4/1.5e-3)/(1.5e-3*.0758)",
+            "expected": 176000000000.0,
+            "tolerance": 500000000.0,
+            "unit": "C kg-1",
+            "computed": 175901495162.70886,
+            "passed": true
+          },
+          {
+            "label": "Transfer speed",
+            "expression": "4.5e4/1.5e-3",
+            "expected": 30000000.0,
+            "tolerance": 1,
+            "unit": "m s-1",
+            "computed": 30000000.0,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C02",
+        "activity_id": "che-002",
+        "issues": [],
+        "numeric_checks": [],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C06",
+        "activity_id": "che-006",
+        "issues": [
+          {
+            "kind": "dimensional_precision",
+            "detail": "Mass divided by amount has molar-mass units. Its numerical value in g mol-1 corresponds to dimensionlessAr; distinguish these quantities. Equal liquid levels/pressure correction should be explicit."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Dry hydrogen pressure",
+            "expression": "101.3-3.2",
+            "expected": 98.1,
+            "tolerance": 1e-08,
+            "unit": "kPa",
+            "computed": 98.1,
+            "passed": true
+          },
+          {
+            "label": "Hydrogen amount",
+            "expression": "98100*49.6e-6/(8.314*298)",
+            "expected": 0.00196,
+            "tolerance": 5e-06,
+            "unit": "mol",
+            "computed": 0.001963922743718447,
+            "passed": true
+          },
+          {
+            "label": "Magnesium molar mass",
+            "expression": ".0480/(98100*49.6e-6/(8.314*298))",
+            "expected": 24.4,
+            "tolerance": 0.05,
+            "unit": "g mol-1",
+            "computed": 24.44087994475683,
+            "passed": true
+          },
+          {
+            "label": "Apparent Ar without vapour correction",
+            "expression": ".0480/(101300*49.6e-6/(8.314*298))",
+            "expected": 23.7,
+            "tolerance": 0.05,
+            "unit": "dimensionless",
+            "computed": 23.66880871254339,
+            "passed": true
+          },
+          {
+            "label": "Transfer Ar",
+            "expression": ".0486/.00200",
+            "expected": 24.3,
+            "tolerance": 1e-08,
+            "unit": "dimensionless",
+            "computed": 24.299999999999997,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C09",
+        "activity_id": "che-009",
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "First ionisation energy decrease",
+            "expression": "520-419",
+            "expected": 101,
+            "tolerance": 1e-08,
+            "unit": "kJ mol-1",
+            "computed": 101,
+            "passed": true
+          },
+          {
+            "label": "Percentage decrease",
+            "expression": "(520-419)/520*100",
+            "expected": 19.4,
+            "tolerance": 0.05,
+            "unit": "%",
+            "computed": 19.423076923076923,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C10",
+        "activity_id": "che-010",
+        "issues": [
+          {
+            "kind": "expression_display",
+            "detail": "Unparenthesised division by589×10^-9 (also700×10^-9) can be read as divide589 then multiply10^-9. Intended final numbers are correct."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "589nm photon energy",
+            "expression": "6.63e-34*3e8/(589e-9)",
+            "expected": 3.38e-19,
+            "tolerance": 5e-22,
+            "unit": "J",
+            "computed": 3.3769100169779286e-19,
+            "passed": true
+          },
+          {
+            "label": "589nm molar photon energy",
+            "expression": "6.63e-34*3e8/(589e-9)*6.02e23/1000",
+            "expected": 203,
+            "tolerance": 0.5,
+            "unit": "kJ mol-1",
+            "computed": 203.2899830220713,
+            "passed": true
+          },
+          {
+            "label": "700nm transfer photon energy",
+            "expression": "6.63e-34*3e8/(700e-9)",
+            "expected": 2.84e-19,
+            "tolerance": 5e-22,
+            "unit": "J",
+            "computed": 2.8414285714285715e-19,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C11",
+        "activity_id": "che-011",
+        "issues": [
+          {
+            "kind": "underdetermined_identification",
+            "detail": "X cannot be uniquely identified ascarbonate from supplied evidence: sulfite also yields a colourless limewater-clouding gas and no acid-resistant barium precipitate. Y sulfate and Z thiosulfate assignments are supported."
+          },
+          {
+            "kind": "inference_method",
+            "detail": "Do not promote smelling potentially toxic SO2 as a confirmatory test."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C12",
+        "activity_id": "che-012",
+        "issues": [
+          {
+            "kind": "control_scope",
+            "detail": "A single negative control supports rather than proves total absence of impurity contributions. Equations are balanced and nitride-to-ammonia route aligns with NIE."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C13",
+        "activity_id": "che-013",
+        "issues": [
+          {
+            "kind": "overbroad_interference_claim",
+            "detail": "Acidification does not remove all possible ions capable of forming silver precipitates."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C15",
+        "activity_id": "che-015",
+        "issues": [
+          {
+            "kind": "model_scope",
+            "detail": "Scenario assumes all ammonia collected while limitation predicts smaller collection. Distinguish the ideal calculated volume from possible real recovery losses."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Ammonium chloride amount",
+            "expression": ".535/53.5",
+            "expected": 0.01,
+            "tolerance": 1e-08,
+            "unit": "mol",
+            "computed": 0.01,
+            "passed": true
+          },
+          {
+            "label": "Ideal ammonia volume",
+            "expression": ".535/53.5*24",
+            "expected": 0.24,
+            "tolerance": 1e-08,
+            "unit": "dm3",
+            "computed": 0.24,
+            "passed": true
+          },
+          {
+            "label": "Volume in cubic centimetres",
+            "expression": ".535/53.5*24*1000",
+            "expected": 240,
+            "tolerance": 1e-08,
+            "unit": "cm3",
+            "computed": 240.0,
+            "passed": true
+          },
+          {
+            "label": "Transfer volume",
+            "expression": ".020*24",
+            "expected": 0.48,
+            "tolerance": 1e-08,
+            "unit": "dm3",
+            "computed": 0.48,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C16",
+        "activity_id": "che-016",
+        "issues": [
+          {
+            "kind": "model_assumption",
+            "detail": "s=sqrt(Ksp) assumes dissolution in purewater with1:1 dissociation, negligible ion pairing/activity corrections and no common ions."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "BaSO4 molar solubility",
+            "expression": "(1.1e-10)**.5",
+            "expected": 1.05e-05,
+            "tolerance": 5e-08,
+            "unit": "mol dm-3",
+            "computed": 1.0488088481701516e-05,
+            "passed": true
+          },
+          {
+            "label": "CaSO4 molar solubility",
+            "expression": "(4.9e-5)**.5",
+            "expected": 0.007,
+            "tolerance": 1e-08,
+            "unit": "mol dm-3",
+            "computed": 0.007,
+            "passed": true
+          },
+          {
+            "label": "Solubility ratio",
+            "expression": "(4.9e-5)**.5/(1.1e-10)**.5",
+            "expected": 670,
+            "tolerance": 5,
+            "unit": "dimensionless",
+            "computed": 667.4238124719146,
+            "passed": true
+          },
+          {
+            "label": "SrSO4 transfer solubility",
+            "expression": "(3.4e-7)**.5",
+            "expected": 0.00058,
+            "tolerance": 5e-06,
+            "unit": "mol dm-3",
+            "computed": 0.00058309518948453,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C17",
+        "activity_id": "che-017",
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "Calcium carbonate amount",
+            "expression": "2/100.1",
+            "expected": 0.01998,
+            "tolerance": 5e-06,
+            "unit": "mol",
+            "computed": 0.01998001998001998,
+            "passed": true
+          },
+          {
+            "label": "CO2 mass",
+            "expression": "2/100.1*44",
+            "expected": 0.879,
+            "tolerance": 0.0005,
+            "unit": "g",
+            "computed": 0.8791208791208791,
+            "passed": true
+          },
+          {
+            "label": "CaO residue mass",
+            "expression": "2-2/100.1*44",
+            "expected": 1.121,
+            "tolerance": 0.0005,
+            "unit": "g",
+            "computed": 1.120879120879121,
+            "passed": true
+          },
+          {
+            "label": "Transfer CO2 mass",
+            "expression": "1/100.1*44",
+            "expected": 0.44,
+            "tolerance": 0.0005,
+            "unit": "g",
+            "computed": 0.43956043956043955,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C23",
+        "activity_id": "che-023",
+        "issues": [],
+        "numeric_checks": [],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C24",
+        "activity_id": "che-024",
+        "issues": [
+          {
+            "kind": "candidate_scope",
+            "detail": "Identifying Y uniquely as an alkene from formula and bromine uptake needs exclusion of strained-ring saturated candidates; explicitly constrain candidates to ordinary acyclic hydrocarbons."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "C4H6 degree of unsaturation",
+            "expression": "(2*4+2-6)/2",
+            "expected": 2,
+            "tolerance": 1e-08,
+            "unit": "dimensionless",
+            "computed": 2.0,
+            "passed": true
+          },
+          {
+            "label": "C4H8 degree of unsaturation",
+            "expression": "(2*4+2-8)/2",
+            "expected": 1,
+            "tolerance": 1e-08,
+            "unit": "dimensionless",
+            "computed": 1.0,
+            "passed": true
+          },
+          {
+            "label": "C4H10 degree of unsaturation",
+            "expression": "(2*4+2-10)/2",
+            "expected": 0,
+            "tolerance": 1e-08,
+            "unit": "dimensionless",
+            "computed": 0.0,
+            "passed": true
+          },
+          {
+            "label": "Transfer C5H8 unsaturation",
+            "expression": "(2*5+2-8)/2",
+            "expected": 2,
+            "tolerance": 1e-08,
+            "unit": "dimensionless",
+            "computed": 2.0,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C25",
+        "activity_id": "che-025",
+        "issues": [
+          {
+            "kind": "source_page",
+            "detail": "Originalpage80 follows the erroneous contents page; actual NIE activity25 starts printed78/PDF86. Parent reference correction should record this."
+          },
+          {
+            "kind": "oxidation_scope",
+            "detail": "A primary-alcohol aldehyde can oxidise onward under warm acidified dichromate. State that the provided primary product is the independently identified initial oxidation product."
+          },
+          {
+            "kind": "transfer_absolute",
+            "detail": "Tertiary alcohols resist ordinary dichromate oxidation under these conditions; avoid claiming no oxidation under every harsh condition."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Stated boiling-point contrast",
+            "expression": "78-(-42)",
+            "expected": 120,
+            "tolerance": 1e-08,
+            "unit": "K",
+            "computed": 120,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C26",
+        "activity_id": "che-026",
+        "issues": [
+          {
+            "kind": "carbonate_interpretation",
+            "detail": "No effervescence must not be interpreted as no acid-base interaction at all. Carbonate is a diprotic base; absence of CO2 concerns full protonation, not necessarily its first protonation. Numerical pH values remain correct under declared approximation."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Phenol hydrogen ion at0.10M",
+            "expression": "(1e-10*.10)**.5",
+            "expected": 3.2e-06,
+            "tolerance": 5e-08,
+            "unit": "mol dm-3",
+            "computed": 3.1622776601683796e-06,
+            "passed": true
+          },
+          {
+            "label": "pH5.50 hydronium equivalence",
+            "expression": "10**(-5.50)",
+            "expected": 3.1622776601683796e-06,
+            "tolerance": 1e-12,
+            "unit": "mol dm-3",
+            "computed": 3.162277660168379e-06,
+            "passed": true
+          },
+          {
+            "label": "Transfer hydrogen ion",
+            "expression": "(1e-10*.010)**.5",
+            "expected": 1e-06,
+            "tolerance": 1e-12,
+            "unit": "mol dm-3",
+            "computed": 1e-06,
+            "passed": true
+          },
+          {
+            "label": "pH6.00 hydronium equivalence",
+            "expression": "10**(-6)",
+            "expected": 1e-06,
+            "tolerance": 1e-12,
+            "unit": "mol dm-3",
+            "computed": 1e-06,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C27",
+        "activity_id": "che-027",
+        "issues": [
+          {
+            "kind": "candidate_scope",
+            "detail": "NegativeDNPH does not universally prove no carbonyl group, and positiveTollens is not unique to aldehydes without candidate restrictions. Supplied pattern is valid as a simple ideal functional-group model."
+          }
+        ],
+        "numeric_checks": [],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C28",
+        "activity_id": "che-028",
+        "issues": [
+          {
+            "kind": "notation",
+            "detail": "The displayed Ka denominator uses[HA]-[H+] without defining[HA] as initial concentration. Use c0-x so equilibriumHA is not subtracted twice."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Hydronium from pH",
+            "expression": "10**(-2.88)",
+            "expected": 0.00132,
+            "tolerance": 5e-06,
+            "unit": "mol dm-3",
+            "computed": 0.0013182567385564075,
+            "passed": true
+          },
+          {
+            "label": "Percentage ionisation",
+            "expression": "10**(-2.88)/.100*100",
+            "expected": 1.3,
+            "tolerance": 0.05,
+            "unit": "%",
+            "computed": 1.3182567385564075,
+            "passed": true
+          },
+          {
+            "label": "EquilibriumHA concentration",
+            "expression": ".100-10**(-2.88)",
+            "expected": 0.0987,
+            "tolerance": 5e-05,
+            "unit": "mol dm-3",
+            "computed": 0.09868174326144359,
+            "passed": true
+          },
+          {
+            "label": "Ka using unrounded hydronium",
+            "expression": "(10**(-2.88))**2/(.100-10**(-2.88))",
+            "expected": 1.76e-05,
+            "tolerance": 5e-08,
+            "unit": "mol dm-3",
+            "computed": 1.761015534702619e-05,
+            "passed": true
+          },
+          {
+            "label": "Strong/weak hydronium ratio",
+            "expression": ".100/10**(-2.88)",
+            "expected": 76,
+            "tolerance": 0.5,
+            "unit": "dimensionless",
+            "computed": 75.85775750291836,
+            "passed": true
+          },
+          {
+            "label": "Transfer hydronium",
+            "expression": ".020*.050",
+            "expected": 0.001,
+            "tolerance": 1e-08,
+            "unit": "mol dm-3",
+            "computed": 0.001,
+            "passed": true
+          },
+          {
+            "label": "TransferpH3 hydronium",
+            "expression": "10**(-3)",
+            "expected": 0.001,
+            "tolerance": 1e-08,
+            "unit": "mol dm-3",
+            "computed": 0.001,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C29",
+        "activity_id": "che-029",
+        "issues": [
+          {
+            "kind": "scope",
+            "detail": "Diazonium stability depends on composition and time; stableonly0–5degC is too absolute as a general chemical rule. The practical cold-aqueous observation is sound."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Conjugate-acid acidity ratio",
+            "expression": "10**(10.7-4.6)",
+            "expected": 1300000.0,
+            "tolerance": 50000.0,
+            "unit": "dimensionless",
+            "computed": 1258925.411794166,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C34",
+        "activity_id": "che-034",
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "N2O4 concentration",
+            "expression": "170*.0100**2",
+            "expected": 0.017,
+            "tolerance": 1e-08,
+            "unit": "mol dm-3",
+            "computed": 0.017,
+            "passed": true
+          },
+          {
+            "label": "TransferN2O4 concentration",
+            "expression": "170*.0200**2",
+            "expected": 0.068,
+            "tolerance": 1e-08,
+            "unit": "mol dm-3",
+            "computed": 0.068,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C36",
+        "activity_id": "che-036",
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "Carbonate amount",
+            "expression": ".0500*.02500",
+            "expected": 0.00125,
+            "tolerance": 1e-08,
+            "unit": "mol",
+            "computed": 0.0012500000000000002,
+            "passed": true
+          },
+          {
+            "label": "Total HCl amount",
+            "expression": "2*.0500*.02500",
+            "expected": 0.0025,
+            "tolerance": 1e-08,
+            "unit": "mol",
+            "computed": 0.0025000000000000005,
+            "passed": true
+          },
+          {
+            "label": "HCl concentration",
+            "expression": ".002500/.02050",
+            "expected": 0.122,
+            "tolerance": 0.0005,
+            "unit": "mol dm-3",
+            "computed": 0.12195121951219512,
+            "passed": true
+          },
+          {
+            "label": "Endpoint ratio",
+            "expression": "20.50/10.25",
+            "expected": 2,
+            "tolerance": 1e-08,
+            "unit": "dimensionless",
+            "computed": 2.0,
+            "passed": true
+          },
+          {
+            "label": "TransferHCl concentration",
+            "expression": ".002500/.02200",
+            "expected": 0.114,
+            "tolerance": 0.0005,
+            "unit": "mol dm-3",
+            "computed": 0.11363636363636365,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C40",
+        "activity_id": "che-040",
+        "issues": [
+          {
+            "kind": "standard_state",
+            "detail": "1.00mol dm-3 concentration does not ensure unit activity; E°cell is not established by the stated measurements. Final limitation notices this, but calculation label still needsEcell."
+          },
+          {
+            "kind": "source_scope",
+            "detail": "SCE conversion is useful reference-electrode enrichment; NIE activity40 specifically concernsAg/AgCl. PM5-C40 supplies that source-method alignment."
+          },
+          {
+            "kind": "rounding",
+            "detail": "+0.341,-0.759,+0.041V correctly round to original+0.34,-0.76,+0.04V; not arithmetic errors."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "CopperSHE potential",
+            "expression": ".10+.241",
+            "expected": 0.341,
+            "tolerance": 1e-08,
+            "unit": "V",
+            "computed": 0.34099999999999997,
+            "passed": true
+          },
+          {
+            "label": "ZincSHE potential",
+            "expression": "-1+.241",
+            "expected": -0.759,
+            "tolerance": 1e-08,
+            "unit": "V",
+            "computed": -0.759,
+            "passed": true
+          },
+          {
+            "label": "Cell voltage",
+            "expression": "(.10+.241)-(-1+.241)",
+            "expected": 1.1,
+            "tolerance": 1e-08,
+            "unit": "V",
+            "computed": 1.1,
+            "passed": true
+          },
+          {
+            "label": "Reference cancellation",
+            "expression": ".10-(-1)",
+            "expected": 1.1,
+            "tolerance": 1e-08,
+            "unit": "V",
+            "computed": 1.1,
+            "passed": true
+          },
+          {
+            "label": "TransferSHE potential",
+            "expression": "-.20+.241",
+            "expected": 0.041,
+            "tolerance": 1e-08,
+            "unit": "V",
+            "computed": 0.04099999999999998,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C41",
+        "activity_id": "che-041",
+        "issues": [
+          {
+            "kind": "mechanism",
+            "detail": "NaCl supplies noK+ common ion to the potassium soap produced here; saltingout must not be attributed simply to a common-ion effect."
+          },
+          {
+            "kind": "rounding",
+            "detail": "Final896g mol-1 is correct from unrounded amount; substituting the rounded0.00223mol as displayed yields896.9. Retain unrounded intermediate."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "KOH amount",
+            "expression": ".500*.0134",
+            "expected": 0.0067,
+            "tolerance": 1e-08,
+            "unit": "mol",
+            "computed": 0.0067,
+            "passed": true
+          },
+          {
+            "label": "Saponification value",
+            "expression": ".500*.0134*56.1*1000/2",
+            "expected": 188,
+            "tolerance": 0.5,
+            "unit": "mg g-1",
+            "computed": 187.93500000000003,
+            "passed": true
+          },
+          {
+            "label": "Triglyceride amount",
+            "expression": ".500*.0134/3",
+            "expected": 0.00223,
+            "tolerance": 5e-06,
+            "unit": "mol",
+            "computed": 0.0022333333333333333,
+            "passed": true
+          },
+          {
+            "label": "Fat molar mass",
+            "expression": "2/(.500*.0134/3)",
+            "expected": 896,
+            "tolerance": 0.5,
+            "unit": "g mol-1",
+            "computed": 895.5223880597015,
+            "passed": true
+          },
+          {
+            "label": "TransferKOH mass",
+            "expression": "190*5",
+            "expected": 950,
+            "tolerance": 1e-08,
+            "unit": "mg",
+            "computed": 950,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C42",
+        "activity_id": "che-042",
+        "issues": [
+          {
+            "kind": "interpretive_limit",
+            "detail": "Reduced temperature reduces decomposition risk; it cannot guarantee oil never decomposes. Nonideality does not universally lower yield in one direction."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Oil vapour pressure",
+            "expression": "101.3-94.3",
+            "expected": 7,
+            "tolerance": 1e-08,
+            "unit": "kPa",
+            "computed": 7.0,
+            "passed": true
+          },
+          {
+            "label": "Vapour mole ratio",
+            "expression": "7/94.3",
+            "expected": 0.0742,
+            "tolerance": 5e-05,
+            "unit": "mol/mol",
+            "computed": 0.07423117709437964,
+            "passed": true
+          },
+          {
+            "label": "Oil/water mass ratio",
+            "expression": "7/94.3*136/18",
+            "expected": 0.561,
+            "tolerance": 0.0005,
+            "unit": "g/g",
+            "computed": 0.5608577824908684,
+            "passed": true
+          },
+          {
+            "label": "Transfermass ratio",
+            "expression": "14/87.3*136/18",
+            "expected": 1.21,
+            "tolerance": 0.005,
+            "unit": "g/g",
+            "computed": 1.211658393788978,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      },
+      {
+        "id": "PM40-C43",
+        "activity_id": "che-043",
+        "issues": [
+          {
+            "kind": "mechanism",
+            "detail": "Water does not simply react with catalyst to form soap by itself; clarify hydrolysis-mediated effects and direct free-fatty-acid neutralisation."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "Oil amount",
+            "expression": "100/885.4",
+            "expected": 0.113,
+            "tolerance": 0.0005,
+            "unit": "mol",
+            "computed": 0.112943302462164,
+            "passed": true
+          },
+          {
+            "label": "Theoreticalester mass",
+            "expression": "3*(100/885.4)*296.5",
+            "expected": 100.46,
+            "tolerance": 0.005,
+            "unit": "g",
+            "computed": 100.46306754009487,
+            "passed": true
+          },
+          {
+            "label": "Percentyield",
+            "expression": "94/(3*(100/885.4)*296.5)*100",
+            "expected": 93.6,
+            "tolerance": 0.05,
+            "unit": "%",
+            "computed": 93.56672287802137,
+            "passed": true
+          },
+          {
+            "label": "Transferpercentyield",
+            "expression": "90/(3*(100/885.4)*296.5)*100",
+            "expected": 89.6,
+            "tolerance": 0.05,
+            "unit": "%",
+            "computed": 89.58516020236088,
+            "passed": true
+          }
+        ],
+        "source_alignment": "Compared with previously inspected official NIE activity heading and method; case is original fictional analytical interpretation, not an official marking scheme.",
+        "teacher_reviewed": false
+      }
+    ],
+    "corrections": [
+      {
+        "question_id": "PM40-C01",
+        "reason": "Qualify evidence and state assumptions behind v=E/B.",
+        "patch": {
+          "marks": [
+            "The sharp shadow supports straight-line travel in a field-free region. Paddle-wheel motion is supporting evidence of energy/momentum transfer; by itself it is not a unique quantitative demonstration of electron mass.",
+            "Deflection towards the positive plate, reversing with polarity, shows the particles are negatively charged.",
+            "Balanced forces: eE = evB, so v = E ÷ B = 3.0 × 10⁴ ÷ 1.5 × 10⁻³ = 2.0 × 10⁷ m s⁻¹.",
+            "With the magnetic field alone, evB = mv²/r, so e/m = v ÷ (Br) = 2.0 × 10⁷ ÷ (1.5 × 10⁻³ × 0.0758) = 1.76 × 10¹¹ C kg⁻¹.",
+            "The same behaviour for different gases and metals suggests a universal particle (the electron); e/m is only a ratio, so charge and mass separately need another measurement."
+          ],
+          "scenario": "A teacher supplies fictional results from a demonstration with a cathode-ray tube. For the speed measurement the electric and magnetic deflections cancel when E = 3.0 × 10⁴ V m⁻¹ and B = 1.5 × 10⁻³ T. With the magnetic field alone, the beam moves on a circle of radius 0.0758 m. Assume mutually perpendicular electric/magnetic fields with the beam perpendicular to both; use the nonrelativistic model."
+        }
+      },
+      {
+        "question_id": "PM40-C06",
+        "reason": "Make gas-pressure and Ar versus molar-mass assumptions explicit.",
+        "patch": {
+          "marks": [
+            "Mg + 2H⁺ → Mg²⁺ + H₂, so n(Mg) = n(H₂).",
+            "The gas is saturated with water vapour: p(H₂) = 101.3 − 3.2 = 98.1 kPa.",
+            "n(H₂) = pV ÷ RT = 98 100 × 49.6 × 10⁻⁶ ÷ (8.314 × 298) = 1.96 × 10⁻³ mol.",
+            "M(Mg) = 0.0480 g / n(Mg) = about24.44 g mol-1; the corresponding dimensionless relative atomic mass is Ar≈24.4 (using the g mol-1 numerical equivalence).",
+            "Ignoring vapour pressure overestimates the hydrogen and gives Ar = 23.7 (too low); an oxide layer means less magnesium metal reacts per measured gram, so the hydrogen is lower and Ar is too high."
+          ],
+          "scenario": "A teacher supplies fictional completed results: 0.0480 g of magnesium reacted completely with excess dilute acid and 49.6 cm³ of hydrogen was collected over water at 298 K. The atmospheric pressure was 101.3 kPa and the vapour pressure of water at 298 K is taken as 3.2 kPa. Use R = 8.314 J mol⁻¹ K⁻¹. Assume collected-gas pressure equals atmospheric pressure before the water-vapour subtraction (liquid levels equal or hydrostatic correction already applied)."
+        }
+      },
+      {
+        "question_id": "PM40-C10",
+        "reason": "Parenthesise the full wavelength denominator; no final numerical change.",
+        "patch": {
+          "marks": [
+            "A contains potassium (lilac); a trace of sodium can hide this colour.",
+            "B contains sodium (golden-yellow, near 589 nm).",
+            "C contains calcium (brick-red) and E contains barium (apple-green).",
+            "D (crimson) is shown by both lithium and strontium, so the colour cannot decide between them without another test.",
+            "Excited electrons return to lower levels and emit light: E=hc/λ=(6.63×10^-34 ×3.00×10^8)/(589×10^-9)=3.38×10^-19 J per photon; multiplying by6.02×10^23/1000 gives about203 kJ mol-1."
+          ],
+          "transfer_answer": "E=(6.63×10^-34 ×3.00×10^8)/(700×10^-9)=2.84×10^-19 J."
+        }
+      },
+      {
+        "question_id": "PM40-C11",
+        "reason": "Repair the unsupported unique identification without inventing extra observations.",
+        "patch": {
+          "marks": [
+            "X is consistent with carbonate, but the supplied colourless-gas/limewater/no-acidified-barium-precipitate pattern also fits sulfite; a selective additional record is required.",
+            "Y contains sulfate: it gives a white barium sulfate precipitate that is insoluble in acid.",
+            "Z contains thiosulfate: acid gives a pungent gas (sulfur dioxide) and a fine pale yellow-white precipitate of sulfur.",
+            "Both CO2 and SO2 can make limewater cloudy. Gas odour is not an appropriate student identification method; use an additional supplied chemical distinction such as the SO2 reducing response.",
+            "Prior acidification removes carbonate/sulfite interferences because their barium precipitates dissolve/react in dilute acid, whereas sulfate gives acid-resistant BaSO4."
+          ],
+          "question": "Identify Y and Z. Explain why X is consistent with carbonate but not uniquely established, why limewater alone is inconclusive, and why acidification helps the sulfate comparison."
+        }
+      },
+      {
+        "question_id": "PM40-C12",
+        "reason": "Qualify the scope of the negative control.",
+        "patch": {
+          "marks": [
+            "In air magnesium forms white magnesium oxide and a yellow-grey magnesium nitride.",
+            "Equations: 3Mg + N₂ → Mg₃N₂ and Mg₃N₂ + 6H₂O → 3Mg(OH)₂ + 2NH₃.",
+            "Damp red litmus turning blue shows an alkaline gas (ammonia), so nitrogen from the air was combined in the ash.",
+            "Provided the Mg source, water and handling are matched and the only intended difference is atmosphere, the negative pure-oxygen control supports nitrogen from air as the explanation; it does not categorically exclude every possible contamination or procedural difference.",
+            "The results show that nitrogen is present, not how much; litmus detects an alkaline gas, so a second test such as white fumes with hydrochloric acid supports ammonia."
+          ],
+          "transfer_answer": "Under matched materials and handling, the negative oxygen control supports air nitrogen as the source of ammonia. It is supporting evidence rather than an absolute exclusion of all contamination."
+        }
+      },
+      {
+        "question_id": "PM40-C13",
+        "reason": "Limit acidification claim to acid-reactive interferences; halide assignments and AgF transfer are correct.",
+        "patch": {
+          "marks": [
+            "X is chloride: white silver chloride, soluble in dilute ammonia.",
+            "Y is bromide: cream silver bromide, soluble only in concentrated ammonia.",
+            "Z is iodide: yellow silver iodide, insoluble in both.",
+            "Nitric acid removes acid-reactive interferences such as carbonate, while nitrate does not itself precipitate Ag+. This does not mean every possible interfering ion is removed.",
+            "Colours are subjective and shade into each other, so solubility in ammonia is a second line of evidence; silver fluoride is soluble, so fluoride gives no precipitate."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-C15",
+        "reason": "Clarify ideal recovery assumption versus real experimental limitations.",
+        "patch": {
+          "marks": [
+            "The gas is ammonia, released when an ammonium salt is warmed with an alkali.",
+            "NH₄⁺ + OH⁻ → NH₃ + H₂O.",
+            "Damp red litmus turning blue shows an alkaline gas, and dense white fumes with hydrochloric acid (solid ammonium chloride) support ammonia specifically.",
+            "n(NH₄Cl) = 0.535 ÷ 53.5 = 0.0100 mol, so n(NH₃) = 0.0100 mol and V = 0.0100 × 24.0 = 0.240 dm³ = 240 cm³.",
+            "The calculated240cm3 is an ideal complete-recovery volume. Actual collection can be lower through ammonia dissolution or losses; damp litmus alone is not unique to ammonia."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-C16",
+        "reason": "State assumptions required for the supplied Ksp-to-solubility conversion.",
+        "patch": {
+          "scenario": "A teacher supplies illustrative solubility product values at 298 K for the sulfates of group 2 metals, together with a qualitative note on the hydroxides. For these calculations use concentrations as activities, assume complete1:1 dissociation in pure water, neglect ion pairing, and exclude common ions."
+        }
+      },
+      {
+        "question_id": "PM40-C24",
+        "reason": "State acyclic candidate scope so ring strain does not defeat the identification.",
+        "patch": {
+          "scenario": "A teacher supplies fictional results for three hydrocarbons, X (C₄H₆), Y (C₄H₈) and Z (C₄H₁₀), tested with bromine water in the dark. No student handling is involved. Assume all candidates are ordinary acyclic hydrocarbons and recorded uptake represents complete addition to their multiple bonds.",
+          "transfer_answer": "TwoC=C bonds or oneC≡C bond fit the stated acyclic multiple-bond model.",
+          "transfer": "An ordinary acyclic hydrocarbon C5H8 absorbs2mol H2 per mole by complete multiple-bond hydrogenation. What bond patterns fit?"
+        }
+      },
+      {
+        "question_id": "PM40-C25",
+        "reason": "Clarify initial product and reaction-condition scope; original page error documented separately.",
+        "patch": {
+          "scenario": "A teacher supplies fictional results for three isomeric C₄ alcohols oxidised by warm acidified potassium dichromate(VI). No student handling is involved. The product-identification record for alcohol1 refers to its independently identified initial aldehyde oxidation product, before further oxidation.",
+          "marks": [
+            "Alcohol 1 is primary: it is oxidised to an aldehyde, which gives the silver mirror.",
+            "Alcohol 2 is secondary: it is oxidised to a ketone, which reacts with 2,4-DNPH but not with Tollens' reagent.",
+            "Alcohol 3 is tertiary: the carbon bearing the –OH has no hydrogen, so it resists oxidation.",
+            "The orange dichromate(VI) is reduced to green chromium(III) when an alcohol is oxidised.",
+            "Green dichromate-reduction colour alone cannot distinguish primary from secondary alcohols. Hydrogen bonding raises alcohol boiling points; the ethanol78degC/propane-42degC comparison is associated background, not an extra measurement from these C4 records."
+          ],
+          "transfer_answer": "Tertiary alcohols resist oxidation by acidified dichromate under the ordinary conditions assumed here."
+        }
+      },
+      {
+        "question_id": "PM40-C26",
+        "reason": "Distinguish carbonate protonation stages and state pH approximation assumptions.",
+        "patch": {
+          "marks": [
+            "Phenol forms phenoxide with OH-. No CO2 effervescence from carbonate means it does not drive the full carbonate-to-carbonic-acid/CO2 process under this comparison. This does not exclude some carbonate-to-hydrogencarbonate proton transfer.",
+            "[H⁺] = √(Ka c) = √(1.0 × 10⁻¹⁰ × 0.10) = 3.2 × 10⁻⁶ mol dm⁻³, so pH = 5.50.",
+            "Bromine water is decolourised at once with a white precipitate of 2,4,6-tribromophenol, because the –OH group activates the ring.",
+            "The phenoxide charge is delocalised into the ring, stabilising the ion, which makes phenol more acidic than ethanol.",
+            "Violet colour with neutral FeCl3 supports phenolic chemistry but is not absolutely unique. The weak-acid calculation assumes[H+]≈sqrt(Ka c), negligible water autoionisation and small dissociation relative to c."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-C27",
+        "reason": "Make the candidate/test-validity assumptions explicit before identifying functional-group classes.",
+        "patch": {
+          "scenario": "A teacher supplies fictional test records for three liquids A, B and C. No student handling is involved. Assume successful validated tests, no interfering compounds, and restrict candidates to simple aldehydes, ketones and monohydric alcohols. Interpret negatives only within that defined candidate set."
+        }
+      },
+      {
+        "question_id": "PM40-C28",
+        "reason": "Repair initial-versus-equilibrium acid concentration notation.",
+        "patch": {
+          "marks": [
+            "[H⁺] = 10^(−2.88) = 1.32 × 10⁻³ mol dm⁻³.",
+            "Percentage ionisation = 1.32 × 10⁻³ ÷ 0.100 × 100 = 1.3%.",
+            "Let c0=0.100mol dm-3 and x=[H+]=10^-2.88. Then Ka=x^2/(c0-x)≈1.76×10^-5mol dm-3 in the concentration approximation.",
+            "The hydrochloric acid [H⁺] is 0.100, about 76 times larger, so ethanoic acid is a weak acid that ionises only partly.",
+            "CO2 evolution from carbonate is consistent with the stated carboxylic-acid behaviour. It does not by itself measure Ka. pH-meter calibration, temperature, activities and contamination limit the inferred Ka."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-C29",
+        "reason": "Qualify stability statement to the supplied aqueous practical context.",
+        "patch": {
+          "marks": [
+            "In aniline the nitrogen lone pair is delocalised into the benzene ring, so it is less available to accept a proton.",
+            "The factor is 10^(10.7 − 4.6) = 10^6.1 = 1.3 × 10⁶ (the ethylammonium ion is that many times weaker as an acid, so ethylamine is the far stronger base).",
+            "Bromine water gives an immediate white precipitate of 2,4,6-tribromoaniline because the –NH₂ group activates the ring.",
+            "Cold aqueous conditions help preserve the aromatic diazonium intermediate; warming accelerates decomposition with N2 evolution and can reduce the subsequent dye signal. This is not a universal stability boundary for every diazonium salt.",
+            "The orange-red azo dye shows coupling, but these are group tests; a single observation does not identify a compound."
+          ],
+          "transfer_answer": "Cold aqueous conditions slow decomposition of the diazonium intermediate; warming can accelerate N2 loss and reduce the subsequent coupling signal."
+        }
+      },
+      {
+        "question_id": "PM40-C40",
+        "reason": "Use measuredE instead of unjustifiedE°; display unrounded conversions and precise reference cancellation.",
+        "patch": {
+          "marks": [
+            "E (versus SHE) = E (versus SCE) + 0.241 V.",
+            "E(Cu versusSHE)=+0.100+0.241=+0.341V, about+0.34V at the original reading precision.",
+            "E(Zn versusSHE)=-1.000+0.241=-0.759V, about-0.76V at the original reading precision.",
+            "Ecell=+0.341-(-0.759)=+1.100V, equal to the original reference-scale difference+0.100-(-1.000)=+1.100V. The reference cancels.",
+            "These are potentials at the stated conditions.1.00mol dm-3 does not guarantee unit ion activity, so label themE rather thanE° unless standard activities are established. SCE potential depends on filling composition and temperature."
+          ],
+          "question": "Convert both measured potentials to the SHE scale, calculate Ecell for the Cu–Zn cell at the stated conditions, show reference cancellation, and explain why1.00mol dm-3 does not alone establish standard activities.",
+          "transfer_answer": "E=-0.200+0.241=+0.041V, approximately+0.04V at the original reading precision."
+        }
+      },
+      {
+        "question_id": "PM40-C41",
+        "reason": "Correct saltingout explanation and remove misleading premature-rounding substitution.",
+        "patch": {
+          "marks": [
+            "Triglyceride + 3KOH → glycerol + 3 potassium soap (carboxylate salt).",
+            "n(KOH) = 0.500 × 0.0134 = 6.70 × 10⁻³ mol.",
+            "Saponification value = 6.70 × 10⁻³ × 56.1 × 1000 mg ÷ 2.00 g = 188 mg g⁻¹.",
+            "n(fat)=0.00670/3=0.00223333mol; retain this unrounded value. M(fat)=2.00/0.00223333=895.5g mol-1, or896g mol-1 to3significant figures.",
+            "Concentrated NaCl can salt out soap by reducing its solubility in the concentrated electrolyte, separating a soap-rich fraction from glycerol/excess alkali. For the potassium soap in this problem, NaCl is not simply a common-K+ ion effect. Free fatty acids would alter the stoichiometric inference."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-C42",
+        "reason": "Replace guaranteed thermal protection and one-direction yield claim with defensible limits.",
+        "patch": {
+          "marks": [
+            "For immiscible liquids the total vapour pressure is the sum, p(total) = p(oil) + p(water); the mixture boils when this equals atmospheric pressure.",
+            "p(oil) = 101.3 − 94.3 = 7.0 kPa.",
+            "In the vapour, n(oil) ÷ n(water) = 7.0 ÷ 94.3 = 0.0742.",
+            "Mass ratio = 0.0742 × 136 ÷ 18.0 = 0.561 g of oil per gram of water in the distillate.",
+            "The stated immiscible-component model permits co-distillation below the individual normal boiling temperatures. This can reduce thermal degradation risk; it does not guarantee zero decomposition. Incomplete equilibration/collection and nonideal behaviour can change actual recovery."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-C43",
+        "reason": "Clarify chemically distinct effects of water and free fatty acids.",
+        "patch": {
+          "marks": [
+            "Triglyceride + 3CH₃OH → 3 methyl esters + glycerol (ratio 1 : 3 : 3 : 1).",
+            "n(oil) = 100.0 ÷ 885.4 = 0.113 mol.",
+            "Theoretical ester = 3 × 0.11294 × 296.5 = 100.46 g.",
+            "Percentage yield = 94.0 ÷ 100.46 × 100 = 93.6%.",
+            "Free fatty acids consume base to form soap; water can promote hydrolysis and soap formation. Incomplete equilibrium conversion and product losses can also lower isolated ester yield. Excess methanol favours ester formation in the ideal equilibrium model."
+          ]
+        }
+      }
+    ],
+    "failed_checks": []
+  },
+  "physics": {
+    "scope": "All23 V4 Physics items in the specified raw JSON. Recalculated numerical claims including transfer questions, checked dimensions and obvious physical validity, and matched analytical method to the previously inspected primary NIE handbook. Not a laboratory replication or independent teacher review. Raw V4 and all site files remain unchanged.",
+    "review_type": "same_model_subject_audit_teacher_review_pending",
+    "case_count": 23,
+    "numeric_check_count": 112,
+    "summary": "Numerical results round correctly throughout. Eight bounded corrections address one genuine handbook-method mismatch, terminology, reversed dew labels, unsupported saturation, circular laminar-validation/uncertainty claims, extension scope, contamination wording and bubble-maximum timing.",
+    "cases": [
+      {
+        "id": "PM40-P03",
+        "source_activity_id": "phy-003",
+        "source_print_page": 9,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "least count",
+            "expression": "1/100",
+            "expected": 0.01,
+            "tolerance": 1.0000000000000001e-11,
+            "unit": "mm"
+          },
+          {
+            "label": "curvature term",
+            "expression": "30**2/(6*0.4)",
+            "expected": 374.99999999999994,
+            "tolerance": 3.7499999999999996e-07,
+            "unit": "mm"
+          },
+          {
+            "label": "radius",
+            "expression": "30**2/(6*0.4)+0.4/2",
+            "expected": 375.19999999999993,
+            "tolerance": 3.7519999999999997e-07,
+            "unit": "mm"
+          },
+          {
+            "label": "fractional sagitta uncertainty",
+            "expression": "0.01/0.4*100",
+            "expected": 2.5,
+            "tolerance": 2.5e-09,
+            "unit": "%"
+          },
+          {
+            "label": "approx absolute R uncertainty",
+            "expression": "(30**2/(6*0.4)+0.4/2)*(0.01/0.4)",
+            "expected": 9.379999999999997,
+            "tolerance": 9.379999999999999e-09,
+            "unit": "mm"
+          },
+          {
+            "label": "transfer radius",
+            "expression": "30**2/(6*0.6)+0.6/2",
+            "expected": 250.30000000000004,
+            "tolerance": 2.5030000000000006e-07,
+            "unit": "mm"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P04",
+        "source_activity_id": "phy-004",
+        "source_print_page": 11,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "mean left",
+            "expression": "(23.45+23.46+23.44)/3",
+            "expected": 23.45,
+            "tolerance": 2.345e-08,
+            "unit": "mm"
+          },
+          {
+            "label": "mean right",
+            "expression": "(27.03+27.05+27.04)/3",
+            "expected": 27.040000000000003,
+            "tolerance": 2.7040000000000006e-08,
+            "unit": "mm"
+          },
+          {
+            "label": "diameter",
+            "expression": "(27.03+27.05+27.04)/3-(23.45+23.46+23.44)/3",
+            "expected": 3.5900000000000034,
+            "tolerance": 3.5900000000000035e-09,
+            "unit": "mm"
+          },
+          {
+            "label": "left half range",
+            "expression": "(23.46-23.44)/2",
+            "expected": 0.009999999999999787,
+            "tolerance": 9.999999999999788e-12,
+            "unit": "mm"
+          },
+          {
+            "label": "right half range",
+            "expression": "(27.05-27.03)/2",
+            "expected": 0.009999999999999787,
+            "tolerance": 9.999999999999788e-12,
+            "unit": "mm"
+          },
+          {
+            "label": "fractional bound",
+            "expression": "0.02/3.59*100",
+            "expected": 0.5571030640668524,
+            "tolerance": 5.571030640668525e-10,
+            "unit": "%"
+          },
+          {
+            "label": "transfer diameter",
+            "expression": "15.84-12.36",
+            "expected": 3.4800000000000004,
+            "tolerance": 3.480000000000001e-09,
+            "unit": "mm"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P05",
+        "source_activity_id": "phy-005",
+        "source_print_page": 14,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "resultant",
+            "expression": "math.sqrt(3**2+4**2)",
+            "expected": 5.0,
+            "tolerance": 5e-09,
+            "unit": "N"
+          },
+          {
+            "label": "mass",
+            "expression": "5/9.81",
+            "expected": 0.509683995922528,
+            "tolerance": 5.09683995922528e-10,
+            "unit": "kg"
+          },
+          {
+            "label": "angle",
+            "expression": "math.atan(4/3)*180/math.pi",
+            "expected": 53.13010235415598,
+            "tolerance": 5.313010235415598e-08,
+            "unit": "degrees"
+          },
+          {
+            "label": "transfer resultant",
+            "expression": "math.sqrt(5**2+5**2+2*5*5*math.cos(120*math.pi/180))",
+            "expected": 5.000000000000001,
+            "tolerance": 5.000000000000001e-09,
+            "unit": "N"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P16",
+        "source_activity_id": "phy-016",
+        "source_print_page": 36,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "mean apparent depth",
+            "expression": "(3.02+2.98+3)/3",
+            "expected": 3.0,
+            "tolerance": 3.0000000000000004e-09,
+            "unit": "cm"
+          },
+          {
+            "label": "index",
+            "expression": "4.5/3",
+            "expected": 1.5,
+            "tolerance": 1.5000000000000002e-09,
+            "unit": ""
+          },
+          {
+            "label": "worst-case fractional bound",
+            "expression": "(0.05/4.5+0.02/3)*100",
+            "expected": 1.7777777777777777,
+            "tolerance": 1.7777777777777777e-09,
+            "unit": "%"
+          },
+          {
+            "label": "absolute uncertainty",
+            "expression": "1.5*(0.05/4.5+0.02/3)",
+            "expected": 0.026666666666666665,
+            "tolerance": 2.6666666666666665e-11,
+            "unit": ""
+          },
+          {
+            "label": "transfer index",
+            "expression": "6/4.2",
+            "expected": 1.4285714285714286,
+            "tolerance": 1.4285714285714286e-09,
+            "unit": ""
+          }
+        ]
+      },
+      {
+        "id": "PM40-P17",
+        "source_activity_id": "phy-017",
+        "source_print_page": 38,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "index",
+            "expression": "math.sin((60+37.2)/2*math.pi/180)/math.sin(30*math.pi/180)",
+            "expected": 1.5002221392609194,
+            "tolerance": 1.5002221392609195e-09,
+            "unit": ""
+          },
+          {
+            "label": "transfer index",
+            "expression": "math.sin(45*math.pi/180)/math.sin(30*math.pi/180)",
+            "expected": 1.4142135623730951,
+            "tolerance": 1.4142135623730953e-09,
+            "unit": ""
+          }
+        ]
+      },
+      {
+        "id": "PM40-P18",
+        "source_activity_id": "phy-018",
+        "source_print_page": 40,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "critical angle midpoint",
+            "expression": "(41+42.5)/2",
+            "expected": 41.75,
+            "tolerance": 4.175e-08,
+            "unit": "degrees"
+          },
+          {
+            "label": "index at midpoint",
+            "expression": "1/math.sin(41.75*math.pi/180)",
+            "expected": 1.5017683337128358,
+            "tolerance": 1.5017683337128358e-09,
+            "unit": ""
+          },
+          {
+            "label": "lower n bound",
+            "expression": "1/math.sin(42.5*math.pi/180)",
+            "expected": 1.4801872329222612,
+            "tolerance": 1.4801872329222613e-09,
+            "unit": ""
+          },
+          {
+            "label": "upper n bound",
+            "expression": "1/math.sin(41*math.pi/180)",
+            "expected": 1.5242530867058146,
+            "tolerance": 1.5242530867058147e-09,
+            "unit": ""
+          },
+          {
+            "label": "transfer index",
+            "expression": "1/math.sin(40*math.pi/180)",
+            "expected": 1.5557238268604126,
+            "tolerance": 1.5557238268604126e-09,
+            "unit": ""
+          }
+        ]
+      },
+      {
+        "id": "PM40-P19",
+        "source_activity_id": "phy-019",
+        "source_print_page": 42,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "first telescope separation",
+            "expression": "(182+14/60)-(62+10/60)",
+            "expected": 120.06666666666666,
+            "tolerance": 1.2006666666666667e-07,
+            "unit": "degrees"
+          },
+          {
+            "label": "second telescope separation",
+            "expression": "360+(2+16/60)-(242+12/60)",
+            "expected": 120.06666666666666,
+            "tolerance": 1.2006666666666667e-07,
+            "unit": "degrees"
+          },
+          {
+            "label": "prism angle",
+            "expression": "((182+14/60)-(62+10/60))/2",
+            "expected": 60.03333333333333,
+            "tolerance": 6.003333333333333e-08,
+            "unit": "degrees"
+          },
+          {
+            "label": "transfer angle",
+            "expression": "(119+50/60)/2",
+            "expected": 59.916666666666664,
+            "tolerance": 5.991666666666666e-08,
+            "unit": "degrees"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P21-2",
+        "source_activity_id": "phy-21-2",
+        "source_print_page": 51,
+        "issues": [
+          {
+            "severity": "source_method_mismatch",
+            "reason": "The original contact-lens calculation is numerically correct but is a different experiment from NIE21.2. Printed51–52 uses one concave lens and a virtual image located by no parallax, not a convex/concave pair in contact."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "original contact-lens focal length",
+            "expression": "1/(1/25-1/10)",
+            "expected": -16.666666666666664,
+            "tolerance": 1.6666666666666664e-08,
+            "unit": "cm"
+          },
+          {
+            "label": "original transfer contact-lens focal length",
+            "expression": "1/(1/30-1/12)",
+            "expected": -20.0,
+            "tolerance": 2e-08,
+            "unit": "cm"
+          },
+          {
+            "label": "replacement single-lens focal length",
+            "expression": "1/(1/(-16)-1/(-40))",
+            "expected": -26.666666666666668,
+            "tolerance": 2.666666666666667e-08,
+            "unit": "cm"
+          },
+          {
+            "label": "replacement magnification",
+            "expression": "(-16)/(-40)",
+            "expected": 0.4,
+            "tolerance": 4.0000000000000007e-10,
+            "unit": ""
+          },
+          {
+            "label": "replacement transfer focal length",
+            "expression": "1/(1/(-20)-1/(-60))",
+            "expected": -29.999999999999993,
+            "tolerance": 3e-08,
+            "unit": "cm"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P22",
+        "source_activity_id": "phy-022",
+        "source_print_page": 53,
+        "issues": [
+          {
+            "severity": "accepted_approximation",
+            "reason": "The 4% difference uncertainty is correct and also equals the first-order worst-case pressure contribution for independent ±0.2 cm length bounds. Finite extreme values are approximately72.08 to79.17cmHg. The original does not explicitly claim a rigorous symmetric total confidence interval."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "atmospheric pressure",
+            "expression": "10*(43+33)/(43-33)",
+            "expected": 76.0,
+            "tolerance": 7.6e-08,
+            "unit": "cm Hg"
+          },
+          {
+            "label": "pressure SI",
+            "expression": "0.760*13600*9.81",
+            "expected": 101396.16,
+            "tolerance": 0.00010139616000000001,
+            "unit": "Pa"
+          },
+          {
+            "label": "difference uncertainty fraction",
+            "expression": "0.4/(43-33)*100",
+            "expected": 4.0,
+            "tolerance": 4e-09,
+            "unit": "%"
+          },
+          {
+            "label": "first-order pressure bound",
+            "expression": "2*10*(43+33)/(43-33)**2*0.2",
+            "expected": 3.04,
+            "tolerance": 3.0400000000000003e-09,
+            "unit": "cm Hg"
+          },
+          {
+            "label": "finite upper pressure bound",
+            "expression": "10*(42.8+33.2)/(42.8-33.2)",
+            "expected": 79.16666666666671,
+            "tolerance": 7.916666666666672e-08,
+            "unit": "cm Hg"
+          },
+          {
+            "label": "finite lower pressure bound",
+            "expression": "10*(43.2+32.8)/(43.2-32.8)",
+            "expected": 73.07692307692304,
+            "tolerance": 7.307692307692304e-08,
+            "unit": "cm Hg"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P24",
+        "source_activity_id": "phy-024",
+        "source_print_page": 57,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "pressure gradient",
+            "expression": "(136.6-100)/100",
+            "expected": 0.36599999999999994,
+            "tolerance": 3.66e-10,
+            "unit": "kPa K^-1"
+          },
+          {
+            "label": "zero-pressure extrapolated temperature",
+            "expression": "-100/0.366",
+            "expected": -273.224043715847,
+            "tolerance": 2.7322404371584703e-07,
+            "unit": "degrees C"
+          },
+          {
+            "label": "first p/T",
+            "expression": "100/273.15",
+            "expected": 0.36609921288669234,
+            "tolerance": 3.6609921288669237e-10,
+            "unit": "kPa K^-1"
+          },
+          {
+            "label": "last p/T",
+            "expression": "136.6/373.15",
+            "expected": 0.3660726249497521,
+            "tolerance": 3.6607262494975216e-10,
+            "unit": "kPa K^-1"
+          },
+          {
+            "label": "transfer pressure",
+            "expression": "100+0.366*75",
+            "expected": 127.45,
+            "tolerance": 1.2745000000000002e-07,
+            "unit": "kPa"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P25",
+        "source_activity_id": "phy-025",
+        "source_print_page": 59,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "receiver heat",
+            "expression": "(0.2*4180+100)*(27.4-20)",
+            "expected": 6926.399999999999,
+            "tolerance": 6.9263999999999994e-06,
+            "unit": "J"
+          },
+          {
+            "label": "metal specific heat",
+            "expression": "(0.2*4180+100)*(27.4-20)/(0.25*(100-27.4))",
+            "expected": 381.61983471074376,
+            "tolerance": 3.816198347107438e-07,
+            "unit": "J kg^-1 K^-1"
+          },
+          {
+            "label": "ignoring calorimeter",
+            "expression": "0.2*4180*(27.4-20)/(0.25*(100-27.4))",
+            "expected": 340.8484848484848,
+            "tolerance": 3.4084848484848486e-07,
+            "unit": "J kg^-1 K^-1"
+          },
+          {
+            "label": "underestimate percent",
+            "expression": "100/(0.2*4180+100)*100",
+            "expected": 10.683760683760683,
+            "tolerance": 1.0683760683760684e-08,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P26",
+        "source_activity_id": "phy-026",
+        "source_print_page": 61,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "water receiver capacity",
+            "expression": "0.1*4180+40",
+            "expected": 458.0,
+            "tolerance": 4.5800000000000005e-07,
+            "unit": "J K^-1"
+          },
+          {
+            "label": "liquid receiver capacity",
+            "expression": "458*170/300",
+            "expected": 259.53333333333336,
+            "tolerance": 2.5953333333333337e-07,
+            "unit": "J K^-1"
+          },
+          {
+            "label": "liquid specific heat",
+            "expression": "(458*170/300-40)/0.09",
+            "expected": 2439.2592592592596,
+            "tolerance": 2.4392592592592596e-06,
+            "unit": "J kg^-1 K^-1"
+          },
+          {
+            "label": "transfer liquid c for 200s",
+            "expression": "(458*200/300-40)/0.09",
+            "expected": 2948.1481481481483,
+            "tolerance": 2.9481481481481485e-06,
+            "unit": "J kg^-1 K^-1"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P27",
+        "source_activity_id": "phy-027",
+        "source_print_page": 64,
+        "issues": [
+          {
+            "severity": "terminology",
+            "reason": "“Dry ice” conventionally means solid carbon dioxide, which is not the substance in this water-ice fusion experiment. Replace with water ice whose surface meltwater was removed."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "receiver heat release",
+            "expression": "(0.2*4180+100)*(40-18.1)",
+            "expected": 20498.399999999998,
+            "tolerance": 2.04984e-05,
+            "unit": "J"
+          },
+          {
+            "label": "meltwater warming",
+            "expression": "0.05*4180*18.1",
+            "expected": 3782.9,
+            "tolerance": 3.7829000000000002e-06,
+            "unit": "J"
+          },
+          {
+            "label": "latent heat",
+            "expression": "((0.2*4180+100)*(40-18.1)-0.05*4180*18.1)/0.05",
+            "expected": 334309.9999999999,
+            "tolerance": 0.0003343099999999999,
+            "unit": "J kg^-1"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P28",
+        "source_activity_id": "phy-028",
+        "source_print_page": 66,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "receiver heat",
+            "expression": "(0.2*4180+100)*(40-20)",
+            "expected": 18720.0,
+            "tolerance": 1.872e-05,
+            "unit": "J"
+          },
+          {
+            "label": "condensate cooling",
+            "expression": "0.0075*4180*60",
+            "expected": 1880.9999999999998,
+            "tolerance": 1.8809999999999999e-06,
+            "unit": "J"
+          },
+          {
+            "label": "vaporisation latent heat",
+            "expression": "((0.2*4180+100)*(40-20)-0.0075*4180*60)/0.0075",
+            "expected": 2245200.0,
+            "tolerance": 0.0022452,
+            "unit": "J kg^-1"
+          },
+          {
+            "label": "ignoring cooling",
+            "expression": "(0.2*4180+100)*(40-20)/0.0075",
+            "expected": 2496000.0,
+            "tolerance": 0.002496,
+            "unit": "J kg^-1"
+          },
+          {
+            "label": "overestimate percent",
+            "expression": "(0.0075*4180*60)/((0.2*4180+100)*(40-20)-0.0075*4180*60)*100",
+            "expected": 11.17049706039551,
+            "tolerance": 1.117049706039551e-08,
+            "unit": "%"
+          },
+          {
+            "label": "fractional weighing error example",
+            "expression": "0.1/7.5*100",
+            "expected": 1.3333333333333335,
+            "tolerance": 1.3333333333333335e-09,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P29",
+        "source_activity_id": "phy-029",
+        "source_print_page": 68,
+        "issues": [
+          {
+            "severity": "physical_consistency",
+            "reason": "For the standard onset/disappearance bracket without an explicit lag model, condensation appears at the lower temperature on cooling and disappears at the higher temperature on warming. Original labels were reversed; mean and RH values are unchanged."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "dew point",
+            "expression": "(15.4+14.6)/2",
+            "expected": 15.0,
+            "tolerance": 1.5000000000000002e-08,
+            "unit": "degrees C"
+          },
+          {
+            "label": "relative humidity",
+            "expression": "1.71/3.17*100",
+            "expected": 53.94321766561514,
+            "tolerance": 5.394321766561514e-08,
+            "unit": "%"
+          },
+          {
+            "label": "low humidity bound",
+            "expression": "1.66/3.17*100",
+            "expected": 52.36593059936908,
+            "tolerance": 5.236593059936908e-08,
+            "unit": "%"
+          },
+          {
+            "label": "high humidity bound",
+            "expression": "1.75/3.17*100",
+            "expected": 55.20504731861199,
+            "tolerance": 5.5205047318611994e-08,
+            "unit": "%"
+          },
+          {
+            "label": "transfer humidity",
+            "expression": "1.23/3.17*100",
+            "expected": 38.801261829653,
+            "tolerance": 3.8801261829653e-08,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P30",
+        "source_activity_id": "phy-030",
+        "source_print_page": 70,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "heat flow",
+            "expression": "0.145*4180*2/100",
+            "expected": 12.121999999999998,
+            "tolerance": 1.2122e-08,
+            "unit": "W"
+          },
+          {
+            "label": "bar area",
+            "expression": "math.pi*0.02**2/4",
+            "expected": 0.0003141592653589793,
+            "tolerance": 3.141592653589793e-13,
+            "unit": "m²"
+          },
+          {
+            "label": "thermal conductivity",
+            "expression": "(0.145*4180*2/100)*0.1/((math.pi*0.02**2/4)*10)",
+            "expected": 385.8552440319911,
+            "tolerance": 3.858552440319911e-07,
+            "unit": "W m^-1 K^-1"
+          },
+          {
+            "label": "transfer conductivity",
+            "expression": "(0.145*4180/100)*0.1/((math.pi*0.02**2/4)*10)",
+            "expected": 192.92762201599555,
+            "tolerance": 1.9292762201599555e-07,
+            "unit": "W m^-1 K^-1"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P34",
+        "source_activity_id": "phy-034",
+        "source_print_page": 79,
+        "issues": [
+          {
+            "severity": "accepted_approximation",
+            "reason": "The fractional-uncertainty sum is a conservative first-order estimate that treats difference and denominator contributions separately despite their shared l2; its rounded ±0.03 ohm is acceptable, but not a statistically derived confidence interval."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "resistance",
+            "expression": "10*(70-62)/62",
+            "expected": 1.2903225806451613,
+            "tolerance": 1.2903225806451612e-09,
+            "unit": "ohm"
+          },
+          {
+            "label": "conservative fractional uncertainty",
+            "expression": "0.2/8+0.1/62",
+            "expected": 0.026612903225806454,
+            "tolerance": 2.6612903225806456e-11,
+            "unit": ""
+          },
+          {
+            "label": "conservative absolute uncertainty",
+            "expression": "(10*8/62)*(0.2/8+0.1/62)",
+            "expected": 0.03433922996878252,
+            "tolerance": 3.433922996878252e-11,
+            "unit": "ohm"
+          },
+          {
+            "label": "transfer resistance",
+            "expression": "5*(80-60)/60",
+            "expected": 1.6666666666666667,
+            "tolerance": 1.666666666666667e-09,
+            "unit": "ohm"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P35",
+        "source_activity_id": "phy-035",
+        "source_print_page": 81,
+        "issues": [],
+        "numeric_checks": [
+          {
+            "label": "upper secant resistance",
+            "expression": "(0.75-0.70)/(0.03-0.012)",
+            "expected": 2.7777777777777803,
+            "tolerance": 2.7777777777777805e-09,
+            "unit": "ohm"
+          },
+          {
+            "label": "middle secant resistance",
+            "expression": "(0.70-0.65)/(0.012-0.004)",
+            "expected": 6.249999999999991,
+            "tolerance": 6.2499999999999914e-09,
+            "unit": "ohm"
+          },
+          {
+            "label": "static resistance",
+            "expression": "0.75/0.03",
+            "expected": 25.0,
+            "tolerance": 2.5000000000000002e-08,
+            "unit": "ohm"
+          },
+          {
+            "label": "transfer secant resistance",
+            "expression": "(0.65-0.60)/(0.004-0.0012)",
+            "expected": 17.857142857142872,
+            "tolerance": 1.7857142857142872e-08,
+            "unit": "ohm"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P36",
+        "source_activity_id": "phy-036",
+        "source_print_page": 83,
+        "issues": [
+          {
+            "severity": "conceptual",
+            "reason": "The stated fixed-VCE dataset does not justify claiming the transistor necessarily approaches saturation as current rises."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "incremental gain",
+            "expression": "(5.8e-3-1.5e-3)/(40e-6-10e-6)",
+            "expected": 143.33333333333331,
+            "tolerance": 1.4333333333333332e-07,
+            "unit": ""
+          },
+          {
+            "label": "dc gain",
+            "expression": "4.4e-3/30e-6",
+            "expected": 146.66666666666669,
+            "tolerance": 1.4666666666666668e-07,
+            "unit": ""
+          },
+          {
+            "label": "first local gain",
+            "expression": "(3e-3-1.5e-3)/(20e-6-10e-6)",
+            "expected": 150.0,
+            "tolerance": 1.5000000000000002e-07,
+            "unit": ""
+          },
+          {
+            "label": "second local gain",
+            "expression": "(4.4e-3-3e-3)/(30e-6-20e-6)",
+            "expected": 140.00000000000003,
+            "tolerance": 1.4000000000000004e-07,
+            "unit": ""
+          },
+          {
+            "label": "third local gain",
+            "expression": "(5.8e-3-4.4e-3)/(40e-6-30e-6)",
+            "expected": 139.9999999999999,
+            "tolerance": 1.399999999999999e-07,
+            "unit": ""
+          },
+          {
+            "label": "transfer gain",
+            "expression": "2e-3/12.5e-6",
+            "expected": 160.0,
+            "tolerance": 1.6e-07,
+            "unit": ""
+          }
+        ]
+      },
+      {
+        "id": "PM40-P39",
+        "source_activity_id": "phy-039",
+        "source_print_page": 90,
+        "issues": [
+          {
+            "severity": "evidence_and_source_scope",
+            "reason": "The arithmetic is correct, but the old answer infers viscosity under a laminar model and then uses that inferred value to assert laminar validity. Reynolds-number thresholds are absent from this handbook method; use its Q-versus-head evidence criterion. Radius dominance also requires comparison with other uncertainties."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "pressure",
+            "expression": "1000*9.81*0.3",
+            "expected": 2943.0,
+            "tolerance": 2.943e-06,
+            "unit": "Pa"
+          },
+          {
+            "label": "viscosity",
+            "expression": "math.pi*(2.5e-4)**4*2943*44.3/(8*1e-6*0.2)",
+            "expected": 0.0009999629591125585,
+            "tolerance": 9.999629591125587e-13,
+            "unit": "Pa s"
+          },
+          {
+            "label": "mean speed",
+            "expression": "(1e-6/44.3)/(math.pi*(2.5e-4)**2)",
+            "expected": 0.11496519591288151,
+            "tolerance": 1.1496519591288152e-10,
+            "unit": "m s^-1"
+          },
+          {
+            "label": "model-dependent Reynolds number",
+            "expression": "1000*((1e-6/44.3)/(math.pi*(2.5e-4)**2))*.0005/(math.pi*(2.5e-4)**4*2943*44.3/(8*1e-6*0.2))",
+            "expected": 57.48472724175212,
+            "tolerance": 5.748472724175212e-08,
+            "unit": ""
+          },
+          {
+            "label": "first-order 2pct radius effect",
+            "expression": "4*2",
+            "expected": 8,
+            "tolerance": 8e-09,
+            "unit": "%"
+          },
+          {
+            "label": "exact 2pct radius effect",
+            "expression": "(1.02**4-1)*100",
+            "expected": 8.243215999999997,
+            "tolerance": 8.243215999999997e-09,
+            "unit": "%"
+          },
+          {
+            "label": "replacement exact radius-overestimate effect",
+            "expression": "(1.02**4-1)*100",
+            "expected": 8.243215999999997,
+            "tolerance": 8.243215999999997e-09,
+            "unit": "%"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P40",
+        "source_activity_id": "phy-040",
+        "source_print_page": 92,
+        "issues": [
+          {
+            "severity": "precision",
+            "reason": "“Grease or detergent lowers gamma” overgeneralises the effect of grease: it can alter the contact angle rather than simply changing the liquid surface tension."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "contact line",
+            "expression": "2*(.025+.001)",
+            "expected": 0.052000000000000005,
+            "tolerance": 5.200000000000001e-11,
+            "unit": "m"
+          },
+          {
+            "label": "surface force",
+            "expression": ".382e-3*9.81",
+            "expected": 0.0037474200000000004,
+            "tolerance": 3.747420000000001e-12,
+            "unit": "N"
+          },
+          {
+            "label": "surface tension",
+            "expression": ".382e-3*9.81/(2*(.025+.001))",
+            "expected": 0.07206576923076924,
+            "tolerance": 7.206576923076925e-11,
+            "unit": "N m^-1"
+          },
+          {
+            "label": "ignoring thickness",
+            "expression": ".382e-3*9.81/(2*.025)",
+            "expected": 0.0749484,
+            "tolerance": 7.49484e-11,
+            "unit": "N m^-1"
+          },
+          {
+            "label": "thickness omission percent",
+            "expression": "((.025+.001)/.025-1)*100",
+            "expected": 4.0000000000000036,
+            "tolerance": 4.0000000000000036e-09,
+            "unit": "%"
+          },
+          {
+            "label": "transfer tension",
+            "expression": ".400e-3*9.81/(2*(.025+.001))",
+            "expected": 0.07546153846153847,
+            "tolerance": 7.546153846153848e-11,
+            "unit": "N m^-1"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P41",
+        "source_activity_id": "phy-041",
+        "source_print_page": 94,
+        "issues": [
+          {
+            "severity": "source_scope_and_uncertainty",
+            "reason": "The numerical meniscus correction is correct but is not part of the basic NIE41 body method, which uses measured h directly. Label it as a supplied extension. No height uncertainty is given, so radius cannot be declared the dominant contributor unconditionally."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "uncorrected tension",
+            "expression": "1000*9.81*.0004*.037/2",
+            "expected": 0.072594,
+            "tolerance": 7.259400000000001e-11,
+            "unit": "N m^-1"
+          },
+          {
+            "label": "meniscus height correction",
+            "expression": ".0004/3",
+            "expected": 0.00013333333333333334,
+            "tolerance": 1.3333333333333334e-13,
+            "unit": "m"
+          },
+          {
+            "label": "corrected height",
+            "expression": ".037+.0004/3",
+            "expected": 0.03713333333333333,
+            "tolerance": 3.713333333333333e-11,
+            "unit": "m"
+          },
+          {
+            "label": "corrected tension",
+            "expression": "1000*9.81*.0004*(.037+.0004/3)/2",
+            "expected": 0.0728556,
+            "tolerance": 7.285560000000001e-11,
+            "unit": "N m^-1"
+          },
+          {
+            "label": "radius fractional uncertainty",
+            "expression": ".01/.400*100",
+            "expected": 2.5,
+            "tolerance": 2.5e-09,
+            "unit": "%"
+          },
+          {
+            "label": "transfer tension",
+            "expression": "1000*9.81*.0002*.074/2",
+            "expected": 0.072594,
+            "tolerance": 7.259400000000001e-11,
+            "unit": "N m^-1"
+          }
+        ]
+      },
+      {
+        "id": "PM40-P42",
+        "source_activity_id": "phy-042",
+        "source_print_page": 96,
+        "issues": [
+          {
+            "severity": "physical_consistency",
+            "reason": "Maximum bubble pressure occurs at the approximately hemispherical bubble stage, not necessarily just before detachment. Preserve the maximum-pressure criterion without identifying it with breakup."
+          },
+          {
+            "severity": "documented_model_variant",
+            "reason": "The source uses kerosene in the manometer; the case explicitly uses water instead. This is a valid stated fluid substitution within the same two-head pressure balance, not the exact original apparatus composition."
+          }
+        ],
+        "numeric_checks": [
+          {
+            "label": "excess head",
+            "expression": "3.94-1",
+            "expected": 2.94,
+            "tolerance": 2.94e-09,
+            "unit": "cm"
+          },
+          {
+            "label": "excess pressure",
+            "expression": "1000*9.81*.0294",
+            "expected": 288.414,
+            "tolerance": 2.8841400000000003e-07,
+            "unit": "Pa"
+          },
+          {
+            "label": "surface tension",
+            "expression": ".0005*(1000*9.81*.0294)/2",
+            "expected": 0.0721035,
+            "tolerance": 7.21035e-11,
+            "unit": "N m^-1"
+          },
+          {
+            "label": "transfer excess head",
+            "expression": "4.94-2",
+            "expected": 2.9400000000000004,
+            "tolerance": 2.9400000000000006e-09,
+            "unit": "cm"
+          }
+        ]
+      }
+    ],
+    "corrections": [
+      {
+        "question_id": "PM40-P21-2",
+        "reason": "The original contact-lens calculation is numerically correct but is a different experiment from NIE21.2. Printed51–52 uses one concave lens and a virtual image located by no parallax, not a convex/concave pair in contact.",
+        "patch": {
+          "title": "Concave lens: virtual-image no-parallax data",
+          "scenario": "A fictional no-parallax record for a single thin concave lens gives a real object 40.0 cm from the lens and an upright virtual image 16.0 cm from the lens on the same side. Define positive Cartesian direction along incident light, so u = -40.0 cm and v = -16.0 cm.",
+          "question": "Use 1/f = 1/v - 1/u to calculate focal length, find magnification, classify the image and explain what a no-parallax comparison establishes.",
+          "data": [
+            [
+              "Quantity",
+              "Signed value"
+            ],
+            [
+              "Object distance u",
+              "-40.0 cm"
+            ],
+            [
+              "Image distance v",
+              "-16.0 cm"
+            ]
+          ],
+          "marks": [
+            "The declared Cartesian signs are u = -40.0 cm and v = -16.0 cm.",
+            "1/f = 1/(-16.0) - 1/(-40.0) = -0.0375 cm^-1.",
+            "f = -26.7 cm; its negative sign denotes a diverging lens.",
+            "m = v/u = +0.400: the image is virtual, upright and diminished.",
+            "No relative movement in the comparison as the eye moves sideways establishes coincidence of the image positions; a real projected image is not required for this virtual-image method."
+          ],
+          "error": "A virtual image can be located by no-parallax comparison; do not claim a concave lens must be paired with a convex lens for the handbook method.",
+          "transfer": "For a single concave lens under the same convention, u = -60.0 cm and v = -20.0 cm. Find f.",
+          "transfer_answer": "1/f = -1/20 + 1/60 = -1/30 cm^-1, so f = -30.0 cm."
+        }
+      },
+      {
+        "question_id": "PM40-P27",
+        "reason": "“Dry ice” conventionally means solid carbon dioxide, which is not the substance in this water-ice fusion experiment. Replace with water ice whose surface meltwater was removed.",
+        "patch": {
+          "scenario": "A teacher supplies fictional results: 0.050 kg of surface-dried water ice at 0 °C is added to 0.200 kg of water at 40.0 °C in a calorimeter of heat capacity 100 J K⁻¹. The final temperature is 18.1 °C. Take c(water) = 4180 J kg⁻¹ K⁻¹."
+        }
+      },
+      {
+        "question_id": "PM40-P29",
+        "reason": "For the standard onset/disappearance bracket without an explicit lag model, condensation appears at the lower temperature on cooling and disappears at the higher temperature on warming. Original labels were reversed; mean and RH values are unchanged.",
+        "patch": {
+          "scenario": "A teacher supplies fictional readings with a polished calorimeter: room temperature 25.0 °C; mist appears at 14.6 °C on cooling and disappears at 15.4 °C on warming. Saturated vapour pressure (SVP) values are given."
+        }
+      },
+      {
+        "question_id": "PM40-P36",
+        "reason": "The stated fixed-VCE dataset does not justify claiming the transistor necessarily approaches saturation as current rises.",
+        "patch": {
+          "marks": [
+            "a.c. gain β = ΔI_C ÷ ΔI_B.",
+            "Over the range: (5.8 − 1.5) mA ÷ (40 − 10) µA = 4.3 mA ÷ 30 µA = 143.",
+            "d.c. gain at 30 µA: h_FE = I_C ÷ I_B = 4.4 mA ÷ 30 µA = 147.",
+            "The local gain is 150 from 10 to 20 µA and 140 above, so the transfer characteristic is nearly, but not exactly, linear.",
+            "Current gain can change with collector current and temperature. Because VCE is held fixed here, increasing current alone does not establish saturation; saturation may occur in a circuit if it can no longer maintain the intended active-region VCE."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-P39",
+        "reason": "The arithmetic is correct, but the old answer infers viscosity under a laminar model and then uses that inferred value to assert laminar validity. Reynolds-number thresholds are absent from this handbook method; use its Q-versus-head evidence criterion. Radius dominance also requires comparison with other uncertainties.",
+        "patch": {
+          "scenario": "A teacher supplies fictional steady-flow results: capillary radius 0.250 mm, length 0.200 m, constant pressure head 0.300 m of water, and 1.00 cm³ collected in 44.3 s. Density of water 1000 kg m⁻³, g = 9.81 m s⁻². Interpret the viscosity calculation conditionally on the steady laminar Poiseuille model.",
+          "question": "Calculate pressure difference and viscosity under the Poiseuille model, explain the radius sensitivity and state why one head/flow observation cannot independently establish the laminar regime.",
+          "marks": [
+            "Poiseuille: V/t = πr⁴ΔP ÷ (8ηL), so η = πr⁴ΔP t ÷ (8VL).",
+            "ΔP = ρgh = 1000 × 9.81 × 0.300 = 2943 Pa.",
+            "η = π × (2.50 × 10⁻⁴)⁴ × 2943 × 44.3 ÷ (8 × 1.00 × 10⁻⁶ × 0.200) = 1.00 × 10⁻³ Pa s.",
+            "Because eta depends on r^4, a 2% radius error contributes approximately 8% uncertainty (8.24% for a 2% overestimate exactly). It dominates only if other relative contributions are smaller.",
+            "One pressure-head/flow pair cannot independently establish laminar Poiseuille flow. The handbook recommends the straight-line portion of a volume-flow-rate versus head graph; curvature at larger heads signals possible breakdown of that regime."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-P41",
+        "reason": "The numerical meniscus correction is correct but is not part of the basic NIE41 body method, which uses measured h directly. Label it as a supplied extension. No height uncertainty is given, so radius cannot be declared the dominant contributor unconditionally.",
+        "patch": {
+          "question": "Calculate surface tension using the basic handbook model. As an explicitly supplied optional model extension, calculate the value using h + r/3, then discuss radius and height uncertainty.",
+          "marks": [
+            "h = 2γ cos θ ÷ (ρgr), so with θ = 0, γ = ρgrh ÷ 2.",
+            "Units: r = 4.00 × 10⁻⁴ m and h = 0.0370 m.",
+            "γ = 1000 × 9.81 × 4.00 × 10⁻⁴ × 0.0370 ÷ 2 = 0.0726 N m⁻¹.",
+            "Optional model extension beyond the basic handbook treatment: if a hemispherical meniscus correction h + r/3 is supplied, corrected h = 0.0371333 m and gamma = 0.0729 N m^-1.",
+            "A radius uncertainty of ±0.01 mm contributes 2.5%. To establish whether it dominates, the rise uncertainty must also be known; a dirty tube changes contact angle."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-P40",
+        "reason": "“Grease or detergent lowers gamma” overgeneralises the effect of grease: it can alter the contact angle rather than simply changing the liquid surface tension.",
+        "patch": {
+          "marks": [
+            "The contact line runs round the slide: 2(l + t) = 2(0.0250 + 0.0010) = 0.0520 m.",
+            "F = mg = 0.382 × 10⁻³ × 9.81 = 3.75 × 10⁻³ N.",
+            "γ = F ÷ 2(l + t) = 3.75 × 10⁻³ ÷ 0.0520 = 0.0721 N m⁻¹.",
+            "Ignoring the thickness, γ = F ÷ 2l = 0.0749 N m⁻¹, about 4.0% too high.",
+            "Assumptions: contact angle is zero and the recorded force is the net additional surface pull. Contamination can alter wetting/contact angle; detergent in the water can lower its surface tension."
+          ]
+        }
+      },
+      {
+        "question_id": "PM40-P42",
+        "reason": "Maximum bubble pressure occurs at the approximately hemispherical bubble stage, not necessarily just before detachment. Preserve the maximum-pressure criterion without identifying it with breakup.",
+        "patch": {
+          "scenario": "A teacher supplies fictional readings: air bubbles form slowly at the tip of a capillary of radius 0.500 mm held 1.00 cm below a water surface. The water manometer shows a maximum difference of 3.94 cm during the slow formation of each bubble. Density 1000 kg m⁻³, g = 9.81 m s⁻²."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "release": "2026-10-16-v5.0",
+  "qa": {
+    "cases": 126,
+    "subject_counts": {
+      "biology": 38,
+      "chemistry": 45,
+      "physics": 43
+    },
+    "unique_ids": 126,
+    "unique_activities": 126,
+    "numeric_checks": 624,
+    "all_numeric_checks_passed": true,
+    "source_status_counts": {
+      "pending": 0,
+      "method_checked": 126,
+      "index_checked": 0
+    },
+    "reference_corrections": [
+      {
+        "activity_id": "che-025",
+        "catalog_page": 80,
+        "body_page": 78,
+        "reason": "Activity heading and relevant method/analysis inspected in official NIE PDF; exercise is original interpretation of fictional results. Index/catalogue says p.80; actual activity begins on printed p.78 (PDF86)."
+      }
+    ],
+    "teacher_reviewed": false,
+    "v4_cases_audited": 70,
+    "v4_cases_corrected": 38
+  },
+  "pdf": {
+    "student_workbook_pages": 137,
+    "model_answer_pages": 137,
+    "reconciliation_pages": 78,
+    "legacy_collection_pages": 403,
+    "complete_pages": 756,
+    "legacy_pdf_corrections": [
+      {
+        "legacy_pdf_page": 61,
+        "before": "Infering",
+        "after": "Inferring"
+      },
+      {
+        "legacy_pdf_page": 61,
+        "before": "fat-specific RQ inference",
+        "after": "protein or mixed-substrate interpretation"
+      },
+      {
+        "legacy_pdf_page": 71,
+        "before": "6. Including calorimeter, DeltaH = -1397/0.0250 = -55.9 kJ mol-1.",
+        "after": "6. Including calorimeter: DeltaH = -1397 J / 0.0250 mol = -55880 J mol-1 = -55.9 kJ mol-1."
+      },
+      {
+        "legacy_pdf_page": 72,
+        "before": "In a teacher-written 1:1 neutralisation model, the available titres are 24.22, 24.20, 24.24 and 25.00 cm3. The",
+        "after": "In an independently prepared 1:1 neutralisation model, the available titres are 24.22, 24.20, 24.24 and 25.00 cm3. The"
+      },
+      {
+        "legacy_pdf_page": 76,
+        "before": "A teacher-written idealised T^2 versus length graph has points (0.20 m, 0.84 s2) and (0.80 m, 3.24 s2). The",
+        "after": "An independently prepared idealised T^2 versus length graph has points (0.20 m, 0.84 s2) and (0.80 m, 3.24 s2). The"
+      },
+      {
+        "legacy_pdf_page": 85,
+        "before": "Graph &amp; Evidence Clinic",
+        "after": "Graph & Evidence Clinic"
+      },
+      {
+        "legacy_pdf_page": 105,
+        "before": "4. Under the exothermic model, ΔH≈−2299/0.0500=−45.98 kJ mol⁻¹.",
+        "after": "4. DeltaH = -2299 J / 0.0500 mol = -45980 J mol-1 = -45.98 kJ mol-1."
+      },
+      {
+        "legacy_pdf_page": 160,
+        "before": "9.95",
+        "after": "9.96"
+      },
+      {
+        "legacy_pdf_page": 161,
+        "before": "0.18",
+        "after": "0.17"
+      },
+      {
+        "legacy_pdf_page": 161,
+        "before": "0.53",
+        "after": "0.52"
+      },
+      {
+        "legacy_pdf_page": 162,
+        "before": "0.18",
+        "after": "0.17"
+      },
+      {
+        "legacy_pdf_page": 162,
+        "before": "0.53",
+        "after": "0.52"
+      }
+    ],
+    "v4_revised_cases": [
+      "PM40-B01",
+      "PM40-B09",
+      "PM40-B11",
+      "PM40-B15",
+      "PM40-B16",
+      "PM40-B18",
+      "PM40-B27",
+      "PM40-B28",
+      "PM40-B30",
+      "PM40-B34",
+      "PM40-B36",
+      "PM40-B37",
+      "PM40-C01",
+      "PM40-C06",
+      "PM40-C10",
+      "PM40-C11",
+      "PM40-C12",
+      "PM40-C13",
+      "PM40-C15",
+      "PM40-C16",
+      "PM40-C24",
+      "PM40-C25",
+      "PM40-C26",
+      "PM40-C27",
+      "PM40-C28",
+      "PM40-C29",
+      "PM40-C40",
+      "PM40-C41",
+      "PM40-C42",
+      "PM40-C43",
+      "PM40-P21-2",
+      "PM40-P27",
+      "PM40-P29",
+      "PM40-P36",
+      "PM40-P39",
+      "PM40-P41",
+      "PM40-P40",
+      "PM40-P42"
+    ]
+  },
+  "interactive_questions": 247,
+  "total_formative_marks": 1286,
+  "site_tests": {
+    "tests": 171,
+    "pass": 125,
+    "fail": 0,
+    "skip": 46
+  },
+  "teacher_reviewed": false
+}

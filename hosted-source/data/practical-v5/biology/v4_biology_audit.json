@@ -1,0 +1,1001 @@
+{
+  "audit_version": "1.0",
+  "subject": "biology",
+  "source_file": "/workspace/scratch/8274d4b74500/upload/practical-lab-coverage-completion-v4_0.json",
+  "source_retained_unchanged": true,
+  "handbook": "https://nie.lk/pdffiles/other/eALOM%20Biology%20Practical%20Handbook.pdf",
+  "source_verification": "Actual activity text previously inspected, as detailed in source_audit.md; this report distinguishes direct method alignment from associated theoretical enrichment.",
+  "case_count": 23,
+  "numeric_check_count": 58,
+  "numeric_errors_found": 0,
+  "review_status": "independent_model_teacher_review_pending",
+  "summary": "All23 BiologyV4 items independently reviewed. Computed values, including transfers, are arithmetically correct. Main corrections concern lignification/complex-xylem viability, comparative excretory function, monosynaptic assumptions, illumination-versus-pupil geometry, lever geometry/statics and official specimen-set matching. Associated enrichment must be labelled rather than counted as exact laboratory-method replication.",
+  "cases": [
+    {
+      "id": "PM40-B01",
+      "activity_id": "bio-001",
+      "handbook_print_page": 1,
+      "issues": [
+        {
+          "code": "negative_test_inference",
+          "severity": "minor",
+          "detail": "A negative Benedict result means reducing sugar was not detected under the test conditions; it does not establish absolute absence, even of reducing sugar."
+        }
+      ],
+      "numeric_checks": [],
+      "source_alignment": "main_food_tests_aligned_transfer_is_enrichment",
+      "audit_note": "Main table tests align with NIE Practical1. The ethanol emulsion transfer is valid associated food-test enrichment; handbook annex instead lists SudanIII for lipids. No arithmetic required."
+    },
+    {
+      "id": "PM40-B09",
+      "activity_id": "bio-009",
+      "handbook_print_page": 10,
+      "issues": [
+        {
+          "code": "nucleoid_visibility_overstatement",
+          "severity": "minor",
+          "detail": "Ordinary unstained light images do not reliably resolve bacterial nucleoids as distinct structures; a categorical claim that light microscopy can never reveal DNA is unnecessarily broad."
+        }
+      ],
+      "numeric_checks": [
+        {
+          "label": "C to A width ratio",
+          "expression": "10/1",
+          "expected": 10,
+          "tolerance": 1e-09,
+          "unit": "times"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Combined size/pigment/filament evidence is suitably provisional. Cyanobacteria correctly treated as prokaryotes."
+    },
+    {
+      "id": "PM40-B10",
+      "activity_id": "bio-010",
+      "handbook_print_page": 11,
+      "issues": [],
+      "numeric_checks": [
+        {
+          "label": "scale factor",
+          "expression": "0.5/15",
+          "expected": 0.0333,
+          "tolerance": 5e-05,
+          "unit": "µm per mm"
+        },
+        {
+          "label": "cell length",
+          "expression": "48*0.5/15",
+          "expected": 1.6,
+          "tolerance": 1e-09,
+          "unit": "µm"
+        },
+        {
+          "label": "cell width",
+          "expression": "20*0.5/15",
+          "expected": 0.667,
+          "tolerance": 0.0005,
+          "unit": "µm"
+        },
+        {
+          "label": "flagellum length",
+          "expression": "90*0.5/15",
+          "expected": 3,
+          "tolerance": 1e-09,
+          "unit": "µm"
+        },
+        {
+          "label": "magnification",
+          "expression": "15*1000/.5",
+          "expected": 30000,
+          "tolerance": 1e-09,
+          "unit": "times"
+        },
+        {
+          "label": "transfer length",
+          "expression": "60/25*1",
+          "expected": 2.4,
+          "tolerance": 1e-09,
+          "unit": "µm"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "All arithmetic correct. Retain full scale factor internally; the0.0333 printed value is rounded. Size and static-motility caveats appropriate."
+    },
+    {
+      "id": "PM40-B11",
+      "activity_id": "bio-011",
+      "handbook_print_page": 12,
+      "issues": [
+        {
+          "code": "official_candidate_mismatch",
+          "severity": "moderate",
+          "detail": "Spirogyra is not among the practical11 candidate list (Euglena, Paramecium, Amoeba, Ulva, Diatoms, Sargassum, Gelidium). The exercise is valid enrichment, but does not follow the stated official specimen set."
+        }
+      ],
+      "numeric_checks": [],
+      "source_alignment": "needs_official_candidate_replacement",
+      "audit_note": "Use Ulva as the fourth specimen for direct alignment, keeping the original case ID."
+    },
+    {
+      "id": "PM40-B12",
+      "activity_id": "bio-012",
+      "handbook_print_page": 13,
+      "issues": [],
+      "numeric_checks": [],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Representative moss, fern, Pinus-like gymnosperm and dicot features sound. No calculated numbers; cotyledon/floral counts are supplied diagnostic traits."
+    },
+    {
+      "id": "PM40-B13",
+      "activity_id": "bio-013",
+      "handbook_print_page": 14,
+      "issues": [
+        {
+          "code": "traditional_taxonomy_scope",
+          "severity": "minor",
+          "detail": "Phylum names follow the2017 NIE syllabus and should not be advertised as an exhaustive current fungal taxonomy."
+        }
+      ],
+      "numeric_checks": [],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Reproductive-structure classifications valid in the stated traditional groups. Restrict the sterile-hypha inference to this limited sample; molecular identification is outside this exercise. No arithmetic required."
+    },
+    {
+      "id": "PM40-B14",
+      "activity_id": "bio-014",
+      "handbook_print_page": 15,
+      "issues": [],
+      "numeric_checks": [],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Features correctly distinguish the five representative phyla. Complete gut is a supplied feature of E, not a universal echinoderm claim; tube feet and adult pentaradial structure are the stronger cues."
+    },
+    {
+      "id": "PM40-B15",
+      "activity_id": "bio-015",
+      "handbook_print_page": 16,
+      "issues": [
+        {
+          "code": "fish_class_underdetermined",
+          "severity": "moderate",
+          "detail": "A is identified only as fish; the official practical distinguishes Osteichthyes and Chondrichthyes, and current features do not discriminate them."
+        }
+      ],
+      "numeric_checks": [],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Monotreme counterexample to live-birth definition is valid. Endothermic temperature is regulated, not literally unchanging."
+    },
+    {
+      "id": "PM40-B16",
+      "activity_id": "bio-016",
+      "handbook_print_page": 17,
+      "issues": [
+        {
+          "code": "lignification_does_not_universally_kill",
+          "severity": "major",
+          "detail": "Lignification is incorrectly presented as directly killing every affected cell. Living lignified cells exist; death of mature vessel elements/fibres is not a universal consequence of lignin deposition."
+        },
+        {
+          "code": "walls_not_living",
+          "severity": "moderate",
+          "detail": "Living versus dead walls is incorrect: living/dead describes cells/protoplasts, not cell walls."
+        }
+      ],
+      "numeric_checks": [],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Cell identifications correct; explanations need correction."
+    },
+    {
+      "id": "PM40-B18",
+      "activity_id": "bio-018",
+      "handbook_print_page": 19,
+      "issues": [
+        {
+          "code": "complex_xylem_viability",
+          "severity": "major",
+          "detail": "Secondary xylem is a complex tissue containing living parenchyma as well as dead conducting and supporting elements."
+        },
+        {
+          "code": "radial_increment_not_total_radius",
+          "severity": "minor",
+          "detail": "The sum of the five ring widths is the represented radial increment, not necessarily the full stem or wood radius if a pith/earlier region is not accounted for."
+        }
+      ],
+      "numeric_checks": [
+        {
+          "label": "sum ring widths",
+          "expression": "2+3+2.5+1+1.5",
+          "expected": 10,
+          "tolerance": 1e-09,
+          "unit": "mm"
+        },
+        {
+          "label": "mean ring width",
+          "expression": "(2+3+2.5+1+1.5)/5",
+          "expected": 2,
+          "tolerance": 1e-09,
+          "unit": "mm per ring"
+        },
+        {
+          "label": "widest over mean",
+          "expression": "3/2",
+          "expected": 1.5,
+          "tolerance": 1e-09,
+          "unit": "times"
+        },
+        {
+          "label": "transfer equal width",
+          "expression": "12/6",
+          "expected": 2,
+          "tolerance": 1e-09,
+          "unit": "mm"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": ""
+    },
+    {
+      "id": "PM40-B24",
+      "activity_id": "bio-024",
+      "handbook_print_page": 29,
+      "issues": [],
+      "numeric_checks": [],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Mouth/stomach/duodenum matching is correctly provisional. Secretions and pH functions sound; descriptive rather than a literal anatomical-handbook method. Input pHs are fictional observations, not derived numerical values."
+    },
+    {
+      "id": "PM40-B25",
+      "activity_id": "bio-025",
+      "handbook_print_page": 30,
+      "issues": [],
+      "numeric_checks": [
+        {
+          "label": "rest output cm3",
+          "expression": "72*70",
+          "expected": 5040,
+          "tolerance": 1e-09,
+          "unit": "cm³ min⁻¹"
+        },
+        {
+          "label": "rest output dm3",
+          "expression": "72*70/1000",
+          "expected": 5.04,
+          "tolerance": 1e-09,
+          "unit": "dm³ min⁻¹"
+        },
+        {
+          "label": "exercise output cm3",
+          "expression": "140*100",
+          "expected": 14000,
+          "tolerance": 1e-09,
+          "unit": "cm³ min⁻¹"
+        },
+        {
+          "label": "exercise output dm3",
+          "expression": "140*100/1000",
+          "expected": 14,
+          "tolerance": 1e-09,
+          "unit": "dm³ min⁻¹"
+        },
+        {
+          "label": "output ratio",
+          "expression": "14/5.04",
+          "expected": 2.78,
+          "tolerance": 0.005,
+          "unit": "times"
+        },
+        {
+          "label": "heart rate ratio",
+          "expression": "140/72",
+          "expected": 1.94,
+          "tolerance": 0.005,
+          "unit": "times"
+        },
+        {
+          "label": "stroke volume ratio",
+          "expression": "100/70",
+          "expected": 1.43,
+          "tolerance": 0.005,
+          "unit": "times"
+        },
+        {
+          "label": "transfer output cm3",
+          "expression": "60*80",
+          "expected": 4800,
+          "tolerance": 1e-09,
+          "unit": "cm³ min⁻¹"
+        },
+        {
+          "label": "transfer output dm3",
+          "expression": "60*80/1000",
+          "expected": 4.8,
+          "tolerance": 1e-09,
+          "unit": "dm³ min⁻¹"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "All computed values correct. Artery/vein structure examples are representative rather than universal; no new procedure."
+    },
+    {
+      "id": "PM40-B27",
+      "activity_id": "bio-027",
+      "handbook_print_page": 32,
+      "issues": [
+        {
+          "code": "flame_cell_function_overstated",
+          "severity": "moderate",
+          "detail": "The claim all four structures remove nitrogenous waste overstates protonephridial contribution in flatworms; their major role is osmoregulation, with much ammonia lost over the body surface."
+        },
+        {
+          "code": "nephron_reabsorption_location",
+          "severity": "minor",
+          "detail": "Useful solutes are reabsorbed along loops is too loose; reabsorption occurs across specialised nephron tubule regions, while loops contribute to concentration gradients."
+        }
+      ],
+      "numeric_checks": [],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": ""
+    },
+    {
+      "id": "PM40-B28",
+      "activity_id": "bio-028",
+      "handbook_print_page": 33,
+      "issues": [
+        {
+          "code": "monosynaptic_vs_relay_ambiguity",
+          "severity": "moderate",
+          "detail": "A stated single synapse fits a direct sensory-to-motor spinal connection; relay wording could be mistaken for an additional interneuron, which would require at least two central synapses."
+        }
+      ],
+      "numeric_checks": [
+        {
+          "label": "conduction seconds",
+          "expression": "(.8+.8)/80",
+          "expected": 0.02,
+          "tolerance": 1e-09,
+          "unit": "s"
+        },
+        {
+          "label": "conduction milliseconds",
+          "expression": "(.8+.8)/80*1000",
+          "expected": 20,
+          "tolerance": 1e-09,
+          "unit": "ms"
+        },
+        {
+          "label": "model reflex total",
+          "expression": "20+1",
+          "expected": 21,
+          "tolerance": 1e-09,
+          "unit": "ms"
+        },
+        {
+          "label": "voluntary/reflex ratio",
+          "expression": "200/21",
+          "expected": 9.5,
+          "tolerance": 0.05,
+          "unit": "times"
+        },
+        {
+          "label": "transfer seconds",
+          "expression": "1.6/40",
+          "expected": 0.04,
+          "tolerance": 1e-09,
+          "unit": "s"
+        },
+        {
+          "label": "transfer milliseconds",
+          "expression": "1.6/40*1000",
+          "expected": 40,
+          "tolerance": 1e-09,
+          "unit": "ms"
+        }
+      ],
+      "source_alignment": "associated_neural_timing_enrichment",
+      "audit_note": "Arithmetic correct under one-synapse assumptions. Official28 focuses gross nervous-system organisation/brain diagrams; this timing problem is associated physiology enrichment."
+    },
+    {
+      "id": "PM40-B29",
+      "activity_id": "bio-029",
+      "handbook_print_page": 34,
+      "issues": [],
+      "numeric_checks": [
+        {
+          "label": "back/fingertip threshold ratio",
+          "expression": "45/2",
+          "expected": 22.5,
+          "tolerance": 1e-09,
+          "unit": "times"
+        },
+        {
+          "label": "transfer forearm/palm ratio",
+          "expression": "35/10",
+          "expected": 3.5,
+          "tolerance": 1e-09,
+          "unit": "times"
+        }
+      ],
+      "source_alignment": "associated_sensory_physiology_enrichment",
+      "audit_note": "Arithmetic correct. Smaller threshold means better spatial discrimination. Receptor density, receptive-field size and cortical representation influence it; ratios describe threshold separation rather than a universal scalar of all sensitivity. Official29 is receptor-model/diagram observation."
+    },
+    {
+      "id": "PM40-B30",
+      "activity_id": "bio-030",
+      "handbook_print_page": 35,
+      "issues": [
+        {
+          "code": "light_flux_condition",
+          "severity": "moderate",
+          "detail": "A ninefold area increase does not show that the actual dim-light flux exceeds bright-light flux ninefold; incident illumination differs between those settings."
+        }
+      ],
+      "numeric_checks": [
+        {
+          "label": "bright pupil area",
+          "expression": "3.141592653589793*(2/2)**2",
+          "expected": 3.14,
+          "tolerance": 0.005,
+          "unit": "mm²"
+        },
+        {
+          "label": "dim pupil area",
+          "expression": "3.141592653589793*(6/2)**2",
+          "expected": 28.3,
+          "tolerance": 0.05,
+          "unit": "mm²"
+        },
+        {
+          "label": "exact area ratio",
+          "expression": "(6/2)**2",
+          "expected": 9,
+          "tolerance": 1e-09,
+          "unit": "times"
+        },
+        {
+          "label": "rounded area ratio",
+          "expression": "28.3/3.14",
+          "expected": 9,
+          "tolerance": 0.05,
+          "unit": "times"
+        },
+        {
+          "label": "transfer area factor",
+          "expression": "(6/3)**2",
+          "expected": 4,
+          "tolerance": 1e-09,
+          "unit": "times"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Iris antagonism and sound path correct at the requested schematic level."
+    },
+    {
+      "id": "PM40-B31",
+      "activity_id": "bio-031",
+      "handbook_print_page": 36,
+      "issues": [],
+      "numeric_checks": [
+        {
+          "label": "scrotum/core temperature difference",
+          "expression": "37-34.5",
+          "expected": 2.5,
+          "tolerance": 1e-09,
+          "unit": "°C"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Anatomy and lower-temperature role sound; figures explicitly fictional."
+    },
+    {
+      "id": "PM40-B32",
+      "activity_id": "bio-032",
+      "handbook_print_page": 37,
+      "issues": [],
+      "numeric_checks": [
+        {
+          "label": "assumed32day cycle ovulation day",
+          "expression": "32-14",
+          "expected": 18,
+          "tolerance": 1e-09,
+          "unit": "cycle day"
+        }
+      ],
+      "source_alignment": "anatomy_related_hormone_timeline_enrichment",
+      "audit_note": "Timeline and feedback reasonable within stated ideal28day model. Day18 follows only the supplied14day-before-next-menses assumption, not an individual prediction. Official32 primarily anatomical structures and ovarian follicles."
+    },
+    {
+      "id": "PM40-B33",
+      "activity_id": "bio-033",
+      "handbook_print_page": 38,
+      "issues": [],
+      "numeric_checks": [
+        {
+          "label": "free vertebrae",
+          "expression": "7+12+5",
+          "expected": 24,
+          "tolerance": 1e-09,
+          "unit": "vertebrae"
+        },
+        {
+          "label": "usual total segments",
+          "expression": "7+12+5+5+4",
+          "expected": 33,
+          "tolerance": 1e-09,
+          "unit": "vertebral segments"
+        },
+        {
+          "label": "adult separate bones model",
+          "expression": "24+1+1",
+          "expected": 26,
+          "tolerance": 1e-09,
+          "unit": "bones"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Usual counts correct with stated coccygeal variation. Cervical transverse foramina diagnose region; avoid implying the vertebral artery passes through every cervical transverse foramen."
+    },
+    {
+      "id": "PM40-B34",
+      "activity_id": "bio-034",
+      "handbook_print_page": 40,
+      "issues": [
+        {
+          "code": "perpendicular_moment_arm_unspecified",
+          "severity": "moderate",
+          "detail": "Distances from a pivot equal moment arms only for perpendicular forces; the force geometry needs an explicit model assumption."
+        },
+        {
+          "code": "valid_moment_origin_mislabelled",
+          "severity": "moderate",
+          "detail": "Taking moments about the load is not inherently wrong; static torque balance can use any origin if all relevant forces are included."
+        }
+      ],
+      "numeric_checks": [
+        {
+          "label": "load torque",
+          "expression": "20*.3",
+          "expected": 6,
+          "tolerance": 1e-09,
+          "unit": "N m"
+        },
+        {
+          "label": "biceps force",
+          "expression": "20*.3/.04",
+          "expected": 150,
+          "tolerance": 1e-09,
+          "unit": "N"
+        },
+        {
+          "label": "mechanical advantage",
+          "expression": ".04/.3",
+          "expected": 0.133,
+          "tolerance": 0.0005,
+          "unit": "dimensionless"
+        },
+        {
+          "label": "muscle/load ratio",
+          "expression": "150/20",
+          "expected": 7.5,
+          "tolerance": 1e-09,
+          "unit": "times"
+        },
+        {
+          "label": "transfer biceps force",
+          "expression": "20*.25/.04",
+          "expected": 125,
+          "tolerance": 1e-09,
+          "unit": "N"
+        }
+      ],
+      "source_alignment": "associated_biomechanics_enrichment",
+      "audit_note": "Numerical results correct with the perpendicular-arm assumption. Official34 observes appendicular bones/movement rather than quantifying lever forces."
+    },
+    {
+      "id": "PM40-B35",
+      "activity_id": "bio-035",
+      "handbook_print_page": 41,
+      "issues": [],
+      "numeric_checks": [
+        {
+          "label": "first5min survivor reduction",
+          "expression": "10**6/10**4",
+          "expected": 100,
+          "tolerance": 1e-09,
+          "unit": "fold"
+        },
+        {
+          "label": "second5min survivor reduction",
+          "expression": "10**4/10**2",
+          "expected": 100,
+          "tolerance": 1e-09,
+          "unit": "fold"
+        },
+        {
+          "label": "third5min survivor reduction",
+          "expression": "10**2/10**0",
+          "expected": 100,
+          "tolerance": 1e-09,
+          "unit": "fold"
+        },
+        {
+          "label": "two log factor",
+          "expression": "10**2",
+          "expected": 100,
+          "tolerance": 1e-09,
+          "unit": "fold"
+        },
+        {
+          "label": "log decline rate",
+          "expression": "2/5",
+          "expected": 0.4,
+          "tolerance": 1e-09,
+          "unit": "log10 units min⁻¹"
+        },
+        {
+          "label": "D value",
+          "expression": "5/2",
+          "expected": 2.5,
+          "tolerance": 1e-09,
+          "unit": "min"
+        },
+        {
+          "label": "12log time",
+          "expression": "12*2.5",
+          "expected": 30,
+          "tolerance": 1e-09,
+          "unit": "min"
+        },
+        {
+          "label": "transfer time",
+          "expression": "6*3",
+          "expected": 18,
+          "tolerance": 1e-09,
+          "unit": "min"
+        }
+      ],
+      "source_alignment": "method_selection_with_thermal_model_enrichment",
+      "audit_note": "Theoretical D-value arithmetic correct and conditional. Low expected survivors do not guarantee sterility. A membrane suitable for bacteria need not remove every virus or dissolved toxin; wording should not make an unrestricted guarantee. No actual temperature supplied; not an operating protocol."
+    },
+    {
+      "id": "PM40-B36",
+      "activity_id": "bio-036",
+      "handbook_print_page": 43,
+      "issues": [
+        {
+          "code": "countable_wording",
+          "severity": "minor",
+          "detail": "Question calls the5-colony plate the other countable plate, while the key correctly says it falls below the stated30–300 illustrative counting range."
+        },
+        {
+          "code": "blank_control_proof",
+          "severity": "minor",
+          "detail": "An uninoculated plate with no visible colonies does not prove absence of every contaminant."
+        },
+        {
+          "code": "CFU_count_vs_total_cells",
+          "severity": "minor",
+          "detail": "CFU can underestimate total cell number through clumping and growth conditions; the wording should remain conditional rather than universal."
+        }
+      ],
+      "numeric_checks": [
+        {
+          "label": "chosen plate original CFU",
+          "expression": "45/(.1*10**-3)",
+          "expected": 450000,
+          "tolerance": 1e-09,
+          "unit": "CFU cm⁻³"
+        },
+        {
+          "label": "low count plate original CFU",
+          "expression": "5/(.1*10**-4)",
+          "expected": 500000,
+          "tolerance": 1e-09,
+          "unit": "CFU cm⁻³"
+        },
+        {
+          "label": "transfer original CFU",
+          "expression": "120/(.1*10**-4)",
+          "expected": 12000000,
+          "tolerance": 1e-06,
+          "unit": "CFU cm⁻³"
+        }
+      ],
+      "source_alignment": "associated_viable_count_enrichment",
+      "audit_note": "All CFU arithmetic correct. Official36 uses streaking and colony-morphology observation rather than a serial-dilution viable-count assay."
+    },
+    {
+      "id": "PM40-B37",
+      "activity_id": "bio-037",
+      "handbook_print_page": 45,
+      "issues": [
+        {
+          "code": "fixation_not_viability_test",
+          "severity": "minor",
+          "detail": "Fixed stained slides do not demonstrate live behaviour; asserting all cells are dead from image information alone is a stronger claim than needed and must not imply guaranteed sterilisation."
+        }
+      ],
+      "numeric_checks": [
+        {
+          "label": "rod length",
+          "expression": "2*2.5",
+          "expected": 5,
+          "tolerance": 1e-09,
+          "unit": "µm"
+        },
+        {
+          "label": "yeast diameter",
+          "expression": "3*2.5",
+          "expected": 7.5,
+          "tolerance": 1e-09,
+          "unit": "µm"
+        },
+        {
+          "label": "yeast/rod represented size ratio",
+          "expression": "7.5/5",
+          "expected": 1.5,
+          "tolerance": 1e-09,
+          "unit": "times"
+        },
+        {
+          "label": "transfer bacterial length",
+          "expression": "4*2.5",
+          "expected": 10,
+          "tolerance": 1e-09,
+          "unit": "µm"
+        }
+      ],
+      "source_alignment": "activity_related_theoretical_practice",
+      "audit_note": "Simple-stain/Gram distinction correct; calibration and likely morphology interpretations sound."
+    }
+  ],
+  "corrections": [
+    {
+      "question_id": "PM40-B01",
+      "reason": "Avoid absolute absence claims from qualitative negative tests.",
+      "patch": {
+        "marks": [
+          "P contains a reducing sugar: Benedict's reagent gives a brick-red (orange-red) precipitate on heating.",
+          "Q is consistent with a non-reducing sugar: it is negative directly but positive after hydrolysis releases reducing sugars.",
+          "R contains starch: iodine solution turns blue-black.",
+          "S contains protein: the biuret test gives a violet / purple colour (peptide bonds in alkaline copper(II) solution).",
+          "A direct negative Benedict's result means no reducing sugar was detected under those test conditions; it does not exclude all sugars. Q becoming positive after hydrolysis and neutralisation supports a non-reducing sugar. These tests are qualitative, with detection limits."
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B09",
+      "reason": "Scope the observation limit to the supplied routine images.",
+      "patch": {
+        "marks": [
+          "A is consistent with a bacterium (prokaryote): about 1 µm wide with no visible nucleus; \"clusters\" describes shape and arrangement only.",
+          "B is the most likely cyanobacterium: filamentous, blue-green pigmentation throughout the cell, and no chloroplasts.",
+          "C is eukaryotic: a distinct nucleus and a chloroplast are visible, and its cells are ten times wider than A (10.0 ÷ 1.0).",
+          "Cyanobacteria photosynthesise but are prokaryotes, so their pigments are in the cytoplasm / thylakoids, not in chloroplasts, and they have no membrane-bound nucleus.",
+          "These routine light-microscope descriptions do not reliably resolve a bacterial nucleoid or establish nuclear organisation from absence alone; combine size, pigmentation and arrangement. A nucleoid is not a membrane-bound nucleus."
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B11",
+      "reason": "Replace an unlisted genus with the handbook-listed Ulva for exact specimen-set alignment.",
+      "patch": {
+        "question": "Match A to D with Euglena, Amoeba, Paramecium and Ulva, and explain why green colour alone cannot classify A and D.",
+        "marks": [
+          "A is Euglena: flagellum, eyespot and chloroplasts in a single cell.",
+          "B is Amoeba: pseudopodia and a constantly changing shape.",
+          "C is Paramecium: cilia, fixed slipper shape, oral groove and two kinds of nuclei.",
+          "D is Ulva: a flat, green, multicellular sheet-like thallus.",
+          "A and D are both green, but A is a single motile cell with an eyespot and D is a multicellular sheet-like thallus. Colour alone is insufficient; combine cell organisation, movement and structural features."
+        ],
+        "data": [
+          [
+            "Specimen",
+            "Size / structure",
+            "Movement",
+            "Key features"
+          ],
+          [
+            "A",
+            "single cell, about 50 µm",
+            "whip-like flagellum",
+            "green chloroplasts; red eyespot"
+          ],
+          [
+            "B",
+            "single cell, about 300 µm",
+            "changes shape; extends pseudopodia",
+            "colourless; no fixed shape"
+          ],
+          [
+            "C",
+            "single cell, about 200 µm, slipper-shaped",
+            "beating cilia over the surface",
+            "oral groove; two kinds of nuclei"
+          ],
+          [
+            "D",
+            "flat, multicellular green sheet",
+            "thallus non-motile",
+            "thin sheet-like thallus; green chloroplasts in the cells of the sheet-like thallus"
+          ]
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B15",
+      "reason": "Supply discriminatory bony-fish evidence so the identification reaches the official class level.",
+      "patch": {
+        "marks": [
+          "A is Osteichthyes (a bony fish): a bony skeleton and operculum covering the gills support this identification.",
+          "B is an amphibian: moist skin and a larval gill stage that changes to lungs.",
+          "C is a reptile: dry scaly skin, lungs and shelled eggs laid on land.",
+          "D is Aves (a bird): feathers, lungs with air sacs and regulated endothermic body temperature.",
+          "E is a mammal (a monotreme): hair and mammary glands define mammals; because E lays eggs, live birth is not a defining feature."
+        ],
+        "data": [
+          [
+            "Specimen",
+            "Skin / covering",
+            "Breathing",
+            "Reproduction and other"
+          ],
+          [
+            "A",
+            "scales; fins",
+            "gills covered by an operculum",
+            "bony skeleton; eggs laid in water"
+          ],
+          [
+            "B",
+            "moist, thin, no scales",
+            "gills as a larva; lungs and skin as an adult",
+            "eggs laid in water"
+          ],
+          [
+            "C",
+            "dry scales",
+            "lungs",
+            "shelled eggs laid on land"
+          ],
+          [
+            "D",
+            "feathers",
+            "lungs with air sacs",
+            "shelled eggs; regulated endothermic body temperature"
+          ],
+          [
+            "E",
+            "hair",
+            "lungs",
+            "feeds young on milk from mammary glands; lays eggs"
+          ]
+        ],
+        "transfer": "Which two specimens are endothermic and ordinarily maintain relatively stable body temperatures?",
+        "transfer_answer": "D (bird) and E (mammal); their temperatures are regulated rather than perfectly constant."
+      }
+    },
+    {
+      "question_id": "PM40-B16",
+      "reason": "Correct false causal and universal statements about lignification and cell viability.",
+      "patch": {
+        "marks": [
+          "A is parenchyma: thin-walled living cells that store material and carry out metabolism.",
+          "B is collenchyma: living cells with unevenly thickened primary walls provide flexible support. C is a sclerenchyma fibre: typically dead at maturity, with thick lignified secondary walls providing rigid support.",
+          "D is a xylem vessel element: lignified, dead and hollow, forming a tube for water transport.",
+          "E is a phloem sieve-tube element: living, with sieve plates and a companion cell, transporting sugars.",
+          "Lignin strengthens walls and reduces their permeability. Mature vessel elements and many sclerenchyma fibres lose their protoplasts during differentiation, but lignification itself does not imply every lignified cell is dead. Sieve-tube elements remain living."
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B18",
+      "reason": "Distinguish complex secondary xylem from its dead elements and clarify what the ring-width sum represents.",
+      "patch": {
+        "marks": [
+          "Total radial increment represented by the five rings = 2.0 + 3.0 + 2.5 + 1.0 + 1.5 = 10.0 mm; mean ring width = 10.0/5 = 2.00 mm per ring.",
+          "Ring 4 is narrowest (1.0 mm) and ring 2 widest (3.0 mm, 1.5 times the mean); width shows growth rate only, not its cause (rainfall, shade or damage).",
+          "The vascular cambium makes secondary xylem on its inner side and secondary phloem on its outer side, so wood accumulates inward and ring 1 is the oldest.",
+          "Secondary xylem is a complex tissue. Its mature vessel elements/tracheids are dead and lignified for water transport/support, while xylem parenchyma can remain alive.",
+          "In weakly seasonal tropical climates the cambium may be active all year or in several bursts, giving indistinct or false rings, so counts need independent evidence."
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B27",
+      "reason": "Correct comparative excretory/osmoregulatory functions without making unsupported evolutionary claims.",
+      "patch": {
+        "marks": [
+          "A is the Malpighian tubules (insect): semi-solid uric acid is excreted, losing little water.",
+          "B is a nephridium (earthworm): the ciliated funnel collects fluid from the coelom.",
+          "C is a flame cell / protonephridium (flatworm).",
+          "D is a mammalian nephron: glomerular filtration is followed by selective tubular reabsorption and secretion; loops and collecting ducts contribute to producing urine of variable concentration. Urea is the principal nitrogenous waste in humans.",
+          "These structures contribute to excretion and/or osmoregulation but are not structurally identical. Flame-cell systems mainly regulate water balance; in flatworms much ammonia is lost across the body surface. Function alone does not establish structural identity or evolutionary origin."
+        ],
+        "data": [
+          [
+            "Structure",
+            "Description"
+          ],
+          [
+            "A",
+            "blind-ending tubules attached to the gut; produce a semi-solid white waste"
+          ],
+          [
+            "B",
+            "one pair in each body segment; ciliated funnel opening into the body cavity"
+          ],
+          [
+            "C",
+            "bulb-like cells with a beating tuft of cilia, joined to a tubule that opens at the surface"
+          ],
+          [
+            "D",
+            "blood is filtered at a capsule; useful solutes are reabsorbed along nephron tubules; urine concentration is adjusted"
+          ]
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B28",
+      "reason": "Specify a monosynaptic model so the anatomical pathway matches the single delay and preserve correct arithmetic.",
+      "patch": {
+        "scenario": "A fictional monosynaptic spinal-reflex model has a sensory neuron 0.80 m long and a motor neuron 0.80 m long; both conduct at 80 m s⁻¹. One direct sensory-to-motor spinal synapse adds 1.0 ms. Receptor activation, neuromuscular transmission and muscle response delays are excluded. A separately supplied voluntary-response time is 200 ms. This is an associated theoretical timing exercise, not the gross-anatomy method specified in NIE Practical 28.",
+        "marks": [
+          "For this specified monosynaptic model: receptor → sensory neuron → one direct sensory-to-motor synapse in spinal cord → motor neuron → muscle effector; no spinal interneuron is included.",
+          "Conduction time = (0.80 + 0.80) ÷ 80 = 0.020 s = 20 ms.",
+          "Total reflex time = 20 ms + 1.0 ms synaptic delay = 21 ms.",
+          "200/21 = 9.52, approximately 9.5 times as long. Additional processing can contribute to a voluntary-response delay, but these two timing values do not independently identify its precise mechanisms.",
+          "Limitation: conduction velocity depends on myelination and fibre diameter, and receptor and muscle delays were ignored."
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B30",
+      "reason": "Separate geometric aperture ratio from light flux under different illumination.",
+      "patch": {
+        "marks": [
+          "Area = π(d ÷ 2)²: bright light π(1.0)² = 3.14 mm², dim light π(3.0)² = 28.3 mm².",
+          "Pupil-area ratio = (6.0/2.0)² = 9.0. At equal incident irradiance this aperture-area increase would admit about nine times the light; actual bright-versus-dim light flux cannot be calculated from pupil diameters alone.",
+          "In bright light the circular iris muscles contract (smaller pupil); in dim light the radial muscles contract (larger pupil); the two sets act antagonistically.",
+          "Sound route: pinna, ear canal, tympanic membrane, ear ossicles, oval window, fluid in the cochlea, hair cells, auditory nerve.",
+          "Limitation: pupil size is only one of several adjustments to light level; the retina also adapts, so the area ratio is not the whole change in sensitivity."
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B34",
+      "reason": "State perpendicular lever arms and remove an incorrect statics rule.",
+      "patch": {
+        "scenario": "A fictional forearm lever model is at rest. The biceps force has a perpendicular moment arm of 0.040 m about the elbow; a 20.0 N external load has a perpendicular moment arm of 0.300 m. Neglect forearm weight. The model includes only biceps force, external load and the elbow reaction. This associated biomechanics exercise extends the handbook skeletal-model observations.",
+        "error": "Confusing radial distance with perpendicular moment arm, mixing units, or omitting a force when choosing a different moment origin.",
+        "transfer": "If the external load’s perpendicular moment arm becomes 0.250 m while the biceps moment arm remains 0.040 m, what biceps force balances the model?"
+      }
+    },
+    {
+      "question_id": "PM40-B36",
+      "reason": "Clarify statistical counting terminology and evidence limits; preserve correct calculation.",
+      "patch": {
+        "question": "Select the plate within the stated illustrative 30–300-colony counting range. Calculate CFU per cm³ of the original suspension, compare the low-count plate estimate, and state two limitations. This is associated quantitative culture-data enrichment, not the handbook streak-plate morphology method.",
+        "marks": [
+          "Use a plate with a countable number of colonies (usually 30 to 300): the 10⁻³ plate with 45.",
+          "CFU cm⁻³ = 45 ÷ (0.100 × 10⁻³) = 4.5 × 10⁵.",
+          "The 10⁻⁴ plate gives 5 ÷ (0.100 × 10⁻⁴) = 5.0 × 10⁵, consistent, but five colonies is too few to be statistically reliable.",
+          "A colony may arise from a cell clump, so CFU need not equal individual-cell number; only organisms forming colonies under the supplied conditions contribute to the count.",
+          "Colony appearance does not establish species. An uninoculated control checks for visible background growth under the same conditions; no visible colonies do not prove universal absence of contamination."
+        ]
+      }
+    },
+    {
+      "question_id": "PM40-B37",
+      "reason": "State what fixed stained images establish without an unsupported viability guarantee.",
+      "patch": {
+        "marks": [
+          "Methylene blue is a simple (single dye) stain: it colours cells against a pale background so shape, arrangement and size can be seen.",
+          "Slide 1 rod length = 2.0 × 2.5 = 5.0 µm, a size typical of bacteria; the rods are likely bacteria.",
+          "Slide 2 diameter = 3.0 × 2.5 = 7.5 µm, 1.5 times the rod length, with buds: likely yeast, which are eukaryotic and reproduce by budding.",
+          "The stain does not give the species or the Gram reaction, so no species name or cell-wall type can be assigned from these slides.",
+          "Staining and fixation can distort appearance. A static fixed stained preparation cannot demonstrate active motility or growth, and it is not itself a viability or sterility test."
+        ]
+      }
+    }
+  ]
+}

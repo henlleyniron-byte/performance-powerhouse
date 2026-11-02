@@ -1,0 +1,45 @@
+case_id,label,calculated,displayed_target,rounding_tolerance,pass
+PM5-P01,annular volume,15.079644737231003,15.1,0.05,True
+PM5-P02,wire area,2.206183440983432e-07,2.21e-07,5e-10,True
+PM5-P03,curvature,200.375,200.375,0.0005,True
+PM5-P04,bore area,5.026548245743669e-07,5.03e-07,5e-10,True
+PM5-P05,mass,0.5102040816326531,0.51,0.0005,True
+PM5-P06,unknown mass,60.0,60,0.0001,True
+PM5-P07,oil density,900.0,900,0.001,True
+PM5-P08,solution density,1200.0,1200,0.001,True
+PM5-P09,density,1.0505276771742267,1.05,0.005,True
+PM5-P10,g,9.791784196190138,9.79,0.005,True
+PM5-P11,k,19.739208802178716,19.7,0.05,True
+PM5-P12,frequency,250.0,250,0.001,True
+PM5-P13,speed,160.0,160,0.001,True
+PM5-P14,speed,339.96799999999996,340,0.5,True
+PM5-P14,end correction,0.008000000000000007,0.008,5e-06,True
+PM5-P15,intercept,-0.006000000000000005,-0.006,5e-06,True
+PM5-P16,index,1.5,1.5,0.005,True
+PM5-P17,symmetric incidence,48.6,48.6,0.05,True
+PM5-P18,index,1.5042211477601501,1.5,0.005,True
+PM5-P19,prism angle,60.0,60,0.001,True
+PM5-P20,index,1.4979114415780044,1.5,0.005,True
+PM5-P21,focal length,20.0,20,0.001,True
+PM5-P22,focal length,-20.0,-20,0.001,True
+PM5-P23,atmospheric pressure,75.0,75,0.05,True
+PM5-P24,predicted length,72.03,72.03,0.005,True
+PM5-P25,last ratio,0.33332353373511686,0.333324,5e-07,True
+PM5-P26,solid specific heat,130.50847457627117,131,0.5,True
+PM5-P27,liquid specific heat,2000.0,2000,0.001,True
+PM5-P28,latent heat,333061.61137440754,333000.0,500,True
+PM5-P29,latent heat,2262285.714285714,2260000.0,5000,True
+PM5-P30,relative humidity,61.62464985994398,61.6,0.05,True
+PM5-P31,conductivity,356.5070725258457,357,0.5,True
+PM5-P32,power,0.010000000000000002,0.01,1e-06,True
+PM5-P33,coefficient,0.004,0.004,1e-07,True
+PM5-P34,unknown emf,1.5,1.5,0.005,True
+PM5-P35,resistance,2.0,2,0.001,True
+PM5-P36,secant resistance,7.692307692307693,7.69,0.005,True
+PM5-P37,gain,119.99999999999999,120,0.001,True
+PM5-P38,"NAND output for 1,1",0,0,0.0001,True
+PM5-P39,modulus,199643960614.47354,200000000000.0,500000000.0,True
+PM5-P40,viscosity,0.001002200781418619,0.001,5e-06,True
+PM5-P41,surface tension,0.07221052631578948,0.0722,5e-05,True
+PM5-P42,surface tension,0.072275,0.0723,5e-05,True
+PM5-P43,surface tension,0.07056000000000001,0.0706,5e-05,True

@@ -1,0 +1,16 @@
+﻿id,subject,activity_id,NIE practical,NIE printed page,title,marks
+PM32-B01,biology,bio-005,5,6,Enzyme data: rate proxy against temperature,6
+PM32-B02,biology,bio-006,6,7,Photosynthesis evidence and confounding variables,6
+PM32-B03,biology,bio-020,20,21,Plasmolysis interpolation and inference limits,6
+PM32-B04,biology,bio-026,26,31,Pulse recovery: quantify without over-generalising,6
+PM32-B05,biology,bio-021,21,24,Plant tissue mass change: locate the zero crossing,6
+PM32-C01,chemistry,che-044,44,135,Concordant results and an outlier: numerical judgement,6
+PM32-C02,chemistry,che-032,32,98,Initial-rate graph: what order can actually be inferred?,6
+PM32-C03,chemistry,che-005,5,23,Boyle-model consistency with proper units,6
+PM32-C04,chemistry,che-007,7,31,Calorimetry curve: peak versus heat losses,6
+PM32-C05,chemistry,che-038,38,117,Partition graph: slope is not automatic proof,6
+PM32-P01,physics,phy-010,10,24,Pendulum T² versus length: slope to g,6
+PM32-P02,physics,phy-011,11,26,Spring period graph: handle a nonzero intercept,6
+PM32-P03,physics,phy-031,31,73,Terminal voltage graph: emf and internal resistance,6
+PM32-P04,physics,phy-032,32,75,Resistance–temperature gradient and reference alpha,6
+PM32-P05,physics,phy-015,15,34,Resonance plot: milliseconds versus seconds,6
