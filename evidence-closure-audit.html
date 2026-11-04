@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evidence Closure Audit · Performance Powerhouse</title>
+<style>
+:root{color-scheme:dark;font:16px system-ui;background:#091426;color:#ebf4ff}*{box-sizing:border-box}body{margin:0 auto;max-width:850px;padding:28px 18px}h1{margin-bottom:8px}p{line-height:1.5;color:#b9cce4}fieldset{border:1px solid #37516f;border-radius:14px;margin:18px 0;padding:18px}legend{padding:0 8px;font-weight:700}label{display:block;margin:12px 0}input:not([type=checkbox]),textarea,select{width:100%;background:#13283f;color:white;border:1px solid #496480;border-radius:8px;padding:11px;font:inherit}textarea{min-height:72px}input[type=checkbox]{accent-color:#72cdb6;transform:scale(1.15);margin-right:10px}button{background:#78d6bd;color:#052c29;border:0;border-radius:8px;padding:12px 18px;font-weight:700;cursor:pointer;margin:6px 8px 6px 0}button.secondary{background:#29425c;color:#fff}#result{border:1px solid #55728d;padding:20px;border-radius:14px;background:#10263c}#result strong{font-size:1.3rem}ul{padding-left:22px;line-height:1.7}.muted{font-size:.86rem}a{color:#9bdbff}@media print{button{display:none}body{max-width:none;color:#000;background:#fff}#result{color:#000;background:#fff}p{color:#333}}
+</style></head><body><p><a href="./index.html">← Performance Powerhouse</a></p><h1>Evidence Closure Auditor</h1><p>Independent, local-only checklist. It does not read or modify your existing study records. A corrected answer is not considered mastered until a fresh delayed retest is passed.</p>
+<form id="audit"><fieldset><legend>1 · Identify the question and marking evidence</legend>
+<label>Subject<select name="subject"><option>Biology</option><option>Chemistry</option><option>Physics</option></select></label>
+<label>Topic / paper reference<input name="reference" maxlength="180" required placeholder="e.g. Chemistry 2025 Paper I Q12"></label>
+<label>Primary error family<select name="cause"><option>Conceptual misunderstanding</option><option>Recall gap</option><option>Calculation / units</option><option>Question interpretation</option><option>Time management</option><option>Carelessness / checking</option><option>Unsupported guess</option><option>Other / pending diagnosis</option></select></label>
+<label><input type="checkbox" name="marked">Original attempt completed independently and strictly marked</label>
+<label><input type="checkbox" name="diagnosed">Specific lost marks and root cause identified</label>
+</fieldset><fieldset><legend>2 · Repair and independent proof</legend>
+<label><input type="checkbox" name="repaired">Narrow repair completed with source checked</label>
+<label><input type="checkbox" name="reattempt">Closed-book reattempt passed without prompts</label>
+<label><input type="checkbox" name="transfer">Unseen transfer question passed independently</label>
+<label><input type="checkbox" name="retest">Delayed retest passed independently after spacing</label>
+<label>Delayed retest date (if known)<input type="date" name="due"></label>
+<label>Evidence note (do not include private identities)<textarea name="note" maxlength="500" placeholder="Score, marking scheme reference, and what changed"></textarea></label>
+</fieldset><button type="submit">Audit evidence</button><button type="button" class="secondary" id="reset">Clear form</button></form><section id="result" role="status" aria-live="polite"><strong>Not assessed</strong><p>Tick only steps you can substantiate with real attempt evidence.</p></section>
+<p class="muted">Privacy: no analytics, accounts, network requests or browser storage. Export is initiated only when you choose it. A saved JSON is an evidence checklist, not automatic proof that a marking scheme was followed.</p>
+<script>
+(()=>{'use strict';
+const form=document.getElementById('audit'),out=document.getElementById('result');
+const stages=[['marked','Complete and strictly mark an independent attempt'],['diagnosed','Record the exact mark-loss cause'],['repaired','Perform a narrow, source-checked repair'],['reattempt','Pass a closed-book reattempt'],['transfer','Pass an unseen transfer question'],['retest','Pass a spaced delayed retest']];
+let record=null;
+function el(tag,text){const n=document.createElement(tag);n.textContent=text;return n;}
+form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);const flags=Object.fromEntries(stages.map(([key])=>[key,data.has(key)]));const firstMissing=stages.find(([key])=>!flags[key]);const validSequence=stages.every(([key],i)=>!flags[key]||stages.slice(0,i).every(([prior])=>flags[prior]));const complete=!firstMissing&&validSequence;
+record={schema:'performance-powerhouse-evidence-audit/v1',createdAt:new Date().toISOString(),subject:String(data.get('subject')),reference:String(data.get('reference')).trim(),cause:String(data.get('cause')),flags,due:String(data.get('due')||''),note:String(data.get('note')||'').trim(),status:!validSequence?'INCONSISTENT':complete?'CLOSED':'OPEN'};
+out.replaceChildren(el('strong',complete?'Evidence loop closed':validSequence?'Not yet mastered':'Evidence order inconsistent'));
+const p=el('p',complete?'All six proof gates are checked. Preserve actual marked work and verify the delayed test was genuinely new.':validSequence?'Next action: '+firstMissing[1]+'.':'A later stage is checked before a prerequisite. Re-check the proof rather than counting it as mastery.');out.append(p);
+const ul=document.createElement('ul');for(const [key,desc] of stages)ul.append(el('li',(flags[key]?'✓ ':'○ ')+desc));out.append(ul);
+const b=el('button','Download JSON evidence audit');b.type='button';b.addEventListener('click',()=>{const blob=new Blob([JSON.stringify(record,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='evidence-audit-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});out.append(b);
+});
+document.getElementById('reset').addEventListener('click',()=>{form.reset();record=null;out.replaceChildren(el('strong','Not assessed'),el('p','Tick only steps supported by actual evidence.'))});
+})();
+</script></body></html>
