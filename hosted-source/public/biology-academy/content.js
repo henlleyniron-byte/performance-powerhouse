@@ -1,0 +1,516 @@
+// Original practice content. Unit titles follow the NIE A/L Biology syllabus.
+// https://www.nie.lk/pdffiles/tg/AL_Syl%20Biology2017.pdf
+globalThis.PowerhouseBiologyAcademy = {
+  units: [
+    { id: "01", title: "Introduction to Biology" },
+    { id: "02", title: "Chemical and Cellular Basis of Life" },
+    { id: "03", title: "Evolution and Diversity of Organisms" },
+    { id: "04", title: "Plant Form and Function" },
+    { id: "05", title: "Animal Form and Function" },
+    { id: "06", title: "Genetics" },
+    { id: "07", title: "Molecular Biology and Recombinant DNA Technology" },
+    { id: "08", title: "Environmental Biology" },
+    { id: "09", title: "Microbiology" },
+    { id: "10", title: "Applied Biology" },
+  ],
+  modules: [
+    {
+      id: "molecular-biology",
+      title: "DNA, RNA and Protein Synthesis",
+      units: ["07"],
+      objective: "Distinguish the products of replication, transcription and translation and explain how genetic information is read.",
+      concepts: [
+        "Complementary pairing and antiparallel strands let each DNA strand serve as a template during replication.",
+        "RNA polymerase reads a DNA template 3′ to 5′ and makes RNA 5′ to 3′.",
+        "A codon is a triplet on mRNA. A tRNA anticodon pairs with a codon during translation, and a stop codon signals termination.",
+      ],
+      scenario: {
+        prompt: "A teaching diagram shows three arrows. For each arrow, predict what is made and what is read.",
+        options: [
+          { label: "Replication", observation: "DNA is made using DNA as the template. Each daughter double helix contains one parental strand and one new strand." },
+          { label: "Transcription", observation: "RNA is made using one DNA strand as the template for that transcript." },
+          { label: "Translation", observation: "A polypeptide is made as a ribosome reads codons on mRNA." },
+        ],
+        prediction: "Which two processes involve the synthesis of a nucleic acid?",
+        explanation: "Replication produces DNA and transcription produces RNA. Translation reads RNA to assemble a chain of amino acids.",
+      },
+      mcq: {
+        prompt: "Which statement correctly describes translation?",
+        options: [
+          "A ribosome reads amino acids to make RNA.",
+          "A DNA polymerase reads a codon to add an amino acid.",
+          "A ribosome reads codons on mRNA while matching tRNAs deliver amino acids.",
+          "A stop codon specifies an amino acid.",
+          "A tRNA anticodon is the DNA template for a transcript.",
+        ],
+        answer: 2,
+        explanations: [
+          "A ribosome reads mRNA and assembles a polypeptide.",
+          "DNA polymerase synthesizes DNA. The ribosome reads mRNA in translation.",
+          "Base pairing aligns the anticodon with its corresponding mRNA codon so the carried amino acid can be added.",
+          "In the standard genetic code, a stop codon signals termination rather than specifying an amino acid.",
+          "An anticodon occurs on tRNA and participates in translation. DNA is the template for transcription.",
+        ],
+      },
+      structured: {
+        prompt: "Explain why two DNA double helices produced by one round of replication are described as semiconservative. Give three distinct points.",
+        points: [
+          "The parental DNA strands separate.",
+          "Each parental strand acts as a template for synthesis of a complementary new strand.",
+          "Each daughter double helix contains one parental strand and one newly synthesized strand.",
+        ],
+      },
+      transfer: {
+        prompt: "A base substitution is present in a coding region, yet the corresponding amino acid stays the same. Explain how this can happen.",
+        answer: "The substitution can change an mRNA codon to another codon for the same amino acid. The genetic code is degenerate, so some amino acids are specified by more than one codon.",
+      },
+    },
+    {
+      id: "inheritance",
+      title: "Genetics and Inheritance",
+      units: ["06"],
+      objective: "Predict offspring probabilities from parental genotypes and distinguish genotype ratios from phenotype ratios.",
+      concepts: [
+        "The alleles of one gene segregate during gamete formation.",
+        "Under complete dominance, the heterozygote and homozygous dominant genotype have the same phenotype.",
+        "A Punnett square gives expected probabilities. A small group of offspring may show a different observed ratio.",
+      ],
+      scenario: {
+        prompt: "A model follows one gene in a diploid plant. Allele A is completely dominant over a, and both parents contribute one allele.",
+        options: [
+          { label: "Aa × Aa", observation: "Expected genotypes are ¼ AA, ½ Aa and ¼ aa. The expected dominant phenotype is ¾." },
+          { label: "Aa × aa", observation: "Expected genotypes are ½ Aa and ½ aa. The expected dominant phenotype is ½." },
+          { label: "AA × aa", observation: "All offspring are predicted to be Aa. The expected dominant phenotype is 1." },
+        ],
+        prediction: "Which cross produces the highest expected proportion of recessive offspring?",
+        explanation: "A recessive offspring must receive a from both parents. In Aa × aa, one parent contributes a every time and the other contributes a with probability ½.",
+      },
+      mcq: {
+        prompt: "Two heterozygotes are crossed. At this locus, one allele is completely dominant and there are no viability differences. What is the probability that an offspring with the dominant phenotype is a heterozygote?",
+        options: ["¼", "⅓", "½", "⅔", "¾"],
+        answer: 3,
+        explanations: [
+          "¼ is the probability of AA or aa among all offspring. The question conditions on the dominant phenotype.",
+          "⅓ is the fraction of dominant-phenotype offspring expected to be AA.",
+          "½ is the unconditional probability of Aa among all offspring.",
+          "Among the three equally probable dominant-phenotype outcomes, two are heterozygous.",
+          "¾ is the probability of the dominant phenotype among all offspring.",
+        ],
+      },
+      structured: {
+        prompt: "Explain why a plant with the dominant phenotype can produce some recessive offspring when crossed with aa.",
+        points: [
+          "A parent showing the dominant phenotype may have genotype Aa.",
+          "An Aa parent produces gametes carrying A or a, while the aa parent contributes a.",
+          "Fertilization by two a gametes produces aa, which has the recessive phenotype.",
+        ],
+      },
+      transfer: {
+        prompt: "In an incomplete-dominance model, red RR and white rr parents produce pink Rr offspring. What phenotype ratio is expected from pink × pink?",
+        answer: "1 red : 2 pink : 1 white. The genotype ratio is 1 RR : 2 Rr : 1 rr, and each genotype is distinguishable by phenotype in this model.",
+      },
+    },
+    {
+      id: "biotechnology",
+      title: "Biotechnology and Evidence Interpretation",
+      units: ["07"],
+      objective: "Evaluate what a simplified pattern supports and identify where evidence is insufficient to draw a conclusion.",
+      concepts: [
+        "Recombinant DNA is DNA formed by joining DNA segments.",
+        "A DNA profile is a representation of features compared between samples.",
+        "An apparently matching pattern supports consistency. The evidential strength depends on the number and informativeness of the compared features and the reliability of the measurements.",
+      ],
+      scenario: {
+        prompt: "A paper model represents three resolved features with the symbols ▲, ● and ■. Compare each card with the reference ▲ ● ■.",
+        options: [
+          { label: "Card A: ▲ ● ■", observation: "All three compared symbols agree with the reference." },
+          { label: "Card B: ▲ ● ◆", observation: "Position 3 differs from the reference." },
+          { label: "Card C: ▲ ? ■", observation: "Positions 1 and 3 agree, while position 2 is unreadable." },
+        ],
+        prediction: "Which card is consistent at all three positions, and which remains unresolved?",
+        explanation: "A agrees at all represented positions. B shows a discrepancy. C is unresolved because an unreadable position supplies no evidence of either agreement or discrepancy.",
+      },
+      mcq: {
+        prompt: "An abstract pattern comparison gives the same result for both samples at two features. Which conclusion is justified from that information alone?",
+        options: [
+          "The two samples must have come from the same organism.",
+          "The two samples must have come from different organisms.",
+          "The two samples have identical genomes.",
+          "No additional measurements could change the interpretation.",
+          "The two samples agree at the two features examined.",
+        ],
+        answer: 4,
+        explanations: [
+          "Two agreeing observations are insufficient to establish a unique source.",
+          "Agreement supplies no evidence for that categorical exclusion.",
+          "The comparison examined only two features, so genome-wide identity cannot be inferred.",
+          "Further resolved features could strengthen or weaken the case for agreement.",
+          "The conclusion states exactly what the evidence covers.",
+        ],
+      },
+      structured: {
+        prompt: "Explain why a reference pattern, more resolved comparison features, and readable results matter when interpreting pattern evidence.",
+        points: [
+          "A reference supplies a defined basis for comparison.",
+          "Suitable additional features can distinguish patterns that agree at fewer positions.",
+          "An unreadable feature cannot be scored as a match or mismatch and limits the conclusion.",
+        ],
+      },
+      transfer: {
+        prompt: "Reliable measurements later reveal a difference at an additional feature. What happens to the claim that the full patterns are identical?",
+        answer: "The claim of complete pattern identity is contradicted at the newly measured feature. The earlier observations still establish agreement at their original positions only.",
+      },
+    },
+    {
+      id: "cell-biology",
+      title: "Cells, Division and Membrane Transport",
+      units: ["01", "02"],
+      objective: "Use water potential to predict net water movement and relate responses to cell organization and structure.",
+      concepts: [
+        "The cell is the basic structural and functional unit of life.",
+        "Osmosis is net movement of water across a selectively permeable membrane from higher to lower water potential.",
+        "In mitosis, sister chromatids separate so the daughter nuclei normally retain the parental chromosome number.",
+      ],
+      scenario: {
+        prompt: "Identical plant cells initially have water potential −0.4 MPa. The surrounding solution changes. Assume water can cross each plasma membrane.",
+        options: [
+          { label: "Surroundings at −0.1 MPa", observation: "Net water entry begins. The wall resists further expansion as turgor pressure increases." },
+          { label: "Surroundings at −0.4 MPa", observation: "There is initially no net water movement. Water molecules can still move in both directions." },
+          { label: "Surroundings at −0.8 MPa", observation: "Net water loss begins, reducing turgor. Sufficient water loss can lead to plasmolysis." },
+        ],
+        prediction: "Predict the initial direction for each condition. Compare the actual signed numbers rather than their magnitudes.",
+        explanation: "−0.1 MPa is higher than −0.4 MPa, while −0.8 MPa is lower. Net movement starts towards the side with the lower water potential.",
+      },
+      mcq: {
+        prompt: "What directly separates at anaphase of mitosis in a typical diploid eukaryotic cell?",
+        options: [
+          "Sister chromatids",
+          "Paired homologous chromosomes while sister chromatids stay together",
+          "The two strands of each DNA double helix",
+          "The cytoplasm into two compartments",
+          "The plasma membrane into its two phospholipid layers",
+        ],
+        answer: 0,
+        explanations: [
+          "The spindle separates sister chromatids and moves them toward opposite poles.",
+          "This describes anaphase I of meiosis in the standard model.",
+          "The question concerns chromosome movement. The two DNA strands do not separate as a mitotic stage.",
+          "Division of the cytoplasm is cytokinesis.",
+          "The phospholipid bilayer stays intact during ordinary cell division.",
+        ],
+      },
+      structured: {
+        prompt: "Explain how a plant cell becomes turgid when placed in a solution of higher water potential than its cell contents.",
+        points: [
+          "Water enters by osmosis across the selectively permeable plasma membrane down the water potential gradient.",
+          "The vacuole increases in volume and the cell contents press outward.",
+          "The cell wall resists expansion and the resultant turgor pressure contributes to the cell water potential.",
+        ],
+      },
+      transfer: {
+        prompt: "An image of a cell is 18 mm wide and the actual cell is 60 μm wide. Calculate the magnification.",
+        answer: "18 mm = 18 000 μm. Magnification = image size ÷ actual size = 18 000 ÷ 60 = 300×.",
+      },
+    },
+    {
+      id: "energy-metabolism",
+      title: "Photosynthesis and Cellular Respiration",
+      units: ["02"],
+      objective: "Explain limiting factors from experimental patterns and connect proton gradients with ATP production.",
+      concepts: [
+        "Light-dependent reactions produce ATP and NADPH. Carbon fixation in the Calvin cycle uses the products of those reactions.",
+        "In aerobic respiration, oxygen is the final electron acceptor in the mitochondrial electron transport chain.",
+        "ATP synthase can use energy from protons moving down an electrochemical gradient to synthesize ATP.",
+      ],
+      scenario: {
+        prompt: "A hypothetical leaf has reached a plateau in net carbon dioxide uptake as light intensity increases. Temperature and other conditions are fixed.",
+        options: [
+          { label: "Increase light alone", observation: "Relative uptake remains at 4 units." },
+          { label: "Increase carbon dioxide alone", observation: "Relative uptake rises from 4 to 6 units." },
+          { label: "Increase light and carbon dioxide", observation: "Relative uptake rises from 4 to 6 units for the fixed conditions modeled here." },
+        ],
+        prediction: "Which factor is supported as limiting at the original plateau under these conditions?",
+        explanation: "Increasing carbon dioxide alone raised uptake while increasing light alone did not. The finding applies to this range and these fixed conditions.",
+      },
+      mcq: {
+        prompt: "What directly supplies energy for ATP synthesis by mitochondrial ATP synthase during oxidative phosphorylation?",
+        options: [
+          "Carbon dioxide binding to ATP synthase",
+          "Glucose entering the mitochondrial matrix",
+          "Oxygen splitting water at ATP synthase",
+          "Hydrolysis of the ATP just synthesized",
+          "Protons moving down their electrochemical gradient across the inner membrane",
+        ],
+        answer: 4,
+        explanations: [
+          "Carbon dioxide production occurs in other steps. It does not directly power ATP synthase.",
+          "Glycolysis begins in the cytosol, and glucose entry does not directly drive mitochondrial ATP synthase.",
+          "Oxygen accepts electrons at the end of the respiratory chain and contributes to water formation there.",
+          "ATP hydrolysis releases energy. ATP synthase uses the proton gradient to make ATP in this situation.",
+          "Proton flow through ATP synthase supplies energy that couples ADP and inorganic phosphate.",
+        ],
+      },
+      structured: {
+        prompt: "Explain how oxygen availability is linked to ATP production in aerobic respiration.",
+        points: [
+          "Oxygen acts as the final electron acceptor in the electron transport chain and is reduced to water.",
+          "Electron transport supports proton pumping across the inner mitochondrial membrane, generating an electrochemical gradient.",
+          "Proton return through ATP synthase drives ATP formation. Without oxygen, electron transport and oxidative phosphorylation cannot continue normally.",
+        ],
+      },
+      transfer: {
+        prompt: "Carbon dioxide leaves a leaf kept in darkness. Why is this observation compatible with the leaf having functioning chloroplasts?",
+        answer: "Respiration can continue in darkness and release carbon dioxide. With no light to drive the light-dependent reactions, net photosynthetic carbon dioxide uptake cannot offset that loss.",
+      },
+    },
+    {
+      id: "plant-physiology",
+      title: "Plant Physiology and Transport",
+      units: ["04"],
+      objective: "Distinguish xylem transport from phloem translocation and predict effects on water loss under controlled conditions.",
+      concepts: [
+        "Transpiration is loss of water vapour from aerial plant tissues, mainly through stomata.",
+        "Cohesion helps maintain a continuous water column under tension in xylem.",
+        "Phloem translocates assimilates such as sucrose from source to sink by pressure-driven bulk flow.",
+      ],
+      scenario: {
+        prompt: "The same model leaf is tested at one temperature with stomatal aperture and air movement held constant. Relative humidity is changed.",
+        options: [
+          { label: "Low humidity", observation: "The model predicts the highest loss of water vapour." },
+          { label: "Intermediate humidity", observation: "The model predicts intermediate loss of water vapour." },
+          { label: "High humidity", observation: "The model predicts the lowest loss. The outside air is closer to the water vapour level inside the leaf." },
+        ],
+        prediction: "Which condition gives the smallest gradient for the diffusion of water vapour from the leaf?",
+        explanation: "At the same temperature, humid air reduces the difference between the moist interior and the surroundings. A real plant may also change stomatal aperture, which the model holds fixed.",
+      },
+      mcq: {
+        prompt: "Which mechanism best explains the movement of water in xylem of a tall, actively transpiring tree?",
+        options: [
+          "Sieve tube cells pump water upward using ATP.",
+          "Evaporation at leaves creates tension transmitted through cohesive water columns.",
+          "Sugar transport makes water flow toward the roots in all xylem vessels.",
+          "Root pressure is the sole cause of the ascent of sap.",
+          "Water vapour is pumped from the roots to leaves inside the xylem.",
+        ],
+        answer: 1,
+        explanations: [
+          "Sieve tube elements are phloem structures. Xylem conducts liquid water under tension in this case.",
+          "Evaporation decreases leaf water potential and creates tension. Cohesion allows the pull to act through connected columns.",
+          "Sugar translocation occurs largely in phloem and is not the driver of this xylem flow.",
+          "Root pressure is insufficient to explain water movement in tall, actively transpiring trees.",
+          "Xylem transports water predominantly as liquid rather than pumping vapour.",
+        ],
+      },
+      structured: {
+        prompt: "Use a mature leaf and a growing root tip to explain source-to-sink phloem translocation.",
+        points: [
+          "The mature leaf is a source and supplies sucrose to the phloem.",
+          "Sucrose loading lowers phloem water potential and water enters, increasing hydrostatic pressure at the source.",
+          "Pressure-driven bulk flow carries assimilates toward the root tip, a sink where sucrose is removed for use or storage.",
+        ],
+      },
+      transfer: {
+        prompt: "A potometer records faster water uptake in moving air. Explain why water uptake is an estimate of transpiration rather than a direct measurement.",
+        answer: "A potometer records water entering the shoot. Transpiration is water vapour leaving it. Some entering water may be retained or used, and uptake can lag behind loss.",
+      },
+    },
+    {
+      id: "cardiorespiratory",
+      title: "Circulation and Gas Exchange",
+      units: ["05"],
+      objective: "Trace pulmonary and systemic blood flow and separate ventilation, gas exchange and circulation.",
+      concepts: [
+        "Arteries carry blood away from the heart. Veins carry blood toward the heart.",
+        "Alveolar gas exchange is driven by partial-pressure gradients across a short diffusion distance.",
+        "Cardiac output equals heart rate multiplied by stroke volume.",
+      ],
+      scenario: {
+        prompt: "In a fictional circulation model, change heart rate and stroke volume. Predict each cardiac output before revealing the result.",
+        options: [
+          { label: "60 beats/min, 75 mL/beat", observation: "Cardiac output = 60 × 75 = 4 500 mL/min or 4.5 L/min." },
+          { label: "90 beats/min, 75 mL/beat", observation: "Cardiac output = 90 × 75 = 6 750 mL/min or 6.75 L/min." },
+          { label: "90 beats/min, 50 mL/beat", observation: "Cardiac output = 90 × 50 = 4 500 mL/min or 4.5 L/min." },
+        ],
+        prediction: "Which two cases give the same volume delivered per minute? Show how the units cancel.",
+        explanation: "Multiplying beats/min by mL/beat cancels beats and yields mL/min. A higher heart rate does not guarantee a higher output if stroke volume falls sufficiently.",
+      },
+      mcq: {
+        prompt: "Which vessel carries blood from the right ventricle towards the lungs?",
+        options: ["Aorta", "Pulmonary vein", "Pulmonary artery", "Superior vena cava", "Inferior vena cava"],
+        answer: 2,
+        explanations: [
+          "The aorta carries blood from the left ventricle into the systemic circuit.",
+          "Pulmonary veins return blood from the lungs to the left atrium.",
+          "The pulmonary artery carries blood away from the right ventricle towards the lungs.",
+          "The superior vena cava returns blood from the upper body to the right atrium.",
+          "The inferior vena cava returns blood from the lower body to the right atrium.",
+        ],
+      },
+      structured: {
+        prompt: "Explain three features of alveoli that support efficient oxygen transfer to pulmonary capillary blood.",
+        points: [
+          "Many alveoli together provide a large gas-exchange surface area.",
+          "Thin alveolar and capillary walls give a short distance for diffusion.",
+          "Ventilation and blood flow help maintain the oxygen partial-pressure gradient.",
+        ],
+      },
+      transfer: {
+        prompt: "Two model lungs ventilate equally, but one has a thicker exchange barrier. Predict the effect on oxygen transfer if everything else stays equal.",
+        answer: "Oxygen transfer per unit time falls because the thicker barrier increases the diffusion distance. Equal ventilation alone does not guarantee equal gas exchange.",
+      },
+    },
+    {
+      id: "homeostasis",
+      title: "Coordination and Homeostasis",
+      units: ["05"],
+      objective: "Trace a negative feedback response from a deviation through receptors, coordination and effectors.",
+      concepts: [
+        "Negative feedback produces responses that oppose a deviation in a regulated variable.",
+        "Nervous coordination transmits signals along neurons and across synapses. Endocrine coordination uses hormones in the blood.",
+        "Responses to an increase in body temperature can include sweating and dilation of arterioles supplying the skin.",
+      ],
+      scenario: {
+        prompt: "A conceptual warm-blooded animal senses a change in core temperature. Compare the predicted thermoregulatory responses.",
+        options: [
+          { label: "Temperature rises above the regulated range", observation: "Sweating and greater skin blood flow can increase heat loss." },
+          { label: "Temperature stays in the regulated range", observation: "The model has no corrective response to a deviation." },
+          { label: "Temperature falls below the regulated range", observation: "Shivering and reduced skin blood flow can increase heat production and decrease heat loss, respectively." },
+        ],
+        prediction: "For each deviation, name one effector and show how its response opposes the deviation.",
+        explanation: "A high reading prompts responses that favour heat loss. A low reading prompts responses that favour heat conservation or production. Each response reduces the original change.",
+      },
+      mcq: {
+        prompt: "Which response is an example of negative feedback after a rise in blood glucose in a healthy person?",
+        options: [
+          "Insulin secretion increases and promotes glucose uptake and glycogen synthesis.",
+          "Glucagon increases and promotes glycogen breakdown.",
+          "Blood glucose rises further because the pancreatic response amplifies the deviation.",
+          "Insulin promotes glucose release from liver glycogen.",
+          "The fall in blood glucose causes insulin secretion to increase indefinitely.",
+        ],
+        answer: 0,
+        explanations: [
+          "The response lowers blood glucose toward its regulated range and opposes the rise.",
+          "Glucagon can raise blood glucose through glycogen breakdown, which does not oppose this rise.",
+          "Amplification of the original change describes positive feedback.",
+          "Insulin favours storage, including glycogen synthesis, in this context.",
+          "As blood glucose falls toward its regulated range, the glucose stimulus for insulin secretion declines.",
+        ],
+      },
+      structured: {
+        prompt: "Explain why sweating can lower body temperature and why its cooling effect may fall in very humid air.",
+        points: [
+          "Sweat glands release liquid onto the skin in response to increased body temperature.",
+          "Evaporation uses energy absorbed as heat from the skin.",
+          "High humidity reduces evaporation, reducing the rate of cooling under otherwise equal conditions.",
+        ],
+      },
+      transfer: {
+        prompt: "Blood glucose falls between meals. Describe a hormonal response that opposes this change and how it affects the liver.",
+        answer: "Pancreatic alpha cells increase glucagon secretion. Glucagon stimulates the liver to break down glycogen and release glucose, helping oppose the fall.",
+      },
+    },
+    {
+      id: "evolution-ecology",
+      title: "Evolution, Biodiversity and Ecosystems",
+      units: ["03", "08"],
+      objective: "Interpret changes in trait frequencies and distinguish ecological observations from causal conclusions.",
+      concepts: [
+        "Natural selection can change the frequency of heritable traits when individuals differ in reproductive success.",
+        "Energy is transferred between trophic levels, while matter can cycle through an ecosystem.",
+        "Species richness counts the species present. Relative abundance describes how individuals are distributed among species.",
+      ],
+      scenario: {
+        prompt: "Three fictional Sri Lankan wetland survey plots were sampled using the same effort. Each row gives counts of the three visible plant groups A, B and C, treated here as three distinct species.",
+        options: [
+          { label: "Plot 1: 10, 10, 10", observation: "Richness is 3, with equal relative abundance." },
+          { label: "Plot 2: 28, 1, 1", observation: "Richness is still 3, but A accounts for most observed individuals." },
+          { label: "Plot 3: 15, 15, 0", observation: "Observed richness is 2. The survey detected no individuals of C." },
+        ],
+        prediction: "Which two plots have equal richness, and which of those two has the more even distribution?",
+        explanation: "Plots 1 and 2 share a richness of three, while Plot 1 has an even distribution. No detection in Plot 3 does not by itself prove C is absent throughout the wetland.",
+      },
+      mcq: {
+        prompt: "Two heritable seed traits occur in a plant population. Individuals with one trait leave more viable offspring in a newly dry habitat. Which change is consistent with natural selection in that habitat?",
+        options: [
+          "Every individual changes its inherited seed trait before it reproduces.",
+          "The environment deliberately creates the favourable allele because it is needed.",
+          "All genetic variation disappears immediately.",
+          "The trait associated with greater reproductive success can become more frequent over generations.",
+          "The same trait must be favoured in every other habitat.",
+        ],
+        answer: 3,
+        explanations: [
+          "Evolution by selection changes trait frequencies across generations rather than changing every individual's inherited trait.",
+          "Selection acts on heritable variation. The explanation does not require directed mutation in response to need.",
+          "Selection does not imply immediate elimination of variation.",
+          "Differential reproductive success can increase the frequency of a heritable trait in a given environment.",
+          "The relative success of a trait depends on conditions.",
+        ],
+      },
+      structured: {
+        prompt: "Explain why less energy is generally available to organisms at each successive level of a food chain.",
+        points: [
+          "Some energy in biomass at one level is never consumed or is lost in undigested material.",
+          "Organisms use energy in respiration and heat is released to the surroundings.",
+          "Only energy retained in new biomass is available for transfer to the next level that consumes it.",
+        ],
+      },
+      transfer: {
+        prompt: "Two forest plots have the same observed species count, but one has nearly all individuals in a single species. Give one difference and one limitation of the comparison.",
+        answer: "The plot dominated by one species has lower evenness despite equal observed species richness. The observation applies to the sample, and equal sampling effort or repeated surveys are needed before extrapolating reliably.",
+      },
+    },
+    {
+      id: "microbiology-applied",
+      title: "Microbiology and Applied Biology",
+      units: ["09", "10"],
+      objective: "Relate microbial activity to decomposition and evaluate evidence and tradeoffs in an applied biology example.",
+      concepts: [
+        "Decomposer bacteria and fungi break down organic matter and contribute to nutrient cycling.",
+        "Yeasts are fungi. Some yeasts release carbon dioxide during alcoholic fermentation.",
+        "An applied-biology claim needs an outcome measure, a valid comparison and an explicit account of uncertainty.",
+      ],
+      scenario: {
+        prompt: "Three fictional school waste audits track waste sent to landfill. Starting quantities and audit lengths match. Predict which observations can support a claim about composting.",
+        options: [
+          { label: "Audit A records waste before and after separation", observation: "Landfill-bound waste fell, but the audit did not record where separated material went." },
+          { label: "Audit B records separated material and usable compost", observation: "The audit can describe diversion and compost output. It does not measure every environmental impact." },
+          { label: "Audit C records one photo of a compost pile", observation: "The photo shows that a pile was present. It supplies no measured diversion or output." },
+        ],
+        prediction: "Which audit measures the most direct evidence of compost production?",
+        explanation: "B follows separated material and measures a usable output. It still cannot establish all wider outcomes, such as emissions or long-term performance.",
+      },
+      mcq: {
+        prompt: "Which statement best explains the role of decomposer microorganisms in an ecosystem?",
+        options: [
+          "They convert all dead biomass directly into light energy.",
+          "They break down organic matter and contribute to the release of nutrients that can be reused.",
+          "They prevent any return of elements to the environment.",
+          "They occupy only the producer trophic level.",
+          "They make mineral nutrients disappear permanently.",
+        ],
+        answer: 1,
+        explanations: [
+          "Decomposition transforms matter and can release heat during metabolism. It does not turn dead biomass directly into light.",
+          "Decomposer activity helps recycle matter, making some nutrients available again.",
+          "Decomposition contributes to the return of elements to environmental pools.",
+          "These decomposers obtain organic matter when they break down existing biomass.",
+          "Nutrient cycling changes the forms and locations of elements. The elements are conserved.",
+        ],
+      },
+      structured: {
+        prompt: "Distinguish microbial decomposition from the overall claim that a waste-management approach is effective.",
+        points: [
+          "Decomposition is biological breakdown of organic material by organisms including bacteria and fungi.",
+          "Waste-management effectiveness depends on the stated aim, such as landfill diversion or usable output.",
+          "Compare measured outcomes with a suitable baseline and acknowledge effects outside the measurements.",
+        ],
+      },
+      transfer: {
+        prompt: "A diagram labels a yeast cell as a bacterium. Give two observations that would support correcting the label to a eukaryote.",
+        answer: "A membrane-bound nucleus and membrane-bound organelles such as mitochondria support eukaryotic organization. Both bacteria and yeasts can possess a cell wall, so a wall alone is insufficient.",
+      },
+    },
+  ],
+};

@@ -636,6 +636,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
 <a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
 <a class="tab tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a>
 <a class="tab tab-link" href="./biology-intelligence/">Biology Intelligence</a>
+<a class="tab tab-link" href="./biology-academy/" data-academy-link>Biology Academy</a>
 <a class="tab tab-link" href="./science-intelligence/">Science Intelligence Hub</a>
 <a class="tab tab-link" href="./study-library/">Private Study Library</a>
 <a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
@@ -1984,6 +1985,7 @@ function buildSubjectPanel(subject) {
   const target = $(`panel-${subject}`);
   target.innerHTML = `
     <div class="subject-summary" id="summary-${subject}"></div>
+    ${subject === 'biology' ? '<p><a class="secondary-btn tab-link" href="./biology-academy/" data-academy-link>Practise in Biology Academy</a></p>' : ''}
     <div class="subject-toolbar">
       <input class="search-box" id="search-${subject}" type="search" placeholder="Search ${titleCase(subject)} topics…" aria-label="Search ${titleCase(subject)} topics">
       <select class="filter-select" id="filter-${subject}" aria-label="Filter topics"><option value="all">All topics</option><option value="weak">Weak / medium</option><option value="evidence">Has evidence</option><option value="untested">Untested</option><option value="due">Retest due</option></select>
@@ -1991,6 +1993,9 @@ function buildSubjectPanel(subject) {
     </div>
     <div id="units-${subject}"></div>
     <p class="muted" style="font-size:9px;line-height:1.6;margin:14px 4px">Scope note: this topic index is inherited from the supplied file. Cross-check it against the current official Sri Lankan syllabus before treating it as exhaustive.</p>`;
+
+  const academyLink = target.querySelector('[data-academy-link]');
+  if (academyLink && shareSafeMode) academyLink.href = './biology-academy/?share=1';
 
   const units = $(`units-${subject}`);
   SYL[subject].units.forEach((unit, ui) => {
@@ -2266,6 +2271,9 @@ let shareSafeMode = false;
 function toggleShareSafe() {
   shareSafeMode = !shareSafeMode;
   document.body.classList.toggle('share-safe', shareSafeMode);
+  document.querySelectorAll('[data-academy-link]').forEach(link => {
+    link.href = shareSafeMode ? './biology-academy/?share=1' : './biology-academy/';
+  });
   const practicalLink = document.getElementById('practical-lab-link');
   if (practicalLink) practicalLink.href = shareSafeMode ? './practical-lab/?share=1' : './practical-lab/';
   $('share-safe-btn')?.classList.toggle('on', shareSafeMode);
