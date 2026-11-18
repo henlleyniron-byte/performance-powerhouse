@@ -39,7 +39,7 @@ npm test
 npm run unit --prefix qa
 ```
 
-The V22 test command runs the archived CommonJS and ES module suites, including the DOM tests. Some corpus tests require private resources and report a skip in a public clone.
+The V22 test command runs the CommonJS and ES module suites, including the DOM tests. It copies the manifest-listed files to a temporary directory and supplies a fictional, allowed-host URL in two positive test fixtures whose original links were redacted. The tests parse the URL locally. Some corpus tests require private resources and report a skip in a public clone.
 
 To run the real-browser checks:
 
