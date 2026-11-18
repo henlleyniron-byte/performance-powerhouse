@@ -12,3 +12,4 @@ private/
 secrets/
 backups/
 exports/
+qa/test-results/

@@ -20,11 +20,36 @@ Thank you for considering a contribution to Performance Powerhouse.
 
 ## Development
 
-The project is intentionally static and dependency-light. A local web server is sufficient for normal development:
+For the current V22 browser app, start the local server from the repo root:
 
-```bash
-python -m http.server 8080
+```sh
+python3 scripts/preview-v22.py
 ```
+
+Visit the URL printed in the terminal. The preview serves V22’s public assets at their original paths. It reads the community page from `preview/community-share.html`. The archived V22 files and their provenance are described in the [source guide](docs/V22_SOURCE.md). Run the legacy root app separately with `python3 -m http.server --bind 127.0.0.1 8080`.
+
+### Test V22
+
+Use Node.js 22.13 or newer and Python 3. Install test dependencies in the QA directory:
+
+```sh
+npm ci --prefix qa
+python3 scripts/verify-v22-source.py
+npm test
+npm run unit --prefix qa
+```
+
+The V22 test command runs the archived CommonJS and ES module suites, including the DOM tests. Some corpus tests require private resources and report a skip in a public clone.
+
+To run the real-browser checks:
+
+```sh
+cd qa
+npx playwright install chromium webkit
+npm run browser
+```
+
+On a minimal Linux machine, use `npx playwright install --with-deps chromium webkit`. The suite starts its own loopback preview on port 4174 and uses disposable browser profiles and fictional records.
 
 Before a pull request, please check:
 

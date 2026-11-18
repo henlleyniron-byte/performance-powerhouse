@@ -1,0 +1,13 @@
+{
+  "name": "powerhouse-v22-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "unit": "node run-unit.mjs",
+    "browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "linkedom": "0.18.12"
+  }
+}

@@ -1,6 +1,6 @@
 # Performance Powerhouse — Final Community Pack (24 Aug 2026)
 
-This is the latest distribution bundle built from the QA-passed **V4 Community Edition** core.
+This page describes the August 2026 legacy distribution. For V22, start with the [current quick start](README.md#try-v22-locally) or browse the [V22 source](hosted-source/).
 
 ## Start here
 - `index.html` — full local-first Performance Powerhouse.
