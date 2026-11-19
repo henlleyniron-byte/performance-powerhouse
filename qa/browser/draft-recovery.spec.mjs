@@ -31,11 +31,19 @@ test('a linked draft restores its exact source after a cold reload', async ({ pa
   expect(after.retests).toEqual(before.retests);
 });
 
-for (const earlier of [null, 'Earlier fictional question']) {
-  test(`restore before autosave with ${earlier ? 'an older saved draft' : 'no earlier draft'}`, async ({ page }) => {
+for (const previous of ['no draft', 'an unsubmitted draft', 'a submitted draft']) {
+  test(`restore before autosave with ${previous}`, async ({ page }) => {
     await startPrivateWorkbench(page);
+    let earlier = null;
+    if (previous === 'a submitted draft') {
+      earlier = 'Earlier submitted question';
+      await saveAttempt(page, { question: earlier, date: '2026-07-01', earned: 2 });
+      await expect.poll(async () => (await savedDraft(page))?.status).toBe('submitted');
+    }
+    const before = await coreRecord(page);
     await page.locator('#log-from-ledger').click();
-    if (earlier) {
+    if (previous === 'an unsubmitted draft') {
+      earlier = 'Earlier unsubmitted question';
       await page.locator('#attempt-question').fill(earlier);
       await expect.poll(async () => (await savedDraft(page))?.fields['attempt-question']).toBe(earlier);
     }
@@ -51,7 +59,7 @@ for (const earlier of [null, 'Earlier fictional question']) {
     }, draftKey);
     expect(observed).toEqual({ restored: 'Latest fictional question', persisted: earlier });
     await expect(page.locator('#attempt-dialog')).toBeVisible();
-    expect((await coreRecord(page)).attempts).toHaveLength(0);
+    expect(await coreRecord(page)).toEqual(before);
   });
 }
 
@@ -70,6 +78,46 @@ test('opening a shared view hides draft actions and retains the private draft', 
   await page.locator('#app-tabs [data-panel="attempts"]').click();
   await page.getByRole('button', { name: 'Restore unsubmitted attempt fields' }).click();
   await expect(page.locator('#attempt-question')).toHaveValue('Fictional private draft');
+});
+
+test('private draft actions captured before sharing refuse both shared entry paths', async ({ page }) => {
+  await startPrivateWorkbench(page);
+  await page.locator('#log-from-ledger').click();
+  await page.locator('#attempt-question').fill('Fictional unpublished notes');
+  await expect.poll(async () => (await savedDraft(page))?.fields['attempt-question']).toBe('Fictional unpublished notes');
+  await page.locator('#attempt-dialog').getByRole('button', { name: 'Cancel' }).click();
+  const actions = await page.evaluateHandle(() => ({
+    restore: document.getElementById('v14-draft-restore').onclick,
+    exportOriginal: document.getElementById('v14-draft-export').onclick,
+  }));
+  const share = page.getByRole('button', { name: 'Toggle share-safe mode' });
+  const original = await savedDraft(page);
+  for (const entry of ['button', 'url']) {
+    if (entry === 'button') {
+      await share.click();
+      await expect(page.locator('body')).toHaveClass(/share-safe/);
+    } else {
+      await share.click();
+      await expect(page.locator('body')).not.toHaveClass(/share-safe/);
+      // The URL can change before a page handler updates the visibility flag.
+      await page.evaluate(() => history.replaceState(null, '', '?share=1'));
+    }
+    const effects = await actions.evaluate(saved => {
+      let blobs = 0;
+      const create = URL.createObjectURL;
+      URL.createObjectURL = function (blob) { blobs++; return create.call(URL, blob); };
+      try {
+        saved.restore();
+        saved.exportOriginal();
+        return { editorOpen: document.getElementById('attempt-dialog').open, blobs };
+      } finally {
+        URL.createObjectURL = create;
+      }
+    });
+    expect(effects).toEqual({ editorOpen: false, blobs: 0 });
+    expect(await savedDraft(page)).toEqual(original);
+  }
+  await actions.dispose();
 });
 
 test('a competing tab keeps the saved draft and can export its own pending edit', async ({ page, context }) => {
