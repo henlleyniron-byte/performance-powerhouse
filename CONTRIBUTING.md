@@ -54,6 +54,8 @@ npm run browser
 
 On a minimal Linux machine, use `npx playwright install --with-deps chromium webkit`. The suite starts its own loopback preview on port 4174 and uses disposable browser profiles and fictional records.
 
+To measure retest selection and backup validation on a synthetic history of 5,000 attempts and 10,000 retests, run `npm run bench:evidence --prefix qa`. It checks the selected result and reports the median and range of seven runs on your machine. To compare two revisions, save the earlier `hosted-source/public/evidence-rules.js` as a local file and pass its absolute path after `--`.
+
 ### Build the hosted app
 
 From the repository root on Linux, run:

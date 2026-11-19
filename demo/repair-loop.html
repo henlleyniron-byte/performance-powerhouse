@@ -165,15 +165,15 @@ globalThis.PowerhouseEvidence = Object.freeze({
     };
     inspect(data);
     if (!object(data) || !object(data.ratings) || !Array.isArray(data.attempts) || data.attempts.length > 20000) fail('Invalid backup structure');
-    const known = new Set(topics), ids = new Set();
+    const known = new Set(topics), attemptsById = new Map();
     const maps = [['ratings', [1,2,3], known], ['syllabusProgress', [0,25,50,75,100], new Set(planIds)]];
     for (const [name, values, allowed] of maps) if (data[name] !== undefined) {
       if (!object(data[name])) fail('Invalid topic map');
       for (const [key, value] of Object.entries(data[name])) if (!allowed.has(key) || !values.includes(Number(value))) fail('Invalid topic rating');
     }
     for (const a of data.attempts) {
-      if (!object(a) || typeof a.id !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(a.id) || ids.has(a.id)) fail('Invalid or duplicate attempt ID');
-      ids.add(a.id);
+      if (!object(a) || typeof a.id !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(a.id) || attemptsById.has(a.id)) fail('Invalid or duplicate attempt ID');
+      attemptsById.set(a.id, a);
       if (!this.validDate(a.date) || a.date > today || !subjects.includes(a.subject) || !known.has(a.topicKey) || !a.topicKey.startsWith(a.subject + '|')) fail('Invalid attempt date or topic');
       if (!types.includes(a.type || 'topic-question') || typeof a.question !== 'string' || !a.question.trim() || a.question.length > 1000 || (a.error && !errors.includes(a.error))) fail('Invalid question or error family');
       if (![a.earned,a.total].every(n => typeof n === 'number' && Number.isFinite(n)) || a.total <= 0 || a.earned < 0 || a.earned > a.total) fail('Invalid attempt marks');
@@ -189,9 +189,9 @@ globalThis.PowerhouseEvidence = Object.freeze({
       if (!Array.isArray(data.retests) || data.retests.length > 40000) fail('Invalid retest list');
       const retestIds = new Set();
       for (const r of data.retests) {
-        if (!object(r) || typeof r.id !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(r.id) || retestIds.has(r.id) || !ids.has(r.sourceAttemptId) || !known.has(r.topicKey) || ![1,2].includes(r.stage) || !this.validDate(r.due)) fail('Invalid retest reference');
+        if (!object(r) || typeof r.id !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(r.id) || retestIds.has(r.id) || !attemptsById.has(r.sourceAttemptId) || !known.has(r.topicKey) || ![1,2].includes(r.stage) || !this.validDate(r.due)) fail('Invalid retest reference');
         retestIds.add(r.id);
-        const source = data.attempts.find(a => a.id === r.sourceAttemptId);
+        const source = attemptsById.get(r.sourceAttemptId);
         if (source.topicKey !== r.topicKey || r.due < source.date) fail('Retest does not match its source');
         if (r.completedAt != null && (typeof r.completedAt !== 'string' || !Number.isFinite(Date.parse(r.completedAt)))) fail('Invalid retest completion');
       }
@@ -217,12 +217,25 @@ globalThis.PowerhouseEvidence = Object.freeze({
     const stage = attempt.type === 'fresh-transfer' ? 1 : attempt.type === 'delayed-retest' ? 2 : 0;
     if (!stage || !attempt.unaided || !attempt.novelQuestion || !(attempt.total > 0) || attempt.earned !== attempt.total || attempt.error || Number(attempt.guesses || 0) > 0 || (attempt.trustedEarned != null && attempt.trustedEarned !== attempt.total)) return null;
     const reference = value => String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
-    return retests.filter(retest => {
-      const source = attempts.find(item => item.id === retest.sourceAttemptId);
-      const transfer = retests.find(item => item.sourceAttemptId === retest.sourceAttemptId && item.stage === 1);
-      const stageReady = stage === 1 || (transfer?.completedAt && transfer.completedAt < attempt.date && attempts.some(item => item.id === transfer.completedByAttemptId && reference(item.question) !== reference(attempt.question)));
-      return stageReady && (attempt.sourceAttemptId === retest.sourceAttemptId) && !retest.completedAt && retest.stage === stage && retest.topicKey === attempt.topicKey && retest.due <= attempt.date && source && source.date < attempt.date && reference(source.question) !== reference(attempt.question);
-    }).sort((a, b) => a.due.localeCompare(b.due))[0] || null;
+    const question = reference(attempt.question);
+    const source = attempts.find(item => item.id === attempt.sourceAttemptId);
+    if (!source || !(source.date < attempt.date) || reference(source.question) === question) return null;
+
+    if (stage === 2) {
+      const transfer = retests.find(item => item.sourceAttemptId === source.id && item.stage === 1);
+      if (!transfer?.completedAt || !(transfer.completedAt < attempt.date)) return null;
+      const differentQuestion = attempts.some(item =>
+        item.id === transfer.completedByAttemptId && reference(item.question) !== question);
+      if (!differentQuestion) return null;
+    }
+
+    let earliest = null;
+    for (const retest of retests) {
+      if (retest.sourceAttemptId !== source.id || retest.stage !== stage || retest.completedAt ||
+          retest.topicKey !== attempt.topicKey || !(retest.due <= attempt.date)) continue;
+      if (!earliest || retest.due.localeCompare(earliest.due) < 0) earliest = retest;
+    }
+    return earliest;
   },
   normalizeCycle(value, subjects, count) {
     const valid = Array.isArray(value?.done) ? [...new Set(value.done)].filter(n => Number.isInteger(n) && n >= 0 && n < count) : [];

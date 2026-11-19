@@ -33,7 +33,7 @@
     },
     {
       "path": "public/evidence-rules.js",
-      "sha256": "428d5bea034494bbc40df07a228d1be130c49dd9e0eb77730546dc312900c133",
+      "sha256": "2e3656a954c7f506ec70ef1572846b0d8e24c26e938fb2f7eaf40a27b2419022",
       "mode": "100644"
     },
     {
@@ -49,6 +49,11 @@
     {
       "path": "public/workspace-shell/shell.js",
       "sha256": "4e66324a01b094167816c879fca26bfeabe19ff02383f919c4873285b62a92ec",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/evidence-rules.test.mjs",
+      "sha256": "197d1fe268412dc223be45e5982ad07c51fa7f4b1854509fef85eb87613af7c9",
       "mode": "100644"
     }
   ]
