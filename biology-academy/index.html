@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ten interactive learning tracks for Sri Lankan G.C.E. A/L Biology, with original practice and marking guidance.">
+  <title>Biology Academy · Performance Powerhouse</title>
+  <link rel="stylesheet" href="./academy.css">
+  <script src="./content.js" defer></script>
+  <script src="./academy.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to academy</a>
+  <header class="site-nav">
+    <a href="../?share=1" data-academy-destination="../">Performance Powerhouse</a>
+  </header>
+  <main id="main" tabindex="-1">
+    <header class="intro">
+      <p class="kicker">Sri Lankan G.C.E. A/L · English medium</p>
+      <h1>Biology Academy</h1>
+      <p>Explore a model, attempt a question closed-book, and check the reasoning behind each answer.</p>
+      <p class="quiet">Original practice mapped to the NIE syllabus. The academy does not save practice inputs. Copy work you want to keep before reloading or closing this page.</p>
+    </header>
+    <noscript><p class="callout">Enable JavaScript to use the interactive practice, or follow the syllabus reference below.</p></noscript>
+    <section class="picker" aria-labelledby="tracks-title">
+      <div class="picker-head">
+        <h2 id="tracks-title">Choose a learning track</h2>
+        <div><label for="unit">Filter by syllabus unit</label><select id="unit"><option value="">All units</option></select></div>
+      </div>
+      <p id="count" role="status" class="quiet"></p>
+      <nav id="tracks" class="tracks" aria-label="Biology learning tracks"></nav>
+    </section>
+    <article id="lesson" class="lesson" aria-label="Selected learning track"></article>
+    <section class="reference" aria-labelledby="reference-title">
+      <h2 id="reference-title">Syllabus and exam practice</h2>
+      <p>Each track samples selected competencies. Use the official syllabus for the full curriculum.</p>
+      <p><a href="https://nie.lk/pdffiles/tg/AL_Syl%20Biology2017.pdf" rel="noreferrer">NIE Biology syllabus, Grades 12–13</a></p>
+    </section>
+  </main>
+</body>
+</html>
