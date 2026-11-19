@@ -8,12 +8,21 @@ for (const theme of ['dark', 'light']) {
     await page.goto('/community-share.html');
     await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
     await page.addScriptTag({ path: require.resolve('axe-core/axe.min.js') });
-    const violations = await page.evaluate(async () => {
+    // Let the selected palette, text and page geometry reach the screen before
+    // axe samples contrast. WebKit can report the attribute before painting.
+    await page.evaluate(async () => {
+      await document.fonts.ready;
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+    });
+    const audit = () => page.evaluate(async () => {
       const result = await window.axe.run(document, {
         runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa'] },
       });
-      return result.violations.map(rule => ({ rule: rule.id, elements: rule.nodes.map(node => node.target) }));
+      return result.violations.map(rule => ({
+        rule: rule.id,
+        elements: rule.nodes.map(node => ({ target: node.target, reason: node.failureSummary })),
+      }));
     });
-    expect(violations).toEqual([]);
+    await expect.poll(audit, { timeout: 10_000, intervals: [250, 750] }).toEqual([]);
   });
 }

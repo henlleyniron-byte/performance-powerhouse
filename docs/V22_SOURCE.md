@@ -30,7 +30,9 @@ python3 scripts/verify-v22-source.py
 
 For the current app, work from `hosted-source/`. Its package and lockfile describe the full Vinext/Cloudflare application. Its inherited README describes the starter; the product release behavior is documented in `docs/RELEASE-V22.md` within that folder. `.openai/hosting.json` preserves the existing Site identity for provenance: it does not authorize an arbitrary clone to deploy.
 
-## Checks performed for this synchronization
+## Checks recorded during the 2 November import
+
+For checks against later working changes, see the [current test and build instructions](../CONTRIBUTING.md#test-v22).
 
 - Native source Node test subset: 227 passed, 35 skipped, zero failed across 37 test files. Skips are reported, not counted as passes.
 - Legacy root service-worker contracts: seven passed, zero failed.
