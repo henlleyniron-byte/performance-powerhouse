@@ -1,0 +1,60 @@
+{
+  "archive_commit": "383c4f8dcb0cfe0adf6aad61be15596c7955c844",
+  "files": [
+    {
+      "path": "public/biology-academy/academy.css",
+      "sha256": "48a55cb25d3eb4c300587ce23eacc607c2ae42cf9eab286ce7fc0fc1982ae835",
+      "mode": "100644"
+    },
+    {
+      "path": "public/biology-academy/academy.js",
+      "sha256": "60ff10a55011d1d28816d14348d7b15eb6edd0e888bb1f342b7b559c97c9adba",
+      "mode": "100644"
+    },
+    {
+      "path": "public/biology-academy/content.js",
+      "sha256": "6ee11830ddc43b04fe2849ecd9da93f9c67d64d080109e1cffb3e6203e7ab5a6",
+      "mode": "100644"
+    },
+    {
+      "path": "public/biology-academy/index.html",
+      "sha256": "d7170554cd2c3e22e1723743a3ddd2d1e67b51206c55c0e96657933ea0ee2df2",
+      "mode": "100644"
+    },
+    {
+      "path": "public/community-share.html",
+      "sha256": "5f23a705d061b3f2008736a748ecc0b71636dfb5ec03da3693a2339ef1e73e24",
+      "mode": "100644"
+    },
+    {
+      "path": "public/data-safety/powerhouse-evidence-v14.js",
+      "sha256": "cd7963ff825fd95a8bb2af2ae90246a1f5d2f0e440747c366885d9d7cfa7be70",
+      "mode": "100644"
+    },
+    {
+      "path": "public/evidence-rules.js",
+      "sha256": "2e3656a954c7f506ec70ef1572846b0d8e24c26e938fb2f7eaf40a27b2419022",
+      "mode": "100644"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "112be198b3d3b36284f164c5dfdb4040f04e23d2669f1d4126a78223eff10aa3",
+      "mode": "100644"
+    },
+    {
+      "path": "public/sw.js",
+      "sha256": "0215853ad882e03d277886edf1ff2121e493e8950103fc80f1d8a3b3449a4356",
+      "mode": "100644"
+    },
+    {
+      "path": "public/workspace-shell/shell.js",
+      "sha256": "4e66324a01b094167816c879fca26bfeabe19ff02383f919c4873285b62a92ec",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/evidence-rules.test.mjs",
+      "sha256": "197d1fe268412dc223be45e5982ad07c51fa7f4b1854509fef85eb87613af7c9",
+      "mode": "100644"
+    }
+  ]
+}

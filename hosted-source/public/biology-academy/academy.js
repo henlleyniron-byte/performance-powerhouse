@@ -153,18 +153,18 @@
   }
 
   function renderTracks() {
-    const visible = modules.filter((module) => !unitFilter.value || module.units.includes(unitFilter.value));
+    const visible = modules.filter((track) => !unitFilter.value || track.units.includes(unitFilter.value));
     count.textContent = visible.length + (visible.length === 1 ? ' track' : ' tracks');
     tracks.replaceChildren();
-    for (const module of visible) {
-      const link = element('a', module.title);
-      link.href = '#' + module.id;
-      if (module.id === activeId) link.setAttribute('aria-current', 'true');
+    for (const track of visible) {
+      const link = element('a', track.title);
+      link.href = '#' + track.id;
+      if (track.id === activeId) link.setAttribute('aria-current', 'true');
       link.addEventListener('click', (event) => {
         if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;
         event.preventDefault();
         if (location.hash !== link.hash) history.pushState(null, '', link.hash);
-        renderLesson(module, true);
+        renderLesson(track, true);
       });
       tracks.append(link);
     }
@@ -181,10 +181,10 @@
 
   function selectFromHash() {
     const id = location.hash.slice(1);
-    const module = modules.find((entry) => entry.id === id);
-    if (module) {
-      if (unitFilter.value && !module.units.includes(unitFilter.value)) unitFilter.value = '';
-      renderLesson(module, false);
+    const track = modules.find((entry) => entry.id === id);
+    if (track) {
+      if (unitFilter.value && !track.units.includes(unitFilter.value)) unitFilter.value = '';
+      renderLesson(track, false);
     } else if (!id || !activeId) {
       renderLesson(modules[0], false);
     }

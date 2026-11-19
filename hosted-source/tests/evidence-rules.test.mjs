@@ -37,3 +37,21 @@ test('backup validation accepts a real round-trip shape and rejects corrupted ev
 });
 
 test('unlinked new checks cannot close an error, while historical exact links remain replayable',()=>{assert.equal(rules.eligibleRetest({...proof,sourceAttemptId:null},retests,[source]),null);assert.equal(rules.completedLinks([{sourceAttemptId:'original',completedByAttemptId:'old',completedAt:'2026-10-04'}]).old,'original');assert.equal(rules.completedLinks([{sourceAttemptId:'original',completedByAttemptId:'old',completedAt:'2026-10-04'},{sourceAttemptId:'another',completedByAttemptId:'old',completedAt:'2026-10-04'}]).old,false);});
+
+test('retest matching keeps the earliest due row for the selected source and preserves tied order', () => {
+  const other = { ...source, id: 'other' };
+  const row = retests[0];
+  const earliest = { ...row, id: 'first', due: '2026-10-05' };
+  const queue = [
+    { ...row, id: 'unrelated', sourceAttemptId: other.id },
+    { ...row, id: 'later', due: '2026-10-06' },
+    { ...row, id: 'already-done', completedAt: '2026-10-04' },
+    earliest,
+    { ...earliest, id: 'same-day' },
+  ];
+  assert.equal(rules.eligibleRetest(proof, queue, [other, source]), earliest);
+  const delayed = { ...proof, type: 'delayed-retest' };
+  const transfer = { ...proof, id: 'other-transfer', sourceAttemptId: other.id, question: 'Different question' };
+  const otherCompleted = { ...queue[0], completedAt: '2026-10-05', completedByAttemptId: transfer.id };
+  assert.equal(rules.eligibleRetest(delayed, [otherCompleted, ...retests], [source, other, transfer]), null);
+});

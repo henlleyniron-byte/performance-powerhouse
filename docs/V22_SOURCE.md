@@ -1,6 +1,6 @@
 # Hosted V22 source verification
 
-The current public source copy is [`hosted-source/`](../hosted-source/), imported on 2 November 2026.
+The [original public source import](https://github.com/henlleyniron-byte/performance-powerhouse/tree/383c4f8dcb0cfe0adf6aad61be15596c7955c844/hosted-source) was recorded on 2 November 2026. The [working source](../hosted-source/) includes subsequent GitHub changes. The [working change inventory](V22_WORKING_CHANGES.json) records the paths, hashes and modes that differ from the import.
 
 | Identifier | Verified value |
 | --- | --- |
@@ -21,15 +21,18 @@ The snapshot contains 290 tracked source files. Private Google Drive/Docs and co
 
 All unredacted retained files match the native source bytes exactly. Redacted links deliberately do not open the original resources. Download references may point to omitted files. The repository does not contain user records, credentials, deployed database contents or runtime secrets. Source code includes database schema/migration files, which are not live data. This is a sanitized review/development copy, not a complete production recovery artifact.
 
-Verify from the repository root:
+Verify the original 290-file import in a Git clone with its history, then check the working files against the original manifest and the recorded changes.
 
 ```bash
-python scripts/verify-v22-source.py
+python3 scripts/verify-v22-source.py --archive
+python3 scripts/verify-v22-source.py
 ```
 
 For the current app, work from `hosted-source/`. Its package and lockfile describe the full Vinext/Cloudflare application. Its inherited README describes the starter; the product release behavior is documented in `docs/RELEASE-V22.md` within that folder. `.openai/hosting.json` preserves the existing Site identity for provenance: it does not authorize an arbitrary clone to deploy.
 
-## Checks performed for this synchronization
+## Checks recorded during the 2 November import
+
+For checks against later working changes, see the [current test and build instructions](../CONTRIBUTING.md#test-v22).
 
 - Native source Node test subset: 227 passed, 35 skipped, zero failed across 37 test files. Skips are reported, not counted as passes.
 - Legacy root service-worker contracts: seven passed, zero failed.

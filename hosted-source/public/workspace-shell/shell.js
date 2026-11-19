@@ -4,7 +4,10 @@
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const core=typeof navigate==='function',current=location.pathname;
  document.documentElement.classList.add('flagship');
- const bar=document.createElement('nav');bar.className='fs-bar';bar.setAttribute('aria-label','Powerhouse workspace');bar.innerHTML='<a class="fs-wordmark" href="/">P<span>PERFORMANCE<br><b>POWERHOUSE</b></span></a><div class="fs-quick"><a href="/#command">Workbench</a><a href="/practical-lab/">Practical Lab</a><a href="/#repairs">Repairs</a></div><button type="button" class="fs-open">Explore tools <kbd>⌘ / Ctrl K</kbd></button>';document.body.prepend(bar);
+ const bar=document.createElement('nav');bar.className='fs-bar';bar.setAttribute('aria-label','Powerhouse workspace');bar.innerHTML='<a class="fs-wordmark" href="/">P<span>PERFORMANCE<br><b>POWERHOUSE</b></span></a><div class="fs-quick"><a href="/#command">Workbench</a><a href="/practical-lab/">Practical Lab</a><a href="/#repairs">Repairs</a></div><button type="button" class="fs-open">Explore tools <kbd>⌘ / Ctrl K</kbd></button>';
+ const skipLink = document.querySelector('body > .skip-link');
+ if (skipLink) skipLink.after(bar);
+ else document.body.prepend(bar);
  const d=document.createElement('dialog');d.className='fs-directory';d.setAttribute('aria-labelledby','fs-title');d.innerHTML='<div class="fs-directory-head"><div><p class="fs-eyebrow">YOUR STUDY WORKSPACE</p><h2 id="fs-title">Where do you want to work?</h2></div><button type="button" class="fs-close" aria-label="Close tool directory">Close ×</button></div><label class="fs-search-label">Find a tool or subject<input type="search" class="fs-search" placeholder="Try practical, physics, repair or backup…" autocomplete="off"></label><div class="fs-results"></div><p class="fs-caption">Practice → mark → diagnose → repair → closed-book reattempt → fresh transfer → delayed retest</p>';document.body.append(d);
  function render(q=''){d.querySelector('.fs-results').innerHTML=groups.map(([title,rows])=>{const hits=rows.filter(r=>(title+' '+r.join(' ')).toLowerCase().includes(q.toLowerCase()));return hits.length?'<section><h3>'+esc(title)+'</h3>'+hits.map(([n,u,desc])=>'<a href="'+u+'"'+(u===current?' aria-current="page"':'')+'><strong>'+esc(n)+'</strong><span>'+esc(desc)+'</span></a>').join('')+'</section>':'';}).join('')||'<p role="status">No matching tool. Try a subject or “repair”.</p>';}
  render();bar.querySelector('button').onclick=()=>{d.showModal();d.querySelector('input').focus();};d.querySelector('.fs-close').onclick=()=>d.close();d.querySelector('input').oninput=e=>render(e.target.value);
@@ -19,7 +22,31 @@
  fold('Focus timer & the seven-step learning loop',['.hero-grid','.cycle-panel']);fold('Evidence detail & weekly review',['.kpi-grid','#subject-pulse','.v6-review','.dashboard-grid']);fold('Capacity planning & recovery',['#v8-planning','.exam-panel']);
  // Keep an explicit source link visible when manually recording a repair check.
  const form=document.getElementById('attempt-form'),field=document.createElement('label');field.className='field full';field.innerHTML='Original error being checked<select id="fs-source"><option value="">No error linked — this will not close a retest</option></select><small>Required to close the exact scheduled transfer or delayed retest. Choose the original attempt.</small>';form.querySelector('.form-grid')?.append(field);
- const select=field.querySelector('select');function sync(){const value=document.getElementById('v6-source-id').value;select.innerHTML='<option value="">No error linked — this will not close a retest</option>'+state.attempts.filter(a=>!['reattempt','fresh-transfer','delayed-retest'].includes(a.type)&&a.topicKey===document.getElementById('attempt-topic').value).map(a=>'<option value="'+esc(a.id)+'">'+esc(a.date+' · '+a.question+' · '+a.id)+'</option>').join('');select.value=value;field.hidden=!['reattempt','fresh-transfer','delayed-retest'].includes(document.getElementById('attempt-type').value);}
- select.onchange=()=>document.getElementById('v6-source-id').value=select.value;form.addEventListener('change',e=>{if(e.target!==select)sync();});new MutationObserver(()=>setTimeout(sync,0)).observe(document.getElementById('attempt-dialog'),{attributes:true,attributeFilter:['open']});
+ const select = field.querySelector('select');
+ const sourceId = document.getElementById('v6-source-id');
+ function sync() {
+   const topic = document.getElementById('attempt-topic').value;
+   const type = document.getElementById('attempt-type').value;
+   const sources = PowerhouseEvidence.originalAttemptsForTopic(state.attempts, topic);
+   select.replaceChildren(new Option('No error linked — this will not close a retest', ''));
+   for (const source of sources) {
+     select.add(new Option(source.date + ' · ' + source.question + ' · ' + source.id, source.id));
+   }
+   field.hidden = !['reattempt', 'fresh-transfer', 'delayed-retest'].includes(type);
+   select.value = field.hidden ? '' : sourceId.value;
+   if (select.selectedIndex < 0) select.selectedIndex = 0;
+   sourceId.value = select.value;
+ }
+ // A select fires input before change. Capture the ID before the form takes its draft snapshot.
+ function useSelection() { sourceId.value = select.value; }
+ select.addEventListener('input', useSelection);
+ select.addEventListener('change', useSelection);
+ form.addEventListener('change', event => {
+   if (['attempt-topic', 'attempt-type', 'attempt-subject'].includes(event.target.id)) sync();
+ });
+ form.addEventListener('powerhouse-draft-restored', sync);
+ new MutationObserver(() => {
+   if (document.getElementById('attempt-dialog').open) sync();
+ }).observe(document.getElementById('attempt-dialog'), {attributes: true, attributeFilter: ['open']});
  }
 })();

@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --check sw.js && node --test tests/*.test.mjs"
+    "test": "node --check sw.js && node --test tests/*.test.mjs",
+    "preview:v22": "python3 scripts/preview-v22.py"
   },
   "engines": {
     "node": ">=22"

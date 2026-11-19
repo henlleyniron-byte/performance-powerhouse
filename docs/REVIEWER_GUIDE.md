@@ -1,14 +1,16 @@
-# Performance Powerhouse: source and maintainer evidence
+# Performance Powerhouse source and maintainer evidence
+
+For the current V22 code, open the [working source](../hosted-source/) or its [source and omissions guide](V22_SOURCE.md). The [contributor guide](../CONTRIBUTING.md#test-v22) covers the checks for the current app. The October review below records the earlier V16 and V5.1 sources.
 
 Verified on **23 October 2026 (Asia/Colombo)**. Flagship repository: **[henlleyniron-byte/performance-powerhouse](https://github.com/henlleyniron-byte/performance-powerhouse)**. Maintainer: Henlley Niron Pushparajah. Development is AI-assisted; direction, acceptance and release responsibility remain with the maintainer.
 
-## Start with the current source
+## Sources reviewed on 23 October 2026
 
 The repository has two development lines. Their version numbers must not be combined into one release sequence.
 
 | Source | Where to inspect it | Status |
 | --- | --- | --- |
-| Hosted V16 — Evidence & Recovery | [Current public source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/hosted-source) | Sanitized source copy of saved Site version 42; original source `8295a54feae1878777768fea4ce25c383cdffec4` |
+| Hosted V16 — Evidence & Recovery | [Archived V16 source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/hosted-source) | Sanitized source copy of saved Site version 42; original source `8295a54feae1878777768fea4ce25c383cdffec4` |
 | Hosted history | [Version catalogue](https://github.com/henlleyniron-byte/performance-powerhouse/blob/archive/site-history-review-20261021/history/SITE_VERSIONS.md) | All 42 saved versions and six other reachable source commits; each has a browsable snapshot and manifest |
 | Secondary legacy V5.1 line | [Recovered source](https://github.com/henlleyniron-byte/performance-powerhouse/tree/archive/site-history-review-20261021/related-source/legacy-v5.1) | Four commits recovered from `HenlleyNiron/performance-powerhouse`; retained separately for review |
 | Default branch application | Repository root on `main` | Legacy static V5.0.1 runtime. The documentation update does not promote it to V16 |

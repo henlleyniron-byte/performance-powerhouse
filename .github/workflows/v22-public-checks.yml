@@ -1,0 +1,96 @@
+name: V22 public preview and browser checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: v22-public-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  public-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    container:
+      # Keep the browsers and their OS dependencies matched to qa/package-lock.json.
+      image: mcr.microsoft.com/playwright:v1.62.1-noble@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e
+      options: --shm-size=1g
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: qa/package-lock.json
+      - name: Allow Git to read the runner-mounted checkout inside the test container
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Verify the original V22 import and the working source
+        run: |
+          python3 scripts/verify-v22-source.py --archive
+          python3 scripts/verify-v22-source.py
+      - name: Run legacy service worker checks
+        run: npm test
+      - name: Install the test dependencies
+        run: npm ci --prefix qa --no-audit --no-fund
+      - name: Run V22 source and DOM tests
+        run: npm run unit --prefix qa
+      - name: Rebuild the single-file demo
+        run: |
+          npm run demo --prefix qa
+          git diff --exit-code -- demo/repair-loop.html
+      - name: Exercise the public preview in real browsers
+        run: npm run browser --prefix qa
+      - name: Upload failure traces from fictional test profiles
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: v22-browser-traces
+          path: qa/test-results/**/trace.zip
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Package the tested offline demo
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: powerhouse-offline-demo
+          path: demo/repair-loop.html
+          if-no-files-found: error
+      - name: Save desktop and mobile preview images
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: community-preview-images
+          path: qa/test-results/**/community-demo.png
+          if-no-files-found: error
+          retention-days: 7
+
+  hosted-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: hosted-source
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Install the locked app dependencies
+        run: npm run install:ci
+      - name: Build and validate the Worker
+        run: npm run build
+      - name: Type-check and lint the application
+        run: |
+          ./node_modules/.bin/tsc --noEmit
+          npm run lint
+      - name: Verify the source after the build
+        run: python3 ../scripts/verify-v22-source.py --checkout
