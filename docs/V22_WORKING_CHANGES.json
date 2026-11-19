@@ -23,7 +23,17 @@
     },
     {
       "path": "public/community-share.html",
-      "sha256": "44bcca9987f2630355e5f04c61792e83b7a25c32e180fd2f7749eb3bff9ee981",
+      "sha256": "d346ce91e5229d41491868e0997d0bf729e33469900c1f4be2152d6f2f693f21",
+      "mode": "100644"
+    },
+    {
+      "path": "public/data-safety/powerhouse-evidence-v14.js",
+      "sha256": "cd7963ff825fd95a8bb2af2ae90246a1f5d2f0e440747c366885d9d7cfa7be70",
+      "mode": "100644"
+    },
+    {
+      "path": "public/evidence-rules.js",
+      "sha256": "428d5bea034494bbc40df07a228d1be130c49dd9e0eb77730546dc312900c133",
       "mode": "100644"
     },
     {
@@ -33,7 +43,7 @@
     },
     {
       "path": "public/workspace-shell/shell.js",
-      "sha256": "3623219e102c9e454db691049bab1e77bc02857cf7c076f238e2e4d0222d39af",
+      "sha256": "4e66324a01b094167816c879fca26bfeabe19ff02383f919c4873285b62a92ec",
       "mode": "100644"
     }
   ]

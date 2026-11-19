@@ -22,6 +22,7 @@
     .community .context { font-size: .8rem; letter-spacing: .055em; font-weight: 700; color: var(--ui-link); margin-bottom: .65rem; }
     .community .lead { max-width: 42ch; margin: 1.25rem 0 1.5rem; font-size: 1.1rem; }
     .community .privacy, .community .example-note { color: var(--ui-muted); font-size: .93rem; margin-top: 1rem; }
+    .community [hidden] { display: none; }
     .actions, .example-actions { display: flex; gap: .65rem; flex-wrap: wrap; align-items: center; }
     .community a { color: var(--ui-link); }
     .community .action, .community button, .community select {
@@ -63,7 +64,7 @@
         <p class="lead">Find where you lost marks in Physics, Chemistry or Biology. Record a correction, try a fresh question and check the same skill again after a delay.</p>
         <div class="actions">
           <a class="action primary" href="./?share=1">Open in share mode</a>
-          <a class="action" href="/">Open full dashboard</a>
+          <a class="action" id="full-dashboard" href="/">Open full dashboard</a>
         </div>
         <p class="privacy">Share mode limits the details shown. Saved records, screenshots and earlier exports can still contain personal information. Use a separate browser profile for a public demonstration.</p>
       </section>
@@ -107,8 +108,9 @@
   <script src="/workspace-shell/shell.js"></script>
   <script src="/evidence-rules.js"></script>
   <script>
-    // The shared shell inserts its navigation at the start of the body.
-    document.body.prepend(document.querySelector('.skip-link'));
+    if (new URLSearchParams(location.search).get('share') === '1') {
+      document.getElementById('full-dashboard').hidden = true;
+    }
 
     const form = document.getElementById('example-form');
     const result = document.getElementById('example-result');

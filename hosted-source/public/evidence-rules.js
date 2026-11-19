@@ -59,6 +59,10 @@ globalThis.PowerhouseEvidence = Object.freeze({
     if (data.courseCorrection !== undefined && !object(data.courseCorrection)) fail('Invalid course correction');
     return data;
   },
+  originalAttemptsForTopic(attempts, topicKey) {
+    return attempts.filter(attempt => attempt.topicKey === topicKey &&
+      !['reattempt', 'fresh-transfer', 'delayed-retest'].includes(attempt.type));
+  },
   completedLinks(retests) {
     const links=Object.create(null);
     for(const r of retests) if(r.completedAt && r.completedByAttemptId && r.sourceAttemptId) {
