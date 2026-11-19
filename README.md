@@ -6,6 +6,8 @@ A local-first study workbench for Sri Lankan G.C.E. A/L Physics, Chemistry and B
 
 For the offline demo, use **Download raw file** on GitHub and open the HTML in your browser. You can try a repair and both retests without installing software or entering study records.
 
+![A fictional Physics mistake scored 2 out of 5. The fresh transfer is recorded and the delayed retest is still open.](preview/repair-loop.webp)
+
 ## Try V22 locally
 
 From a clone of this repository, run this command with Python 3:
