@@ -31,6 +31,8 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: qa/package-lock.json
+      - name: Allow Git to read the runner-mounted checkout inside the test container
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Verify the original V22 import and the working source
         run: |
           python3 scripts/verify-v22-source.py --archive
