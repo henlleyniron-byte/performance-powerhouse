@@ -6,6 +6,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: v22-public-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 permissions:
   contents: read
 
@@ -13,6 +17,10 @@ jobs:
   public-checks:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    container:
+      # Keep the browsers and their OS dependencies matched to qa/package-lock.json.
+      image: mcr.microsoft.com/playwright:v1.62.1-noble@sha256:dcc5531e97840b9b5e794f2814476b21571c5124a3fca2267d73041f56e7580e
+      options: --shm-size=1g
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -37,9 +45,6 @@ jobs:
         run: |
           npm run demo --prefix qa
           git diff --exit-code -- demo/repair-loop.html
-      - name: Install browser engines
-        working-directory: qa
-        run: npx --no-install playwright install --with-deps chromium webkit
       - name: Exercise the public preview in real browsers
         run: npm run browser --prefix qa
       - name: Upload failure traces from fictional test profiles
