@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -37,9 +38,19 @@ def archive_files(commit):
     return files
 
 
-def working_files():
+def working_files(checkout=False):
+    if checkout:
+        # Keep modified tracked files and new non-ignored source in scope after
+        # a build, without reading installed dependencies or local build output.
+        names = subprocess.check_output(
+            ['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z', '--', '.'],
+            cwd=SNAPSHOT,
+        )
+        paths = (SNAPSHOT / os.fsdecode(name) for name in names.split(b'\0') if name)
+    else:
+        paths = SNAPSHOT.rglob('*')
     files = {}
-    for path in SNAPSHOT.rglob('*'):
+    for path in paths:
         if path.is_symlink():
             raise ValueError(f'Unexpected symbolic link at {path.relative_to(SNAPSHOT)}')
         if path.is_file():
@@ -49,7 +60,9 @@ def working_files():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--archive', action='store_true', help='read the original V22 import from Git history')
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--checkout', action='store_true', help='verify a Git checkout with local dependencies or build output')
+    mode.add_argument('--archive', action='store_true', help='read the original V22 import from Git history')
     args = parser.parse_args()
     manifest = json.loads(MANIFEST.read_bytes())
     changes = json.loads(CHANGES.read_bytes())
@@ -64,10 +77,11 @@ def main():
     else:
         for item in changes['files']:
             expected[item['path']] = (item['sha256'], item['mode'] == '100755')
-        actual = working_files()
+        actual = working_files(args.checkout)
         label = 'working V22 source'
     omitted = {item['path'] for item in manifest['omitted']}
-    if omitted & actual.keys():
+    excluded_on_disk = not args.archive and any(os.path.lexists(SNAPSHOT / path) for path in omitted)
+    if excluded_on_disk or omitted & actual.keys():
         raise ValueError('An intentionally omitted file is present')
     problems = []
     for path in sorted(actual.keys() | expected.keys()):

@@ -54,6 +54,21 @@ npm run browser
 
 On a minimal Linux machine, use `npx playwright install --with-deps chromium webkit`. The suite starts its own loopback preview on port 4174 and uses disposable browser profiles and fictional records.
 
+### Build the hosted app
+
+From the repository root on Linux, run:
+
+```sh
+cd hosted-source
+npm run install:ci
+npm run build
+./node_modules/.bin/tsc --noEmit
+npm run lint
+python3 ../scripts/verify-v22-source.py --checkout
+```
+
+The build validates the Worker entry point and Site manifest. The checkout verifier checks source bytes and executable flags while excluding Git-ignored build products and dependencies. Both the clean-copy and checkout checks reject any of the seven deliberately omitted files. When editing a source file, update its entry in `docs/V22_WORKING_CHANGES.json` with the new SHA-256 and Git mode. Keep the original import manifest intact.
+
 Before a pull request, please check:
 
 1. Main navigation still works.

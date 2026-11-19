@@ -3,6 +3,12 @@ import { expect, test } from '@playwright/test';
 test.use({ serviceWorkers: 'allow' });
 
 test('a first visit prepares the Biology Academy and Community Share for offline use', async ({ page, context }) => {
+  // Another app on this origin may already have a response for the same URL.
+  await page.goto('/manifest.webmanifest');
+  await page.evaluate(async () => {
+    const other = await caches.open('unrelated-preview');
+    await other.put('/biology-academy/index.html', new Response('Unrelated preview'));
+  });
   await page.goto('/index.html?share=1');
   await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
   const cached = await page.evaluate(async () => {

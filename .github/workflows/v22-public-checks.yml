@@ -63,3 +63,27 @@ jobs:
           path: qa/test-results/**/community-demo.png
           if-no-files-found: error
           retention-days: 7
+
+  hosted-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: hosted-source
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Install the locked app dependencies
+        run: npm run install:ci
+      - name: Build and validate the Worker
+        run: npm run build
+      - name: Type-check and lint the application
+        run: |
+          ./node_modules/.bin/tsc --noEmit
+          npm run lint
+      - name: Verify the source after the build
+        run: python3 ../scripts/verify-v22-source.py --checkout
