@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'powerhouse-';
-const CACHE = `${CACHE_PREFIX}v5-20261012-1`;
+const CACHE = `${CACHE_PREFIX}v5-20261119-1`;
 const ASSETS = [
   './',
   './index.html',
@@ -9,6 +9,11 @@ const ASSETS = [
   './manifest.webmanifest',
   './icon-192.png',
   './icon-512.png',
+  './biology-academy/',
+  './biology-academy/index.html',
+  './biology-academy/academy.css',
+  './biology-academy/academy.js',
+  './biology-academy/content.js',
   './study-tracker/',
   './study-tracker/index.html',
   './study-tracker/tracker.css',

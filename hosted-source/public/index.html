@@ -2864,7 +2864,9 @@ function initEvents() {
 }
 
 SUBJECTS.forEach(buildSubjectPanel);
-if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+if (window.isSecureContext && 'serviceWorker' in navigator && ['https:', 'http:'].includes(location.protocol)) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {});
+}
 initEvents();
 refreshAll();
 restoreFocusTimer();

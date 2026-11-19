@@ -33,6 +33,10 @@ jobs:
         run: npm ci --prefix qa --no-audit --no-fund
       - name: Run V22 source and DOM tests
         run: npm run unit --prefix qa
+      - name: Rebuild the single-file demo
+        run: |
+          npm run demo --prefix qa
+          git diff --exit-code -- demo/repair-loop.html
       - name: Install browser engines
         working-directory: qa
         run: npx --no-install playwright install --with-deps chromium webkit
@@ -45,4 +49,17 @@ jobs:
           name: v22-browser-traces
           path: qa/test-results/**/trace.zip
           if-no-files-found: ignore
+          retention-days: 7
+      - name: Package the tested offline demo
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: powerhouse-offline-demo
+          path: demo/repair-loop.html
+          if-no-files-found: error
+      - name: Save desktop and mobile preview images
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: community-preview-images
+          path: qa/test-results/**/community-demo.png
+          if-no-files-found: error
           retention-days: 7

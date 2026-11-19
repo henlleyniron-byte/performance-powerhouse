@@ -28,6 +28,8 @@ python3 scripts/preview-v22.py
 
 Visit the URL printed in the terminal. The preview serves V22’s public assets at their original paths. It serves the community page from `hosted-source/public/community-share.html`. The [source guide](docs/V22_SOURCE.md) distinguishes the original import from later changes, including Biology Academy. Run the legacy root app separately with `python3 -m http.server --bind 127.0.0.1 8080`.
 
+The downloadable single-file demo is generated from the same Community Share HTML, styles and evidence rules. After changing these sources, run `npm run demo --prefix qa` with the QA dependencies installed and include the resulting `demo/repair-loop.html` in the change.
+
 ### Test V22
 
 Use Node.js 22.13 or newer and Python 3. Install test dependencies in the QA directory:

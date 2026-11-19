@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { startPrivateWorkbench, coreRecord, saveAttempt } from './workbench.mjs';
 
 test('a marked attempt, reattempt, transfer and delayed retest survive backup and reload', async ({ page }) => {
+  test.setTimeout(90_000); // This flow opens and closes independent browser profiles.
   await startPrivateWorkbench(page);
   const original = 'Fictional timing card A';
 

@@ -4,10 +4,12 @@
   "type": "module",
   "scripts": {
     "unit": "node run-unit.mjs",
-    "browser": "playwright test"
+    "browser": "playwright test",
+    "demo": "node export-demo.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.62.1",
+    "axe-core": "4.14.1",
     "linkedom": "0.18.12"
   }
 }

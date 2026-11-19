@@ -97,6 +97,7 @@ test('a competing tab keeps the saved draft and can export its own pending edit'
 });
 
 test('older source-picker drafts recover a valid choice and preserve ambiguous originals for review', async ({ page, browser }) => {
+  test.setTimeout(90_000); // This flow opens and closes independent browser profiles.
   await startPrivateWorkbench(page);
   await saveAttempt(page, { question: 'Original timing task', date: '2026-07-01', earned: 2 });
   const source = (await coreRecord(page)).attempts[0];
