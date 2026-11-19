@@ -7,6 +7,9 @@ import { fileURLToPath } from 'node:url';
 const snapshot = fileURLToPath(new URL('../hosted-source/', import.meta.url));
 const manifest = JSON.parse(readFileSync(new URL('../docs/V22_SOURCE_MANIFEST.json', import.meta.url)));
 
+const changes = JSON.parse(readFileSync(new URL('../docs/V22_WORKING_CHANGES.json', import.meta.url)));
+const paths = new Set([...manifest.files, ...changes.files].map(item => item.path));
+
 // The export redacted two positive URL fixtures. Exercise the original assertions
 // with an invented URL on a supported host. The tests only parse this string.
 const publicFixtures = new Map([
@@ -16,7 +19,7 @@ const publicFixtures = new Map([
 const sampleUrl = 'https://docs.google.com/document/d/fictional-powerhouse-test/edit';
 const worktree = mkdtempSync(join(tmpdir(), 'powerhouse-v22-unit-'));
 try {
-  for (const { path } of manifest.files) {
+  for (const path of paths) {
     const source = join(snapshot, path);
     const target = join(worktree, path);
     mkdirSync(dirname(target), { recursive: true });

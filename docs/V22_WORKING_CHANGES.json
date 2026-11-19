@@ -1,0 +1,40 @@
+{
+  "archive_commit": "383c4f8dcb0cfe0adf6aad61be15596c7955c844",
+  "files": [
+    {
+      "path": "public/biology-academy/academy.css",
+      "sha256": "48a55cb25d3eb4c300587ce23eacc607c2ae42cf9eab286ce7fc0fc1982ae835",
+      "mode": "100644"
+    },
+    {
+      "path": "public/biology-academy/academy.js",
+      "sha256": "c5fc52142fbc462141da26cb14c5128f43606a8aa9e5af8b896b765699812d15",
+      "mode": "100644"
+    },
+    {
+      "path": "public/biology-academy/content.js",
+      "sha256": "6ee11830ddc43b04fe2849ecd9da93f9c67d64d080109e1cffb3e6203e7ab5a6",
+      "mode": "100644"
+    },
+    {
+      "path": "public/biology-academy/index.html",
+      "sha256": "d7170554cd2c3e22e1723743a3ddd2d1e67b51206c55c0e96657933ea0ee2df2",
+      "mode": "100644"
+    },
+    {
+      "path": "public/community-share.html",
+      "sha256": "44bcca9987f2630355e5f04c61792e83b7a25c32e180fd2f7749eb3bff9ee981",
+      "mode": "100644"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "fb5ef93b9d036bf06cd77bbacb3c27c42b689125f1fbb7f1702c81a6001947a6",
+      "mode": "100644"
+    },
+    {
+      "path": "public/workspace-shell/shell.js",
+      "sha256": "3623219e102c9e454db691049bab1e77bc02857cf7c076f238e2e4d0222d39af",
+      "mode": "100644"
+    }
+  ]
+}

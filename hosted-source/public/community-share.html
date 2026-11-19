@@ -1,38 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#07111f">
-<title>A/L Performance Powerhouse · Community Share</title>
-<meta name="description" content="Privacy-safe community entry point for A/L Performance Powerhouse V4.">
-<style>
-:root{--bg:#07111f;--card:#0d1a2b;--card2:#101f33;--line:#22344d;--text:#eef5ff;--muted:#93a5bd;--gold:#ffd166;--blue:#72c7ff;--green:#78e6b0;--pink:#f89cc0}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 0%,#132641 0,transparent 34%),radial-gradient(circle at 90% 10%,#182538 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{width:min(1020px,calc(100% - 32px));margin:0 auto;padding:64px 0 48px}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,209,102,.35);background:rgba(255,209,102,.07);color:var(--gold);padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1{font-size:clamp(36px,7vw,72px);line-height:.98;margin:22px 0 18px;max-width:900px;letter-spacing:-.04em}.lead{font-size:clamp(17px,2.4vw,22px);line-height:1.6;color:#c6d4e6;max-width:780px;margin:0}.actions{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 44px}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:12px;padding:13px 17px;font-weight:850;border:1px solid var(--line);color:var(--text);background:var(--card)}.btn.primary{background:var(--gold);border-color:var(--gold);color:#132036}.btn:hover{transform:translateY(-1px)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--card2),var(--card));border-radius:16px;padding:20px}.card b{display:block;font-size:15px;margin-bottom:8px}.card p{margin:0;color:var(--muted);line-height:1.55;font-size:13px}.loop{margin-top:16px;border:1px solid var(--line);border-radius:16px;padding:18px;background:rgba(8,17,31,.74)}.loop-title{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-weight:900;margin-bottom:12px}.steps{display:flex;flex-wrap:wrap;gap:8px}.step{padding:8px 10px;border:1px solid var(--line);border-radius:10px;font-size:12px;font-weight:800}.privacy{margin-top:24px;padding:14px 16px;border-left:3px solid var(--green);background:rgba(120,230,176,.06);color:#cfe6db;font-size:13px;line-height:1.6}.foot{margin-top:34px;color:#7387a0;font-size:11px;line-height:1.65}@media(max-width:760px){.wrap{padding-top:40px}.grid{grid-template-columns:1fr}.actions{flex-direction:column}.btn{width:100%}}
-</style>
-<link rel="stylesheet" href="/ui-theme/theme.css"><meta name="color-scheme" content="dark light"><script src="/ui-theme/theme.js"></script><link rel="stylesheet" href="/workspace-shell/shell.css"></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0c1118">
+  <meta name="description" content="Try a fictional Physics repair with the V22 retest rules, then open the A/L study workbench.">
+  <title>Community Share · A/L Performance Powerhouse</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/ui-theme/theme.css">
+  <link rel="stylesheet" href="/workspace-shell/shell.css">
+  <script src="/ui-theme/theme.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ui-bg); color: var(--ui-text); font: 1rem/1.5 system-ui, sans-serif; }
+    .community { max-width: 69rem; margin: auto; padding: clamp(2rem, 6vw, 5rem) 1.25rem 6rem; }
+    .opening { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+    .community h1, .community h2, .community p { margin: 0; }
+    .community h1 { font-size: clamp(2.4rem, 5.2vw, 4.6rem); line-height: 1.02; letter-spacing: -.045em; }
+    .community h2 { font-size: 1.45rem; line-height: 1.2; }
+    .community .context { font-size: .8rem; letter-spacing: .055em; font-weight: 700; color: var(--ui-link); margin-bottom: .65rem; }
+    .community .lead { max-width: 42ch; margin: 1.25rem 0 1.5rem; font-size: 1.1rem; }
+    .community .privacy, .community .example-note { color: var(--ui-muted); font-size: .93rem; margin-top: 1rem; }
+    .actions, .example-actions { display: flex; gap: .65rem; flex-wrap: wrap; align-items: center; }
+    .community a { color: var(--ui-link); }
+    .community .action, .community button, .community select {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; max-width: 100%;
+      padding: .55rem .85rem; border: 1px solid var(--ui-line); border-radius: .45rem;
+      background: var(--ui-panel); color: var(--ui-text); font: inherit;
+    }
+    .community .action, .community button { font-weight: 650; text-decoration: none; }
+    .community button { cursor: pointer; }
+    .community .primary { border-color: var(--ui-link); }
+    .community :is(a, button):hover { text-decoration: underline; text-underline-offset: .18em; }
+    :is(.community, .community *, .skip-link):focus-visible { outline: 3px solid var(--ui-focus); outline-offset: 3px; }
+    .skip-link { position: absolute; z-index: 10000; top: .5rem; left: .5rem; transform: translateY(-160%);
+      padding: .65rem 1rem; color: var(--ui-text); background: var(--ui-panel); }
+    .skip-link:focus { transform: none; }
+    .example { background: var(--ui-panel); border: 1px solid var(--ui-line); border-radius: .8rem; padding: clamp(1rem, 3vw, 1.75rem); }
+    .example header { display: flex; justify-content: space-between; gap: .75rem; align-items: start; margin-bottom: 1rem; }
+    .marks { flex: none; font-size: 1.35rem; font-weight: 750; font-variant-numeric: tabular-nums; }
+    .example label { display: block; font-weight: 650; margin: 1.25rem 0 .35rem; }
+    .example select { display: block; width: 100%; margin-bottom: .65rem; background: var(--ui-field); }
+    .checks { margin: 1.2rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--ui-line); }
+    .checks li { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; padding: .65rem 0; border-bottom: 1px solid var(--ui-line); }
+    .checks strong { font-weight: 650; }
+    .example .result { margin-top: .85rem; min-height: 3em; }
+    .modules { margin-top: clamp(2rem, 5vw, 4rem); }
+    .modules ul { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; }
+    .modules a { display: block; height: 100%; border-top: 2px solid var(--ui-line); padding: .8rem .1rem; font-weight: 700; }
+    @media (max-width: 48rem) { .opening { grid-template-columns: 1fr; } .modules ul { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 24rem) { .modules ul { grid-template-columns: 1fr; } .example header { flex-wrap: wrap; } }
+  </style>
+</head>
 <body>
-<main class="wrap">
-  <span class="badge">Community Share · V4 core</span>
-  <h1>Turn papers into marks — not into forgotten mistakes.</h1>
-  <p class="lead">A/L Performance Powerhouse is a local-first Physics, Chemistry and Biology system built around one loop: attempt, mark, diagnose, repair, fresh transfer and delayed retest.</p>
-  <div class="actions">
-    <a class="btn primary" href="./?share=1">Open privacy-safe Powerhouse</a>
-    <a class="btn" href="./">Open full local dashboard</a>
-    <a class="btn" href="./study-tracker/?share=1">Open share-safe Study Tracker</a>
-    <a class="btn" href="./physics-intelligence/?share=1">Open Physics Intelligence</a><a class="btn" href="./chemistry-intelligence/?share=1">Open Chemistry Intelligence</a><a class="btn" href="./biology-intelligence/?share=1">Open Biology Intelligence</a>
-  </div>
-  <section class="grid">
-    <article class="card"><b>Paper Engine</b><p>Log honest timed evidence: score, time, confidence, guesses, error family and a short correction rule.</p></article>
-    <article class="card"><b>Repair Engine</b><p>Prioritises recurring mark loss, confidence traps and unfinished retests instead of letting mood choose the next task.</p></article>
-    <article class="card"><b>Study Tracker</b><p>Measures focused execution, then asks what exam evidence the block produced. Time is descriptive, never a mastery score.</p></article>
-    <article class="card"><b>Physics Intelligence</b><p>Integrated validated archive intelligence covering 1,410 MCQs from 2000–2025, with current-era family analysis.</p></article>
-  </section>
-  <section class="loop">
-    <div class="loop-title">Governing loop</div>
-    <div class="steps"><span class="step">1 · ATTEMPT</span><span class="step">2 · MARK</span><span class="step">3 · DIAGNOSE</span><span class="step">4 · REPAIR</span><span class="step">5 · CLOSED-BOOK REATTEMPT</span><span class="step">6 · FRESH TRANSFER</span><span class="step">7 · DELAYED RETEST</span></div>
-  </section>
-  <div class="privacy"><b>Privacy-safe by design.</b> The dashboard stores performance data in the browser. The share-safe links above automatically obscure private performance on the device where the data exists; another student's browser has its own separate local data.</div>
-  <div class="foot">Community Share is an entry point to the same tested V4 core. The Study Tracker uses its own versioned store and optional user-isolated cloud sync, so existing V3→V4 migration and browser-local evidence remain intact.</div>
-</main>
-<script src="/workspace-shell/shell.js"></script></body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="community" id="main-content" tabindex="-1">
+    <div class="opening">
+      <section aria-labelledby="product-title">
+        <p class="context">Sri Lankan G.C.E. A/L · Community Share</p>
+        <h1 id="product-title">Performance Powerhouse</h1>
+        <p class="lead">Find where you lost marks in Physics, Chemistry or Biology. Record a correction, try a fresh question and check the same skill again after a delay.</p>
+        <div class="actions">
+          <a class="action primary" href="./?share=1">Open in share mode</a>
+          <a class="action" href="/">Open full dashboard</a>
+        </div>
+        <p class="privacy">Share mode limits the details shown. Saved records, screenshots and earlier exports can still contain personal information. Use a separate browser profile for a public demonstration.</p>
+      </section>
+      <section class="example" aria-labelledby="example-title">
+        <header>
+          <div><p class="context">Fictional Physics example · Day 0</p><h2 id="example-title">A missed unit conversion</h2></div>
+          <span class="marks" aria-label="Original score, 2 out of 5 marks">2 / 5</span>
+        </header>
+        <p>A student used milliseconds in a formula that needed seconds. They wrote down the conversion and redid the original question. Which follow-up earns credit toward closing the repair?</p>
+        <form id="example-form" hidden>
+          <label for="example-choice">Choose a follow-up</label>
+          <select id="example-choice">
+            <option value="repeat">Day 3 · Repeat the original question</option>
+            <option value="early">Day 1 · Solve a fresh question early</option>
+            <option value="transfer">Day 3 · Solve a fresh question unaided</option>
+            <option value="delayed">Day 7 · Solve another fresh question unaided</option>
+          </select>
+          <div class="example-actions">
+            <button type="submit" class="primary">Check this attempt</button>
+            <button type="reset">Reset example</button>
+          </div>
+        </form>
+        <ol class="checks" aria-label="Example retest record">
+          <li><span>Day 3 · Fresh transfer</span><strong id="transfer-status">Open</strong></li>
+          <li><span>Day 7 · Delayed retest</span><strong id="delayed-status">Open</strong></li>
+        </ol>
+        <p class="result" id="example-result" role="status">The student must earn full marks on two different, unaided questions on the scheduled days or later.</p>
+        <p class="example-note">The example uses the V22 dashboard’s retest rules. Its marks stay on this page.</p>
+      </section>
+    </div>
+    <nav class="modules" aria-labelledby="modules-title">
+      <h2 id="modules-title">Open a study module in share mode</h2>
+      <ul>
+        <li><a href="./physics-intelligence/?share=1">Physics Intelligence</a></li>
+        <li><a href="/chemistry-intelligence/?share=1">Chemistry Intelligence</a></li>
+        <li><a href="/biology-intelligence/?share=1">Biology Intelligence</a></li>
+        <li><a href="/study-tracker/?share=1">Study Tracker</a></li>
+      </ul>
+    </nav>
+  </main>
+  <script src="/workspace-shell/shell.js"></script>
+  <script src="/evidence-rules.js"></script>
+  <script>
+    // The shared shell inserts its navigation at the start of the body.
+    document.body.prepend(document.querySelector('.skip-link'));
+
+    const form = document.getElementById('example-form');
+    const result = document.getElementById('example-result');
+    const introduction = result.textContent;
+    const rules = window.PowerhouseEvidence;
+
+    if (rules) {
+      const source = { id: 'units-a', topicKey: 'physics|0|0', date: '2026-07-01', question: 'Timing card A' };
+      const attempts = [source];
+      const retests = [3, 7].map((days, index) => ({
+        stage: index + 1, sourceAttemptId: source.id, topicKey: source.topicKey, due: rules.addDays(source.date, days)
+      }));
+      const choices = {
+        repeat: { day: 3, question: source.question, type: 'fresh-transfer', blocked: 'Repeating the same question rehearses the correction. Try a different question to earn fresh-transfer credit.' },
+        early: { day: 1, question: 'Timing card B', type: 'fresh-transfer', blocked: 'This fresh attempt came on day 1. The transfer check opens on day 3.' },
+        transfer: { day: 3, question: 'Timing card B', type: 'fresh-transfer' },
+        delayed: { day: 7, question: 'Timing card C', type: 'delayed-retest', blocked: 'Complete the day 3 fresh transfer before recording the delayed retest.' }
+      };
+      const status = [document.getElementById('transfer-status'), document.getElementById('delayed-status')];
+
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        const choice = document.getElementById('example-choice').value;
+        const sample = choices[choice];
+        const attempt = {
+          id: choice, sourceAttemptId: source.id, topicKey: source.topicKey, type: sample.type,
+          question: sample.question, date: rules.addDays(source.date, sample.day),
+          earned: 5, total: 5, unaided: true, novelQuestion: sample.question !== source.question, guesses: 0
+        };
+        const match = rules.eligibleRetest(attempt, retests, attempts);
+        if (match) {
+          match.completedAt = attempt.date;
+          match.completedByAttemptId = attempt.id;
+          attempts.push(attempt);
+          status[match.stage - 1].textContent = 'Recorded';
+          result.textContent = match.stage === 1
+            ? 'Fresh transfer recorded. The delayed retest stays open until a later, different question earns full marks.'
+            : 'Delayed retest recorded. Both checks now have their own dated evidence for the original mistake.';
+        } else if (attempts.some(item => item.id === attempt.id)) {
+          result.textContent = 'That attempt already has credit. Each question can close only its own check.';
+        } else {
+          result.textContent = sample.blocked || 'The evidence does not meet the rules for an open retest.';
+        }
+      });
+      form.addEventListener('reset', () => {
+        attempts.splice(1);
+        for (const retest of retests) {
+          delete retest.completedAt;
+          delete retest.completedByAttemptId;
+        }
+        for (const label of status) label.textContent = 'Open';
+        result.textContent = introduction;
+      });
+      form.hidden = false;
+    }
+  </script>
+</body>
 </html>

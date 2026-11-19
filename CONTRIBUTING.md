@@ -26,7 +26,7 @@ For the current V22 browser app, start the local server from the repo root:
 python3 scripts/preview-v22.py
 ```
 
-Visit the URL printed in the terminal. The preview serves V22’s public assets at their original paths. It reads the community page from `preview/community-share.html`. The archived V22 files and their provenance are described in the [source guide](docs/V22_SOURCE.md). Run the legacy root app separately with `python3 -m http.server --bind 127.0.0.1 8080`.
+Visit the URL printed in the terminal. The preview serves V22’s public assets at their original paths. It serves the community page from `hosted-source/public/community-share.html`. The [source guide](docs/V22_SOURCE.md) distinguishes the original import from later changes, including Biology Academy. Run the legacy root app separately with `python3 -m http.server --bind 127.0.0.1 8080`.
 
 ### Test V22
 
@@ -35,6 +35,7 @@ Use Node.js 22.13 or newer and Python 3. Install test dependencies in the QA dir
 ```sh
 npm ci --prefix qa
 python3 scripts/verify-v22-source.py
+python3 scripts/verify-v22-source.py --archive
 npm test
 npm run unit --prefix qa
 ```
