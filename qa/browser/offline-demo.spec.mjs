@@ -5,7 +5,9 @@ test('the downloadable HTML works offline and makes no network requests', async 
   page.on('request', request => {
     if (/^https?:/.test(request.url())) requests.push(request.url());
   });
-  await context.setOffline(true);
+  // WebKit's offline emulation also blocks file: navigation. Block only
+  // HTTP(S) so the browser can open the file while its network is unavailable.
+  await context.route(/^https?:/, route => route.abort('internetdisconnected'));
   await page.goto(new URL('../../demo/repair-loop.html', import.meta.url).href);
   const check = page.getByRole('button', { name: 'Check this attempt' });
   await page.getByLabel('Choose a follow-up').selectOption('transfer');
