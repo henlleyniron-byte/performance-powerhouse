@@ -102,20 +102,21 @@ test('private draft actions captured before sharing refuse both shared entry pat
       // The URL can change before a page handler updates the visibility flag.
       await page.evaluate(() => history.replaceState(null, '', '?share=1'));
     }
-    const effects = await actions.evaluate(saved => {
+    const effects = await actions.evaluate((saved, key) => {
+      const before = localStorage.getItem(key);
       let blobs = 0;
       const create = URL.createObjectURL;
       URL.createObjectURL = function (blob) { blobs++; return create.call(URL, blob); };
       try {
         saved.restore();
         saved.exportOriginal();
-        return { editorOpen: document.getElementById('attempt-dialog').open, blobs };
+        return { editorOpen: document.getElementById('attempt-dialog').open, blobs, changed: localStorage.getItem(key) !== before };
       } finally {
         URL.createObjectURL = create;
       }
-    });
-    expect(effects).toEqual({ editorOpen: false, blobs: 0 });
-    expect(await savedDraft(page)).toEqual(original);
+    }, draftKey);
+    expect(effects).toEqual({ editorOpen: false, blobs: 0, changed: false });
+    expect((await savedDraft(page)).fields).toEqual(original.fields);
   }
   await actions.dispose();
 });
