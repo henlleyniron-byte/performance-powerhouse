@@ -186,7 +186,10 @@
 
   function selectFromHash() {
     const id = location.hash.slice(1);
-    const track = modules.find(entry => entry.id === id) || modules[0];
+    const linked = modules.find(entry => entry.id === id);
+    // Ordinary document anchors, including the skip link, keep the open lesson.
+    if (id && !linked && activeId) return;
+    const track = linked || modules[0];
     if (unitFilter.value && !track.units.includes(unitFilter.value)) unitFilter.value = '';
     renderLesson(track, false);
   }

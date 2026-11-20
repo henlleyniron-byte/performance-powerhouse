@@ -73,4 +73,10 @@ test('changing syllabus units updates the active lesson and Back recovers the wr
   await expect(page.locator('#lesson h2')).toHaveText(firstHeading);
   await expect(page.locator('#lesson textarea').first()).toHaveValue('Fictional answer before changing the unit');
   await expect(unit).toHaveValue('');
+  await unit.selectOption('06');
+  await page.getByRole('link', { name: 'Skip to academy' }).focus();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#main$/);
+  await expect(page.locator('#lesson h2')).toHaveText('Genetics and Inheritance');
+  await expect(unit).toHaveValue('06');
 });
