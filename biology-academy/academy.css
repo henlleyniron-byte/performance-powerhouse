@@ -64,3 +64,19 @@ input[type="radio"] { flex: 0 0 auto; margin-top: .45rem; accent-color: var(--ac
 textarea { display: block; width: min(100%, 54rem); min-height: 6rem; resize: vertical; background: var(--page); border: 1px solid var(--line); border-radius: .55rem; padding: .75rem; margin-bottom: .75rem; }
 summary { cursor: pointer; font-weight: 650; padding-block: .55rem; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+
+.paper-tools { display: flex; flex-wrap: wrap; gap: .5rem .8rem; align-items: center; margin-block: 1rem; }
+.paper-tools select { width: auto; max-width: 100%; }
+.academy-paper { display: none; }
+@media print {
+  @page { margin: 15mm; }
+  :root, body { background: white; color: black; color-scheme: light; }
+  .academy-printable > :not(.academy-paper) { display: none !important; }
+  .academy-paper { display: block; font: 11pt/1.35 Georgia, serif; }
+  .academy-paper h1 { font-size: 20pt; letter-spacing: 0; }
+  .academy-paper h2 { font-size: 13pt; margin-block: 4mm 1.5mm; break-after: avoid; }
+  .academy-paper p, .academy-paper li { margin-block: 0 1.3mm; orphans: 2; widows: 2; }
+  .academy-paper ul, .academy-paper ol { margin-block: 1.5mm; }
+  .academy-paper .answer-space { min-height: 14mm; border-bottom: 1px solid #777; }
+  .academy-paper .extended { min-height: 25mm; }
+}

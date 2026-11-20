@@ -152,6 +152,73 @@
     return { view, heading };
   }
 
+  // Paper copies are generated from the public question bank. They never read
+  // the learner's textareas, selected radio buttons, or another track's work.
+  const printTools = element('div', undefined, 'paper-tools');
+  const printLabel = element('label', 'Paper copy');
+  printLabel.htmlFor = 'paper-kind';
+  const printKind = element('select');
+  printKind.id = 'paper-kind';
+  for (const [value, title] of [['questions', 'Blank question sheet'], ['answers', 'Marking guide']]) {
+    const option = element('option', title);
+    option.value = value;
+    printKind.append(option);
+  }
+  const printButton = element('button', 'Print current track');
+  printButton.type = 'button';
+  printTools.append(printLabel, printKind, printButton);
+  lesson.before(printTools);
+  const paper = element('article', undefined, 'academy-paper');
+  document.body.append(paper);
+  document.body.classList.add('academy-printable');
+
+  function paperSection(title, prompt) {
+    const section = element('section');
+    section.append(element('h2', title), element('p', prompt));
+    return section;
+  }
+
+  function preparePaper() {
+    const track = modules.find(entry => entry.id === activeId);
+    paper.replaceChildren();
+    if (!track) return;
+    const marking = printKind.value === 'answers';
+    const kind = marking ? 'Marking guide' : 'Blank question sheet';
+    paper.append(element('p', 'Performance Powerhouse · Biology Academy · ' + kind),
+      element('h1', track.title), element('p', 'Syllabus units ' + track.units.join(', ')));
+    const model = paperSection('Prediction', track.scenario.prompt);
+    model.append(list(track.scenario.options.map(option => marking
+      ? option.label + ' — ' + option.observation : option.label)));
+    model.append(element('p', track.scenario.prediction));
+    const mcq = paperSection('Closed-book MCQ', track.mcq.prompt);
+    const options = list(track.mcq.options, 'ol');
+    options.type = 'A';
+    mcq.append(options);
+    const structured = paperSection('Structured response', track.structured.prompt);
+    const transfer = paperSection('Fresh transfer', track.transfer.prompt);
+    if (marking) {
+      model.append(element('p', track.scenario.explanation));
+      const correct = String.fromCharCode(65 + track.mcq.answer);
+      mcq.append(element('p', 'Correct answer: ' + correct + '. ' + track.mcq.options[track.mcq.answer]));
+      const reasons = list(track.mcq.explanations, 'ol');
+      reasons.type = 'A';
+      mcq.append(reasons);
+      structured.append(list(track.structured.points));
+      transfer.append(element('p', track.transfer.answer));
+    } else {
+      model.append(element('div', undefined, 'answer-space'));
+      structured.append(element('div', undefined, 'answer-space extended'));
+      transfer.append(element('div', undefined, 'answer-space'));
+    }
+    paper.append(model, mcq, structured, transfer);
+  }
+
+  window.addEventListener('beforeprint', preparePaper);
+  printButton.addEventListener('click', () => {
+    preparePaper();
+    window.print();
+  });
+
   function renderTracks() {
     const visible = modules.filter((track) => !unitFilter.value || track.units.includes(unitFilter.value));
     count.textContent = visible.length + (visible.length === 1 ? ' track' : ' tracks');
