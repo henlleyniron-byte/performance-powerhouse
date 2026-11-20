@@ -58,3 +58,19 @@ test('the standalone Biology Academy runs every learning track without a network
   expect(requests).toEqual([]);
   expect(errors).toEqual([]);
 });
+
+test('changing syllabus units updates the active lesson and Back recovers the written answer', async ({ page }) => {
+  await page.goto('/biology-academy/?share=1');
+  const firstHeading = await page.locator('#lesson h2').innerText();
+  await page.locator('#lesson textarea').first().fill('Fictional answer before changing the unit');
+  const unit = page.getByLabel('Filter by syllabus unit');
+  await unit.selectOption('06');
+  const active = page.locator('#tracks [aria-current="true"]');
+  await expect(active).toHaveCount(1);
+  await expect(page.locator('#lesson h2')).toHaveText(await active.innerText());
+  await expect(page).toHaveURL(/\?share=1#inheritance$/);
+  await page.goBack();
+  await expect(page.locator('#lesson h2')).toHaveText(firstHeading);
+  await expect(page.locator('#lesson textarea').first()).toHaveValue('Fictional answer before changing the unit');
+  await expect(unit).toHaveValue('');
+});

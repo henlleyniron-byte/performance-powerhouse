@@ -163,8 +163,7 @@
       link.addEventListener('click', (event) => {
         if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button > 0) return;
         event.preventDefault();
-        if (location.hash !== link.hash) history.pushState(null, '', link.hash);
-        renderLesson(track, true);
+        openTrack(track, true);
       });
       tracks.append(link);
     }
@@ -179,18 +178,29 @@
     if (focus) heading.focus();
   }
 
-  function selectFromHash() {
-    const id = location.hash.slice(1);
-    const track = modules.find((entry) => entry.id === id);
-    if (track) {
-      if (unitFilter.value && !track.units.includes(unitFilter.value)) unitFilter.value = '';
-      renderLesson(track, false);
-    } else if (!id || !activeId) {
-      renderLesson(modules[0], false);
-    }
+  function openTrack(track, focus) {
+    const hash = '#' + track.id;
+    if (location.hash !== hash) history.pushState(null, '', hash);
+    renderLesson(track, focus);
   }
 
-  unitFilter.addEventListener('change', renderTracks);
+  function selectFromHash() {
+    const id = location.hash.slice(1);
+    const track = modules.find(entry => entry.id === id) || modules[0];
+    if (unitFilter.value && !track.units.includes(unitFilter.value)) unitFilter.value = '';
+    renderLesson(track, false);
+  }
+
+  unitFilter.addEventListener('change', () => {
+    const visible = modules.filter(track => !unitFilter.value || track.units.includes(unitFilter.value));
+    if (visible.some(track => track.id === activeId)) renderTracks();
+    else if (visible.length) openTrack(visible[0], false);
+    else {
+      activeId = undefined;
+      lesson.replaceChildren();
+      renderTracks();
+    }
+  });
   window.addEventListener('hashchange', selectFromHash);
   selectFromHash();
 })();
