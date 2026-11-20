@@ -2,9 +2,9 @@
 
 A local-first study workbench for Sri Lankan G.C.E. A/L Physics, Chemistry and Biology. Record where a marked attempt went wrong, write a correction, then check the same skill on a fresh question and again after a delay.
 
-**[Try the offline Physics demo](demo/repair-loop.html)** · [Open the hosted workbench](https://al-performance-powerhouse.phenlleyniron.chatgpt.site/) · [Contribute](CONTRIBUTING.md)
+**[Offline Physics demo](demo/repair-loop.html)** · **[Offline Biology Academy](demo/biology-academy.html)** · [Open the hosted workbench](https://al-performance-powerhouse.phenlleyniron.chatgpt.site/) · [Contribute](CONTRIBUTING.md)
 
-For the offline demo, use **Download raw file** on GitHub and open the HTML in your browser. You can try a repair and both retests without installing software or entering study records.
+Choose either offline file, select **Download raw file** on GitHub, and open the saved HTML in a browser. Physics walks you through a repaired mistake and two retests. Biology includes ten English-medium tracks with predictions, closed-book questions, written responses and marking points. Each file works on its own.
 
 ![A fictional Physics mistake scored 2 out of 5. The fresh transfer is recorded and the delayed retest is still open.](preview/repair-loop.webp)
 

@@ -25,3 +25,58 @@ test('the downloadable HTML works offline and makes no network requests', async 
   await expect(page.getByRole('link', { name: 'Open in share mode' })).toHaveAttribute('href', 'https://al-performance-powerhouse.phenlleyniron.chatgpt.site/?share=1');
   expect(requests).toEqual([]);
 });
+
+test('the standalone Biology Academy runs every learning track without a network connection', async ({ page, context }) => {
+  const requests = [];
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await context.route(/^https?:/, route => {
+    requests.push(route.request().url());
+    return route.abort('internetdisconnected');
+  });
+  await page.goto(new URL('../../demo/biology-academy.html', import.meta.url).href);
+  const links = page.locator('#tracks a');
+  await expect(links).toHaveCount(10);
+  const titles = await links.allTextContents();
+  for (const title of titles) {
+    await page.locator('#tracks').getByRole('link', { name: title, exact: true }).click();
+    await expect(page.locator('#lesson h2')).toHaveText(title);
+    await expect(page.locator('#lesson textarea')).toHaveCount(2);
+    await expect(page.locator('#lesson input[type=radio]')).toHaveCount(8);
+  }
+  await page.locator('#lesson input[type=radio]').first().check();
+  await page.getByRole('button', { name: 'Check prediction' }).click();
+  await expect(page.locator('#lesson [role=status]').first()).toBeVisible();
+  await page.locator('#lesson textarea').first().fill('A fictional written response.');
+  await links.first().click();
+  await links.last().click();
+  await expect(page.locator('#lesson textarea').first()).toHaveValue('A fictional written response.');
+  await page.reload();
+  await expect(page.locator('#lesson h2')).toHaveText(titles.at(-1));
+  await expect(page.locator('#lesson textarea').first()).toHaveValue('');
+  await expect(page.getByRole('link', { name: 'Biology Intelligence', exact: true })).toHaveAttribute('href', /^https:\/\/.*\/biology-intelligence\/\?share=1$/);
+  expect(requests).toEqual([]);
+  expect(errors).toEqual([]);
+});
+
+test('changing syllabus units updates the active lesson and Back recovers the written answer', async ({ page }) => {
+  await page.goto('/biology-academy/?share=1');
+  const firstHeading = await page.locator('#lesson h2').innerText();
+  await page.locator('#lesson textarea').first().fill('Fictional answer before changing the unit');
+  const unit = page.getByLabel('Filter by syllabus unit');
+  await unit.selectOption('06');
+  const active = page.locator('#tracks [aria-current="true"]');
+  await expect(active).toHaveCount(1);
+  await expect(page.locator('#lesson h2')).toHaveText(await active.innerText());
+  await expect(page).toHaveURL(/\?share=1#inheritance$/);
+  await page.goBack();
+  await expect(page.locator('#lesson h2')).toHaveText(firstHeading);
+  await expect(page.locator('#lesson textarea').first()).toHaveValue('Fictional answer before changing the unit');
+  await expect(unit).toHaveValue('');
+  await unit.selectOption('06');
+  await page.getByRole('link', { name: 'Skip to academy' }).focus();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#main$/);
+  await expect(page.locator('#lesson h2')).toHaveText('Genetics and Inheritance');
+  await expect(unit).toHaveValue('06');
+});

@@ -4,31 +4,60 @@ import { parseHTML } from 'linkedom';
 const publicRoot = new URL('../hosted-source/public/', import.meta.url);
 const output = new URL('../demo/', import.meta.url);
 const liveSite = 'https://al-performance-powerhouse.phenlleyniron.chatgpt.site/';
-const readPublic = path => readFileSync(new URL(path.replace(/^\//, ''), publicRoot), 'utf8');
-const { document } = parseHTML(readPublic('community-share.html'));
+mkdirSync(output, { recursive: true });
 
-// The shared site navigation links to local routes. The standalone page uses
-// its own dashboard and module links, which point to the hosted workbench.
-document.querySelector('script[src="/workspace-shell/shell.js"]').remove();
-document.querySelector('link[href="/workspace-shell/shell.css"]').remove();
-for (const link of document.querySelectorAll('link[rel="stylesheet"]')) {
-  const style = document.createElement('style');
-  style.textContent = readPublic(link.getAttribute('href'));
-  link.replaceWith(style);
+function readPage(path) {
+  const source = new URL(path, publicRoot);
+  const { document } = parseHTML(readFileSync(source, 'utf8'));
+  return { source, document };
 }
-for (const script of document.querySelectorAll('script[src]')) {
-  const source = readPublic(script.getAttribute('src'));
-  script.removeAttribute('src');
-  script.textContent = source.replace(/<\/script/gi, '<\\/script');
+
+function writeOfflinePage({ source, document }, name) {
+  function readAsset(path) {
+    const url = path.startsWith('/') ? new URL(path.slice(1), publicRoot) : new URL(path, source);
+    if (!url.href.startsWith(publicRoot.href)) throw Error('Asset outside the public source: ' + path);
+    return readFileSync(url, 'utf8');
+  }
+  for (const link of document.querySelectorAll('link[rel="stylesheet"]')) {
+    const style = document.createElement('style');
+    style.textContent = readAsset(link.getAttribute('href'));
+    link.replaceWith(style);
+  }
+  for (const script of document.querySelectorAll('script[src]')) {
+    const code = readAsset(script.getAttribute('src'));
+    script.removeAttribute('src');
+    script.textContent = code.replace(/<\/script/gi, '<\\/script');
+    // Inline scripts ignore defer. The lesson engine needs the body to exist.
+    if (script.hasAttribute('defer')) {
+      script.removeAttribute('defer');
+      document.body.append(script);
+    }
+  }
+  const icon = document.querySelector('link[rel="icon"]');
+  if (icon) icon.setAttribute('href', 'data:image/svg+xml;base64,' + Buffer.from(readAsset(icon.getAttribute('href'))).toString('base64'));
+  document.documentElement.before(document.createComment(' Generated from the public source. Rebuild with npm run demo --prefix qa. '));
+  writeFileSync(new URL(name, output), document.toString().replace(/^[ \t]+$/gm, '').trimEnd() + '\n');
 }
-const icon = document.querySelector('link[rel="icon"]');
-icon.setAttribute('href', 'data:image/svg+xml;base64,' + Buffer.from(readPublic(icon.getAttribute('href'))).toString('base64'));
-for (const link of document.querySelectorAll('a[href]')) {
+
+const community = readPage('community-share.html');
+const doc = community.document;
+doc.querySelector('script[src="/workspace-shell/shell.js"]').remove();
+doc.querySelector('link[href="/workspace-shell/shell.css"]').remove();
+for (const link of doc.querySelectorAll('a[href]')) {
   const href = link.getAttribute('href');
   if (!href.startsWith('#')) link.setAttribute('href', new URL(href, liveSite).href);
 }
-document.querySelector('.context').textContent = 'Sri Lankan G.C.E. A/L · Offline demo';
-document.querySelector('.example-note').textContent = 'This example runs offline using the V22 retest rules. The dashboard and study module links open the hosted site.';
-document.documentElement.before(document.createComment(' Generated from the public Community Share page. Rebuild with npm run demo --prefix qa. '));
-mkdirSync(output, { recursive: true });
-writeFileSync(new URL('repair-loop.html', output), document.toString().replace(/^[ \t]+$/gm, '').trimEnd() + '\n');
+doc.querySelector('.context').textContent = 'Sri Lankan G.C.E. A/L · Offline demo';
+doc.querySelector('.example-note').textContent = 'This example runs offline using the V22 retest rules. The dashboard and study module links open the hosted site.';
+writeOfflinePage(community, 'repair-loop.html');
+
+const academy = readPage('biology-academy/index.html');
+const academyOrigin = new URL('biology-academy/', liveSite);
+for (const link of academy.document.querySelectorAll('[data-academy-destination]')) {
+  // Keep the hosted destinations out of the local file:// directory.
+  link.setAttribute('href', new URL(link.getAttribute('href'), academyOrigin).href);
+  link.removeAttribute('data-academy-destination');
+}
+academy.document.querySelector('.kicker').textContent = 'Sri Lankan G.C.E. A/L · Offline edition';
+academy.document.querySelector('.reference p').textContent += ' The syllabus and hosted workbench links require internet access.';
+writeOfflinePage(academy, 'biology-academy.html');
