@@ -41,6 +41,11 @@ test('a first visit prepares the Biology Academy and Community Share for offline
     await page.goto(origin + '/biology-academy/?share=1');
     await expect(page.getByRole('heading', { name: 'Biology Academy' })).toBeVisible();
     await expect(page.locator('#tracks a')).toHaveCount(10);
+    await page.evaluate(() => { window.print = () => {}; });
+    await page.getByRole('button', { name: 'Print current track' }).click();
+    await page.emulateMedia({ media: 'print' });
+    await expect(page.locator('.academy-paper')).toContainText('Blank question sheet');
+    await page.emulateMedia({ media: 'screen' });
     await expect(page.getByRole('link', { name: 'Performance Powerhouse', exact: true })).toHaveAttribute('href', /share=1/);
     await page.goto(origin + '/community-share.html?offline=1');
     await page.getByLabel('Choose a follow-up').selectOption('transfer');

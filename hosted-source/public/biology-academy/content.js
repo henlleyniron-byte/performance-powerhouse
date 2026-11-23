@@ -25,7 +25,7 @@ globalThis.PowerhouseBiologyAcademy = {
         "A codon is a triplet on mRNA. A tRNA anticodon pairs with a codon during translation, and a stop codon signals termination.",
       ],
       scenario: {
-        prompt: "A teaching diagram shows three arrows. For each arrow, predict what is made and what is read.",
+        prompt: "For each process listed below, identify what serves as the template and what product is made.",
         options: [
           { label: "Replication", observation: "DNA is made using DNA as the template. Each daughter double helix contains one parental strand and one new strand." },
           { label: "Transcription", observation: "RNA is made using one DNA strand as the template for that transcript." },
@@ -229,6 +229,7 @@ globalThis.PowerhouseBiologyAcademy = {
           { label: "Increase carbon dioxide alone", observation: "Relative uptake rises from 4 to 6 units." },
           { label: "Increase light and carbon dioxide", observation: "Relative uptake rises from 4 to 6 units for the fixed conditions modeled here." },
         ],
+        paperEvidence: true,
         prediction: "Which factor is supported as limiting at the original plateau under these conditions?",
         explanation: "Increasing carbon dioxide alone raised uptake while increasing light alone did not. The finding applies to this range and these fixed conditions.",
       },

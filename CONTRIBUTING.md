@@ -42,6 +42,8 @@ npm test
 npm run unit --prefix qa
 ```
 
+After installing or building the hosted app, run `python3 scripts/verify-v22-source.py --checkout` in that working tree. The plain command above expects a clean hosted-source directory.
+
 The V22 test command runs the CommonJS and ES module suites, including the DOM tests. It copies the manifest-listed files to a temporary directory and supplies a fictional, allowed-host URL in two positive test fixtures whose original links were redacted. The tests parse the URL locally. Some corpus tests require private resources and report a skip in a public clone.
 
 To run the real-browser checks:

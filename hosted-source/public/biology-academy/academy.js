@@ -187,7 +187,9 @@
     paper.append(element('p', 'Performance Powerhouse · Biology Academy · ' + kind),
       element('h1', track.title), element('p', 'Syllabus units ' + track.units.join(', ')));
     const model = paperSection('Prediction', track.scenario.prompt);
-    model.append(list(track.scenario.options.map(option => marking
+    // Observations are usually feedback. Some questions ask students to interpret measured evidence.
+    const showObservations = marking || track.scenario.paperEvidence;
+    model.append(list(track.scenario.options.map(option => showObservations
       ? option.label + ' — ' + option.observation : option.label)));
     model.append(element('p', track.scenario.prediction));
     const mcq = paperSection('Closed-book MCQ', track.mcq.prompt);

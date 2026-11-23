@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
+import vm from 'node:vm';
 
 const source = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
 
@@ -41,4 +42,37 @@ test('retains explicit offline navigation fallbacks', () => {
 test('ignores non-GET and cross-origin traffic', () => {
   assert.match(source, /request\.method !== 'GET'/);
   assert.match(source, /url\.origin !== self\.location\.origin/);
+});
+
+
+test('both worker installs refresh precached Academy files through the HTTP cache', async () => {
+  const origin = new URL('https://powerhouse.example/');
+  for (const path of ['../sw.js', '../hosted-source/public/sw.js']) {
+    const worker = await readFile(new URL(path, import.meta.url), 'utf8');
+    const handlers = new Map();
+    let requests;
+    vm.runInNewContext(worker, {
+      URL,
+      Request: class extends Request {
+        constructor(asset, options) {
+          super(new URL(asset, origin), options);
+        }
+      },
+      self: {
+        registration: { scope: origin.href },
+        addEventListener: (event, handler) => handlers.set(event, handler),
+        skipWaiting: () => {},
+      },
+      caches: {
+        open: async () => ({ addAll: async assets => { requests = assets; } }),
+      },
+    });
+    let installation;
+    handlers.get('install')({ waitUntil(promise) { installation = promise; } });
+    await installation;
+    for (const asset of ['academy.js', 'academy.css', 'content.js']) {
+      const url = new URL('biology-academy/' + asset, origin).href;
+      assert.equal(requests.find(request => request.url === url)?.cache, 'reload');
+    }
+  }
 });

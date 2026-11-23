@@ -4,7 +4,17 @@ A local-first study workbench for Sri Lankan G.C.E. A/L Physics, Chemistry and B
 
 **[Offline Physics demo](demo/repair-loop.html)** · **[Offline Biology Academy](demo/biology-academy.html)** · [Open the hosted workbench](https://al-performance-powerhouse.phenlleyniron.chatgpt.site/) · [Contribute](CONTRIBUTING.md)
 
-Choose either offline file, select **Download raw file** on GitHub, and open the saved HTML in a browser. Physics walks you through a repaired mistake and two retests. Biology includes ten English-medium tracks with predictions, closed-book questions, written responses and marking points. Each file works on its own.
+## Start with one practice session
+
+Open either offline demo link on GitHub, select **Download raw file**, and open the saved HTML in your browser. The demos require no account or installation.
+
+| I want to… | Start here |
+| --- | --- |
+| Practise an A/L Biology topic | Open [Offline Biology Academy](demo/biology-academy.html), pick one of ten English-medium tracks and answer its closed-book question. For paper practice, print a blank question sheet, then use the separate marking guide after answering. |
+| Learn how to repair a mistake | Open the [offline Physics demo](demo/repair-loop.html) and compare repeating the same question with solving a new one. The example shows when transfer and delayed-retention credit are earned. |
+| Report a confusing question or a bug | Use the [issue templates](https://github.com/henlleyniron-byte/performance-powerhouse/issues/new/choose). Include the track name, what you expected and what happened. Use fictional examples for any study records. |
+
+Biology Academy offers original introductory practice. See its [syllabus coverage and scope](docs/BIOLOGY-ACADEMY.md).
 
 ![A fictional Physics mistake scored 2 out of 5. The fresh transfer is recorded and the delayed retest is still open.](preview/repair-loop.webp)
 

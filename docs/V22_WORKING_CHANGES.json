@@ -8,12 +8,12 @@
     },
     {
       "path": "public/biology-academy/academy.js",
-      "sha256": "692f50ee52a7027718d13219e4723bd810dca70f7c0f4fbadd934cf9949ebaa1",
+      "sha256": "3ec20c5aa38ade7bebd0fc543ae7a1384da138a95992b9116797ca922576be83",
       "mode": "100644"
     },
     {
       "path": "public/biology-academy/content.js",
-      "sha256": "6ee11830ddc43b04fe2849ecd9da93f9c67d64d080109e1cffb3e6203e7ab5a6",
+      "sha256": "9ce70f91918aacb8a8daa4f4c06ed6a799861e3061df97ce58bb0e45017b86b4",
       "mode": "100644"
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "path": "public/sw.js",
-      "sha256": "0215853ad882e03d277886edf1ff2121e493e8950103fc80f1d8a3b3449a4356",
+      "sha256": "a31e71b432bd4eba3cb195bad8dda07740dcad5b19bc27615a027df8d4e21e4f",
       "mode": "100644"
     },
     {

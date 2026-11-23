@@ -14,5 +14,6 @@ Choose a track, select **Blank question sheet** under **Paper copy**, and use **
 
 - The standalone root and `hosted-source/public/` are separate serving layouts. Keep their `biology-academy/academy.js`, `academy.css`, and `content.js` byte-identical. The hosted HTML includes the Biology Intelligence navigation because that route is available there.
 - Run `node --test tests/*.test.mjs` from the repository root to check the navigation entries, mirrored assets, lesson schema, and existing service-worker tests.
+- When a printed prediction asks students to interpret observations, set `scenario.paperEvidence` and keep the observation text factual. Put the interpretation in the explanation, where it appears on the marking guide. If changing precached Academy assets, update both serving layouts' service-worker cache names and rebuild the downloadable HTML.
 - The academy uses conceptual models with stated assumptions. Review new explanations and marking points against the applicable NIE resources before an expansion. Keep textbook and exam-paper files out of this route unless redistribution is authorized.
 - This scope does not implement a full exam bank, automated essay scoring, saved revision scheduling, or a native lab replacement. It changes no existing Powerhouse data model, storage namespace, or deployment configuration.

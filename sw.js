@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'powerhouse-';
-const CACHE = `${CACHE_PREFIX}v5-20261119-1`;
+const CACHE = `${CACHE_PREFIX}v5-academy-paper-20261123`;
 const ASSETS = [
   './',
   './index.html',
@@ -32,7 +32,7 @@ const CACHEABLE_URLS = new Set(
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE)
-      .then(cache => cache.addAll(ASSETS))
+      .then(cache => cache.addAll(ASSETS.map(asset => new Request(asset, { cache: 'reload' }))))
       .then(() => self.skipWaiting()),
   );
 });
