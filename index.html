@@ -2157,7 +2157,7 @@ function renderCalibration() {
     const topic = getTopic(a.topicKey);
     const lost = Number(a.total) - Number(a.earned);
     const guessNote = Number(a.guesses || 0) ? `${escapeHTML(a.guesses)} guessed/unsupported item${Number(a.guesses)===1?'':'s'}` : `expected correct · ${lost} mark${lost === 1 ? '' : 's'} lost`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic?.name || a.question)}</div><div class="queue-meta">${escapeHTML(titleCase(a.subject))} · ${guessNote} · ${a.error ? attemptErrorText(a.error) : 'uncategorised'}</div></div><button class="log-mini" data-calibration-topic="${escapeHTML(a.topicKey)}>Retest</button></div>`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic?.name || a.question)}</div><div class="queue-meta">${escapeHTML(titleCase(a.subject))} · ${guessNote} · ${a.error ? attemptErrorText(a.error) : 'uncategorised'}</div></div><button class="log-mini" data-calibration-topic="${escapeHTML(a.topicKey)}">Retest</button></div>`;
   }).join('') : '<div class="empty-state">No confidence trap recorded. Keep logging confidence before you mark—the dangerous errors are the ones that feel correct.</div>';
 }
 
