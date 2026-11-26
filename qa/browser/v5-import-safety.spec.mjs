@@ -31,7 +31,10 @@ test('an invalid unified core cannot partially replace secondary browser stores'
   const before = await page.evaluate(keysToRead => Object.fromEntries(keysToRead.map(key => [key, localStorage.getItem(key)])), keys);
   await importJson(page, 'invalid-unified-backup.json', {
     product: 'A/L Performance Powerhouse',
-    core: { attempts: [], ratings: [] },
+    core: {
+      attempts: [{ id: 'bad-score', date: '2026-11-26', subject: 'biology', topicKey: 'biology|0|0', question: 'Invalid score', earned: '<img src=x onerror="window.__xss=1">', total: 5 }],
+      ratings: {},
+    },
     study_tracker: { sessions: [{ id: 'must-not-replace' }] },
     physics_intelligence: { attempts: [{ familyId: 'must-not-replace' }] },
   });
@@ -57,7 +60,7 @@ test('imported V5 records render as text and cannot inject markup or event attri
         subject: '<img src=x onerror="window.__xss=1">',
         topicKey: 'biology|0|0',
         question: '<svg onload="window.__xss=1">Source</svg>',
-        earned: '<img src=x onerror="window.__xss=1">',
+        earned: 2,
         total: 5,
         trustedEarned: null,
         confidence: 'high',
@@ -77,6 +80,7 @@ test('imported V5 records render as text and cannot inject markup or event attri
   await expect(page.locator('#toast')).toContainText('Powerhouse backup imported successfully.');
   await expect(page.locator('#attempt-table-body tr')).toHaveCount(1);
   await expect(page.locator('#v5-chain-list .chain-card')).toHaveCount(1);
+  await expect(page.getByText('NaN%', { exact: true })).toHaveCount(0);
 
   const markupCount = await page.locator(
     '#attempt-table-body img, #attempt-table-body svg, #recent-attempts img, #calibration-risk img, #retest-queue img, #v5-chain-list img, #v5-papers-root img, #v5-retests-root img, #daily-history-body img'
