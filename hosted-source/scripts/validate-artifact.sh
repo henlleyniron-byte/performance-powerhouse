@@ -20,17 +20,32 @@ hosting="${SITES_PROJECT_ROOT}/dist/.openai/hosting.json"
 }
 
 node --input-type=module - "${worker}" "${hosting}" <<'NODE'
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
+import { dirname, join } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const [workerPath, hostingPath] = process.argv.slice(2);
 JSON.parse(await readFile(hostingPath, "utf8"));
 
 const workerSource = await readFile(workerPath, "utf8");
-if (workerSource.includes('from "cloudflare:workers"')) {
-  if (!/export\s*\{\s*[^}]+\s+as\s+default\s*\}/m.test(workerSource)) {
-    throw new Error("D1 Worker artifact must expose an ESM default export");
+async function containsCloudflareWorkerImport(directory) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = join(directory, entry.name);
+    if (entry.isDirectory()) {
+      if (await containsCloudflareWorkerImport(path)) return true;
+    } else if (entry.isFile() && entry.name.endsWith(".js")) {
+      const source = await readFile(path, "utf8");
+      if (/\bfrom\s*["']cloudflare:workers["']/.test(source)) return true;
+    }
   }
+  return false;
+}
+
+if (await containsCloudflareWorkerImport(dirname(workerPath))) {
+  if (!/export\s*\{\s*[^}]+\s+as\s+default\s*\}/m.test(workerSource)) {
+    throw new Error("Cloudflare Worker artifact must expose an ESM default export");
+  }
+  console.log("Validated Cloudflare Worker entrypoint and external runtime imports.");
   process.exit(0);
 }
 
