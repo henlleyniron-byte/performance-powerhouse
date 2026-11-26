@@ -2525,11 +2525,12 @@ function persistImportedState(nextState, secondaryWrites = []) {
   } catch (error) {
     state = previousState;
     for (const [key] of [...writes].reverse()) {
-      try {
-        const previous = before.get(key);
-        if (previous === null) localStorage.removeItem(key);
-        else localStorage.setItem(key, previous);
-      } catch (_) {}
+      try { localStorage.removeItem(key); } catch (_) {}
+    }
+    for (const [key] of writes) {
+      const previous = before.get(key);
+      if (previous === null) continue;
+      try { localStorage.setItem(key, previous); } catch (_) {}
     }
     try { refreshAll(); } catch (_) {}
     throw error;
