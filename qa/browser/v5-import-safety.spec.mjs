@@ -86,6 +86,8 @@ test('imported V5 records render as text and cannot inject markup or event attri
     '#attempt-table-body [onmouseover], #attempt-table-body [onerror], #calibration-risk [onmouseover], #retest-queue [onmouseover], #v5-chain-list [onmouseover], #v5-retests-root [onmouseover], #daily-history-body [onmouseover]'
   ).count();
   expect(eventAttributeCount).toBe(0);
+  const executableMarkupCount = await page.locator('body img[src="x"], body [onerror], body [onload], body [onmouseover]').count();
+  expect(executableMarkupCount).toBe(0);
   expect(await page.evaluate(() => Boolean(window.__xss))).toBe(false);
   const secondary = await page.evaluate(keysToRead => Object.fromEntries(keysToRead.map(key => [key, localStorage.getItem(key)])), [trackerKey, physicsKey]);
   expect(JSON.parse(secondary[trackerKey])).toEqual({ sessions: [] });
