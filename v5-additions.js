@@ -381,8 +381,23 @@
 
   function exportAnki(){
     const eligible=[];(state.repairEvents||[]).forEach(r=>{const s=state.attempts.find(a=>a.id===r.sourceAttemptId);if(!s||!['K','R','P','G','C'].includes(s.error))return;const rule=String(r.rule||s.note||'').trim();if(!rule||rule.length>240)return;const t=getTopic(s.topicKey);eligible.push([`What rule prevents the ${ERROR_NAMES[s.error]} error in ${t?.name||s.question}?`,rule,titleCase(s.subject),t?.unit||'',t?.name||'',`${s.error} ${ERROR_NAMES[s.error]}`,s.question||s.id,r.completedAt||s.date,`powerhouse_v5 ${s.subject} error_${s.error}`]);});if(!eligible.length){toast('No concise retrieval-suitable repaired errors are eligible for Anki yet.');return;}const rows=[['Front','Back','Subject','Unit','Topic','Error Family','Source Attempt','Date','Tags'],...eligible].map(r=>r.map(csv).join(',')).join('\n');dl(`powerhouse-anki-repairs-${v5Today()}.csv`,rows,'text/csv');toast(`${eligible.length} Anki-ready repair item(s) exported.`); }
-  function exportRetestICS(){const rows=(state.retests||[]).filter(r=>!r.completedAt&&r.due>=addDays(v5Today(),-7)&&r.due<=addDays(v5Today(),30)).sort((a,b)=>String(a.due).localeCompare(String(b.due))).slice(0,20);if(!rows.length){toast('No important retests in the next 30 days.');return;}const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Performance Powerhouse V5//EN','CALSCALE:GREGORIAN',...rows.flatMap(r=>{const t=getTopic(r.topicKey),d=String(r.due).replaceAll('-','');return ['BEGIN:VEVENT',`UID:${r.id}@performance-powerhouse-v5`,`DTSTART;VALUE=DATE:${d}`,`SUMMARY:${icsText(`Powerhouse · ${r.stage===1?'Fresh transfer':'Delayed retest'} · ${t?.name||'Retest'}`)}`,`DESCRIPTION:${icsText('Complete a fresh independent question, mark strictly, and update the evidence chain. Do not treat calendar presence as mastery.')}`,'END:VEVENT'];}),'END:VCALENDAR'].join('\r\n');dl(`powerhouse-important-retests-${v5Today()}.ics`,body,'text/calendar');toast(`Exported ${rows.length} important retest event(s).`);}
-  function icsText(s){return String(s||'').replace(/([,;])/g,'\\$1').replace(/\n/g,'\\n');}
+  function icsDate(value){
+    const text=String(value ?? '');
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(text))return '';
+    const date=new Date(text+'T00:00:00.000Z');
+    return Number.isFinite(date.getTime())&&date.toISOString().slice(0,10)===text?text.replaceAll('-',''):'';
+  }
+  function exportRetestICS(){
+    const start=addDays(v5Today(),-7),end=addDays(v5Today(),30);
+    const rows=(state.retests||[]).filter(r=>!r.completedAt&&icsDate(r.due)&&r.due>=start&&r.due<=end).sort((a,b)=>String(a.due).localeCompare(String(b.due))).slice(0,20);
+    if(!rows.length){toast('No important retests in the next 30 days.');return;}
+    const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Performance Powerhouse V5//EN','CALSCALE:GREGORIAN',...rows.flatMap(r=>{const t=getTopic(r.topicKey);return ['BEGIN:VEVENT',\`UID:\${icsText(r.id)}@performance-powerhouse-v5\`,\`DTSTART;VALUE=DATE:\${icsDate(r.due)}\`,\`SUMMARY:\${icsText(\`Powerhouse · \${r.stage===1?'Fresh transfer':'Delayed retest'} · \${t?.name||'Retest'}\`)}\`,\`DESCRIPTION:\${icsText('Complete a fresh independent question, mark strictly, and update the evidence chain. Do not treat calendar presence as mastery.')}\`,'END:VEVENT'];}),'END:VCALENDAR'].join('\\r\\n');
+    dl(\`powerhouse-important-retests-\${v5Today()}.ics\`,body,'text/calendar');
+    toast(\`Exported \${rows.length} important retest event(s).\`);
+  }
+  function icsText(s){
+    return String(s ?? '').replace(/\\/g,'\\\\').replace(/\r\n|\r|\n/g,'\\n').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g,'').replace(/([,;])/g,'\\$1');
+  }
   function copyText(text,msg){ if(navigator.clipboard?.writeText) navigator.clipboard.writeText(text).then(()=>toast(msg)).catch(()=>fallbackCopy(text,msg));else fallbackCopy(text,msg); }
   function fallbackCopy(text,msg){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast(msg);}
 
