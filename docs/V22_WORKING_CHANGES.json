@@ -7,33 +7,13 @@
       "mode": "100644"
     },
     {
-      "path": ".gitignore",
-      "sha256": "bf896feff609f058c6a32bb9b254b1e00ee72530f33c6ae98e67ab892db2ec4d",
-      "mode": "100644"
-    },
-    {
-      "path": "docs/DEPENDENCY-SECURITY-REVIEW-2026-11-27.md",
-      "sha256": "1c092a3747b7db0a3a73bd12af377bbef5913ba7f44307e0faa1fefae6fb4f87",
-      "mode": "100644"
-    },
-    {
       "path": "docs/DEPENDENCY-SECURITY-REVIEW-2026-11-27.md",
       "sha256": "288b317a2467d6f2ab52c16e2116b5f59f805a1897b1e35e5cb86babc067572c",
       "mode": "100644"
     },
     {
       "path": "package-lock.json",
-      "sha256": "df8414d9510c9c7fbed5c659ba59649441ab759f51a9a39f50d6b773a758ef0c",
-      "mode": "100644"
-    },
-    {
-      "path": "package-lock.json",
       "sha256": "4ffa1b6d8b07fffdfcae2473853a7e1662c3a93ad305ef176bf6ef42ea55d52e",
-      "mode": "100644"
-    },
-    {
-      "path": "package.json",
-      "sha256": "8829d55ff377814b18e85954865d83e7849afd345201cbbf5e929a51fc38368d",
       "mode": "100644"
     },
     {
@@ -97,16 +77,6 @@
       "mode": "100755"
     },
     {
-      "path": "scripts/build-verified.sh",
-      "sha256": "5c51a4f8a38c83f8012dc031474377f5a294417af56f55f90bec4b29aea3d9af",
-      "mode": "100755"
-    },
-    {
-      "path": "scripts/portable-workflow.mjs",
-      "sha256": "a9636c41b25e3bcd4dcf40489ebca21c08af832857ffc76c1d2946a10a822709",
-      "mode": "100644"
-    },
-    {
       "path": "scripts/portable-workflow.mjs",
       "sha256": "a9636c41b25e3bcd4dcf40489ebca21c08af832857ffc76c1d2946a10a822709",
       "mode": "100644"
@@ -115,16 +85,6 @@
       "path": "scripts/validate-artifact.sh",
       "sha256": "a1b4bece54c9bc11e72e221a48483ac6d8c6bb61e9be31dbd35989edbe2f3d89",
       "mode": "100755"
-    },
-    {
-      "path": "scripts/validate-artifact.sh",
-      "sha256": "a1b4bece54c9bc11e72e221a48483ac6d8c6bb61e9be31dbd35989edbe2f3d89",
-      "mode": "100755"
-    },
-    {
-      "path": "tests/dependency-security.test.mjs",
-      "sha256": "92a0e80d87ce1feb3682bf46798c42187c2a09897efbfeb40bd1a435fe0459fd",
-      "mode": "100644"
     },
     {
       "path": "tests/dependency-security.test.mjs",
@@ -143,7 +103,7 @@
     },
     {
       "path": "tests/science-intelligence.test.mjs",
-      "sha256": "90407cb696960a7d86cf3145015c029e1bd8f98d278a4ea1101b8a9cc92289e0",
+      "sha256": "2cfc02f6de44e38104ee3c7b27522789151201a1eaddc03ad99f51d98ab8a9f5",
       "mode": "100644"
     },
     {
@@ -153,12 +113,12 @@
     },
     {
       "path": "tests/study-library.test.mjs",
-      "sha256": "ec3a527dfe0e680d4f14e80901c70e9c30274d78543d53c294b508a2f4a6af0d",
+      "sha256": "bbdbdf7f57bd7dd0e2d70940af92643f14399eb8897f989945cc42ca8ca8668e",
       "mode": "100644"
     },
     {
-      "path": "vite.config.ts",
-      "sha256": "1ad3075380c1a097027f1d405c6da38fd09217f7706ada68a0ac54d20960cbcd",
+      "path": "tsconfig.json",
+      "sha256": "e1f2b4ec806c55ba0cc71369588733fe427a277990cccfd44ef62c9b6e9fe49d",
       "mode": "100644"
     },
     {
