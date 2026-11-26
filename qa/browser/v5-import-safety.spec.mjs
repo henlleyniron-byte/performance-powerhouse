@@ -107,5 +107,5 @@ test('imported V5 records render as text and cannot inject markup or event attri
   expect(icsPath).not.toBeNull();
   const calendar = await readFile(icsPath, 'utf8');
   expect(calendar.split(/\r?\n/).filter(line => line.startsWith('UID:'))).toHaveLength(1);
-  expect(calendar).not.toMatch(/\r?\nSUMMARY:Injected(?:\\r?\\n|$)/);
+  expect(calendar).not.toMatch(/\r?\nSUMMARY:Injected(?:\r?\n|$)/);
 });
