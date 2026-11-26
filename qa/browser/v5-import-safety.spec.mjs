@@ -44,6 +44,38 @@ test('an invalid unified core cannot partially replace secondary browser stores'
   expect(after).toEqual(before);
 });
 
+test('a failed secondary-store write restores all prior imported data', async ({ page }) => {
+  await seed(page);
+  await page.goto(pageURL);
+  const keys = [appKey, trackerKey, physicsKey];
+  const before = await page.evaluate(keysToRead => Object.fromEntries(keysToRead.map(key => [key, localStorage.getItem(key)])), keys);
+  await page.evaluate(({ appKeyToWatch, physicsKeyToFail, oldCore }) => {
+    const originalSetItem = Storage.prototype.setItem;
+    const failingValue = JSON.stringify({ attempts: [{ familyId: 'new-physics' }] });
+    let failed = false;
+    Storage.prototype.setItem = function (key, value) {
+      if (!failed && key === physicsKeyToFail && value === failingValue) {
+        failed = true;
+        throw new DOMException('Storage quota exceeded', 'QuotaExceededError');
+      }
+      if (failed && key === appKeyToWatch && localStorage.getItem(key) !== null && value === oldCore) {
+        throw new Error('Rollback must release partial writes before restoring the old value.');
+      }
+      return originalSetItem.call(this, key, value);
+    };
+  }, { appKeyToWatch: appKey, physicsKeyToFail: physicsKey, oldCore: before[appKey] });
+
+  await importJson(page, 'write-failure-backup.json', {
+    product: 'A/L Performance Powerhouse',
+    core: { version: 12, profileSetupComplete: true, ratings: {}, attempts: [] },
+    study_tracker: { sessions: [{ id: 'new-tracker' }] },
+    physics_intelligence: { attempts: [{ familyId: 'new-physics' }] },
+  });
+  await expect(page.locator('#toast')).toContainText('That JSON could not be safely mapped into Powerhouse.');
+  const after = await page.evaluate(keysToRead => Object.fromEntries(keysToRead.map(key => [key, localStorage.getItem(key)])), keys);
+  expect(after).toEqual(before);
+});
+
 test('imported V5 records render as text and cannot inject markup or event attributes', async ({ page }) => {
   await seed(page);
   await page.goto(pageURL);
