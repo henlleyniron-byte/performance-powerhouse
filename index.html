@@ -2536,6 +2536,27 @@ function persistImportedState(nextState, secondaryWrites = []) {
   }
 }
 
+function isBackupNumeric(value) {
+  return (typeof value === 'number' && Number.isFinite(value)) ||
+    (typeof value === 'string' && value.trim() !== '' && Number.isFinite(Number(value)));
+}
+
+function validImportedAttemptMetrics(attempt) {
+  if (!attempt || typeof attempt !== 'object' || Array.isArray(attempt)) return false;
+  if (!isBackupNumeric(attempt.earned) || !isBackupNumeric(attempt.total)) return false;
+  const earned = Number(attempt.earned);
+  const total = Number(attempt.total);
+  if (total <= 0 || earned < 0 || earned > total) return false;
+  if (attempt.trustedEarned !== undefined && attempt.trustedEarned !== null && attempt.trustedEarned !== '' &&
+      (!isBackupNumeric(attempt.trustedEarned) || Number(attempt.trustedEarned) < 0 || Number(attempt.trustedEarned) > earned)) return false;
+  for (const field of ['minutes', 'items', 'guesses']) {
+    if (!Object.prototype.hasOwnProperty.call(attempt, field) || attempt[field] === null || attempt[field] === '') continue;
+    if (!isBackupNumeric(attempt[field]) || Number(attempt[field]) < 0) return false;
+    if (field === 'items' && Number(attempt[field]) < 1) return false;
+  }
+  return true;
+}
+
 function importData(file) {
   const reader = new FileReader();
   reader.onload = () => {
@@ -2552,7 +2573,9 @@ function importData(file) {
         incoming = incoming.core;
       }
 
-      const isBackup = !Array.isArray(incoming) && Array.isArray(incoming.attempts) && incoming.ratings && typeof incoming.ratings === 'object' && !Array.isArray(incoming.ratings);
+      const hasBackupShape = !Array.isArray(incoming) && Array.isArray(incoming.attempts) && incoming.ratings && typeof incoming.ratings === 'object' && !Array.isArray(incoming.ratings);
+      const isBackup = Boolean(hasBackupShape) && incoming.attempts.every(validImportedAttemptMetrics);
+      if (hasBackupShape && !isBackup) throw new Error('Invalid attempt metrics');
       const ratingEntries = !Array.isArray(incoming) ? Object.entries(incoming) : [];
       const isLegacyRatings = ratingEntries.length > 0 && ratingEntries.every(([key, value]) => /^(physics|chemistry|biology)\|\d+\|\d+$/.test(key) && [1, 2, 3].includes(Number(value)));
       if (unifiedEnvelope && !isBackup) throw new Error('Unified backup core is invalid');
@@ -2566,7 +2589,11 @@ function importData(file) {
           profile: { ...base.profile, ...(incoming.profile || {}) },
           ratings: incoming.ratings && typeof incoming.ratings === 'object' ? incoming.ratings : base.ratings,
           syllabusProgress: incoming.syllabusProgress && typeof incoming.syllabusProgress === 'object' ? incoming.syllabusProgress : {},
-          attempts: incoming.attempts.map(a => ({ type:'topic-question', items:1, guesses:0, trustedEarned:null, ...a })),
+          attempts: incoming.attempts.map(a => ({
+            type:'topic-question', items:1, guesses:0, trustedEarned:null, ...a,
+            earned:Number(a.earned), total:Number(a.total),
+            trustedEarned:a.trustedEarned === null || a.trustedEarned === undefined || a.trustedEarned === '' ? null : Number(a.trustedEarned)
+          })),
           retests: Array.isArray(incoming.retests) ? incoming.retests.map(r => ({ failures:0, attempts:[], ...r })) : [],
           repairEvents: Array.isArray(incoming.repairEvents) ? incoming.repairEvents : [],
           v5Settings: { ...base.v5Settings, ...(incoming.v5Settings || {}) },
