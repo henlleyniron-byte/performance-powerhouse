@@ -103,12 +103,13 @@ test('imported tracker strings render as text and incomplete records do not brea
     buffer: Buffer.from(JSON.stringify({ activeSession: {
       subject: {}, type: injection, task: injection, plannedMinutes: 'invalid', status: null, startedAt: 'invalid', accumulatedMs: 'invalid',
     }, sessions: [
-      { id: { toString: {} }, date: injection, subject: injection, type: 'unknown', task: injection, note: { toString: {} }, durationMs: 'invalid', output: { valueOf: {} }, evidenceClass: injection, status: 'complete' },
+      { id: { toString: {} }, date: injection, subject: injection, type: 'unknown', task: '=1+1', note: injection, durationMs: 'invalid', output: { valueOf: {} }, evidenceClass: injection, status: 'complete' },
       { status: 'complete', date: '2026-07-01', subject: null, type: 'timed-question', task: 'Fictional incomplete record', durationMs: 0 },
     ] })),
   });
   await expect(page.locator('#history')).toContainText('Fictional incomplete record');
   await expect(page.locator('#history')).toContainText(injection);
+  await expect(page.locator('#history')).toContainText('=1+1');
   await expect(page.locator('#history img')).toHaveCount(0);
   await expect(page.locator('#active-subject')).toHaveText('Unspecified');
   await expect(page.locator('#active-task')).toHaveText(injection);
@@ -117,6 +118,11 @@ test('imported tracker strings render as text and incomplete records do not brea
   expect(await page.evaluate(() => window.__trackerXss)).toBe(0);
   expect(errors).toEqual([]);
   await expect(page.locator('#history tr')).toHaveCount(2);
+  await page.locator('#data-btn').click();
+  const csvDownload = page.waitForEvent('download');
+  await page.locator('#export-csv').click();
+  const csv = await readFile(await (await csvDownload).path(), 'utf8');
+  expect(csv).toContain('"\'=1+1"');
 });
 
 test('captured private controls cannot write after share mode closes their dialog', async ({ page }) => {

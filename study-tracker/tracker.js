@@ -129,7 +129,7 @@ function esc(s=''){return displayValue(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<
 function deleteSession(id){if(sharedView())return;const s=state.sessions.find(x=>x.id===id);if(!s||!confirm(`Delete this ${displayValue(s.date)} session?`))return;snapshot('pre-session-delete');state.sessions=state.sessions.filter(x=>x.id!==id);save();render();toast('Session deleted. Recovery snapshot retained.')}
 function exportJSON(){if(sharedView())return;dl(`powerhouse-study-tracker-${colomboDate()}.json`,JSON.stringify(state,null,2),'application/json')}
 function exportCSV(){if(sharedView())return;const head=['id','date','subject','type','task','planned_minutes','duration_minutes','output','evidence_class','note','started_at','ended_at'];const rows=[head,...state.sessions.map(s=>[s.id,s.date,s.subject,s.type,s.task,s.plannedMinutes,Math.round(Number(s.durationMs||0)/60000),s.output,classification(s),s.note||'',s.createdAt||s.startedAt,s.endedAt])];dl(`powerhouse-study-tracker-${colomboDate()}.csv`,rows.map(r=>r.map(csv).join(',')).join('\n'),'text/csv')}
-function csv(v){return`"${displayValue(v).replaceAll('"','""')}"`}
+function csv(v){let value=displayValue(v);if(/^[\t\r\n ]*[=+\-@]/.test(value))value=`'${value}`;return`"${value.replaceAll('"','""')}"`}
 function dl(name,text,type){if(sharedView())return;const b=new Blob([text],{type}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),500)}
 function importFile(file){
   if (sharedView()) return;
