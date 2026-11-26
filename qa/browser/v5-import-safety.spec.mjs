@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
 
 const pageURL = 'http://127.0.0.1:4175/index.html';
 const appKey = 'al_performance_powerhouse_v5';
@@ -71,6 +72,8 @@ test('imported V5 records render as text and cannot inject markup or event attri
       retests: [
         { id: 'retest-1" onmouseover="window.__xss=1', topicKey: 'biology|0|0', due: '2000-01-01', stage: 1, attempts: [] },
         { id: 'retest-2', topicKey: 'biology|0|0" onmouseover="window.__xss=1', due: '2000-01-01', stage: 1, attempts: [] },
+        { id: 'retest-ics\r\nSUMMARY:Injected', topicKey: 'biology|0|0', due: new Date(Date.now() + 86400000).toISOString().slice(0, 10), stage: 1, attempts: [] },
+        { id: 'retest-date-injection', topicKey: 'biology|0|0', due: `${new Date(Date.now() + 86400000).toISOString().slice(0, 10)}\r\nSUMMARY:Injected`, stage: 1, attempts: [] },
       ],
     },
     study_tracker: { sessions: [] },
@@ -96,4 +99,13 @@ test('imported V5 records render as text and cannot inject markup or event attri
   const secondary = await page.evaluate(keysToRead => Object.fromEntries(keysToRead.map(key => [key, localStorage.getItem(key)])), [trackerKey, physicsKey]);
   expect(JSON.parse(secondary[trackerKey])).toEqual({ sessions: [] });
   expect(JSON.parse(secondary[physicsKey])).toEqual({ attempts: [] });
+
+  const downloadPromise = page.waitForEvent('download');
+  await page.locator('#v5-export-ics').evaluate(button => button.click());
+  const download = await downloadPromise;
+  const icsPath = await download.path();
+  expect(icsPath).not.toBeNull();
+  const calendar = await readFile(icsPath, 'utf8');
+  expect(calendar.split(/\\r?\\n/).filter(line => line.startsWith('UID:'))).toHaveLength(1);
+  expect(calendar).not.toMatch(/\\r?\\nSUMMARY:Injected(?:\\r?\\n|$)/);
 });
