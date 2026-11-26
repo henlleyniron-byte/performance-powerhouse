@@ -23,6 +23,7 @@ test('a shared tracker link hides private history, preserves the ledger and leav
   await expect(page.locator('#history')).toBeEmpty();
   await expect(page.locator('#kpis')).toBeEmpty();
   await expect(page.locator('#task')).toBeHidden();
+  await expect(page.locator('#task')).toHaveValue('');
   await expect(page.getByRole('link', { name: 'Back to Performance Powerhouse' })).toHaveAttribute('href', /\?share=1$/);
   await expect(page.locator('body')).not.toContainText('Fictional marked worksheet', { useInnerText: true });
   expect(await page.evaluate(key => localStorage.getItem(key), ledger)).toBe(original);
@@ -87,6 +88,33 @@ test('a pending import cannot replace the ledger after share mode is enabled', a
   await page.evaluate(() => window.__completeImportRead());
   const after = await page.evaluate(key => JSON.parse(localStorage.getItem(key)), ledger);
   expect(after.sessions).toEqual(before.sessions);
+});
+
+test('captured private controls cannot write after share mode closes their dialog', async ({ page }) => {
+  await addFictionalSession(page);
+  const before = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).sessions, ledger);
+  await page.locator('#quick-log-btn').click();
+  await page.locator('#q-task').fill('Fictional stale quick entry');
+  await page.locator('#share-btn').click();
+  await expect(page.locator('#quick-dialog')).toBeHidden();
+  await page.locator('#save-quick').evaluate(button => button.click());
+  await page.locator('#start-btn').evaluate(button => button.click());
+  let state = await page.evaluate(key => JSON.parse(localStorage.getItem(key)), ledger);
+  expect(state.sessions).toEqual(before);
+  expect(state.activeSession).toBeNull();
+
+  await page.getByRole('button', { name: 'Return to private tracker' }).click();
+  await page.locator('#task').fill('Fictional active session');
+  await page.locator('#start-btn').click();
+  await page.locator('#finish-btn').click();
+  await page.locator('#share-btn').click();
+  await expect(page.locator('#finish-dialog')).toBeHidden();
+  await page.locator('#pause-btn').evaluate(button => button.click());
+  await page.locator('#save-finish').evaluate(button => button.click());
+  state = await page.evaluate(key => JSON.parse(localStorage.getItem(key)), ledger);
+  expect(state.sessions).toEqual(before);
+  expect(state.activeSession.task).toBe('Fictional active session');
+  expect(state.activeSession.status).toBe('running');
 });
 
 test('an explicit private tracker choice stays private after the shared default is reloaded', async ({ page }) => {
