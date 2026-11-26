@@ -1383,7 +1383,8 @@ let plannerUnfinishedOnly = false;
 
 const $ = (id) => document.getElementById(id);
 const topicKey = (subject, unitIndex, topicIndex) => `${subject}|${unitIndex}|${topicIndex}`;
-const titleCase = (value) => value ? value[0].toUpperCase() + value.slice(1) : '';
+const titleCase = (value) => { const text = String(value ?? ''); return text ? text[0].toUpperCase() + text.slice(1) : ''; };
+const attemptErrorText = (error) => { const code = String(error ?? ''); const label = Object.prototype.hasOwnProperty.call(ERROR_NAMES, code) ? ERROR_NAMES[code] : 'Unknown error'; return `${escapeHTML(code)} ${escapeHTML(label)}`; };
 const todayISO = () => {
   try {
     const parts = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone:'Asia/Colombo', year:'numeric', month:'2-digit', day:'2-digit' }).formatToParts(new Date()).filter(p => p.type !== 'literal').map(p => [p.type, p.value]));
@@ -2131,7 +2132,7 @@ function renderRetests() {
     if (!topic) return '';
     const overdue = r.due < todayISO();
     const dueText = overdue ? `${Math.floor((new Date(todayISO()) - new Date(r.due)) / 86400000)}d overdue` : r.due === todayISO() ? 'due today' : `due ${r.due}`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${r.stage === 1 ? 'fresh-transfer check' : 'delayed stability check'}</div></div><button class="log-mini queue-due" data-retest-topic="${r.topicKey}" data-retest-id="${r.id}" data-retest-type="${r.stage === 1 ? 'fresh-transfer' : 'delayed-retest'}">${dueText}</button></div>`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${escapeHTML(titleCase(topic.subject))} · ${r.stage === 1 ? 'fresh-transfer check' : 'delayed stability check'}</div></div><button class="log-mini queue-due" data-retest-topic="${escapeHTML(r.topicKey)}" data-retest-id="${escapeHTML(r.id)}" data-retest-type="${r.stage === 1 ? 'fresh-transfer' : 'delayed-retest'}">${escapeHTML(dueText)}</button></div>`;
   }).join('') : '<div class="empty-state">No retests queued yet. Log a marked attempt with lost marks; the dashboard will schedule the 3-day and 7-day checks.</div>';
 }
 
@@ -2155,20 +2156,26 @@ function renderCalibration() {
   $('calibration-risk').innerHTML = traps.length ? traps.map(a => {
     const topic = getTopic(a.topicKey);
     const lost = Number(a.total) - Number(a.earned);
-    const guessNote = Number(a.guesses || 0) ? `${a.guesses} guessed/unsupported item${Number(a.guesses)===1?'':'s'}` : `expected correct · ${lost} mark${lost === 1 ? '' : 's'} lost`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic?.name || a.question)}</div><div class="queue-meta">${titleCase(a.subject)} · ${guessNote} · ${a.error ? `${a.error} ${ERROR_NAMES[a.error]}` : 'uncategorised'}</div></div><button class="log-mini" data-calibration-topic="${a.topicKey}">Retest</button></div>`;
+    const guessNote = Number(a.guesses || 0) ? `${escapeHTML(a.guesses)} guessed/unsupported item${Number(a.guesses)===1?'':'s'}` : `expected correct · ${lost} mark${lost === 1 ? '' : 's'} lost`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic?.name || a.question)}</div><div class="queue-meta">${escapeHTML(titleCase(a.subject))} · ${guessNote} · ${a.error ? attemptErrorText(a.error) : 'uncategorised'}</div></div><button class="log-mini" data-calibration-topic="${escapeHTML(a.topicKey)}>Retest</button></div>`;
   }).join('') : '<div class="empty-state">No confidence trap recorded. Keep logging confidence before you mark—the dangerous errors are the ones that feel correct.</div>';
 }
 
 function attemptHTML(a, compact = false) {
   const topic = getTopic(a.topicKey);
-  const pct = Math.round(Number(a.earned) / Number(a.total) * 100);
-  const type = ATTEMPT_TYPE_NAMES[a.type] || ATTEMPT_TYPE_NAMES['topic-question'];
-  const trusted = a.trustedEarned !== null && a.trustedEarned !== undefined && a.trustedEarned !== '' ? ` · trusted ${a.trustedEarned}/${a.total}` : '';
-  if (compact) return `<div class="recent-item"><div class="queue-title">${escapeHTML(a.question)}</div><div class="queue-meta">${titleCase(a.subject)} · ${type} · ${escapeHTML(topic?.name || 'Topic')} · ${a.earned}/${a.total} (${pct}%)${trusted} · ${a.error ? `${a.error} ${ERROR_NAMES[a.error]}` : 'full credit'}</div></div>`;
-  return `<tr><td class="mono">${escapeHTML(a.date)}</td><td>${titleCase(a.subject)}</td><td>${type}</td><td><strong>${escapeHTML(a.question)}</strong><br><span class="muted">${escapeHTML(topic?.name || 'Unknown topic')}</span></td><td><span class="score-chip">${a.earned}/${a.total} · ${pct}%${trusted}</span></td><td>${escapeHTML(a.confidence)}</td><td>${a.error ? `<b style="color:var(--gold)">${a.error}</b> ${ERROR_NAMES[a.error]}` : '—'}</td><td><button class="log-mini" data-v5-edit-attempt="${a.id}">Edit</button> <button class="log-mini" data-delete-attempt="${a.id}">Delete</button></td></tr>`;
+  const rawPercent = Math.round(Number(a.earned) / Number(a.total) * 100);
+  const percent = Number.isFinite(rawPercent) ? rawPercent : '—';
+  const subject = escapeHTML(titleCase(a.subject));
+  const type = escapeHTML(String(ATTEMPT_TYPE_NAMES[a.type] || ATTEMPT_TYPE_NAMES['topic-question']));
+  const earned = escapeHTML(a.earned);
+  const total = escapeHTML(a.total);
+  const trusted = a.trustedEarned !== null && a.trustedEarned !== undefined && a.trustedEarned !== ''
+    ? ` · trusted ${escapeHTML(a.trustedEarned)}/${total}`
+    : '';
+  const error = a.error ? attemptErrorText(a.error) : 'full credit';
+  if (compact) return `<div class="recent-item"><div class="queue-title">${escapeHTML(a.question)}</div><div class="queue-meta">${subject} · ${type} · ${escapeHTML(topic?.name || 'Topic')} · ${earned}/${total} (${percent}%)${trusted} · ${error}</div></div>`;
+  return `<tr><td class="mono">${escapeHTML(a.date)}</td><td>${subject}</td><td>${type}</td><td><strong>${escapeHTML(a.question)}</strong><br><span class="muted">${escapeHTML(topic?.name || 'Unknown topic')}</span></td><td><span class="score-chip">${earned}/${total} · ${percent}%${trusted}</span></td><td>${escapeHTML(a.confidence)}</td><td>${a.error ? `<b style="color:var(--gold)">${error}</b>` : '—'}</td><td><button class="log-mini" data-v5-edit-attempt="${escapeHTML(a.id)}">Edit</button> <button class="log-mini" data-delete-attempt="${escapeHTML(a.id)}">Delete</button></td></tr>`;
 }
-
 function renderAttempts() {
   const sorted = [...state.attempts].sort((a, b) => (b.date + b.createdAt).localeCompare(a.date + a.createdAt));
   $('recent-attempts').innerHTML = sorted.length ? sorted.slice(0, 4).map(a => attemptHTML(a, true)).join('') : '<div class="empty-state">Your evidence ledger is empty. A completed, marked question is the first useful input.</div>';
@@ -2297,7 +2304,7 @@ function renderRepairs() {
     const topic = getTopic(row.topicKey);
     if (!topic) return '';
     const reason = [row.lost ? `${row.lost} marks lost` : '', row.errorAttempts > 1 ? `${row.errorAttempts} error hits` : '', row.highConfidence ? `${row.highConfidence} confidence trap${row.highConfidence===1?'':'s'}` : '', row.due ? 'retest debt' : ''].filter(Boolean).join(' · ');
-    return `<div class="queue-item repair-priority"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="priority-reasons">${titleCase(topic.subject)} · ${reason || 'repair evidence'}</div></div><div><div class="repair-priority-score">P${Math.round(row.score)}</div><button class="log-mini" data-repair-topic="${row.topicKey}" data-repair-type="reattempt">Repair</button></div></div>`;
+    return `<div class="queue-item repair-priority"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="priority-reasons">${titleCase(topic.subject)} · ${reason || 'repair evidence'}</div></div><div><div class="repair-priority-score">P${Math.round(row.score)}</div><button class="log-mini" data-repair-topic="${escapeHTML(row.topicKey)}" data-repair-type="reattempt">Repair</button></div></div>`;
   }).join('') : '<div class="empty-state">No repair intelligence yet. Log one honest marked attempt with the dominant cause of any lost marks.</div>';
 
   const pending = pendingRetests().slice(0,6);
@@ -2306,7 +2313,7 @@ function renderRepairs() {
     const stageName = r.stage === 1 ? 'Fresh transfer' : 'Delayed stability';
     const type = r.stage === 1 ? 'fresh-transfer' : 'delayed-retest';
     const due = r.due < todayISO() ? `${Math.floor((new Date(todayISO()) - new Date(r.due))/86400000)}d overdue` : r.due === todayISO() ? 'due today' : `due ${r.due}`;
-    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${stageName}</div></div><button class="log-mini queue-due" data-repair-topic="${r.topicKey}" data-repair-retest-id="${r.id}" data-repair-type="${type}">${due}</button></div>`;
+    return `<div class="queue-item"><div><div class="queue-title">${escapeHTML(topic.name)}</div><div class="queue-meta">${titleCase(topic.subject)} · ${stageName}</div></div><button class="log-mini queue-due" data-repair-topic="${escapeHTML(r.topicKey)}" data-repair-retest-id="${escapeHTML(r.id)}" data-repair-type="${type}">${escapeHTML(due)}</button></div>`;
   }).join('') : '<div class="empty-state">No transfer/retest checks are waiting. Lost marks or unsupported guesses will create a closure queue automatically.</div>';
 
   $('subject-playbooks').innerHTML = `
@@ -2506,26 +2513,54 @@ function exportData() {
   toast('Backup exported.');
 }
 
+function persistImportedState(nextState, secondaryWrites = []) {
+  const writes = [[APP_KEY, JSON.stringify(nextState)], ...secondaryWrites];
+  const before = new Map();
+  for (const [key] of writes) before.set(key, localStorage.getItem(key));
+  const previousState = state;
+  try {
+    for (const [key, value] of writes) localStorage.setItem(key, value);
+    state = nextState;
+    refreshAll();
+  } catch (error) {
+    state = previousState;
+    for (const [key] of [...writes].reverse()) {
+      try {
+        const previous = before.get(key);
+        if (previous === null) localStorage.removeItem(key);
+        else localStorage.setItem(key, previous);
+      } catch (_) {}
+    }
+    try { refreshAll(); } catch (_) {}
+    throw error;
+  }
+}
+
 function importData(file) {
   const reader = new FileReader();
   reader.onload = () => {
     try {
       let incoming = JSON.parse(reader.result);
       if (!incoming || typeof incoming !== 'object') throw new Error('Invalid backup');
-      snapshotState('pre-import');
-      if (incoming.product === 'A/L Performance Powerhouse' && incoming.core && typeof incoming.core === 'object') {
-        if (incoming.study_tracker && typeof incoming.study_tracker === 'object') localStorage.setItem('al_performance_powerhouse_study_tracker_v1', JSON.stringify(incoming.study_tracker));
-        if (incoming.physics_intelligence && typeof incoming.physics_intelligence === 'object') localStorage.setItem('al_performance_powerhouse_physics_intelligence_v1', JSON.stringify(incoming.physics_intelligence));
+      let secondaryWrites = [];
+      let unifiedEnvelope = false;
+      if (incoming.product === 'A/L Performance Powerhouse') {
+        unifiedEnvelope = true;
+        if (!incoming.core || typeof incoming.core !== 'object' || Array.isArray(incoming.core)) throw new Error('Invalid unified backup');
+        if (incoming.study_tracker && typeof incoming.study_tracker === 'object' && !Array.isArray(incoming.study_tracker)) secondaryWrites.push(['al_performance_powerhouse_study_tracker_v1', JSON.stringify(incoming.study_tracker)]);
+        if (incoming.physics_intelligence && typeof incoming.physics_intelligence === 'object' && !Array.isArray(incoming.physics_intelligence)) secondaryWrites.push(['al_performance_powerhouse_physics_intelligence_v1', JSON.stringify(incoming.physics_intelligence)]);
         incoming = incoming.core;
       }
 
-      const isBackup = !Array.isArray(incoming) && Array.isArray(incoming.attempts) && incoming.ratings && typeof incoming.ratings === 'object';
+      const isBackup = !Array.isArray(incoming) && Array.isArray(incoming.attempts) && incoming.ratings && typeof incoming.ratings === 'object' && !Array.isArray(incoming.ratings);
       const ratingEntries = !Array.isArray(incoming) ? Object.entries(incoming) : [];
       const isLegacyRatings = ratingEntries.length > 0 && ratingEntries.every(([key, value]) => /^(physics|chemistry|biology)\|\d+\|\d+$/.test(key) && [1, 2, 3].includes(Number(value)));
+      if (unifiedEnvelope && !isBackup) throw new Error('Unified backup core is invalid');
+      snapshotState('pre-import');
 
       if (isBackup) {
         const base = defaultState();
-        state = {
+        const importedState = {
           ...base, ...incoming, version: 12, schemaVersion:12, productVersion:'V5', buildVersion:'5.0.0-20260908',
           profileSetupComplete: true,
           profile: { ...base.profile, ...(incoming.profile || {}) },
@@ -2547,7 +2582,7 @@ function importData(file) {
             rescueRuns: Array.isArray(incoming.courseCorrection?.rescueRuns) ? incoming.courseCorrection.rescueRuns : []
           }
         };
-        saveState(); refreshAll();
+        persistImportedState(importedState, secondaryWrites);
         if ($('data-dialog').open) $('data-dialog').close();
         if ($('welcome-dialog').open) $('welcome-dialog').close();
         toast('Powerhouse backup imported successfully.');

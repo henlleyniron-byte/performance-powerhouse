@@ -260,27 +260,27 @@
   }
   function fmt(n){ return Number(n||0)%1?Number(n||0).toFixed(1):String(Number(n||0)); }
 
-  function chainStep(label, value, cls=''){ return `<div class="chain-step ${cls}"><b>${label}</b><span>${value}</span></div>`; }
+  function chainStep(label, value, cls=''){ return `<div class="chain-step ${cls}"><b>${escapeHTML(label)}</b><span>${escapeHTML(value)}</span></div>`; }
   function renderChains(){
     const root=q('#v5-chain-list'); if(!root) return;
     const chains=evidenceChains();
     root.innerHTML=chains.length?chains.slice(0,30).map(c=>{
       const s=c.source,t=c.topic; const statusClass=c.lifecycle==='Closed'?'closed':c.lifecycle==='Reopened'?'reopened':'open';
       const repairRule=c.repair?.rule||s.note||'No repair rule logged';
-      return `<article class="chain-card"><div class="chain-head"><div><div class="chain-title">${escapeHTML(t?.name||s.question||'Evidence chain')}</div><div class="chain-meta">${titleCase(s.subject)} · ${escapeHTML(s.question||'source attempt')} · ${s.earned}/${s.total} · ${s.error?`${s.error} ${ERROR_NAMES[s.error]}`:'unsupported/other loss'}</div></div><span class="chain-status ${statusClass}">${escapeHTML(c.lifecycle)}</span></div>
+      return `<article class="chain-card"><div class="chain-head"><div><div class="chain-title">${escapeHTML(t?.name||s.question||'Evidence chain')}</div><div class="chain-meta">${escapeHTML(titleCase(s.subject))} · ${escapeHTML(s.question||'source attempt')} · ${escapeHTML(s.earned)}/${escapeHTML(s.total)} · ${s.error?attemptErrorText(s.error):'unsupported/other loss'}</div></div><span class="chain-status ${statusClass}">${escapeHTML(c.lifecycle)}</span></div>
       <div class="chain-flow">
-        ${chainStep('Original',`${s.earned}/${s.total}`,'done')}
-        ${chainStep('Diagnosis',s.error?`${s.error} ${ERROR_NAMES[s.error]}`:'Needs diagnosis',s.error?'done':'due')}
-        ${chainStep('Repair',c.repair?escapeHTML(short(repairRule,56)):(s.note?'Planned · not completed':'Not logged'),c.repair?'done':'due')}
+        ${chainStep('Original',`${escapeHTML(s.earned)}/${escapeHTML(s.total)}`,'done')}
+        ${chainStep('Diagnosis',s.error?attemptErrorText(s.error):'Needs diagnosis',s.error?'done':'due')}
+        ${chainStep('Repair',c.repair?short(repairRule,56):(s.note?'Planned · not completed':'Not logged'),c.repair?'done':'due')}
         ${chainStep('Reattempt',c.reattempt?`${c.reattempt.earned}/${c.reattempt.total} clean pass`:'Due',c.reattempt?'done':'due')}
         ${chainStep('Transfer',c.transfer?`${c.transfer.earned}/${c.transfer.total} clean pass`:'Due after reattempt',c.transfer?'done':'due')}
         ${chainStep('Delayed',c.delayed?`${c.delayed.earned}/${c.delayed.total} survived`:'Due after transfer',c.relapse?'fail':c.delayed?'done':'due')}
         ${chainStep('State',c.relapse?'Reopened by later failure':c.lifecycle,c.relapse?'fail':c.lifecycle==='Closed'?'done':'due')}
       </div><div class="chain-actions">
-        ${!c.repair?`<button class="secondary-btn" type="button" data-v5-repair="${s.id}">Log smallest repair</button>`:''}
-        ${c.repair&&!c.reattempt?`<button class="primary-btn" type="button" data-v5-attempt="${s.topicKey}" data-v5-type="reattempt">Closed-book reattempt</button>`:''}
-        ${c.reattempt&&!c.transfer?`<button class="primary-btn" type="button" data-v5-attempt="${s.topicKey}" data-v5-type="fresh-transfer">Fresh transfer</button>`:''}
-        ${c.transfer&&!c.delayed?`<button class="primary-btn" type="button" data-v5-attempt="${s.topicKey}" data-v5-type="delayed-retest">Delayed retest</button>`:''}
+        ${!c.repair?`<button class="secondary-btn" type="button" data-v5-repair="${escapeHTML(s.id)}">Log smallest repair</button>`:''}
+        ${c.repair&&!c.reattempt?`<button class="primary-btn" type="button" data-v5-attempt="${escapeHTML(s.topicKey)}" data-v5-type="reattempt">Closed-book reattempt</button>`:''}
+        ${c.reattempt&&!c.transfer?`<button class="primary-btn" type="button" data-v5-attempt="${escapeHTML(s.topicKey)}" data-v5-type="fresh-transfer">Fresh transfer</button>`:''}
+        ${c.transfer&&!c.delayed?`<button class="primary-btn" type="button" data-v5-attempt="${escapeHTML(s.topicKey)}" data-v5-type="delayed-retest">Delayed retest</button>`:''}
       </div></article>`;
     }).join(''):'<div class="v5-no-data">No open error chains yet. A lost-mark or unsupported-guess attempt will create one automatically.</div>';
   }
@@ -307,7 +307,7 @@
     const debt=evidenceChains().filter(c=>types.includes(c.source.type)&&c.lifecycle!=='Closed').length;
     root.innerHTML=`<div class="panel-head"><div><div class="eyebrow">Paper Engine</div><h2>Paper quantity is not paper quality.</h2><p>Every paper or section is classified by how far the review-and-verification chain actually progressed.</p></div><button class="primary-btn" id="v5-log-paper" type="button">Log paper evidence</button></div>
     <div class="v5-kpi-grid"><article class="v5-kpi"><span>Full papers</span><strong>${full.length}</strong><small>all-time logged full timed papers</small></article><article class="v5-kpi"><span>Paper output · 30d</span><strong>${recent.length}</strong><small>MCQ/structured/paper/full sections</small></article><article class="v5-kpi"><span>Best recent trusted</span><strong>${best===null?'—':best+'%'}</strong><small>only attempts with trusted-score audit</small></article><article class="v5-kpi"><span>Unresolved paper debt</span><strong>${debt}</strong><small>paper-exposed errors not yet verified closed</small></article></div>
-    <section class="v5-panel"><div class="eyebrow">Paper quality / closure</div><h3>Attempted → marked → diagnosed → repaired → verified</h3><div class="v5-table-wrap" style="margin-top:10px"><table class="v5-table"><thead><tr><th>Date</th><th>Subject</th><th>Source</th><th>Type</th><th>Raw / trusted</th><th>Time</th><th>Closure</th></tr></thead><tbody>${papers.length?papers.slice(0,40).map(a=>{const st=paperClosure(a),trusted=a.trustedEarned!==null&&a.trustedEarned!==undefined&&a.trustedEarned!==''?`${a.trustedEarned}/${a.total}`:'not audited';return`<tr><td>${escapeHTML(a.date)}</td><td>${titleCase(a.subject)}</td><td>${escapeHTML(a.question||'—')}</td><td>${escapeHTML(ATTEMPT_TYPE_NAMES[a.type]||a.type)}</td><td>${a.earned}/${a.total} · ${trusted}</td><td>${Number(a.minutes||0)}m</td><td><span class="v5-badge ${st.cls}">${st.label}</span></td></tr>`}).join(''):'<tr><td colspan="7">No paper-section evidence yet.</td></tr>'}</tbody></table></div></section>`;
+    <section class="v5-panel"><div class="eyebrow">Paper quality / closure</div><h3>Attempted → marked → diagnosed → repaired → verified</h3><div class="v5-table-wrap" style="margin-top:10px"><table class="v5-table"><thead><tr><th>Date</th><th>Subject</th><th>Source</th><th>Type</th><th>Raw / trusted</th><th>Time</th><th>Closure</th></tr></thead><tbody>${papers.length?papers.slice(0,40).map(a=>{const st=paperClosure(a),trusted=a.trustedEarned!==null&&a.trustedEarned!==undefined&&a.trustedEarned!==''?`${escapeHTML(a.trustedEarned)}/${escapeHTML(a.total)}`:'not audited';return`<tr><td>${escapeHTML(a.date)}</td><td>${escapeHTML(titleCase(a.subject))}</td><td>${escapeHTML(a.question||'—')}</td><td>${escapeHTML(ATTEMPT_TYPE_NAMES[a.type]||a.type)}</td><td>${escapeHTML(a.earned)}/${escapeHTML(a.total)} · ${trusted}</td><td>${Number(a.minutes||0)}m</td><td><span class="v5-badge ${st.cls}">${st.label}</span></td></tr>`}).join(''):'<tr><td colspan="7">No paper-section evidence yet.</td></tr>'}</tbody></table></div></section>`;
     q('#v5-log-paper')?.addEventListener('click',()=>openAttemptDialog('', 'paper-section'));
   }
 
@@ -322,7 +322,7 @@
     q('#v5-save-policy')?.addEventListener('click',()=>{ const a=Math.max(0,Number(q('#v5-int1').value||3)),b=Math.max(a+1,Number(q('#v5-int2').value||7)); state.v5Settings.retestIntervals=[a,b];saveState();renderRetestsV5();toast('Retest policy saved for new chains.'); });
     q('#v5-export-ics')?.addEventListener('click',exportRetestICS);
   }
-  function retestColumn(title,list){ return `<div class="retest-col"><h4>${title} · ${list.length}</h4>${list.length?list.map(r=>{const t=getTopic(r.topicKey);return `<div class="retest-mini"><b>${escapeHTML(t?.name||'Unknown topic')}</b><span>${titleCase(t?.subject||'')} · ${r.stage===1?'Fresh transfer':'Delayed stability'} · ${escapeHTML(r.due||r.completedAt||'')} ${r.failures?`· ${r.failures} failed`:''}</span>${!r.completedAt?`<button class="log-mini" style="margin-top:6px" data-v5-attempt="${r.topicKey}" data-v5-type="${r.stage===1?'fresh-transfer':'delayed-retest'}">Attempt</button>`:''}</div>`}).join(''):'<div class="v5-copy">None.</div>'}</div>`; }
+  function retestColumn(title,list){ return `<div class="retest-col"><h4>${title} · ${list.length}</h4>${list.length?list.map(r=>{const t=getTopic(r.topicKey);return `<div class="retest-mini"><b>${escapeHTML(t?.name||'Unknown topic')}</b><span>${escapeHTML(titleCase(t?.subject||''))} · ${r.stage===1?'Fresh transfer':'Delayed stability'} · ${escapeHTML(r.due||r.completedAt||'')} ${r.failures?`· ${escapeHTML(r.failures)} failed`:''}</span>${!r.completedAt?`<button class="log-mini" style="margin-top:6px" data-v5-attempt="${escapeHTML(r.topicKey)}" data-v5-type="${r.stage===1?'fresh-transfer':'delayed-retest'}">Attempt</button>`:''}</div>`}).join(''):'<div class="v5-copy">None.</div>'}</div>`; }
 
   function renderIntelligence(){
     const root=q('#v5-intelligence-root'); if(!root)return;
