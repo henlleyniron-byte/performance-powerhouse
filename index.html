@@ -1599,7 +1599,7 @@ function renderCourseCorrection() {
   $('cc-status-pills').innerHTML = [
     `<span class="pill">${outputToday ? '✓ marked output today' : '○ output still needed'}</span>`,
     `<span class="pill">${overdue ? `${overdue} overdue retest${overdue===1?'':'s'}` : 'retests under control'}</span>`,
-    `<span class="pill">${signal ? `${signal.code} top error · ${signal.count}×/7d` : 'no repeated error yet'}</span>`,
+    `<span class="pill">${signal ? `${escapeHTML(signal.code)} top error · ${signal.count}×/7d` : 'no repeated error yet'}</span>`,
     `<span class="pill">backup ${backupHealth().toLowerCase()}</span>`
   ].join('');
 
