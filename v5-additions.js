@@ -269,8 +269,8 @@
       const repairRule=c.repair?.rule||s.note||'No repair rule logged';
       return `<article class="chain-card"><div class="chain-head"><div><div class="chain-title">${escapeHTML(t?.name||s.question||'Evidence chain')}</div><div class="chain-meta">${escapeHTML(titleCase(s.subject))} · ${escapeHTML(s.question||'source attempt')} · ${escapeHTML(s.earned)}/${escapeHTML(s.total)} · ${s.error?attemptErrorText(s.error):'unsupported/other loss'}</div></div><span class="chain-status ${statusClass}">${escapeHTML(c.lifecycle)}</span></div>
       <div class="chain-flow">
-        ${chainStep('Original',`${escapeHTML(s.earned)}/${escapeHTML(s.total)}`,'done')}
-        ${chainStep('Diagnosis',s.error?attemptErrorText(s.error):'Needs diagnosis',s.error?'done':'due')}
+        ${chainStep('Original',`${s.earned}/${s.total}`,'done')}
+        ${chainStep('Diagnosis',s.error?`${String(s.error)} ${Object.prototype.hasOwnProperty.call(ERROR_NAMES,String(s.error))?ERROR_NAMES[String(s.error)]:'Unknown error'}`:'Needs diagnosis',s.error?'done':'due')}
         ${chainStep('Repair',c.repair?short(repairRule,56):(s.note?'Planned · not completed':'Not logged'),c.repair?'done':'due')}
         ${chainStep('Reattempt',c.reattempt?`${c.reattempt.earned}/${c.reattempt.total} clean pass`:'Due',c.reattempt?'done':'due')}
         ${chainStep('Transfer',c.transfer?`${c.transfer.earned}/${c.transfer.total} clean pass`:'Due after reattempt',c.transfer?'done':'due')}

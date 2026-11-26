@@ -1809,7 +1809,7 @@ function renderDailyOutput() {
   const entries = [...state.dailyEntries].sort((a,b) => (b.date || '').localeCompare(a.date || '') || (b.timestamp || '').localeCompare(a.timestamp || ''));
   $('daily-history-body').innerHTML = entries.length ? entries.slice(0, 120).map(entry => {
     const metric = subject => DAILY_FIELDS.filter(f => Number(entry?.[subject]?.[f.id] || 0) > 0).map(f => `${f.label}: ${Number(entry[subject][f.id])}`).join(' · ') || '—';
-    return `<tr><td>${escapeHTML(entry.date)}</td><td class="daily-history-metrics">${escapeHTML(metric('physics'))}</td><td class="daily-history-metrics">${escapeHTML(metric('chemistry'))}</td><td class="daily-history-metrics">${escapeHTML(metric('biology'))}</td><td>${escapeHTML(entry.note || '')}</td><td><button class="daily-delete" type="button" data-delete-daily="${entry.id}">Delete</button></td></tr>`;
+    return `<tr><td>${escapeHTML(entry.date)}</td><td class="daily-history-metrics">${escapeHTML(metric('physics'))}</td><td class="daily-history-metrics">${escapeHTML(metric('chemistry'))}</td><td class="daily-history-metrics">${escapeHTML(metric('biology'))}</td><td>${escapeHTML(entry.note || '')}</td><td><button class="daily-delete" type="button" data-delete-daily="${escapeHTML(entry.id)}">Delete</button></td></tr>`;
   }).join('') : '<tr><td colspan="6"><div class="empty-state">No manual daily-output entries yet. Evidence-derived activity still appears in today’s scoreboard automatically.</div></td></tr>';
 }
 

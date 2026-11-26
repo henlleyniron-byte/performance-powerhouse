@@ -64,6 +64,7 @@ test('imported V5 records render as text and cannot inject markup or event attri
         guesses: 1,
         error: 'K"><img src=x onerror="window.__xss=1">',
       }],
+      dailyEntries: [{ id: 'daily-1" onmouseover="window.__xss=1', date: '2026-11-26', note: '<img src=x onerror="window.__xss=1">', physics: { mcqs: 1 }, chemistry: {}, biology: {} }],
       retests: [
         { id: 'retest-1" onmouseover="window.__xss=1', topicKey: 'biology|0|0', due: '2000-01-01', stage: 1, attempts: [] },
         { id: 'retest-2', topicKey: 'biology|0|0" onmouseover="window.__xss=1', due: '2000-01-01', stage: 1, attempts: [] },
@@ -78,11 +79,11 @@ test('imported V5 records render as text and cannot inject markup or event attri
   await expect(page.locator('#v5-chain-list .chain-card')).toHaveCount(1);
 
   const markupCount = await page.locator(
-    '#attempt-table-body img, #attempt-table-body svg, #recent-attempts img, #calibration-risk img, #retest-queue img, #v5-chain-list img, #v5-papers-root img, #v5-retests-root img'
+    '#attempt-table-body img, #attempt-table-body svg, #recent-attempts img, #calibration-risk img, #retest-queue img, #v5-chain-list img, #v5-papers-root img, #v5-retests-root img, #daily-history-body img'
   ).count();
   expect(markupCount).toBe(0);
   const eventAttributeCount = await page.locator(
-    '#attempt-table-body [onmouseover], #attempt-table-body [onerror], #calibration-risk [onmouseover], #retest-queue [onmouseover], #v5-chain-list [onmouseover], #v5-retests-root [onmouseover]'
+    '#attempt-table-body [onmouseover], #attempt-table-body [onerror], #calibration-risk [onmouseover], #retest-queue [onmouseover], #v5-chain-list [onmouseover], #v5-retests-root [onmouseover], #daily-history-body [onmouseover]'
   ).count();
   expect(eventAttributeCount).toBe(0);
   expect(await page.evaluate(() => Boolean(window.__xss))).toBe(false);
