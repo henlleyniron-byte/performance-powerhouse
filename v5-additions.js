@@ -391,9 +391,9 @@
     const start=addDays(v5Today(),-7),end=addDays(v5Today(),30);
     const rows=(state.retests||[]).filter(r=>!r.completedAt&&icsDate(r.due)&&r.due>=start&&r.due<=end).sort((a,b)=>String(a.due).localeCompare(String(b.due))).slice(0,20);
     if(!rows.length){toast('No important retests in the next 30 days.');return;}
-    const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Performance Powerhouse V5//EN','CALSCALE:GREGORIAN',...rows.flatMap(r=>{const t=getTopic(r.topicKey);return ['BEGIN:VEVENT',\`UID:\${icsText(r.id)}@performance-powerhouse-v5\`,\`DTSTART;VALUE=DATE:\${icsDate(r.due)}\`,\`SUMMARY:\${icsText(\`Powerhouse · \${r.stage===1?'Fresh transfer':'Delayed retest'} · \${t?.name||'Retest'}\`)}\`,\`DESCRIPTION:\${icsText('Complete a fresh independent question, mark strictly, and update the evidence chain. Do not treat calendar presence as mastery.')}\`,'END:VEVENT'];}),'END:VCALENDAR'].join('\\r\\n');
-    dl(\`powerhouse-important-retests-\${v5Today()}.ics\`,body,'text/calendar');
-    toast(\`Exported \${rows.length} important retest event(s).\`);
+    const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Performance Powerhouse V5//EN','CALSCALE:GREGORIAN',...rows.flatMap(r=>{const t=getTopic(r.topicKey);return ['BEGIN:VEVENT',`UID:${icsText(r.id)}@performance-powerhouse-v5`,`DTSTART;VALUE=DATE:${icsDate(r.due)}`,`SUMMARY:${icsText(`Powerhouse · ${r.stage===1?'Fresh transfer':'Delayed retest'} · ${t?.name||'Retest'}`)}`,`DESCRIPTION:${icsText('Complete a fresh independent question, mark strictly, and update the evidence chain. Do not treat calendar presence as mastery.')}`,'END:VEVENT'];}),'END:VCALENDAR'].join('\\r\\n');
+    dl(`powerhouse-important-retests-${v5Today()}.ics`,body,'text/calendar');
+    toast(`Exported ${rows.length} important retest event(s).`);
   }
   function icsText(s){
     return String(s ?? '').replace(/\\/g,'\\\\').replace(/\r\n|\r|\n/g,'\\n').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g,'').replace(/([,;])/g,'\\$1');
