@@ -20,6 +20,7 @@ test('share mode clears private results and blocks exports, imports and stale as
   await page.goto(`${pageURL}?share=1`);
   await expect(page.locator('#familyCount')).toContainText('families');
   await expect(page.locator('#shareBanner')).toBeVisible();
+  await expect(page.locator('#shareToggle')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('#performance')).toBeHidden();
   await expect(page.locator('#recommendations')).toBeEmpty();
   await expect(page.locator('#opportunityTable')).toBeEmpty();
@@ -38,6 +39,7 @@ test('share mode clears private results and blocks exports, imports and stale as
 
   await page.locator('#shareToggle').click();
   await expect(page.locator('#performance')).toBeVisible();
+  await expect(page.locator('#shareToggle')).toHaveAttribute('aria-pressed', 'false');
   await expect(page.locator('#recommendations')).toContainText('REVISE');
 });
 
@@ -65,6 +67,9 @@ test('malformed imports preserve existing outcomes and valid imports require rep
   await expect(page.locator('#backupStatus')).toContainText('Imported 1 validated outcome');
   const after = JSON.parse(await page.evaluate(key => localStorage.getItem(key), storageKey));
   expect(after.attempts).toEqual([{ familyId, outcome: 'correct', timeSeconds: 80, confidence: 4, recordedAt: '2026-11-26T00:00:00.000Z' }]);
+  await page.locator('#shareToggle').click();
+  await expect(page.locator('#performance')).toBeHidden();
+  await expect(page.locator('#backupStatus')).toBeEmpty();
 });
 
 test('a file read that spans a share-mode round trip cannot replace private outcomes', async ({ page }) => {
@@ -89,4 +94,33 @@ test('a file read that spans a share-mode round trip cannot replace private outc
   await page.evaluate(() => window.__finishBackupRead());
   await page.waitForTimeout(50);
   expect(await page.evaluate(key => localStorage.getItem(key), storageKey)).toBe(before);
+});
+
+test('malformed stored outcomes stay exportable and cannot be overwritten by a new entry', async ({ page }) => {
+  const malformed = {
+    version: 1,
+    attempts: [{ ...existing.attempts[0], outcome: 'unsupported-outcome' }],
+  };
+  await seed(page, malformed);
+  await page.goto(pageURL);
+  await expect(page.locator('#backupStatus')).toContainText('were left untouched');
+  const original = await page.evaluate(key => localStorage.getItem(key), storageKey);
+  const downloadPromise = page.waitForEvent('download');
+  await page.locator('#exportBackup').click();
+  const savedOriginal = await readFile(await (await downloadPromise).path(), 'utf8');
+  expect(savedOriginal).toBe(original);
+
+  await page.locator('#attemptForm').evaluate(form => form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true })));
+  await expect(page.locator('#backupStatus')).toContainText('New outcomes are paused');
+  expect(await page.evaluate(key => localStorage.getItem(key), storageKey)).toBe(original);
+
+  page.once('dialog', dialog => dialog.accept());
+  await page.locator('#importBackup').setInputFiles({
+    name: 'fictional-valid-backup.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify({ version: 1, storageKey, attempts: [{ familyId, outcome: 'correct', timeSeconds: 80, confidence: 4, recordedAt: '2026-11-26T00:00:00.000Z' }] })),
+  });
+  await expect(page.locator('#backupStatus')).toContainText('Imported 1 validated outcome');
+  const recovered = JSON.parse(await page.evaluate(key => localStorage.getItem(key), storageKey));
+  expect(recovered.attempts).toEqual([{ familyId, outcome: 'correct', timeSeconds: 80, confidence: 4, recordedAt: '2026-11-26T00:00:00.000Z' }]);
 });

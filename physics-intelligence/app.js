@@ -8,6 +8,7 @@ const state = {
   attempts: [],
   visibleFamilies: 24,
   shareMode: new URLSearchParams(location.search).get("share") === "1",
+  invalidLocalState: false,
 };
 let shareRevision = 0;
 
@@ -18,9 +19,13 @@ const escapeCsv = (value) => `"${String(value).replaceAll('"', '""')}"`;
 function loadLocalState() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    state.attempts = Array.isArray(parsed.attempts) ? parsed.attempts : [];
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("Saved state is not an object.");
+    state.attempts = validateAttempts(Array.isArray(parsed.attempts) ? parsed.attempts : []);
+    state.invalidLocalState = false;
   } catch {
     state.attempts = [];
+    state.invalidLocalState = true;
+    showBackupStatus("Saved outcomes are malformed and were left untouched. Export the stored original before replacing them with a valid backup.");
   }
 }
 
@@ -60,9 +65,11 @@ function showBackupStatus(message) {
   status.hidden = false;
 }
 
-function saveLocalState() {
+function saveLocalState({ replaceInvalid = false } = {}) {
   if (shareActive()) return false;
+  if (state.invalidLocalState && !replaceInvalid) return false;
   localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, attempts: state.attempts }));
+  state.invalidLocalState = false;
   return true;
 }
 
@@ -72,6 +79,7 @@ function setShareMode(enabled) {
   document.body.classList.toggle("share-mode", enabled);
   el("shareBanner").hidden = !enabled;
   el("shareToggle").textContent = enabled ? "Exit share mode" : "Share mode";
+  el("shareToggle").setAttribute("aria-pressed", String(enabled));
   const url = new URL(location.href);
   if (enabled) url.searchParams.set("share", "1"); else url.searchParams.delete("share");
   history.replaceState(null, "", url);
@@ -81,6 +89,8 @@ function setShareMode(enabled) {
 function clearPrivatePerformance() {
   el("recommendations").replaceChildren();
   el("opportunityTable").replaceChildren();
+  el("backupStatus").replaceChildren();
+  el("backupStatus").hidden = true;
 }
 
 function populateControls() {
@@ -293,6 +303,10 @@ function bindEvents() {
   el("attemptForm").addEventListener("submit", (event) => {
     event.preventDefault();
     if (shareActive()) return;
+    if (state.invalidLocalState) {
+      showBackupStatus("New outcomes are paused to protect the malformed saved data. Export the stored original and import a valid backup to replace it.");
+      return;
+    }
     const previous = state.attempts;
     state.attempts = [...previous, {
       familyId: el("attemptFamily").value,
@@ -311,8 +325,20 @@ function bindEvents() {
   });
   el("exportBackup").addEventListener("click", () => {
     if (shareActive()) return;
-    const blob = new Blob([JSON.stringify({ version: 1, storageKey: STORAGE_KEY, attempts: state.attempts }, null, 2)], { type: "application/json" });
-    const link = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "physics-intelligence-private-backup.json" });
+    let contents, filename;
+    if (state.invalidLocalState) {
+      try { contents = localStorage.getItem(STORAGE_KEY); } catch {
+        showBackupStatus("The stored original could not be read. No data was changed.");
+        return;
+      }
+      if (contents === null) contents = "{}";
+      filename = "physics-intelligence-stored-original.json";
+    } else {
+      contents = JSON.stringify({ version: 1, storageKey: STORAGE_KEY, attempts: state.attempts }, null, 2);
+      filename = "physics-intelligence-private-backup.json";
+    }
+    const blob = new Blob([contents], { type: "application/json" });
+    const link = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: filename });
     link.click(); URL.revokeObjectURL(link.href);
   });
   el("importBackup").addEventListener("change", async (event) => {
@@ -333,7 +359,8 @@ function bindEvents() {
       return;
     }
     if (shareActive() || requestRevision !== shareRevision) return;
-    if (!confirm(`Replace ${state.attempts.length} saved outcome(s) with ${attempts.length} imported outcome(s)?`)) {
+    const currentLabel = state.invalidLocalState ? "the malformed stored original" : `${state.attempts.length} saved outcome(s)`;
+    if (!confirm(`Replace ${currentLabel} with ${attempts.length} imported outcome(s)?`)) {
       showBackupStatus("Import cancelled. Your saved records were kept.");
       return;
     }
@@ -341,7 +368,7 @@ function bindEvents() {
     const previous = state.attempts;
     state.attempts = attempts;
     try {
-      if (!saveLocalState()) throw new Error("Share mode is active.");
+      if (!saveLocalState({ replaceInvalid: true })) throw new Error("Share mode is active or saved data cannot be replaced.");
       renderPerformance();
       showBackupStatus(`Imported ${attempts.length} validated outcome(s).`);
     } catch {
