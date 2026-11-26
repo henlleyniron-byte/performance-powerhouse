@@ -71,6 +71,22 @@ input[type="radio"] { flex: 0 0 auto; margin-top: .45rem; accent-color: var(--ac
 textarea { display: block; width: min(100%, 54rem); min-height: 6rem; resize: vertical; background: var(--page); border: 1px solid var(--line); border-radius: .55rem; padding: .75rem; margin-bottom: .75rem; }
 summary { cursor: pointer; font-weight: 650; padding-block: .55rem; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+
+.paper-tools { display: flex; flex-wrap: wrap; gap: .5rem .8rem; align-items: center; margin-block: 1rem; }
+.paper-tools select { width: auto; max-width: 100%; }
+.academy-paper { display: none; }
+@media print {
+  @page { margin: 15mm; }
+  :root, body { background: white; color: black; color-scheme: light; }
+  .academy-printable > :not(.academy-paper) { display: none !important; }
+  .academy-paper { display: block; font: 11pt/1.35 Georgia, serif; }
+  .academy-paper h1 { font-size: 20pt; letter-spacing: 0; }
+  .academy-paper h2 { font-size: 13pt; margin-block: 4mm 1.5mm; break-after: avoid; }
+  .academy-paper p, .academy-paper li { margin-block: 0 1.3mm; orphans: 2; widows: 2; }
+  .academy-paper ul, .academy-paper ol { margin-block: 1.5mm; }
+  .academy-paper .answer-space { min-height: 14mm; border-bottom: 1px solid #777; }
+  .academy-paper .extended { min-height: 25mm; }
+}
 </style>
 
 
@@ -773,6 +789,73 @@ globalThis.PowerhouseBiologyAcademy = {
     view.append(overview, model, mcq, structured, transfer);
     return { view, heading };
   }
+
+  // Paper copies are generated from the public question bank. They never read
+  // the learner's textareas, selected radio buttons, or another track's work.
+  const printTools = element('div', undefined, 'paper-tools');
+  const printLabel = element('label', 'Paper copy');
+  printLabel.htmlFor = 'paper-kind';
+  const printKind = element('select');
+  printKind.id = 'paper-kind';
+  for (const [value, title] of [['questions', 'Blank question sheet'], ['answers', 'Marking guide']]) {
+    const option = element('option', title);
+    option.value = value;
+    printKind.append(option);
+  }
+  const printButton = element('button', 'Print current track');
+  printButton.type = 'button';
+  printTools.append(printLabel, printKind, printButton);
+  lesson.before(printTools);
+  const paper = element('article', undefined, 'academy-paper');
+  document.body.append(paper);
+  document.body.classList.add('academy-printable');
+
+  function paperSection(title, prompt) {
+    const section = element('section');
+    section.append(element('h2', title), element('p', prompt));
+    return section;
+  }
+
+  function preparePaper() {
+    const track = modules.find(entry => entry.id === activeId);
+    paper.replaceChildren();
+    if (!track) return;
+    const marking = printKind.value === 'answers';
+    const kind = marking ? 'Marking guide' : 'Blank question sheet';
+    paper.append(element('p', 'Performance Powerhouse · Biology Academy · ' + kind),
+      element('h1', track.title), element('p', 'Syllabus units ' + track.units.join(', ')));
+    const model = paperSection('Prediction', track.scenario.prompt);
+    model.append(list(track.scenario.options.map(option => marking
+      ? option.label + ' — ' + option.observation : option.label)));
+    model.append(element('p', track.scenario.prediction));
+    const mcq = paperSection('Closed-book MCQ', track.mcq.prompt);
+    const options = list(track.mcq.options, 'ol');
+    options.type = 'A';
+    mcq.append(options);
+    const structured = paperSection('Structured response', track.structured.prompt);
+    const transfer = paperSection('Fresh transfer', track.transfer.prompt);
+    if (marking) {
+      model.append(element('p', track.scenario.explanation));
+      const correct = String.fromCharCode(65 + track.mcq.answer);
+      mcq.append(element('p', 'Correct answer: ' + correct + '. ' + track.mcq.options[track.mcq.answer]));
+      const reasons = list(track.mcq.explanations, 'ol');
+      reasons.type = 'A';
+      mcq.append(reasons);
+      structured.append(list(track.structured.points));
+      transfer.append(element('p', track.transfer.answer));
+    } else {
+      model.append(element('div', undefined, 'answer-space'));
+      structured.append(element('div', undefined, 'answer-space extended'));
+      transfer.append(element('div', undefined, 'answer-space'));
+    }
+    paper.append(model, mcq, structured, transfer);
+  }
+
+  window.addEventListener('beforeprint', preparePaper);
+  printButton.addEventListener('click', () => {
+    preparePaper();
+    window.print();
+  });
 
   function renderTracks() {
     const visible = modules.filter((track) => !unitFilter.value || track.units.includes(unitFilter.value));

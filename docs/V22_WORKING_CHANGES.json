@@ -3,12 +3,12 @@
   "files": [
     {
       "path": "public/biology-academy/academy.css",
-      "sha256": "48a55cb25d3eb4c300587ce23eacc607c2ae42cf9eab286ce7fc0fc1982ae835",
+      "sha256": "cb93c0bf657d4e4f3c23d336524564b7f6065c13b2ba46185849528aaece47ab",
       "mode": "100644"
     },
     {
       "path": "public/biology-academy/academy.js",
-      "sha256": "f34e2d4872239ab1d2ad24621e414532b6451735713dc85f88f602ab67712e63",
+      "sha256": "692f50ee52a7027718d13219e4723bd810dca70f7c0f4fbadd934cf9949ebaa1",
       "mode": "100644"
     },
     {

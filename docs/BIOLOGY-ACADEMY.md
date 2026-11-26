@@ -6,6 +6,10 @@ The ten tracks sample competencies from all ten units of the [published NIE Biol
 
 The academy runs in the browser with no new dependency, backend, account, analytics, or cloud connection. Typed responses survive track changes during the open page session. They are not added to Powerhouse attempts, marks, retest history, or recovery records. Copy any response you want to keep before closing or reloading. Opening the academy from Share-safe and navigating back preserves the shared URL.
 
+## Practise on paper
+
+Choose a track, select **Blank question sheet** under **Paper copy**, and use **Print current track**. You can print on paper or save a PDF through the browser’s print dialog. After the attempt, select **Marking guide** to review the prediction, MCQ, structured response and transfer question. Each printout uses the public lesson text. Answers typed on screen stay out of both versions.
+
 ## Maintenance
 
 - The standalone root and `hosted-source/public/` are separate serving layouts. Keep their `biology-academy/academy.js`, `academy.css`, and `content.js` byte-identical. The hosted HTML includes the Biology Intelligence navigation because that route is available there.
