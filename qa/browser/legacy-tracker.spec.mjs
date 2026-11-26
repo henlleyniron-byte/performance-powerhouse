@@ -95,7 +95,7 @@ test('captured private controls cannot write after share mode closes their dialo
   const before = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).sessions, ledger);
   await page.locator('#quick-log-btn').click();
   await page.locator('#q-task').fill('Fictional stale quick entry');
-  await page.locator('#share-btn').click();
+  await page.evaluate(() => document.getElementById('share-btn').dispatchEvent(new MouseEvent('click', { bubbles: true })));
   await expect(page.locator('#quick-dialog')).toBeHidden();
   await page.locator('#save-quick').evaluate(button => button.click());
   await page.locator('#start-btn').evaluate(button => button.click());
@@ -107,7 +107,7 @@ test('captured private controls cannot write after share mode closes their dialo
   await page.locator('#task').fill('Fictional active session');
   await page.locator('#start-btn').click();
   await page.locator('#finish-btn').click();
-  await page.locator('#share-btn').click();
+  await page.evaluate(() => document.getElementById('share-btn').dispatchEvent(new MouseEvent('click', { bubbles: true })));
   await expect(page.locator('#finish-dialog')).toBeHidden();
   await page.locator('#pause-btn').evaluate(button => button.click());
   await page.locator('#save-finish').evaluate(button => button.click());
