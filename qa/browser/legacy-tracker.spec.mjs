@@ -90,6 +90,35 @@ test('a pending import cannot replace the ledger after share mode is enabled', a
   expect(after.sessions).toEqual(before.sessions);
 });
 
+test('imported tracker strings render as text and incomplete records do not break the tracker', async ({ page }) => {
+  await page.goto(legacy);
+  const injection = '<img src=x onerror="window.__trackerXss=1">';
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.evaluate(() => { window.__trackerXss = 0; });
+  await page.locator('#data-btn').click();
+  await page.locator('#import-file').setInputFiles({
+    name: 'fictional-untrusted-backup.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify({ activeSession: {
+      subject: {}, type: injection, task: injection, plannedMinutes: 'invalid', status: null, startedAt: 'invalid', accumulatedMs: 'invalid',
+    }, sessions: [
+      { id: { toString: {} }, date: injection, subject: injection, type: 'unknown', task: injection, note: { toString: {} }, durationMs: 'invalid', output: { valueOf: {} }, evidenceClass: injection, status: 'complete' },
+      { status: 'complete', date: '2026-07-01', subject: null, type: 'timed-question', task: 'Fictional incomplete record', durationMs: 0 },
+    ] })),
+  });
+  await expect(page.locator('#history')).toContainText('Fictional incomplete record');
+  await expect(page.locator('#history')).toContainText(injection);
+  await expect(page.locator('#history img')).toHaveCount(0);
+  await expect(page.locator('#active-subject')).toHaveText('Unspecified');
+  await expect(page.locator('#active-task')).toHaveText(injection);
+  await expect(page.locator('#active-task img')).toHaveCount(0);
+  await expect(page.locator('#state-line')).toHaveText('PAUSED');
+  expect(await page.evaluate(() => window.__trackerXss)).toBe(0);
+  expect(errors).toEqual([]);
+  await expect(page.locator('#history tr')).toHaveCount(2);
+});
+
 test('captured private controls cannot write after share mode closes their dialog', async ({ page }) => {
   await addFictionalSession(page);
   const before = await page.evaluate(key => JSON.parse(localStorage.getItem(key)).sessions, ledger);
