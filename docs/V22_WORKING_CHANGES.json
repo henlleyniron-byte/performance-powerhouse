@@ -60,16 +60,6 @@
       "path": "tests/evidence-rules.test.mjs",
       "sha256": "197d1fe268412dc223be45e5982ad07c51fa7f4b1854509fef85eb87613af7c9",
       "mode": "100644"
-    },
-    {
-      "path": "tests/science-intelligence.test.mjs",
-      "sha256": "39539cd1659e32ec53fe526d3372d1eee2b88b2bd7104419099f1b7e5fd0ea00",
-      "mode": "100644"
-    },
-    {
-      "path": "tests/study-library.test.mjs",
-      "sha256": "2b64eb0ed540120a80fcf97119e38e68be9b0cb3c500d464f2802b754d176fb9",
-      "mode": "100644"
     }
   ]
 }
