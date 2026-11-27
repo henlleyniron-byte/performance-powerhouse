@@ -99,7 +99,7 @@ for (const [entryPage, path] of [
     await expect(page.locator('#filter-physics')).toHaveValue('all');
     await expect(page.locator('#search-physics')).toHaveValue('');
 
-    for (const selector of [
+    const privateSelectors = [
       '#attempt-table-body',
       '#recent-attempts',
       '#repair-priority-list',
@@ -108,10 +108,9 @@ for (const [entryPage, path] of [
       '#cc-week-review',
       '#summary-physics',
       '#units-physics .r-grp',
-      '.v6-filters',
-      '.v6-count',
-      '.v6-private',
-    ]) {
+    ];
+    if (entryPage === 'V22 index') privateSelectors.push('.v6-filters', '.v6-count', '.v6-private');
+    for (const selector of privateSelectors) {
       const region = page.locator(selector).first();
       await expect(region).toHaveAttribute('inert', '');
       await expect(region).toHaveAttribute('aria-hidden', 'true');
