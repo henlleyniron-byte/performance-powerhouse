@@ -102,7 +102,7 @@ for (const [entryPage, path] of [
     await expect(page.locator('#filter-physics')).toHaveValue('all');
     await expect(page.locator('#search-physics')).toHaveValue('');
     await expect(trackCommand).toHaveAttribute('href', './study-tracker/');
-    await page.locator('#data-btn').click();
+    await expect(page.locator('#data-btn')).toBeDisabled();
     await expect(page.locator('#data-dialog')).toBeHidden();
 
     const privateSelectors = [
@@ -140,6 +140,7 @@ test('the Command Centre alias starts in share-safe mode when requested', async 
   await page.goto('/al-performance-command-centre.html?share=1');
   await expect(page.locator('body')).toHaveClass(/share-safe/);
   await expect(page.locator('#backup-health')).toHaveAttribute('inert', '');
+  await expect(page.locator('#data-btn')).toBeDisabled();
   await expect(page.locator('#start-focus-btn')).toHaveAttribute('inert', '');
   await expect(page.locator('#track-command-btn')).toHaveAttribute('inert', '');
   await expect(page.locator('#track-command-btn')).toHaveAttribute('href', './study-tracker/');
