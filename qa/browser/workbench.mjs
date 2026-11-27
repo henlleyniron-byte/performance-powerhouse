@@ -2,8 +2,8 @@ import { expect } from '@playwright/test';
 
 const coreKey = 'al_performance_powerhouse_v4';
 
-export async function startPrivateWorkbench(page) {
-  await page.goto('/index.html');
+export async function startPrivateWorkbench(page, path = '/index.html') {
+  await page.goto(path);
   await page.getByLabel('Your name').fill('Example Learner');
   await page.getByRole('button', { name: 'Enter my Powerhouse' }).click();
   await page.locator('#app-tabs [data-panel="attempts"]').click();

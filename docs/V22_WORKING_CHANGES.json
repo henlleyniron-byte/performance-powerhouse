@@ -2,6 +2,11 @@
   "archive_commit": "383c4f8dcb0cfe0adf6aad61be15596c7955c844",
   "files": [
     {
+      "path": "public/al-performance-command-centre.html",
+      "sha256": "adbe5ffdd293f0ce19ffad4e8c604eba2868f8d01a3193e8d9da67838b4af31f",
+      "mode": "100644"
+    },
+    {
       "path": "public/biology-academy/academy.css",
       "sha256": "cb93c0bf657d4e4f3c23d336524564b7f6065c13b2ba46185849528aaece47ab",
       "mode": "100644"
@@ -38,7 +43,7 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "112be198b3d3b36284f164c5dfdb4040f04e23d2669f1d4126a78223eff10aa3",
+      "sha256": "0a22c31d760432e0474c6913c3538649b638431b0e2fe7e5635e4403728e50ab",
       "mode": "100644"
     },
     {
@@ -54,6 +59,16 @@
     {
       "path": "tests/evidence-rules.test.mjs",
       "sha256": "197d1fe268412dc223be45e5982ad07c51fa7f4b1854509fef85eb87613af7c9",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/science-intelligence.test.mjs",
+      "sha256": "39539cd1659e32ec53fe526d3372d1eee2b88b2bd7104419099f1b7e5fd0ea00",
+      "mode": "100644"
+    },
+    {
+      "path": "tests/study-library.test.mjs",
+      "sha256": "2b64eb0ed540120a80fcf97119e38e68be9b0cb3c500d464f2802b754d176fb9",
       "mode": "100644"
     }
   ]
