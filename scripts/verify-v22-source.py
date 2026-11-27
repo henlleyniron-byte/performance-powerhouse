@@ -19,6 +19,14 @@ CHANGES = ROOT / 'docs/V22_WORKING_CHANGES.json'
 def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
+def require_unique_paths(items, label):
+    seen = set()
+    for item in items:
+        path = item['path']
+        if path in seen:
+            raise ValueError(f'Duplicate path in {label}: {path}')
+        seen.add(path)
+
 
 def archive_files(commit):
     def git(*args):
@@ -66,6 +74,9 @@ def main():
     args = parser.parse_args()
     manifest = json.loads(MANIFEST.read_bytes())
     changes = json.loads(CHANGES.read_bytes())
+    require_unique_paths(manifest['files'], 'source manifest')
+    require_unique_paths(manifest['omitted'], 'omission manifest')
+    require_unique_paths(changes['files'], 'working-change manifest')
     expected = {}
     for item in manifest['files']:
         if item['redacted_link_count'] == 0 and item['source_sha256'] != item['public_sha256']:
