@@ -102,6 +102,8 @@ for (const [entryPage, path] of [
     await expect(page.locator('#filter-physics')).toHaveValue('all');
     await expect(page.locator('#search-physics')).toHaveValue('');
     await expect(trackCommand).toHaveAttribute('href', './study-tracker/');
+    await page.locator('#data-btn').click();
+    await expect(page.locator('#data-dialog')).toBeHidden();
 
     const privateSelectors = [
       '#backup-health',
