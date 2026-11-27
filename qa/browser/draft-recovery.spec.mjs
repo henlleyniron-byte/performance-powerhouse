@@ -144,7 +144,7 @@ test('the Command Centre alias starts in share-safe mode when requested', async 
   await expect(page.locator('#track-command-btn')).toHaveAttribute('inert', '');
   await expect(page.locator('#track-command-btn')).toHaveAttribute('href', './study-tracker/');
   await expect(page.locator('a[href="./science-intelligence/"]')).toHaveAttribute('inert', '');
-  await expect(page.locator('a[href="./study-tracker/"]')).toHaveAttribute('inert', '');
+  await expect(page.locator('a.tab-link[href="./study-tracker/"]')).toHaveAttribute('inert', '');
   await expect(page.locator('#attempt-table-body')).toHaveAttribute('inert', '');
   await expect(page.locator('#attempt-table-body')).toHaveAttribute('aria-hidden', 'true');
 });
