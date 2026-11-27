@@ -116,7 +116,8 @@ for (const [entryPage, path] of [
       '#summary-physics',
       '#units-physics .r-grp',
     ];
-    if (entryPage === 'V22 index') privateSelectors.push('.v6-filters', '.v6-count', '.v6-private');
+    if (entryPage === 'V22 index') privateSelectors.push('.v6-filters', '.v6-count', '.v6-private', 'details.workspace-more');
+    else privateSelectors.push('a[href="./science-intelligence/"]', 'a[href="./study-tracker/"]');
     for (const selector of privateSelectors) {
       const region = page.locator(selector).first();
       await expect(region).toHaveAttribute('inert', '');
@@ -140,6 +141,8 @@ test('the Command Centre alias starts in share-safe mode when requested', async 
   await expect(page.locator('#start-focus-btn')).toHaveAttribute('inert', '');
   await expect(page.locator('#track-command-btn')).toHaveAttribute('inert', '');
   await expect(page.locator('#track-command-btn')).toHaveAttribute('href', './study-tracker/');
+  await expect(page.locator('a[href="./science-intelligence/"]')).toHaveAttribute('inert', '');
+  await expect(page.locator('a[href="./study-tracker/"]')).toHaveAttribute('inert', '');
   await expect(page.locator('#attempt-table-body')).toHaveAttribute('inert', '');
   await expect(page.locator('#attempt-table-body')).toHaveAttribute('aria-hidden', 'true');
 });
