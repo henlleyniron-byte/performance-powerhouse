@@ -655,7 +655,7 @@ button, .tab, .r-btn, .log-mini { min-height: 44px; }
         <h2 id="next-action-title" data-share-private>Log one honest timed attempt.</h2>
         <p id="next-action-copy" data-share-private>The dashboard needs performance evidence before it can diagnose your highest-return repair.</p>
         <div class="focus-meta" id="next-action-meta" data-share-private><span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
-        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" href="./study-tracker/">Track this block</a><button class="secondary-btn" id="short-block-btn" type="button">Start 15-min recall block</button><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
+        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" data-share-private href="./study-tracker/">Track this block</a><button class="secondary-btn" id="short-block-btn" type="button">Start 15-min recall block</button><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
       </article>
       <aside class="mission-card">
         <div class="eyebrow">The governing loop</div><h3>Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest</h3>
@@ -2240,7 +2240,7 @@ function renderNextAction() {
     minutes: String(focusRecommendedMinutes),
     topic: topic?.name || $('next-action-title').textContent
   });
-  $('track-command-btn').href = `./study-tracker/?${trackerParams.toString()}`;
+  $('track-command-btn').href = shareSafeMode ? './study-tracker/' : `./study-tracker/?${trackerParams.toString()}`;
 }
 
 
@@ -2272,6 +2272,7 @@ let shareSafeMode = false;
 function toggleShareSafe() {
   shareSafeMode = !shareSafeMode;
   document.body.classList.toggle('share-safe', shareSafeMode);
+  renderNextAction();
   if (shareSafeMode) {
     document.querySelectorAll('.subject-toolbar').forEach(toolbar => {
       const search = toolbar.querySelector('input[type="search"]');

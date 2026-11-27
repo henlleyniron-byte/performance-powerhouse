@@ -93,13 +93,18 @@ for (const [entryPage, path] of [
     await page.locator('#app-tabs [data-panel="physics"]').click();
     await page.locator('#filter-physics').selectOption('weak');
     await page.locator('#search-physics').fill('fictional private filter');
+    const trackCommand = page.locator('#track-command-btn');
+    const privateTrackerHref = await trackCommand.getAttribute('href');
+    expect(privateTrackerHref).toContain('topic=');
     await page.getByRole('button', { name: 'Toggle share-safe mode' }).click();
 
     await expect(page.locator('body')).toHaveClass(/share-safe/);
     await expect(page.locator('#filter-physics')).toHaveValue('all');
     await expect(page.locator('#search-physics')).toHaveValue('');
+    await expect(trackCommand).toHaveAttribute('href', './study-tracker/');
 
     const privateSelectors = [
+      '#track-command-btn',
       '#attempt-table-body',
       '#recent-attempts',
       '#repair-priority-list',
@@ -122,6 +127,7 @@ for (const [entryPage, path] of [
     await expect(page.locator('#attempt-table-body')).not.toHaveAttribute('inert', '');
     await expect(page.locator('#attempt-table-body')).toHaveCSS('filter', 'none');
     await expect(page.locator('#attempt-table-body')).toContainText(question);
+    await expect(trackCommand).toHaveAttribute('href', privateTrackerHref);
   });
 }
 

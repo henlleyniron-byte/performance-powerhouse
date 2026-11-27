@@ -3,7 +3,7 @@
   "files": [
     {
       "path": "public/al-performance-command-centre.html",
-      "sha256": "adbe5ffdd293f0ce19ffad4e8c604eba2868f8d01a3193e8d9da67838b4af31f",
+      "sha256": "c60c048f9fd3611bb3980bba4b215590bb749d26d1fef2163e1c4750833125e8",
       "mode": "100644"
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "0a22c31d760432e0474c6913c3538649b638431b0e2fe7e5635e4403728e50ab",
+      "sha256": "0c248b363cf2f238b9a3fcc724abcb255f20c44cb79e0111278165bb962f8d64",
       "mode": "100644"
     },
     {
