@@ -52,7 +52,7 @@ test('CSV injection, hostile links and output privacy boundaries are enforced',(
   assert.match(M.csv([{text:'=SUM(A1:A2)'}],['text']),/'=SUM/);
   assert.equal(M.safeUrl('javascript:alert(1)'),null);
   assert.equal(M.safeUrl('https://drive.google.com.evil.test/paper'),null);
-  assert.equal(M.safeUrl('https://docs.google.com/document/d/fictional-private-resource'),'https://docs.google.com/document/d/fictional-private-resource');
+  assert.equal(M.safeUrl('https://example.invalid/private-resource/a45c461fd1878379'),'https://example.invalid/private-resource/a45c461fd1878379');
   const app=read('app.js');assert.doesNotMatch(app,/fetch\s*\(|XMLHttpRequest|sendBeacon/);
   assert.doesNotMatch(app,/localStorage\.setItem\(['"]al_performance_powerhouse_(v3|v4|physics|study)/);
 });
