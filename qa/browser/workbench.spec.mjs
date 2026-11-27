@@ -61,3 +61,39 @@ test('a marked attempt, reattempt, transfer and delayed retest survive backup an
     await fresh.close();
   }
 });
+
+test('one late transfer closes only one eligible retest stage', async ({ page }) => {
+  await startPrivateWorkbench(page);
+  await saveAttempt(page, { question: 'Fictional timing card A', date: '2026-07-01', earned: 2 });
+  const sourceId = (await coreRecord(page)).attempts[0].id;
+
+  // Both scheduled dates have passed. One fresh transfer must close stage 1
+  // only; stage 2 is rescheduled from the successful transfer.
+  await saveAttempt(page, {
+    type: 'fresh-transfer', question: 'Fictional timing card B', date: '2026-07-08',
+    earned: 5, sourceId, novel: true
+  });
+  let record = await coreRecord(page);
+  let sourceStages = record.retests.filter(row => row.sourceAttemptId === sourceId).sort((a, b) => a.stage - b.stage);
+  const transfer = record.attempts.find(attempt => attempt.question === 'Fictional timing card B');
+  expect(sourceStages.filter(row => row.completedAt).map(row => row.stage)).toEqual([1]);
+  expect(sourceStages.map(row => [row.stage, row.completedByAttemptId])).toEqual([[1, transfer.id], [2, undefined]]);
+  expect(sourceStages[1].due).toBe('2026-07-12');
+
+  await saveAttempt(page, {
+    type: 'delayed-retest', question: 'Fictional delayed check before due', date: '2026-07-11',
+    earned: 5, sourceId, novel: true
+  });
+  record = await coreRecord(page);
+  sourceStages = record.retests.filter(row => row.sourceAttemptId === sourceId).sort((a, b) => a.stage - b.stage);
+  expect(sourceStages.filter(row => row.completedAt).map(row => row.stage)).toEqual([1]);
+
+  await saveAttempt(page, {
+    type: 'delayed-retest', question: 'Fictional delayed check on due date', date: '2026-07-12',
+    earned: 5, sourceId, novel: true
+  });
+  record = await coreRecord(page);
+  sourceStages = record.retests.filter(row => row.sourceAttemptId === sourceId).sort((a, b) => a.stage - b.stage);
+  expect(sourceStages.filter(row => row.completedAt).map(row => row.stage)).toEqual([1, 2]);
+  expect(new Set(sourceStages.map(row => row.completedByAttemptId)).size).toBe(2);
+});
