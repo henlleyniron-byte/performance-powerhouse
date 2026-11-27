@@ -42,6 +42,7 @@
   "type": "module",
   "displayName": "A/L Performance Powerhouse V22 — Latest Attempt Recovery",
   "overrides": {
-    "fflate": "0.7.5"
+    "fflate": "0.7.5",
+    "@esbuild-kit/esm-loader": "npm:tsx@4.22.1"
   }
 }

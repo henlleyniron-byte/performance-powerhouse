@@ -8,17 +8,17 @@
     },
     {
       "path": "docs/DEPENDENCY-SECURITY-REVIEW-2026-11-27.md",
-      "sha256": "288b317a2467d6f2ab52c16e2116b5f59f805a1897b1e35e5cb86babc067572c",
+      "sha256": "573f20420db7a92cdca76a4435004021384636cb5eb13807815e4d63b0269505",
       "mode": "100644"
     },
     {
       "path": "package-lock.json",
-      "sha256": "4ffa1b6d8b07fffdfcae2473853a7e1662c3a93ad305ef176bf6ef42ea55d52e",
+      "sha256": "d7e3e60ceb8ec0e5afd80e0e3ce241ad8e872a4f8ac10ae8cecee10ad60937b8",
       "mode": "100644"
     },
     {
       "path": "package.json",
-      "sha256": "85d835dbf92e9fa9ca979ec30bc4085269f6e4c98a899665c12243d8a24633a5",
+      "sha256": "5231de5d0378db2f9569647d27dde68385ab010eb0fa1e7e047c9dcb3e973d23",
       "mode": "100644"
     },
     {
@@ -88,7 +88,7 @@
     },
     {
       "path": "tests/dependency-security.test.mjs",
-      "sha256": "9fa205070802b22891447c942ec1c7b702f8a056cfdfdd829e67814c09762c86",
+      "sha256": "ee1b5208eacdc05e63decaeb155c68ebef7113351a9e22ec77169813da69b6b4",
       "mode": "100644"
     },
     {

@@ -66,6 +66,22 @@ test("overrides the pinned vulnerable fflate transitive dependency with its patc
   assert.equal(lock.packages["node_modules/fflate"].version, manifest.overrides.fflate);
 });
 
+test("replaces Drizzle Kit's unused legacy loader with the locked tsx package", () => {
+  assert.equal(manifest.overrides["@esbuild-kit/esm-loader"], "npm:tsx@4.22.1");
+  const loader = lock.packages["node_modules/drizzle-kit/node_modules/@esbuild-kit/esm-loader"];
+  assert.equal(loader.name, "tsx");
+  assert.equal(loader.version, "4.22.1");
+  assert.equal(lock.packages["node_modules/@esbuild-kit/core-utils"], undefined);
+
+  const esbuildPackages = Object.entries(lock.packages)
+    .filter(([path]) => path.split("/").at(-1) === "esbuild");
+  assert.ok(esbuildPackages.length > 0);
+  for (const [path, pkg] of esbuildPackages) {
+    assertAtLeast(pkg.version, "0.25.0");
+    assert.ok(pkg.integrity, `${path} must have an integrity hash`);
+  }
+});
+
 test("lockfile resolves each declared security-sensitive package exactly", () => {
   const packages = [
     ["next", manifest.dependencies.next],
