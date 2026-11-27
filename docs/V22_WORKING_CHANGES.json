@@ -98,17 +98,7 @@
     },
     {
       "path": "tests/science-intelligence.test.mjs",
-      "sha256": "90407cb696960a7d86cf3145015c029e1bd8f98d278a4ea1101b8a9cc92289e0",
-      "mode": "100644"
-    },
-    {
-      "path": "tests/science-intelligence.test.mjs",
       "sha256": "2cfc02f6de44e38104ee3c7b27522789151201a1eaddc03ad99f51d98ab8a9f5",
-      "mode": "100644"
-    },
-    {
-      "path": "tests/study-library.test.mjs",
-      "sha256": "ec3a527dfe0e680d4f14e80901c70e9c30274d78543d53c294b508a2f4a6af0d",
       "mode": "100644"
     },
     {
