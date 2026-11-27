@@ -104,6 +104,8 @@ for (const [entryPage, path] of [
     await expect(trackCommand).toHaveAttribute('href', './study-tracker/');
 
     const privateSelectors = [
+      '#backup-health',
+      '#start-focus-btn',
       '#track-command-btn',
       '#attempt-table-body',
       '#recent-attempts',
@@ -134,6 +136,10 @@ for (const [entryPage, path] of [
 test('the Command Centre alias starts in share-safe mode when requested', async ({ page }) => {
   await page.goto('/al-performance-command-centre.html?share=1');
   await expect(page.locator('body')).toHaveClass(/share-safe/);
+  await expect(page.locator('#backup-health')).toHaveAttribute('inert', '');
+  await expect(page.locator('#start-focus-btn')).toHaveAttribute('inert', '');
+  await expect(page.locator('#track-command-btn')).toHaveAttribute('inert', '');
+  await expect(page.locator('#track-command-btn')).toHaveAttribute('href', './study-tracker/');
   await expect(page.locator('#attempt-table-body')).toHaveAttribute('inert', '');
   await expect(page.locator('#attempt-table-body')).toHaveAttribute('aria-hidden', 'true');
 });
