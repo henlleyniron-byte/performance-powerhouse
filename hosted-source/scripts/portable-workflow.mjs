@@ -10,7 +10,7 @@ function run(command, args, timeout) {
     child.on('error', reject); child.on('exit', code => code === 0 ? resolve() : reject(new Error(`${mode} exited ${code}`)));
   });
 }
-// Retain the existing verified Linux workflow. Windows uses the same lockfile and Vinext builder.
+// Retain the existing verified Linux workflow. Windows uses the same lockfile and Vite build entrypoint.
 if (process.platform !== 'win32') {
   await run('bash', [mode === 'install' ? 'scripts/install-ci.sh' : 'scripts/build-verified.sh'], mode === 'install' ? 480000 : 240000);
 } else if (mode === 'install') {
@@ -22,9 +22,9 @@ if (process.platform !== 'win32') {
   writeFileSync('node_modules/.sites-install.json', JSON.stringify({ lockfile_sha256: createHash('sha256').update(lock).digest('hex'), node: process.version, platform: `${process.platform}-${process.arch}` }) + '\n');
 } else {
   mkdirSync('.sites-runtime', { recursive: true });
-  const meta = JSON.parse(readFileSync('node_modules/vinext/package.json', 'utf8'));
-  const bin = typeof meta.bin === 'string' ? meta.bin : meta.bin.vinext;
-  await run(process.execPath, [path.resolve('node_modules/vinext', bin), 'build'], 240000);
+  const meta = JSON.parse(readFileSync('node_modules/vite/package.json', 'utf8'));
+  const bin = typeof meta.bin === 'string' ? meta.bin : meta.bin.vite;
+  await run(process.execPath, [path.resolve('node_modules/vite', bin), 'build'], 240000);
   const source = JSON.parse(readFileSync('.openai/hosting.json', 'utf8'));
   const built = JSON.parse(readFileSync('dist/.openai/hosting.json', 'utf8'));
   if (source.project_id !== built.project_id || !existsSync('dist/server/index.js')) throw new Error('Worker output or Site identity validation failed.');
