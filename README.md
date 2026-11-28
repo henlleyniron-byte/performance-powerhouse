@@ -4,7 +4,7 @@ A local-first study workbench for Sri Lankan G.C.E. A/L Physics, Chemistry and B
 
 **[Offline Physics demo](demo/repair-loop.html)** · **[Offline Biology Academy](demo/biology-academy.html)** · [Open the hosted workbench](https://al-performance-powerhouse.phenlleyniron.chatgpt.site/) · [Contribute](CONTRIBUTING.md)
 
-Choose either offline file, select **Download raw file** on GitHub, and open the saved HTML in a browser. Physics walks you through a repaired mistake and two retests. Biology includes ten English-medium tracks with predictions, closed-book questions, written responses and marking points. Each file works on its own.
+Choose either offline file, select **Download raw file** on GitHub, and open the saved HTML in a browser. Physics walks you through a repaired mistake and two retests. Biology includes ten English-medium tracks with predictions, closed-book questions, written responses and marking points. For paper practice, the Biology Academy can print a blank question sheet separately from its marking guide. Each file works on its own.
 
 ![A fictional Physics mistake scored 2 out of 5. The fresh transfer is recorded and the delayed retest is still open.](preview/repair-loop.webp)
 
