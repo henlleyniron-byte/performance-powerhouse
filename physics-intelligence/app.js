@@ -1,12 +1,16 @@
 const DATA_URL = "assets/physics-intelligence-data.json";
 const STORAGE_KEY = "al_performance_powerhouse_physics_intelligence_v1";
+const OUTCOMES = new Set(["correct", "wrong", "guessed", "slow", "unattempted"]);
+const MAX_BACKUP_BYTES = 2 * 1024 * 1024;
 
 const state = {
   data: null,
   attempts: [],
   visibleFamilies: 24,
   shareMode: new URLSearchParams(location.search).get("share") === "1",
+  invalidLocalState: false,
 };
+let shareRevision = 0;
 
 const el = (id) => document.getElementById(id);
 const pct = (value, digits = 1) => `${(value * 100).toFixed(digits)}%`;
@@ -15,24 +19,78 @@ const escapeCsv = (value) => `"${String(value).replaceAll('"', '""')}"`;
 function loadLocalState() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
-    state.attempts = Array.isArray(parsed.attempts) ? parsed.attempts : [];
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("Saved state is not an object.");
+    state.attempts = validateAttempts(Array.isArray(parsed.attempts) ? parsed.attempts : []);
+    state.invalidLocalState = false;
   } catch {
     state.attempts = [];
+    state.invalidLocalState = true;
+    showBackupStatus("Saved outcomes are malformed and were left untouched. Export the stored original before replacing them with a valid backup.");
   }
 }
 
-function saveLocalState() {
+function shareActive() {
+  return state.shareMode || new URLSearchParams(location.search).get("share") === "1";
+}
+
+function validateAttempts(value) {
+  if (!Array.isArray(value) || value.length > 20000) throw new Error("Backup attempts are missing or exceed the supported limit.");
+  const validFamilies = new Set(state.data.currentFamilies.map((family) => family.familyId));
+  return value.map((attempt) => {
+    if (!attempt || typeof attempt !== "object" || Array.isArray(attempt)) throw new Error("Backup contains an invalid attempt.");
+    if (!validFamilies.has(attempt.familyId) || !OUTCOMES.has(attempt.outcome)) throw new Error("Backup contains an unknown family or outcome.");
+    if (!Number.isInteger(attempt.timeSeconds) || attempt.timeSeconds < 0 || attempt.timeSeconds > 1200) throw new Error("Backup contains an invalid time value.");
+    if (!Number.isInteger(attempt.confidence) || attempt.confidence < 1 || attempt.confidence > 5) throw new Error("Backup contains an invalid confidence value.");
+    if (typeof attempt.recordedAt !== "string" || !Number.isFinite(Date.parse(attempt.recordedAt))) throw new Error("Backup contains an invalid record date.");
+    return {
+      familyId: attempt.familyId,
+      outcome: attempt.outcome,
+      timeSeconds: attempt.timeSeconds,
+      confidence: attempt.confidence,
+      recordedAt: attempt.recordedAt,
+    };
+  });
+}
+
+function validateBackup(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("Backup must be a JSON object.");
+  if (value.version !== undefined && value.version !== 1) throw new Error("Backup version is not supported.");
+  if (value.storageKey !== undefined && value.storageKey !== STORAGE_KEY) throw new Error("Backup belongs to a different tool.");
+  return validateAttempts(value.attempts);
+}
+
+function showBackupStatus(message) {
+  const status = el("backupStatus");
+  status.textContent = message;
+  status.hidden = false;
+}
+
+function saveLocalState({ replaceInvalid = false } = {}) {
+  if (shareActive()) return false;
+  if (state.invalidLocalState && !replaceInvalid) return false;
   localStorage.setItem(STORAGE_KEY, JSON.stringify({ version: 1, attempts: state.attempts }));
+  state.invalidLocalState = false;
+  return true;
 }
 
 function setShareMode(enabled) {
+  if (state.shareMode !== enabled) shareRevision += 1;
   state.shareMode = enabled;
   document.body.classList.toggle("share-mode", enabled);
   el("shareBanner").hidden = !enabled;
   el("shareToggle").textContent = enabled ? "Exit share mode" : "Share mode";
+  el("shareToggle").setAttribute("aria-pressed", String(enabled));
   const url = new URL(location.href);
   if (enabled) url.searchParams.set("share", "1"); else url.searchParams.delete("share");
   history.replaceState(null, "", url);
+  if (enabled) clearPrivatePerformance();
+}
+
+function clearPrivatePerformance() {
+  el("recommendations").replaceChildren();
+  el("opportunityTable").replaceChildren();
+  el("backupStatus").replaceChildren();
+  el("backupStatus").hidden = true;
 }
 
 function populateControls() {
@@ -202,6 +260,10 @@ function actionFor(item) {
 }
 
 function renderPerformance() {
+  if (shareActive()) {
+    clearPrivatePerformance();
+    return;
+  }
   const scored = familyScores();
   const usable = scored.filter((item) => item.score !== null);
   if (!usable.length) {
@@ -234,35 +296,90 @@ function bindEvents() {
   for (const id of ["familySearch", "familyUnit", "familyRecurrence"]) el(id).addEventListener(id === "familySearch" ? "input" : "change", () => renderFamilies(true));
   el("showMoreFamilies").addEventListener("click", () => { state.visibleFamilies += 24; renderFamilies(); });
   el("downloadCsv").addEventListener("click", downloadFilteredCsv);
-  el("shareToggle").addEventListener("click", () => setShareMode(!state.shareMode));
+  el("shareToggle").addEventListener("click", () => {
+    setShareMode(!state.shareMode);
+    renderPerformance();
+  });
   el("attemptForm").addEventListener("submit", (event) => {
     event.preventDefault();
-    state.attempts.push({
+    if (shareActive()) return;
+    if (state.invalidLocalState) {
+      showBackupStatus("New outcomes are paused to protect the malformed saved data. Export the stored original and import a valid backup to replace it.");
+      return;
+    }
+    const previous = state.attempts;
+    state.attempts = [...previous, {
       familyId: el("attemptFamily").value,
       outcome: el("attemptOutcome").value,
       timeSeconds: Number(el("attemptTime").value),
       confidence: Number(el("attemptConfidence").value),
       recordedAt: new Date().toISOString(),
-    });
-    saveLocalState();
-    renderPerformance();
+    }];
+    try {
+      if (!saveLocalState()) throw new Error("Share mode is active.");
+      renderPerformance();
+    } catch {
+      state.attempts = previous;
+      showBackupStatus("This browser could not save the new outcome. Existing records were kept.");
+    }
   });
   el("exportBackup").addEventListener("click", () => {
-    const blob = new Blob([JSON.stringify({ version: 1, storageKey: STORAGE_KEY, attempts: state.attempts }, null, 2)], { type: "application/json" });
-    const link = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "physics-intelligence-private-backup.json" });
+    if (shareActive()) return;
+    let contents, filename;
+    if (state.invalidLocalState) {
+      try { contents = localStorage.getItem(STORAGE_KEY); } catch {
+        showBackupStatus("The stored original could not be read. No data was changed.");
+        return;
+      }
+      if (contents === null) contents = "{}";
+      filename = "physics-intelligence-stored-original.json";
+    } else {
+      contents = JSON.stringify({ version: 1, storageKey: STORAGE_KEY, attempts: state.attempts }, null, 2);
+      filename = "physics-intelligence-private-backup.json";
+    }
+    const blob = new Blob([contents], { type: "application/json" });
+    const link = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: filename });
     link.click(); URL.revokeObjectURL(link.href);
   });
   el("importBackup").addEventListener("change", async (event) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-    const parsed = JSON.parse(await file.text());
-    if (!Array.isArray(parsed.attempts)) throw new Error("Backup does not contain an attempts array.");
-    state.attempts = parsed.attempts;
-    saveLocalState(); renderPerformance();
+    const input = event.currentTarget;
+    const file = input.files?.[0];
+    input.value = "";
+    if (!file || shareActive()) return;
+    const requestRevision = shareRevision;
+    if (file.size > MAX_BACKUP_BYTES) {
+      showBackupStatus("Import rejected: the backup exceeds the 2 MB limit.");
+      return;
+    }
+    let attempts;
+    try {
+      attempts = validateBackup(JSON.parse(await file.text()));
+    } catch {
+      showBackupStatus("Import rejected: the backup is malformed or contains unsupported records. Your saved records were kept.");
+      return;
+    }
+    if (shareActive() || requestRevision !== shareRevision) return;
+    const currentLabel = state.invalidLocalState ? "the malformed stored original" : `${state.attempts.length} saved outcome(s)`;
+    if (!confirm(`Replace ${currentLabel} with ${attempts.length} imported outcome(s)?`)) {
+      showBackupStatus("Import cancelled. Your saved records were kept.");
+      return;
+    }
+    if (shareActive() || requestRevision !== shareRevision) return;
+    const previous = state.attempts;
+    state.attempts = attempts;
+    try {
+      if (!saveLocalState({ replaceInvalid: true })) throw new Error("Share mode is active or saved data cannot be replaced.");
+      renderPerformance();
+      showBackupStatus(`Imported ${attempts.length} validated outcome(s).`);
+    } catch {
+      state.attempts = previous;
+      showBackupStatus("Import failed while saving. Your existing records were kept.");
+    }
   });
 }
 
 async function init() {
+  setShareMode(state.shareMode);
   const response = await fetch(DATA_URL, { cache: "no-store" });
   if (!response.ok) throw new Error(`Unable to load validated data (${response.status})`);
   state.data = await response.json();
@@ -273,10 +390,20 @@ async function init() {
   renderFamilies();
   renderPerformance();
   bindEvents();
-  setShareMode(state.shareMode);
 }
 
 init().catch((error) => {
   console.error(error);
-  document.querySelector("main").innerHTML = `<section class="panel section-panel"><p class="eyebrow">DATA LOAD ERROR</p><h1>Physics Intelligence could not start.</h1><p>${error.message}</p></section>`;
+  const main = document.querySelector("main");
+  const section = document.createElement("section");
+  section.className = "panel section-panel";
+  const eyebrow = document.createElement("p");
+  eyebrow.className = "eyebrow";
+  eyebrow.textContent = "DATA LOAD ERROR";
+  const heading = document.createElement("h1");
+  heading.textContent = "Physics Intelligence could not start.";
+  const detail = document.createElement("p");
+  detail.textContent = error instanceof Error ? error.message : "Unknown error";
+  section.append(eyebrow, heading, detail);
+  main.replaceChildren(section);
 });
