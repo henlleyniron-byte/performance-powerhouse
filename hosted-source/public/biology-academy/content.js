@@ -164,7 +164,7 @@ globalThis.PowerhouseBiologyAcademy = {
     {
       id: "cell-biology",
       title: "Cells, Division and Membrane Transport",
-      units: ["01", "02"],
+      units: ["01", "02", "04"],
       objective: "Use water potential to predict net water movement and relate responses to cell organization and structure.",
       concepts: [
         "The cell is the basic structural and functional unit of life.",
