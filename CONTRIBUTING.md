@@ -20,6 +20,8 @@ Thank you for considering a contribution to Performance Powerhouse.
 
 ## Development
 
+The Python command examples below use `python3`. In Windows PowerShell, replace it with `py -3` when the Python launcher is installed, or with `python` when that command runs Python 3. Node.js and npm commands stay the same.
+
 For the current V22 browser app, start the local server from the repo root:
 
 ```sh

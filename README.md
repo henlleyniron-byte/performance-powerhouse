@@ -16,6 +16,8 @@ From a clone of this repository, run this command with Python 3:
 python3 scripts/preview-v22.py
 ```
 
+On Windows PowerShell, use `py -3 scripts/preview-v22.py` if the Python launcher is installed, or `python scripts/preview-v22.py` if that command runs Python 3. The `python3` form above is common on macOS and Linux.
+
 Open **[Community Share on your computer](http://127.0.0.1:4173/community-share.html)**. Try the fictional Physics example. Repeating the same question leaves both checks open. A fresh, unaided solution on day 3 earns transfer credit. Another fresh solution on day 7 closes the delayed retest. Reset the example to try a different order.
 
 **Open full dashboard** takes you to the actual V22 browser workbench. You can log your own attempt, link a retest, and export a backup. **Open in share mode** lets you preview the dashboard with personal details limited. The local preview serves static pages, including the proposed Community Share page. Cloud sync and sign-in require the hosted service.
