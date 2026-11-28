@@ -2,8 +2,8 @@ import { expect } from '@playwright/test';
 
 const coreKey = 'al_performance_powerhouse_v4';
 
-export async function startPrivateWorkbench(page) {
-  await page.goto('/index.html');
+export async function startPrivateWorkbench(page, path = '/index.html') {
+  await page.goto(path);
   await page.getByLabel('Your name').fill('Example Learner');
   await page.getByRole('button', { name: 'Enter my Powerhouse' }).click();
   await page.locator('#app-tabs [data-panel="attempts"]').click();
@@ -27,7 +27,8 @@ export async function saveAttempt(page, { type = 'topic-question', question, dat
     await dialog.locator('#attempt-error').selectOption('M');
     await dialog.locator('#attempt-note').fill('Convert milliseconds to seconds before calculating.');
   }
-  await dialog.locator('#attempt-unaided').check();
+  const unaided = dialog.locator('#attempt-unaided');
+  if (await unaided.count()) await unaided.check();
   if (novel) await dialog.locator('#attempt-novel').check();
   if (sourceId) await dialog.locator('#fs-source').selectOption(sourceId);
   await dialog.getByRole('button', { name: 'Save evidence + update repair queue' }).click();

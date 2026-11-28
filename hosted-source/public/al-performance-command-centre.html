@@ -539,7 +539,8 @@
   .mobile-log { display:none; }
   body.share-safe #identity-line { color:transparent; position:relative; }
   body.share-safe #identity-line::after { content:"Community Edition · private performance hidden"; color:var(--muted); position:absolute; left:0; top:0; }
-  body.share-safe .kpi-value, body.share-safe .subject-score, body.share-safe #recent-attempts, body.share-safe #attempt-table-body, body.share-safe #calibration-risk { filter:blur(8px); user-select:none; pointer-events:none; }
+  body.share-safe [data-share-private] { filter:blur(8px); user-select:none; pointer-events:none; }
+  body.share-safe [data-share-private] * { user-select:none; }
   body.share-safe #panel-attempts .panel-head p::after { content:" · Share-safe mode is hiding detailed rows."; color:var(--gold); }
   @media (max-width: 860px) {
     .repair-kpis { grid-template-columns:repeat(2,1fr); }
@@ -566,7 +567,7 @@
   <div class="shell header-row">
     <div class="brand"><div class="brand-mark" aria-hidden="true">A+</div><div><div class="brand-title-row"><h1>Performance Powerhouse V4</h1><span class="edition-badge">COMMUNITY</span></div><p id="identity-line">A/L Bio Science · evidence over guesswork</p></div></div>
     <div class="header-actions">
-      <button class="backup-chip" id="backup-health" type="button" title="Backup health">Backup —</button>
+      <button class="backup-chip" id="backup-health" data-share-private type="button" title="Backup health">Backup —</button>
       <button class="icon-btn" id="share-safe-btn" type="button" title="Share-safe mode" aria-label="Toggle share-safe mode">◫</button>
       <button class="secondary-btn" id="quick-log-btn" type="button"><span aria-hidden="true">＋</span> <span class="label">Log evidence</span></button>
       <button class="icon-btn" id="data-btn" type="button" title="Data and backup" aria-label="Data and backup">⋯</button>
@@ -580,15 +581,15 @@
   <a class="tab tab-link" href="./physics-intelligence/">Physics Intelligence</a>
   <a class="tab tab-link" href="./chemistry-intelligence/">Chemistry Intelligence</a>
   <a class="tab tab-link" href="./biology-intelligence/">Biology Intelligence</a>
-  <a class="tab tab-link" href="./science-intelligence/">Science Intelligence Hub</a>
-  <a class="tab tab-link" href="./study-tracker/">Study Tracker</a>
+  <a class="tab tab-link" data-share-private href="./science-intelligence/">Science Intelligence Hub</a>
+  <a class="tab tab-link" data-share-private href="./study-tracker/">Study Tracker</a>
   <button class="tab" type="button" data-panel="chemistry">Chemistry</button>
   <button class="tab" type="button" data-panel="biology">Biology</button>
-  <button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge">0</span></button>
-  <button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge">ON</span></button>
-  <button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge">0</span></button>
+  <button class="tab" type="button" data-panel="repairs">Repairs <span class="tab-badge" id="repair-due-badge" data-share-private>0</span></button>
+  <button class="tab" type="button" data-panel="course">Execution Guard <span class="tab-badge" id="course-status-badge" data-share-private>ON</span></button>
+  <button class="tab" type="button" data-panel="daily">Daily Output <span class="tab-badge" id="daily-today-badge" data-share-private>0</span></button>
   <button class="tab" type="button" data-panel="planner">Syllabus Map</button>
-  <button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count">0</span></button>
+  <button class="tab" type="button" data-panel="attempts">Evidence <span class="tab-badge" id="attempt-count" data-share-private>0</span></button>
   <button class="tab" type="button" data-panel="guide">Guide</button>
 </nav>
 
@@ -597,10 +598,10 @@
     <div class="hero-grid">
       <article class="focus-card">
         <div class="eyebrow">Today's mark-producing command</div>
-        <h2 id="next-action-title">Log one honest timed attempt.</h2>
-        <p id="next-action-copy">The dashboard needs performance evidence before it can diagnose your highest-return repair.</p>
-        <div class="focus-meta" id="next-action-meta"><span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
-        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" href="./study-tracker/">Track this block</a><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
+        <h2 id="next-action-title" data-share-private>Log one honest timed attempt.</h2>
+        <p id="next-action-copy" data-share-private>The dashboard needs performance evidence before it can diagnose your highest-return repair.</p>
+        <div class="focus-meta" id="next-action-meta" data-share-private><span class="pill">20 minutes</span><span class="pill">closed book</span><span class="pill">strict marking</span></div>
+        <div class="focus-actions"><button class="primary-btn" id="start-focus-btn" data-share-private type="button">Start recommended block</button><a class="secondary-btn" id="track-command-btn" data-share-private href="./study-tracker/">Track this block</a><button class="secondary-btn" id="paper-first-btn" type="button">Start 120-min paper block</button><button class="secondary-btn" id="course-correct-btn" type="button">Course-correct me</button></div>
       </article>
       <aside class="mission-card">
         <div class="eyebrow">The governing loop</div><h3>Attempt → mark → diagnose → repair → reattempt → fresh transfer → delayed retest</h3>
@@ -612,7 +613,7 @@
       </aside>
     </div>
 
-    <div class="kpi-grid" aria-label="Performance indicators">
+    <div class="kpi-grid" data-share-private aria-label="Performance indicators">
       <article class="kpi"><span class="kpi-label">Verified accuracy</span><strong class="kpi-value" id="kpi-accuracy">—</strong><div class="kpi-note">raw marks earned ÷ marks available</div></article>
       <article class="kpi"><span class="kpi-label">Trusted accuracy</span><strong class="kpi-value" id="kpi-trusted">—</strong><div class="kpi-note">only attempts where unsupported/lucky marks were audited</div></article>
       <article class="kpi"><span class="kpi-label">Retests due</span><strong class="kpi-value" id="kpi-due">0</strong><div class="kpi-note">unfinished delayed retrieval checks</div></article>
@@ -621,7 +622,7 @@
       <article class="kpi"><span class="kpi-label">Paper output · 7d</span><strong class="kpi-value" id="kpi-paper-output">0</strong><div class="kpi-note">paper sections and full papers</div></article>
     </div>
 
-    <div class="subject-grid" id="subject-pulse"></div>
+    <div class="subject-grid" id="subject-pulse" data-share-private></div>
 
     <section class="panel exam-panel" aria-labelledby="exam-timeline-title">
       <div class="exam-panel-head">
@@ -642,11 +643,11 @@
     </section>
 
     <div class="dashboard-grid">
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Priority queue</div><h3>Delayed retests</h3><p id="retest-status">Mastery requires fresh retrieval after time has passed.</p></div></div><div class="queue" id="retest-queue"></div></section>
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Diagnosis</div><h3>Marks lost by error family</h3><p>Attack the recurring cause—not the loudest chapter.</p></div></div><div class="error-bars" id="error-bars"></div></section>
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Weak-signal scan</div><h3>Highest-return topics</h3><p>Low rating plus actual lost marks rises to the top.</p></div></div><div class="queue" id="priority-topics"></div></section>
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Latest proof</div><h3>Recent attempts</h3><p>Plans do not enter this feed—only completed evidence.</p></div><button class="secondary-btn" id="view-all-btn" type="button">View all</button></div><div class="recent-list" id="recent-attempts"></div></section>
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Calibration</div><h3>Confidence traps</h3><p>High confidence plus lost marks exposes dangerous blind spots.</p></div></div><div class="queue" id="calibration-risk"></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Priority queue</div><h3>Delayed retests</h3><p id="retest-status" data-share-private>Mastery requires fresh retrieval after time has passed.</p></div></div><div class="queue" id="retest-queue" data-share-private></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Diagnosis</div><h3>Marks lost by error family</h3><p>Attack the recurring cause—not the loudest chapter.</p></div></div><div class="error-bars" id="error-bars" data-share-private></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Weak-signal scan</div><h3>Highest-return topics</h3><p>Low rating plus actual lost marks rises to the top.</p></div></div><div class="queue" id="priority-topics" data-share-private></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Latest proof</div><h3>Recent attempts</h3><p>Plans do not enter this feed—only completed evidence.</p></div><button class="secondary-btn" id="view-all-btn" type="button">View all</button></div><div class="recent-list" id="recent-attempts" data-share-private></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Calibration</div><h3>Confidence traps</h3><p>High confidence plus lost marks exposes dangerous blind spots.</p></div></div><div class="queue" id="calibration-risk" data-share-private></div></section>
     </div>
   </section>
 
@@ -655,29 +656,29 @@
   <section class="content" id="panel-biology" data-subject="biology"></section>
 
   <section class="content" id="panel-planner">
-    <div class="lock-banner" id="planner-lock-banner">Execution Lock: syllabus planning is secondary to marked output. Complete one marked attempt today before redesigning the map, or explicitly override once.</div>
+    <div class="lock-banner" id="planner-lock-banner" data-share-private>Execution Lock: syllabus planning is secondary to marked output. Complete one marked attempt today before redesigning the map, or explicitly override once.</div>
     <div class="planner-hero">
       <section class="panel planner-score">
         <div class="eyebrow">Syllabus map · context, not proof</div>
-        <h2 id="planner-headline">0% period-weighted coverage</h2>
+        <h2 id="planner-headline" data-share-private>0% period-weighted coverage</h2>
         <p>Coverage percentages are navigation aids only. A unit marked 100% is not mastered until closed-book performance says so. V4 deliberately separates syllabus progress from evidence.</p>
       </section>
-      <section class="panel planner-kpis" aria-label="Syllabus plan indicators">
+      <section class="panel planner-kpis" data-share-private aria-label="Syllabus plan indicators">
         <div class="planner-kpi"><span>Completed equivalent</span><b id="planner-done-periods">0</b></div>
         <div class="planner-kpi"><span>Remaining allocation</span><b id="planner-remaining-periods">0</b></div>
         <div class="planner-kpi"><span>Units finished</span><b id="planner-finished-units">0</b></div>
         <div class="planner-kpi"><span>Largest unfinished block</span><b id="planner-next-block">—</b></div>
       </section>
     </div>
-    <div class="planner-subjects" id="planner-subjects"></div>
+    <div class="planner-subjects" id="planner-subjects" data-share-private></div>
     <section class="panel">
       <div class="panel-head"><div><div class="eyebrow">Consolidated tracker</div><h3>Grade 12–13 period plan</h3><p>Progress is weighted by the allocation in the supplied spreadsheets, not by the number of rows.</p></div></div>
-      <div class="planner-toolbar">
+      <div class="planner-toolbar" data-share-private>
         <select class="filter-select" id="planner-subject-filter" aria-label="Filter syllabus subject"><option value="all">All subjects</option><option value="physics">Physics</option><option value="chemistry">Chemistry</option><option value="biology">Biology</option></select>
         <select class="filter-select" id="planner-grade-filter" aria-label="Filter syllabus grade"><option value="all">All grades</option><option value="12">Grade 12</option><option value="13">Grade 13</option><option value="12–13">Spans Grades 12–13</option></select>
         <button class="secondary-btn" id="planner-unfinished-only" type="button" aria-pressed="false">Unfinished only</button>
       </div>
-      <div class="planner-list" id="planner-list"></div>
+      <div class="planner-list" id="planner-list" data-share-private></div>
       <details class="source-audit"><summary>Source reconciliation — what was corrected?</summary><div>The earlier workbook contains live <strong>#REF!</strong>, <strong>#NAME?</strong> and <strong>#DIV/0!</strong> errors. The refixed workbook removes those formula errors, but its Biology summary counts both unit totals and their child lessons, inflating 603 unique allocated periods to 1,041. Physics lists 585 named periods against a 600-period subject budget, so the missing 15 are retained transparently as “Unallocated / practical work”. Chemistry reconciles cleanly to 600. Friend completion values were not copied into your public template; every browser begins privately at zero.</div></details>
     </section>
   </section>
@@ -687,14 +688,14 @@
     <div class="course-grid">
       <section class="panel course-hero">
         <div class="eyebrow">Course correction · brother mode</div>
-        <h2 id="cc-verdict">First move: produce evidence before optimizing the system.</h2>
-        <p id="cc-reason">V3 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
-        <div class="course-status" id="cc-status-pills"></div>
+        <h2 id="cc-verdict" data-share-private>First move: produce evidence before optimizing the system.</h2>
+        <p id="cc-reason" data-share-private>V3 exists to interrupt the patterns that cost marks: over-planning, resource accumulation, unrealistic volume, repeated resets, AI during testing, and sacrificing recovery to “catch up”.</p>
+        <div class="course-status" id="cc-status-pills" data-share-private></div>
       </section>
       <section class="panel">
         <div class="panel-head"><div><div class="eyebrow">Execution gate</div><h3>Protect output from the system itself</h3><p>Planning is useful only after it serves a marked attempt.</p></div></div>
-        <div class="discipline-toggle"><div><strong style="font-size:11px">Execution Lock</strong><div class="muted" style="font-size:9px;margin-top:4px;line-height:1.45">Before the first marked attempt of the day, Syllabus Map asks for an explicit override.</div></div><input id="discipline-mode" type="checkbox" aria-label="Execution Lock"></div>
-        <div class="course-kpis" style="margin-top:10px">
+        <div class="discipline-toggle" data-share-private><div><strong style="font-size:11px">Execution Lock</strong><div class="muted" style="font-size:9px;margin-top:4px;line-height:1.45">Before the first marked attempt of the day, Syllabus Map asks for an explicit override.</div></div><input id="discipline-mode" type="checkbox" aria-label="Execution Lock"></div>
+        <div class="course-kpis" data-share-private style="margin-top:10px">
           <div class="course-kpi"><span>Marked output today</span><b id="cc-output-today">No</b></div>
           <div class="course-kpi"><span>Retests overdue</span><b id="cc-overdue">0</b></div>
           <div class="course-kpi"><span>Planning overrides · 7d</span><b id="cc-overrides">0</b></div>
@@ -707,7 +708,7 @@
       <section class="panel">
         <div class="panel-head"><div><div class="eyebrow">Rabbit-hole interceptor</div><h3>Catch the urge before it steals the block</h3><p>Tap what you are about to do. V3 gives the replacement action.</p></div></div>
         <div class="correction-rule-grid" id="correction-rule-grid"></div>
-        <div class="replacement-box"><strong id="cc-action-title">Default replacement</strong><p id="cc-action-copy">Open the current paper. Do one measurable question set. Mark it. Then decide what you actually need.</p></div>
+        <div class="replacement-box" data-share-private><strong id="cc-action-title">Default replacement</strong><p id="cc-action-copy">Open the current paper. Do one measurable question set. Mark it. Then decide what you actually need.</p></div>
       </section>
 
       <section class="panel">
@@ -723,7 +724,7 @@
 
       <section class="panel">
         <div class="panel-head"><div><div class="eyebrow">Daily discipline audit</div><h3>Five checks—not another journal</h3><p>Tick once at the end of the day. This is about protecting execution.</p></div></div>
-        <div class="audit-grid" id="cc-audit-grid">
+        <div class="audit-grid" id="cc-audit-grid" data-share-private>
           <label class="audit-row"><input type="checkbox" data-audit="sleepProtected"><span><strong>Sleep protected</strong><span>No late-night punishment session to compensate for lost time.</span></span></label>
           <label class="audit-row"><input type="checkbox" data-audit="planningCapped"><span><strong>Planning/admin capped</strong><span>No prolonged timetable, tracker, file or dashboard redesign.</span></span></label>
           <label class="audit-row"><input type="checkbox" data-audit="aiAfterOutput"><span><strong>AI stayed out of TEST</strong><span>AI may diagnose/repair after the closed-book attempt—not during it.</span></span></label>
@@ -735,13 +736,13 @@
 
       <section class="panel">
         <div class="panel-head"><div><div class="eyebrow">7-day evidence review</div><h3>Change strategy only when the data earns it</h3><p>One bad paper is not a new life plan. Three repeated data points can justify a targeted change.</p></div></div>
-        <div class="week-review" id="cc-week-review"></div>
+        <div class="week-review" id="cc-week-review" data-share-private></div>
       </section>
 
       <section class="panel">
         <div class="panel-head"><div><div class="eyebrow">2027 planning anchor</div><h3>Target date without fake certainty</h3><p>Leave blank until a useful/official date exists. This is a planning anchor, not a prediction.</p></div></div>
-        <div class="target-row"><div class="field"><label for="target-date">Planning target date</label><input id="target-date" type="date"></div><button class="secondary-btn" id="save-target-date" type="button">Save target</button></div>
-        <div class="replacement-box" style="margin-top:12px"><strong>Course-change rule</strong><p id="cc-three-point-rule">No strategy overhaul is justified yet. Keep collecting clean evidence and close the current loops.</p></div>
+        <div class="target-row" data-share-private><div class="field"><label for="target-date">Planning target date</label><input id="target-date" type="date"></div><button class="secondary-btn" id="save-target-date" type="button">Save target</button></div>
+        <div class="replacement-box" data-share-private style="margin-top:12px"><strong>Course-change rule</strong><p id="cc-three-point-rule">No strategy overhaul is justified yet. Keep collecting clean evidence and close the current loops.</p></div>
       </section>
 
       <section class="panel">
@@ -761,9 +762,9 @@
     <div class="daily-hero">
       <section class="panel daily-summary-panel">
         <div class="eyebrow">Daily execution layer</div>
-        <h2 id="daily-headline">Turn activity into measurable output.</h2>
+        <h2 id="daily-headline" data-share-private>Turn activity into measurable output.</h2>
         <p class="muted">The useful daily-output layer is integrated into Powerhouse V3. Paper/error evidence stays authoritative; this layer tracks daily volume and target consistency. If work is already logged in Evidence, do not manually count it twice.</p>
-        <div class="daily-kpi-grid">
+        <div class="daily-kpi-grid" data-share-private>
           <div class="planner-kpi"><span>Today · target score</span><b id="daily-target-score">0%</b></div>
           <div class="planner-kpi"><span>Today · outputs</span><b id="daily-output-count">0</b></div>
           <div class="planner-kpi"><span>7-day active days</span><b id="daily-active-days">0/7</b></div>
@@ -771,8 +772,8 @@
         </div>
       </section>
       <section class="panel">
-        <div class="panel-head"><div><div class="eyebrow">Today's scoreboard</div><h3 id="daily-date-label">Today</h3><p>Manual extras + evidence-derived activity.</p></div></div>
-        <div class="daily-progress-list" id="daily-progress-list"></div>
+        <div class="panel-head"><div><div class="eyebrow">Today's scoreboard</div><h3 id="daily-date-label" data-share-private>Today</h3><p>Manual extras + evidence-derived activity.</p></div></div>
+        <div class="daily-progress-list" id="daily-progress-list" data-share-private></div>
       </section>
     </div>
 
@@ -780,7 +781,7 @@
       <div class="panel-head">
         <div><div class="eyebrow">Log extra output</div><h3>Daily progress entry</h3><p>Use this for drills or work you did not already log in the Evidence ledger.</p></div>
       </div>
-      <form id="daily-form">
+      <form id="daily-form" data-share-private>
         <div class="daily-form-toolbar">
           <div class="field"><label for="daily-date">Date</label><input id="daily-date" type="date" required></div>
           <div class="field daily-note-field"><label for="daily-note">Optional note</label><input id="daily-note" maxlength="140" placeholder="e.g. Amila MCQ repair block"></div>
@@ -791,7 +792,7 @@
     </section>
 
     <section class="panel" style="margin-bottom:14px">
-      <details class="daily-targets-details">
+      <details class="daily-targets-details" data-share-private>
         <summary><strong>Daily targets</strong> · editable, local-only</summary>
         <p class="muted" style="font-size:10px;line-height:1.6;margin:10px 0 14px">Targets are optional. V3 deliberately starts them at zero so you do not create a three-subject daily quota monster. Add a target only when it helps execution; 0 excludes the field from scoring.</p>
         <div class="daily-subject-grid" id="daily-target-grid"></div>
@@ -801,7 +802,7 @@
 
     <section class="panel">
       <div class="panel-head"><div><div class="eyebrow">Execution history</div><h3>Daily output ledger</h3><p>Manual entries remain editable by deletion/re-entry; the underlying JSON backup preserves the full record.</p></div></div>
-      <div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Physics</th><th>Chemistry</th><th>Biology</th><th>Note</th><th></th></tr></thead><tbody id="daily-history-body"></tbody></table></div>
+      <div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Physics</th><th>Chemistry</th><th>Biology</th><th>Note</th><th></th></tr></thead><tbody id="daily-history-body" data-share-private></tbody></table></div>
     </section>
   </section>
 
@@ -815,16 +816,16 @@
       </div>
       <button class="primary-btn" id="repair-log-btn" type="button">Log repair evidence</button>
     </section>
-    <div class="kpi-grid repair-kpis">
+    <div class="kpi-grid repair-kpis" data-share-private>
       <article class="kpi"><span class="kpi-label">Lost marks · 30d</span><strong class="kpi-value" id="repair-kpi-loss">0</strong><div class="kpi-note">recorded marks lost in recent attempts</div></article>
       <article class="kpi"><span class="kpi-label">Dominant family</span><strong class="kpi-value compact" id="repair-kpi-family">—</strong><div class="kpi-note">largest current source of lost marks</div></article>
       <article class="kpi"><span class="kpi-label">Retest closure</span><strong class="kpi-value" id="repair-kpi-closure">—</strong><div class="kpi-note">scheduled checks completed</div></article>
       <article class="kpi"><span class="kpi-label">Active priorities</span><strong class="kpi-value" id="repair-kpi-active">0</strong><div class="kpi-note">topics with meaningful repair evidence</div></article>
     </div>
     <div class="dashboard-grid">
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Next repairs</div><h3>Highest-return weaknesses</h3><p>Composite priority = marks lost + recurrence + calibration risk + retest debt.</p></div></div><div class="queue" id="repair-priority-list"></div></section>
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Closure queue</div><h3>Fresh transfer & delayed retest</h3><p>A correction is not closed just because the old answer now looks obvious.</p></div></div><div class="queue" id="repair-transfer-list"></div></section>
-      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Subject lens</div><h3>Diagnose the right failure</h3><p>The same wrong mark can require a different repair in each subject.</p></div></div><div class="subject-playbooks" id="subject-playbooks"></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Next repairs</div><h3>Highest-return weaknesses</h3><p>Composite priority = marks lost + recurrence + calibration risk + retest debt.</p></div></div><div class="queue" id="repair-priority-list" data-share-private></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Closure queue</div><h3>Fresh transfer & delayed retest</h3><p>A correction is not closed just because the old answer now looks obvious.</p></div></div><div class="queue" id="repair-transfer-list" data-share-private></div></section>
+      <section class="panel"><div class="panel-head"><div><div class="eyebrow">Subject lens</div><h3>Diagnose the right failure</h3><p>The same wrong mark can require a different repair in each subject.</p></div></div><div class="subject-playbooks" id="subject-playbooks" data-share-private></div></section>
       <section class="panel"><div class="panel-head"><div><div class="eyebrow">Closure standard</div><h3>When may I call an error fixed?</h3></div></div>
         <div class="closure-steps">
           <div><b>1 · Repair</b><span>Fix the smallest actual cause.</span></div>
@@ -862,7 +863,7 @@
   <section class="content" id="panel-attempts">
     <section class="panel">
       <div class="panel-head"><div><div class="eyebrow">Evidence ledger</div><h3>Completed question attempts</h3><p>Raw score, trusted score, time, confidence, guesses and causes of lost marks.</p></div><button class="primary-btn" id="log-from-ledger" type="button">Log attempt</button></div>
-      <div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Subject</th><th>Type</th><th>Question / topic</th><th>Score</th><th>Confidence</th><th>Error</th><th></th></tr></thead><tbody id="attempt-table-body"></tbody></table></div>
+      <div style="overflow:auto"><table class="attempt-table"><thead><tr><th>Date</th><th>Subject</th><th>Type</th><th>Question / topic</th><th>Score</th><th>Confidence</th><th>Error</th><th></th></tr></thead><tbody id="attempt-table-body" data-share-private></tbody></table></div>
     </section>
   </section>
 </main>
@@ -1918,8 +1919,8 @@ function navigate(panel) {
 function buildSubjectPanel(subject) {
   const target = $(`panel-${subject}`);
   target.innerHTML = `
-    <div class="subject-summary" id="summary-${subject}"></div>
-    <div class="subject-toolbar">
+    <div class="subject-summary" id="summary-${subject}" data-share-private></div>
+    <div class="subject-toolbar" data-share-private>
       <input class="search-box" id="search-${subject}" type="search" placeholder="Search ${titleCase(subject)} topics…" aria-label="Search ${titleCase(subject)} topics">
       <select class="filter-select" id="filter-${subject}" aria-label="Filter topics"><option value="all">All topics</option><option value="weak">Weak / medium</option><option value="evidence">Has evidence</option><option value="untested">Untested</option><option value="due">Retest due</option></select>
       <button class="secondary-btn" type="button" data-expand-subject="${subject}">Expand all</button>
@@ -1932,7 +1933,7 @@ function buildSubjectPanel(subject) {
     const wrap = document.createElement('div');
     wrap.className = 'unit-wrap';
     wrap.innerHTML = `<div class="unit-hdr" data-unit-header role="button" tabindex="0" aria-expanded="false">
-      <span class="u-num">${String(ui + 1).padStart(2, '0')}</span><span class="u-name" style="color:${SYL[subject].color}">${escapeHTML(unit.n)}</span><span class="u-pct" id="unit-stat-${subject}-${ui}">—</span><span class="u-arr">▶</span></div>
+      <span class="u-num">${String(ui + 1).padStart(2, '0')}</span><span class="u-name" style="color:${SYL[subject].color}">${escapeHTML(unit.n)}</span><span class="u-pct" id="unit-stat-${subject}-${ui}" data-share-private>—</span><span class="u-arr">▶</span></div>
       <div class="topics-list" data-unit-list></div>`;
     const list = wrap.querySelector('[data-unit-list]');
     unit.t.forEach((name, ti) => {
@@ -1941,7 +1942,7 @@ function buildSubjectPanel(subject) {
       row.className = 'topic-row';
       row.dataset.topicKey = key;
       row.dataset.search = `${unit.n} ${name}`.toLowerCase();
-      row.innerHTML = `<span class="t-name">${escapeHTML(name)}</span><span class="t-evidence" data-evidence-for="${key}"></span><div class="r-grp" aria-label="Recall rating for ${escapeHTML(name)}">
+      row.innerHTML = `<span class="t-name">${escapeHTML(name)}</span><span class="t-evidence" data-evidence-for="${key}" data-share-private></span><div class="r-grp" data-share-private aria-label="Recall rating for ${escapeHTML(name)}">
         <button class="r-btn" type="button" data-rating="1" data-topic="${key}" title="Weak: cannot reproduce reliably">W</button>
         <button class="r-btn" type="button" data-rating="2" data-topic="${key}" title="Medium: partial or prompted recall">M</button>
         <button class="r-btn" type="button" data-rating="3" data-topic="${key}" title="Strong self-rating; verify with timed evidence">S</button>
@@ -2169,7 +2170,7 @@ function renderNextAction() {
     minutes: String(focusRecommendedMinutes),
     topic: topic?.name || $('next-action-title').textContent
   });
-  $('track-command-btn').href = `./study-tracker/?${trackerParams.toString()}`;
+  $('track-command-btn').href = shareSafeMode ? './study-tracker/' : `./study-tracker/?${trackerParams.toString()}`;
 }
 
 
@@ -2201,6 +2202,23 @@ let shareSafeMode = false;
 function toggleShareSafe() {
   shareSafeMode = !shareSafeMode;
   document.body.classList.toggle('share-safe', shareSafeMode);
+  renderNextAction();
+  if (shareSafeMode) {
+    document.querySelectorAll('.subject-toolbar').forEach(toolbar => {
+      const search = toolbar.querySelector('input[type="search"]');
+      const filter = toolbar.querySelector('select');
+      const subject = toolbar.querySelector('[data-expand-subject]')?.dataset.expandSubject;
+      if (search) search.value = '';
+      if (filter) filter.value = 'all';
+      if (subject) filterSubject(subject);
+    });
+  }
+  document.querySelectorAll('.v6-filters, .v6-count, .v6-private').forEach(region => region.setAttribute('data-share-private', ''));
+  document.querySelectorAll('[data-share-private]').forEach(region => {
+    region.toggleAttribute('inert', shareSafeMode);
+    if (shareSafeMode) region.setAttribute('aria-hidden', 'true');
+    else region.removeAttribute('aria-hidden');
+  });
   $('share-safe-btn')?.classList.toggle('on', shareSafeMode);
   $('share-safe-btn')?.setAttribute('aria-pressed', String(shareSafeMode));
   toast(shareSafeMode ? 'Share-safe mode ON. Personal performance is obscured.' : 'Share-safe mode OFF.');

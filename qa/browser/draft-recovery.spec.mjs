@@ -80,6 +80,76 @@ test('opening a shared view hides draft actions and retains the private draft', 
   await expect(page.locator('#attempt-question')).toHaveValue('Fictional private draft');
 });
 
+for (const [entryPage, path] of [
+  ['V22 index', '/index.html'],
+  ['Command Centre alias', '/al-performance-command-centre.html'],
+]) {
+  test(`share-safe mode hides personal performance on ${entryPage} and restores it`, async ({ page }) => {
+    await startPrivateWorkbench(page, path);
+    const question = 'Fictional share-safe physics check';
+    await saveAttempt(page, { question, date: '2026-11-27', earned: 2 });
+    await expect(page.locator('#attempt-table-body')).toContainText(question);
+
+    await page.locator('#app-tabs [data-panel="physics"]').click();
+    await page.locator('#filter-physics').selectOption('weak');
+    await page.locator('#search-physics').fill('fictional private filter');
+    const trackCommand = page.locator('#track-command-btn');
+    const privateTrackerHref = await trackCommand.getAttribute('href');
+    expect(privateTrackerHref).toContain('topic=');
+    await page.getByRole('button', { name: 'Toggle share-safe mode' }).click();
+
+    await expect(page.locator('body')).toHaveClass(/share-safe/);
+    await expect(page.locator('#filter-physics')).toHaveValue('all');
+    await expect(page.locator('#search-physics')).toHaveValue('');
+    await expect(trackCommand).toHaveAttribute('href', './study-tracker/');
+    await expect(page.locator('#data-btn')).toBeDisabled();
+    await expect(page.locator('#data-dialog')).toBeHidden();
+
+    const privateSelectors = [
+      '#backup-health',
+      '#start-focus-btn',
+      '#track-command-btn',
+      '#attempt-table-body',
+      '#recent-attempts',
+      '#repair-priority-list',
+      '#daily-history-body',
+      '#planner-list',
+      '#cc-week-review',
+      '#summary-physics',
+      '#units-physics .r-grp',
+    ];
+    if (entryPage === 'V22 index') privateSelectors.push('.v6-filters', '.v6-count', '.v6-private', 'details.workspace-more');
+    else privateSelectors.push('a[href="./science-intelligence/"]', 'a[href="./study-tracker/"]');
+    for (const selector of privateSelectors) {
+      const region = page.locator(selector).first();
+      await expect(region).toHaveAttribute('inert', '');
+      await expect(region).toHaveAttribute('aria-hidden', 'true');
+    }
+    await expect(page.locator('#attempt-table-body')).toHaveCSS('filter', 'blur(8px)');
+
+    await page.getByRole('button', { name: 'Toggle share-safe mode' }).click();
+    await expect(page.locator('body')).not.toHaveClass(/share-safe/);
+    await expect(page.locator('#attempt-table-body')).not.toHaveAttribute('inert', '');
+    await expect(page.locator('#attempt-table-body')).toHaveCSS('filter', 'none');
+    await expect(page.locator('#attempt-table-body')).toContainText(question);
+    await expect(trackCommand).toHaveAttribute('href', privateTrackerHref);
+  });
+}
+
+test('the Command Centre alias starts in share-safe mode when requested', async ({ page }) => {
+  await page.goto('/al-performance-command-centre.html?share=1');
+  await expect(page.locator('body')).toHaveClass(/share-safe/);
+  await expect(page.locator('#backup-health')).toHaveAttribute('inert', '');
+  await expect(page.locator('#data-btn')).toBeDisabled();
+  await expect(page.locator('#start-focus-btn')).toHaveAttribute('inert', '');
+  await expect(page.locator('#track-command-btn')).toHaveAttribute('inert', '');
+  await expect(page.locator('#track-command-btn')).toHaveAttribute('href', './study-tracker/');
+  await expect(page.locator('a[href="./science-intelligence/"]')).toHaveAttribute('inert', '');
+  await expect(page.locator('a.tab-link[href="./study-tracker/"]')).toHaveAttribute('inert', '');
+  await expect(page.locator('#attempt-table-body')).toHaveAttribute('inert', '');
+  await expect(page.locator('#attempt-table-body')).toHaveAttribute('aria-hidden', 'true');
+});
+
 test('private draft actions captured before sharing refuse both shared entry paths', async ({ page }) => {
   await startPrivateWorkbench(page);
   await page.locator('#log-from-ledger').click();

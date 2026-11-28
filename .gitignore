@@ -13,3 +13,4 @@ secrets/
 backups/
 exports/
 qa/test-results/
+/hosted-source/.vinext/
