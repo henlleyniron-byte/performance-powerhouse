@@ -4,6 +4,10 @@ about: Report a reproducible defect
 labels: bug
 ---
 
+## Privacy and safety
+
+**Privacy:** Use fictional data. Do not post learner names, school or student IDs, contact details, marks, private study records, credentials, or screenshots/exports containing them. For sensitive security reports, follow SECURITY.md instead of posting secrets.
+
 ## What happened?
 
 ## Steps to reproduce
@@ -17,4 +21,3 @@ labels: bug
 
 ## Console errors, if any
 
-Please remove personal study data before attaching screenshots or exports.
